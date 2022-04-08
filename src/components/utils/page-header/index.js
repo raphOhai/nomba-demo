@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Container from "../container"
-import MainMenu from "../../layout/menu"
+import { MainMenu } from "../../layout/menu/"
 import ctl from "@netlify/classnames-template-literals"
 
 const PageHeader = ({ title = "", subheading = "" }) => {

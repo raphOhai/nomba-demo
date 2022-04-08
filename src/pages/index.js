@@ -1,23 +1,26 @@
-import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react";
 
-import Layout from "components/layout"
-import PageHeader from "components/utils/page-header"
+import Layout from "components/layout";
+import {
+  HomepageHero,
+  HomepageGotOptions,
+  HomepageTipsAndNewsletter,
+  HomepageFeatures,
+  HomepageBusiness,
+  HomepagePosSection,
+} from "templates/homepage";
 
-const IndexPage = () => (
-  <Layout title="" ignoreSiteName={true}>
-    <PageHeader
-      title="FourthCanvas GatsbyJS Projects Starter"
-      subheading="This project gives a basic architecture from repeating patterns we have observed from most client projects and is supposed to help you started fast up and running fast. For detailed instruction, kindly refer to the README.md of this project. Please feel free to bend this project your will! Delete, add, update files/components as the case may be."
-    />
-    <section>
-      <StaticImage
-        src="../assets/images/fourthcanvas.jpg"
-        placeholder="blurred"
-        alt="FourthCanvas Team"
-      />
-    </section>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout title="Nomba" ignoreSiteName={true}>
+      <HomepageHero />
+      <HomepageBusiness />
+      <HomepageGotOptions />
+      <HomepagePosSection />
+      <HomepageFeatures />
+      <HomepageTipsAndNewsletter />
+    </Layout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
