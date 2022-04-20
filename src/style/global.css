@@ -46,7 +46,45 @@
 }
 
 @media (min-width: 1400px) {
-  .slider-wrap {
+  .slider-margin-left {
     margin-left: calc((100% - 1270px) / 2);
   }
+}
+.swiper-pagination > .swiper-pagination-bullet {
+  @apply mr-2 rounded-full;
+  background: white;
+  opacity: 1;
+  border: black solid 1px;
+  width: 11px;
+  height: 11px;
+}
+.swiper-pagination-bullet-active {
+  @apply !bg-black;
+}
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
+    infinite;
+  font-weight: 100;
+}
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.policy-page {
+  @apply py-12;
+}
+.policy-page h2 {
+  @apply my-5;
+}
+
+.policy-page p {
+  @apply mb-3;
 }

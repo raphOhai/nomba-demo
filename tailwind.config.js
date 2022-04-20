@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,svg}"],
   mode: "jit",
@@ -53,9 +55,15 @@ module.exports = {
           },
         },
       },
+
       boxShadow: {
         subMenu: " 0px 4px 100px rgba(41, 45, 50, 0.09)",
       },
+    },
+
+    screens: {
+      xs: "450px",
+      ...defaultTheme.screens,
     },
   },
   variants: {

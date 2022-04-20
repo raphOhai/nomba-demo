@@ -38,7 +38,7 @@ const SubMenu = ({ items }) => {
                   {item.subMenu.map(item => (
                     <NLink
                       className={subMenuLinkStyle}
-                      to={item.to}
+                      {...item}
                       key={item.title}
                     >
                       {item.title}
@@ -47,7 +47,7 @@ const SubMenu = ({ items }) => {
                 </nav>
               </div>
             ) : (
-              <NLink to={item.to}>
+              <NLink {...item}>
                 <SubMenuDetails subMenuItem={item} />
               </NLink>
             )}
@@ -118,7 +118,6 @@ const subMenuDetailsStyle = ctl(`
   lg:hover:bg-primary-200
   border-primary-400
   w-full
-  lg:w-auto
 `);
 const subMenuInnerWrapStyle = ctl(`
   flex 
@@ -163,6 +162,7 @@ const subMenuLinkStyle = ctl(`
   pl-[30px]
   text-[14px]
   font-semibold
+  w-full
   lg:hover:bg-primary-300
 `);
 

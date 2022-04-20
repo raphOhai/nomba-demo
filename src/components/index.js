@@ -10,3 +10,6 @@ export * from "./header";
 export * from "./br";
 export * from "./tips-and-updates";
 export * from "./slider";
+export * from "./pos-terminals";
+export * from "./timeline";
+export * from "./testimonial";

@@ -21,13 +21,13 @@ const homepageSliderData = [
       "Track payments on multiple channels for every item sold in your store.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://google.com",
+      href: "/business/small",
     },
   },
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpg"
+        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
         alt="man holding a pos machine"
         className={imageStyle}
       />
@@ -37,7 +37,7 @@ const homepageSliderData = [
       "Receive, track and manage payments from hundreds of sources on a single dashboard",
     link: {
       text: "Get Nomba for your large business",
-      href: "https://google.com",
+      href: "/business/large",
     },
   },
   {
@@ -51,7 +51,23 @@ const homepageSliderData = [
     heading: "Provide financial services and earn while at it ",
     text:
       "Be the sure padi for every money-related activity people need to make in your area.",
-    link: { text: "Become an agent", to: "/agent" },
+    link: { text: "Become an agent", to: "/business/agents" },
+  },
+  {
+    image: (
+      <StaticImage
+        src="../../assets/images/jpegs/homepage/slider/manage-payment.jpg"
+        alt="pos transaction taking place"
+        className={imageStyle}
+      />
+    ),
+    heading: "Thanks to one agent, there is a hundred more ",
+    text:
+      "There is Superman, and then there are our ‘super-agents’ building networks of new a",
+    link: {
+      text: "Get Nomba for your growing business",
+      to: "/business/agents",
+    },
   },
 ];
 

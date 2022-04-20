@@ -6,11 +6,13 @@ import { Ntext } from "components/ntext/ntext";
 import { ReadMore } from "components/read-more";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
-const BlogCard = ({ title, date, link, image }) => {
+const BlogCard = ({ title, date, link, image, picture }) => {
   return (
     <div className={blogCardWrapperStyle}>
       {image ? (
         <GatsbyImage image={getImage(image)} />
+      ) : picture ? (
+        picture
       ) : (
         <StaticImage
           src="../../assets/images/jpegs/Edmund.jpg"
@@ -29,11 +31,13 @@ const BlogCard = ({ title, date, link, image }) => {
           value={title}
           className="mb-2"
         />
-        <Ntext variant="h7" color="primary-100" value={date} />
+        {date && <Ntext variant="h7" color="primary-100" value={date} />}
 
-        <div className={readMoreWrapperStyle}>
-          <ReadMore {...link} />
-        </div>
+        {link && (
+          <div className={readMoreWrapperStyle}>
+            <ReadMore {...link} />
+          </div>
+        )}
       </div>
     </div>
   );

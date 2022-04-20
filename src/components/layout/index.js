@@ -10,15 +10,19 @@ import PropTypes from "prop-types";
 import Seo from "./seo";
 import { MainFooter } from "./footer";
 import { NavBar } from "./navbar";
-import { SubFooter } from "./subfooter";
+import { Subfooter } from "./subfooter";
 
 const Layout = ({ children, title, ignoreSiteName = false }) => {
+  const noOfChildren = children.length;
   return (
     <>
       <Seo title={title} ignoreSiteName={ignoreSiteName} />
       <NavBar />
-      <main>{children}</main>
-      <SubFooter />
+      {/* All children except the last child */}
+      <main>{children.slice(0, noOfChildren - 1)}</main>
+
+      {/*Show the last item in the subfooter */}
+      <Subfooter>{children[noOfChildren - 1]}</Subfooter>
       <MainFooter />
     </>
   );

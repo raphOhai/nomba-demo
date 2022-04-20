@@ -1,124 +1,146 @@
 import React from "react";
-import Payments from "assets/images/svgs/payment.svg";
-import Bank from "assets/images/svgs/bank.svg";
-import Business from "assets/images/svgs/business.svg";
-import Profile from "assets/images/svgs/profile.svg";
-import Shop from "assets/images/svgs/outline/shop-1.svg";
-import Bag from "assets/images/svgs/outline/bag-5.svg";
-import Globe from "assets/images/svgs/globe.svg";
-import Audience from "assets/images/svgs/audience-2.svg";
-import Pages from "assets/images/svgs/pages.svg";
+import Payments from "svgs/payment.svg";
+// import Bank from "svgs/bank.svg";
+// import Business from "svgs/business.svg";
+import Profile from "svgs/profile.svg";
+import Shop from "svgs/outline/shop-1.svg";
+import Bag from "svgs/outline/bag-5.svg";
+import Globe from "svgs/globe.svg";
+import Audience from "svgs/audience-2.svg";
+import Pages from "svgs/pages.svg";
+
+import Card from "svgs/card.svg";
+import Money from "svgs/outline/money-1.svg";
 
 const headerMenu = {
+  // Products: [
+  //   {
+  //     title: "Payments",
+  //     icon: <Payments />,
+  //     description: "Accept and make payments on Nomba",
+  //     subMenu: [
+  //       {
+  //         title: "Accept Payments",
+  //         to: "/products/accept-payments",
+  //       },
+  //       {
+  //         title: "Make Payments",
+  //         to: "/products/make-payments",
+  //       },
+  //       {
+  //         title: "POS Terminals",
+  //         to: "/products/pos-terminals",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: "Banking",
+  //     icon: <Bank />,
+  //     description: "Access the financial tools you need",
+  //     subMenu: [
+  //       {
+  //         title: "Capital",
+  //         to: "/banking/capital",
+  //       },
+  //       {
+  //         title: "Savings",
+  //         to: "/banking/savings",
+  //       },
+  //       {
+  //         title: "Cards",
+  //         to: "/banking/cards",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: "Business operations",
+  //     icon: <Business />,
+  //     description: "Manage your businesses with zero stress",
+  //     subMenu: [
+  //       {
+  //         title: "Customer Directory",
+  //         to: "/business_operations/customer_directory",
+  //       },
+  //       {
+  //         title: "Payroll",
+  //         to: "/business_operations/payroll",
+  //       },
+  //       {
+  //         title: "Inventory",
+  //         to: "/business_operations/inventory",
+  //       },
+  //     ],
+  //   },
+  // ],
   Products: [
     {
-      title: "Payments",
+      title: "Accept Payments",
       icon: <Payments />,
-      description: "Accept payments Lorem ipsum dolor",
-      subMenu: [
-        {
-          title: "Accept Payments",
-          to: "/products/accept-payments",
-        },
-        {
-          title: "Make Payments",
-          to: "/products/make-payments",
-        },
-        {
-          title: "POS Terminal",
-          to: "/products/pos-terminals",
-        },
-      ],
+      description: "Get paid with cards, transfers and QR codes",
+      to: "/products/accept-payments",
     },
     {
-      title: "Banking",
-      icon: <Bank />,
-      description: "Accept payments Lorem ipsum dolor",
-      subMenu: [
-        {
-          title: "Capital",
-          to: "/banking/capital",
-        },
-        {
-          title: "Savings",
-          to: "/banking/savings",
-        },
-        {
-          title: "Cards",
-          to: "/banking/cards",
-        },
-      ],
+      title: "Make Payments",
+      icon: <Money />,
+      description: "Make large and multiple payments",
+      to: "/products/make-payments",
     },
     {
-      title: "Business operations",
-      icon: <Business />,
-      description: "Accept payments Lorem ipsum dolor",
-      subMenu: [
-        {
-          title: "Customer Directory",
-          to: "/business_operations/customer_directory",
-        },
-        {
-          title: "Payroll",
-          to: "/business_operations/payroll",
-        },
-        {
-          title: "Inventory",
-          to: "/business_operations/inventory",
-        },
-      ],
+      title: "POS Terminals",
+      icon: <Card />,
+      description: "Receive, confirm and track payments",
+      to: "/products/pos-terminals",
     },
   ],
   "Business Types": [
     {
       title: "Mobile Money Agents",
       icon: <Profile />,
-      description: "Accept payments Lorem ipsum dolor",
+      description: "Make financial services accessible",
       comingSoon: true,
-      to: "/business_types/mobile_money_agents",
+      to: "/business/agents",
     },
     {
       title: "Small Business",
       icon: <Shop />,
-      description: "Accept payments Lorem ipsum dolor",
+      description: "Track payments and your business",
       comingSoon: true,
-      to: "/business_types/small_business",
+      to: "/business/small",
     },
     {
       title: "Large Business",
       icon: <Bag />,
-      description: "Accept payments Lorem ipsum dolor",
+      description: "Manage operations, and track growth",
       comingSoon: true,
-      to: "/business_types/large_business",
+      to: "/business/large",
     },
   ],
   Company: [
     {
       title: "About Us",
       icon: <Globe />,
-      description: "Accept payments Lorem ipsum dolor",
+      description: "Get to know the team",
       comingSoon: true,
-      to: "/about_us",
+      to: "/about-us",
     },
     {
       title: "Work with Nomba",
       icon: <Audience />,
-      description: "Accept payments Lorem ipsum dolor",
+      description: "Available roles at Nomba",
       comingSoon: true,
-      to: "/careers",
+      to: "#",
     },
     {
       title: "Blog",
       icon: <Pages />,
-      description: "Accept payments Lorem ipsum dolor",
+      description: "Insights and updates from Nomba",
       comingSoon: true,
-      to: "/blog",
+      href: { url: "https://medium.com/@nombastories" },
     },
   ],
-  Pricing: {
-    to: "/pricing",
-    description: "Accept payments Lorem ipsum dolor",
-  },
+  // Pricing: {
+  //   to: "/pricing",
+  // },
 };
 
 export { headerMenu };

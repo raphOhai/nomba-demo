@@ -32,15 +32,17 @@ const NavList = ({ header, list }) => {
       <Ntext variant="h6">{header}</Ntext>
 
       <ul>
-        {list.map((listItem, index) => (
-          <li key={`footer_list_item_${index}`} className="mt-2">
-            <NLink {...listItem}>
-              <Ntext variant="p16" color="primary-900">
-                {listItem.title}
-              </Ntext>
-            </NLink>
-          </li>
-        ))}
+        {list.map((listItem, index) => {
+          return (
+            <li key={`footer_list_item_${index}`} className="mt-2">
+              <NLink {...listItem?.link}>
+                <Ntext variant="p16" color="primary-900">
+                  {listItem.title}
+                </Ntext>
+              </NLink>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Card } from "components/card/slider-card";
+import { SliderCard } from "components";
 import NextIcon from "svgs/chevron-right.svg";
 import PreviousIcon from "svgs/chevron-left.svg";
 
@@ -14,7 +14,7 @@ SwiperCore.use([Navigation]);
 const Slider = ({ slides }) => {
   const sliderItems = slides.map(item => (
     <SwiperSlide key={item.heading}>
-      <Card
+      <SliderCard
         heading={item.heading}
         image={item.image}
         text={item.text}
@@ -98,7 +98,7 @@ const controlWrapStyle = ctl(`
   gap-[11px]
 `);
 const sectionWrapStyle = ctl(`
-  slider-wrap
+  slider-margin-left
   ml-[25px]
 `);
 const blackLineStyle = ctl(`

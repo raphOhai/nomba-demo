@@ -5,19 +5,23 @@ import { Copyright } from "./copyright";
 import { FooterNavigation } from "./navigation";
 import { Policies } from "./policies";
 import { Container } from "components/container";
+import { AppDownload } from "./app-download";
 
 const MainFooter = () => {
   return (
-    <footer className={footerStyle}>
-      <Container>
-        <FooterNavigation />
-        <Policies />
-        <div className={addressAndCopyrightWrapperStyle}>
-          <Addresses />
-          <Copyright />
-        </div>
-      </Container>
-    </footer>
+    <>
+      <AppDownload />
+      <footer className={footerStyle}>
+        <Container>
+          <FooterNavigation />
+          <Policies />
+          <div className={addressAndCopyrightWrapperStyle}>
+            <Addresses />
+            <Copyright />
+          </div>
+        </Container>
+      </footer>
+    </>
   );
 };
 

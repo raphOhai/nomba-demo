@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "svgs/logo.svg";
 
 import ctl from "@netlify/classnames-template-literals";
@@ -6,26 +6,43 @@ import { Menu } from "./menu";
 import { NLink } from "components/nlink";
 
 const NavBar = () => {
-  return (
-    <nav className={navStyle}>
-      <NLink to="/">
-        <Logo className="w-[94px]" />
-      </NLink>
+  const [openMenu, setOpenMenu] = useState(false);
 
-      <Menu />
-    </nav>
+  const onToggle = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  return (
+    <header className={`${mainHeaderStlye} ${openMenu && "h-full"}`}>
+      <nav className={navStyle}>
+        <NLink to="/">
+          <Logo className="w-[94px]" />
+        </NLink>
+
+        <Menu openMenu={openMenu} onToggle={onToggle} />
+      </nav>
+    </header>
   );
 };
 
+const mainHeaderStlye = ctl(`
+bg-primary-100
+fixed
+top-0
+left-0
+w-full
+z-[9999]
+`);
+
 const navStyle = ctl(`
   flex
-  lg:items-center
+  items-center
   justify-between
   lg:justify-start
   gap-[71px]
   px-[25px]
-  pt-[25px]
-  lg:pt-0
+  py-[12.5px]
+  lg:py-0
   max-w-[1386px]
   mx-auto
 `);

@@ -9,7 +9,7 @@ const ReadMore = ({ text = "Read More", color = "primary-100", ...props }) => {
   return (
     <div>
       <NLink {...props} className={readmoreStyle}>
-        <Ntext variant="p16" color={color} className="peer">
+        <Ntext variant="p16" color={color} className="peer" weight="600">
           {text}
         </Ntext>
 

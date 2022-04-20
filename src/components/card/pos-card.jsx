@@ -24,7 +24,7 @@ const PosCard = ({ device, icons, image, isLite, features, link }) => {
         </header>
         <div className="mt-[13px]">
           <Ntext variant="h2" value={device?.name} color={textColor} />
-          <Ntext variant="h4" value={device?.price} color={textColor} />
+          {/* <Ntext variant="h4" value={device?.price} color={textColor} /> */}
           <div className={contentGridStyle}>
             <div>
               <ul className={`${posFeaturesListStyle} ${featuresGrid}`}>
@@ -38,7 +38,7 @@ const PosCard = ({ device, icons, image, isLite, features, link }) => {
                 ))}
               </ul>
               <span className={posReadMoreStyle}>
-                <ReadMore color={textColor} {...link} />
+                {/* <ReadMore color={textColor} {...link} /> */}
               </span>
             </div>
 
@@ -53,10 +53,10 @@ const PosCard = ({ device, icons, image, isLite, features, link }) => {
 const posCardStyle = ctl(`
 p-5
 sm:p-10 
-max-h-[619px]
+h-[619px]
 max-w-[583px] 
 mx-auto
-lg:max-h-[555px] 
+lg:h-[555px] 
 overflow-hidden
 relative
 `);

@@ -27,7 +27,11 @@ export const posCardData = [
         alt="Nomba Lite"
       />
     ),
-    icons: [<Visa />, <Master />, <Wifi />],
+    icons: [
+      <Visa key="visacard" />,
+      <Master key="mastercard" />,
+      <Wifi key="wifi" />,
+    ],
     link: { to: "/" },
   },
   {
@@ -49,13 +53,20 @@ export const posCardData = [
 
     image: (
       <StaticImage
-        width={330}
-        height={500}
-        src="../assets/images/jpegs/homepage/Nomba Pro Terminal.png"
-        alt="Nomba Lite"
+        width={282}
+        height={389}
+        src="../assets/images/jpegs/Nomba Pro 2.png"
+        alt="Nomba Pro 2"
       />
     ),
-    icons: [<Visa />, <Master />, <Wifi />, <FourG />, <Printer />, <Usb />],
+    icons: [
+      <Visa key="visa" />,
+      <Master key="mastercard" />,
+      <Wifi key="wifi" />,
+      <FourG key="4g" />,
+      <Printer key="printer" />,
+      <Usb key="usb" />,
+    ],
     link: { to: "/" },
   },
 ];

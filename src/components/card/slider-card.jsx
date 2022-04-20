@@ -2,7 +2,7 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, ReadMore } from "components";
 
-const Card = ({ image, heading, text, caseStudy, link }) => {
+const SliderCard = ({ image, heading, text, caseStudy, link }) => {
   return (
     <div>
       <div
@@ -23,7 +23,7 @@ const Card = ({ image, heading, text, caseStudy, link }) => {
             <Ntext
               variant="p14"
               value={text}
-              className={`${cardTextStyle} mb-[36px]`}
+              className={`${cardTextStyle} mt-[18px]  min-h-[140px]`}
             />
 
             <div>
@@ -38,7 +38,7 @@ const Card = ({ image, heading, text, caseStudy, link }) => {
               <Ntext
                 variant="p14"
                 value={caseStudy.aboutBusiness}
-                className="max-w-[346px]"
+                className="max-w-[346px] min-h-[80px]"
               />
             </div>
           </>
@@ -46,9 +46,9 @@ const Card = ({ image, heading, text, caseStudy, link }) => {
           <>
             <Ntext variant="h4" className={cardHeadingStyle} value={heading} />
 
-            <Ntext variant="p18" value={text} className={cardTextStyle} />
+            <Ntext variant="p18" value={text} className={`${cardTextStyle}`} />
 
-            <ReadMore {...link} color="primary" />
+            {link && <ReadMore {...link} color="primary" />}
           </>
         )}
       </div>
@@ -73,6 +73,8 @@ const sliderCardWrapStyle = ctl(`
   pb-[39px]
   md:pl-[41px]
   pl-[26px]
+  text-left
+  md:min-h-[550px]
 `);
 const cardHeadingStyle = ctl(`
   mt-6 
@@ -86,7 +88,7 @@ const cardTextStyle = ctl(`
 `);
 const caseStyle = ctl(`
   uppercase 
-  tracking-[0.2em]
+
 `);
 
-export { Card };
+export { SliderCard };

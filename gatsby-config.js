@@ -19,7 +19,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /src/,
+          include: /svg/,
         },
       },
     },
@@ -37,34 +37,20 @@ module.exports = {
         illustrations: path.join(__dirname, "src/assets/images/illustrations"),
       },
     },
-    /*{
-      resolve: "gatsby-plugin-google-tagmanager",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        id: "YOUR_GOOGLE_TAGMANAGER_ID",
-  
-        // Include GTM in development.
-        //
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-  
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        //
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
-  
-        // Specify optional GTM environment details.
-        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
-        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
-        // dataLayerName: "YOUR_DATA_LAYER_NAME",
-  
-        // Name of the event that is triggered
-        // on every Gatsby route change.
-        //
-        // Defaults to gatsby-route-change
-        // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
+        trackingIds: ["G-F4H83CDY9T"],
       },
-    },*/
+      gtagConfig: {
+        anonymize_ip: false,
+        cookie_expires: 0,
+      },
+      pluginConfig: {
+        head: true,
+        origin: "https://wwww.nomba.com",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

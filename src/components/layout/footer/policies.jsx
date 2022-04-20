@@ -19,7 +19,7 @@ const Policies = () => {
           return (
             <li key={`policy_menu_${index}`} className={policyMenuListItem}>
               <Ntext variant="p16" color="primary-900">
-                <NLink {...menuItem}>{menuItem.title}</NLink>
+                <NLink {...menuItem?.link}>{menuItem.title}</NLink>
               </Ntext>
             </li>
           );
@@ -29,11 +29,11 @@ const Policies = () => {
   );
 };
 
+// md:-mt-20
 const policyWrapperStyle = ctl(`
 flex
 flex-col
-md:items-end
-md:-mt-20
+md:items-start
 mt-14
 md:text-right
 `);
@@ -45,7 +45,7 @@ w-[144px]
 const policyMenuList = ctl(`
 flex
 flex-row
-md:justify-end
+md:justify-start
 justify-between
 md:mt-6
 mt-4

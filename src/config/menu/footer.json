@@ -2,136 +2,69 @@
   "Products": [
     {
       "title": "Accept payments",
-      "to": "/products/accept-payments"
+      "link": { "to": "/products/accept-payments" }
     },
     {
       "title": "Make Payments",
-      "to": "/products/make-payments"
+      "link": { "to": "/products/make-payments" }
     },
     {
-      "title": "Terminal",
-      "to": "/products/terminal"
+      "title": "POS Terminals",
+      "link": { "to": "/products/pos-terminals" }
     }
   ],
-  "Developers": [
+  "Business Types": [
     {
-      "title": "Documentation",
-      "href": { "url": "https://docs.nomba.com" }
+      "title": "Mobile Money Agents",
+      "link": { "to": "/business/agents" }
     },
     {
-      "title": "API Reference",
-      "href": "https://docs.nomba.com/reference"
+      "title": "Small Business",
+      "link": { "to": "/business/small" }
     },
     {
-      "title": "API Status",
-      "href": "https://status.nomba.com"
-    }
-  ],
-  "Resources": [
-    {
-      "title": "Pricing",
-      "to": "/pricing"
-    },
-    {
-      "title": "Support Center",
-      "to": "/support-center"
-    },
-    {
-      "title": "Contact Sales",
-      "to": "/contact-sales"
-    },
-    {
-      "title": "Blog",
-      "to": "/blog"
-    },
-    {
-      "title": "Community",
-      "to": "/community"
-    },
-    {
-      "title": "Service Status",
-      "to": "/community"
+      "title": "Large Business",
+      "link": { "to": "/business/large" }
     }
   ],
   "Nomba": [
     {
       "title": "About us",
-      "to": "/about-us"
+      "link": { "to": "/about-us" }
     },
     {
-      "title": "Work with Nomba",
-      "to": "/work-with-nomba"
-    },
-    {
-      "title": "Reseller Program",
-      "to": "/reseller-program"
-    },
-    {
-      "title": "Press & Media",
-      "to": "/press-media"
+      "title": "Blog",
+      "link": { "href": { "url": "https://medium.com/@nombastories" } }
     }
   ],
-  "Run your Business": [
-    {
-      "title": "Capital",
-      "to": "/capital"
-    },
-    {
-      "title": "Savings",
-      "to": "/savings"
-    },
-    {
-      "title": "Cards",
-      "to": "/cards"
-    },
-    {
-      "title": "Customer Directory",
-      "to": "/customer-directory"
-    },
-    {
-      "title": "Payroll",
-      "to": "/payroll"
-    },
-    {
-      "title": "Appointment",
-      "to": "/appointment"
-    },
-    {
-      "title": "Vendor Management",
-      "to": "/vendor-management"
-    }
-  ],
+
   "Follow us": [
     {
       "title": "Instagram",
-      "to": "https://instagram.com/nomba"
-    },
-    {
-      "title": "Facebook",
-      "to": "https://facebook.com/nomba"
+      "link": { "href": { "url": "https://www.instagram.com/nomba_hq/" } }
     },
     {
       "title": "Twitter",
-      "to": "https://twitter.com/nomba"
+      "link": { "href": { "url": "https://twitter.com/nomba" } }
     },
     {
-      "title": "LinkedIn",
-      "to": "https://linkedin.com/nomba"
+      "title": "Youtube",
+      "link": { "href": { "url": "https://youtube.com/c/Kudiwe" } }
+    },
+    {
+      "title": "Clubhouse",
+      "link": {
+        "href": {
+          "url": " https://www.clubhouse.com/@kudihq?utm_medium=ch_profile&utm_campaign=xl6TbsfVUEaqd50TCiAvwg-140549"
+        }
+      }
     }
   ],
 
   "Policies": [
     {
       "title": "Privacy Policy",
-      "to": "/privacy-policy"
-    },
-    {
-      "title": "Terms of use",
-      "to": "/terms-of-use"
-    },
-    {
-      "title": "Cookie Preferences",
-      "to": "/cookie-preferences"
+      "link": { "to": "/privacy-policy" }
     }
   ]
 }

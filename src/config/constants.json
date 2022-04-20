@@ -1,0 +1,4 @@
+{
+  "SIGNUP_URL": "https://dashboard.nomba.com/auth/signup",
+  "SIGNIN_URL": "https://dashboard.nomba.com/auth/login"
+}

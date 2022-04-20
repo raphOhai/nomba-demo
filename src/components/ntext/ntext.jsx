@@ -20,6 +20,11 @@ const Ntext = ({
 }) => {
   let TextElement = textVariant[0] === "p" ? "p" : textVariant;
 
+  // h7 is not a valid, we will use replace this with an h6 tag but the style for h7 will be retained according to the design system
+  if (textVariant === "h7") {
+    TextElement = "h6";
+  }
+
   const [_color, _shade] = color.split("-");
 
   const textColor = colors[_color][_shade ? _shade : "DEFAULT"];
