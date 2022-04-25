@@ -35,6 +35,10 @@
     {
       "title": "Blog",
       "link": { "href": { "url": "https://medium.com/@nombastories" } }
+    },
+    {
+      "title": "Work with Nomba",
+      "link": { "href": { "url": "https://kudi.talentlyft.com/#home" } }
     }
   ],
 
