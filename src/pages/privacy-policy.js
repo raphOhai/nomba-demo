@@ -14,18 +14,19 @@ const PrivacyPolicy = () => {
           identifiable like your name, address, email address, phone number,
           date of birth, gender, debit card details, bank information and other
           information that is not otherwise publicly available. Such information
-          is collected when you register and activate a Nomba Aaccount.
+          is collected when you register and activate a Nomba Account.
           Information about your computer hardware and software i.e. your
           internet protocol address, browser type, operating system, domain
           name, access time and date and other technical information about your
           means of connection to the Service is automatically collected.
         </Ntext>
         <Ntext variant="h2" value="Use of Information" />
+
         <Ntext variant="p16">
           2. The information collected from you is used in a number of ways. We
           use the information to process your registration, fulfill your service
           order maintain the quality of our service, generate statistics about
-          our visitors, facilitate payment in respect of Sservices rendered to
+          our visitors, facilitate payment in respect of Services rendered to
           you, customize and improve the content of our APP, fulfill any other
           request you have made, conduct research and generally enhance our
           service delivery to you. The information collected is also used to
@@ -43,7 +44,8 @@ const PrivacyPolicy = () => {
           be of interest to you. If you do not wish to receive these kinds of
           communications, you can opt out by unchecking the appropriate
           announcement boxes during registration or on the user profile page on
-          the APP. Alternatively, you can send an email to support@nomba.com.
+          the APP. Alternatively, you can send an email to{" "}
+          <b>support@nomba.com</b>.
         </Ntext>
         <Ntext variant="p16">
           4. We sometimes hire other companies to provide services on our behalf
@@ -63,7 +65,7 @@ const PrivacyPolicy = () => {
           person requires disclosure.
         </Ntext>
         <Ntext variant="p16">
-          6. We shall not sell, share or offer information about you with third
+          6.We shall not sell, share or offer information about you with third
           parties except in the manner described in this policy.
         </Ntext>
         <Ntext variant="h2" value="Information from other sources" />
@@ -102,6 +104,7 @@ const PrivacyPolicy = () => {
           online.
         </Ntext>
         <Ntext variant="h2" value="Access and Control of Information" />
+
         <Ntext variant="p16">
           12. You can access, edit and delete some information that we collect
           and process about you. For example, you can edit and update personally
@@ -110,8 +113,8 @@ const PrivacyPolicy = () => {
           accurate and up to date. If the information that you have provided
           changes i.e. your email address, name or other personally identifiable
           information, please let us know or forward the correct details by
-          sending an email to support@nomba.com, we may correct any information
-          that we think is inaccurate.
+          sending an email to <b>support@nomba.com</b>, we may correct any
+          information that we think is inaccurate.
         </Ntext>
         <Ntext variant="p16">
           13. Occasionally, we may choose to send emails concerning APP
@@ -152,7 +155,7 @@ const PrivacyPolicy = () => {
         </Ntext>
         <Ntext variant="h2" value="Conditions of Use" />
         <Ntext variant="p16">
-          17. By registering on the APP, you signify your acceptance of this
+          17.By registering on the APP, you signify your acceptance of this
           policy and the APP’s Terms and Conditions of Use. If you do not agree
           to this policy, please do not use the APP. By submitting your personal
           information, you consent to the use of that information as set out in
@@ -171,7 +174,7 @@ const PrivacyPolicy = () => {
         <Ntext variant="p16">
           19. We welcome your views about the APP and our privacy policy. If you
           would like to contact us with any enquiries or comments, please send
-          an email to support@nomba.com.
+          an email to <b>support@nomba.com</b>.
         </Ntext>
       </Container>
       <div></div>
