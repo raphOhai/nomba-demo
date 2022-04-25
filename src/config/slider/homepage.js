@@ -63,7 +63,7 @@ const homepageSliderData = [
     ),
     heading: "Thanks to one agent, there is a hundred more ",
     text:
-      "There is Superman, and then there are our ‘super-agents’ building networks of new a",
+      "There are ‘super-agents’ creating wealth and building networks of new agents",
     link: {
       text: "Get Nomba for your growing business",
       to: "/business/agents",
