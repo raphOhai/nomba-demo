@@ -7,7 +7,7 @@ import {
   LargePageHeader,
   LargeBusinessTipsAndUpdates,
 } from "templates/business/large";
-import { LargeBusinessTestimonials } from "config/testimonials/large-business";
+import { LargeBusinessTestimonials } from "config/testimonials";
 import { Testimonial } from "components";
 
 const LargeBusiness = () => {

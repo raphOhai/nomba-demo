@@ -9,7 +9,7 @@ import { Ntext } from "components/ntext";
 
 const Testimonial = ({ testimonials, headingText }) => {
   const testimonialList = testimonials.map(item => (
-    <SwiperSlide>
+    <SwiperSlide key={item.name}>
       <TestimonialCard {...item} />
     </SwiperSlide>
   ));

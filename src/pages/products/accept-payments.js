@@ -1,8 +1,7 @@
 import React from "react";
-// import a from "../../assets/images/gifs/accept-payment.gif"
 import Layout from "components/layout";
 import { Testimonial } from "components";
-import { AcceptPaymentTestimonials } from "config/testimonials/accept-payment";
+import { AcceptPaymentTestimonials } from "config/testimonials";
 
 import {
   Features,

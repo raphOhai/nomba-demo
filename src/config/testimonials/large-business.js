@@ -1,11 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import ctl from "@netlify/classnames-template-literals";
-
-const imageStyle = ctl(`
-  w-full
-  h-full
-`);
+import { imageStyle } from "./testimonial-image-style";
 
 const LargeBusinessTestimonials = [
   {
