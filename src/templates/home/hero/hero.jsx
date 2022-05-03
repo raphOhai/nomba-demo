@@ -12,8 +12,8 @@ const HomepageHero = () => {
       <Container>
         <div className={heroTextWrapperStyle}>
           <Ntext variant="h1" color="primary-1000">
-            Simple <RotatingText /> <Br variant="mobile" />
-            solutions <Br variant="desktop" />
+            Simple <RotatingText /> <Br on="mobile" />
+            solutions <Br on="desktop" />
             for your business
           </Ntext>
 

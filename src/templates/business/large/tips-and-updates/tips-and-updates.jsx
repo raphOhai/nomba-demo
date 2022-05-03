@@ -10,7 +10,7 @@ const LargeBusinessTipsAndUpdates = () => {
         list={largeBusinessTips}
         heading={
           <Ntext variant="h3">
-            Nomba for large <Br variant="mobile" /> businesses and fleets
+            Nomba for large <Br on="mobile" /> businesses and fleets
           </Ntext>
         }
       />

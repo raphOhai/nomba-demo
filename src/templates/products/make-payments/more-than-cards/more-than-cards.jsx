@@ -17,7 +17,7 @@ const MoreThanCards = () => {
         <SectionHeader className="lg:text-left md:mx-0">
           <Ntext variant="h7" value="More than cards" color="secondary" />
           <Ntext variant="h3" color="primary-100" className="mt-2">
-            Accept money through <Br variant="desktop" />
+            Accept money through <Br on="desktop" />
             transfers and QR codes
           </Ntext>
         </SectionHeader>

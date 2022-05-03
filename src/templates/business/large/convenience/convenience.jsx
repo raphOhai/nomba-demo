@@ -17,7 +17,7 @@ const Convenience = () => {
         <SectionHeader>
           <Ntext variant="h3" color="primary-100" className="mt-2">
             The convenience of accepting payments
-            <Br variant="desktop" /> and managing operations
+            <Br on="desktop" /> and managing operations
           </Ntext>
         </SectionHeader>
 

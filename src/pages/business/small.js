@@ -8,7 +8,7 @@ import {
   SmallBusinessTipsAndUpdates,
 } from "templates/business/small";
 import { Testimonial } from "components";
-import { SmallBusinessTestimonials } from "config/testimonials/small-business";
+import { SmallBusinessTestimonials } from "config/testimonials";
 
 const SmallBusiness = () => {
   return (

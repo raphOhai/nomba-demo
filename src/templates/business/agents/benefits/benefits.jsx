@@ -17,7 +17,7 @@ const Benefits = () => {
         <SectionHeader>
           <Ntext variant="h3" color="primary-100" className="mt-2">
             You don’t just earn, you enjoy packed
-            <Br variant="desktop" />
+            <Br on="desktop" />
             benefits for every service
           </Ntext>
         </SectionHeader>

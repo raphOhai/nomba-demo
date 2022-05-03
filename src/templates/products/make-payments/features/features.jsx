@@ -9,7 +9,7 @@ const Features = () => {
         <div className="mb-[72px]">
           <Ntext variant="h3">
             What businesses love about making
-            <Br variant="desktop" /> payments with Nomba
+            <Br on="desktop" /> payments with Nomba
           </Ntext>
         </div>
         <Slider slides={makePaymentsPageSliderData} />

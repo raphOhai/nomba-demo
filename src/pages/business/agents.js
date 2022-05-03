@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "components/layout";
-import { AgentTestimonials } from "config/testimonials/agents";
+import { AgentTestimonials } from "config/testimonials";
 import { Testimonial } from "components";
 import {
   Benefits,
