@@ -8,7 +8,7 @@ const Features = () => {
       <SectionHeader>
         <div className="mb-[72px] xl:mt-[120px] mt-10 ">
           <Ntext variant="h3">
-            More than just getting paid, It’s the best <Br variant="desktop" />
+            More than just getting paid, It’s the best <Br on="desktop" />
             way to stay in control
           </Ntext>
         </div>

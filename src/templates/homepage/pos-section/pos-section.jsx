@@ -9,7 +9,7 @@ const HomepagePosSection = () => {
       <Container>
         <SectionHeader>
           <Ntext variant="h3">
-            Durable, easy-to-use payment machines <Br variant="desktop" /> for
+            Durable, easy-to-use payment machines <Br on="desktop" /> for
             businesses in Africa
           </Ntext>
         </SectionHeader>

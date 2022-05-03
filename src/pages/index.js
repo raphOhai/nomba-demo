@@ -20,7 +20,7 @@ const IndexPage = () => {
         title={
           <>
             {" "}
-            Durable, easy-to-use payment machines <Br variant="desktop" /> for
+            Durable, easy-to-use payment machines <Br on="desktop" /> for
             businesses in Africa
           </>
         }

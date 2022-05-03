@@ -9,7 +9,7 @@ const HandlingBusinessPayments = () => {
     <div className={creatingWealthWrapperStyle}>
       <SectionHeader>
         <Ntext variant="h3">
-          Change how you handle everyday <Br variant="h3" />
+          Change how you handle everyday <Br on="h3" />
           business and payments
         </Ntext>
         <Ntext

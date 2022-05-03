@@ -15,8 +15,8 @@ const HomepageBusiness = () => {
                 when you go pro
               </Ntext>
               <Ntext variant="p18" className={subTextStyle}>
-                Receive payments on a new level with <Br variant="mobile" /> the
-                new Nomba Pro terminal
+                Receive payments on a new level with <Br on="mobile" /> the new
+                Nomba Pro terminal
               </Ntext>
               <ReadMore
                 color="primary-1000"

@@ -21,7 +21,7 @@ const BestWayToAcceptPayments = () => {
         <div className={bestWayWrapperStles}>
           <div>
             <Ntext variant="h2" color="primary-100">
-              The Best Way to Accept <Br variant="desktop" /> Offline and Online
+              The Best Way to Accept <Br on="desktop" /> Offline and Online
               Payments
             </Ntext>
             <Ntext variant="p18" color="primary-100" className="mt-4">

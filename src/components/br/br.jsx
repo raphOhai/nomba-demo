@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 
-const Br = ({ variant: value }) => {
-  const brStyle = ctl(`${variants[value]}`);
+const Br = ({ on }) => {
+  const brStyle = ctl(`${variants[on]}`);
 
   return <br className={brStyle} />;
 };
@@ -24,7 +24,7 @@ const variants = {
 const validVariants = ["all", "desktop", "mobile"];
 
 Br.propTypes = {
-  variant: PropTypes.oneOf([...validVariants]),
+  on: PropTypes.oneOf([...validVariants]),
 };
 
 export { Br };
