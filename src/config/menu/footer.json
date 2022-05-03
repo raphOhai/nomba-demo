@@ -45,7 +45,7 @@
   "Follow us": [
     {
       "title": "Instagram",
-      "link": { "href": { "url": "https://www.instagram.com/nomba_hq/" } }
+      "link": { "href": { "url": "https://www.instagram.com/nombahq/" } }
     },
     {
       "title": "Twitter",
@@ -53,13 +53,13 @@
     },
     {
       "title": "Youtube",
-      "link": { "href": { "url": "https://youtube.com/c/Kudiwe" } }
+      "link": { "href": { "url": "https://www.youtube.com/c/Nombahq" } }
     },
     {
-      "title": "Clubhouse",
+      "title": "Facebook",
       "link": {
         "href": {
-          "url": " https://www.clubhouse.com/@kudihq?utm_medium=ch_profile&utm_campaign=xl6TbsfVUEaqd50TCiAvwg-140549"
+          "url": "https://www.facebook.com/nombahq"
         }
       }
     }
