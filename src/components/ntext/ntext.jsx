@@ -135,9 +135,13 @@ const validElements = [
   "p18",
 ];
 
+Ntext.defaultProps = {};
 Ntext.propTypes = {
   value: PropTypes.string,
   variant: PropTypes.oneOf([...validElements]),
+  weight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  color: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export { Ntext };
