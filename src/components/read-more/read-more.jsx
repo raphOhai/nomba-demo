@@ -5,7 +5,7 @@ import { Ntext } from "../ntext";
 import Arrow from "svgs/readmore.svg";
 import ctl from "@netlify/classnames-template-literals";
 
-const ReadMore = ({ text = "Read More", color = "primary-100", ...props }) => {
+const ReadMore = ({ text, color, ...props }) => {
   return (
     <div>
       <NLink {...props} className={readmoreStyle}>
@@ -32,6 +32,11 @@ duration-300
 peer-hover:ml-4
 hover:ml-4
 `);
+
+ReadMore.defaultProps = {
+  text: "Read More",
+  color: "primary-100",
+};
 
 ReadMore.propTypes = {
   text: PropTypes.string,
