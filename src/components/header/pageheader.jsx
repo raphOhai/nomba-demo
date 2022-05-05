@@ -30,7 +30,6 @@ const PageHeader = ({
             className={subTextStyles}
           />
           <Button
-            // Kindly use the link prop in the future in case CTAs change
             href={{ url: SIGNUP_URL }}
             text={pageHeaderButtonText}
             size="medium"
