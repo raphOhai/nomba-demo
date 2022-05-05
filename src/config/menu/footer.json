@@ -63,12 +63,5 @@
         }
       }
     }
-  ],
-
-  "Policies": [
-    {
-      "title": "Privacy Policy",
-      "link": { "to": "/privacy-policy" }
-    }
   ]
 }

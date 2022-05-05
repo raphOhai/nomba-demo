@@ -11,9 +11,6 @@ const FooterNavigation = () => {
   return (
     <nav className={footerNavigationStyle}>
       {footerMenuKeys.map(footerMenuKey => {
-        if (footerMenuKey === "Policies") {
-          return null;
-        }
         return (
           <NavList
             key={footerMenuKey}
