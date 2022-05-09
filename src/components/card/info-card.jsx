@@ -6,9 +6,9 @@ import { Ntext } from "components/ntext/ntext";
 import { ReadMore } from "components/read-more";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
-const BlogCard = ({ title, date, link, image, picture }) => {
+const InfoCard = ({ title, date, link, image, picture }) => {
   return (
-    <div className={blogCardWrapperStyle}>
+    <div className={infoCardWrapperStyle}>
       {image ? (
         <GatsbyImage image={getImage(image)} />
       ) : picture ? (
@@ -24,7 +24,8 @@ const BlogCard = ({ title, date, link, image, picture }) => {
           className="w-full"
         />
       )}
-      <div className={blogCardInfoStyle}>
+
+      <div className={infoCardInfoStyle}>
         <Ntext
           variant="h6"
           color="primary-100"
@@ -43,7 +44,7 @@ const BlogCard = ({ title, date, link, image, picture }) => {
   );
 };
 
-const blogCardWrapperStyle = ctl(`
+const infoCardWrapperStyle = ctl(`
 relative
 md:h-[401px]
 h-[334px]
@@ -52,7 +53,7 @@ overflow-hidden
 place-items-stretch
 `);
 
-const blogCardInfoStyle = ctl(`
+const infoCardInfoStyle = ctl(`
 absolute
 left-0
 top-0
@@ -84,10 +85,10 @@ flex
 items-end
 `);
 
-BlogCard.propTypes = {
+InfoCard.propTypes = {
   title: PropTypes.string,
   date: PropTypes.string,
   link: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
-export { BlogCard };
+export { InfoCard };

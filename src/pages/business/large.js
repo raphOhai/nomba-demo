@@ -5,7 +5,7 @@ import {
   Convenience,
   HandlingBusinessPayments,
   LargePageHeader,
-  LargeBusinessTipsAndUpdates,
+  LargeBusinessInfoGridSection,
 } from "templates/business/large";
 import { LargeBusinessTestimonials } from "config/testimonials";
 import { Testimonial } from "components";
@@ -16,7 +16,7 @@ const LargeBusiness = () => {
       <LargePageHeader />
       <HandlingBusinessPayments />
       <Convenience />
-      <LargeBusinessTipsAndUpdates />
+      <LargeBusinessInfoGridSection />
 
       <div className="pt-2">
         <Testimonial

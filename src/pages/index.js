@@ -6,9 +6,9 @@ import {
   HomepageGotOptions,
   HomepageFeatures,
   HomepageBusiness,
+  HomepageTipsAndUpdate,
 } from "templates/home";
-import { Br, POSTerminals, TipsAndUpdates, Ntext } from "components";
-import { tipsAndUpdatesList } from "mocks/tips-and-updates.js";
+import { Br, POSTerminals } from "components";
 
 const IndexPage = () => {
   return (
@@ -26,15 +26,7 @@ const IndexPage = () => {
         }
       />
       <HomepageFeatures />
-      <TipsAndUpdates
-        list={tipsAndUpdatesList}
-        heading={
-          <Ntext variant="h3">
-            Tips, updates and stories from <Br />
-            our community
-          </Ntext>
-        }
-      />
+      <HomepageTipsAndUpdate />
     </Layout>
   );
 };

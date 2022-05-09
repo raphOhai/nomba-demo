@@ -1,5 +1,6 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
+import PropTypes from "prop-types";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -26,25 +27,7 @@ const Slider = ({ slides }) => {
 
   return (
     <div className={sectionWrapStyle}>
-      <div className={controlWrapStyle}>
-        <div className={controlButtonWrapStyle}>
-          <button
-            className={`${controlButtonStyle} previous-element`}
-            aria-label="Previous Slide"
-          >
-            <PreviousIcon />
-          </button>
-
-          <button
-            className={`${controlButtonStyle} next-element`}
-            aria-label="Next Slide"
-          >
-            <NextIcon />
-          </button>
-        </div>
-
-        <div className={blackLineStyle}></div>
-      </div>
+      <SliderNavigation />
 
       <div className="mt-[42px]">
         <Swiper
@@ -56,38 +39,62 @@ const Slider = ({ slides }) => {
           loop={true}
           spaceBetween={24}
           slidesPerView={1}
-          breakpoints={{
-            280: {
-              slidesPerView: 1,
-            },
-            320: {
-              slidesPerView: 1.15,
-            },
-            390: {
-              slidesPerView: 1.2,
-            },
-            450: {
-              slidesPerView: 1.4,
-            },
-            640: {
-              slidesPerView: 1.7,
-            },
-            850: {
-              slidesPerView: 2,
-            },
-            1100: {
-              slidesPerView: 2.5,
-            },
-            1400: {
-              slidesPerView: 3,
-            },
-          }}
+          breakpoints={breakpoints}
         >
           {sliderItems}
         </Swiper>
       </div>
     </div>
   );
+};
+
+const SliderNavigation = () => (
+  <div className={controlWrapStyle}>
+    <div className={controlButtonWrapStyle}>
+      <button
+        className={`${controlButtonStyle} previous-element`}
+        aria-label="Previous Slide"
+      >
+        <PreviousIcon />
+      </button>
+
+      <button
+        className={`${controlButtonStyle} next-element`}
+        aria-label="Next Slide"
+      >
+        <NextIcon />
+      </button>
+    </div>
+
+    <div className={blackLineStyle}></div>
+  </div>
+);
+
+const breakpoints = {
+  280: {
+    slidesPerView: 1,
+  },
+  320: {
+    slidesPerView: 1.15,
+  },
+  390: {
+    slidesPerView: 1.2,
+  },
+  450: {
+    slidesPerView: 1.4,
+  },
+  640: {
+    slidesPerView: 1.7,
+  },
+  850: {
+    slidesPerView: 2,
+  },
+  1100: {
+    slidesPerView: 2.5,
+  },
+  1400: {
+    slidesPerView: 3,
+  },
 };
 
 const controlWrapStyle = ctl(`
@@ -120,5 +127,9 @@ const controlButtonStyle = ctl(`
   border-black
   hover:bg-secondary-100
 `);
+
+Slider.propTypes = {
+  slides: PropTypes.array,
+};
 
 export { Slider };
