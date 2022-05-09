@@ -15,9 +15,6 @@ const PosPageHeader = () => {
           height={644}
           src="../../../../assets/images/jpegs/Get paid in-store or on-the-go.jpg"
           alt="Get paid in-store or on-the-go"
-          style={{
-            clipPath: "polygon(64% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-          }}
         />
       }
     />
