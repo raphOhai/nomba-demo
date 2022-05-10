@@ -89,3 +89,6 @@
 .policy-page p {
   @apply mb-3;
 }
+.menu-button-wrap li a {
+  @apply w-full;
+}

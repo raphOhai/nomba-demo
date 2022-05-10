@@ -53,7 +53,7 @@ const Button = ({
 };
 
 const textStyle = ctl(`
-block
+  block
 `);
 
 const baseStyle = ctl(`
