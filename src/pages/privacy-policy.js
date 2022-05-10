@@ -6,7 +6,7 @@ import Container from "components/utils/container";
 const PrivacyPolicy = () => {
   return (
     <Layout title="Privacy Policy">
-      <PolicyPageHeader heading="Privacy Policy" />
+      <PolicyPageHeader heading="Privacy Policy" date="April 12, 2022" />
       <Container className="policy-page">
         <Ntext variant="h2" value="Information Collection" />
         <Ntext variant="p16">

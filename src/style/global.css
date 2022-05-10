@@ -92,3 +92,15 @@
 .menu-button-wrap li a {
   @apply w-full;
 }
+.policy-page ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.policy-page ul > li {
+  @apply my-2;
+}
+
+dt {
+  @apply my-2;
+}
