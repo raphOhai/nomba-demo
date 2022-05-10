@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Privacy Policy",
+    "link": { "to": "/privacy-policy" }
+  },
+  {
+    "title": "Terms of Use",
+    "link": { "to": "/terms-of-use" }
+  },
+  {
+    "title": "POS Terms of Use",
+    "link": { "to": "/pos-terms-of-use" }
+  },
+  {
+    "title": "Savings Terms and Conditions",
+    "link": { "to": "/savings-terms-and-conditions" }
+  }
+]

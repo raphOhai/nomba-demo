@@ -37,8 +37,10 @@ const PosCard = ({ device, icons, image, isLite, features, link }) => {
                   </li>
                 ))}
               </ul>
+
               <span className={posReadMoreStyle}>
                 {/* <ReadMore color={textColor} {...link} /> */}
+                {link && <ReadMore color={textColor} {...link} />}
               </span>
             </div>
 

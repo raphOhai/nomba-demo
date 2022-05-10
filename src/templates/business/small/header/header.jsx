@@ -14,9 +14,6 @@ const SmallPageHeader = () => {
           height={644}
           src="../../../../assets/images/jpegs/Small Business.jpg"
           alt="Small Business"
-          style={{
-            clipPath: "polygon(66% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-          }}
         />
       }
     />

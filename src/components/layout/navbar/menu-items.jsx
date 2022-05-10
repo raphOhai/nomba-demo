@@ -56,6 +56,8 @@ const itemWrapStyle = ctl(`
   cursor-default
   lg:py-7
   pt-[45px]
+  xl:mr-[62px]
+  mr-8
 `);
 const menuHeadingStyle = ctl(`
   uppercase 
@@ -67,8 +69,6 @@ const menuHeadingStyle = ctl(`
 `);
 const menuItemStyle = ctl(`
   lg:flex 
-  xl:gap-[62px]
-  gap-8
 `);
 const menuLinkWrapStyle = ctl(`
   flex 

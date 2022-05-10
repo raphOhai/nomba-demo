@@ -17,9 +17,6 @@ const AcceptPaymentsPageHeader = () => {
             height={644}
             src="../../../../assets/images/jpegs/Accepting payments has never been easier.jpg"
             alt="Accepting payments has never been easier"
-            style={{
-              clipPath: "polygon(64% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-            }}
           />
         }
       />

@@ -38,7 +38,7 @@
     },
     {
       "title": "Work with Nomba",
-      "link": { "href": { "url": "https://kudi.talentlyft.com/#home" } }
+      "link": { "href": { "url": "https://nomba.talentlyft.com/#home" } }
     }
   ],
 
@@ -62,13 +62,6 @@
           "url": "https://www.facebook.com/nombahq"
         }
       }
-    }
-  ],
-
-  "Policies": [
-    {
-      "title": "Privacy Policy",
-      "link": { "to": "/privacy-policy" }
     }
   ]
 }

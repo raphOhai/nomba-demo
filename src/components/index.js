@@ -8,7 +8,7 @@ export * from "./newsletter";
 export * from "./read-more";
 export * from "./header";
 export * from "./br";
-export * from "./tips-and-updates";
+export * from "./info-grid-section";
 export * from "./slider";
 export * from "./pos-terminals";
 export * from "./timeline";

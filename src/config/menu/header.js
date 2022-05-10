@@ -128,7 +128,7 @@ const headerMenu = {
       icon: <Audience />,
       description: "Available roles at Nomba",
       comingSoon: true,
-      href: { url: "https://kudi.talentlyft.com/#home" },
+      href: { url: "https://nomba.talentlyft.com/#home" },
     },
     {
       title: "Blog",

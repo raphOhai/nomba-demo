@@ -6,6 +6,8 @@ import ctl from "@netlify/classnames-template-literals";
 
 import constants from "config/constants.json";
 
+const { SIGNUP_URL } = constants;
+
 const PageHeader = ({
   pageHeaderText,
   pageHeaderSubText,
@@ -13,7 +15,6 @@ const PageHeader = ({
   image,
   link,
 }) => {
-  const { SIGNUP_URL } = constants;
   return (
     <Container>
       <section className={pageHeaderWrapperStyle}>
@@ -27,17 +28,19 @@ const PageHeader = ({
           <Ntext
             variant="p18"
             value={pageHeaderSubText}
-            className={subTextStyles}
+            className={subTextStyle}
           />
-          <Button
-            // Kindly use the link prop in the future in case CTAs change
-            href={{ url: SIGNUP_URL }}
-            text={pageHeaderButtonText}
-            size="medium"
-          />
+          <Button {...link} text={pageHeaderButtonText} size="medium" />
         </div>
-        <div className={imageWrapperStyles}>
-          <div className={imageStyle}>{image}</div>
+        <div className={imageWrapperStyle}>
+          <div
+            className={imageStyle}
+            style={{
+              clipPath: "polygon(64% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
+            }}
+          >
+            {image}
+          </div>
         </div>
       </section>
     </Container>
@@ -55,11 +58,11 @@ gap-[40px]
 mb-[-50px]
 `);
 
-const subTextStyles = ctl(`
+const subTextStyle = ctl(`
 max-w-[330px] 
 my-6
 `);
-const imageWrapperStyles = ctl(`
+const imageWrapperStyle = ctl(`
 w-full 
 flex
 sm:justify-end
@@ -69,7 +72,12 @@ const imageStyle = ctl(`
 xl:mt-0
 lg:-mt-[400px]
 md:-mt-[240px]
+
 `);
+
+PageHeader.defaultProps = {
+  link: { href: { url: SIGNUP_URL } },
+};
 
 PageHeader.propTypes = {
   pageHeaderText: PropTypes.string,

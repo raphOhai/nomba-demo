@@ -18,9 +18,6 @@ const MakePaymentsPageHeader = () => {
           height={644}
           src="../../../../assets/images/jpegs/Make Payments.jpg"
           alt="Make Payments"
-          style={{
-            clipPath: "polygon(64% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-          }}
         />
       }
     />

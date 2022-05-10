@@ -1,4 +1,4 @@
-export * from "./blog-card";
+export * from "./info-card";
 export * from "./illustration-card";
 export * from "./pos-card";
 export * from "./slider-card";

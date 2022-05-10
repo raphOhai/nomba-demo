@@ -5,7 +5,7 @@ import {
   GrowingYourSales,
   MakeYourBusinessEasy,
   SmallPageHeader,
-  SmallBusinessTipsAndUpdates,
+  SmallBusinessInfoGridSection,
 } from "templates/business/small";
 import { Testimonial } from "components";
 import { SmallBusinessTestimonials } from "config/testimonials";
@@ -16,7 +16,7 @@ const SmallBusiness = () => {
       <SmallPageHeader />
       <GrowingYourSales />
       <MakeYourBusinessEasy />
-      <SmallBusinessTipsAndUpdates />
+      <SmallBusinessInfoGridSection />
       <div className="pt-2">
         <Testimonial
           testimonials={SmallBusinessTestimonials}

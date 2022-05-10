@@ -14,9 +14,6 @@ const LargePageHeader = () => {
           height={644}
           src="../../../../assets/images/jpegs/large-business/large-business-header.jpg"
           alt="woman making payment over POS - nomba"
-          style={{
-            clipPath: "polygon(66% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-          }}
         />
       }
     />

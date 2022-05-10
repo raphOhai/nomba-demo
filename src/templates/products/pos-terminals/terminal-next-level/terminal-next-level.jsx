@@ -13,7 +13,7 @@ const TerminalNextLevel = () => {
     "
     >
       <Container>
-        <div className={gridStyles}>
+        <div className={gridStyle}>
           <div className="max-w-[520px]">
             <StaticImage
               width={514}
@@ -25,14 +25,14 @@ const TerminalNextLevel = () => {
               }}
             />
           </div>
-          <div className={textWrapperStyles}>
+          <div className={textWrapperStyle}>
             <Ntext variant="h3" className="font-extrabold">
               A chance to move your business to the next level
             </Ntext>
             <Ntext variant="p18" className="mt-4">
               Here's what you need to get the new POS terminal
             </Ntext>
-            <ul className={listWrapperStyles}>
+            <ul className={listWrapperStyle}>
               <li className="flex mr-3">
                 <Tick />
 
@@ -40,7 +40,7 @@ const TerminalNextLevel = () => {
                   Your business name
                 </Ntext>
               </li>
-              <li className={listItemStyles}>
+              <li className={listItemStyle}>
                 <Tick />
 
                 <Ntext variant="p16" className="ml-2">
@@ -60,19 +60,19 @@ const TerminalNextLevel = () => {
   );
 };
 
-const gridStyles = ctl(`
+const gridStyle = ctl(`
 grid 
 grid-cols-1 
 md:grid-cols-2 
 gap-[40px] 
 `);
-const textWrapperStyles = ctl(`
+const textWrapperStyle = ctl(`
 max-w-[520px] 
 self-center 
 mt-16 
 md:mt-0
 `);
-const listWrapperStyles = ctl(`
+const listWrapperStyle = ctl(`
 flex 
 flex-col 
 justify-center  
@@ -82,7 +82,7 @@ md:mt-4
 mb-9 
 md:mb-6
 `);
-const listItemStyles = ctl(`
+const listItemStyle = ctl(`
 flex 
 mt-6 
 md:mt-0

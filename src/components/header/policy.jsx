@@ -10,7 +10,7 @@ const PolicyPageHeader = ({ heading, date }) => {
         <Ntext value={heading} color="primary-100" variant="h1" />
         {date && (
           <Ntext
-            value={`Effective as of ${date}`}
+            value={`Revision Date: ${date}`}
             color="primary-100"
             variant="p18"
           />

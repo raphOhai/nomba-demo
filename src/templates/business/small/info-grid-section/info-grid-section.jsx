@@ -1,12 +1,12 @@
 import React from "react";
 import { Ntext, Br } from "components";
 import { smallBusinessTips } from "config/small-business";
-import { TipsAndUpdates } from "components";
+import { InfoGridSection } from "components";
 
-const SmallBusinessTipsAndUpdates = () => {
+const SmallBusinessInfoGridSection = () => {
   return (
     <div className="mt-20 lg:mb-40">
-      <TipsAndUpdates
+      <InfoGridSection
         list={smallBusinessTips}
         heading={
           <Ntext variant="h3">
@@ -18,4 +18,4 @@ const SmallBusinessTipsAndUpdates = () => {
   );
 };
 
-export { SmallBusinessTipsAndUpdates };
+export { SmallBusinessInfoGridSection };

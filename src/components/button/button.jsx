@@ -53,7 +53,7 @@ const Button = ({
 };
 
 const textStyle = ctl(`
-block
+  block
 `);
 
 const baseStyle = ctl(`
@@ -107,6 +107,10 @@ disabled:text-primary
 `,
 };
 
+Button.defaultProps = {
+  variant: "primary",
+  size: "xsmall",
+};
 Button.propTypes = {
   text: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "alternative"]),

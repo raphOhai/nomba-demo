@@ -2,13 +2,14 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import Logo from "svgs/nomba-logo.svg";
-import footerMenu from "config/menu/footer.json";
+import policies from "config/menu/policies.json";
 
 import { NLink } from "components/nlink";
 import { Ntext } from "components/ntext";
 
 const Policies = () => {
-  const policiesMenu = footerMenu["Policies"];
+  const policiesMenu = policies;
+
   return (
     <div className={policyWrapperStyle}>
       <NLink to="/">

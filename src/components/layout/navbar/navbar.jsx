@@ -15,8 +15,8 @@ const NavBar = () => {
   return (
     <header className={`${mainHeaderStlye} ${openMenu && "h-full"}`}>
       <nav className={navStyle}>
-        <NLink to="/">
-          <Logo className="w-[94px]" />
+        <NLink to="/" className="mr-[71px]">
+          <Logo className="w-[94px] " />
         </NLink>
 
         <Menu openMenu={openMenu} onToggle={onToggle} />
@@ -32,6 +32,7 @@ top-0
 left-0
 w-full
 z-[9999]
+lg:h-auto
 `);
 
 const navStyle = ctl(`
@@ -39,7 +40,6 @@ const navStyle = ctl(`
   items-center
   justify-between
   lg:justify-start
-  gap-[71px]
   px-[25px]
   py-[12.5px]
   lg:py-0
