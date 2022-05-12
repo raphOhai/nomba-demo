@@ -1,17 +1,13 @@
 import Layout from "components/layout";
 import React from "react";
-import { Br, Container, Ntext, PolicyPageHeader, ReadMore } from "components";
+import { Container, Ntext, PolicyPageHeader } from "components";
 
 const TermsOfUse = () => {
   return (
     <Layout title="Privacy Policy">
       <PolicyPageHeader
-        heading={
-          <>
-            Point of Sale Terminals <Br on="desktop" />
-            Terms of Service
-          </>
-        }
+        heading="Point of Sale Terminals 
+Terms of Service"
         date="April 12, 2022"
       />
       <Container className="policy-page">
@@ -565,25 +561,6 @@ const TermsOfUse = () => {
           both direct or indirect, that it may suffer as a result of your/ the
           User’s use and/or misuse of the Terminals
         </Ntext>
-
-        <ul className="policy-nav">
-          <li>
-            <Ntext variant="h4" value="Terms of Use" />
-            <ReadMore
-              text="Read our Terms of Use"
-              to="/terms-of-use"
-              color="primary"
-            />
-          </li>
-          <li>
-            <Ntext variant="h4" value="Savings Terms of Service" />
-            <ReadMore
-              text="Read our Savings Terms of Service"
-              to="/savings-terms-of-service"
-              color="primary"
-            />
-          </li>
-        </ul>
       </Container>
       <div></div>
     </Layout>

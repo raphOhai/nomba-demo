@@ -101,29 +101,6 @@
   @apply my-2;
 }
 
-ul.policy-nav {
-  list-style-type: none;
-  @apply flex;
-  @apply flex-wrap;
-  @apply my-14;
-}
-
-ul.policy-nav p {
-  @apply mb-0;
-}
-
-ul.policy-nav div {
-  @apply mt-2;
-}
-
-ul.policy-nav li {
-  @apply my-4;
-}
-
-ul.policy-nav li:not(:last-child) {
-  @apply mr-[80px];
-}
-
 dt {
   @apply my-2;
 }
