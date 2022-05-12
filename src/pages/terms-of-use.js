@@ -1,11 +1,11 @@
 import Layout from "components/layout";
 import React from "react";
-import { Container, Ntext, PolicyPageHeader, ReadMore } from "components";
+import { Container, Ntext, PolicyPageHeader } from "components";
 
 const TermsOfUse = () => {
   return (
     <Layout title="Privacy Policy">
-      <PolicyPageHeader heading="Terms of use" date="April 12, 2022" />
+      <PolicyPageHeader heading="Legal & Terms of use" date="April 12, 2022" />
       <Container className="policy-page">
         <Ntext variant="p16">
           These General Terms of Service (“General Terms”) are a legal agreement
@@ -32,28 +32,6 @@ const TermsOfUse = () => {
           Please read all of our Terms carefully and if you do not agree to any
           or all of these Terms. DO NOT USE THE SERVICES
         </Ntext>
-
-        <ul className="policy-nav">
-          <li>
-            <Ntext
-              variant="h4"
-              value="Point of Sale Terminals Terms of Service"
-            />
-            <ReadMore
-              text="Read our Point of Sale Terminals Terms of Service"
-              to="/pos-terms-of-service"
-              color="primary"
-            />
-          </li>
-          <li>
-            <Ntext variant="h4" value="Savings Terms of Service" />
-            <ReadMore
-              text="Read our Savings Terms of Service"
-              to="/savings-terms-of-service"
-              color="primary"
-            />
-          </li>
-        </ul>
 
         <Ntext variant="h2" value="Account Registration" />
 
