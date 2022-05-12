@@ -1,12 +1,12 @@
 import Layout from "components/layout";
 import React from "react";
-import { Container, Ntext, PolicyPageHeader } from "components";
+import { Container, Ntext, PolicyPageHeader, ReadMore } from "components";
 
 const TermsOfUse = () => {
   return (
-    <Layout title="Savings Terms And Conditions">
+    <Layout title="Savings Terms of Service">
       <PolicyPageHeader
-        heading="Savings Terms And Conditions"
+        heading="Savings Terms of Service"
         date="April 12, 2022"
       />
       <Container className="policy-page">
@@ -433,7 +433,30 @@ const TermsOfUse = () => {
           not infringe our copyright by any method or manner now known or as may
           exist in the future
         </Ntext>
+
+        <ul className="policy-nav">
+          <li>
+            <Ntext variant="h4" value="Terms of Use" />
+            <ReadMore
+              text="Read our Terms of Use"
+              to="/terms-of-use"
+              color="primary"
+            />
+          </li>
+          <li>
+            <Ntext
+              variant="h4"
+              value="Point of Sale Terminals Terms of Service"
+            />
+            <ReadMore
+              text="Read our Point of Sale Terminals Terms of Service"
+              to="/pos-terms-of-service"
+              color="primary"
+            />
+          </li>
+        </ul>
       </Container>
+
       <div></div>
     </Layout>
   );
