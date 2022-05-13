@@ -16,6 +16,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      resolve: "gatsby-plugin-mixpanel",
+      options: {
+        apiToken: "b00a04703da2d5cd14a843fe46e3a298",
+        enableOnDevMode: true,
+        pageViews: "all",
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
