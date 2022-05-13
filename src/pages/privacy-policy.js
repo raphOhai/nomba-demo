@@ -1,7 +1,7 @@
 import Layout from "components/layout";
 import React from "react";
 import { Ntext, PolicyPageHeader } from "components";
-import Container from "components/utils/container";
+import { Container } from "components";
 
 const PrivacyPolicy = () => {
   return (

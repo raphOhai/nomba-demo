@@ -57,7 +57,7 @@ const itemWrapStyle = ctl(`
   lg:py-7
   pt-[45px]
   xl:mr-[62px]
-  mr-8
+  lg:mr-8
 `);
 const menuHeadingStyle = ctl(`
   uppercase 

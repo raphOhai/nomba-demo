@@ -37,6 +37,7 @@ const Button = ({
     if (href) {
       linkProps.href = href;
     }
+    linkProps.trackingText = text;
   }
 
   return (

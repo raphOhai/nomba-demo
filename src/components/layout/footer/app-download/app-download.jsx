@@ -30,10 +30,13 @@ const AppDownload = () => {
             />
 
             <div className={buttonWrapStyle}>
-              <DownloadButton url="https://play.google.com/store/apps/details?id=ai.kudi.agent&hl=en&gl=US">
+              <DownloadButton
+                url="https://play.google.com/store/apps/details?id=ai.kudi.agent&hl=en&gl=US"
+                trackingText="Download on Google Play"
+              >
                 <PlayStore /> Google Play
               </DownloadButton>
-              {/* <DownloadButton url="https://download_apple">
+              {/* <DownloadButton url="https://download_apple" trackingText="Download on App Store">
                 <AppStore /> App Store
               </DownloadButton> */}
             </div>

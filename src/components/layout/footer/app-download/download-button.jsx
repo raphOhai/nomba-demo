@@ -2,9 +2,13 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { NLink } from "components";
 
-const DownloadButton = ({ url, children }) => {
+const DownloadButton = ({ url, trackingText, children }) => {
   return (
-    <NLink href={{ url: url }} className={buttonStyle}>
+    <NLink
+      href={{ url: url }}
+      trackingText={trackingText}
+      className={buttonStyle}
+    >
       {children}
     </NLink>
   );

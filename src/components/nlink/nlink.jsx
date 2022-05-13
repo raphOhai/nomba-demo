@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useMixpanel } from "gatsby-plugin-mixpanel";
 
 import { Link } from "gatsby";
 
-const NLink = ({ href, to, className, children }) => {
+const NLink = ({ href, to, className, trackingText, children }) => {
+  const mixpanel = useMixpanel();
+
   let NLinkElement;
   let nlinkProps = {};
 
@@ -26,7 +29,15 @@ const NLink = ({ href, to, className, children }) => {
   }
 
   return (
-    <NLinkElement className={className} {...nlinkProps}>
+    <NLinkElement
+      className={className}
+      {...nlinkProps}
+      onClick={() => {
+        if (trackingText) {
+          mixpanel.track(trackingText);
+        }
+      }}
+    >
       {children}
     </NLinkElement>
   );
@@ -35,6 +46,7 @@ const NLink = ({ href, to, className, children }) => {
 NLink.propTypes = {
   href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   to: PropTypes.string,
+  trackingText: PropTypes.string,
 };
 
 export { NLink };
