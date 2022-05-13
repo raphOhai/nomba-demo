@@ -17,7 +17,7 @@ Explain how to manually test this feature.
 
 ## 4. Operations impact
 
-List the steps that must be taken for this PR to work e.g `npm install`, `yarn`, `add API_URL to environment varaibles`, etc
+List the steps that must be taken for this PR to work e.g `npm install`, `yarn`, `add API_URL to environment variables`, etc
 
 ## 5. Business impact
 
