@@ -5,7 +5,7 @@ import { Container, Ntext, PolicyPageHeader, ReadMore } from "components";
 const TermsOfUse = () => {
   return (
     <Layout title="Privacy Policy">
-      <PolicyPageHeader heading="Terms of use" date="April 12, 2022" />
+      <PolicyPageHeader heading="Terms of Service" date="April 12, 2022" />
       <Container className="policy-page">
         <Ntext variant="p16">
           These General Terms of Service (“General Terms”) are a legal agreement

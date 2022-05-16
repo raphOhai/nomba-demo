@@ -436,10 +436,10 @@ const TermsOfUse = () => {
 
         <ul className="policy-nav">
           <li>
-            <Ntext variant="h4" value="Terms of Use" />
+            <Ntext variant="h4" value="Terms of Service" />
             <ReadMore
-              text="Read our Terms of Use"
-              to="/terms-of-use"
+              text="Read our Terms of Service"
+              to="/terms-of-service"
               color="primary"
             />
           </li>

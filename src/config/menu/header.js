@@ -1,6 +1,6 @@
 import React from "react";
 import Payments from "svgs/payment.svg";
-// import Bank from "svgs/bank.svg";
+import Bank from "svgs/bank.svg";
 // import Business from "svgs/business.svg";
 import Profile from "svgs/profile.svg";
 import Shop from "svgs/outline/shop-1.svg";
@@ -9,89 +9,67 @@ import Globe from "svgs/globe.svg";
 import Audience from "svgs/audience-2.svg";
 import Pages from "svgs/pages.svg";
 
-import Card from "svgs/card.svg";
-import Money from "svgs/outline/money-1.svg";
-
 const headerMenu = {
-  // Products: [
-  //   {
-  //     title: "Payments",
-  //     icon: <Payments />,
-  //     description: "Accept and make payments on Nomba",
-  //     subMenu: [
-  //       {
-  //         title: "Accept Payments",
-  //         to: "/products/accept-payments",
-  //       },
-  //       {
-  //         title: "Make Payments",
-  //         to: "/products/make-payments",
-  //       },
-  //       {
-  //         title: "POS Terminals",
-  //         to: "/products/pos-terminals",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Banking",
-  //     icon: <Bank />,
-  //     description: "Access the financial tools you need",
-  //     subMenu: [
-  //       {
-  //         title: "Capital",
-  //         to: "/banking/capital",
-  //       },
-  //       {
-  //         title: "Savings",
-  //         to: "/banking/savings",
-  //       },
-  //       {
-  //         title: "Cards",
-  //         to: "/banking/cards",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Business operations",
-  //     icon: <Business />,
-  //     description: "Manage your businesses with zero stress",
-  //     subMenu: [
-  //       {
-  //         title: "Customer Directory",
-  //         to: "/business_operations/customer_directory",
-  //       },
-  //       {
-  //         title: "Payroll",
-  //         to: "/business_operations/payroll",
-  //       },
-  //       {
-  //         title: "Inventory",
-  //         to: "/business_operations/inventory",
-  //       },
-  //     ],
-  //   },
-  // ],
   Products: [
     {
-      title: "Accept Payments",
+      title: "Payments",
       icon: <Payments />,
-      description: "Get paid with cards, transfers and QR codes",
-      to: "/products/accept-payments",
+      description: "Accept and make payments on Nomba",
+      subMenu: [
+        {
+          title: "Accept Payments",
+          to: "/products/accept-payments",
+        },
+        {
+          title: "Make Payments",
+          to: "/products/make-payments",
+        },
+        {
+          title: "POS Terminals",
+          to: "/products/pos-terminals",
+        },
+      ],
     },
     {
-      title: "Make Payments",
-      icon: <Money />,
-      description: "Make large and multiple payments",
-      to: "/products/make-payments",
+      title: "Banking",
+      icon: <Bank />,
+      description: "Access the financial tools you need",
+      subMenu: [
+        // {
+        //   title: "Capital",
+        //   to: "/banking/capital",
+        // },
+        {
+          title: "Savings",
+          to: "/banking/savings",
+        },
+        // {
+        //   title: "Cards",
+        //   to: "/banking/cards",
+        // },
+      ],
     },
-    {
-      title: "POS Terminals",
-      icon: <Card />,
-      description: "Receive, confirm and track payments",
-      to: "/products/pos-terminals",
-    },
+    // {
+    //   title: "Business operations",
+    //   icon: <Business />,
+    //   description: "Manage your businesses with zero stress",
+    //   subMenu: [
+    //     {
+    //       title: "Customer Directory",
+    //       to: "/business_operations/customer_directory",
+    //     },
+    //     {
+    //       title: "Payroll",
+    //       to: "/business_operations/payroll",
+    //     },
+    //     {
+    //       title: "Inventory",
+    //       to: "/business_operations/inventory",
+    //     },
+    //   ],
+    // },
   ],
+
   "Business Types": [
     {
       title: "Mobile Money Agents",
@@ -138,9 +116,6 @@ const headerMenu = {
       href: { url: "https://medium.com/@nombastories" },
     },
   ],
-  // Pricing: {
-  //   to: "/pricing",
-  // },
 };
 
 export { headerMenu };
