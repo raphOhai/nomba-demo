@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mixpanel",
       options: {
-        apiToken: "7f5f8bc7493a36e52f8b7218315ef5ca",
-        enableOnDevMode: true,
+        apiToken: process.env.MIXPANEL_API_TOKEN,
+        enableOnDevMode: process.env.NODE_ENV !== "production",
         pageViews: "all",
       },
     },
@@ -46,17 +46,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingIds: ["G-F4H83CDY9T"],
-      },
-      gtagConfig: {
-        anonymize_ip: false,
-        cookie_expires: 0,
-      },
-      pluginConfig: {
-        head: true,
-        origin: "https://wwww.nomba.com",
+        id: process.env.GOOGLE_TAG_MANAGER_ID,
+        includeInDevelopment: true,
       },
     },
     {
@@ -82,8 +75,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `project-name`,
-        short_name: `project-name`,
+        name: `Nomba`,
+        short_name: `Nomba`,
         start_url: `/`,
         //Dominant color of the brand
         background_color: `#FFCC00`,

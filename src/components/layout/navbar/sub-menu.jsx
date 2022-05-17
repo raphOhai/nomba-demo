@@ -98,6 +98,7 @@ const subMenuStyle = ctl(`
   lg:absolute
   z-10
   lg:h-[296px]
+  lg:h-[207px]
   lg:shadow-subMenu
   mt-5
 `);

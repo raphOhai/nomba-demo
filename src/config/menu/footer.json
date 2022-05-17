@@ -63,5 +63,19 @@
         }
       }
     }
+  ],
+  "Contact us": [
+    {
+      "title": "018888866",
+      "link": { "href": { "url": "tel:+23401888866" } }
+    },
+    {
+      "title": "015200061",
+      "link": { "href": { "url": "tel:+234015200061" } }
+    },
+    {
+      "title": "support@nomba.com",
+      "link": { "href": { "url": "mailto:support@nomba.com" } }
+    }
   ]
 }
