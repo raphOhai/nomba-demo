@@ -1,5 +1,6 @@
-import { InfoCard, Container, SectionHeader } from "components";
 import React from "react";
+import PropTypes from "prop-types";
+import { InfoCard, Container, SectionHeader } from "components";
 import ctl from "@netlify/classnames-template-literals";
 
 const InfoGridSection = ({ list, heading }) => {
@@ -24,4 +25,8 @@ grid-cols-1
 gap-8
 `);
 
+InfoGridSection.propTypes = {
+  list: PropTypes.object,
+  heading: PropTypes.string,
+};
 export { InfoGridSection };

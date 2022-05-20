@@ -129,7 +129,7 @@ const controlButtonStyle = ctl(`
 `);
 
 Slider.propTypes = {
-  slides: PropTypes.array,
+  slides: PropTypes.object,
 };
 
 export { Slider };

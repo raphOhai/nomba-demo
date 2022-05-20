@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,4 +39,10 @@ const headingTextStyle = ctl(`
   text-center 
   mb-[62px]
 `);
+
+Testimonial.propTypes = {
+  testimonials: PropTypes.object,
+  headingText: PropTypes.string,
+};
+
 export { Testimonial };
