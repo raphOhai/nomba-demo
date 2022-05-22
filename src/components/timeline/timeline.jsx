@@ -46,7 +46,7 @@ const subHeadingStyle = ctl(`
   lg:mb-[78px] 
   mb-12
   md:mb-16
-  max-w-[350px]
+  max-w-[410px]
 `);
 const imageWrapStyle = ctl(`
   pt-[69px]

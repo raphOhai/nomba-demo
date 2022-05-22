@@ -37,6 +37,7 @@ mb-12
 cursor-default 
 lg:text-left 
 text-center
+illustration
 `);
 const illustrationSpanStyle = ctl(`
 w-[133px]

@@ -127,3 +127,14 @@ ul.policy-nav li:not(:last-child) {
 dt {
   @apply my-2;
 }
+
+.illustration svg {
+  @apply mx-auto;
+  @apply min-h-[100px];
+}
+
+@screen md {
+  .illustration svg {
+    @apply mx-0;
+  }
+}

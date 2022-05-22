@@ -1,5 +1,5 @@
 import React from "react";
-import { OurStoryTerminalCard, Ntext, Container, Br } from "components";
+import { Ntext, Container, Br, SectionBrandElement } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 import ctl from "@netlify/classnames-template-literals";
 
@@ -16,7 +16,14 @@ const BestWayToAcceptPayments = () => {
     "Confirm all funds settled to your Nomba account at the end of the day",
   ];
   return (
-    <OurStoryTerminalCard>
+    <section
+      className="relative bg-primary  px-8 
+    md:px-16 
+    py-20 
+    lg:py-40 
+    overflow-hidden "
+    >
+      <SectionBrandElement />
       <Container>
         <div className={bestWayWrapperStles}>
           <div>
@@ -52,7 +59,7 @@ const BestWayToAcceptPayments = () => {
           </div>
         </div>
       </Container>
-    </OurStoryTerminalCard>
+    </section>
   );
 };
 

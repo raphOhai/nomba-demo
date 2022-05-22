@@ -4,7 +4,7 @@ import Layout from "components/layout";
 import {
   BillPaymentTimeline,
   Features,
-  FundTransferTimeline,
+  HelpYourCommunityTimeline,
   MakePaymentsPageHeader,
 } from "templates/products/make-payments";
 
@@ -12,10 +12,10 @@ const MakePaymentsPage = () => {
   return (
     <Layout title="Make Payments">
       <MakePaymentsPageHeader />
-      <BillPaymentTimeline />
+      <HelpYourCommunityTimeline />
       <Features />
       <div className="pt-2">
-        <FundTransferTimeline />
+        <BillPaymentTimeline />
       </div>
     </Layout>
   );

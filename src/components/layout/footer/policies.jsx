@@ -46,15 +46,14 @@ w-[144px]
 const policyMenuList = ctl(`
 flex
 flex-row
-md:justify-start
-justify-between
+justify-start
 md:mt-6
 mt-4
 `);
 
 const policyMenuListItem = ctl(`
 md:ml-8
-ml-1
+ml-4
 first:ml-0
 
 `);

@@ -32,7 +32,7 @@ export const posCardData = [
       <Master key="mastercard" />,
       <Wifi key="wifi" />,
     ],
-    link: { to: "/" },
+    // link: { to: "/" },
   },
   {
     isLite: false,
@@ -67,6 +67,6 @@ export const posCardData = [
       <Printer key="printer" />,
       <Usb key="usb" />,
     ],
-    link: { to: "/" },
+    // link: { to: "/" },
   },
 ];

@@ -72,7 +72,8 @@ const imageStyle = ctl(`
 xl:mt-0
 lg:-mt-[400px]
 md:-mt-[240px]
-
+relative
+z-10
 `);
 
 PageHeader.defaultProps = {
