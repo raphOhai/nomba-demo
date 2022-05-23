@@ -7,7 +7,7 @@ const Subfooter = ({ children }) => {
   return (
     <div className={subfooterWrapperStyle}>
       {children}
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 };
