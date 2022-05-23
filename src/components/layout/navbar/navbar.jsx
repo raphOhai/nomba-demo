@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <header className={`${mainHeaderStlye} ${openMenu && "h-full"}`}>
       <nav className={navStyle}>
-        <NLink to="/" className="mr-[71px]">
+        <NLink to="/" className="mr-[55px] px-2 -ml-2">
           <Logo className="w-[94px] " />
         </NLink>
 

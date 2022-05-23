@@ -1,13 +1,14 @@
 import React from "react";
-import { Container, Ntext, OurStoryTerminalCard } from "components";
+import { Container, Ntext, SectionBrandElement } from "components";
 import ctl from "@netlify/classnames-template-literals";
 
 const OurBigStory = () => {
   return (
-    <OurStoryTerminalCard>
+    <section className={sectionWrapperStyle}>
+      <SectionBrandElement />
       <Container>
-        <div className={storyWrapperStyles}>
-          <div className={storyTextWrapperStyles}>
+        <div className={storyWrapperStyle}>
+          <div className={storyTextWrapperStyle}>
             <Ntext variant="h7" className="font-bold" color="secondary">
               Our Big Story
             </Ntext>
@@ -55,15 +56,25 @@ const OurBigStory = () => {
           </div>
         </div>
       </Container>
-    </OurStoryTerminalCard>
+    </section>
   );
 };
 
-const storyWrapperStyles = ctl(`
+const sectionWrapperStyle = ctl(`
+bg-primary
+ px-8 
+ md:px-16 
+ py-20 
+ lg:py-40 
+ overflow-hidden 
+ relative
+`);
+const storyWrapperStyle = ctl(`
 grid 
 grid-cols-3
+
 `);
-const storyTextWrapperStyles = ctl(`
+const storyTextWrapperStyle = ctl(`
 md:col-span-2
 col-span-3
 `);

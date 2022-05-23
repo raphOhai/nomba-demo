@@ -1,39 +1,49 @@
 import React, { useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { Ntext } from "components/ntext";
 import { NLink } from "components/nlink";
-import Arrow from "assets/images/svgs/chevron-down.svg";
+import { SubMenuDetails } from "./submenu-details";
 
-const SubMenu = ({ items }) => {
+const SubMenu = ({ items, submenuOpen }) => {
   const [currentMenuOpen, setCurrentMenuOpen] = useState(null);
-  const toggleMenu = index => {
-    if (currentMenuOpen) {
-      setCurrentMenuOpen(null);
-    } else {
-      setCurrentMenuOpen(index);
-    }
-  };
+
   return (
-    <div className={subMenuStyle}>
+    <div className={`${subMenuStyle} ${submenuOpen ? "block" : "lg:hidden"} `}>
       {items.map((item, i) => {
         const subMenuIndex = i + 1;
+        const currentMenuSameAsIndex = currentMenuOpen === subMenuIndex;
+
+        const toggleMenu = () => {
+          if (currentMenuSameAsIndex) {
+            setCurrentMenuOpen(null);
+          } else {
+            setCurrentMenuOpen(subMenuIndex);
+          }
+        };
+
+        const handleKeyDown = e => {
+          if (e.keyCode === 13) {
+            toggleMenu();
+          }
+        };
 
         return (
           <div key={i} className={subMenuWrapStyle}>
             {item?.subMenu ? (
               <div>
-                <SubMenuDetails
-                  subMenuItem={item}
-                  onClick={() => toggleMenu(subMenuIndex)}
-                  menuindex={subMenuIndex}
-                  menuopen={currentMenuOpen}
-                />
+                <button className="w-full peer" onKeyDown={handleKeyDown}>
+                  <SubMenuDetails
+                    subMenuItem={item}
+                    onClick={toggleMenu}
+                    menuindex={subMenuIndex}
+                    menuopen={currentMenuOpen}
+                  />
+                </button>
 
                 {/* additional links when submenu items are hovered on */}
                 <nav
                   className={`${subMenuLinkWrapStyle} ${
-                    currentMenuOpen === subMenuIndex ? "block" : "hidden"
-                  }`}
+                    currentMenuSameAsIndex ? "lg:w-[236px]" : "hidden"
+                  } `}
                 >
                   {item.subMenu.map(item => (
                     <NLink
@@ -58,47 +68,11 @@ const SubMenu = ({ items }) => {
   );
 };
 
-const SubMenuDetails = ({ subMenuItem, ...props }) => (
-  <button
-    className={`${subMenuDetailsStyle} ${
-      subMenuItem?.subMenu &&
-      props.menuopen === props.menuindex &&
-      "bg-primary-200 lg:bg-primary-100"
-    }`}
-    {...props}
-  >
-    <div className={subMenuItemWrapStyle}>
-      <div className={subMenuInnerWrapStyle}>
-        {subMenuItem?.icon && (
-          <span className={iconWrapStyle}>{subMenuItem.icon}</span>
-        )}
-
-        <div className="text-left">
-          <Ntext variant="p16" value={subMenuItem?.title} weight="600" />
-          <Ntext variant="p12" value={subMenuItem?.description} />
-        </div>
-      </div>
-
-      <Arrow
-        className={`lg:hidden ${
-          !subMenuItem?.subMenu
-            ? "-rotate-90"
-            : props.menuopen === props.menuindex &&
-              "rotate-180 transition-all duration-300"
-        } `}
-      />
-    </div>
-  </button>
-);
-
 const subMenuStyle = ctl(`
-  lg:hidden
   group-hover:block
   hover:block
   lg:absolute
   z-10
-  lg:h-[296px]
-  lg:h-[207px]
   lg:shadow-subMenu
   mt-5
 `);
@@ -106,40 +80,7 @@ const subMenuWrapStyle = ctl(`
   bg-primary-100  
   lg:first:pt-4 lg:last:pb-4
 `);
-const subMenuItemWrapStyle = ctl(`
-  flex 
-  justify-between 
-  items-center   
-  border-b 
-  lg:border-none w-full
-`);
-const subMenuDetailsStyle = ctl(`
-  peer
-  px-[25px] lg:px-[33px]
-  lg:hover:bg-primary-200
-  border-primary-400
-  w-full
-`);
-const subMenuInnerWrapStyle = ctl(`
-  flex 
-  items-center 
-  gap-[13px]
-  peer
-  w-full
-`);
-const iconWrapStyle = ctl(`
-  bg-secondary-100
-  w-[54px]
-  h-[54px]
-  rounded-full
-  flex
-  items-center
-  justify-center
-  my-[17px]
-`);
 const subMenuLinkWrapStyle = ctl(`
-  lg:block
-  lg:invisible
   bg-primary-200
   lg:absolute
   left-[100%]
@@ -147,14 +88,10 @@ const subMenuLinkWrapStyle = ctl(`
   pt-[30px]
   px-16 lg:px-0
   lg:h-full
-  lg:w-0
-  lg:opacity-0
+  lg:peer-hover:block
+  lg:hover:block
   lg:peer-hover:w-[236px]
-  lg:peer-hover:opacity-100
-  lg:peer-hover:visible
-  lg:hover:opacity-100
   lg:hover:w-[236px]
-  lg:hover:visible
   mb-[29px]
 `);
 const subMenuLinkStyle = ctl(`

@@ -1,0 +1,22 @@
+ // Snippet for creating a new web page
+ {
+ "New website page": {
+    "prefix": "nwp",
+    "body": [
+      "import React from 'react';",
+      "import Layout from 'components/layout';",
+      "",
+      "// import templates here",
+      "function  ${1:${TM_FILENAME_BASE/([^\\-]*)(\\-)*/${1:/pascalcase}/}}Page() {",
+      "\t return(",
+      "\t\t<Layout title='${1}'>",
+      "\t\t\t<div></div>",
+      "\t\t</Layout>",
+      ");",
+      "}",
+      "",
+      "export default ${1}Page;"
+    ],
+    "description": "Create a new page"
+  }
+}
