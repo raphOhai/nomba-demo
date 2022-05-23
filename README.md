@@ -33,8 +33,6 @@ Images, svgs, pdfs, videos, any `asset` or any static resources go in here. For 
 
 This refers to anything at the atomic level, think: button, input, link, even breaks, etc. We have done a detailed breakdown of the various components in [src/components/README.md](src/components/README.md)
 
-<<<<<<< HEAD
-
 - #### config
 
 Basically contains data used to feed various sections of the website.
@@ -54,10 +52,6 @@ This is used to hold the various sections of each page of the website. Kindly re
 - #### utils
 
 Currently only holds `validators`
-
-=======
-
-> > > > > > > 1cb2c4179186852c897abb99defab3cc67d48978
 
 #### Working with SVG
 
