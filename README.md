@@ -10,12 +10,7 @@
 
 This project was bootstrapped using **GatsbyJS** as a static site generator and **tailwindcss** for styling. If you are already comfortable writing ReactJS, you shouldn't have any problem(s) finding your way around the codebase.
 
-<<<<<<< HEAD
 In building this website, we have tried to keep things as atomic as possible which we hope will make it easy to create new pages and serve as a solid foundation to building new components.
-=======
-In building this website, we have tried to keep things as atomic as possible which we hope will make it easy to create new pages and serve as a solid foundation to building new components - more on this later.
-
-> > > > > > > 1cb2c4179186852c897abb99defab3cc67d48978
 
 ## Folder Structure
 
@@ -76,7 +71,6 @@ const Component = () => {
 };
 
 export default Component;
-<<<<<<< HEAD
 ```
 
 This was made possible using [gatsby-plugin-react-svg](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-svg/)
@@ -113,10 +107,6 @@ const TestPage = () => {
 export default TestPage;
 ```
 
-=======
-
-````
-
 This was made possible using [gatsby-plugin-react-svg](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-svg/)
 
 ## Creating Pages
@@ -149,7 +139,7 @@ const TestPage = () => {
 };
 
 export default TestPage;
-````
+```
 
 _If you are on Vscode, you can use `nwp` to generate a snippet we have for created for this boilerplate code. If VScode doesn't auto suggest `nwp`, press `ctrl + space` and press `nwp`_
 
