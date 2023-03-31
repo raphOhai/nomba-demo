@@ -6008,11 +6008,6 @@ gatsby-parcel-config@^0.5.0:
     "@parcel/transformer-raw" "^2.3.2"
     "@parcel/transformer-react-refresh-wrap" "^2.3.2"
 
-gatsby-plugin-facebook-pixel@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-1.0.8.tgz#8f5aa6816ddf1cf451c372464fa3f873d7dae288"
-  integrity sha512-oJfTMJxAv5AF2sganhtaq3+6GZ2W2s6/RjQxVsRUxUWMxhrtW6YeMsayAh1bVPgVQ8boJ0QyftipXe7fyq4BCA==
-
 gatsby-plugin-gatsby-cloud@^4.14.0:
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-4.14.0.tgz#aa4dd60a6257507e55fc0aa81c8cb015e6e4bd47"
@@ -6027,14 +6022,6 @@ gatsby-plugin-gatsby-cloud@^4.14.0:
     kebab-hash "^0.1.2"
     lodash "^4.17.21"
     webpack-assets-manifest "^5.1.0"
-
-gatsby-plugin-google-gtag@^4.14.0:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.14.0.tgz#6f28b5b3cac656b9b0b7445367ac9e1764ee836b"
-  integrity sha512-Nd0HHHldouY6oYQtHRrELRssQDO1SfPo9Etu+dmrkBvBREQeDZsYmuYhltyPWx+lC94Rr0irBy5y/DyJm6I6CQ==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    minimatch "^3.1.2"
 
 gatsby-plugin-google-tagmanager@^4.14.0:
   version "4.14.0"

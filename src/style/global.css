@@ -2,42 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Garant-Italic";
-  src: url(assets/fonts/Garant-BoldItalic.otf);
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant";
-  src: url(assets/fonts/Garant-Bold.otf);
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant-Italic";
-  src: url(assets/fonts/Garant-SemiBoldItalic.otf);
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant";
-  src: url(assets/fonts/Garant-SemiBold.otf);
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant-Italic";
-  src: url(assets/fonts/Garant-Italic.otf);
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant";
-  src: url(assets/fonts/Garant-Regular.otf);
-  font-weight: 400;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 @layer base {
   body {
@@ -50,6 +15,7 @@
     margin-left: calc((100% - 1270px) / 2);
   }
 }
+
 .swiper-pagination > .swiper-pagination-bullet {
   @apply mr-2 rounded-full;
   background: white;
@@ -58,21 +24,26 @@
   width: 11px;
   height: 11px;
 }
+
 .swiper-pagination-bullet-active {
   @apply !bg-black;
 }
+
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
     infinite;
   font-weight: 100;
 }
+
 @keyframes blinking-cursor {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -81,6 +52,7 @@
 .policy-page {
   @apply py-12;
 }
+
 .policy-page h2 {
   @apply mt-12;
   @apply mb-5;
@@ -89,9 +61,11 @@
 .policy-page p {
   @apply mb-3;
 }
+
 .menu-button-wrap li a {
   @apply w-full;
 }
+
 .policy-page ul {
   list-style-type: disc;
   list-style-position: inside;

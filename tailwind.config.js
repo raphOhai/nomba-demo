@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Garant", "sans-serif"],
-        "primary-italic": ["Garant-Italic", "sans-serif"],
+        primary: ["Inter", "sans-serif"],
       },
 
       backgroundImage: theme => ({
