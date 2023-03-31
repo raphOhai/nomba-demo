@@ -11,58 +11,46 @@ const accordionInfo = [
   {
     title: "Empathy",
     info:
-      "We care about the needs of our customers. Hence, our commitment to create tools to ease how everyone spends, manages and saves money.",
+      "We treat everyone with kindness and respect; our customers and people are valuable to us.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/about/accordion-empathy.jpg"
+        src="../assets/images/jpegs/about/empathy.jpg"
         alt=""
         className={imageStyle}
       />
     ),
   },
   {
-    title: "Ownership",
+    title: "Passion",
     info:
-      "Everything we do for our customers is right from the depth of our hearts.",
+      "We are committed to everything we do while leveraging our skills and grit to meet our goals.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/about/accordion-ownership.jpg"
+        src="../assets/images/jpegs/about/Passion.jpeg"
         alt=""
         className={imageStyle}
       />
     ),
   },
   {
-    title: "Growth",
+    title: "Integrity",
     info:
-      "We love to scale impact by creating excellent tools and encouraging businesses to take charge of their finances.",
+      "We are accountable to our customers and our people to do what is right, and we stand by it.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/A chance to move your business to the next level.jpg"
+        src="../assets/images/jpegs/about/Integrity.jpg"
         alt="A chance to move your business to the next level"
         className={imageStyle}
       />
     ),
   },
   {
-    title: "Learning",
+    title: "Collaboration",
     info:
-      "We are never too big to find the best ways to make people manage their numbers. ",
+      "We work together as a team; with our customers, partners and our people to achieve our individual and collective growth.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/about/accordion-learning.jpg"
-        alt=""
-        className={imageStyle}
-      />
-    ),
-  },
-  {
-    title: "Open Communication",
-    info:
-      "We are open-minded, respectful & honest in our communication. We listen to the needs of our customers.o ease how everyone spends, manages and saves money.",
-    image: (
-      <StaticImage
-        src="../assets/images/jpegs/about/accordion-communication.jpg"
+        src="../assets/images/jpegs/about/Collaboration.jpeg"
         alt=""
         className={imageStyle}
       />

@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: process.env.GOOGLE_TAG_MANAGER_ID,
-        includeInDevelopment: true,
+        id: "GTM-5PXCRHL",
+        includeInDevelopment: false,
       },
     },
     {
@@ -70,6 +70,13 @@ module.exports = {
           breakpoints: [750, 1080, 1366, 1920],
           backgroundColor: `transparent`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-background-image-es5`,
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: `/:`,
       },
     },
     {

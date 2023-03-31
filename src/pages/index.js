@@ -5,16 +5,16 @@ import {
   HomepageHero,
   HomepageGotOptions,
   HomepageFeatures,
-  HomepageBusiness,
   HomepageTipsAndUpdate,
 } from "templates/home";
 import { Br, POSTerminals } from "components";
+import NombaProAdvert from "templates/home/nomba-pro-advert/nomba-pro-advert";
 
 const IndexPage = () => {
   return (
     <Layout title="Nomba" ignoreSiteName={true}>
       <HomepageHero />
-      <HomepageBusiness />
+      <NombaProAdvert />
       <HomepageGotOptions />
       <POSTerminals
         title={

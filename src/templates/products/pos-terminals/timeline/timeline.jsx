@@ -1,6 +1,5 @@
 import React from "react";
 import { Timeline } from "components";
-import { StaticImage } from "gatsby-plugin-image";
 import { requestTerminal, activateTerminal } from "config/timeline/terminal";
 import AcceptPayment from "../../../../assets/images/gifs/accept-payment.gif";
 

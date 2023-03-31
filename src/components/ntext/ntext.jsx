@@ -25,6 +25,28 @@ const Ntext = ({
     TextElement = "h6";
   }
 
+  const customVariants = [
+    "text0",
+    "text1",
+    "text2",
+    "text3",
+    "text4",
+    "text5",
+    "text6",
+    "text6lite",
+    "text7",
+    "text8",
+    "prohero",
+    "prosubText",
+    "readMore",
+    "pricing",
+    "pricingSub"
+  ];
+
+  if (customVariants.includes(textVariant)) {
+    TextElement = "div";
+  }
+
   const [_color, _shade] = color.split("-");
 
   const textColor = colors[_color][_shade ? _shade : "DEFAULT"];
@@ -120,6 +142,118 @@ const variants = {
     text-[12px]
     leading-[21.6px]
     `,
+  text0: `
+    text-[10px]
+    font-[400]
+    leading-[16px]
+    `,
+  text1: `
+    text-[12px]
+    font-[400]
+    leading-[18px]
+    `,
+  text2: `
+    text-[14px]
+    leading-[22px]
+    font-[400]
+    `,
+  text3: `
+    text-[14px]
+    leading-[22px]
+    md:text-[16px]
+    md:leading-[24px]
+    font-[400]
+    `,
+  text4: `
+    font-[700]
+    text-[20px]
+    leading-[30px]
+    tracking-[-0.02em]
+    `,
+  text5: `
+  font-[600]
+  text-[16px]
+  leading-[24px]
+  md:font-[700]
+  md:text-[24px]
+  md:leading-[32px]
+  tracking-[-0.02em]
+    `,
+  text6: `
+    font-[700]
+    text-[24px]
+    leading-[32px]
+    tracking-[-0.02em]
+    md:text-[32px]
+    md:leading-[40px]
+    md:tracking-[-0.03em]
+      `,
+  text6lite: `
+    font-[700]
+    text-[20px]
+    leading-[30px]
+    tracking-[-0.02em]
+    md:text-[32px]
+    md:leading-[40px]
+    md:tracking-[-0.03em]
+    `,
+  text7: `
+    text-[24px]
+    leading-[32px]
+    tracking-[-0.02em]
+    font-[700]
+    md:text-[40px]
+    md:leading-[48px]
+    md:tracking-[-0.04em]
+    `,
+  text8: `
+    font-[700]
+    text-[20px]
+    leading-[30px]
+    tracking-[-0.02em]
+    md:text-[48px]
+    md:leading-[60px]
+    md:tracking-[-0.04em]
+    `,
+  prohero: `
+    font-[700]
+    text-[48px]
+    md:text-[80px]
+    leading-[60px]
+    md:leading-[96px]
+    tracking-[-0.04em]
+    `,
+  prosubText: `
+    font-[400]
+    text-[16px]
+    md:text-[20px]
+    leading-[24px]
+    md:leading-[32px]
+    tabular-nums
+    lining-nums
+    `,
+  readMore: `
+    text-[16px]
+    leading-[24px]
+    font-[500]
+    md:font-[600]
+    `,
+  pricing: `
+    text-[32px]
+    leading-[40px]
+    tracking-[-0.02em]
+    font-[700]
+    md:text-[48px]
+    md:leading-[60px]
+    md:tracking-[-0.04em]
+    `,
+  pricingSub: `
+    font-[500]
+    text-[16px]
+    leading-[24px]
+    md:text-[20px]
+    md:leading-[60px]
+    `
 };
 const validElements = [
   "h1",
@@ -133,6 +267,21 @@ const validElements = [
   "p14",
   "p16",
   "p18",
+  "text0",
+  "text1",
+  "text2",
+  "text3",
+  "text4",
+  "text5",
+  "text6",
+  "text6lite",
+  "text7",
+  "text8",
+  "prohero",
+  "prosubText",
+  "readMore",
+  "pricing",
+  "pricingSub"
 ];
 
 Ntext.defaultProps = {};

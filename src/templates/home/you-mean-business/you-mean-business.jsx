@@ -40,18 +40,22 @@ const HomepageBusiness = () => {
   );
 };
 
+// -mt-[21rem]
+// md:-mt-[27rem]
+// lg:-mt-[40rem]
 const homepageBusinessStyle = ctl(`
 bg-primary-300
--mt-[21rem]
-md:-mt-[27rem]
-lg:-mt-[40rem]
+mt-[-9.5rem]
 `);
+
+// md:pt-[25rem]
+// md:pt-[15rem]
 const containerWrapperStyle = ctl(`
 grid
 lg:grid-cols-5
 md:gap-[40px]
-pt-[15rem]
-md:pt-[25rem]
+mt-[150px]
+pt-[5rem]
 `);
 const imageWrapperStyle = ctl(`
 md:col-span-3
