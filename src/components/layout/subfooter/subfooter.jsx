@@ -1,7 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
-import { Newsletter } from "components/newsletter";
+// import { Newsletter } from "components/newsletter";
 
 const Subfooter = ({ children }) => {
   return (

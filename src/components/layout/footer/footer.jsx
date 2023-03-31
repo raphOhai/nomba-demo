@@ -7,10 +7,10 @@ import { Policies } from "./policies";
 import { Container } from "components/container";
 import { AppDownload } from "./app-download";
 
-const MainFooter = () => {
+const MainFooter = ({ defaultStyle }) => {
   return (
     <>
-      <AppDownload />
+      {defaultStyle && <AppDownload />}
       <footer className={footerStyle}>
         <Container>
           <FooterNavigation />

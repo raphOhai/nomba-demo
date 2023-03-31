@@ -18,9 +18,11 @@ const Testimonial = ({ testimonials, headingText }) => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + "" + "</span>";
+      return `<span class="${className}">""</span>`;
     },
   };
+
+  // <span class="' + className + '">' + "" + "</span>";
 
   return (
     <div className="my-20">

@@ -10,6 +10,13 @@ module.exports = {
         "primary-italic": ["Garant-Italic", "sans-serif"],
       },
 
+      backgroundImage: theme => ({
+        "nomba-pro-hero-bg": "url('src/assets/images/left-slash.png')",
+        "nomba-subtract": "url('src/assets/images/jpegs/Subtract.png')",
+        "card-bg-1": "url('src/assets/images/card-bg-1.png')",
+        "card-bg-2": "url('src/assets/images/card-bg-2.png')",
+      }),
+
       colors: {
         primary: {
           DEFAULT: "#121212",
@@ -54,10 +61,63 @@ module.exports = {
             light: "#FBEEF3",
           },
         },
+        n: {
+          yellow: "#ffcc00",
+          light: "#ffffff",
+          grey1: "#eeeeee",
+          grey2: "#c6c6c6",
+          grey3: "#999999",
+          grey4: "#717171",
+          grey5: "#555555",
+          grey6: "#383838",
+          dark: "#121212",
+          red: "#ff2200",
+          green: " #11bb00",
+        },
+        c: {
+          0: "#000000",
+          dark: "#111111",
+          grey4: "#666666",
+          faint: "#e5e4da",
+        },
       },
 
       boxShadow: {
         subMenu: " 0px 4px 100px rgba(41, 45, 50, 0.09)",
+      },
+
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        pulseCustom: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: ".5" },
+        },
+        squareToCircle: {
+          "0%": {
+            borderRadius: "5px",
+          },
+          "100%": {
+            borderRadius: "250px",
+          },
+        },
+        fadeIn: {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+      },
+
+      animation: {
+        wiggle: "wiggle 1s ease-in-out 2",
+        pulseCustom: "pulseCustom 1s ease-in-out 2",
+        squareToCircle: "squareToCircle .5s ease-in-out 1",
+        fadeIn: "fadeIn 1.5s ease-in-out 1",
       },
     },
 

@@ -53,6 +53,14 @@ const TermsOfUse = () => {
               color="primary"
             />
           </li>
+          <li>
+            <Ntext variant="h4" value="Loans Terms and Conditions" />
+            <ReadMore
+              text="Read our Loans Terms and Conditions"
+              to="/credit-terms-of-service"
+              color="primary"
+            />
+          </li>
         </ul>
 
         <Ntext variant="h2" value="Account Registration" />

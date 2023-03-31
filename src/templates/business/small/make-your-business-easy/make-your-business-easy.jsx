@@ -1,13 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
-import {
-  Br,
-  Container,
-  IllustrationCard,
-  Ntext,
-  SectionHeader,
-} from "components";
+import { Container, IllustrationCard, Ntext, SectionHeader } from "components";
 
 import { makeYourBussinessEasyCardsData } from "config";
 const MakeYourBusinessEasy = () => {

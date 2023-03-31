@@ -5,7 +5,12 @@ import { Container, Ntext } from "components";
 import { accordionInfo as accordionList } from "config/accordion";
 import { AccordionDetails } from "./accordion-details";
 
-const Accordion = ({ heading, subheading }) => {
+const Accordion = ({
+  heading,
+  subheading,
+  hasImages = true,
+  accordionListArray = accordionList,
+}) => {
   const [currentItem, setCurrentItem] = useState(0);
 
   const toggleItem = index => {
@@ -13,44 +18,55 @@ const Accordion = ({ heading, subheading }) => {
   };
 
   return (
-    <div className={containerStyle}>
+    <div className={hasImages ? containerStyle : noImagesContainerStyle}>
       <Container>
-        <div className={textWrapStyle}>
+        <div className={hasImages ? textWrapStyle : noImageTextWrapStyle}>
           <Ntext variant="h3" value={heading} className={headingStyle} />
-          <Ntext variant="p18" className="pt-[27px]" value={subheading} />
+          {subheading && (
+            <Ntext variant="p18" className="pt-[27px]" value={subheading} />
+          )}
         </div>
 
-        <div className={accordionWrapStyle}>
+        <div
+          className={hasImages ? accordionWrapStyle : accordionNoImageWrapStyle}
+        >
           <div className="-mt-10">
-            {accordionList.map((item, index) => (
+            {!hasImages && <div className="border-b border-n-grey2" />}
+            {accordionListArray.map((item, index) => (
               <button
                 key={index}
                 className={accordionItemWrapStyle}
                 onClick={() => toggleItem(index)}
               >
-                <AccordionDetails {...item} isCurrent={currentItem === index} />
+                <AccordionDetails
+                  {...item}
+                  isCurrent={currentItem === index}
+                  hasImages={hasImages}
+                />
               </button>
             ))}
           </div>
 
           {/* Images */}
-          <div>
-            {accordionList.map((item, i) => (
-              <div key={i}>
-                {currentItem === i && (
-                  <div
-                    className={imageStyle}
-                    style={{
-                      clipPath:
-                        "polygon(0 0, 100% 0%, 100% 61%, 0 100%, 0% 50%)",
-                    }}
-                  >
-                    {item.image}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          {hasImages && (
+            <div>
+              {accordionList.map((item, i) => (
+                <div key={i}>
+                  {currentItem === i && (
+                    <div
+                      className={imageStyle}
+                      style={{
+                        clipPath:
+                          "polygon(0 0, 100% 0%, 100% 61%, 0 100%, 0% 50%)",
+                      }}
+                    >
+                      {item.image}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </Container>
     </div>
@@ -58,23 +74,42 @@ const Accordion = ({ heading, subheading }) => {
 };
 
 const containerStyle = ctl(`
-  mt-20 
   lg:mb-40 
   lg:pb-28 
+  mt-20
   bg-primary-200
 `);
+
+const noImagesContainerStyle = ctl(`
+pt-[110px]
+pb-[127px]
+`);
+
 const accordionWrapStyle = ctl(`
   flex
   flex-col
   lg:flex-row-reverse
   justify-between  
 `);
+
+const accordionNoImageWrapStyle = ctl(`
+flex
+flex-col
+w-[100%]
+`);
+
 const textWrapStyle = ctl(`
   pt-[80px] 
   lg:pb-[70px] 
   pb-[59px] 
   text-center
 `);
+
+const noImageTextWrapStyle = ctl(`
+mb-[100px]
+text-center
+`);
+
 const imageStyle = ctl(`
   md:h-[688px]
   xl:w-[654px]

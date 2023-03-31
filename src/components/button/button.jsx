@@ -91,6 +91,11 @@ const sizes = {
   md:min-w-[420px]
   h-[58px]
   `,
+  custom: `
+  px-[65px]
+  py-[17px]
+  w-fit
+  `,
 };
 
 const variants = {

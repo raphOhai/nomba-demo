@@ -20,8 +20,8 @@ const AboutUsPage = () => {
       <AboutTimeline />
       <BusinessStageSlide />
       <Accordion
-        heading="We care about businesses and their needs"
-        subheading="We value being human, embracing change, and striving for excellence"
+        heading="Our EPIC core values support and drive our mission"
+        subheading="We care, we are committed, we take our work seriously, and we work together"
       />
       <ProTerminal />
       <CaseStudies />

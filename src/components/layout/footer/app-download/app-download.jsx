@@ -18,8 +18,7 @@ const AppDownload = () => {
         <div className={pageInnerWrapStyle}>
           <div className={textWrapStyle}>
             <Ntext variant="h2" color="primary-100" className={headingStyle}>
-              Get a free <br className="lg:hidden" />
-              <span className="text-secondary">Nomba</span> account
+              Say yes to <br className="lg:hidden" /><span className="text-secondary">better</span> business
             </Ntext>
 
             <Ntext
@@ -36,9 +35,9 @@ const AppDownload = () => {
               >
                 <PlayStore /> Google Play
               </DownloadButton>
-              {/* <DownloadButton url="https://download_apple" trackingText="Download on App Store">
+              <DownloadButton url="https://apps.apple.com/ng/app/nomba/id1625708506" trackingText="Download on App Store">
                 <AppStore /> App Store
-              </DownloadButton> */}
+              </DownloadButton>
             </div>
           </div>
 

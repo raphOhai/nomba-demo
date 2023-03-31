@@ -5,18 +5,21 @@ import { Ntext } from "components";
 import Arrow from "svgs/chevron-down.svg";
 import YellowArrow from "svgs/yellow-arrow.svg";
 
-const AccordionDetails = ({ title, info, isCurrent }) => {
+const AccordionDetails = ({ title, info, isCurrent, hasImages }) => {
   return (
-    <div className={wrapStyle}>
+    <div className={hasImages ? wrapStyle : noImagesWrapStyle}>
       <div className="flex justify-between items-center">
-        <Ntext variant="h5" value={title} className="normal-case " />
+        <Ntext variant="h5" className="normal-case" value={title} />
         {isCurrent ? <YellowArrow className="scale-75" /> : <Arrow />}
       </div>
       <Ntext
         variant="p16"
-        value={info}
-        className={isCurrent ? "block mt-3" : "hidden"}
-      />
+        className={
+          isCurrent ? "block mt-3 md:max-w-[95%] break-after-auto" : "hidden"
+        }
+      >
+        {info}
+      </Ntext>
     </div>
   );
 };
@@ -30,9 +33,24 @@ const wrapStyle = ctl(`
   pb-6 pt-10
 `);
 
+const noImagesWrapStyle = ctl(`
+  w-full
+  border-b
+  border-n-grey2
+  pb-6 pt-10
+`);
+
 AccordionDetails.propTypes = {
-  title: PropTypes.string,
-  info: PropTypes.string,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.node,
+  ]),
+  info: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.node,
+  ]),
   isCurrent: PropTypes.bool,
 };
 

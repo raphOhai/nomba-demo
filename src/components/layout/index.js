@@ -12,7 +12,12 @@ import { MainFooter } from "./footer";
 import { NavBar } from "./navbar";
 import { Subfooter } from "./subfooter";
 
-const Layout = ({ children, title, ignoreSiteName = false }) => {
+const Layout = ({
+  children,
+  title,
+  ignoreSiteName = false,
+  defaultStyle = true,
+}) => {
   const noOfChildren = children.length;
   return (
     <>
@@ -23,7 +28,7 @@ const Layout = ({ children, title, ignoreSiteName = false }) => {
 
       {/*Show the last item in the subfooter */}
       <Subfooter>{children[noOfChildren - 1]}</Subfooter>
-      <MainFooter />
+      <MainFooter defaultStyle={defaultStyle} />
     </>
   );
 };
