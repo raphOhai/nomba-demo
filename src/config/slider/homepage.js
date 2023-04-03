@@ -16,7 +16,7 @@ const homepageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: "Reconcile cash, card and transfers with ease",
+    heading: "Teams",
     text:
       "Track payments on multiple channels for every item sold in your store.",
     link: {
@@ -32,7 +32,7 @@ const homepageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: "Manage payments across multiple business outlets ",
+    heading: "Invoice ",
     text:
       "Receive, track and manage payments from hundreds of sources on a single dashboard",
     link: {
@@ -48,7 +48,7 @@ const homepageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: "Provide financial services and earn while at it ",
+    heading: "Inventory ",
     text:
       "Be the sure padi for every money-related activity people need to make in your area.",
     link: { text: "Become an agent", to: "/business/agents" },
@@ -56,17 +56,17 @@ const homepageSliderData = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/manage-payment.jpg"
-        alt="pos transaction taking place"
+        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
+        alt="man holding a pos machine"
         className={imageStyle}
       />
     ),
-    heading: "Thanks to one agent, there is a hundred more ",
+    heading: "Invoice ",
     text:
-      "There are ‘super-agents’ creating wealth and building networks of new agents",
+      "Receive, track and manage payments from hundreds of sources on a single dashboard",
     link: {
-      text: "Get Nomba for your growing business",
-      to: "/business/agents",
+      text: "Get Nomba for your large business",
+      href: "/business/large",
     },
   },
 ];

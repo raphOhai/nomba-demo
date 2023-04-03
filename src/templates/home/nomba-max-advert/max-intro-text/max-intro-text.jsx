@@ -1,16 +1,16 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Br, Ntext } from "components";
-
+import Max from "svgs/Union-dark.svg";
 export default function ProIntroText() {
   return (
     <div className={textSection}>
       {/* main text */}
-      <div className="mb-[20px]">
+      <div className="mb-[20px] flex items-baseline justify-center text-center">
         <Ntext variant="text8" color="c-dark">
-          Introducing the <Br on="mobile" />
-          Nomba Pro Terminal
+          Introducing Nomba&nbsp;
         </Ntext>
+        <Max className="h-[18px] w-[80px] md:w-[124px] md:h-[34px]" />
       </div>
 
       {/* sub text */}

@@ -17,7 +17,7 @@ const IllustrationCard = ({ illustration, title, description, link }) => {
       <Ntext variant="h5" color="primary-100" value={title} />
       <Ntext
         variant="p14"
-        color="primary-100"
+        color="n-grey1"
         value={description}
         className={descriptionStyle}
       />
@@ -30,19 +30,20 @@ const IllustrationCard = ({ illustration, title, description, link }) => {
 
 const illustrationCardStyle = ctl(`
 group 
-max-w-[235px] 
+max-w-[390px] 
 lg:min-h-[300px]
 lg:mb-0
 mb-12 
-cursor-default 
-lg:text-left 
+cursor-default  
 text-center
+justify-center
 illustration
 `);
 const illustrationSpanStyle = ctl(`
-w-[133px]
+w-[50px]
 inline-block
-mb-[40px]
+mb-[20px]
+text-center
 `);
 
 const readmoreSpanStyle = ctl(`

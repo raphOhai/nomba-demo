@@ -8,10 +8,10 @@ export default function PromoButton() {
       <div className={dottedWrapper}>
         <NLink to="/products/nomba-pro">
           <button className={badgeButtonStyle}>
-            <span>New {" "}</span>
+            <span>New </span>
             <span className="font-[500]">|</span>
             <span className={promoText}>&nbsp;Promo</span>
-            <span>&nbsp;₦25,000</span>
+            <span>&nbsp;₦55,000</span>
           </button>
         </NLink>
       </div>

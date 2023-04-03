@@ -16,7 +16,7 @@ export const tipsAndUpdatesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/homepage/tips-updates/nomba-positioning.png"
+        src="../assets/images/jpegs/homepage/tips-updates/image1.png"
         alt="Nomba team members"
       />
     ),
@@ -34,7 +34,7 @@ export const tipsAndUpdatesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/homepage/tips-updates/conference.jpeg"
+        src="../assets/images/jpegs/homepage/tips-updates/image2.png"
         alt="Conference hall"
       />
     ),
@@ -50,7 +50,7 @@ export const tipsAndUpdatesList = [
     },
     picture: (
       <StaticImage
-        src="../assets/images/jpegs/homepage/tips-updates/safe-place.jpeg"
+        src="../assets/images/jpegs/homepage/tips-updates/image3.png"
         alt="Woman feeling confident"
       />
     ),
@@ -69,7 +69,7 @@ export const tipsAndUpdatesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/homepage/tips-updates/big-reveal.png"
+        src="../assets/images/jpegs/homepage/tips-updates/image4.png"
         alt="Nomba big reveal"
       />
     ),

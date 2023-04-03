@@ -8,7 +8,7 @@ import {
   HomepageTipsAndUpdate,
 } from "templates/home";
 import { Br, POSTerminals } from "components";
-import NombaProAdvert from "templates/home/nomba-pro-advert/nomba-pro-advert";
+import NombaProAdvert from "templates/home/nomba-max-advert/nomba-max-advert";
 
 const IndexPage = () => {
   return (
@@ -25,7 +25,14 @@ const IndexPage = () => {
           </>
         }
       />
-      <HomepageFeatures />
+      <HomepageFeatures
+        title={
+          <>
+            {" "}
+            Build your business with <Br on="desktop" /> our tools
+          </>
+        }
+      />
       <HomepageTipsAndUpdate />
     </Layout>
   );

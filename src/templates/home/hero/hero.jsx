@@ -83,6 +83,7 @@ md:max-w-[605px]
 max-w-[100%]
 lg:mb-[80px]
 sm:mb-[120px]
+md:mx-2
 mb-10
 `);
 
@@ -101,7 +102,9 @@ basis-1/3
 
 const imageWrapperStyle = ctl(`
 rounded 
-md:basis-1/3
+flex-auto
+grow
+text-center
 hidden
 md:block
 
@@ -110,7 +113,8 @@ const imageGridStyle = ctl(`
 flex flex-row
 pointer-events-none
 mb-10
-gap-10
+md:gap-10
+gap-4
 `);
 
 const heroButtonsContainer = ctl(`

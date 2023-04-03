@@ -2,10 +2,17 @@ import PropTypes from "prop-types";
 import React from "react";
 import { NLink } from "../nlink";
 import { Ntext } from "../ntext";
-import Arrow from "svgs/readmore2.svg";
+import Arrow from "svgs/readmore.svg";
+import ArrowGrey from "svgs/readmore-grey.svg";
 import ctl from "@netlify/classnames-template-literals";
 
-const ReadMore = ({ text, color, defaultStyle = true, ...props }) => {
+const ReadMore = ({
+  text,
+  color,
+  defaultStyle = true,
+  active = true,
+  ...props
+}) => {
   return (
     <div>
       <NLink {...props} className={readmoreStyle}>
@@ -17,8 +24,11 @@ const ReadMore = ({ text, color, defaultStyle = true, ...props }) => {
         >
           {text}
         </Ntext>
-
-        <Arrow className={arrowStyle} />
+        {active ? (
+          <Arrow className={arrowStyle} />
+        ) : (
+          <ArrowGrey className={arrowStyle} />
+        )}
       </NLink>
     </div>
   );
@@ -41,11 +51,13 @@ hover:ml-4
 ReadMore.defaultProps = {
   text: "Read More",
   color: "primary-100",
+  active: true,
 };
 
 ReadMore.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
+  active: PropTypes.bool,
 };
 
 export { ReadMore };

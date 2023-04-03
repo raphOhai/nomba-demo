@@ -1,16 +1,15 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-
 import { SliderCard } from "components";
 import NextIcon from "svgs/chevron-right.svg";
 import PreviousIcon from "svgs/chevron-left.svg";
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 
 const Slider = ({ slides }) => {
   const sliderItems = slides.map(item => (
@@ -28,12 +27,15 @@ const Slider = ({ slides }) => {
   return (
     <div className={sectionWrapStyle}>
       <SliderNavigation />
-
       <div className="mt-[42px]">
         <Swiper
           navigation={{
             nextEl: ".next-element",
             prevEl: ".previous-element",
+          }}
+          pagination={{
+            type: "progressbar",
+            el: ".pagination-class",
           }}
           className=" "
           loop={true}
@@ -66,7 +68,7 @@ const SliderNavigation = () => (
       </button>
     </div>
 
-    <div className={blackLineStyle}></div>
+    <div className="pagination-class !relative"></div>
   </div>
 );
 
@@ -98,6 +100,7 @@ const breakpoints = {
 };
 
 const controlWrapStyle = ctl(`
+  h-40
   mx-auto 
   flex 
   items-center 
@@ -105,8 +108,8 @@ const controlWrapStyle = ctl(`
   gap-[11px]
 `);
 const sectionWrapStyle = ctl(`
-  slider-margin-left
-  ml-[25px]
+slider-margin-left
+
 `);
 const blackLineStyle = ctl(`
   bg-primary 

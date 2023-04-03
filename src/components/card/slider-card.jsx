@@ -4,21 +4,18 @@ import { Ntext, ReadMore } from "components";
 
 const SliderCard = ({ image, heading, text, caseStudy, link }) => {
   return (
-    <div>
-      <div
-        className={imageStyle}
-        style={{
-          clipPath: "polygon(0 0, 100% 0%, 100% 79%, 68% 100%, 0 100%)",
-        }}
-      >
-        {image}
-      </div>
+    <div className=" shadow-md hover:shadow-xl border shadow-[rgba(0,0,0,0.1)] h-[443px] md:h-[500px] rounded-md">
+      <div className={imageStyle}></div>
 
       <div className={sliderCardWrapStyle}>
         {/*To check what context it's being used in. caseStudy shows in places like the about us page */}
         {caseStudy ? (
           <>
-            <Ntext variant="h5" className={cardHeadingStyle} value={heading} />
+            <Ntext
+              variant="text5"
+              className={cardHeadingStyle}
+              value={heading}
+            />
 
             <Ntext
               variant="p14"
@@ -44,9 +41,13 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
           </>
         ) : (
           <>
-            <Ntext variant="h4" className={cardHeadingStyle} value={heading} />
+            <Ntext
+              variant="text5"
+              className={cardHeadingStyle}
+              value={heading}
+            />
 
-            <Ntext variant="p18" value={text} className={`${cardTextStyle}`} />
+            <Ntext variant="p14" value={text} className={`${cardTextStyle}`} />
 
             {link && <ReadMore {...link} color="primary" />}
           </>
@@ -57,22 +58,15 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
 };
 
 const imageStyle = ctl(`
-  md:max-w-[312px]
-  md:h-[310px]
-  max-w-[201px]
-  h-[200px]
-  ml-[26px]
-  md:ml-[41px]
+  md:h-[290px]
+  h-[234px]
+  w-full
+  bg-n-dark
 `);
 const sliderCardWrapStyle = ctl(`
-  -mt-[170px]
-  md:-mt-[270px]
-  pt-[170px]
-  md:pt-[280px]
-  bg-secondary-100
-  pb-[39px]
-  md:pl-[41px]
-  pl-[26px]
+  md:px-[32px]
+  px-[25px]
+
   text-left
   md:min-h-[550px]
 `);
