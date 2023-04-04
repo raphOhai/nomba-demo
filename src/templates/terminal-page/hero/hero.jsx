@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "components/button";
 import "./index.scss";
 
 const TerminalHero = () => {
@@ -7,13 +8,7 @@ const TerminalHero = () => {
       <div className="terminal_hero_txt">
         <div className="terminal_hero_txt_l">
           <h1>Experience the</h1>
-          <svg
-            width="761"
-            height="235"
-            viewBox="0 0 761 235"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="761" height="235" viewBox="0 0 761 235" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Group">
               <g id="M">
                 <path
@@ -38,6 +33,37 @@ const TerminalHero = () => {
               </g>
             </g>
           </svg>
+        </div>
+        <div className="terminal_hero_txt_r">
+          <p>Built to maximise your business growth and efficiency through cutting-edge payment solutions.</p>
+          <div className="btn">
+            <button>
+              Reserve your spot
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z"
+                  stroke="#FAFAFA"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.5 12H14.5"
+                  stroke="#FAFAFA"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.5 9L15.5 12L12.5 15"
+                  stroke="#FAFAFA"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

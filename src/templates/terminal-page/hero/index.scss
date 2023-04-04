@@ -1,11 +1,25 @@
-.terminal_hero{
-   min-height: 80vh;
-   &_txt{
-    h1{
-        -webkit-text-stroke: 1px white;
-        -webkit-text-stroke: 1px white;
-        font-size: toRem(58);
-        font-weight: 600;
+.terminal_hero {
+  min-height: 80vh;
+  position: relative;
+  &_txt {
+    @include flex(space-between, flex-end, 3rem);
+    h1 {
+      -webkit-text-stroke: 1px $light-txt;
+      text-stroke: 1px $light-txt;
+      font-size: toRem(68);
+      font-weight: 600;
+      color: transparent;
     }
-   }
+    &_r {
+      @include flex_col(2rem);
+      button{
+        width: auto;
+        padding: .8rem 1.5rem;
+        border-radius: .8rem;
+        @include flex(center,center,1rem);
+        border: 1px solid $yellow;
+        font-weight: 500;
+      }
+    }
+  }
 }
