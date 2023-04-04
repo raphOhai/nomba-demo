@@ -24,6 +24,15 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        additionalData: `
+          @import "style/terminal-page/abstracts/_mixins.scss";
+          @import "style/terminal-page/abstracts/_variables.scss";
+          `,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
