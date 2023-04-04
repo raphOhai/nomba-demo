@@ -2,7 +2,6 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 import { Br, Button, Container, Ntext, ReadMore } from "components";
-import { RotatingText } from "./rotating-text";
 import constants from "config/constants.json";
 
 const HomepageHero = () => {
@@ -16,9 +15,9 @@ const HomepageHero = () => {
           </Ntext>
 
           <Ntext variant="p18" className={subTextStyle}>
-            Over <span className={coloredText}>235,000</span> businesses trust Nomba to securely accept card
-            and transfer payments, manage their money, and grow their
-            business.
+            Over <span className={coloredText}>235,000</span> businesses trust
+            Nomba to securely accept card and transfer payments, manage their
+            money, and grow their business.
           </Ntext>
           <div className={heroButtonsContainer}>
             <Button
@@ -29,9 +28,8 @@ const HomepageHero = () => {
             <ReadMore
               color="n-grey6"
               variant="text3"
-              href={{ "url": "tel:+23401888899" }}
+              href={{ url: "tel:+23401888899" }}
               text="Contact sales"
-
             />
           </div>
         </div>

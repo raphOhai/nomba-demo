@@ -1,0 +1,6 @@
+.terminal_header{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.3rem 0;
+    @include flex(space-between,center,0);
+}
