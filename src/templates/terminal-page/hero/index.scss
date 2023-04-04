@@ -1,0 +1,11 @@
+.terminal_hero{
+   min-height: 80vh;
+   &_txt{
+    h1{
+        -webkit-text-stroke: 1px white;
+        -webkit-text-stroke: 1px white;
+        font-size: toRem(58);
+        font-weight: 600;
+    }
+   }
+}
