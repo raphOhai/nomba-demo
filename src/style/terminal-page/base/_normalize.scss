@@ -2,10 +2,22 @@
 .terminal_wrap {
     perspective: 1px;
     background: black;
+    overflow-x: hidden;
     color: $light_txt;
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 section {
     width: 100%;
+}
+h1{
+    font-size: toRem(48);
+    font-weight: 600;
+    line-height: 4rem;
+}
+p{
+    font-size: toRem(20);
 }
 button {
     outline: none;

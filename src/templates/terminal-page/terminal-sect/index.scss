@@ -1,0 +1,29 @@
+.c_terminal_sectInt{
+    @include flex_col(15rem);
+    &_paySol{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        @include flex_col(5rem);
+        align-items: center;
+        h1{
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    &_experience{
+        @include flex(center,center,0rem);
+        margin: 0 auto;
+        width: 90%;
+        svg{
+            width: 40%;
+        }
+        &_txt{
+            max-width: 50%;
+            @include flex_col(2rem);
+            p{
+                width: 80%;
+            }
+        }
+    }
+}
