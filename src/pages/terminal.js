@@ -6,6 +6,8 @@ import {
   TerminalSectionInteractions,
   TerminalHero,
   Waitlist,
+  ZoomInPos,
+  Drag,
   Footer,
 } from "templates/terminal-page";
 
@@ -14,8 +16,10 @@ const TerminalPage = () => {
     <div className="terminal_wrap">
       <TerminalHeader />
       <TerminalHero />
+      <ZoomInPos />
       <TerminalSectionInteractions />
       <CommonQuestions />
+      <Drag />
       <Waitlist />
       <Footer />
     </div>

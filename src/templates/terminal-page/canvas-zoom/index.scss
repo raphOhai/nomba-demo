@@ -1,0 +1,11 @@
+.c_czoom{
+     min-height: 80vh;
+     position: relative;
+     overflow: hidden;
+     &_posLeft{
+        left: -20%;
+     }
+     &_posRight{
+       right: -20%;
+     }
+}

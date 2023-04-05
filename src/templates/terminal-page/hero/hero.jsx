@@ -1,13 +1,15 @@
 import React from "react";
 import { Button } from "components/button";
+import { Brands } from "config/terminal";
 import "./index.scss";
 
 const TerminalHero = () => {
   return (
-    <div className="terminal_hero child_wrap">
+    <div className="terminal_hero">
       <div className="terminal_hero_txt">
         <div className="terminal_hero_txt_l">
           <h1>Experience the</h1>
+          <br />
           <svg width="761" height="235" viewBox="0 0 761 235" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Group">
               <g id="M">
@@ -66,6 +68,7 @@ const TerminalHero = () => {
           </div>
         </div>
       </div>
+      <div className="terminal_hero_mq">{Brands.map(item => item.image)}</div>
     </div>
   );
 };

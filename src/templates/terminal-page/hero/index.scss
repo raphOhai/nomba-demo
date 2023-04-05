@@ -1,15 +1,19 @@
 .terminal_hero {
   min-height: 80vh;
   position: relative;
+  width: 85%;
+  margin: 0 auto;
+  @include flex_col(4rem);
   &_txt {
-    @include flex(space-between, flex-end, 3rem);
+    @include flex(space-between, flex-end, 2.5rem);
     h1 {
       -webkit-text-stroke: 1px $light-txt;
       text-stroke: 1px $light-txt;
       color: transparent;
     }
     &_r {
-      @include flex_col(2rem);
+      @include flex_col(3rem);
+      color: $light-txt-1;
       button{
         width: auto;
         padding: .8rem 1.5rem;
@@ -19,5 +23,9 @@
         font-weight: 500;
       }
     }
+  }
+  &_mq{
+    @include flex(flex-start, center,2rem);
+    filter: grayscale(100%);
   }
 }
