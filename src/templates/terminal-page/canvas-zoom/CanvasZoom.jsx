@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./index.scss";
-import { Left, Right } from "assets/images/svgs/terminal";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { StaticImage } from "gatsby-plugin-image";
 gsap.registerPlugin(ScrollTrigger);
 
 const ZoomInPos = () => {
@@ -20,7 +20,7 @@ const ZoomInPos = () => {
       },
     });
     tl.to(".c_czoom_posLeft", {
-      scale: 2.5,
+      scale: 2,
       xPercent: 25,
       duration: 3,
       ease: ".easeInOut",
@@ -28,7 +28,7 @@ const ZoomInPos = () => {
     tl.to(
       ".c_czoom_posRight",
       {
-        scale: 2.5,
+        scale: 2,
         xPercent: -25,
         duration: 3,
         ease: "easeInOut",
@@ -39,10 +39,10 @@ const ZoomInPos = () => {
   return (
     <div className="c_czoom">
       <div className="c_czoom_posLeft abs">
-        <Left />
+        <StaticImage alt="" src="../../../assets/images/svgs/terminal/left_pos.png" />
       </div>
       <div className="c_czoom_posRight abs">
-        <Right />
+        <StaticImage alt="" src="../../../assets/images/svgs/terminal/right_pos.png" />
       </div>
     </div>
   );

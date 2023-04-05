@@ -1,11 +1,12 @@
 import React from "react";
 import "./index.scss";
-import Pack from "assets/images/svgs/terminal/nomba_max.svg";
-
+import Pack from "assets/images/svgs/terminal/nomba_pack.svg";
 const Drag = () => {
   return (
     <div className="c_drag">
-      <Pack />
+      <div className="img">
+        <Pack />
+      </div>
     </div>
   );
 };

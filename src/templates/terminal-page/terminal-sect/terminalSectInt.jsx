@@ -1,19 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
-import "loconative-scroll/dist/loconative-scroll.css";
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
 import { Br } from "components/br";
-import { PosSkeletonX, ExperienceTerminal } from "assets/images/svgs/terminal";
+import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
+import Sideways from "assets/images/svgs/terminal/sideways.svg";
+import { StaticImage } from "gatsby-plugin-image";
+import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
 const TerminalSectionInteractions = () => {
+  const [isHover, setHover] = useState(false);
+  const fadeOut = () => {
+    setHover(!isHover);
+
+    if (!isHover) {
+      console.log("hover");
+    } else {
+      console.log("leave");
+    }
+  };
+
   return (
     <div className="c_terminal_sectInt">
       <div className="c_terminal_sectInt_paySol">
         <h1 data-animation="h">The perfect payment solution for smooth business transaction</h1>
-        <PosSkeletonX />
+        <div onMouseOver={fadeOut} onMouseLeave={fadeOut} className={` img_1 img ${!isHover ? "fadeIn" : "fadeOut"}`}>
+          <StaticImage src="../../../assets/images/svgs/terminal/sideways-skeleton.svg" alt="" />
+        </div>
+        <div className={` img_2 img ${isHover ? "fadeIn" : "fadeOut"}`}>
+          <Sideways />
+        </div>
       </div>
       <div className="c_terminal_sectInt_experience">
-        <ExperienceTerminal />
+        <ExperienceTerminal
+          onMouseOver={fadeOut}
+          onMouseLeave={fadeOut}
+          className={`${!isHover ? "fadeIn" : "fadeOut"}`}
+        />
+        <video className={`c_terminal_vid ${isHover ? "fadeIn" : "fadeOut"}`} loop muted src={spinTerminal}></video>
+
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">
             Experience the MAX in your <Br on="desktop" /> payment collection

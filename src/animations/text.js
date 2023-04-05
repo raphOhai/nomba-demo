@@ -61,8 +61,8 @@ export const split = () => {
       gsap.to(elem, {
         opacity: 1,
         yPercent: 0,
-        stagger: elem.length > 100 ? 0.01 : 0.02,
-        duration: elem.length > 100 ? 0.5 : 0.6,
+        stagger: elem.length > 100 ? 0.005 : 0.01,
+        duration: elem.length > 100 ? 0.4 : 0.5,
         ease: "easeOut",
       });
     });
