@@ -1,9 +1,10 @@
 .terminal_hero {
-  min-height: 80vh;
+  min-height: 100vh;
   position: relative;
   width: 85%;
   margin: 0 auto;
   @include flex_col(4rem);
+  justify-content: flex-end;
   &_txt {
     @include flex(space-between, flex-end, 2.5rem);
     h1 {
