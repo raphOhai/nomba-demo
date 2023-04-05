@@ -8,17 +8,17 @@ const TestimonialCard = ({ name, role, testimonial, image }) => {
     <div className={cardWrapStyle}>
       <div className={textWrapStyle}>
         <div className={testimonialTextStyle}>
-          <Ntext variant="h4" color="primary-100" value={testimonial} />
+          <Ntext variant="text4" color="primary-100" value={testimonial} />
         </div>
 
         <Ntext
-          variant="h4"
-          color="primary-100"
+          variant="text3"
+          color="n-grey1"
           value={name}
           className="mt-14 "
         />
 
-        {role && <Ntext variant="p18" color="primary-100" value={role} />}
+        {role && <Ntext variant="text3" color="n-grey4" value={role} />}
       </div>
 
       <div className={imageWrapStyle}>
@@ -43,8 +43,7 @@ const textWrapStyle = ctl(`
   xl:max-w-[698px]
   sm:max-w-[570px]
   max-w-[90%]
-  mx-auto
-  slider-margin-left
+
   mt-10
   mb-10
   lg:mb-0
@@ -56,7 +55,8 @@ const imageWrapStyle = ctl(`
   md:h-[800px] 
   sm:h-[620px] 
   xs:h-[484px]
-  h-[383px] 
+  h-[383px]
+  rounded-xl
   relative
 `);
 const yellowLineStyle = ctl(`

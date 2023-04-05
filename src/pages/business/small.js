@@ -5,12 +5,13 @@ import {
   GrowingYourSales,
   EasySolutionsForSmallBusiness,
   AnyTypeOfBusiness,
-  MakeYourBusinessEasy,
+  Paralax,
   SmallPageHeader,
   SmallBusinessInfoGridSection,
+  PerfectSolutions,
 } from "templates/business/small";
 import { Testimonial } from "components";
-import { SmallBusinessTestimonials } from "config/testimonials";
+import { SmallBusinessTestimonial } from "config/testimonials";
 
 const SmallBusiness = () => {
   return (
@@ -19,14 +20,15 @@ const SmallBusiness = () => {
       <GrowingYourSales />
       <EasySolutionsForSmallBusiness />
       <AnyTypeOfBusiness />
-      <MakeYourBusinessEasy />
-      <SmallBusinessInfoGridSection />
-      <div className="pt-2">
+      <PerfectSolutions />
+      <Paralax />
+      <div className="">
         <Testimonial
-          testimonials={SmallBusinessTestimonials}
+          testimonial={SmallBusinessTestimonial}
           headingText="Hear what business owners have to say"
         />
       </div>
+      <SmallBusinessInfoGridSection />
     </Layout>
   );
 };

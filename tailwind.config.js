@@ -12,8 +12,12 @@ module.exports = {
       backgroundImage: theme => ({
         "nomba-pro-hero-bg": "url('src/assets/images/left-slash.png')",
         "nomba-subtract": "url('src/assets/images/jpegs/Subtract.png')",
+        "bg-parallax":
+          "url('src/assets/images/jpegs/small-business/parallax-image.png')",
         "card-bg-1": "url('src/assets/images/card-bg-1.png')",
         "card-bg-2": "url('src/assets/images/card-bg-2.png')",
+        "bg-parallax-blank":
+          "url('src/assets/images/jpegs/small-business/blank.png')",
       }),
 
       colors: {

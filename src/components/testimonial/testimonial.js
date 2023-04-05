@@ -1,35 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 import { TestimonialCard } from "components/card";
+import { Container } from "components";
 import { Ntext } from "components/ntext";
 
-const Testimonial = ({ testimonials, headingText }) => {
-  const testimonialList = testimonials.map(item => (
-    <SwiperSlide key={item.name}>
-      <TestimonialCard {...item} />
-    </SwiperSlide>
-  ));
-
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}">""</span>`;
-    },
-  };
-
-  // <span class="' + className + '">' + "" + "</span>";
-
+const Testimonial = ({ testimonial, headingText }) => {
   return (
-    <div className="my-20">
-      <Ntext variant="h3" value={headingText} className={headingTextStyle} />
-      <Swiper pagination={pagination} modules={[Pagination]}>
-        {testimonialList}
-      </Swiper>
+    <div className="py-20 bg-primary">
+      <Container>
+        <Ntext
+          variant="text1"
+          value={headingText}
+          color="n-grey1"
+          className={headingTextStyle}
+        />
+        <TestimonialCard {...testimonial} />
+      </Container>
     </div>
   );
 };
@@ -37,13 +24,12 @@ const Testimonial = ({ testimonials, headingText }) => {
 const headingTextStyle = ctl(`
   md:max-w-[693px] 
   max-w-[238px] 
-  mx-auto 
-  text-center 
+  text-left 
   mb-[62px]
 `);
 
 Testimonial.propTypes = {
-  testimonials: PropTypes.object,
+  testimonial: PropTypes.object,
   headingText: PropTypes.string,
 };
 
