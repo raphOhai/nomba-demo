@@ -35,7 +35,7 @@ const NavList = ({ header, list }) => {
           return (
             <li key={`footer_list_item_${index}`} className="mt-2">
               <NLink {...listItem?.link}>
-                <Ntext variant="n-text3" color="primary-200">
+                <Ntext variant="text3" color="primary-200">
                   {listItem.title}
                 </Ntext>
               </NLink>

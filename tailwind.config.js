@@ -1,5 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,svg}"],
   mode: "jit",
@@ -79,6 +79,9 @@ module.exports = {
           grey4: "#666666",
           faint: "#e5e4da",
         },
+        gray: {
+          5: "#E0E0E0",
+        },
       },
 
       boxShadow: {
@@ -128,5 +131,22 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          /* IE and Edge */
+          "-ms-overflow-style": "none",
+
+          /* Firefox */
+          "scrollbar-width": "none",
+
+          /* Safari and Chrome */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    }),
+  ],
 };

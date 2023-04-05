@@ -6,7 +6,7 @@ import { Br, Ntext, SectionHeader, SliderCard, Container } from "components";
 import { easySolutionsForSmallBusiness } from "config/slider";
 const EasySolutionsForSmallBusiness = () => {
   return (
-    <Container>
+    <Container className="">
       <div className={businessWrapperStyle}>
         <SectionHeader className="!text-left">
           <Ntext variant="h3">
@@ -39,7 +39,7 @@ const EasySolutionsForSmallBusiness = () => {
 };
 
 const businessWrapperStyle = ctl(`
-bg-primary-200
+
 md:pb-20
 pb-16
 `);

@@ -150,15 +150,11 @@ dt {
 
 .pagination-class > .swiper-pagination-progressbar-fill {
   @apply !bg-n-yellow;
+  top: -4px !important;
+  height: 5px !important;
 }
 
-/* 
-.swiper-pagination-progressbar-fill {
-  height: 100%;
-  background-color: #f00;
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  height: 0.5px !important;
+  @apply !bg-n-grey2;
 }
-
-.swiper-pagination-progressbar-opposite {
-  height: 100%;
-  background-color: #fff;
-} */
