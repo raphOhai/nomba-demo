@@ -1,0 +1,18 @@
+.c_tFooter{
+    color: #8C8C8C;
+    padding: 1rem 0 3rem 0;
+    @include flex(space-between,flex-start,0);
+    p{
+        font-size: toRem(14);
+    }
+    &_lr{
+        @include flex_col(2rem);
+    }
+    &_gr{
+     @include flex_col(1rem);
+     color: #A3A3A3;
+     li{
+        font-size: toRem(15);
+     }
+    }
+}

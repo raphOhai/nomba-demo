@@ -1,0 +1,23 @@
+.d_waitlist{
+    padding: 6rem;
+    @include flex_col(7rem);
+    color: $fd-gr;
+    &_tr{
+        @include flex_col(2rem);
+        &_input{
+            input{
+                background: $bl-100;
+                border-radius: .2rem;
+                padding: .7rem 1.5rem;
+                color: rgba(198, 198, 198, 1);
+                min-width: 20rem;
+            }
+        }
+    }
+    &_th{
+        color: #8C8C8C;
+        a{
+            color: $yellow;
+        }
+    }
+}
