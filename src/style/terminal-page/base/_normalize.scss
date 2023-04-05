@@ -3,7 +3,6 @@
     perspective: 1px;
     background: black;
     overflow-x: hidden;
-    color: $light_txt;
     ::-webkit-scrollbar{
         display: none;
     }
@@ -14,8 +13,14 @@ section {
 h1{
     font-size: toRem(48);
     font-weight: 600;
+    color: $light-txt;
     line-height: 4rem;
 }
+hr {
+    border: none;
+    border: 1px solid #1D1D1D;
+    margin: 20px 0;
+  }
 p{
     font-size: toRem(18);
 }
@@ -24,6 +29,11 @@ button {
     font-family: inherit;
     font-size: 1rem;
     border: none;
+}
+input{
+    outline: none;
+    border: none;
+    font-family: inherit;
 }
 canvas {
     top: 0;
