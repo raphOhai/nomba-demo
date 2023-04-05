@@ -11,7 +11,7 @@ const AccordionTerminal = props => {
   return (
     <div className="c_wrapItem">
       <div onClick={showAccordionText} className="c_wrapItem_head">
-        <h3>{data.header}</h3>
+        <h3 data-animation="h">{data.header}</h3>
         <div className="c_wrapItem_head_toggleView content_btn">
           <span></span>
           <span className={isActive ? "open" : null}></span>

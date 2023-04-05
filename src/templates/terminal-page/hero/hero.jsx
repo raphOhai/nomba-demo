@@ -6,6 +6,7 @@ import "./index.scss";
 const TerminalHero = () => {
   return (
     <div className="terminal_hero">
+      <div className="play_btn"></div>
       <div className="terminal_hero_txt">
         <div className="terminal_hero_txt_l">
           <h1>Experience the</h1>
@@ -68,7 +69,11 @@ const TerminalHero = () => {
           </div>
         </div>
       </div>
-      <div className="terminal_hero_mq">{Brands.map(item => item.image)}</div>
+      <div className="terminal_hero_mq">
+        {Brands.map(item => (
+          <div key={item.id}>{item.image}</div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -6,8 +6,8 @@ function Waitlist() {
     <>
       <div className="d_waitlist">
         <div className="d_waitlist_tr text-center">
-          <h1>Get better, Get Nomba MAX!</h1>
-          <p>
+          <h1 data-animation="h">Get better, Get Nomba MAX!</h1>
+          <p data-animation="p">
             For better performance and smoother payment <Br on="mobile" /> solution, <Br on="desktop" /> Nomba MAX is
             here for you.
           </p>
