@@ -79,7 +79,6 @@ font-bold
 
 const heroTextWrapperStyle = ctl(`
 lg:max-w-max
-md:max-w-[605px]
 max-w-[100%]
 lg:mb-[80px]
 sm:mb-[120px]
@@ -88,8 +87,7 @@ mb-10
 `);
 
 const heroTextHeaders = ctl(`
-flex
-flex-col
+md:flex
 md:flex-row
 mb-10
 `);
@@ -102,16 +100,13 @@ basis-1/3
 
 const imageWrapperStyle = ctl(`
 rounded 
-flex-auto
-grow
+w-full lg:w-1/3
 text-center
-hidden
-md:block
-
 `);
 const imageGridStyle = ctl(`
-flex flex-row
+flex flex-nowrap
 pointer-events-none
+overflow-x-auto
 mb-10
 md:gap-10
 gap-4

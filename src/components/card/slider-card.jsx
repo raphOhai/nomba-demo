@@ -4,8 +4,8 @@ import { Ntext, ReadMore } from "components";
 
 const SliderCard = ({ image, heading, text, caseStudy, link }) => {
   return (
-    <div className=" shadow-md hover:shadow-xl border shadow-[rgba(0,0,0,0.1)] h-[443px] md:h-[500px] rounded-md">
-      <div className={imageStyle}></div>
+    <div className="border shadow-lg hover:shadow-xl h-full rounded-lg my-4">
+      <div className={imageStyle}>{image}</div>
 
       <div className={sliderCardWrapStyle}>
         {/*To check what context it's being used in. caseStudy shows in places like the about us page */}
@@ -20,7 +20,7 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
             <Ntext
               variant="p14"
               value={text}
-              className={`${cardTextStyle} mt-[18px]  min-h-[140px]`}
+              className={`${cardTextStyle} md:mt-[18px]  min-h-[140px]`}
             />
 
             <div>
@@ -40,17 +40,13 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
             </div>
           </>
         ) : (
-          <>
-            <Ntext
-              variant="text5"
-              className={cardHeadingStyle}
-              value={heading}
-            />
+          <div className="flex flex-col justify-between gap-4 my-3 md:mt-6">
+            <Ntext variant="text5" className="" value={heading} />
 
-            <Ntext variant="p14" value={text} className={`${cardTextStyle}`} />
+            <Ntext variant="text3" value={text} className="" />
 
             {link && <ReadMore {...link} color="primary" />}
-          </>
+          </div>
         )}
       </div>
     </div>
@@ -59,6 +55,7 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
 
 const imageStyle = ctl(`
   md:h-[290px]
+  rounded-t-lg
   h-[234px]
   w-full
   bg-n-dark
@@ -66,17 +63,17 @@ const imageStyle = ctl(`
 const sliderCardWrapStyle = ctl(`
   md:px-[32px]
   px-[25px]
-
   text-left
-  md:min-h-[550px]
 `);
 const cardHeadingStyle = ctl(`
-  mt-6 
+  mt-4
+  md:mt-6 
   md:max-w-[380px] 
   max-w-[245px]
 `);
 const cardTextStyle = ctl(`
-  my-6 
+  md:my-6
+  my-4
   md:max-w-[368px] 
   max-w-[256px]
 `);

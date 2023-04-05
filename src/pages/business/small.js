@@ -3,6 +3,8 @@ import React from "react";
 import Layout from "components/layout";
 import {
   GrowingYourSales,
+  EasySolutionsForSmallBusiness,
+  AnyTypeOfBusiness,
   MakeYourBusinessEasy,
   SmallPageHeader,
   SmallBusinessInfoGridSection,
@@ -15,6 +17,8 @@ const SmallBusiness = () => {
     <Layout title="Small Business">
       <SmallPageHeader />
       <GrowingYourSales />
+      <EasySolutionsForSmallBusiness />
+      <AnyTypeOfBusiness />
       <MakeYourBusinessEasy />
       <SmallBusinessInfoGridSection />
       <div className="pt-2">

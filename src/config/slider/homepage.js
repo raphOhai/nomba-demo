@@ -18,7 +18,7 @@ const homepageSliderData = [
     ),
     heading: "Teams",
     text:
-      "Track payments on multiple channels for every item sold in your store.",
+      "Track payments on multiple channels for every item sold in your store.Track payment on multiple channels for every item sold in your store.",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/small",
@@ -34,7 +34,7 @@ const homepageSliderData = [
     ),
     heading: "Invoice ",
     text:
-      "Receive, track and manage payments from hundreds of sources on a single dashboard",
+      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
     link: {
       text: "Get Nomba for your large business",
       href: "/business/large",
@@ -50,7 +50,7 @@ const homepageSliderData = [
     ),
     heading: "Inventory ",
     text:
-      "Be the sure padi for every money-related activity people need to make in your area.",
+      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
     link: { text: "Become an agent", to: "/business/agents" },
   },
   {
@@ -63,7 +63,7 @@ const homepageSliderData = [
     ),
     heading: "Invoice ",
     text:
-      "Receive, track and manage payments from hundreds of sources on a single dashboard",
+      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
     link: {
       text: "Get Nomba for your large business",
       href: "/business/large",

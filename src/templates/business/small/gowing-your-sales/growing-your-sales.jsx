@@ -17,6 +17,7 @@ const GrowingYourSales = () => {
           value="Access all the offline and online tools you need to grow your business"
           variant="p18"
           className="mt-2"
+          color="n-grey5"
         />
       </SectionHeader>
       <Slider slides={smallBusinessPageSliderData} />

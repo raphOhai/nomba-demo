@@ -27,6 +27,7 @@ const badgeWrapper = ctl(`
 flex
 justify-center
 mb-[20px]
+
 `);
 
 const dottedWrapper = ctl(`

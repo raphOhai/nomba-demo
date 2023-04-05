@@ -9,7 +9,7 @@ const Container = ({ children, className }) => {
 
 const containerStyle = ctl(`
 md:max-w-[1335px]
-mx-5
+px-[25px]
 md:mx-auto
 `);
 

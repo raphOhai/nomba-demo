@@ -1,7 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
-import Logo from "svgs/nomba-logo.svg";
+import Logo from "svgs/nomba-footer.svg";
 import policies from "config/menu/policies.json";
 
 import { NLink } from "components/nlink";
@@ -19,7 +19,7 @@ const Policies = () => {
         {policiesMenu.map((menuItem, index) => {
           return (
             <li key={`policy_menu_${index}`} className={policyMenuListItem}>
-              <Ntext variant="p16" color="primary-900">
+              <Ntext variant="p16" color="primary-200">
                 <NLink {...menuItem?.link}>{menuItem.title}</NLink>
               </Ntext>
             </li>
@@ -35,7 +35,7 @@ const policyWrapperStyle = ctl(`
 flex
 flex-col
 md:items-start
-mt-14
+mt-[40px]
 md:text-right
 `);
 

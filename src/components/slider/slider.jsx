@@ -13,7 +13,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 const Slider = ({ slides }) => {
   const sliderItems = slides.map(item => (
-    <SwiperSlide key={item.heading}>
+    <SwiperSlide key={item.heading} className="flex items-stretch">
       <SliderCard
         heading={item.heading}
         image={item.image}
@@ -26,25 +26,39 @@ const Slider = ({ slides }) => {
 
   return (
     <div className={sectionWrapStyle}>
-      <SliderNavigation />
-      <div className="mt-[42px]">
-        <Swiper
-          navigation={{
-            nextEl: ".next-element",
-            prevEl: ".previous-element",
-          }}
-          pagination={{
-            type: "progressbar",
-            el: ".pagination-class",
-          }}
-          className=" "
-          loop={true}
-          spaceBetween={24}
-          slidesPerView={1}
-          breakpoints={breakpoints}
-        >
-          {sliderItems}
-        </Swiper>
+      <div className="hidden md:block">
+        <SliderNavigation />
+        <div className="mt-[42px]">
+          <Swiper
+            navigation={{
+              nextEl: ".next-element",
+              prevEl: ".previous-element",
+            }}
+            pagination={{
+              type: "progressbar",
+              el: ".pagination-class",
+            }}
+            className=" "
+            loop={true}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={breakpoints}
+          >
+            {sliderItems}
+          </Swiper>
+        </div>
+      </div>
+      <div className="grid gap-5 md:hidden">
+        {slides.map(item => (
+          <SliderCard
+            heading={item.heading}
+            key={item.heading}
+            image={item.image}
+            text={item.text}
+            link={item?.link}
+            caseStudy={item?.caseStudy}
+          />
+        ))}
       </div>
     </div>
   );
@@ -100,7 +114,7 @@ const breakpoints = {
 };
 
 const controlWrapStyle = ctl(`
-  h-40
+
   mx-auto 
   flex 
   items-center 
@@ -109,7 +123,7 @@ const controlWrapStyle = ctl(`
 `);
 const sectionWrapStyle = ctl(`
 slider-margin-left
-
+mx-5
 `);
 const blackLineStyle = ctl(`
   bg-primary 
@@ -118,6 +132,7 @@ const blackLineStyle = ctl(`
   h-[.5px]
 `);
 const controlButtonWrapStyle = ctl(`
+  relative
   flex 
   lg:gap-[28px] 
   gap-[11px]

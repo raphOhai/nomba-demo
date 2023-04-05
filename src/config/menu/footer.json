@@ -13,6 +13,20 @@
       "link": { "to": "/products/pos-terminals" }
     }
   ],
+  "Nomba": [
+    {
+      "title": "About us",
+      "link": { "to": "/about-us" }
+    },
+    {
+      "title": "Blog",
+      "link": { "href": { "url": "https://medium.com/@nombastories" } }
+    },
+    {
+      "title": "Work with Nomba",
+      "link": { "href": { "url": "https://nomba.talentlyft.com/#home" } }
+    }
+  ],
   "Business Types": [
     {
       "title": "Mobile Money Agents",
@@ -27,18 +41,18 @@
       "link": { "to": "/business/large" }
     }
   ],
-  "Nomba": [
+  "Contact us": [
     {
-      "title": "About us",
-      "link": { "to": "/about-us" }
+      "title": "018888866",
+      "link": { "href": { "url": "tel:+23401888866" } }
     },
     {
-      "title": "Blog",
-      "link": { "href": { "url": "https://medium.com/@nombastories" } }
+      "title": "015200061",
+      "link": { "href": { "url": "tel:+234015200061" } }
     },
     {
-      "title": "Work with Nomba",
-      "link": { "href": { "url": "https://nomba.talentlyft.com/#home" } }
+      "title": "support@nomba.com",
+      "link": { "href": { "url": "mailto:support@nomba.com" } }
     }
   ],
 
@@ -62,20 +76,6 @@
           "url": "https://www.facebook.com/nombahq"
         }
       }
-    }
-  ],
-  "Contact us": [
-    {
-      "title": "018888866",
-      "link": { "href": { "url": "tel:+23401888866" } }
-    },
-    {
-      "title": "015200061",
-      "link": { "href": { "url": "tel:+234015200061" } }
-    },
-    {
-      "title": "support@nomba.com",
-      "link": { "href": { "url": "mailto:support@nomba.com" } }
     }
   ]
 }

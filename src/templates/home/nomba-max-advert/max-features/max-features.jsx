@@ -5,11 +5,11 @@ import { Ntext, Br, ReadMore } from "components";
 export default function MaxFeatures() {
   return (
     <div className={wrapperFeature}>
-      <Ntext variant="text8" color="c-dark" className="text-left">
+      <Ntext variant="h3" color="c-dark" className="text-left">
         Built to simplify any business <Br on="all" />
         type and size
       </Ntext>
-      <div className="flex flex-row mt-10">
+      <div className="flex flex-row mt-[50px] md:mt-[100px]">
         <div className="basis-1/2 flex flex-col gap-10">
           <div className="">
             <ReadMore
@@ -155,7 +155,7 @@ h-full
 
 const wrapperFeature = ctl(`
 relative
-my-16
+mt-16
 md:ml-40
 justify-start
 text-left

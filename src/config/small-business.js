@@ -56,3 +56,19 @@ export const smallBusinessTips = [
     ),
   },
 ];
+export const heroImage = [
+  <StaticImage
+    width={530}
+    height={530}
+    className="rounded-lg drop-shadow-lg"
+    src="../assets/images/jpegs/small-business/woman_making_payment.png"
+    alt="Small Business"
+  />,
+  <StaticImage
+    width={530}
+    height={530}
+    className="rounded-lg drop-shadow-lg"
+    src="../assets/images/jpegs/small-business/woman-with-pos2.jpg"
+    alt="Small Business"
+  />,
+];

@@ -9,12 +9,12 @@ const HomepageFeatures = ({ title }) => {
     <div className="">
       <Container>
         {title && (
-          <SectionHeader className="!text-left">
+          <SectionHeader className="!text-left !-mr-2">
             <Ntext variant="h3">{title}</Ntext>
           </SectionHeader>
         )}
       </Container>
-      <Slider slides={homepageSliderData} />;
+      <Slider slides={homepageSliderData} />
     </div>
   );
 };

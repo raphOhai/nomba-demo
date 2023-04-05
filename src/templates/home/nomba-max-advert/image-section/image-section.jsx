@@ -4,10 +4,12 @@ import ctl from "@netlify/classnames-template-literals";
 
 export default function ImageSection() {
   return (
-    <div className="hover:animate-pulseCustom mt-14">
+    <div className="hover:animate-pulseCustom mt-14 ">
       <StaticImage
         src="../../../../assets/images/jpegs/homepage/Nomba-Max.jpg"
         alt="terminals"
+        width={828}
+        height={264}
         className={imgClass}
       />
     </div>

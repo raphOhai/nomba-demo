@@ -43,7 +43,7 @@ const navStyle = ctl(`
   px-[25px]
   py-[12.5px]
   lg:py-0
-  max-w-[1386px]
+  md:max-w-[1335px]
   mx-auto
 `);
 

@@ -7,7 +7,7 @@ const Copyright = () => {
   const year = date.getFullYear();
 
   return (
-    <Ntext variant="p14" className={copyrightStyle}>
+    <Ntext variant="p14" color="primary-200" className={copyrightStyle}>
       &copy; {year} Nomba, all rights reserved{" "}
     </Ntext>
   );

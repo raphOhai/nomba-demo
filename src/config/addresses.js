@@ -9,7 +9,10 @@ h-[20px]
 
 export const addressList = [
   {
-    location: "19b Bosun Adekoya Street, Lekki Phase 1, Lagos, Nigeria",
+    location: [
+      "16 Billings Way Oregun Ikeja, Lagos, Nigeria ",
+      "19b Bosun Adekoya Street, Lekki Phase 1, Lagos, Nigeria",
+    ],
     flag: (
       <StaticImage
         src="../assets/images/jpegs/Flag Nigeria.png"
@@ -20,7 +23,7 @@ export const addressList = [
     ),
   },
   {
-    location: "1776 Sacremento St Apt 311 SAN Francisco CA 94109",
+    location: ["1776 Sacremento St Apt 311 SAN Francisco CA 94109"],
     flag: (
       <StaticImage
         src="../assets/images/jpegs/Flag US.png"
