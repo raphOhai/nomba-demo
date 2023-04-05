@@ -1,0 +1,40 @@
+.c_wrapItem{
+    @include flex_col(1rem);
+    &_acc{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .2s ease-in-out;
+        p{
+           color: $fade-gray;
+        }
+        
+    }
+    .active {
+        max-height: 30rem !important;
+    }
+    &_head{
+        cursor: pointer;
+        @include flex(space-between, center,0rem);
+        h3{
+            font-size: toRem(18);
+        }
+        &_toggleView{
+            padding: .8rem .5rem;
+            border-radius:50%;
+            border:1px solid #ebecf0 ;
+    span {
+        height: 0.05rem;
+        display: block;
+        width: 0.9rem;
+        background: white;
+        transition: 0.3s ease-in-out;
+        &:nth-child(2) {
+            transform: rotateZ(90deg);
+        }
+    }
+    .open{
+     opacity: 0;
+    }
+        }
+    }
+}
