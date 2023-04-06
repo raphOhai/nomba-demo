@@ -13,21 +13,17 @@ import {
   Drag,
   Footer,
 } from "templates/terminal-page";
-// import LoconativeScroll from "loconative-scroll";
+import LoconativeScroll from "loconative-scroll";
 import { split } from "animations/text";
 
 const TerminalPage = () => {
   useEffect(() => {
     split();
 
-    // const scroll = new LoconativeScroll({
-    //   smooth: true,
-    //   el: document.querySelector("[data-scroll-container]"),
-    // });
-
-    // setTimeout(() => {
-    //   scroll.update();
-    // }, 200);
+    new LoconativeScroll({
+      smooth: true,
+      el: document.querySelector("[data-scroll-container]"),
+    });
   });
   return (
     <div className="terminal_wrap" data-scroll-container>

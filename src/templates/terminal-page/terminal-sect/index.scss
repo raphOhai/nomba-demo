@@ -64,6 +64,10 @@
             }
         }
     }
+    &_print{
+        padding: 10rem 0;
+        @include flex_col(3rem);
+    }
 }
 .fadeOut{
     transition: opacity .8s ease-in-out;
