@@ -20,7 +20,7 @@ const ReadMore = ({
         <Ntext
           variant={props.variant || "p16"}
           color={color}
-          className={`peer ${props.className}`}
+          className={`peer ${props.className}transition-all duration-300`}
           weight={defaultStyle ? "600" : props.weight}
         >
           {text}
@@ -38,6 +38,7 @@ const ReadMore = ({
 const readmoreStyle = ctl(`
 inline-flex
 items-center
+
 group
 `);
 

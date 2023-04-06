@@ -3,7 +3,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Br, ReadMore, Container } from "components";
 import { businessTypesData } from "config/home";
+import { useState } from "react";
 function BusinessTypes() {
+  const [activeType, setActiveType] = useState(businessTypesData[0]);
   return (
     <Container className={wrapperFeature}>
       <Ntext variant="h3" color="c-dark" className="text-left">
@@ -13,18 +15,18 @@ function BusinessTypes() {
       <div className="flex flex-row justify-between mt-[50px] md:mt-[100px]">
         <div className="md:basis-1/2 flex flex-col gap-10 md:max-w-[514px]">
           {businessTypesData.map((b, i) => (
-            <div className="">
+            <div className="" onMouseEnter={() => setActiveType(b)}>
               <ReadMore
                 text={b.title}
-                color="n-grey6"
-                active={true}
+                color={b === activeType ? "n-grey6" : "n-grey3"}
+                active={b === activeType}
                 variant="text5"
-                href={{ url: "tel:+23401888899" }}
+                href={b.link}
               />
               <div className="md:hidden">{b.images}</div>
               {/* sub text */}
               <div className="mt-4">
-                <Ntext variant="text3" className="c-0">
+                <Ntext variant="text3" className="c-0 cursor-pointer">
                   {b.description}
                 </Ntext>
               </div>
@@ -33,33 +35,8 @@ function BusinessTypes() {
         </div>
 
         {/** images */}
-        <div className="hidden md:block md:basis-1/2 ">
-          <div className={gridWrapper}>
-            <div className={imgClassWrapper1}>
-              <StaticImage
-                className={imgClass}
-                src="../../../../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
-                alt="Image 1"
-              />
-            </div>
-            <div className={imgClassWrapper2}>
-              <StaticImage
-                height={299}
-                className={imgClass}
-                src="../../../../assets/images/jpegs/homepage/max-features/max-payment.jpg"
-                alt="Image 2"
-              />
-            </div>
-            <div className={imgClassWrapper3}>
-              <StaticImage
-                className={imgClass}
-                height={299}
-                src="../../../../assets/images/jpegs/homepage/max-features/salon-business.jpg"
-                alt="Image 3"
-              />
-            </div>
-          </div>
-          ​
+        <div className="hidden md:block md:basis-1/2 transition-all ease-out duration-500 origin-top-right ">
+          {activeType.images}​
         </div>
       </div>
     </Container>
