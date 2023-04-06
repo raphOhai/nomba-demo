@@ -45,6 +45,12 @@
         @include flex(flex-end,center,0rem);
         position: relative;
         cursor: pointer;
+        @include media("<=tablet"){
+            width: 90%;
+            min-height: 50rem;
+
+  margin: 0 auto;            @include flex_col(3rem);
+        }
         svg{
             width:22%;
             position: absolute;
@@ -64,6 +70,11 @@
             flex-shrink: 0 0;       
             @include flex_col(2rem);
             transform: translateX(0rem);
+            @include media("<=tablet"){
+                max-width: 100%; 
+                text-align: center;
+            }}
+            svg{
             p{
                 width: 70%;
             }
