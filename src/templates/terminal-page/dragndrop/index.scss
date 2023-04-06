@@ -1,7 +1,11 @@
 .c_drag{
     width: 100%;
-    svg{
-        width: 100%;
+    .img{
+        cursor: grab;
+        width:80%;
         margin: 0 auto;
+       img{
+        @extend %nodrag;
+       }
     }
 }

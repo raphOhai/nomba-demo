@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef } from "react";
 import "./index.scss";
 import { Br } from "components/br";
 import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
@@ -7,13 +7,17 @@ import { StaticImage } from "gatsby-plugin-image";
 import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
 const TerminalSectionInteractions = () => {
   const [isHover, setHover] = useState(false);
+  const video = useRef(null);
   const fadeOut = () => {
     setHover(!isHover);
 
     if (!isHover) {
-      console.log("hover");
+      setTimeout(() => {
+        video.current.play();
+      }, 8000);
     } else {
-      console.log("leave");
+      video.current.currentTime = 0;
+      video.current.pause();
     }
   };
 
@@ -34,7 +38,13 @@ const TerminalSectionInteractions = () => {
           onMouseLeave={fadeOut}
           className={`${!isHover ? "fadeIn" : "fadeOut"}`}
         />
-        <video className={`c_terminal_vid ${isHover ? "fadeIn" : "fadeOut"}`} loop muted src={spinTerminal}></video>
+        <video
+          ref={video}
+          className={`c_terminal_vid ${isHover ? "fadeIn" : "fadeOut"}`}
+          loop
+          muted
+          src={spinTerminal}
+        ></video>
 
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">
