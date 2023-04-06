@@ -1,10 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./index.scss";
 import { Br } from "components/br";
 import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
 import Sideways from "assets/images/svgs/terminal/sideways.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const TerminalSectionInteractions = () => {
   const [isHover, setHover] = useState(false);
   const video = useRef(null);
@@ -20,6 +24,27 @@ const TerminalSectionInteractions = () => {
       video.current.pause();
     }
   };
+
+  useEffect(() => {
+    const sections = gsap.utils.toArray(".c_feature");
+
+    gsap.from(sections, {
+      scrollTrigger: {
+        trigger: ".c_terminal_sectInt_print_fl",
+        start: "top center",
+        scrub: true,
+        toggleActions: "play reverse play reverse",
+        end: "+=500",
+      },
+      opacity: 0,
+      xPercent: 10,
+      marker: true,
+      yPercent: 10,
+      stagger: 1.5,
+      duration: 3,
+      ease: "easeInOut",
+    });
+  });
 
   return (
     <div className="c_terminal_sectInt">
@@ -61,7 +86,11 @@ const TerminalSectionInteractions = () => {
           Get ahead with the power of <Br on="all" /> Nomba MAX!
         </h1>
         <div className="c_terminal_sectInt_print_fl">
-          <StaticImage alt="" src="../../../assets/images/svgs/terminal/terminal_print.png" />
+          <StaticImage
+            className="c_terminal_sectInt_print_fl_img"
+            alt=""
+            src="../../../assets/images/svgs/terminal/terminal_print.png"
+          />
           <div className="c_terminal_sectInt_print_fl_features">
             <div className="c_feature">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

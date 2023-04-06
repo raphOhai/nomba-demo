@@ -1,6 +1,5 @@
 .c_terminal_sectInt{
     @include flex_col(6rem);
-    padding: 0rem 0 8rem 0;
     color: $fd-gr;
     &_paySol{
         width: 90%;
@@ -66,7 +65,22 @@
     }
     &_print{
         padding: 10rem 0;
-        @include flex_col(3rem);
+        @include flex_col(8rem);
+        &_fl{
+            @include flex(center,center,0);
+            &_features{
+                z-index: 2;
+                transform: translateX(-3rem);
+                 @include flex_col(2rem);
+                 .c_feature{
+                    background-color: $fade-bl;
+                    padding:.8rem 1rem ;
+                    border-top-right-radius:.4rem ;
+                    border-bottom-right-radius:.4rem;
+                    @include flex(flex-start,center,.6rem);
+                 }
+            }
+        }
     }
 }
 .fadeOut{
