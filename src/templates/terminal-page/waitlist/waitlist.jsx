@@ -1,15 +1,14 @@
 import React from "react";
 import "./index.scss";
-import { Br, Button, NLink } from "components";
+import { Button, NLink } from "components";
 function Waitlist() {
   return (
     <>
       <div className="d_waitlist">
         <div className="d_waitlist_tr text-center">
           <h1 data-animation="h">Get better, Get Nomba MAX!</h1>
-          <p data-animation="p">
-            For better performance and smoother payment <Br on="mobile" /> solution, <Br on="desktop" /> Nomba MAX is
-            here for you.
+          <p data-animation="p" className="mg_au">
+            For better performance and smoother payment solution, Nomba MAX is here for you.
           </p>
           <div className="d_waitlist_tr_input justify-center gap-5  flex-center flex">
             <input type="email" placeholder="Enter Email" />

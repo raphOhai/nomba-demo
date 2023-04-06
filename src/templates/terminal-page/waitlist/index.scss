@@ -1,10 +1,26 @@
 .d_waitlist{
-    padding: 6rem;
+    padding: 6rem 0;
     @include flex_col(7rem);
     color: $fd-gr;
+    @include media("<=tablet"){
+        width: 90%;
+        margin: 0 auto
+    }
     &_tr{
         @include flex_col(2rem);
+        p{
+            max-width: 30%;
+            @include media("<=tablet"){
+                max-width: 70%;
+            }
+            @include media("<=phone-tab"){
+                max-width: 100%;
+            }
+        }
         &_input{
+            @include media("<=tablet"){
+                @include flex_col(2rem);
+            }
             input{
                 background: $bl-100;
                 border-radius: .2rem;

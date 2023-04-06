@@ -20,10 +20,10 @@ const TerminalPage = () => {
   useEffect(() => {
     split();
 
-    new LoconativeScroll({
-      smooth: true,
-      el: document.querySelector("[data-scroll-container]"),
-    });
+    // new LoconativeScroll({
+    //   smooth: true,
+    //   el: document.querySelector("[data-scroll-container]"),
+    // });
   });
   return (
     <div className="terminal_wrap" data-scroll-container>

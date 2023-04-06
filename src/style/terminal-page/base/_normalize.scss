@@ -1,11 +1,17 @@
+html{
+    font-size: calc(100vw / 1440 * 16); 
+      @include media("<=tablet") {
+        font-size: calc(100vw / 475 * 10);
+   }
+   @include media("<=phone-tab") {
+        font-size: calc(100vw / 375 * 14);
+   }
 
+}
 .terminal_wrap {
     perspective: 1px;
     background: black;
     overflow-x: hidden;
-    ::-webkit-scrollbar{
-        display: none;
-    }
 }
 section {
     width: 100%;
@@ -15,6 +21,9 @@ h1{
     font-weight: 600;
     color: $light-txt;
     line-height: 3rem;
+    @include media("<=phone-tab") {
+        font-size:toRem(46);
+   }
 }
 hr {
     border: none;
@@ -23,6 +32,9 @@ hr {
   }
 p{
     font-size: toRem(18);
+    @include media("<=phone-tab") {
+        font-size:toRem(16);
+   }
 }
 button {
     outline: none;

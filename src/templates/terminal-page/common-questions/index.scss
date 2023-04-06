@@ -1,8 +1,19 @@
 .c_cmQuestions{
     padding: 10rem 0;
     @include flex(space-between, flex-start, 0);
+    @include media("<=tablet"){
+        @include flex_col(3rem);
+    }
+    &_txt h1{
+         @include media("<=tablet"){
+           text-align: center;
+        }
+    }
     &_acc{
         width: 70%;
+         @include media("<=tablet"){
+             width: 100%
+          }
         @include flex_col(2.5rem);
         color: $fd-gr;
     }

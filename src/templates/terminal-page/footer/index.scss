@@ -2,11 +2,20 @@
     color: #8C8C8C;
     padding: 1rem 0 3rem 0;
     @include flex(space-between,flex-start,0);
+    @include media("<=tablet"){
+        @include flex_col(3rem);
+        text-align: center;
+        align-items: center;
+    }
     p{
         font-size: toRem(14);
     }
     &_lr{
         @include flex_col(2rem);
+        @include media("<=tablet"){
+        text-align: center;
+        align-items: center;
+    }
     }
     &_gr{
      @include flex_col(1rem);
