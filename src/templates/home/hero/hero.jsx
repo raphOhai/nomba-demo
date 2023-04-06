@@ -1,11 +1,11 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { StaticImage } from "gatsby-plugin-image";
-import { Br, Button, Container, Ntext, ReadMore } from "components";
-import { RotatingText } from "./rotating-text";
+import PropTypes from "prop-types";
+import { Button, Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
+import { HeroSlider } from "./heroSlider";
 
-const HomepageHero = () => {
+const HomepageHero = ({ title, description, images }) => {
   const { SIGNUP_URL } = constants;
   return (
     <section className={heroStyle}>
@@ -13,12 +13,11 @@ const HomepageHero = () => {
         <div className={heroTextWrapperStyle}>
           <div className={heroTextHeaders}>
             <Ntext variant="h1" color="primary-1000" className="basis-2/3">
-              Get better at business <Br on="desktop" /> with Nomba.
+              {title}
             </Ntext>
 
             <Ntext variant="p18" className={subTextStyle}>
-              Over 235,000 businesses trust Nomba to securely accept card and
-              transfer payments, manage their money, and grow their business.
+              {description}
             </Ntext>
           </div>
           <div className={heroButtonsContainer}>
@@ -36,32 +35,13 @@ const HomepageHero = () => {
           </div>
         </div>
         <div className={imageGridStyle}>
-          <div className={imageWrapperStyle}>
-            <StaticImage
-              width={397}
-              height={387}
-              src="../../../assets/images/jpegs/homepage/hero-images/hero1.jpg"
-              alt="Nomba POS Agent"
-            />
-          </div>
-          <div className={imageWrapperStyle}>
-            <StaticImage
-              width={397}
-              height={387}
-              src="../../../assets/images/jpegs/homepage/hero-images/hero2.jpg"
-              alt="Woman at the closing store."
-            />
-          </div>
-
-          <div className={imageWrapperStyle}>
-            <StaticImage
-              width={397}
-              height={387}
-              src="../../../assets/images/jpegs/homepage/hero-images/hero3.jpg"
-              alt="Woman making payment over POS"
-            />
-          </div>
+          {images.map((image, i) => (
+            <div kay={i} className={imageWrapperStyle}>
+              {image}
+            </div>
+          ))}
         </div>
+        <HeroSlider images={images} className="md:hidden" />
       </Container>
     </section>
   );
@@ -70,6 +50,7 @@ const HomepageHero = () => {
 // pb-[120px]
 const heroStyle = ctl(`
 md:pt-[150px]
+md:pb-[50px]
 pt-[100px]
 `);
 
@@ -104,8 +85,9 @@ w-full lg:w-1/3
 text-center
 `);
 const imageGridStyle = ctl(`
-flex flex-nowrap
+md:flex flex-nowrap
 pointer-events-none
+hidden
 overflow-x-auto
 mb-10
 md:gap-10
@@ -120,4 +102,9 @@ gap-[30px]
 items-center
 `);
 
+HomepageHero.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  images: PropTypes.array,
+};
 export { HomepageHero };

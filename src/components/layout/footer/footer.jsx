@@ -41,7 +41,7 @@ md:flex
 justify-between
 pt-6
 mt-7
-border-t
+border-t-[0.3px]
 border-n-grey3
 mb-5
 `);

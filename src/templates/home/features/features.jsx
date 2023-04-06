@@ -6,7 +6,7 @@ import { Slider, SectionHeader, Ntext, Container } from "components";
 
 const HomepageFeatures = ({ title }) => {
   return (
-    <div className="">
+    <div className="md:mt-8">
       <Container>
         {title && (
           <SectionHeader className="!text-left !-mr-2">

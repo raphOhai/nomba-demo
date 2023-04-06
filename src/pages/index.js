@@ -9,22 +9,22 @@ import {
 } from "templates/home";
 import { Br, POSTerminals } from "components";
 import NombaProAdvert from "templates/home/nomba-max-advert/nomba-max-advert";
-import MaxFeatures from "templates/home/nomba-max-advert/max-features/max-features";
+import { BusinessTypes } from "templates/home/business-types";
+import { heroHomePage } from "config/home";
 
 const IndexPage = () => {
   return (
     <Layout title="Nomba" ignoreSiteName={true}>
-      <HomepageHero />
+      <HomepageHero {...heroHomePage} />
       <NombaProAdvert>
         <HomepageFeatures
           title={
             <>
-              {" "}
               Build your business with <Br on="desktop" /> our tools
             </>
           }
         />
-        <MaxFeatures />
+        <BusinessTypes />
       </NombaProAdvert>
 
       <HomepageGotOptions />

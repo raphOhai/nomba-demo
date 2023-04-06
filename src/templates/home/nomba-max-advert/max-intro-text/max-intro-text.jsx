@@ -16,9 +16,13 @@ export default function ProIntroText() {
       {/* sub text */}
       <div>
         <Ntext variant="text3" className="c-0">
-          Beyond payments, this device can support your business apps; inventory{" "}
+          Transform the way you do business with the power of Nomba MAX. this
+          device has faster
           <Br on="desktop" />
-          management, food menu, ordering, invoicing and many more.
+          transaction speed, Long lasting battery, High speed printer and is
+          Sleek & Durable to give
+          <Br on="desktop" />
+          an overall high speed performance.
         </Ntext>
       </div>
     </div>

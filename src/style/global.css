@@ -15,6 +15,15 @@
   .slider-margin-left {
     margin-left: calc((100% - 1320px) / 2);
   }
+  .slider-margin-right {
+    margin-right: calc((100% - 1320px) / 2);
+  }
+  .slider-padding-right {
+    padding-right: calc((100% - 1320px) / 2);
+  }
+  .slider-padding-left {
+    padding-left: calc((100% - 1320px) / 2);
+  }
 }
 
 .swiper-pagination > .swiper-pagination-bullet {
@@ -119,7 +128,7 @@ dt {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.28;
+  opacity: 0.2;
   background-image: url("src/assets/images/jpegs/Subtract.png");
   background-repeat: repeat;
   background-position: top;

@@ -9,6 +9,7 @@ import ctl from "@netlify/classnames-template-literals";
 const ReadMore = ({
   text,
   color,
+  className,
   defaultStyle = true,
   active = true,
   ...props
@@ -52,12 +53,14 @@ ReadMore.defaultProps = {
   text: "Read More",
   color: "primary-100",
   active: true,
+  className: "",
 };
 
 ReadMore.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
   active: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export { ReadMore };

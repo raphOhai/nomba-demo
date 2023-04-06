@@ -42,6 +42,7 @@ const textWrapStyle = ctl(`
   max-w-[90%]
   mt-[30px]
   md:mt-[63px]
+  slider-padding-left
   mb-10
   lg:mb-0
 `);
@@ -49,6 +50,7 @@ const imageWrapStyle = ctl(`
   lg:w-[40%] 
   w-full 
   lg:h-[541px] 
+  slider-padding-right
   md:h-[800px] 
   sm:h-[620px] 
   xs:h-[484px]

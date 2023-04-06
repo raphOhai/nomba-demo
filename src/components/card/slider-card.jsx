@@ -40,7 +40,7 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
             </div>
           </>
         ) : (
-          <div className="flex flex-col justify-between gap-4 my-3 md:mt-6">
+          <div className="flex flex-col justify-between gap-4 my-3 md:pb-4 md:mt-6">
             <Ntext variant="text5" className="" value={heading} />
 
             <Ntext variant="text3" value={text} className="" />

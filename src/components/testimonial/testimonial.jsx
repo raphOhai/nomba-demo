@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import { TestimonialCard } from "components/card";
 import { SectionHeader, Container } from "components";
 import { Ntext } from "components/ntext";
@@ -26,7 +27,7 @@ const Testimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <div className="my-20 bg-primary">
+    <div className=" bg-primary">
       <Container>
         <SectionHeader className="!text-left">
           <Ntext
@@ -36,21 +37,23 @@ const Testimonial = ({ testimonials, headingText }) => {
             className={headingTextStyle}
           />
         </SectionHeader>
+        <Swiper
+          pagination={pagination}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 6500,
+            disableOnInteraction: false,
+          }}
+        >
+          {testimonialList}
+        </Swiper>
       </Container>
-
-      <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
-        className="slider-margin-left"
-      >
-        {testimonialList}
-      </Swiper>
     </div>
   );
 };
 
 const headingTextStyle = ctl(`
-  md:max-w-[693px] 
+  md:max-w-[593px] 
   max-w-[238px] 
   mb-[62px]
 `);
