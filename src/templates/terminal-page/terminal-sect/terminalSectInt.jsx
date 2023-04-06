@@ -14,7 +14,7 @@ const TerminalSectionInteractions = () => {
     if (!isHover) {
       setTimeout(() => {
         video.current.play();
-      }, 8000);
+      }, 800);
     } else {
       video.current.currentTime = 0;
       video.current.pause();

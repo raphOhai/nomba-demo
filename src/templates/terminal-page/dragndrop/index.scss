@@ -1,11 +1,12 @@
 .c_drag{
     width: 100%;
-    .img{
+    &_img{
+        position: relative;
         cursor: grab;
-        width:80%;
+        width:85%;
         margin: 0 auto;
-       img{
+        z-index: 1;
         @extend %nodrag;
-       }
+        @extend %noselect;
     }
 }
