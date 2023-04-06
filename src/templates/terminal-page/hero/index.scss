@@ -1,6 +1,6 @@
 .terminal_hero {
   position: relative;
-  height: 46rem;
+  height: 40rem;
   width: 80%;
   overflow: hidden;
   cursor: pointer;
@@ -128,13 +128,14 @@
 .mq{
   @include flex(flex-start, center,2rem);
   filter: grayscale(100%);
-  flex-wrap: nowrap;
-  flex-shrink: 0 0;
   padding-top: 5rem;
   width: 80%;
   margin: 0 auto;
   @include media("<=phone-tab"){
+    padding-top: 3rem;
      width: 100%;
+     transform: scale(2.5) translateX(-8rem);
+     gap: .5rem;
   }
   
 }

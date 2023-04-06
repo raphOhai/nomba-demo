@@ -64,7 +64,7 @@ const TerminalSectionInteractions = () => {
           <StaticImage src="../../../assets/images/svgs/terminal/sideways-skeleton.svg" alt="" />
         </div>
         <div className={` img_2 img ${isHover ? "fadeIn" : "fadeOut"}`}>
-          <Sideways />
+          <StaticImage alt="" src="../../../assets/images/svgs/terminal/sideways.png" />
         </div>
       </div>
       <div className="c_terminal_sectInt_experience">
