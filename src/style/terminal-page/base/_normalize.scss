@@ -22,8 +22,8 @@ h1{
     color: $light-txt;
     line-height: 3rem;
     @include media("<=phone-tab") {
-        font-size:toRem(35);
-        line-height: 2rem;
+        font-size: toRem(37);
+        line-height: 2.8rem;
    }
 }
 hr {
@@ -34,7 +34,7 @@ hr {
 p{
     font-size: toRem(18);
     @include media("<=phone-tab") {
-        font-size:toRem(16);
+        font-size:toRem(18);
    }
 }
 button {

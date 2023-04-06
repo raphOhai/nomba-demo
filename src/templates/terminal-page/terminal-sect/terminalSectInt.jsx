@@ -5,8 +5,10 @@ import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.
 import Sideways from "assets/images/svgs/terminal/sideways.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
+import TerminalPrint from "assets/images/svgs/terminal/comp.mp4";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { IO } from "animations/observe";
 gsap.registerPlugin(ScrollTrigger);
 
 const TerminalSectionInteractions = () => {
@@ -19,19 +21,18 @@ const TerminalSectionInteractions = () => {
   };
 
   const fadeOutVid = () => {
-    setHoverVid(!isHoverVid);
-
-    if (!isHoverVid) {
-      setTimeout(() => {
-        video.current.play();
-      }, 800);
-    } else {
-      video.current.currentTime = 0;
-      video.current.pause();
-    }
+    setHoverVid(true);
   };
 
   useEffect(() => {
+    const wrap = document.querySelector(".c_terminal_sectInt_experience");
+    IO(wrap).then(() => {
+      fadeOutVid();
+      setTimeout(() => {
+        video.current.play();
+      }, 2000);
+    });
+
     const sections = gsap.utils.toArray(".c_feature");
     gsap.set(sections, {
       opacity: 0,
@@ -67,18 +68,8 @@ const TerminalSectionInteractions = () => {
         </div>
       </div>
       <div className="c_terminal_sectInt_experience">
-        <ExperienceTerminal
-          onMouseOver={fadeOutVid}
-          onMouseLeave={fadeOutVid}
-          className={`${!isHoverVid ? "fadeIn" : "fadeOut"}`}
-        />
-        <video
-          ref={video}
-          className={`c_terminal_vid ${isHoverVid ? "fadeIn" : "fadeOut"}`}
-          loop
-          muted
-          src={spinTerminal}
-        ></video>
+        <ExperienceTerminal className={isHoverVid ? "fadeOut" : null} />
+        <video ref={video} className={isHoverVid ? "fadeIn" : null} loop muted src={spinTerminal}></video>
 
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">
@@ -95,11 +86,7 @@ const TerminalSectionInteractions = () => {
           Get ahead with the power of <Br on="all" /> Nomba MAX!
         </h1>
         <div className="c_terminal_sectInt_print_fl">
-          <StaticImage
-            className="c_terminal_sectInt_print_fl_img"
-            alt=""
-            src="../../../assets/images/svgs/terminal/terminal_print.png"
-          />
+          <video autoPlay muted src={TerminalPrint}></video>
           <div className="c_terminal_sectInt_print_fl_features">
             <div className="c_feature">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

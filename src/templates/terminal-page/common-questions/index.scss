@@ -1,5 +1,5 @@
 .c_cmQuestions{
-    padding: 10rem 0;
+    padding: 5rem 0;
     @include flex(space-between, flex-start, 0);
     @include media("<=tablet"){
         @include flex_col(3rem);
