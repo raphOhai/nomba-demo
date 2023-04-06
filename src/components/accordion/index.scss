@@ -14,6 +14,7 @@
     }
     &_head{
         cursor: pointer;
+        @extend %noselect;
         @include flex(space-between, center,0rem);
         h3{
             font-size: toRem(18);

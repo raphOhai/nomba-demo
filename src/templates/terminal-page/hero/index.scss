@@ -66,11 +66,9 @@
   }
 }
 .play_btn{
-  width: 8rem;
-  height: 8rem;
-  background-color: $yellow;
-  border-radius: 50%;
-  position: absolute;
+  z-index: 10;
+  transition: 1s ease-in-out;
+  position: fixed;
   top: 10%;
-  left: 25%;
+  left: 10%;
 }
