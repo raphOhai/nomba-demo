@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "components/button";
-import { Brands } from "config/terminal";
+import { Br } from "components";
 import heroGif from "assets/images/svgs/terminal/hero.mp4";
 import "./index.scss";
 import Play from "assets/images/svgs/terminal/play.svg";
 import gsap from "gsap";
+import { StaticImage } from "gatsby-plugin-image";
+<StaticImage />;
 
 const TerminalHero = () => {
-  useEffect(() => {
-    gsap.set(".play_btn", { xPercent: -50, yPercent: -50 });
+  // useEffect(() => {
+  //   const win = document.querySelector('.terminal_hero');
+  //   gsap.set(".play_btn", { xPercent: -50, yPercent: -50 });
 
-    let xTo = gsap.quickTo(".play_btn", "x", { duration: 0.6, ease: "power3" }),
-      yTo = gsap.quickTo(".play_btn", "y", { duration: 0.6, ease: "power3" });
+  //   let xTo = gsap.quickTo(".play_btn", "x", { duration: 0.6, ease: "power3" }),
+  //     yTo = gsap.quickTo(".play_btn", "y", { duration: 0.6, ease: "power3" });
 
-    window.addEventListener("mousemove", e => {
-      xTo(e.clientX);
-      yTo(e.clientY);
-    });
-  });
+  //   win.addEventListener("mousemove", e => {
+  //     xTo(e.clientX);
+  //     yTo(e.clientY);
+  //   });
+  // });
 
   // const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -43,14 +46,14 @@ const TerminalHero = () => {
         <div className="terminal_hero_video">
           <video loop autoPlay muted src={heroGif}></video>
         </div>
-        <div onClick={playVid} className="play_btn">
+        {/* <div onClick={playVid} className="play_btn">
           <Play />
-        </div>
+        </div> */}
         <div className="terminal_hero_sect">
           <div className="terminal_hero_sect_txt">
             <div className="terminal_hero_sect_txt_l">
               <h1>Experience the</h1>
-              <br />
+              <Br on="desktop" />
               <svg width="761" height="235" viewBox="0 0 761 235" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Group">
                   <g id="M">
@@ -84,39 +87,37 @@ const TerminalHero = () => {
               <div className="btn">
                 <button>
                   Reserve your spot
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    className="btn_svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z"
-                      stroke="#FAFAFA"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                    <path
-                      d="M8.5 12H14.5"
-                      stroke="#FAFAFA"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12.5 9L15.5 12L12.5 15"
-                      stroke="#FAFAFA"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
+                    <path d="M8.5 12H14.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M12.5 9L15.5 12L12.5 15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
               </div>
             </div>
           </div>
-          <div className="terminal_hero_sect_mq">
-            {Brands.map(item => (
-              <div key={item.id}>{item.image}</div>
-            ))}
-          </div>
         </div>
+      </div>
+      <div className="mq">
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/buypower-logo.png" />
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/smg.png" />
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/lacore.png" />
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/grillspizza.png" />
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/sneaklin.png" />
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/marios.png" />
+        <StaticImage alt="" src="../assets/images/jpegs/terminal/abc.png" />
       </div>
     </>
   );

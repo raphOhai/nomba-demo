@@ -40,7 +40,7 @@ const TerminalSectionInteractions = () => {
     });
     gsap.to(sections, {
       scrollTrigger: {
-        trigger: ".c_terminal_sectInt_print_fl",
+        trigger: ".c_terminal_sectInt_print_fl_features",
         start: "top center",
         scrub: true,
         toggleActions: "play reverse play reverse",

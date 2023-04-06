@@ -8,7 +8,10 @@
         @include flex_col(0rem);
         align-items: center;
         position: relative;
-        min-height: 45rem;
+        min-height:90vh;
+        @include media("<=tablet"){
+            min-height:100vh;
+       }
         h1{
             width: 60%;
             margin: 0 auto;
@@ -18,6 +21,9 @@
             position: absolute;
             bottom: 12.5rem;
             z-index: 3;
+            // @include media("<=desktop"){
+            //      bottom: -10rem;
+            // }
             svg{
                 width: 100%
             }
@@ -66,12 +72,22 @@
     &_print{
         padding: 10rem 0;
         @include flex_col(8rem);
+        @include media("<=tablet"){
+            padding: 5rem 0;
+        }
         &_fl{
             @include flex(center,center,0);
+            @include media("<=tablet"){
+                @include flex_col(3rem);
+            }
             &_features{
                 z-index: 2;
                 transform: translateX(-3rem);
                  @include flex_col(2rem);
+                 @include media("<=tablet"){
+                    width: 100%;
+                    transform: translateX(0rem);
+                }
                  .c_feature{
                     background-color: $fade-bl;
                     padding:.8rem 1rem ;

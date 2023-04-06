@@ -3,4 +3,17 @@
   margin: 0 auto;
   padding: 1.3rem 0;
   @include flex(space-between, center, 0);
+  button{
+    @include media("<=tablet"){
+      display: none;
+    }
+  }
+  .cta{
+    display: none;
+    color: $yellow;
+    font-size: 1rem;
+    @include media("<=tablet"){
+      @include flex(space-between,center,.5rem);
+    }
+  }
 }

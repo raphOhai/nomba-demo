@@ -21,34 +21,3 @@ export const AccordionData = [
       "Prices for the Nomba MAX caution fee and outright purchase will be announced at its launch. You'll be informed via email used in sign up.",
   },
 ];
-
-export const Brands = [
-  {
-    id: 1,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/buypower-logo.png" />,
-  },
-  {
-    id: 2,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/smg.png" />,
-  },
-  {
-    id: 3,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/lacore.png" />,
-  },
-  {
-    id: 4,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/grillspizza.png" />,
-  },
-  {
-    id: 5,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/sneaklin.png" />,
-  },
-  {
-    id: 6,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/marios.png" />,
-  },
-  {
-    id: 7,
-    image: <StaticImage alt="" src="../assets/images/jpegs/terminal/abc.png" />,
-  },
-];

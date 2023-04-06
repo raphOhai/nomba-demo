@@ -1,15 +1,29 @@
 .terminal_hero {
   position: relative;
-  height: 90vh;
-  width: 85%;
+  height: 46rem;
+  width: 80%;
   overflow: hidden;
   cursor: pointer;
   margin: 0 auto;
+  @include media("<=tablet"){
+    width: 90%;
+    height: 60rem;
+  }
+  @include media("<=phone-tab"){
+    width: 90%;
+    height: 50rem;
+  }
 
   &_video{
     width: 50%;
     margin: 0 auto;
     position: relative;
+    @include media("<=tablet"){
+       width: 70%;
+    }
+    @include media("<=phone-tab"){
+       width: 100%;
+    }
     &::before,
   &::after {
     content: "";
@@ -41,14 +55,42 @@
     @include flex_col(4rem);
     &_txt {
       @include flex(space-between, flex-end, 2.5rem);
+      @include media("<=tablet"){
+        @include flex_col(3rem);
+      }
+      @include media("<=phone-tab"){
+        @include flex_col(1rem);
+      }
       h1 {
         -webkit-text-stroke: 1px $light-txt;
         text-stroke: 1px $light-txt;
         color: transparent;
       }
+      &_l{
+        @include media("<=tablet"){
+          width: 100%;
+        }
+        svg{
+          width: 45rem;
+          @include media("<=tablet"){
+            width: 100%;
+          }
+        }
+      }
       &_r {
         @include flex_col(3rem);
         color: $light-txt-1;
+        @include media("<=phone-tab"){
+          @include flex_col(1.5rem);
+        }
+        p{
+          @include media("<=tablet"){
+            max-width: 90%;
+          }
+          @include media("<=tablet"){
+            max-width: 90%;
+          }
+        }
         button{
           width: auto;
           padding: .8rem 1.5rem;
@@ -56,13 +98,24 @@
           @include flex(center,center,1rem);
           border: 1px solid $yellow;
           font-weight: 500;
+          svg{
+            path{
+               stroke: white;
+               @include media("<=phone-tab"){
+                stroke: $black;
+              }
+
+            }
+          }
+          @include media("<=phone-tab"){
+            width: 100%;
+            background: $yellow;
+            color: $black;
+          }
         }
       }
     }
-    &_mq{
-      @include flex(flex-start, center,2rem);
-      filter: grayscale(100%);
-    }
+    
   }
 }
 .play_btn{
@@ -71,4 +124,17 @@
   position: fixed;
   top: 10%;
   left: 10%;
+}
+.mq{
+  @include flex(flex-start, center,2rem);
+  filter: grayscale(100%);
+  flex-wrap: nowrap;
+  flex-shrink: 0 0;
+  padding-top: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  @include media("<=phone-tab"){
+     width: 100%;
+  }
+  
 }
