@@ -11,14 +11,11 @@ const TestimonialCard = ({ name, role, testimonial, image }) => {
           <Ntext variant="text4" color="primary-100" value={testimonial} />
         </div>
 
-        <Ntext
-          variant="text3"
-          color="n-grey1"
-          value={name}
-          className="mt-14 "
-        />
+        <div className="md:mt-8 mt-0">
+          <Ntext variant="text3" color="n-grey1" value={name} />
 
-        {role && <Ntext variant="text3" color="n-grey4" value={role} />}
+          {role && <Ntext variant="text3" color="n-grey4" value={role} />}
+        </div>
       </div>
 
       <div className={imageWrapStyle}>
@@ -34,7 +31,7 @@ const cardWrapStyle = ctl(`
   flex
   flex-col
   lg:flex-row
-  lg:items-center
+  lg:items-start
   justify-between
   bg-primary
   mb-10
@@ -43,8 +40,8 @@ const textWrapStyle = ctl(`
   xl:max-w-[698px]
   sm:max-w-[570px]
   max-w-[90%]
-
-  mt-10
+  mt-[30px]
+  md:mt-[63px]
   mb-10
   lg:mb-0
 `);
@@ -72,9 +69,9 @@ const yellowLineStyle = ctl(`
   -top-3 
 `);
 const testimonialTextStyle = ctl(`
-  lg:mb-[106px] 
+  md:mb-[60px]
+  md:max-w-[490px] 
   min-h-[200px] 
-  sm:min-h-[350px] 
   lg:min-h-max
 `);
 

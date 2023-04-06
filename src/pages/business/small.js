@@ -11,7 +11,7 @@ import {
   PerfectSolutions,
 } from "templates/business/small";
 import { Testimonial } from "components";
-import { SmallBusinessTestimonial } from "config/testimonials";
+import { SmallBusinessTestimonials } from "config/testimonials";
 
 const SmallBusiness = () => {
   return (
@@ -24,8 +24,8 @@ const SmallBusiness = () => {
       <Paralax />
       <div className="">
         <Testimonial
-          testimonial={SmallBusinessTestimonial}
-          headingText="Hear what business owners have to say"
+          testimonials={SmallBusinessTestimonials}
+          headingText="Hear what business partners have to say"
         />
       </div>
       <SmallBusinessInfoGridSection />
