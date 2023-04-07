@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const imageStyle = ctl(`
   w-full
   h-full
+  rounded-t-lg
 `);
 
 const homepageSliderData = [

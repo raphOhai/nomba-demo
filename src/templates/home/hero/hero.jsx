@@ -3,7 +3,7 @@ import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Button, Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
-import { HeroSlider } from "./heroSlider";
+import { HeroSlider, SponsorList } from "./index";
 
 const HomepageHero = ({ title, description, images }) => {
   const { SIGNUP_URL } = constants;
@@ -42,6 +42,7 @@ const HomepageHero = ({ title, description, images }) => {
           ))}
         </div>
         <HeroSlider images={images} className="md:hidden" />
+        <SponsorList />
       </Container>
     </section>
   );

@@ -31,7 +31,7 @@ const MakeYourBusinessEasy = () => {
 
 const benefitsCardsWrapperStyle = ctl(`
 bg-primary
-pt-8
+
 pb-16
 
 `);

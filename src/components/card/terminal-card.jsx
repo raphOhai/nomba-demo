@@ -20,19 +20,29 @@ const TerminalCard = ({ device, image, isMax, features, link }) => {
               {device.name}
             </Ntext>{" "}
             <Ntext variant="p14" color={featuresColor} className="mt-5">
-              {features.join(", ")}
+              {features}
             </Ntext>
           </div>
         </div>
 
         <div className=" mx-5">
-          <div className="flex flex-row  justify-between items-baseline">
-            {" "}
-            <Ntext variant="text5" color={textColor} className="flex">
-              {device.price}
-            </Ntext>
-            <ReadMore variant="text3" color={textColor} href={link} />
-          </div>
+          {device.price ? (
+            <div className="flex flex-row  justify-between items-baseline">
+              <Ntext variant="text5" color={textColor} className="flex">
+                {device.price}
+              </Ntext>
+              <ReadMore variant="text3" color={textColor} href={link} />
+            </div>
+          ) : (
+            <div className="flex flex-row  justify-between items-baseline">
+              <ReadMore
+                variant="text3"
+                text="Join waitlist"
+                color={textColor}
+                href={link}
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
