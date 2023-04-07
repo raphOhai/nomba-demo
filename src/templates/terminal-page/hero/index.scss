@@ -98,6 +98,19 @@
           @include flex(center,center,1rem);
           border: 1px solid $yellow;
           font-weight: 500;
+          background: linear-gradient(to right, $yellow 50%, transparent 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+          transition: all .5s ease-out;
+          &:hover{
+            background-position: left bottom;
+            color: $black;
+             svg{
+              path{
+                 stroke: $black;
+              }
+            }
+          }
           svg{
             path{
                stroke: white;

@@ -102,6 +102,11 @@
                     width: 100%;   
                 }
             }
+            .cta{
+                color: $yellow;
+                font-size: inherit;
+                @include flex(space-between,center,0rem);
+            }
         }
     }
     &_print{

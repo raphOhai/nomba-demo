@@ -11,7 +11,7 @@
   .cta{
     display: none;
     color: $yellow;
-    font-size: 1rem;
+    font-size: .9rem;
     @include media("<=tablet"){
       @include flex(space-between,center,.5rem);
     }
