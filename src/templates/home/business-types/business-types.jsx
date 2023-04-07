@@ -77,7 +77,8 @@ h-full
 
 const wrapperFeature = ctl(`
 relative
-mt-16
+md:mt-[113px]
+mt-[80px]
 md:mb-[150px]
 justify-start
 text-left

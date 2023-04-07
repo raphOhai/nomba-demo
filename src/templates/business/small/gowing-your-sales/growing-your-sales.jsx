@@ -27,7 +27,7 @@ const GrowingYourSales = () => {
 
 const growingYourBusinessWrapperStyle = ctl(`
 bg-primary-200
-md:py-24
-py-16
+md:pb-24
+pb-16
 `);
 export { GrowingYourSales };

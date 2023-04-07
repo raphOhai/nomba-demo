@@ -6,7 +6,7 @@ import { posCardData } from "config/nomba-terminals";
 
 const POSTerminals = ({ title }) => {
   return (
-    <section className="py-24">
+    <section className="">
       <Container>
         {title && (
           <SectionHeader>

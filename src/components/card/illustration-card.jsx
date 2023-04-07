@@ -31,9 +31,9 @@ const IllustrationCard = ({ illustration, title, description, link }) => {
 const illustrationCardStyle = ctl(`
 group 
 max-w-[390px] 
-lg:min-h-[300px]
+lg:min-h-[200px]
 lg:mb-0
-mb-12 
+mb-3 
 cursor-default  
 text-center
 justify-center

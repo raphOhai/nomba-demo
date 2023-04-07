@@ -1,12 +1,7 @@
 import React from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
-// import Visa from "assets/images/svgs/visa.svg";
-// import Master from "assets/images/svgs/mastercard.svg";
-// import Wifi from "assets/images/svgs/wifi.svg";
-// import FourG from "assets/images/svgs/fourg.svg";
-// import Printer from "assets/images/svgs/printer.svg";
-// import Usb from "assets/images/svgs/cib-usb.svg";
+
 const image = (
   <StaticImage
     width={193}
@@ -23,9 +18,16 @@ export const posCardData = [
       price: "₦15,000",
     },
 
-    features: ["Accept all Bank Cards", "Connects to WiFi"],
+    features: "Accept all Bank Cards, Connects to WiFi",
 
-    image,
+    image: (
+      <StaticImage
+        width={143}
+        height={287}
+        src="../assets/images/jpegs/homepage/Nomba-Lite.png"
+        alt="Nomba Lite"
+      />
+    ),
     link: { to: "/" },
   },
   {
@@ -35,33 +37,37 @@ export const posCardData = [
       price: "₦25,000",
     },
 
-    features: [
-      "Accept all Bank Cards",
-      "Pocket Friendly Light and Sleeky",
-      "Easy to operate",
-      "Connects to 4G/3G/2G WiFi",
-      "Bluetooth Connectivity",
-    ],
+    features:
+      "Accept all Bank Cards, Pocket Friendly Light and Sleeky, Easy to operate Connects to 4G/3G/2G WiFi Bluetooth Connectivity",
 
-    image,
+    image: (
+      <StaticImage
+        width={193}
+        height={267}
+        src="../assets/images/jpegs/homepage/Nomba-Pro.png"
+        alt="Nomba Lite"
+      />
+    ),
     link: { to: "/" },
   },
   {
     isMax: true,
     device: {
       name: "Nomba MAX",
-      price: "₦55,000",
+      price: null,
     },
 
-    features: [
-      "Accept all Bank Cards",
-      "Pocket Friendly Light and Sleeky",
-      "Easy to operate",
-      "Connects to 4G/3G/2G WiFi",
-      "Bluetooth Connectivity",
-    ],
+    features:
+      "This device has faster transaction speed, Long lasting battery, High speed printer and is Sleek & Durable to give an overall high speed performance.",
 
-    image,
+    image: (
+      <StaticImage
+        width={248}
+        height={267}
+        src="../assets/images/jpegs/homepage/Nomba-Max.png"
+        alt="Nomba Max"
+      />
+    ),
     link: { to: "/" },
   },
 ];

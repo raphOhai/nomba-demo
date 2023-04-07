@@ -40,7 +40,7 @@ const Ntext = ({
     "prosubText",
     "readMore",
     "pricing",
-    "pricingSub"
+    "pricingSub",
   ];
 
   if (customVariants.includes(textVariant)) {
@@ -102,8 +102,6 @@ const variants = {
     text-[14px]
     md:leading-[30.5px]
     leading-[19.6px]
-    md:normal-case
-    uppercase
     font-semibold 
     `,
   h6: `
@@ -172,7 +170,7 @@ const variants = {
     `,
   text5: `
   font-[600]
-  text-[16px]
+  text-[20px]
   leading-[24px]
   md:font-[700]
   md:text-[24px]
@@ -253,7 +251,7 @@ const variants = {
     leading-[24px]
     md:text-[20px]
     md:leading-[60px]
-    `
+    `,
 };
 const validElements = [
   "h1",
@@ -281,7 +279,7 @@ const validElements = [
   "prosubText",
   "readMore",
   "pricing",
-  "pricingSub"
+  "pricingSub",
 ];
 
 Ntext.defaultProps = {};
