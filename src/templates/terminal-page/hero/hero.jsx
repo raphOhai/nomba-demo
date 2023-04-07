@@ -25,24 +25,29 @@ const TerminalHero = () => {
   });
 
   const playVid = () => {
-    const video = document.querySelector(".hero_video_pl video");
     setPlayVid(!playVideo);
-    video.play();
+    const video = document.querySelector(".hero_video_pl video");
     if (playVideo) {
       video.pause();
       video.currentTime = 0;
+    } else {
+      video.play();
     }
+  };
+
+  const close = () => {
+    setPlayVid(!playVideo);
   };
   return (
     <>
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
-        <video ref={hero_vid} controls src={HeroVid}></video>
+        <video onClick={close} ref={hero_vid} controls src={HeroVid}></video>
       </div>
-      <div onClick={playVid} className="terminal_hero">
+      <div className="terminal_hero">
         <div className="terminal_hero_video">
           <video loop autoPlay muted src={heroGif}></video>
         </div>
-        <div className="play_btn">
+        <div onClick={playVid} className="play_btn">
           {playVideo ? (
             <div className="close_vid">
               <span></span>
@@ -52,8 +57,15 @@ const TerminalHero = () => {
             <Play />
           )}
         </div>
-        <div className="play_mobile">
-          <PlayMobile />
+        <div onClick={playVid} className="play_mobile">
+          {playVideo ? (
+            <div className="close_vid_m">
+              <span></span>
+              <span></span>
+            </div>
+          ) : (
+            <PlayMobile />
+          )}
         </div>
         <div className="terminal_hero_sect">
           <div className="terminal_hero_sect_txt">
