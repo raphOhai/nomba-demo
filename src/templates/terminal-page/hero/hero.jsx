@@ -24,8 +24,8 @@ const TerminalHero = () => {
 
   const playVid = () => {
     setPlayVid(!playVideo);
-    // const videoWrap = document.querySelector(".hero_video_pl");
-    // videoWrap.classList.toggle("view");
+    const videoWrap = document.querySelector(".hero_video_pl");
+    videoWrap.classList.toggle("view");
     hero_vid.current.play();
   };
   return (
@@ -34,11 +34,9 @@ const TerminalHero = () => {
         <video ref={hero_vid} controls src={HeroVid}></video>
       </div>
       <div className="terminal_hero">
-        {playVideo ? (
-          <div className="terminal_hero_video">
-            <video loop autoPlay muted src={heroGif}></video>
-          </div>
-        ) : null}
+        <div className="terminal_hero_video">
+          <video loop autoPlay muted src={heroGif}></video>
+        </div>
         <div onClick={playVid} className="play_btn">
           {playVideo ? (
             <div className="close_vid">
