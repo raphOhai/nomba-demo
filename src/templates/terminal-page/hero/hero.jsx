@@ -107,13 +107,20 @@ const TerminalHero = () => {
         </div>
       </div>
       <div className="mq">
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/buypower-logo.png" />
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/smg.png" />
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/lacore.png" />
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/grillspizza.png" />
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/sneaklin.png" />
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/marios.png" />
-        <StaticImage alt="" src="../assets/images/jpegs/terminal/abc.png" />
+        <div className="first">
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/buypower-logo.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/lacore.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/sneaklin.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/marios.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/abc.png" />
+        </div>
+        <div className="second">
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/buypower-logo.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/lacore.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/sneaklin.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/marios.png" />
+          <StaticImage alt="" src="../assets/images/jpegs/terminal/abc.png" />
+        </div>
       </div>
     </>
   );

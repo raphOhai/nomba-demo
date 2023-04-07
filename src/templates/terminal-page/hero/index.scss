@@ -211,16 +211,40 @@
   display: block;
 }
 .mq{
-  @include flex(flex-start, center,2rem);
   filter: grayscale(100%);
   padding-top: 5rem;
-  width: 80%;
-  margin: 0 auto;
-  @include media("<=phone-tab"){
-     width: 100%;
-     transform: scale(2.3) translateX(-8rem);
-     gap: .5rem;
-     padding-top: 3.5rem;
+   width: 80%;
+   margin: 0 auto;
+  @include flex(flex-start,center,2rem);;
+  >div{
+    @include flex(flex-start,center,3rem);
+    flex-wrap: nowrap;
+    overflow: visible;
+    flex-shrink: 0;
+    &:nth-child(2){
+      display: none;
+      @include media("<=phone-tab"){
+              display: flex;
+              
+             }
+    }
+    @include media("<=phone-tab"){
+            gap: 3rem;
+            animation: marquee 15s linear 0s infinite normal forwards;
+         }
   }
+  @include media("<=phone-tab"){
+         width: 100%;
+         gap: 2rem;
+         padding-top: 3.5rem;
+      }
   
+}
+@keyframes marquee {
+  0% {
+       transform: translate(0);
+  }
+  100% {
+       transform: translateX(-100%);
+  }
 }
