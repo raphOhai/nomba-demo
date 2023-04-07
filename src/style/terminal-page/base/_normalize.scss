@@ -23,7 +23,7 @@ h1{
     line-height: 3rem;
     @include media("<=phone-tab") {
         font-size: toRem(37);
-        line-height: 2.8rem;
+        line-height: 2.6rem;
    }
 }
 hr {

@@ -1,11 +1,9 @@
 .terminal_header {
-  width: 90%;
-  margin: 0 auto;
-  padding: 1.3rem 0;
-&_wrap{
+  padding: 1.3rem 4rem;
   @include flex(space-between, center, 0);
   @include media("<=tablet"){
     background-color: #121212;
+    padding: 1.3rem 1.8rem;
   }
   button{
     @include media("<=tablet"){
@@ -21,6 +19,5 @@
     @include media("<=tablet"){
       @include flex(space-between,center,.5rem);
     }
-  }
 }
 }

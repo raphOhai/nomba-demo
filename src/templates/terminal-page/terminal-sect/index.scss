@@ -1,6 +1,20 @@
 .c_terminal_sectInt{
     @include flex_col(6rem);
     color: $fd-gr;
+    @include media("<=phone-tab") {
+        @include flex_col(3.5rem);
+   }
+    h1{
+        width: 60%;
+        margin: 0 auto;
+        @include media("<=tablet"){
+            width: 100%;
+        }
+        @include media("<=phone-tab") {
+            font-size: toRem(34) !important;
+            line-height: 2.5rem;
+       }
+    }
     &_paySol{
         width: 90%;
         margin: 0 auto;
@@ -12,13 +26,7 @@
         @include media("<=phone-tab"){
             min-height:50vh;
        }
-        h1{
-            width: 60%;
-            margin: 0 auto;
-            @include media("<=tablet"){
-                width: 100%;
-            }
-        }
+     
         .img_1{
             width: 81%;
             position: absolute;
@@ -61,7 +69,6 @@
             width: 90%;
             margin: 0 auto;
             justify-content: flex-start;
-            min-height: 70em;
         }
         > svg{
             position: absolute;
@@ -82,9 +89,12 @@
                 transform: scale(1.4);
                 display: block;
                 position: relative;
+                left: 0;
+                top: 4rem;
             }
             @include media("<=phone"){
                 transform: scale(1.5);
+                left: 0;
             }
         }
 
@@ -96,6 +106,9 @@
             transform: translateX(0rem);
             @include media("<=tablet"){
                 max-width: 100%;   
+                text-align: center;
+                align-items: center;
+                justify-content: center;
             }
             >p{
                 width: 70%;
@@ -113,7 +126,7 @@
         padding: 5rem 0;
         @include flex_col(0rem);
         @include media("<=tablet"){
-            padding: 3rem 0;
+            padding: 4rem 0;
         }
         &_fl{
             @include flex(center,center,0);
