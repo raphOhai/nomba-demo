@@ -63,7 +63,7 @@
             justify-content: flex-start;
             min-height: 70em;
         }
-        svg{
+        > svg{
             position: absolute;
             left:12rem;
             width:21%;
@@ -97,18 +97,16 @@
             @include media("<=tablet"){
                 max-width: 100%;   
             }
-            p{
+            >p{
                 width: 70%;
                 @include media("<=tablet"){
                     width: 100%;   
                 }
             }
-            .ctau{
+            .cta{
                 color: $yellow;
-                width: 30%;
-                @include flex(flex-start,center,0rem);
-                font-size: inherit;
-            }
+                @include flex(space-between,center,1rem);
+              }
         }
     }
     &_print{

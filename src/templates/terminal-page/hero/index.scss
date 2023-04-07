@@ -59,7 +59,7 @@
         @include flex_col(3rem);
       }
       @include media("<=phone-tab"){
-        @include flex_col(1rem);
+        @include flex_col(2.5rem);
       }
       h1 {
         -webkit-text-stroke: 1px $light-txt;
@@ -69,8 +69,9 @@
       &_l{
         @include media("<=tablet"){
           width: 100%;
+          @include flex_col(1rem);
         }
-        svg{
+        .img{
           width: 45rem;
           @include media("<=tablet"){
             width: 100%;
@@ -98,6 +99,7 @@
           @include flex(center,center,1rem);
           border: 1px solid $yellow;
           font-weight: 500;
+          font-size: 1.15rem;
           background: linear-gradient(to right, $yellow 50%, transparent 50%);
           background-size: 200% 100%;
           background-position: right bottom;
@@ -132,6 +134,9 @@
   }
 }
 .play_btn{
+  @include media("<=tablet"){
+    display: none;
+  }
   z-index: 25;
   position: absolute;
   top: 10%;
@@ -186,7 +191,6 @@
   width: 80%;
   margin: 0 auto;
   @include media("<=phone-tab"){
-    padding-top: 3rem;
      width: 100%;
      transform: scale(2.5) translateX(-8rem);
      gap: .5rem;

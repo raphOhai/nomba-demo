@@ -34,7 +34,7 @@ hr {
 p{
     font-size: toRem(18);
     @include media("<=phone-tab") {
-        font-size:toRem(18);
+        font-size:1.1rem;
    }
 }
 button {
