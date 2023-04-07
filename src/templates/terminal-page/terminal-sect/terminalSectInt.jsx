@@ -8,13 +8,17 @@ import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
 import TerminalPrint from "assets/images/svgs/terminal/comp.mp4";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import useIsMobile from "hooks/useIsMobile";
 import { IO } from "animations/observe";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const TerminalSectionInteractions = () => {
   const [isHover, setHover] = useState(false);
   const [isHoverVid, setHoverVid] = useState(false);
   const video = useRef(null);
+  const skeleton = useRef(null);
+  const isMobile = useIsMobile();
 
   const fadeOut = () => {
     setHover(!isHover);
@@ -23,6 +27,18 @@ const TerminalSectionInteractions = () => {
   const fadeOutVid = () => {
     setHoverVid(true);
   };
+
+  if (isMobile) {
+    const observer = new window.IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setHover(true);
+          observer.disconnect();
+        }
+      });
+    });
+    observer.observe(skeleton.current);
+  }
 
   useEffect(() => {
     const wrap = document.querySelector(".c_terminal_sectInt_experience");
@@ -67,7 +83,12 @@ const TerminalSectionInteractions = () => {
     <div className="c_terminal_sectInt">
       <div className="c_terminal_sectInt_paySol">
         <h1 data-animation="h">The perfect payment solution for smooth business transaction</h1>
-        <div onMouseOver={fadeOut} onMouseLeave={fadeOut} className={` img_1 img ${!isHover ? "fadeIn" : "fadeOut"}`}>
+        <div
+          onMouseOver={fadeOut}
+          ref={skeleton}
+          onMouseLeave={fadeOut}
+          className={` img_1 img ${!isHover ? "fadeIn" : "fadeOut"}`}
+        >
           <StaticImage src="../../../assets/images/svgs/terminal/sideways-skeleton.svg" alt="" />
         </div>
         <div className={` img_2 img ${isHover ? "fadeIn" : "fadeOut"}`}>
