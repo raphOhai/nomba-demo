@@ -44,7 +44,7 @@ function BusinessTypes() {
         </div>
       </div>
 
-      <div className="block md:hidden mb-4">
+      <div className="block md:hidden">
         <BusinessTypeMobile types={businessTypesData} />
       </div>
     </Container>
@@ -97,7 +97,7 @@ function BusinessTypeMobile({ types }) {
 
 const wrapperFeature = ctl(`
 relative
-
+mb-[100px]
 md:mb-[150px]
 justify-start
 text-left

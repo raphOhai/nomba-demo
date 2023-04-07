@@ -6,11 +6,22 @@ export default function ProIntroText() {
   return (
     <div className={textSection}>
       {/* main text */}
-      <div className="mb-[20px] flex items-baseline justify-center text-center">
+      <div className="mb-[20px] hidden xs:flex flex-nowrap items-baseline justify-center text-center">
         <Ntext variant="h2" color="c-dark">
-          Introducing Nomba&nbsp;
+          Introducing Nomba &nbsp;
         </Ntext>
         <Max className="h-[22px] w-[80px] md:w-[124px] md:h-[34px]" />
+      </div>
+      <div className="xs:hidden">
+        <Ntext variant="h2" color="c-dark">
+          Introducing
+        </Ntext>
+        <div className="mb-[20px] flex  flex-nowrap items-baseline justify-center text-center">
+          <Ntext variant="h2" color="c-dark">
+            Nomba&nbsp;
+          </Ntext>
+          <Max className="h-[22px] w-[80px] md:w-[124px] md:h-[34px]" />
+        </div>
       </div>
 
       {/* sub text */}
