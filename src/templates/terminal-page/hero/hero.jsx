@@ -7,8 +7,10 @@ import Play from "assets/images/svgs/terminal/play.svg";
 import gsap from "gsap";
 import HeroVid from "assets/images/svgs/terminal/video.mp4";
 import { StaticImage } from "gatsby-plugin-image";
+import useIsMobile from "hooks/useIsMobile";
 
 const TerminalHero = () => {
+  const isMobile = useIsMobile();
   const hero_vid = useRef(null);
   const [playVideo, setPlayVid] = useState(false);
   useEffect(() => {

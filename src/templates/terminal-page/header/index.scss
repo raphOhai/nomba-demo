@@ -2,7 +2,11 @@
   width: 90%;
   margin: 0 auto;
   padding: 1.3rem 0;
+&_wrap{
   @include flex(space-between, center, 0);
+  @include media("<=tablet"){
+    background-color: #121212;
+  }
   button{
     @include media("<=tablet"){
       display: none;
@@ -18,4 +22,5 @@
       @include flex(space-between,center,.5rem);
     }
   }
+}
 }
