@@ -77,7 +77,6 @@ const TerminalSectionInteractions = () => {
       <div className="c_terminal_sectInt_experience">
         <ExperienceTerminal className={isHoverVid ? "fadeOut" : null} />
         <video ref={video} className={isHoverVid ? "fadeIn" : null} loop muted src={spinTerminal}></video>
-
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">
             Experience the MAX in your <Br on="desktop" /> payment collection
