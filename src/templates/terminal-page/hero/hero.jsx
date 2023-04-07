@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Button } from "components/button";
 import { Br } from "components";
 import heroGif from "assets/images/svgs/terminal/hero.mp4";
 import "./index.scss";
 import Play from "assets/images/svgs/terminal/play.svg";
+import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
 import gsap from "gsap";
 import HeroVid from "assets/images/svgs/terminal/video.mp4";
 import { StaticImage } from "gatsby-plugin-image";
@@ -25,20 +25,24 @@ const TerminalHero = () => {
   });
 
   const playVid = () => {
+    const video = document.querySelector(".hero_video_pl video");
     setPlayVid(!playVideo);
-    const videoWrap = document.querySelector(".hero_video_pl");
-    videoWrap.classList.toggle("view");
+    video.play();
+    if (playVideo) {
+      video.pause();
+      video.currentTime = 0;
+    }
   };
   return (
     <>
-      <div className="hero_video_pl">
-        <video autoPlay ref={hero_vid} controls src={HeroVid}></video>
+      <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
+        <video ref={hero_vid} controls src={HeroVid}></video>
       </div>
-      <div className="terminal_hero">
+      <div onClick={playVid} className="terminal_hero">
         <div className="terminal_hero_video">
           <video loop autoPlay muted src={heroGif}></video>
         </div>
-        <div onClick={playVid} className="play_btn">
+        <div className="play_btn">
           {playVideo ? (
             <div className="close_vid">
               <span></span>
@@ -47,6 +51,9 @@ const TerminalHero = () => {
           ) : (
             <Play />
           )}
+        </div>
+        <div className="play_mobile">
+          <PlayMobile />
         </div>
         <div className="terminal_hero_sect">
           <div className="terminal_hero_sect_txt">

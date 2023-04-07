@@ -59,7 +59,7 @@
         @include flex_col(3rem);
       }
       @include media("<=phone-tab"){
-        @include flex_col(2.5rem);
+        @include flex_col(2.8rem);
       }
       h1 {
         -webkit-text-stroke: 1px $light-txt;
@@ -82,7 +82,7 @@
         @include flex_col(3rem);
         color: $light-txt-1;
         @include media("<=phone-tab"){
-          @include flex_col(1.5rem);
+          @include flex_col(2rem);
         }
         p{
           @include media("<=tablet"){
@@ -133,6 +133,15 @@
     
   }
 }
+.play_mobile{
+  display: none;
+  @include media("<=tablet"){
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 10rem;
+  }
+}
 .play_btn{
   @include media("<=tablet"){
     display: none;
@@ -174,11 +183,9 @@
   z-index: 20;
   video{
      width: 100%;
-     position: sticky;
-     top: 0;
      height: 100%;
      outline: none;
-     
+     backdrop-filter: blur(10px);
   }
 }
 .view{
