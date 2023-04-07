@@ -90,7 +90,7 @@ export const smallBusinesSolutions = [
         <div className={imgClassWrapper1}>
           <StaticImage
             className={imgClass}
-            src="../../../../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
+            src="../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
             alt="Image 1"
           />
         </div>
@@ -98,7 +98,7 @@ export const smallBusinesSolutions = [
           <StaticImage
             height={299}
             className={imgClass}
-            src="../../../../assets/images/jpegs/homepage/max-features/max-payment.jpg"
+            src="../assets/images/jpegs/homepage/max-features/max-payment.jpg"
             alt="Image 2"
           />
         </div>
@@ -106,7 +106,7 @@ export const smallBusinesSolutions = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../../../../assets/images/jpegs/homepage/max-features/salon-business.jpg"
+            src="../assets/images/jpegs/homepage/max-features/salon-business.jpg"
             alt="Image 3"
           />
         </div>
@@ -158,7 +158,7 @@ export const smallBusinesSolutions = [
         <div className={imgClassWrapper1}>
           <StaticImage
             className={imgClass}
-            src="../../../../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
+            src="../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
             alt="Image 1"
           />
         </div>
@@ -166,7 +166,7 @@ export const smallBusinesSolutions = [
           <StaticImage
             height={299}
             className={imgClass}
-            src="../../../../assets/images/jpegs/homepage/max-features/max-payment.jpg"
+            src="../assets/images/jpegs/homepage/max-features/max-payment.jpg"
             alt="Image 2"
           />
         </div>
@@ -174,7 +174,7 @@ export const smallBusinesSolutions = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../../../../assets/images/jpegs/homepage/max-features/salon-business.jpg"
+            src="../assets/images/jpegs/homepage/max-features/salon-business.jpg"
             alt="Image 3"
           />
         </div>
@@ -193,7 +193,7 @@ export const smallBusinesSolutions = [
         <div className={imgClassWrapper1}>
           <StaticImage
             className={imgClass}
-            src="../../../../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
+            src="../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
             alt="Image 1"
           />
         </div>
@@ -201,7 +201,7 @@ export const smallBusinesSolutions = [
           <StaticImage
             height={299}
             className={imgClass}
-            src="../../../../assets/images/jpegs/homepage/max-features/max-payment.jpg"
+            src="../assets/images/jpegs/homepage/max-features/max-payment.jpg"
             alt="Image 2"
           />
         </div>
@@ -209,7 +209,7 @@ export const smallBusinesSolutions = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../../../../assets/images/jpegs/homepage/max-features/salon-business.jpg"
+            src="../assets/images/jpegs/homepage/max-features/salon-business.jpg"
             alt="Image 3"
           />
         </div>
