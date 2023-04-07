@@ -48,7 +48,7 @@ const Slider = ({ slides }) => {
           </Swiper>
         </div>
       </div>
-      <div className="grid gap-5 md:hidden">
+      <div className="grid gap-10 md:hidden">
         {slides.map(item => (
           <SliderCard
             heading={item.heading}
@@ -142,7 +142,7 @@ const controlButtonStyle = ctl(`
   lg:p-[15px]
   p-[6px]
   border
-  border-black
+  border-n-grey3
   hover:bg-secondary-100
 `);
 

@@ -20,7 +20,7 @@ const IndexPage = () => {
         <HomepageFeatures
           title={
             <>
-              Build your business with <Br on="desktop" /> our tools
+              Build your business with <Br on="all" /> our tools
             </>
           }
         />

@@ -29,10 +29,6 @@
   ],
   "Business Types": [
     {
-      "title": "Mobile Money Agents",
-      "link": { "to": "/business/agents" }
-    },
-    {
       "title": "Small Business",
       "link": { "to": "/business/small" }
     },

@@ -1,18 +1,23 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import ctl from "@netlify/classnames-template-literals";
-import { Ntext, Br, ReadMore, Container } from "components";
+import { Ntext, Br, ReadMore, Container, SectionHeader } from "components";
+import Add from "svgs/n-icons/add.svg";
+import Minus from "svgs/n-icons/minus.svg";
 import { businessTypesData } from "config/home";
 import { useState } from "react";
+
 function BusinessTypes() {
   const [activeType, setActiveType] = useState(businessTypesData[0]);
   return (
     <Container className={wrapperFeature}>
-      <Ntext variant="h3" color="c-dark" className="text-left">
-        Built to simplify any business <Br on="all" />
-        type and size
-      </Ntext>
-      <div className="flex flex-row justify-between mt-[50px] md:mt-[100px]">
+      <SectionHeader className="!text-left">
+        <Ntext variant="h2">
+          Built to simplify any <Br on="mobile" /> business <Br on="desktop" />
+          type and size
+        </Ntext>
+      </SectionHeader>
+      <div className="md:flex hidden flex-row justify-between ">
         <div className="md:basis-1/2 flex flex-col gap-10 md:max-w-[514px]">
           {businessTypesData.map((b, i) => (
             <div className="" onMouseEnter={() => setActiveType(b)}>
@@ -23,10 +28,9 @@ function BusinessTypes() {
                 variant="text5"
                 href={b.link}
               />
-              <div className="md:hidden">{b.images}</div>
               {/* sub text */}
               <div className="mt-4">
-                <Ntext variant="text3" className="c-0 cursor-pointer">
+                <Ntext variant="text4lite" className="c-0 cursor-pointer">
                   {b.description}
                 </Ntext>
               </div>
@@ -39,46 +43,61 @@ function BusinessTypes() {
           {activeType.images}​
         </div>
       </div>
+
+      <div className="block md:hidden mb-4">
+        <BusinessTypeMobile types={businessTypesData} />
+      </div>
     </Container>
   );
 }
+function ItemType({ data }) {
+  const [isOpen, setIsOpen] = useState(false);
 
-const gridWrapper = ctl(`
-grid
-grid-cols-6
-m-0
-gap-4
-`);
+  function toggleOpen() {
+    setIsOpen(!isOpen);
+  }
 
-const imgClassWrapper1 = ctl(`
-col-start-1
-col-end-7
-`);
+  return (
+    <li className="py-5 border-b border-n-grey1">
+      <div
+        className=" flex flex-row justify-between cursor-pointer items-center"
+        onClick={toggleOpen}
+      >
+        <Ntext variant="text5" color="n-dark">
+          {" "}
+          {data.title}{" "}
+        </Ntext>
+        {isOpen ? <Minus /> : <Add />}
+      </div>
+      <div
+        className={`transition-all duration-500 ease-out ${
+          isOpen ? "" : "hidden"
+        }`}
+      >
+        <div className="mt-5">{data.images}</div>
+        <div className="mt-4">
+          <Ntext variant="text4lite" className="c-0 cursor-pointer">
+            {data.description}
+          </Ntext>
+        </div>
+      </div>
+    </li>
+  );
+}
 
-const imgClassWrapper2 = ctl(`
-col-start-1 
-col-end-3
-`);
-
-const imgClassWrapper3 = ctl(`
-col-end-7 
-col-span-4 
-shadow-md 
-rounded-md
-`);
-
-const imgClass = ctl(`
-scroll-smooth
-shadow-md 
-rounded-l-md 
-w-full 
-h-full
-`);
+function BusinessTypeMobile({ types }) {
+  return (
+    <ul className="s">
+      {types.map((item, index) => (
+        <ItemType key={index} data={item} />
+      ))}
+    </ul>
+  );
+}
 
 const wrapperFeature = ctl(`
 relative
-md:mt-[113px]
-mt-[80px]
+
 md:mb-[150px]
 justify-start
 text-left

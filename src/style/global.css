@@ -15,12 +15,15 @@
   .slider-margin-left {
     margin-left: calc((100% - 1320px) / 2);
   }
+
   .slider-margin-right {
     margin-right: calc((100% - 1320px) / 2);
   }
+
   .slider-padding-right {
     padding-right: calc((100% - 1320px) / 2);
   }
+
   .slider-padding-left {
     padding-left: calc((100% - 1320px) / 2);
   }
@@ -165,5 +168,5 @@ dt {
 
 .swiper-pagination-progressbar.swiper-pagination-horizontal {
   height: 0.5px !important;
-  @apply !bg-n-grey2;
+  @apply !bg-n-grey3;
 }

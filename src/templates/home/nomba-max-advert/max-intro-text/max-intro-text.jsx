@@ -7,15 +7,15 @@ export default function ProIntroText() {
     <div className={textSection}>
       {/* main text */}
       <div className="mb-[20px] flex items-baseline justify-center text-center">
-        <Ntext variant="text8" color="c-dark">
+        <Ntext variant="h2" color="c-dark">
           Introducing Nomba&nbsp;
         </Ntext>
-        <Max className="h-[18px] w-[80px] md:w-[124px] md:h-[34px]" />
+        <Max className="h-[22px] w-[80px] md:w-[124px] md:h-[34px]" />
       </div>
 
       {/* sub text */}
       <div>
-        <Ntext variant="text3" className="c-0">
+        <Ntext variant="text3" color="primary-900">
           Transform the way you do business with the power of Nomba MAX. this
           device has faster
           <Br on="desktop" />

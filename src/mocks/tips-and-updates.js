@@ -3,15 +3,14 @@ import React from "react";
 
 export const tipsAndUpdatesList = [
   {
-    title:
-      "Nigeria’s Kudi, Changes Name to Nomba and Strengthens Expansion Plans With New Strategic Hires",
-    date: "April 2022",
+    title: '"I\'m Fulfilled" | Nomba Partner of The year',
+    date: "MARCH, 2023",
     link: {
       href: {
-        url:
-          "https://medium.com/@nombastories/nigerias-kudi-changes-name-to-nomba-and-strengthens-expansion-plans-with-new-strategic-hires-1d879ef41f8a",
+        url: "https://youtu.be/MmfXoYWLu2M",
       },
     },
+    isVideo: true,
     picture: (
       <StaticImage
         height={750}
@@ -34,18 +33,18 @@ export const tipsAndUpdatesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/homepage/tips-updates/image2.png"
+        src="../assets/images/jpegs/homepage/tips-updates/conference.jpeg"
         alt="Conference hall"
       />
     ),
   },
   {
-    title: "Kudi, Organically Growing a Safe Place for All Employees To Thrive",
-    date: "March 2022",
+    title: "Growing the Numbers with Crossfit Jagun",
+    date: "March 2023",
+    isVideo: true,
     link: {
       href: {
-        url:
-          "https://medium.com/@nombastories/kudi-organically-growing-a-safe-place-for-all-employees-to-thrive-84e4540b635f",
+        url: "https://youtu.be/ECbL-gIMX9U",
       },
     },
     picture: (
@@ -69,7 +68,7 @@ export const tipsAndUpdatesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/homepage/tips-updates/image4.png"
+        src="../assets/images/jpegs/homepage/tips-updates/big-reveal.png"
         alt="Nomba big reveal"
       />
     ),

@@ -4,7 +4,7 @@ import { Ntext, ReadMore } from "components";
 
 const SliderCard = ({ image, heading, text, caseStudy, link }) => {
   return (
-    <div className="border shadow-lg hover:shadow-xl h-full rounded-lg md:my-10 my-3">
+    <div className=" shadow-lg hover:shadow-xl h-full rounded-lg md:my-10 my-3">
       <div className={imageStyle}>{image}</div>
 
       <div className={sliderCardWrapStyle}>

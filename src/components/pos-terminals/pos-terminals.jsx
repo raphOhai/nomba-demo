@@ -6,7 +6,7 @@ import { posCardData } from "config/nomba-terminals";
 
 const POSTerminals = ({ title }) => {
   return (
-    <section className="">
+    <section className="bg-primary-100 pb-[80px]">
       <Container>
         {title && (
           <SectionHeader>

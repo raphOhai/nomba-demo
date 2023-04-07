@@ -1,5 +1,9 @@
 import React from "react";
 
+import Visa from "assets/images/svgs/visa.svg";
+import Master from "assets/images/svgs/master.svg";
+import Wifi from "assets/images/svgs/wifi.svg";
+import Verve from "assets/images/svgs/verve.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 const image = (
@@ -16,6 +20,7 @@ export const posCardData = [
     device: {
       name: "Nomba Lite",
       price: "₦15,000",
+      type: "lite",
     },
 
     features: "Accept all Bank Cards, Connects to WiFi",
@@ -28,6 +33,11 @@ export const posCardData = [
         alt="Nomba Lite"
       />
     ),
+    icons: [
+      <Visa key="visacard" />,
+      <Master key="mastercard" />,
+      <Wifi key="wifi" />,
+    ],
     link: { to: "/" },
   },
   {
@@ -35,6 +45,7 @@ export const posCardData = [
     device: {
       name: "Nomba Pro",
       price: "₦25,000",
+      type: "pro",
     },
 
     features:
@@ -49,12 +60,25 @@ export const posCardData = [
       />
     ),
     link: { to: "/" },
+    icons: [
+      <Visa key="visacard" />,
+      <Master key="mastercard" />,
+      <Wifi key="wifi" />,
+      <StaticImage
+        src="../assets/images/verve.png"
+        width={37.5}
+        height={11.4}
+        alt="Verve"
+        key="verve"
+      />,
+    ],
   },
   {
     isMax: true,
     device: {
       name: "Nomba MAX",
       price: null,
+      type: "max",
     },
 
     features:

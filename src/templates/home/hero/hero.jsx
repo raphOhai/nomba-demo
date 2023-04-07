@@ -12,7 +12,7 @@ const HomepageHero = ({ title, description, images }) => {
       <Container>
         <div className={heroTextWrapperStyle}>
           <div className={heroTextHeaders}>
-            <Ntext variant="h1" color="primary-1000" className="basis-2/3">
+            <Ntext variant="h1" color="primary-1000" className="basis-3/5">
               {title}
             </Ntext>
 
@@ -77,7 +77,7 @@ mb-10
 const subTextStyle = ctl(`
 mb-8
 mt-6
-basis-1/3
+basis-2/5
 `);
 
 const imageWrapperStyle = ctl(`

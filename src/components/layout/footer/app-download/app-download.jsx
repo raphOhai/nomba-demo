@@ -1,7 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
-import { Ntext, Container } from "components";
+import { Ntext, Container, Br } from "components";
 import AppStore from "svgs/apple.svg";
 import PlayStore from "svgs/playstore.svg";
 import SubFooterLeft from "svgs/subfooter-left.svg";
@@ -16,8 +16,8 @@ const AppDownload = () => {
         <div className={pageInnerWrapStyle}>
           <div className={textWrapStyle}>
             <Ntext variant="h2" color="primary-100" className={headingStyle}>
-              Get a free <br className="lg:hidden" />
-              <span className="text-secondary">Nomba</span> account
+              Get a free <span className="text-secondary">Nomba</span>
+              <Br on="mobile" /> account
             </Ntext>
 
             <Ntext
@@ -66,6 +66,8 @@ const textWrapStyle = ctl(`
 `);
 const subFooterLeftImage = ctl(`
   absolute 
+  hidden
+  md:block
   lg:-top-10 
   xl:-top-0 
 `);
@@ -74,7 +76,7 @@ const headingStyle = ctl(`
   justify-center
   text-center
   min-w-max
-  mt-[114px]
+
   lg:mt-0
 `);
 const subfooterParagraphStyle = ctl(`

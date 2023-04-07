@@ -76,16 +76,16 @@ const variants = {
     font-bold 
     `,
   h2: `
-    md:text-[49px]
-    text-[28px]
+    md:text-[48px]
+    text-[32px]
     md:leading-[59.04px]
     leading-[39.2px]
-    font-semibold 
+    font-bold 
     `,
 
   h3: `
-    md:text-[37px]
-    text-[21px]
+    md:text-[40px]
+    text-[32px]
     md:leading-[46.87px]
     leading-[29.4px]
     font-semibold 
@@ -156,6 +156,13 @@ const variants = {
     font-[400]
     `,
   text3: `
+    text-[14px]
+    leading-[22px]
+    md:text-[16px]
+    md:leading-[24px]
+    font-[400]
+    `,
+  text4lite: `
     text-[14px]
     leading-[22px]
     md:text-[16px]
@@ -269,6 +276,7 @@ const validElements = [
   "text1",
   "text2",
   "text3",
+  "text4lite",
   "text4",
   "text5",
   "text6",

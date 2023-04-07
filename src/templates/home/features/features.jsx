@@ -10,7 +10,7 @@ const HomepageFeatures = ({ title }) => {
       <Container>
         {title && (
           <SectionHeader className="!text-left !-mr-2">
-            <Ntext variant="h3">{title}</Ntext>
+            <Ntext variant="h2">{title}</Ntext>
           </SectionHeader>
         )}
       </Container>
