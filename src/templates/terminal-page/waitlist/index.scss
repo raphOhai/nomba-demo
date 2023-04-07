@@ -21,6 +21,9 @@
             @include media("<=tablet"){
                 @include flex_col(2rem);
             }
+            @include media("<=phone-tab"){
+                @include flex_col(20px);
+            }
             input{
                 background: $bl-100;
                 border-radius: .2rem;

@@ -218,8 +218,9 @@
   margin: 0 auto;
   @include media("<=phone-tab"){
      width: 100%;
-     transform: scale(2.5) translateX(-8rem);
+     transform: scale(2.3) translateX(-8rem);
      gap: .5rem;
+     padding-top: 3.5rem;
   }
   
 }
