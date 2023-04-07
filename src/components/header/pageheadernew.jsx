@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Ntext, Button, Container } from "components";
-
+import { HeroSlider } from "templates";
 import ctl from "@netlify/classnames-template-literals";
 
 import constants from "config/constants.json";
@@ -18,7 +18,7 @@ const PageHeaderNew = ({
   return (
     <Container>
       <section className={pageHeaderWrapperStyle}>
-        <div>
+        <div className="mb-[50px] md:mb-0">
           <Ntext
             variant="h1"
             className="max-w-[655px]"
@@ -32,11 +32,14 @@ const PageHeaderNew = ({
           />
           <Button {...link} text={pageHeaderButtonText} size="medium" />
         </div>
-        <div className={imageWrapperStyle}>
-          <div className={imageStyle}>{image[0]}</div>
+        <div className="max-w-[633px] relative hidden md:flex min-h-[600px]">
+          <div className="">
+            <div className={imageStyle}>{image[0]}</div>
+          </div>
+          <div className={imageOverlayStyle}>{image[1]}</div>
         </div>
-        <div className={imageOverlayStyle}>{image[1]}</div>
       </section>
+      <HeroSlider images={image} className="md:hidden" />
     </Container>
   );
 };
@@ -47,26 +50,19 @@ xl:pt-[150px]
 lg:pt-[120px]
 sm:pt-[160px]
 pt-[120px]
-grid
-xl:grid-cols-2
+flex flex-row
 gap-[40px]
-mb-[-50px]
-md:pb-[50px]
+md:pb-[100px]
 `);
 
 const subTextStyle = ctl(`
 max-w-[490px] 
 my-6
 `);
-const imageWrapperStyle = ctl(`
-w-full 
-flex
-sm:justify-end
-`);
 
 const imageStyle = ctl(`
 xl:mt-0
-lg:-mt-[400px]
+
 xl:mr-[104px]
 lg:mr-none
 relative
@@ -82,15 +78,16 @@ z-10
 
 const imageOverlayStyle = ctl(`
 absolute
-xl:right-[calc(100%-92rem)]
-lg:right-[calc(100%-78rem)]
+xl:right-0
+lg:right-0
 xl:h-max
 hidden
 lg:flex
 lg:w-[450px]
 shadow-md
 xl:w-max
-top-[213px]
+xl:top-[83px]
+lg:top-0
 rounded-lg
 transition-all
 `);

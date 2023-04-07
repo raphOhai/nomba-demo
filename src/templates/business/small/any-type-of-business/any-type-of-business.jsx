@@ -49,7 +49,7 @@ const TabBody = ({ data }) => {
     <div>
       <SectionHeader className={sectionHeadeWrapper}>
         <div className={textSectionWrapper}>
-          <Ntext variant="h3" className="">
+          <Ntext variant="text6" color="primary">
             {data.headline}
           </Ntext>
           <Ntext
@@ -81,13 +81,13 @@ pb-16
 const buttonTabStyle = ctl(`
 text-gray-900
 whitespace-nowrap
-px-5 py-4 
+px-1 py-4 
 text-base
 font-medium
 `);
 
 const tabMenuWrapper = ctl(`
--mb-px flex border-gray-5 flex-nowrap scrollbar-hide overflow-auto border-b  justify-start
+-mb-px flex gap-12 border-gray-5 items-start flex-nowrap scrollbar-hide overflow-auto border-b  justify-start
 `);
 
 const sectionHeadeWrapper = ctl(`

@@ -4,7 +4,7 @@ import { Ntext, ReadMore } from "components";
 
 const SliderCard = ({ image, heading, text, caseStudy, link }) => {
   return (
-    <div className=" shadow-lg hover:shadow-xl h-full rounded-lg md:my-10 my-3">
+    <div className=" shadow-lg hover:shadow-xl h-full rounded-lg bg-primary-100 ">
       <div className={imageStyle}>{image}</div>
 
       <div className={sliderCardWrapStyle}>
@@ -40,7 +40,7 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
             </div>
           </>
         ) : (
-          <div className="flex flex-col justify-between gap-4 pt-8   md:py-8">
+          <div className="flex flex-col justify-between gap-4 pt-8 py-8  md:py-8">
             <Ntext variant="text5" className="" value={heading} />
 
             <Ntext variant="text3" value={text} className="" />

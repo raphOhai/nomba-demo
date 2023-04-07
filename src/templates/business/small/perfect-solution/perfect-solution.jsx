@@ -9,7 +9,8 @@ const PerfectSolutions = () => {
       <Container>
         <SectionHeader className="!text-left">
           <Ntext variant="text7" color="primary-100">
-            Perfect solution built for Mobile <Br />
+            Perfect solution built for <Br on="mobile" /> Mobile{" "}
+            <Br on="desktop" />
             Money Agents
           </Ntext>
         </SectionHeader>
@@ -39,7 +40,6 @@ const optionsListStyle = ctl(`
 grid
 grid-cols-1
 md:grid-cols-2
-
 `);
 const subFooterRightImage = ctl(`
   absolute 

@@ -9,7 +9,7 @@ const EasySolutionsForSmallBusiness = () => {
     <section className="bg-primary-200">
       <Container>
         <div className={businessWrapperStyle}>
-          <SectionHeader className="!text-left">
+          <SectionHeader className="!text-left md:!pt-[10px] !pt-[38px]">
             <Ntext variant="h3">
               Easy solutions for your
               <Br on="desktop" />

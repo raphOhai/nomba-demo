@@ -9,10 +9,10 @@ const Paralax = () => {
   return (
     <section className={parallaxWrapper}>
       <div className={parallaxBlankWrapper}>
-        <div className="max-w-[946px] text-center gap-10">
+        <div className="max-w-[946px] text-center gap-10 px-5 ">
           <Ntext variant="h3" color="primary-100" className="mb-12">
             Get better with your <Br on="mobile" /> business and become
-            <Br on="desktop" />a Nomba Agent today
+            <Br on="all" /> a Nomba Agent today
           </Ntext>
           <Button
             link={{ href: { url: SIGNUP_URL } }}

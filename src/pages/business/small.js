@@ -10,6 +10,7 @@ import {
   SmallBusinessInfoGridSection,
   PerfectSolutions,
 } from "templates/business/small";
+import { HomepageTipsAndUpdate } from "templates";
 import { Testimonial } from "components";
 import { SmallBusinessTestimonials } from "config/testimonials";
 
@@ -28,7 +29,7 @@ const SmallBusiness = () => {
           headingText="Hear what business partners have to say"
         />
       </div>
-      <SmallBusinessInfoGridSection />
+      <HomepageTipsAndUpdate />
     </Layout>
   );
 };

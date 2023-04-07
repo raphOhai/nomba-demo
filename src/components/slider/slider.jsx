@@ -38,7 +38,7 @@ const Slider = ({ slides }) => {
               type: "progressbar",
               el: ".pagination-class",
             }}
-            className=" "
+            className=" !overflow-x-clip !overflow-visible"
             loop={true}
             spaceBetween={24}
             slidesPerView={1}
@@ -48,7 +48,7 @@ const Slider = ({ slides }) => {
           </Swiper>
         </div>
       </div>
-      <div className="grid gap-10 md:hidden">
+      <div className="grid gap-10 md:hidden pb-5">
         {slides.map(item => (
           <SliderCard
             heading={item.heading}

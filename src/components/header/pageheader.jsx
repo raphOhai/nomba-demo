@@ -14,6 +14,7 @@ const PageHeader = ({
   pageHeaderButtonText,
   image,
   link,
+  children,
 }) => {
   return (
     <Container>
@@ -31,16 +32,10 @@ const PageHeader = ({
             className={subTextStyle}
           />
           <Button {...link} text={pageHeaderButtonText} size="medium" />
+          {children}
         </div>
         <div className={imageWrapperStyle}>
-          <div
-            className={imageStyle}
-            style={{
-              clipPath: "polygon(64% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-            }}
-          >
-            {image}
-          </div>
+          <div className={imageStyle}>{image}</div>
         </div>
       </section>
     </Container>
