@@ -92,6 +92,7 @@
             max-width:55%;   
             flex-shrink: 0 0;       
             @include flex_col(2rem);
+            align-items: flex-start;
             transform: translateX(0rem);
             @include media("<=tablet"){
                 max-width: 100%;   
@@ -102,10 +103,11 @@
                     width: 100%;   
                 }
             }
-            .cta{
+            .ctau{
                 color: $yellow;
+                width: 30%;
+                @include flex(flex-start,center,0rem);
                 font-size: inherit;
-                @include flex(space-between,center,0rem);
             }
         }
     }

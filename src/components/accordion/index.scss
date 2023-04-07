@@ -20,13 +20,13 @@
             font-size: toRem(18);
         }
         &_toggleView{
-            padding: .8rem .5rem;
+            padding: .7rem .4rem;
             border-radius:50%;
             border:1px solid #ebecf0 ;
     span {
-        height: 0.05rem;
+        height: 0.04rem;
         display: block;
-        width: 0.9rem;
+        width: 0.7rem;
         background: white;
         transition: 0.3s ease-in-out;
         &:nth-child(2) {

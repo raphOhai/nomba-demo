@@ -1,54 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "components/button";
 import { Br } from "components";
 import heroGif from "assets/images/svgs/terminal/hero.mp4";
 import "./index.scss";
 import Play from "assets/images/svgs/terminal/play.svg";
 import gsap from "gsap";
+import HeroVid from "assets/images/svgs/terminal/video.mp4";
 import { StaticImage } from "gatsby-plugin-image";
-<StaticImage />;
 
 const TerminalHero = () => {
-  // useEffect(() => {
-  //   const win = document.querySelector('.terminal_hero');
-  //   gsap.set(".play_btn", { xPercent: -50, yPercent: -50 });
+  const hero_vid = useRef(null);
+  const [playVideo, setPlayVid] = useState(false);
+  useEffect(() => {
+    window.addEventListener("mousemove", e => {
+      xTo(e.clientX - 250);
+      yTo(e.clientY - 150);
+    });
 
-  //   let xTo = gsap.quickTo(".play_btn", "x", { duration: 0.6, ease: "power3" }),
-  //     yTo = gsap.quickTo(".play_btn", "y", { duration: 0.6, ease: "power3" });
-
-  //   win.addEventListener("mousemove", e => {
-  //     xTo(e.clientX);
-  //     yTo(e.clientY);
-  //   });
-  // });
-
-  // const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  // const handleMouseMove = (e) => {
-  //   const x = e.clientX;
-  //   const y = e.clientY;
-  //   setPosition({ x, y });
-  // };
-
-  // const getTransformStyle = () => {
-
-  //   const newX = lerp * (position.x - window.innerWidth / 4);
-  //   const newY = lerp * (position.y - window.innerHeight /4);
-  //   return `translate3d(${newX}px, ${newY}px, 0)`;
-  // };
+    gsap.set(".play_btn", { xPercent: -50, yPercent: -50 });
+    let xTo = gsap.quickTo(".play_btn", "x", { duration: 0.3, delay: 0.2, ease: "power3" }),
+      yTo = gsap.quickTo(".play_btn", "y", { duration: 0.3, delay: 0.2, ease: "power3" });
+  });
 
   const playVid = () => {
-    console.log("vid");
+    setPlayVid(!playVideo);
+    // const videoWrap = document.querySelector(".hero_video_pl");
+    // videoWrap.classList.toggle("view");
+    hero_vid.current.play();
   };
   return (
     <>
+      <div className="hero_video_pl">
+        <video ref={hero_vid} controls src={HeroVid}></video>
+      </div>
       <div className="terminal_hero">
-        <div className="terminal_hero_video">
-          <video loop autoPlay muted src={heroGif}></video>
+        {playVideo ? (
+          <div className="terminal_hero_video">
+            <video loop autoPlay muted src={heroGif}></video>
+          </div>
+        ) : null}
+        <div onClick={playVid} className="play_btn">
+          {playVideo ? (
+            <div className="close_vid">
+              <span></span>
+              <span></span>
+            </div>
+          ) : (
+            <Play />
+          )}
         </div>
-        {/* <div onClick={playVid} className="play_btn">
-          <Play />
-        </div> */}
         <div className="terminal_hero_sect">
           <div className="terminal_hero_sect_txt">
             <div className="terminal_hero_sect_txt_l">

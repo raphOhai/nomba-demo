@@ -3,8 +3,10 @@ import "./index.scss";
 const AccordionTerminal = props => {
   const { data } = props;
   const [isActive, setActive] = useState(false);
+  const [count, setCounter] = useState(null);
 
   const showAccordionText = () => {
+    setCounter(data.id);
     setActive(!isActive);
   };
 
