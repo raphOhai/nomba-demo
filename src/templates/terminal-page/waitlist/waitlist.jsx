@@ -4,7 +4,7 @@ import { Button, NLink } from "components";
 function Waitlist() {
   return (
     <>
-      <div className="d_waitlist">
+      <div className="d_waitlist" id="waitlist">
         <div className="d_waitlist_tr text-center">
           <h1 data-animation="h">Get better, Get Nomba MAX!</h1>
           <p data-animation="p" className="mg_au">

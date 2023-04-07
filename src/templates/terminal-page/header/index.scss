@@ -12,12 +12,16 @@
   }
   .cta{
     display: none;
+   >div{
+   
     color: $yellow;
    p{
     font-size: .99rem;
    }
-    @include media("<=tablet"){
-      @include flex(space-between,center,.5rem);
-    }
+    
+   }
+   @include media("<=tablet"){
+    @include flex(space-between,center,.5rem);
+  }
 }
 }

@@ -119,8 +119,10 @@
                 }
             }
             .cta{
-                color: $yellow;
-                @include flex(space-between,center,1rem);
+               div{
+                 color: $yellow;
+                 @include flex(space-between,center,1rem);
+               }
               }
         }
     }
