@@ -5,11 +5,6 @@
         @include flex_col(3.5rem);
    }
     h1{
-        width: 60%;
-        margin: 0 auto;
-        @include media("<=tablet"){
-            width: 100%;
-        }
         @include media("<=phone-tab") {
             font-size: toRem(34) !important;
             line-height: 2.5rem;
@@ -23,6 +18,13 @@
         align-items: center;
         position: relative;
         min-height:100vh;
+        h1{
+            width: 60%;
+            margin: 0 auto;
+            @include media("<=tablet"){
+                width: 100%;
+            }
+        }
         @include media("<=phone-tab"){
             min-height:50vh;
        }

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "style/terminal-page/main.scss";
-// import "loconative-scroll/dist/loconative-scroll.css";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import {
@@ -20,10 +19,10 @@ const TerminalPage = () => {
   useEffect(() => {
     split();
 
-    // new LoconativeScroll({
-    //   smooth: true,
-    //   el: document.querySelector("[data-scroll-container]"),
-    // });
+    new LoconativeScroll({
+      smooth: true,
+      el: document.querySelector("[data-scroll-container]"),
+    });
   });
   return (
     <div className="terminal_wrap" data-scroll-container>
