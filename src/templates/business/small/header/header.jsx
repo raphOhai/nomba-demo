@@ -4,8 +4,8 @@ import { heroImage } from "config/small-business";
 const SmallPageHeader = () => {
   return (
     <PageHeaderNew
-      pageHeaderText="Increase payment options for your growing business"
-      pageHeaderSubText="Manage your growing business and accept payments with creative tools"
+      pageHeaderText="Improve payment options for your growing business"
+      pageHeaderSubText="Accept, confirm and get instant settlement for your business' payments"
       pageHeaderButtonText="Grow your business"
       image={heroImage}
     />

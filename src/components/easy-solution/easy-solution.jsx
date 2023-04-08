@@ -1,29 +1,24 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
+import PropTypes from "prop-types";
+import { Ntext, SectionHeader, SliderCard, Container } from "components";
 
-import { Br, Ntext, SectionHeader, SliderCard, Container } from "components";
-
-import { easySolutionsForSmallBusiness } from "config/slider";
-const EasySolutionsForSmallBusiness = () => {
+const EasySolution = ({ title, description, data }) => {
   return (
     <section className="bg-primary-200">
       <Container>
         <div className={businessWrapperStyle}>
           <SectionHeader className="!text-left md:!pt-[10px] !pt-[38px]">
-            <Ntext variant="h3">
-              Easy solutions for your
-              <Br on="desktop" />
-              small businesses
-            </Ntext>
+            <Ntext variant="h3">{title}</Ntext>
             <Ntext
-              value="Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every "
+              value={description}
               variant="p18"
               className="mt-4 max-w-[533px]"
               color="n-grey6"
             />
           </SectionHeader>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-16">
-            {easySolutionsForSmallBusiness.map((item, i) => (
+            {data.map((item, i) => (
               <SliderCard
                 key={i}
                 heading={item.heading}
@@ -45,4 +40,9 @@ const businessWrapperStyle = ctl(`
 md:pb-20
 pb-16
 `);
-export { EasySolutionsForSmallBusiness };
+EasySolution.propTypes = {
+  title: PropTypes.node,
+  data: PropTypes.object,
+  description: PropTypes.string,
+};
+export { EasySolution };

@@ -73,6 +73,7 @@ module.exports = {
           grey4: "#717171",
           grey5: "#555555",
           grey6: "#383838",
+          grey7: "#828282",
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",

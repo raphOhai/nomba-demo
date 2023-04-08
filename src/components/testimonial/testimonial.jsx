@@ -27,7 +27,7 @@ const Testimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <div className=" bg-primary">
+    <div className="pb-10 bg-primary">
       <Container>
         <SectionHeader className="!text-left">
           <Ntext
@@ -54,7 +54,6 @@ const Testimonial = ({ testimonials, headingText }) => {
 
 const headingTextStyle = ctl(`
   md:max-w-[593px] 
-  max-w-[238px] 
   mb-[62px]
 `);
 

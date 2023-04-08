@@ -3,24 +3,43 @@ import React from "react";
 import Layout from "components/layout";
 import {
   GrowingYourSales,
-  EasySolutionsForSmallBusiness,
-  AnyTypeOfBusiness,
   Paralax,
   SmallPageHeader,
-  SmallBusinessInfoGridSection,
   PerfectSolutions,
 } from "templates/business/small";
+import { EasySolution } from "components/easy-solution";
+import { AnyTypeOfBusiness } from "components/any-type-of-business";
 import { HomepageTipsAndUpdate } from "templates";
-import { Testimonial } from "components";
+import { Testimonial, Br } from "components";
 import { SmallBusinessTestimonials } from "config/testimonials";
-
+import { smallBusinesSolutions } from "config/small-business";
+import { easySolutionsForSmallBusiness } from "config/slider";
 const SmallBusiness = () => {
   return (
     <Layout title="Small Business">
       <SmallPageHeader />
       <GrowingYourSales />
-      <EasySolutionsForSmallBusiness />
-      <AnyTypeOfBusiness />
+      <EasySolution
+        title={
+          <>
+            Easy solutions for your
+            <Br on="desktop" />
+            small businesses
+          </>
+        }
+        description="Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every"
+        data={easySolutionsForSmallBusiness}
+      />
+      <AnyTypeOfBusiness
+        title={
+          <>
+            Solution built for any type
+            <Br on="desktop" />
+            of business model
+          </>
+        }
+        data={smallBusinesSolutions[0]}
+      />
       <PerfectSolutions />
       <Paralax />
       <div className="">

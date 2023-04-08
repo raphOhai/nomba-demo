@@ -1,6 +1,6 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { Br, Container, Button, Ntext, SectionHeader } from "components";
+import { Br, Button, Ntext } from "components";
 import constants from "config/constants.json";
 
 const { SIGNUP_URL } = constants;

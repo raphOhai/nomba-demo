@@ -1,28 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
-import { Br, Ntext, SectionHeader, Container } from "components";
+import { Ntext, SectionHeader, Container } from "components";
 import { useState } from "react";
-import { smallBusinesSolutions } from "config/small-business";
-const AnyTypeOfBusiness = () => {
-  const [activeSolution, setActiveSolution] = useState(
-    smallBusinesSolutions[0]
-  );
+const AnyTypeOfBusiness = ({ title, data }) => {
+  const [activeSolution, setActiveSolution] = useState(data[0]);
   return (
     <Container className="bg-white">
       <div className={businessWrapperStyle}>
         <SectionHeader className="!text-left">
-          <Ntext variant="h3">
-            Solution built for any type
-            <Br on="desktop" />
-            of business model
-          </Ntext>
+          <Ntext variant="h3">{title}</Ntext>
         </SectionHeader>
         <div className="w-full bg-white pb-12 ">
           <div className="mt-2">
             <div className="">
               <div className={tabMenuWrapper}>
-                {smallBusinesSolutions.map((s, i) => (
+                {data.map((s, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveSolution(s)}
@@ -71,7 +64,7 @@ const TabBody = ({ data }) => {
 };
 
 const isActive = (a, b) =>
-  a === b ? ctl(`border-b-4 border-n-yellow`) : ctl(``);
+  a === b ? ctl(`border-b-4 border-n-yellow`) : ctl(`text-n-grey7`);
 
 const businessWrapperStyle = ctl(`
 md:pb-20
@@ -83,7 +76,9 @@ text-gray-900
 whitespace-nowrap
 px-1 py-4 
 text-base
-font-medium
+font-normal
+transition-all
+duration-300
 `);
 
 const tabMenuWrapper = ctl(`
@@ -91,7 +86,7 @@ const tabMenuWrapper = ctl(`
 `);
 
 const sectionHeadeWrapper = ctl(`
-!text-left gap-4 md:gap-6 flex flex-col-reverse md:flex-row md:items-center
+!text-left gap-4 md:gap-6 flex flex-col-reverse md:flex-row md:items-center transition-all durration-300
 `);
 
 const textSectionWrapper = ctl(`
@@ -99,5 +94,10 @@ flex flex-col md:h-[345px] justify-between xl:gap-10 lg:gap-7 md:gap-5 gap-4 bas
 `);
 TabBody.propTypes = {
   body: PropTypes.object,
+};
+
+AnyTypeOfBusiness.propTypes = {
+  title: PropTypes.node,
+  data: PropTypes.object,
 };
 export { AnyTypeOfBusiness };
