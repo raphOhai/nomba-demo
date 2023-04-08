@@ -76,7 +76,7 @@ const TerminalHero = () => {
                 <StaticImage alt="" src="../../../assets/images/svgs/terminal/max.png" />
               </div>
             </div>
-            <div className="terminal_hero_sect_txt_r">
+            <div className={`terminal_hero_sect_txt_r ${playVideo && "off"}`}>
               <p data-animation="p">
                 Built to maximise your business growth and efficiency through cutting-edge payment solutions.
               </p>
