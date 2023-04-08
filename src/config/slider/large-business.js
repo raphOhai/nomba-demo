@@ -184,37 +184,5 @@ const easySolutionsForLargeBusiness = [
       href: "/business/large",
     },
   },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
-        className={imageStyle}
-      />
-    ),
-    heading: "Invoice ",
-    text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
-    link: {
-      text: "Get Nomba for your large business",
-      href: "/business/large",
-    },
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
-        className={imageStyle}
-      />
-    ),
-    heading: "Invoice ",
-    text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
-    link: {
-      text: "Get Nomba for your large business",
-      href: "/business/large",
-    },
-  },
 ];
 export { largeBusinessPageSliderData, easySolutionsForLargeBusiness };

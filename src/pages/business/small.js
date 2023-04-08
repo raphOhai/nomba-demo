@@ -38,7 +38,7 @@ const SmallBusiness = () => {
             of business model
           </>
         }
-        data={smallBusinesSolutions[0]}
+        data={smallBusinesSolutions}
       />
       <PerfectSolutions />
       <Paralax />
