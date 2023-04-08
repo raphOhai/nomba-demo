@@ -9,10 +9,11 @@ html{
    }
 
 }
-.terminal_wrap {
-    perspective: 1px;
-    background: black;
+body{
     overflow-x: hidden;
+}
+.terminal_wrap {
+    background: black;
 }
 section {
     width: 100%;

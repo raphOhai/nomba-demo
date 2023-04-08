@@ -41,29 +41,39 @@
     }
 }
 .confirm_bd{
-    width: 100%;
-    display: none;
-    z-index: 30;
-    height: 100%;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: brightness(40%);
-    position: fixed;
+    height: 100vh;
+    z-index: 50;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    position: fixed;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: brightness(30%);
+    padding: 10rem 0;
+    display: none;
     .waitlist_success{
         width: 40rem;
         margin: 0 auto;
         border-radius: 1rem;
         padding: 5rem 0;
-        position: sticky;
-        top: 40%;
-       left: 25%;
-       top: 10%;
-        background: radial-gradient(69% 69% at 50% 12.2%, #242424 0%, #0A0A0A 100%);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='500' height='500' viewBox='0 0 500 500' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='500' height='500' rx='10' fill='url(%23paint0_radial_294_512)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_294_512' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(250 61) rotate(90) scale(345)'%3E%3Cstop stop-color='%23242424'/%3E%3Cstop offset='1' stop-color='%230A0A0A'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E%0A");
         @include flex_col(2rem);
         align-items: center;
+        @include media("<=tablet"){
+            width: 90%;
+        }
+        @include media("<=phone-tab"){
+            background-size: cover;
+            padding: 3rem 0;
+        }
+        svg{
+            @include media("<=phone-tab"){
+                width: 8rem;
+            }
+        }
         &_txt{
             @include flex_col(3rem);
             p{
@@ -72,4 +82,7 @@
             }
         }
 }
+}
+.shew{
+    display: block;
 }

@@ -64,6 +64,7 @@
         @include flex(flex-end,center,0rem);
         position: relative;
         cursor: pointer;
+        overflow-x: hidden;
         @include media("<=tablet"){
             min-height: auto;
             @include flex_col(4rem);

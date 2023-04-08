@@ -96,6 +96,7 @@
           @include flex(center,center,1rem);
           border: 1px solid $yellow;
           font-weight: 500;
+          z-index: 20;
           font-size: 1.15rem;
           background: linear-gradient(to right, $yellow 50%, transparent 50%);
           background-size: 200% 100%;
@@ -214,12 +215,13 @@
   filter: grayscale(100%);
   padding-top: 5rem;
    width: 80%;
+   overflow: hidden !important;
    margin: 0 auto;
   @include flex(flex-start,center,2rem);;
   >div{
     @include flex(flex-start,center,3rem);
     flex-wrap: nowrap;
-    overflow: visible;
+    overflow:visible;
     flex-shrink: 0;
     &:nth-child(2){
       display: none;

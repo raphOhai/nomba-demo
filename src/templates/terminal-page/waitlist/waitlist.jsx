@@ -1,13 +1,12 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import { Button, NLink, Br } from "components";
+
 function Waitlist() {
-  const input = useRef(null);
+  const [show, setShow] = useState(false);
   const submit = e => {
     e.preventDefault();
-
     const data = new FormData(e.target);
-    console.log(e.target);
     fetch(
       "https://script.google.com/macros/s/AKfycbw6XUBUMiolMoNjfZkycUXmtL2F97slRyL6D9FNlt2c7t9lOxFPCR3-Nd4i60LGFHn06w/exec",
       {
@@ -17,15 +16,23 @@ function Waitlist() {
     )
       .then(res => {
         if (res.ok) {
+          setShow(!show);
           e.target.reset();
         } else {
         }
       })
       .catch(err => console.log(err));
   };
+
+  const closeModal = e => {
+    if (!e.target.classList.contains("waitlist_success")) {
+      setShow(!show);
+    }
+  };
+
   return (
     <>
-      <div className="confirm_bd">
+      <div onClick={closeModal} className={`confirm_bd animate__animated animate__bounceIn ${show && "shew"}`}>
         <div className="waitlist_success">
           <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="70.5" cy="69.5" r="32.5" fill="white" />
@@ -44,10 +51,10 @@ function Waitlist() {
           </svg>
           <div className="waitlist_success_txt text-center">
             <h1>
-              We’ve added you to our <Br on="all" /> waiting list!
+              We’ve added you to our <Br on="desktop" /> waiting list!
             </h1>
             <p>
-              Kindly check your email to know when the Nomba MAX <Br on="all" /> terminal is out for sale
+              Kindly check your email to know when the Nomba MAX <Br on="desktop" /> terminal is out for sale
             </p>
           </div>
         </div>
@@ -60,7 +67,7 @@ function Waitlist() {
             For better performance and smoother payment solution, Nomba MAX is here for you.
           </p>
           <form onSubmit={submit} className="d_waitlist_tr_input justify-center gap-5  flex-center flex">
-            <input required ref={input} name="Email" type="email" placeholder="Enter Email" />
+            <input required name="Email" type="email" placeholder="Enter Email" />
             <Button type="submit" text="Join Waitlist" size="xsmall" />
           </form>
         </div>
