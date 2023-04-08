@@ -130,6 +130,7 @@
     &_print{
         padding: 5rem 0;
         @include flex_col(0rem);
+        overflow-x: hidden;
         @include media("<=tablet"){
             padding: 4rem 0;
         }
