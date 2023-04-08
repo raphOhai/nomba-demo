@@ -71,13 +71,13 @@ const headerMenu = {
   ],
 
   "Business Types": [
-    {
-      title: "Mobile Money Agents",
-      icon: <Profile />,
-      description: "Make financial services accessible",
-      comingSoon: true,
-      to: "/business/agents",
-    },
+    // {
+    //   title: "Mobile Money Agents",
+    //   icon: <Profile />,
+    //   description: "Make financial services accessible",
+    //   comingSoon: true,
+    //   to: "/business/agents",
+    // },
     {
       title: "Small Business",
       icon: <Shop />,

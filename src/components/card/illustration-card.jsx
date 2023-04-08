@@ -15,34 +15,28 @@ const IllustrationCard = ({ illustration, title, description, link }) => {
     <div className={illustrationCardStyle}>
       <span className={illustrationSpanStyle}>{illustration}</span>
       <Ntext variant="h5" color="primary-100" value={title} />
-      <Ntext
-        variant="p14"
-        color="primary-100"
-        value={description}
-        className={descriptionStyle}
-      />
-      <span className={readmoreSpanStyle}>
-        {link && <ReadMore text="See how it works" {...link} />}
-      </span>
+      <Ntext variant="p14" color="n-grey1" value={description} className={descriptionStyle} />
+      <span className={readmoreSpanStyle}>{link && <ReadMore text="See how it works" {...link} />}</span>
     </div>
   );
 };
 
 const illustrationCardStyle = ctl(`
 group 
-max-w-[235px] 
-lg:min-h-[300px]
+max-w-[390px] 
+lg:min-h-[200px]
 lg:mb-0
-mb-12 
-cursor-default 
-lg:text-left 
+mb-3 
+cursor-default  
 text-center
+justify-center
 illustration
 `);
 const illustrationSpanStyle = ctl(`
-w-[133px]
+w-[50px]
 inline-block
-mb-[40px]
+mb-[20px]
+text-center
 `);
 
 const readmoreSpanStyle = ctl(`

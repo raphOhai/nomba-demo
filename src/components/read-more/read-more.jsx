@@ -2,23 +2,23 @@ import PropTypes from "prop-types";
 import React from "react";
 import { NLink } from "../nlink";
 import { Ntext } from "../ntext";
-import Arrow from "svgs/readmore2.svg";
+import Arrow from "svgs/readmore.svg";
+import ArrowGrey from "svgs/readmore-grey.svg";
 import ctl from "@netlify/classnames-template-literals";
 
-const ReadMore = ({ text, color, defaultStyle = true, ...props }) => {
+const ReadMore = ({ text, color, className, defaultStyle = true, active = true, ...props }) => {
   return (
     <div>
       <NLink {...props} className={readmoreStyle}>
         <Ntext
           variant={props.variant || "p16"}
           color={color}
-          className={`peer ${props.className}`}
+          className={`peer ${props.className}transition-all duration-300`}
           weight={defaultStyle ? "600" : props.weight}
         >
           {text}
         </Ntext>
-
-        <Arrow className={arrowStyle} />
+        {active ? <Arrow className={arrowStyle} /> : <ArrowGrey className={arrowStyle} />}
       </NLink>
     </div>
   );
@@ -27,6 +27,7 @@ const ReadMore = ({ text, color, defaultStyle = true, ...props }) => {
 const readmoreStyle = ctl(`
 inline-flex
 items-center
+
 group
 `);
 
@@ -41,11 +42,15 @@ hover:ml-4
 ReadMore.defaultProps = {
   text: "Read More",
   color: "primary-100",
+  active: true,
+  className: "",
 };
 
 ReadMore.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
+  active: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export { ReadMore };

@@ -23,11 +23,15 @@ gap-4
 const Address = ({ location, flag }) => {
   return (
     <>
-      <div className="flex ">
+      <div className="flex">
         {flag}
-        <Ntext variant="p14" className="ml-2">
-          {location}
-        </Ntext>
+        <div className="flex flex-col">
+          {location.map((l, i) => (
+            <Ntext key={`${l}_${i}`} variant="p14" color="primary-200" className="ml-2">
+              {l}
+            </Ntext>
+          ))}
+        </div>
       </div>
     </>
   );

@@ -1,28 +1,46 @@
 import React from "react";
 
 import Layout from "components/layout";
-import {
-  GrowingYourSales,
-  MakeYourBusinessEasy,
-  SmallPageHeader,
-  SmallBusinessInfoGridSection,
-} from "templates/business/small";
-import { Testimonial } from "components";
+import { GrowingYourSales, Paralax, SmallPageHeader, PerfectSolutions } from "templates/business/small";
+import { EasySolution } from "components/easy-solution";
+import { AnyTypeOfBusiness } from "components/any-type-of-business";
+import { HomepageTipsAndUpdate } from "templates";
+import { Testimonial, Br } from "components";
 import { SmallBusinessTestimonials } from "config/testimonials";
-
+import { smallBusinesSolutions } from "config/small-business";
+import { easySolutionsForSmallBusiness } from "config/slider";
 const SmallBusiness = () => {
   return (
     <Layout title="Small Business">
       <SmallPageHeader />
       <GrowingYourSales />
-      <MakeYourBusinessEasy />
-      <SmallBusinessInfoGridSection />
-      <div className="pt-2">
-        <Testimonial
-          testimonials={SmallBusinessTestimonials}
-          headingText="Hear what business owners have to say"
-        />
+      <EasySolution
+        title={
+          <>
+            Easy solutions for your
+            <Br on="desktop" />
+            small businesses
+          </>
+        }
+        description="Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every"
+        data={easySolutionsForSmallBusiness}
+      />
+      <AnyTypeOfBusiness
+        title={
+          <>
+            Solution built for any type
+            <Br on="desktop" />
+            of business model
+          </>
+        }
+        data={smallBusinesSolutions}
+      />
+      <PerfectSolutions />
+      <Paralax />
+      <div className="">
+        <Testimonial testimonials={SmallBusinessTestimonials} headingText="Hear what business partners have to say" />
       </div>
+      <HomepageTipsAndUpdate />
     </Layout>
   );
 };

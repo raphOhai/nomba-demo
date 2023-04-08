@@ -1,7 +1,7 @@
 import React from "react";
 import { PageHeader } from "components";
 import { StaticImage } from "gatsby-plugin-image";
-
+import { SponsorList } from "templates/home";
 const LargePageHeader = () => {
   return (
     <PageHeader
@@ -12,11 +12,20 @@ const LargePageHeader = () => {
         <StaticImage
           width={629}
           height={644}
-          src="../../../../assets/images/jpegs/large-business/large-business-header.jpg"
+          src="../../../../assets/images/jpegs/large-business/woman-making-payment-over-POS-nomba.png"
           alt="woman making payment over POS - nomba"
         />
       }
-    />
+    >
+      <SponsorList
+        gigm={true}
+        buyPower={true}
+        crossFit={true}
+        gig={false}
+        reliance={false}
+        className="md:justify-start"
+      />
+    </PageHeader>
   );
 };
 

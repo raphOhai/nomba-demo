@@ -16,12 +16,7 @@ const MakeYourBusinessEasy = () => {
 
         <div className={cardsListStyle}>
           {makeYourBussinessEasyCardsData.map((feature, index) => {
-            return (
-              <IllustrationCard
-                key={`make_your_business_easy_card_${index}`}
-                {...feature}
-              />
-            );
+            return <IllustrationCard key={`make_your_business_easy_card_${index}`} {...feature} />;
           })}
         </div>
       </Container>
@@ -31,7 +26,7 @@ const MakeYourBusinessEasy = () => {
 
 const benefitsCardsWrapperStyle = ctl(`
 bg-primary
-pt-8
+
 pb-16
 
 `);

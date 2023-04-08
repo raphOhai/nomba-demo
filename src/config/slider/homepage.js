@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const imageStyle = ctl(`
   w-full
   h-full
+  rounded-t-lg
 `);
 
 const homepageSliderData = [
@@ -16,9 +17,9 @@ const homepageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: "Reconcile cash, card and transfers with ease",
+    heading: "Invoicing",
     text:
-      "Track payments on multiple channels for every item sold in your store.",
+      "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/small",
@@ -27,46 +28,33 @@ const homepageSliderData = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
+        src="../../assets/images/jpegs/homepage/slider/man-with-pos-2.png"
+        alt="man issuing pos for payment"
         className={imageStyle}
       />
     ),
-    heading: "Manage payments across multiple business outlets ",
+    heading: "Inventory",
     text:
-      "Receive, track and manage payments from hundreds of sources on a single dashboard",
+      "Manage your stock more efficiently and effectively. you can easily keep track of your products, and sales in real-time, so you always know what's in stock.",
     link: {
-      text: "Get Nomba for your large business",
-      href: "/business/large",
+      text: "Get Nomba for your growing business",
+      href: "/business/small",
     },
   },
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/pos-transaction.jpg"
-        alt="pos transaction taking place"
+        src="../../assets/images/jpegs/homepage/slider/man-with-lady.png"
+        alt="man holding a pos machine"
         className={imageStyle}
       />
     ),
-    heading: "Provide financial services and earn while at it ",
+    heading: "Teams",
     text:
-      "Be the sure padi for every money-related activity people need to make in your area.",
-    link: { text: "Become an agent", to: "/business/agents" },
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/manage-payment.jpg"
-        alt="pos transaction taking place"
-        className={imageStyle}
-      />
-    ),
-    heading: "Thanks to one agent, there is a hundred more ",
-    text:
-      "There are ‘super-agents’ creating wealth and building networks of new agents",
+      "With this feature, you can easily collaborate with your team members, assign tasks, track progress, and communicate in real-time.",
     link: {
       text: "Get Nomba for your growing business",
-      to: "/business/agents",
+      href: "/business/large",
     },
   },
 ];
