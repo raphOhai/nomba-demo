@@ -16,13 +16,13 @@ const AnyTypeOfBusiness = ({ title, data }) => {
             <div className="">
               <div className={tabMenuWrapper}>
                 {data.map((s, i) => (
-                  <button
+                  <div
                     key={i}
                     onClick={() => setActiveSolution(s)}
                     className={`${buttonTabStyle} ${isActive(s.title, activeSolution.title)}`}
                   >
                     {s.title}
-                  </button>
+                  </div>
                 ))}
               </div>
               <TabBody data={activeSolution} />
@@ -51,7 +51,7 @@ const TabBody = ({ data }) => {
   );
 };
 
-const isActive = (a, b) => (a === b ? ctl(`border-b-4 border-n-yellow`) : ctl(`text-n-grey7`));
+const isActive = (a, b) => (a === b ? ctl(`!border-b-4 !border-n-yellow`) : ctl(`text-n-grey7`));
 
 const businessWrapperStyle = ctl(`
 md:pb-20
@@ -61,6 +61,7 @@ pb-16
 const buttonTabStyle = ctl(`
 text-gray-900
 whitespace-nowrap
+cursor-pointer
 px-1 py-4 
 text-base
 font-normal

@@ -24,7 +24,7 @@ const POSTerminals = ({ title }) => {
 };
 
 const posCardWrapperStyle = ctl(`
-md:grid md:grid-cols-3 gap-7 flex flex-col
+md:grid md:grid-cols-3 gap-7
 `);
 
 POSTerminals.propTypes = {

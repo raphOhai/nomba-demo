@@ -135,8 +135,7 @@ const controlButtonStyle = ctl(`
   rounded-full
   lg:p-[15px]
   p-[6px]
-  border
-  border-n-grey3
+  grey-bordered-button
   hover:bg-secondary-100
 `);
 

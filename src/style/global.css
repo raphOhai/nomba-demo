@@ -29,6 +29,10 @@
   }
 }
 
+.grey-bordered-button {
+  border: 1px solid #999999 !important;
+}
+
 .swiper-pagination > .swiper-pagination-bullet {
   @apply mr-2 rounded-full;
   background: white;
