@@ -64,7 +64,6 @@
         @include flex(flex-end,center,0rem);
         position: relative;
         cursor: pointer;
-        overflow-x: hidden;
         @include media("<=tablet"){
             min-height: auto;
             @include flex_col(4rem);
@@ -82,7 +81,7 @@
             }
         }
         video{
-            z-index: -1;
+            z-index:1;
             position: absolute;
             left: -10%;
             opacity: 0;
@@ -96,12 +95,14 @@
                 top: 4rem;
             }
             @include media("<=phone"){
-                transform: scale(1.5);
+                width: 100%;
+                transform: scale(1);
                 left: 0;
             }
         }
 
         &_txt{
+            z-index:2;
             max-width:55%;   
             flex-shrink: 0 0;       
             @include flex_col(2rem);
@@ -131,6 +132,7 @@
         padding: 5rem 0;
         @include flex_col(0rem);
         overflow-x: hidden;
+        z-index: 1;
         @include media("<=tablet"){
             padding: 4rem 0;
         }

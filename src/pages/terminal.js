@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "style/terminal-page/main.scss";
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
 import {
   TerminalHeader,
   CommonQuestions,
