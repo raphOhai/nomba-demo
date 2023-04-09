@@ -12,8 +12,8 @@ const homepageSliderData = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/laptop-image.jpg"
-        alt="person making transaction on a laptop"
+        src="../../assets/images/jpegs/business-tools/invoicing.png"
+        alt="Invoicing Image"
         className={imageStyle}
       />
     ),
@@ -28,8 +28,8 @@ const homepageSliderData = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos-2.png"
-        alt="man issuing pos for payment"
+        src="../../assets/images/jpegs/business-tools/inventory.png"
+        alt="Inventory image"
         className={imageStyle}
       />
     ),
@@ -44,7 +44,7 @@ const homepageSliderData = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-lady.png"
+        src="../../assets/images/jpegs/business-tools/teams.png"
         alt="man holding a pos machine"
         className={imageStyle}
       />
@@ -52,6 +52,50 @@ const homepageSliderData = [
     heading: "Teams",
     text:
       "With this feature, you can easily collaborate with your team members, assign tasks, track progress, and communicate in real-time.",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "/business/large",
+    },
+  },
+  {
+    image: (
+      <StaticImage src="../../assets/images/jpegs/business-tools/e-menu.png" alt="E menu" className={imageStyle} />
+    ),
+    heading: "E-menu",
+    text:
+      "With Nomba's e-menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants ",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "/business/large",
+    },
+  },
+  {
+    image: (
+      <StaticImage
+        src="../../assets/images/jpegs/business-tools/settlement.png"
+        alt="Settlement"
+        className={imageStyle}
+      />
+    ),
+    heading: "Settlement",
+    text:
+      "Designed to help businesses of all sizes manage their payments and cash flow more efficiently, reduce errors and fraud, and improve customer satisfaction",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "/business/large",
+    },
+  },
+  {
+    image: (
+      <StaticImage
+        src="../../assets/images/jpegs/business-tools/pay-by-qr.png"
+        alt="Pay by QR"
+        className={imageStyle}
+      />
+    ),
+    heading: "Pay by QR",
+    text:
+      "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/large",

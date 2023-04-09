@@ -28,9 +28,9 @@ const SmallBusiness = () => {
       <AnyTypeOfBusiness
         title={
           <>
-            Solution built for any type
+            Nomba is built for all type
             <Br on="desktop" />
-            of business model
+            and size of businesses
           </>
         }
         data={smallBusinesSolutions}

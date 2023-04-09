@@ -1,7 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
-
+import { Br } from "components";
 const imageStyle = ctl(`
   w-full
   h-full
@@ -18,7 +18,8 @@ const smallBusinessPageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: "Get a Nomba account with ease",
+    heading: <>Get a Nomba account with ease</>,
+
     text: "Open a business account right where you are, on your phone.",
     // link: {
     //   text: "Get started",
@@ -97,14 +98,14 @@ const easySolutionsForSmallBusiness = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/laptop-image.jpg"
-        alt="person making transaction on a laptop"
+        src="../../assets/images/jpegs/business-tools/invoicing.png"
+        alt="Invoicing Image"
         className={imageStyle}
       />
     ),
-    heading: "Teams",
+    heading: "Invoicing",
     text:
-      "Track payments on multiple channels for every item sold in your store.Track payment on multiple channels for every item sold in your store.",
+      "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/small",
@@ -113,45 +114,50 @@ const easySolutionsForSmallBusiness = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
+        src="../../assets/images/jpegs/business-tools/payments.png"
+        alt="Inventory image"
         className={imageStyle}
       />
     ),
-    heading: "Invoice ",
+    heading: "Payments",
     text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
+      "With Nomba, you can accept payments from customers in a variety of ways, including credit and debit cards, bank transfers, and mobile payments.",
     link: {
-      text: "Get Nomba for your large business",
-      href: "/business/large",
+      text: "Get Nomba for your growing business",
+      href: "/business/small",
     },
   },
+
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/pos-transaction.jpg"
-        alt="pos transaction taking place"
+        src="../../assets/images/jpegs/business-tools/inventory.png"
+        alt="Inventory image"
         className={imageStyle}
       />
     ),
-    heading: "Inventory ",
+    heading: "Inventory",
     text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
-    link: { text: "Become an agent", to: "/business/agents" },
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
-        className={imageStyle}
-      />
-    ),
-    heading: "Invoice ",
-    text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
+      "Businesses can improve their inventory accuracy, reduce waste and spoilage, and improve their overall supply chain processes.",
     link: {
-      text: "Get Nomba for your large business",
+      text: "Get Nomba for your growing business",
+      href: "/business/small",
+    },
+  },
+
+  {
+    image: (
+      <StaticImage
+        src="../../assets/images/jpegs/business-tools/pay-by-qr.png"
+        alt="Pay by QR"
+        className={imageStyle}
+      />
+    ),
+    heading: "Pay by QR",
+    text:
+      "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions",
+    link: {
+      text: "Get Nomba for your growing business",
       href: "/business/large",
     },
   },

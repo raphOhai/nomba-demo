@@ -15,7 +15,7 @@ const GrowingYourSales = () => {
             easier with Nomba
           </Ntext>
           <Ntext
-            value="Access all the offline and online tools you need to grow your business"
+            value="Access all the tools you need to grow your business"
             variant="p18"
             className="mt-2 px-3"
             color="n-grey5"

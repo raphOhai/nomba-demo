@@ -25,9 +25,11 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
           </>
         ) : (
           <div className="flex flex-col justify-between gap-4 pt-8 py-8  md:py-8">
-            <Ntext variant="text5" className="" value={heading} />
+            <div className="max-w-[308px]">
+              <Ntext variant="text5" className="" value={heading} />
+            </div>
 
-            <Ntext variant="text3" value={text} className="" />
+            <Ntext variant="text3" value={text} color="n-grey4" />
 
             {link && <ReadMore {...link} color="primary" />}
           </div>
@@ -45,7 +47,7 @@ const imageStyle = ctl(`
   bg-n-dark
 `);
 const sliderCardWrapStyle = ctl(`
-  md:px-[32px]
+  md:px-[30px]
   px-[25px]
   rounded-b-lg
   bg-primary-100
