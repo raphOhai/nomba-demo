@@ -79,7 +79,7 @@ const businessTypesData = [
   {
     title: "Small business",
     description:
-      "We makes it easy for small businesses to create and send professional invoices and accept payments online. You can also track your invoices and receive notifications when your customers make payments.",
+      "Discover the power of our business tools: unlock financial freedom, drive growth, and boost revenue. With Nomba, You can create and track your invoices efficiently, receive payments via QR and other seamless means, create inventory, and receive payment notifications when your customers make payments",
     link: "/business/small",
 
     images: (

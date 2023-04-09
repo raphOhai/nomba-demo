@@ -23,7 +23,7 @@ export const addressList = [
     ),
   },
   {
-    location: ["1776 Sacremento St Apt 311 SAN Francisco CA 94109"],
+    location: ["580 California St, 12th Floor, San Francisco, CA 94104"],
     flag: (
       <StaticImage
         src="../assets/images/jpegs/Flag US.png"

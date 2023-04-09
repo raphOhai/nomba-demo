@@ -1,7 +1,10 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Br, Container, SolutionCard, Ntext, SectionHeader } from "components";
-import { perfectPaymentSolution } from "config/small-business";
+import {
+  perfectPaymentSolution,
+  perfectPaymentSolutionImage,
+} from "config/small-business";
 import SubFooterRight from "svgs/section-right.svg";
 const PerfectSolutions = () => {
   return (
@@ -15,6 +18,9 @@ const PerfectSolutions = () => {
           </Ntext>
         </SectionHeader>
 
+        <div className={`${optionsListStyle} gap-12`}>
+          {perfectPaymentSolutionImage}
+        </div>
         <div className={optionsListStyle}>
           {perfectPaymentSolution.map((paymentOption, index) => (
             <SolutionCard
@@ -32,14 +38,15 @@ const PerfectSolutions = () => {
 const gotOptionsWrapperStyle = ctl(`
 relative
 bg-primary
-pb-8
-md:pb-16
+
 `);
 
 const optionsListStyle = ctl(`
 grid
 grid-cols-1
 md:grid-cols-2
+pb-8
+md:pb-[100px]
 `);
 const subFooterRightImage = ctl(`
   absolute 

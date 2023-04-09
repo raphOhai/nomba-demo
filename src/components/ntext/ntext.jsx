@@ -79,15 +79,15 @@ const variants = {
     md:text-[48px]
     text-[32px]
     md:leading-[59.04px]
-    leading-[39.2px]
+    leading-[40.2px]
     font-bold 
     `,
 
   h3: `
     md:text-[40px]
     text-[32px]
-    md:leading-[46.87px]
-    leading-[29.4px]
+    md:leading-[47.87px]
+    leading-[39.4px]
     font-semibold 
     `,
   h4: `
@@ -160,7 +160,7 @@ const variants = {
     leading-[22px]
     md:text-[16px]
     md:leading-[24px]
-    font-[400]
+    font-normal
     `,
   text4lite: `
     text-[14px]
