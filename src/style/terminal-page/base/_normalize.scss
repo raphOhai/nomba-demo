@@ -19,10 +19,11 @@ h1{
     font-size: toRem(48);
     font-weight: 600;
     color: $light-txt;
-    line-height: 3rem;
+    line-height: 3.8rem;
+    overflow: hidden;
     @include media("<=phone-tab") {
         font-size: toRem(37);
-        line-height: 2.6rem;
+        line-height: 3rem;
    }
 }
 hr {
