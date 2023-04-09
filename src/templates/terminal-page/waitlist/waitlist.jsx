@@ -44,8 +44,8 @@ function Waitlist() {
             <circle cx="70" cy="70" r="69.5" stroke="url(#paint0_linear_296_528)" />
             <defs>
               <linearGradient id="paint0_linear_296_528" x1="70" y1="0" x2="70" y2="140" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#074501" />
-                <stop offset="1" stop-color="#032200" />
+                <stop stopColor="#074501" />
+                <stop offset="1" stopColor="#032200" />
               </linearGradient>
             </defs>
           </svg>
