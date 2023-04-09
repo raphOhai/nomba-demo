@@ -1,5 +1,7 @@
 import Splitting from "splitting";
 import { IO } from "./observe";
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
