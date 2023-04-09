@@ -3,9 +3,6 @@ require("dotenv").config();
 const path = require("path");
 
 module.exports = {
-  flags: {
-    DEV_SSR: true,
-  },
   siteMetadata: {
     title: `Nomba`,
     description: `Nomba Makes Money Easy. Improving access to financial tools for the banked, underbanked and unbanked.
