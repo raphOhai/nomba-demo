@@ -8,7 +8,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const SponsorList = ({ gig, reliance, gigm, crossFit, buyPower, className }) => {
   return (
     <div
-      className={`flex justify-center gap-10 md:gap-14 mt-[50px] items-center flex-nowrap scrollbar-hide overflow-auto ${className}`}
+      className={`flex justify-center gap-5 md:gap-14 mt-[50px] items-center flex-nowrap scrollbar-hide overflow-auto ${className}`}
     >
       {gig && <GodIsGood className="min-w-[80px]" />}
       {reliance && <RelianceHMO className="min-w-[80px]" />}

@@ -13,7 +13,7 @@ const PageHeader = ({ pageHeaderText, pageHeaderSubText, pageHeaderButtonText, i
     <Container>
       <section className={pageHeaderWrapperStyle}>
         <div>
-          <Ntext variant="h1" className="max-w-[655px]" value={pageHeaderText} />
+          <Ntext variant="h1" className="md:max-w-[655px]" value={pageHeaderText} />
 
           <Ntext variant="p18" value={pageHeaderSubText} className={subTextStyle} />
           <Button {...link} text={pageHeaderButtonText} size="medium" />
@@ -39,7 +39,7 @@ mb-[-50px]
 `);
 
 const subTextStyle = ctl(`
-max-w-[330px] 
+md:max-w-[330px] 
 my-6
 `);
 const imageWrapperStyle = ctl(`
