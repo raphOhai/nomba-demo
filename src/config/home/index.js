@@ -142,7 +142,7 @@ const businessTypesData = [
           <StaticImage
             height={299}
             className={imgClass}
-            src="../../assets/images/jpegs/homepage/max-features/mobile-money-2.jpg"
+            src="../../assets/images/jpegs/business-types/mobile-agent/2.jpg"
             alt="Image 2"
           />
         </div>
@@ -150,14 +150,14 @@ const businessTypesData = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../../assets/images/jpegs/homepage/max-features/mobile-money-3.jpg"
+            src="../../assets/images/jpegs/business-types/mobile-agent/3.jpg"
             alt="Image 3"
           />
         </div>
         <div className={imgClassWrapper1}>
           <StaticImage
             className={imgClass}
-            src="../../assets/images/jpegs/homepage/max-features/mobile-money-1.jpg"
+            src="../../assets/images/jpegs/business-types/mobile-agent/1.jpg"
             alt="Image 1"
           />
         </div>

@@ -62,12 +62,14 @@ mb-10
 const heroTextHeaders = ctl(`
 md:flex
 md:flex-row
+md:items-start
 mb-10
 `);
 
 const subTextStyle = ctl(`
 mb-8
 mt-6
+md:mt-3
 basis-2/5
 `);
 

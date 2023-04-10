@@ -9,7 +9,7 @@ const AnyTypeOfBusiness = ({ title, data }) => {
     <Container className="bg-white">
       <div className={businessWrapperStyle}>
         <SectionHeader className="!text-left">
-          <Ntext variant="h3">{title}</Ntext>
+          <Ntext variant="h2">{title}</Ntext>
         </SectionHeader>
         <div className="w-full bg-white pb-12 ">
           <div className="mt-2">

@@ -5,7 +5,7 @@ import PosLine from "assets/images/svgs/pos-line.svg";
 
 import ctl from "@netlify/classnames-template-literals";
 const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
-  const backgroundColor = isMax ? "bg-n-dark" : "bg-n-grey1";
+  const backgroundColor = isMax ? "bg-n-grey6" : "bg-n-grey1";
   const textColor = isMax ? "primary-100" : "primary";
   const featuresColor = isMax ? "primary-100" : "n-grey6";
   const iconsGridColumn = !isMax && device.type === "pro" ? `grid-cols-4` : "grid-cols-3";
