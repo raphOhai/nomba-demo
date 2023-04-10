@@ -32,7 +32,7 @@
         .img_1{
             width: 81%;
             position: absolute;
-            bottom: 29%;
+            bottom: 33%;
             z-index: 3;
             svg{
                 width: 100%
@@ -48,7 +48,7 @@
             width: 84%;
             z-index: 2;
             position: absolute;
-            bottom: 25%;
+            bottom: 30%;
             // opacity: 0;
             @include media("<=tablet"){
                 width: 100%;
@@ -142,7 +142,7 @@
                 @include flex_col(3rem);
             }
             video{
-                width: 55%;
+                width: 50%;
                 @include media("<=tablet"){
                     width: 100%;
                 }
