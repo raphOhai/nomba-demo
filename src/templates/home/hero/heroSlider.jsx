@@ -10,14 +10,14 @@ import { Container } from "components";
 const HeroSlider = ({ images, className }) => {
   const imageList = images.map((image, i) => (
     <SwiperSlide key={i}>
-      <div className="min-w-[290px] min-h-[378px] px-2-">{image}</div>
+      <div className="min-w-[250px] min-h-[200px] px-2-">{image}</div>
     </SwiperSlide>
   ));
 
   return (
     <Swiper
       spaceBetween={24}
-      slidesPerView={1}
+      slidesPerView={1.2}
       modules={[Autoplay]}
       className={className}
       autoplay={{

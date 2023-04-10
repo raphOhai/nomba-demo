@@ -5,7 +5,7 @@ import { Button, Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
 import { HeroSlider, SponsorList } from "./index";
 
-const HomepageHero = ({ title, description, images }) => {
+const HomepageHero = ({ title, description, images, mobileImages }) => {
   const { SIGNUP_URL } = constants;
   return (
     <section className={heroStyle}>
@@ -32,7 +32,7 @@ const HomepageHero = ({ title, description, images }) => {
             </div>
           ))}
         </div>
-        <HeroSlider images={images} className="md:hidden" />
+        <HeroSlider images={mobileImages} className="md:hidden" />
         <SponsorList />
       </Container>
     </section>
@@ -62,12 +62,14 @@ mb-10
 const heroTextHeaders = ctl(`
 md:flex
 md:flex-row
+md:items-start
 mb-10
 `);
 
 const subTextStyle = ctl(`
 mb-8
 mt-6
+md:mt-3
 basis-2/5
 `);
 

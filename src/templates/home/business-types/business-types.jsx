@@ -30,7 +30,11 @@ function BusinessTypes() {
               />
               {/* sub text */}
               <div className="mt-4">
-                <Ntext variant="text4lite" className="c-0 cursor-pointer">
+                <Ntext
+                  variant="text4lite"
+                  className="cursor-pointer"
+                  color={b === activeType ? "primary-900" : "n-grey3"}
+                >
                   {b.description}
                 </Ntext>
               </div>

@@ -9,7 +9,7 @@ const EasySolution = ({ title, description, data }) => {
       <Container>
         <div className={businessWrapperStyle}>
           <SectionHeader className="!text-left md:!pt-[10px] !pt-[38px]">
-            <Ntext variant="h3">{title}</Ntext>
+            <Ntext variant="h2">{title}</Ntext>
             <Ntext value={description} variant="p18" className="mt-4 max-w-[533px]" color="n-grey6" />
           </SectionHeader>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-16">

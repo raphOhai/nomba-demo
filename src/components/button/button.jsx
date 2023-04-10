@@ -41,12 +41,7 @@ const Button = ({
   }
 
   return (
-    <ButtonElement
-      className={buttonStyle}
-      onClick={onClick}
-      disabled={buttonDisabled || isLoading}
-      {...linkProps}
-    >
+    <ButtonElement className={buttonStyle} onClick={onClick} disabled={buttonDisabled || isLoading} {...linkProps}>
       <span className={textStyle}>{text || children}</span>
       {isLoading && <Loader />}
     </ButtonElement>
@@ -62,6 +57,7 @@ rounded
 text-primary
 text-center
 font-semibold
+text-[16px]
 transition
 duration-400
 inline-flex

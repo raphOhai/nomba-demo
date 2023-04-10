@@ -190,6 +190,41 @@ export const largeBusinessTypes = [
       </div>
     ),
   },
+  {
+    title: "Transport",
+    headline: "Nomba provides a secure and reliable payment platform.",
+    description:
+      "But perhaps the biggest benefit of using Nomba has been the increased security and transparency it provides. With Nomba, we can track all our payment transactions and identify any discrepancies or fraudulent activities. This has given us peace of mind and helped us build trust with our customers.",
+    respondent: "Kelechi Isreal, Transportation ",
+    images: (
+      <div className={gridWrapper}>
+        <div className={imgClassWrapper2}>
+          <StaticImage
+            height={299}
+            className={imgClass}
+            src="../assets/images/jpegs/business-size/transport-1.png"
+            alt="Image 2"
+          />
+        </div>
+        <div className={imgClassWrapper3}>
+          <StaticImage
+            className={imgClass}
+            height={299}
+            src="../assets/images/jpegs/business-size/transport-2.png"
+            alt="Image 3"
+          />
+        </div>
+        <div className={imgClassWrapper1}>
+          <StaticImage
+            className={imgClass}
+            height={146}
+            src="../assets/images/jpegs/business-size/transport-3.png"
+            alt="Image 1"
+          />
+        </div>
+      </div>
+    ),
+  },
 ];
 
 export const codeblockSection = {

@@ -39,6 +39,26 @@ const heroHomePage = {
       alt="Woman making payment over POS"
     />,
   ],
+  mobileImages: [
+    <StaticImage
+      width={320}
+      height={387}
+      src="../../assets/images/jpegs/homepage/hero-images/hero1.jpg"
+      alt="Nomba POS Agent"
+    />,
+    <StaticImage
+      width={320}
+      height={387}
+      src="../../assets/images/jpegs/homepage/hero-images/hero2.jpg"
+      alt="Woman at the closing store."
+    />,
+    <StaticImage
+      width={320}
+      height={387}
+      src="../../assets/images/jpegs/homepage/hero-images/hero3.jpg"
+      alt="Woman making payment over POS"
+    />,
+  ],
 };
 
 const businessTypesData = [
@@ -52,7 +72,7 @@ const businessTypesData = [
         <div className={imgClassWrapper1}>
           <StaticImage
             className={imgClass}
-            src="../../assets/images/jpegs/homepage/max-features/lady-landscape.jpg"
+            src="../../assets/images/jpegs/business-types/enterprise/12.jpg"
             alt="Image 1"
           />
         </div>
@@ -60,7 +80,7 @@ const businessTypesData = [
           <StaticImage
             height={299}
             className={imgClass}
-            src="../../assets/images/jpegs/homepage/max-features/max-payment.jpg"
+            src="../../assets/images/jpegs/business-types/enterprise/2.jpg"
             alt="Image 2"
           />
         </div>
@@ -68,7 +88,7 @@ const businessTypesData = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../../assets/images/jpegs/homepage/max-features/salon-business.jpg"
+            src="../../assets/images/jpegs/business-types/enterprise/3.jpg"
             alt="Image 3"
           />
         </div>
@@ -122,7 +142,7 @@ const businessTypesData = [
           <StaticImage
             height={299}
             className={imgClass}
-            src="../../assets/images/jpegs/homepage/max-features/mobile-money-2.jpg"
+            src="../../assets/images/jpegs/business-types/mobile-agent/2.jpg"
             alt="Image 2"
           />
         </div>
@@ -130,14 +150,14 @@ const businessTypesData = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../../assets/images/jpegs/homepage/max-features/mobile-money-3.jpg"
+            src="../../assets/images/jpegs/business-types/mobile-agent/3.jpg"
             alt="Image 3"
           />
         </div>
         <div className={imgClassWrapper1}>
           <StaticImage
             className={imgClass}
-            src="../../assets/images/jpegs/homepage/max-features/mobile-money-1.jpg"
+            src="../../assets/images/jpegs/business-types/mobile-agent/1.jpg"
             alt="Image 1"
           />
         </div>

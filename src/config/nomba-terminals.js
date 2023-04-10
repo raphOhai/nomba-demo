@@ -22,7 +22,7 @@ export const posCardData = [
       <StaticImage width={143} height={287} src="../assets/images/jpegs/homepage/Nomba-Lite.png" alt="Nomba Lite" />
     ),
     icons: [<Visa key="visacard" />, <Master key="mastercard" />, <Wifi key="wifi" />],
-    link: { to: "/" },
+    link: "https://dashboard.nomba.com/auth/signup",
   },
   {
     isMax: false,
@@ -38,7 +38,7 @@ export const posCardData = [
     image: (
       <StaticImage width={193} height={267} src="../assets/images/jpegs/homepage/Nomba-Pro.png" alt="Nomba Lite" />
     ),
-    link: { to: "/" },
+    link: "https://dashboard.nomba.com/auth/signup",
     icons: [
       <Visa key="visacard" />,
       <Master key="mastercard" />,
@@ -57,7 +57,7 @@ export const posCardData = [
     features:
       "This device has faster transaction speed, Long lasting battery, High speed printer and is Sleek & Durable to give an overall high speed performance.",
 
-    image: <StaticImage width={248} height={267} src="../assets/images/jpegs/homepage/Nomba-Max.png" alt="Nomba Max" />,
-    link: { to: "/" },
+    image: <StaticImage width={124} height={267} src="../assets/images/jpegs/homepage/Nomba-Max.png" alt="Nomba Max" />,
+    link: "/max",
   },
 ];

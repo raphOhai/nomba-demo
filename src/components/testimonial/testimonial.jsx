@@ -30,7 +30,7 @@ const Testimonial = ({ testimonials, headingText }) => {
     <div className="pb-10 bg-primary">
       <Container>
         <SectionHeader className="!text-left">
-          <Ntext variant="h3" color="primary-100" value={headingText} className={headingTextStyle} />
+          <Ntext variant="h2" color="primary-100" value={headingText} className={headingTextStyle} />
         </SectionHeader>
         <Swiper
           pagination={pagination}

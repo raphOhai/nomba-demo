@@ -8,7 +8,7 @@ const PerfectSolutions = () => {
     <section className={gotOptionsWrapperStyle}>
       <Container>
         <SectionHeader className="!text-left">
-          <Ntext variant="text7" color="primary-100">
+          <Ntext variant="h2" color="primary-100">
             Perfect solution built for <Br on="mobile" /> Mobile <Br on="desktop" />
             Money Agents
           </Ntext>

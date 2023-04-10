@@ -8,7 +8,8 @@ const Footer = () => {
       <div className="c_tFooter_lr">
         <Logo />
         <p data-animation="p">
-          🇳🇬19b Bosun Adekoya Street, Lekki Phase 1, Lagos, Nigeria. 🇺🇸1776 Sacremento St Apt 311 SAN Francisco CA 94109
+          🇳🇬19b Bosun Adekoya Street, Lekki Phase 1, Lagos, Nigeria. 🇺🇸580 California St, 12th Floor, San Francisco, CA
+          94104
         </p>
       </div>
 

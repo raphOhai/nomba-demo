@@ -1,15 +1,15 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Button, NLink } from "components";
-import { nombaPro } from "templates/products/nomba-pro/constants";
+import { nombaMax } from "templates/products/nomba-pro/constants";
 
-export default function ButtonSection({ link = { href: { url: nombaPro.dashdboardUrl } } }) {
+export default function ButtonSection({ link = { href: { url: nombaMax.url } } }) {
   return (
     <div className={buttonSection}>
-      <Button size="medium" text="Order now" {...link} />
-      <NLink to="/products/nomba-pro" className={underlinedLink}>
+      <Button size="medium" text={nombaMax.orderText} {...link} />
+      {/* <NLink to="/products/nomba-pro" className={underlinedLink}>
         Learn more
-      </NLink>
+      </NLink> */}
     </div>
   );
 }
