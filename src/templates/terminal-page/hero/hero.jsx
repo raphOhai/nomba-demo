@@ -45,7 +45,7 @@ const TerminalHero = () => {
       </div>
       <div className="terminal_hero">
         <div className="terminal_hero_video">
-          <video loop autoPlay muted src={heroGif}></video>
+          <video playsinline loop autoPlay muted src={heroGif}></video>
         </div>
         <div onClick={playVid} className="play_btn">
           {playVideo ? (

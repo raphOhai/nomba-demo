@@ -97,7 +97,15 @@ const TerminalSectionInteractions = () => {
       </div>
       <div className="c_terminal_sectInt_experience">
         <ExperienceTerminal className={isHoverVid ? "fadeOut" : null} />
-        <video ref={video} className={isHoverVid ? "fadeIn" : null} loop muted src={spinTerminal}></video>
+        <video
+          ref={video}
+          className={isHoverVid ? "fadeIn" : null}
+          loop
+          autoPlay
+          muted
+          playsinline
+          src={spinTerminal}
+        ></video>
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">
             Experience the MAX in your <Br on="desktop" /> payment collection
@@ -128,7 +136,7 @@ const TerminalSectionInteractions = () => {
           Get ahead with the power of <Br on="desktop" /> Nomba MAX!
         </h1>
         <div className="c_terminal_sectInt_print_fl">
-          <video autoPlay muted src={TerminalPrint}></video>
+          <video autoPlay playsInline muted src={TerminalPrint}></video>
           <div className="c_terminal_sectInt_print_fl_features">
             <div className="c_feature">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
