@@ -71,6 +71,18 @@ const homepageSliderData = [
   },
   {
     image: (
+      <StaticImage src="../../assets/images/jpegs/business-tools/payments.png" alt="Payments" className={imageStyle} />
+    ),
+    heading: "Payment",
+    text:
+      "With Nomba, you can accept payments from customers in a variety of ways, including credit and debit cards, bank transfers, and mobile payments. ",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "https://dashboard.nomba.com",
+    },
+  },
+  {
+    image: (
       <StaticImage
         src="../../assets/images/jpegs/business-tools/settlement.png"
         alt="Settlement"

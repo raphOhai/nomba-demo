@@ -6,13 +6,13 @@ export default function ProIntroText() {
   return (
     <div className={textSection}>
       {/* main text */}
-      <div className="mb-[20px] hidden xs:flex flex-nowrap items-baseline justify-center text-center">
+      <div className="mb-[20px] hidden md:flex flex-nowrap items-baseline justify-center text-center">
         <Ntext variant="h2" color="c-dark">
           Introducing Nomba &nbsp;
         </Ntext>
         <Max className="h-[22px] w-[80px] md:w-[124px] md:h-[34px]" />
       </div>
-      <div className="xs:hidden">
+      <div className="md:hidden">
         <Ntext variant="h2" color="c-dark">
           Introducing
         </Ntext>
