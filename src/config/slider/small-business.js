@@ -1,8 +1,8 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
-import { Br } from "components";
 const imageStyle = ctl(`
+  rounded-t-lg
   w-full
   h-full
 `);
@@ -18,7 +18,7 @@ const smallBusinessPageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: <>Get a Nomba account with ease</>,
+    heading: "Get a Nomba account with ease",
 
     text: "Open a business account right where you are, on your phone.",
     // link: {
@@ -52,7 +52,7 @@ const smallBusinessPageSliderData = [
       />
     ),
     heading: "Reconcile both offline and online payments",
-    text: "Track every cash, card and transfer transaction.",
+    text: "Track every cash, card and transfer transaction with ease",
     // link: {
     //   text: "Get started",
     //   href: "https://dashboard.nomba.com",

@@ -3,6 +3,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 
 const imageStyle = ctl(`
+  rounded-t-lg
   w-full
   h-full
 `);
@@ -89,93 +90,88 @@ const easySolutionsForLargeBusiness = [
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/laptop-image.jpg"
+        src="../../assets/images/jpegs/business-tools/teams.png"
         alt="person making transaction on a laptop"
         className={imageStyle}
       />
     ),
     heading: "Teams",
     text:
-      "Track payments on multiple channels for every item sold in your store.Track payment on multiple channels for every item sold in your store.",
+      "You can streamline your team's work and improve productivity, allowing you to focus on growing your business.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "/business/small",
+      href: "https://dashboard.nomba.com",
+    },
+  },
+  {
+    image: (
+      <StaticImage src="../../assets/images/jpegs/business-tools/outlet.png" alt="Settlement" className={imageStyle} />
+    ),
+    heading: "Outlet",
+    text:
+      "Streamline operations, improve efficiency, manage, and receive payment across your different business outlets or branches easily.",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "https://dashboard.nomba.com",
     },
   },
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
+        src="../../assets/images/jpegs/business-tools/settlement.png"
+        alt="Settlement"
         className={imageStyle}
       />
     ),
-    heading: "Invoice ",
+    heading: "Settlement",
     text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
+      "Nomba settlement is designed to help businesses of all sizes manage their payments and cash flow more efficiently, reduce errors and fraud, and improve customer satisfaction.",
     link: {
-      text: "Get Nomba for your large business",
-      href: "/business/large",
+      text: "Get Nomba for your growing business",
+      href: "https://dashboard.nomba.com",
     },
   },
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/pos-transaction.jpg"
-        alt="pos transaction taking place"
-        className={imageStyle}
-      />
-    ),
-    heading: "Inventory ",
-    text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
-    link: { text: "Become an agent", to: "/business/agents" },
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
+        src="../../assets/images/jpegs/business-tools/inventory.png"
         alt="man holding a pos machine"
         className={imageStyle}
       />
     ),
-    heading: "Invoice ",
+    heading: "Invoicing",
     text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
+      "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your large business",
-      href: "/business/large",
+      href: "https://dashboard.nomba.com",
+    },
+  },
+  {
+    image: (
+      <StaticImage src="../../assets/images/jpegs/business-tools/e-menu.png" alt="E menu" className={imageStyle} />
+    ),
+    heading: "E-menu",
+    text:
+      "With Nomba's e-menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants ",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "https://dashboard.nomba.com",
     },
   },
   {
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
+        src="../../assets/images/jpegs/business-tools/pay-by-qr.png"
+        alt="Pay by QR"
         className={imageStyle}
       />
     ),
-    heading: "Invoice ",
+    heading: "Pay by QR",
     text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
+      "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions",
     link: {
-      text: "Get Nomba for your large business",
-      href: "/business/large",
-    },
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/homepage/slider/man-with-pos.jpeg"
-        alt="man holding a pos machine"
-        className={imageStyle}
-      />
-    ),
-    heading: "Invoice ",
-    text:
-      "Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every item sold in your store",
-    link: {
-      text: "Get Nomba for your large business",
+      text: "Get Nomba for your growing business",
       href: "/business/large",
     },
   },

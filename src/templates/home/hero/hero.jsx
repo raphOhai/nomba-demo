@@ -95,7 +95,7 @@ items-center
 `);
 
 HomepageHero.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.node,
   description: PropTypes.string,
   images: PropTypes.array,
 };

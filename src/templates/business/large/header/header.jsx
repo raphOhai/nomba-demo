@@ -23,7 +23,7 @@ const LargePageHeader = () => {
         crossFit={true}
         gig={false}
         reliance={false}
-        className="md:justify-start"
+        className="!justify-start"
       />
     </PageHeader>
   );

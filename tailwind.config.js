@@ -127,7 +127,7 @@ module.exports = {
     },
 
     screens: {
-      xs: "450px",
+      xs: "250px",
       ...defaultTheme.screens,
     },
   },
