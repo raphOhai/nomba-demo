@@ -218,8 +218,8 @@ export const perfectPaymentSolutionImage = [
     className="rounded-lg"
   />,
   <StaticImage
-    src="../assets/images/jpegs/small-business/perfect-solution-1.jpg"
-    alt="Image 1"
+    src="../assets/images/jpegs/small-business/perfect-solution-2.png"
+    alt="Image 2"
     className="rounded-lg"
   />,
 ];

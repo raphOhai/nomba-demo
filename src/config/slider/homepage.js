@@ -63,7 +63,7 @@ const homepageSliderData = [
     ),
     heading: "E-menu",
     text:
-      "With Nomba's e-menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants ",
+      "With Nomba's e-menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants. ",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/large",
@@ -91,7 +91,7 @@ const homepageSliderData = [
     ),
     heading: "Settlement",
     text:
-      "Designed to help businesses of all sizes manage their payments and cash flow more efficiently, reduce errors and fraud, and improve customer satisfaction",
+      "Get automated direct settlements to your registered bank account. Don't stress moving funds at the end of every sale, with just a toggle, we'll automate the process for you.",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/large",
@@ -107,7 +107,7 @@ const homepageSliderData = [
     ),
     heading: "Pay by QR",
     text:
-      "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions",
+      "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions.",
     link: {
       text: "Get Nomba for your growing business",
       href: "/business/large",

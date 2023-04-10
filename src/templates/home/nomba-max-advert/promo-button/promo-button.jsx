@@ -8,9 +8,7 @@ export default function PromoButton() {
       <div className={dottedWrapper}>
         <NLink to="/max">
           <button className={badgeButtonStyle}>
-            <span>New </span>
-            <span className="font-[500]">|</span>
-            <span className={promoText}>&nbsp;Promo</span>
+            <span>New Promo</span>
           </button>
         </NLink>
       </div>

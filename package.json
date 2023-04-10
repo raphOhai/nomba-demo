@@ -40,13 +40,13 @@
     "slick-carousel": "^1.8.1",
     "splitting": "^1.0.6",
     "swiper": "^8.0.7",
-    "tailwindcss": "^3.0.23",
     "yup": "^0.32.11"
   },
   "devDependencies": {
     "husky": ">=6",
     "lint-staged": ">=10",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "tailwindcss": "^3.3.1"
   },
   "keywords": [
     "gatsby"

@@ -18,7 +18,7 @@ const smallBusinessPageSliderData = [
         className={imageStyle}
       />
     ),
-    heading: "Get a Nomba account with ease",
+    heading: "Get a Nomba account for free with ease",
 
     text: "Open a business account right where you are, on your phone.",
     // link: {
@@ -52,7 +52,7 @@ const smallBusinessPageSliderData = [
       />
     ),
     heading: "Reconcile both offline and online payments",
-    text: "Track every cash, card and transfer transaction with ease",
+    text: "Track every cash, card and transfer transaction using your nomba app.",
     // link: {
     //   text: "Get started",
     //   href: "https://dashboard.nomba.com",
@@ -70,23 +70,6 @@ const smallBusinessPageSliderData = [
     ),
     heading: "Get the capital your business needs",
     text: "Request loans to buy goods and take your business to the next level.",
-    // link: {
-    //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
-    // },
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../assets/images/jpegs/small-business/receive-payment.jpg"
-        alt="pos transaction taking place"
-        className={imageStyle}
-        width={480}
-        height={290}
-      />
-    ),
-    heading: "Save, and earn interests    ",
-    text: "You don’t just manage your money and business. Save your profits, and earn more.",
     // link: {
     //   text: "Get started",
     //   href: "https://dashboard.nomba.com",

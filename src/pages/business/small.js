@@ -22,15 +22,13 @@ const SmallBusiness = () => {
             small businesses
           </>
         }
-        description="Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every"
+        description="Simplifying success for your business and track payment on multiple channels for every item sold in your store. "
         data={easySolutionsForSmallBusiness}
       />
       <AnyTypeOfBusiness
         title={
           <>
-            Nomba is built for all type
-            <Br on="desktop" />
-            and size of businesses
+            Nomba is built for all type <Br on="desktop" /> and size of businesses
           </>
         }
         data={smallBusinesSolutions}

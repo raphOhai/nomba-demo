@@ -15,7 +15,7 @@ const IllustrationCard = ({ illustration, title, description, link }) => {
     <div className={illustrationCardStyle}>
       <span className={illustrationSpanStyle}>{illustration}</span>
       <Ntext variant="h5" color="primary-100" value={title} />
-      <Ntext variant="p14" color="n-grey1" value={description} className={descriptionStyle} />
+      <Ntext variant="p16" color="n-grey1" value={description} className={descriptionStyle} />
       <span className={readmoreSpanStyle}>{link && <ReadMore text="See how it works" {...link} />}</span>
     </div>
   );
