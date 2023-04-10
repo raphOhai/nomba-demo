@@ -103,7 +103,7 @@ const TerminalSectionInteractions = () => {
           loop
           autoPlay
           muted
-          playsinline
+          playsInline
           src={spinTerminal}
         ></video>
         <div className="c_terminal_sectInt_experience_txt">
