@@ -30,7 +30,7 @@ const LargeBusiness = () => {
           </>
         }
         data={easySolutionsForLargeBusiness}
-        description="Track payment on multiple channels for every item sold in your store. Track payment on multiple channels for every "
+        description="Track payment on multiple channels for every item sold in your store. "
       />
       <AnyTypeOfBusiness
         title={

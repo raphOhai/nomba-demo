@@ -230,7 +230,7 @@ export const largeBusinessTypes = [
 export const codeblockSection = {
   headline: "Get realtime notifications",
   description: "Streamline your workflow and customers notifications with ease using our powerful Webhook feature",
-  link: { href: "/", text: "Get Nomba for your growing business" },
+  link: { href: "https://dashboard.nomba.com/auth/login", text: "Get Nomba for your growing business" },
   image: (
     <StaticImage
       src="../assets/images/jpegs/large-business/code-block.png"

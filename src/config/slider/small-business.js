@@ -23,7 +23,7 @@ const smallBusinessPageSliderData = [
     text: "Open a business account right where you are, on your phone.",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -40,7 +40,7 @@ const smallBusinessPageSliderData = [
     text: "Decide how you’ll love to accept payments; you’ve got the transfer, QR code and card.",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -55,7 +55,7 @@ const smallBusinessPageSliderData = [
     text: "Track every cash, card and transfer transaction using your nomba app.",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -72,7 +72,7 @@ const smallBusinessPageSliderData = [
     text: "Request loans to buy goods and take your business to the next level.",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
 ];

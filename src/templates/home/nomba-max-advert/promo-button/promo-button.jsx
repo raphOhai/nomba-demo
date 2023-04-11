@@ -33,7 +33,8 @@ border
 border-[#ffcc00]
 border-dashed
 w-fit
-p-[5px]
+py-[5px]
+px-[7px]
 `);
 
 const badgeButtonStyle = ctl(`

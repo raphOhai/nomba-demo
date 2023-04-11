@@ -134,7 +134,7 @@ const businessTypesData = [
     title: "Mobile money agents",
     description:
       "As a mobile money agent, you need reliable tools to help you manage your transactions and finances efficiently, and that's where Nomba comes in.",
-    link: "/",
+    link: "/business/agents",
 
     images: (
       <div className={gridWrapper}>

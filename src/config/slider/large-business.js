@@ -21,7 +21,7 @@ const largeBusinessPageSliderData = [
     text: "Open a business bank account in minutes from the convenience of your office",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -36,7 +36,7 @@ const largeBusinessPageSliderData = [
     text: "Explore omni-channel payment methods for online and offline payments. ",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -51,7 +51,7 @@ const largeBusinessPageSliderData = [
     text: "Manage business operations, banking and payments on a single platform. ",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -66,7 +66,7 @@ const largeBusinessPageSliderData = [
     text: "Get real-time insights on total sales across multiple business outlets.",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
   {
@@ -81,7 +81,7 @@ const largeBusinessPageSliderData = [
     text: "Reconcile and track all your collections in cash and other payment channels.",
     // link: {
     //   text: "Get started",
-    //   href: "https://dashboard.nomba.com",
+    //   href: "https://dashboard.nomba.com/auth/login",
     // },
   },
 ];
@@ -100,7 +100,7 @@ const easySolutionsForLargeBusiness = [
       "You can streamline your team's work and improve productivity, allowing you to focus on growing your business.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
   {
@@ -112,7 +112,7 @@ const easySolutionsForLargeBusiness = [
       "Streamline operations, improve efficiency, manage, and receive payment across your different business outlets or branches easily.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
   {
@@ -128,7 +128,7 @@ const easySolutionsForLargeBusiness = [
       "Nomba settlement is designed to help businesses of all sizes manage their payments and cash flow more efficiently, reduce errors and fraud, and improve customer satisfaction.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
   {
@@ -144,7 +144,7 @@ const easySolutionsForLargeBusiness = [
       "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your large business",
-      href: "https://dashboard.nomba.com",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
   {
@@ -156,7 +156,7 @@ const easySolutionsForLargeBusiness = [
       "With Nomba's e-menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants ",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
   {

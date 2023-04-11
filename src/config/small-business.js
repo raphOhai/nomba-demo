@@ -228,24 +228,24 @@ export const perfectPaymentSolution = [
     illustration: <SingleDashboard className="w-[50px]" />,
     title: "View in a single dashboard",
     description: "Creating an account automatically assigns you to a Nomba wallet ",
-    link: { to: "/" },
+    link: { to: "https://dashboard.nomba.com/auth/login" },
   },
   {
     illustration: <POS className="w-[50px]" />,
     title: "POS Terminal",
     description: "Instantly accept payments, withdrawals and collections on a simple android device. ",
-    link: { to: "/" },
+    link: { to: "https://dashboard.nomba.com/auth/login" },
   },
   {
     illustration: <PayBills className="w-[50px]" />,
     title: "Pay bills",
     description: "Paying bills on Nomba is super easy. To pay a bill, log into your account, and select a biller.",
-    link: { to: "/" },
+    link: { to: "https://dashboard.nomba.com/auth/login" },
   },
   {
     illustration: <CashWithdrawal className="w-[50px]" />,
     title: "Cash withdrawal",
     description: "Make money easier by helping people withdraw, using the Nomba Pro POS terminal. ",
-    link: { to: "/" },
+    link: { to: "https://dashboard.nomba.com/auth/login" },
   },
 ];
