@@ -20,6 +20,7 @@ const HeroSlider = ({ images, className }) => {
       slidesPerView={1.2}
       modules={[Autoplay]}
       className={className}
+      breakpoints={breakpoints}
       autoplay={{
         delay: 6500,
         disableOnInteraction: false,
@@ -29,7 +30,32 @@ const HeroSlider = ({ images, className }) => {
     </Swiper>
   );
 };
-
+const breakpoints = {
+  280: {
+    slidesPerView: 1,
+  },
+  320: {
+    slidesPerView: 1.3,
+  },
+  390: {
+    slidesPerView: 1.4,
+  },
+  450: {
+    slidesPerView: 1.6,
+  },
+  640: {
+    slidesPerView: 2,
+  },
+  850: {
+    slidesPerView: 2,
+  },
+  1100: {
+    slidesPerView: 2.5,
+  },
+  1400: {
+    slidesPerView: 3,
+  },
+};
 HeroSlider.propTypes = {
   images: PropTypes.array,
   className: PropTypes.string,

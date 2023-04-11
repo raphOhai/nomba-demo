@@ -63,7 +63,7 @@ text-gray-900
 whitespace-nowrap
 cursor-pointer
 px-1 py-4 
-text-base
+text-[16px]
 font-normal
 transition-all
 duration-300

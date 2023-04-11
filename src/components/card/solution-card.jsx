@@ -37,7 +37,7 @@ const illustrationSpanStyle = ctl(`
 `);
 
 const readmoreSpanStyle = ctl(`
-inline-block
+
 `);
 
 const descriptionBaseStyle = [
