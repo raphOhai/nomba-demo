@@ -1,17 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Br } from "components";
-import heroGif from "assets/images/svgs/terminal/hero.mp4";
+import hero_gif from "assets/images/svgs/terminal/hero.mp4";
 import "./index.scss";
 import Play from "assets/images/svgs/terminal/play.svg";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
 import gsap from "gsap";
 import HeroVid from "assets/images/svgs/terminal/video.mp4";
 import { StaticImage } from "gatsby-plugin-image";
-import useIsMobile from "hooks/useIsMobile";
 
 const TerminalHero = () => {
-  const isMobile = useIsMobile();
   const hero_vid = useRef(null);
+  const heroGif = useRef(null);
   const [playVideo, setPlayVid] = useState(false);
   useEffect(() => {
     window.addEventListener("mousemove", e => {
@@ -45,7 +44,9 @@ const TerminalHero = () => {
       </div>
       <div className="terminal_hero">
         <div className="terminal_hero_video">
-          <video playsinline loop autoPlay muted src={heroGif}></video>
+          <video autoPlay loop muted playsInline>
+            <source ref={heroGif} src={hero_gif} type="video/mp4"></source>
+          </video>
         </div>
         <div onClick={playVid} className="play_btn">
           {playVideo ? (

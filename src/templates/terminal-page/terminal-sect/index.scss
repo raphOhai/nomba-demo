@@ -142,14 +142,14 @@
                 @include flex_col(3rem);
             }
             video{
-                width: 50%;
+                width: 40%;
                 @include media("<=tablet"){
                     width: 100%;
                 }
             }
             &_features{
                 z-index: 2;
-                transform: translateX(-9rem) translateY(5rem);
+                transform: translateX(-7rem) translateY(5rem);
                  @include flex_col(2rem);
                  width: 30%;
                  @include media("<=tablet"){
@@ -158,10 +158,13 @@
                 }
                  .c_feature{
                     background-color: $fade-bl;
-                    padding:.8rem 1rem ;
+                    padding:.5rem 1rem ;
                     border-top-right-radius:.4rem ;
                     border-bottom-right-radius:.4rem;
                     @include flex(flex-start,center,.6rem);
+                    p{
+                        font-size: 1rem;
+                    }
                  }
             }
         }
