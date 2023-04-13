@@ -7,7 +7,7 @@ const AboutUsPageHeader = () => {
     <>
       <PageHeader
         pageHeaderText="Improving payment experience for businesses"
-        pageHeaderSubText="We are creating tools for businesses to manage sales, money and payments without hurdles  "
+        pageHeaderSubText="Accept bank cards, receive transfers, and collect payment via QR codes"
         pageHeaderButtonText="Get Started"
         image={
           <StaticImage
