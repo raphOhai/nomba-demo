@@ -3,6 +3,16 @@ import React from "react";
 import Visa from "assets/images/svgs/visa.svg";
 import Master from "assets/images/svgs/master.svg";
 import Wifi from "assets/images/svgs/wifi.svg";
+import Printer from "assets/images/svgs/printer.svg";
+import CisUSb from "assets/images/svgs/usb.svg";
+import FourG from "assets/images/svgs/fourg.svg";
+
+import VisaLight from "assets/images/svgs/visa-light.svg";
+import MasterLight from "assets/images/svgs/master-light.svg";
+import WifiLight from "assets/images/svgs/wifi-light.svg";
+import PrinterLight from "assets/images/svgs/printer-light.svg";
+import CisUSbLight from "assets/images/svgs/usb-light.svg";
+import FourGLight from "assets/images/svgs/fourg-light.svg";
 import Verve from "assets/images/svgs/verve.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -43,7 +53,10 @@ export const posCardData = [
       <Visa key="visacard" />,
       <Master key="mastercard" />,
       <Wifi key="wifi" />,
-      <StaticImage src="../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
+      <Printer key="printer" />,
+      <FourG key="4g" />,
+      <CisUSb key="usb" />,
+      // <StaticImage src="../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
     ],
   },
   {
@@ -59,5 +72,14 @@ export const posCardData = [
 
     image: <StaticImage width={124} height={267} src="../assets/images/jpegs/homepage/Nomba-Max.png" alt="Nomba Max" />,
     link: "/max",
+    icons: [
+      <VisaLight key="visacard" />,
+      <MasterLight key="mastercard" />,
+      <WifiLight key="wifi" />,
+      <PrinterLight key="printer" />,
+      <FourGLight key="4g" />,
+      <CisUSbLight key="usb" />,
+      // <StaticImage src="../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
+    ],
   },
 ];
