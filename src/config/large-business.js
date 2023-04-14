@@ -194,8 +194,8 @@ export const largeBusinessTypes = [
     title: "Transport",
     headline: "Nomba provides a secure and reliable payment platform.",
     description:
-      "But perhaps the biggest benefit of using Nomba has been the increased security and transparency it provides. With Nomba, we can track all our payment transactions and identify any discrepancies or fraudulent activities. This has given us peace of mind and helped us build trust with our customers.",
-    respondent: "Kelechi Isreal, Transportation ",
+      "The fact that I can check date range to get proper visibility on our company's performance, is a great joy to me. With Nomba, we've been able to reduce cash suppression drastically in our company across the country.",
+    respondent: "Mrs Doris, CFO Ifesinachi Group ",
     images: (
       <div className={gridWrapper}>
         <div className={imgClassWrapper2}>

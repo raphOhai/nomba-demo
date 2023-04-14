@@ -9,12 +9,13 @@ const AcceptPaymentsPageHeader = () => {
     <>
       <PageHeader
         pageHeaderText=" Accepting payments  has never been easier"
-        pageHeaderSubText="Accept bank cards | Receive transfers  | Collect payment via QR Codes "
+        pageHeaderSubText="Accept bank cards, receive transfers, and collect payment via QR codes"
         pageHeaderButtonText="Get Started"
         image={
           <StaticImage
-            width={629}
-            height={644}
+            width={612}
+            height={637}
+            className="rounded-lg shadow-md"
             src="../../../../assets/images/jpegs/Accepting payments has never been easier.jpg"
             alt="Accepting payments has never been easier"
           />
