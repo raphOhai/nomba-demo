@@ -79,6 +79,8 @@ function Waitlist() {
         </div>
       </div>
       <hr />
+      <Br on="desktop" />
+      <Br on="desktop" />
     </>
   );
 }

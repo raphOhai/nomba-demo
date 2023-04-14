@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "style/terminal-page/main.scss";
+import { MainFooter } from "components/layout/footer";
+import { AppDownload } from "components/layout/footer/app-download";
 import {
   TerminalHeader,
   CommonQuestions,
@@ -25,7 +27,8 @@ const TerminalPage = () => {
       <CommonQuestions />
       <Drag />
       <Waitlist />
-      <Footer />
+      <AppDownload />
+      <MainFooter />
     </div>
   );
 };
