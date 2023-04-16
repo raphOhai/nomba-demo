@@ -59,7 +59,6 @@ function Waitlist() {
           </div>
         </div>
       </div>
-
       <div className="d_waitlist" id="waitlist">
         <div className="d_waitlist_tr text-center">
           <h1 data-animation="h">Get better, Get Nomba MAX!</h1>
