@@ -159,8 +159,8 @@ export const largeBusinessTypes = [
     title: "Retails",
     headline: "Retails shops  in communities reconcile all cash collections with Nomba.",
     description:
-      "With Nomba's payment solutions, we've been able to accept payments in a variety of ways, including credit and debit cards, bank transfers, and mobile payments.r",
-    respondent: "Ayomide Iyawo, Market trader",
+      "I like the uniqueness of Nomba’s POS terminals. Since I started using Nomba terminals, I’ve noticed an improvement in my customers satisfaction, because they no longer wait for long for us to verify payment. Also I’m, able to see the performance of my business in one view. ",
+    respondent: "Mr Ifeanyi, Lacore",
     images: (
       <div className={gridWrapper}>
         <div className={imgClassWrapper2}>

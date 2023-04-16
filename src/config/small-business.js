@@ -108,8 +108,8 @@ export const smallBusinesSolutions = [
     title: "Supermarkets",
     headline: "Supermarkets love to track sales and multiple payments using Nomba",
     description:
-      "We're extremely satisfied with Nomba and how it has made payments easy for our business. It's a reliable and user-friendly payment solution that has improved our cash flow and helped us provide better service to our customers.",
-    respondent: "Ayomide Iyawo, Market trader",
+      "I’m extremely happy with how Nomba turned around my payment collection in my business. I use to suffer from payment disputes before, but since I got onboarded on Nomba, everything seems ok.",
+    respondent: "Jude, Mama Oyoyo",
     images: (
       <div className={gridWrapper}>
         <div className={imgClassWrapper2}>
