@@ -8,7 +8,7 @@ const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
   const backgroundColor = isMax ? "bg-n-grey6" : "bg-n-grey1";
   const textColor = isMax ? "primary-100" : "primary";
   const featuresColor = isMax ? "primary-100" : "n-grey6";
-  const iconsGridColumn = !isMax && device.type === "pro" ? `grid-cols-4` : "grid-cols-3";
+  const iconsGridColumn = device.type !== "lite" ? `grid-cols-6` : "grid-cols-3";
   return (
     <section className={`shadow-md hover:shadow-xl rounded-lg relative py-8 ${backgroundColor}`}>
       <div className="h-full flex flex-col justify-between">
@@ -27,13 +27,18 @@ const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
           </div>
         </div>
 
-        <div className=" mx-5">
+        <div className="-mt-[5px] mx-5">
           {device.price ? (
-            <div className="flex flex-row  justify-between items-baseline">
-              <Ntext variant="text5" color={textColor} className="flex">
-                {device.price}
+            <div>
+              <Ntext variant="p12" color="primary-900" className=" m-0 p-0">
+                Lease Price
               </Ntext>
-              <ReadMore variant="text3" color={textColor} href={link} />
+              <div className="flex flex-row  justify-between items-baseline">
+                <Ntext variant="text5" color={textColor} className="flex">
+                  {device.price}
+                </Ntext>
+                <ReadMore variant="text3" text="Buy now" color={textColor} href={link} />
+              </div>
             </div>
           ) : (
             <div className="flex flex-row  justify-between items-baseline">
@@ -49,11 +54,11 @@ const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
 const posCardHeaderStyle = ctl(`
 flex
 justify-between
+items-center
 `);
 
 const posTitleIconStyle = ctl(`
 grid
-md:gap-2
 gap
 place-items-center 
 `);
