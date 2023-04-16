@@ -70,7 +70,7 @@ export const largeBusinessTypes = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../assets/images/jpegs/business-size/restaurant-2.png"
+            src="../assets/images/jpegs/business-size/restaurant-2-large.png"
             alt="Image 3"
           />
         </div>
@@ -175,7 +175,7 @@ export const largeBusinessTypes = [
           <StaticImage
             className={imgClass}
             height={299}
-            src="../assets/images/jpegs/business-size/retail-2.png"
+            src="../assets/images/jpegs/business-size/retail-2-large.png"
             alt="Image 3"
           />
         </div>

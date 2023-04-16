@@ -1,6 +1,5 @@
 import React from "react";
 import PropType from "prop-types";
-import GodIsGood from "svgs/sponsors/god-is-good.svg";
 import BuyPower from "svgs/sponsors/buy-power.svg";
 import GiGm from "svgs/sponsors/gigm.svg";
 import RelianceHMO from "svgs/sponsors/reliance-hmo.svg";
@@ -8,12 +7,20 @@ import { StaticImage } from "gatsby-plugin-image";
 const SponsorList = ({ gig, reliance, gigm, crossFit, buyPower, className }) => {
   return (
     <div
-      className={`flex justify-center gap-5 md:gap-14 mt-[50px] items-center flex-nowrap scrollbar-hide overflow-auto ${className}`}
+      className={`flex justify-start md:justify-center gap-5 md:gap-14 mt-[50px] items-center flex-nowrap scrollbar-hide overflow-auto ${className}`}
     >
-      {gig && <GodIsGood className="min-w-[80px]" />}
+      {gig && (
+        <StaticImage
+          width={80}
+          className="min-w-[80px]"
+          height={50}
+          src="../../../assets/images/jpegs/abc-logo2.png"
+          alt="ABC"
+        />
+      )}
+
       {reliance && <RelianceHMO className="min-w-[80px]" />}
       {gigm && <GiGm className="min-w-[80px]" />}
-
       {buyPower && <BuyPower className="min-w-[80px]" />}
       {crossFit && (
         <StaticImage
