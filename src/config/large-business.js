@@ -54,8 +54,8 @@ export const largeBusinessTypes = [
     title: "Restaurants",
     headline: "Restaurants receive card payments with Nomba",
     description:
-      "What we really love about Nomba is their QR code payment solution. We've set up unique QR codes at each table, and our customers can simply scan the code with their mobile devices to view our menu, place their order, and complete their transactions.",
-    respondent: "Temi Alabi",
+      "Before now payment was a struggle, and reconciliation wasn’t easy, but since Nomba, we can confirm transfers almost immediately, and POS payment, we can know if they dropped or not. It’s been a very good experience altogether for the business.",
+    respondent: "Grant Odunsi, Greymatter",
     images: (
       <div className={gridWrapper}>
         <div className={imgClassWrapper2}>
