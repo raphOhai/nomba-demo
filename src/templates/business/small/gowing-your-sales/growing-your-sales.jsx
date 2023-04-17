@@ -10,7 +10,7 @@ const GrowingYourSales = () => {
       <Container>
         <SectionHeader>
           <Ntext variant="h3">
-            Growing your sales become
+            Growing your sales become&nbsp;
             <Br on="desktop" />
             easier with Nomba
           </Ntext>

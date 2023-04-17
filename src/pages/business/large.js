@@ -24,7 +24,7 @@ const LargeBusiness = () => {
       <EasySolution
         title={
           <>
-            Easy solutions for your
+            Easy solutions for your&nbsp;
             <Br on="desktop" />
             Large businesses
           </>
