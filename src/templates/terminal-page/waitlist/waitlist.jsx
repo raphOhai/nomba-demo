@@ -8,7 +8,7 @@ function Waitlist() {
     e.preventDefault();
     const data = new FormData(e.target);
     fetch(
-      "https://script.google.com/macros/s/AKfycbw6XUBUMiolMoNjfZkycUXmtL2F97slRyL6D9FNlt2c7t9lOxFPCR3-Nd4i60LGFHn06w/exec",
+      "https://script.google.com/macros/s/AKfycbxON60h8dXALsPYUXdW8-myUr8-TYX_C9Lar6VpdcT2LJTyZ6oIAkd4XchlGXDk16ufNA/exec",
       {
         method: "POST",
         body: data,
