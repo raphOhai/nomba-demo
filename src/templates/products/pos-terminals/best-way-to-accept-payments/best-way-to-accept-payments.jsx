@@ -21,7 +21,8 @@ const BestWayToAcceptPayments = () => {
     md:px-16 
     py-20 
     lg:py-40
-    mb-20 
+    mb-20
+    lg:mb-36 
     overflow-hidden "
     >
       <SectionBrandElement />
