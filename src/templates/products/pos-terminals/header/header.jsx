@@ -13,6 +13,7 @@ const PosPageHeader = () => {
         <StaticImage
           width={629}
           height={644}
+          className="rounded-lg"
           src="../../../../assets/images/jpegs/Get paid in-store or on-the-go.jpg"
           alt="Get paid in-store or on-the-go"
         />
