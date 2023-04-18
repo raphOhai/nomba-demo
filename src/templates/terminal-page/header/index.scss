@@ -1,0 +1,29 @@
+.terminal_header {
+  padding: 1.3rem 4rem;
+  @include flex(space-between, center, 0);
+  @include media("<=tablet"){
+    background-color: #121212;
+    padding: 1.3rem 1.8rem;
+  }
+  button{
+    @include media("<=tablet"){
+      display: none;
+    }
+  }
+  .cta{
+    display: none;
+    @include media("<=tablet"){
+     display: block;
+    }
+      >div {
+         color: $yellow;
+         @include media("<=tablet"){
+          @include flex(space-between,center,.5rem);
+        }
+        p{
+            font-size: .99rem;
+         }
+    
+     }
+}
+}

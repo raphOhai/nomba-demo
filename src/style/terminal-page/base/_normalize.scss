@@ -1,0 +1,60 @@
+html {
+  scroll-behavior: smooth;
+  //
+  @include media("<=tablet") {
+    font-size: calc(100vw / 475 * 10);
+  }
+  @include media("<=phone-tab") {
+    font-size: calc(100vw / 375 * 14);
+  }
+}
+.terminal_wrap {
+  background: black;
+  font-size: calc(100vw / 1440 * 16);
+}
+section {
+  width: 100%;
+}
+h1 {
+  font-size: toRem(48);
+  font-weight: 600;
+  color: $light-txt;
+  line-height: 3.8rem;
+  overflow: hidden;
+  @include media("<=phone-tab") {
+    font-size: toRem(37);
+    line-height: 3rem;
+  }
+}
+hr {
+  border: none;
+  border: 1px solid #1d1d1d;
+  margin: 20px auto;
+  width: 80%;
+}
+p {
+  font-size: toRem(18);
+  @include media("<=phone-tab") {
+    font-size: 1.1rem;
+  }
+}
+button {
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+}
+input {
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+canvas {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: sticky;
+}

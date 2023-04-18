@@ -1,19 +1,13 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import {
-  Br,
-  Container,
-  IllustrationCard,
-  Ntext,
-  SectionHeader,
-} from "components";
+import { Br, Container, IllustrationCard, Ntext, SectionHeader } from "components";
 import { homePaymentOptions } from "config/options-section/home";
 
 const HomepageGotOptions = () => {
   return (
     <section className={gotOptionsWrapperStyle}>
       <Container>
-        <SectionHeader>
+        <SectionHeader className="!pt-[50px]">
           <Ntext variant="h3" color="primary-100">
             You’ve got options. <Br />
             Receive payments on your terms
@@ -22,10 +16,7 @@ const HomepageGotOptions = () => {
 
         <div className={optionsListStyle}>
           {homePaymentOptions.map((paymentOption, index) => (
-            <IllustrationCard
-              {...paymentOption}
-              key={`home_payment_option${index}`}
-            />
+            <IllustrationCard {...paymentOption} key={`home_payment_option${index}`} />
           ))}
         </div>
       </Container>

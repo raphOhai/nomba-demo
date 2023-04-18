@@ -10,14 +10,7 @@ const {
   },
 } = tailwindconfig;
 
-const Ntext = ({
-  value,
-  variant: textVariant,
-  weight,
-  color = "primary",
-  className,
-  children,
-}) => {
+const Ntext = ({ value, variant: textVariant, weight, color = "primary", className, children }) => {
   let TextElement = textVariant[0] === "p" ? "p" : textVariant;
 
   // h7 is not a valid, we will use replace this with an h6 tag but the style for h7 will be retained according to the design system
@@ -40,7 +33,7 @@ const Ntext = ({
     "prosubText",
     "readMore",
     "pricing",
-    "pricingSub"
+    "pricingSub",
   ];
 
   if (customVariants.includes(textVariant)) {
@@ -76,18 +69,18 @@ const variants = {
     font-bold 
     `,
   h2: `
-    md:text-[49px]
-    text-[28px]
+    md:text-[48px]
+    text-[32px]
     md:leading-[59.04px]
-    leading-[39.2px]
-    font-semibold 
+    leading-[40.2px]
+    font-bold 
     `,
 
   h3: `
-    md:text-[37px]
-    text-[21px]
-    md:leading-[46.87px]
-    leading-[29.4px]
+    md:text-[40px]
+    text-[32px]
+    md:leading-[47.87px]
+    leading-[39.4px]
     font-semibold 
     `,
   h4: `
@@ -102,8 +95,6 @@ const variants = {
     text-[14px]
     md:leading-[30.5px]
     leading-[19.6px]
-    md:normal-case
-    uppercase
     font-semibold 
     `,
   h6: `
@@ -162,6 +153,13 @@ const variants = {
     leading-[22px]
     md:text-[16px]
     md:leading-[24px]
+    font-normal
+    `,
+  text4lite: `
+    text-[14px]
+    leading-[22px]
+    md:text-[16px]
+    md:leading-[24px]
     font-[400]
     `,
   text4: `
@@ -172,7 +170,7 @@ const variants = {
     `,
   text5: `
   font-[600]
-  text-[16px]
+  text-[20px]
   leading-[24px]
   md:font-[700]
   md:text-[24px]
@@ -253,7 +251,7 @@ const variants = {
     leading-[24px]
     md:text-[20px]
     md:leading-[60px]
-    `
+    `,
 };
 const validElements = [
   "h1",
@@ -271,6 +269,7 @@ const validElements = [
   "text1",
   "text2",
   "text3",
+  "text4lite",
   "text4",
   "text5",
   "text6",
@@ -281,7 +280,7 @@ const validElements = [
   "prosubText",
   "readMore",
   "pricing",
-  "pricingSub"
+  "pricingSub",
 ];
 
 Ntext.defaultProps = {};

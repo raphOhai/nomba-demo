@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
-import { Ntext, Container, SectionHeader, PosCard } from "components";
-import { posCardData } from "config/pos-cards-data";
+import { Ntext, Container, SectionHeader, TerminalCard } from "components";
+import { posCardData } from "config/nomba-terminals";
 
 const POSTerminals = ({ title }) => {
   return (
-    <section className="py-24">
+    <section className="bg-primary-100 pb-[80px]">
       <Container>
         {title && (
           <SectionHeader>
@@ -15,7 +15,7 @@ const POSTerminals = ({ title }) => {
         )}
         <div className={posCardWrapperStyle}>
           {posCardData.map((posdetails, index) => (
-            <PosCard {...posdetails} key={`pos_card_${index}`} />
+            <TerminalCard {...posdetails} key={`pos_card_${index}`} />
           ))}
         </div>
       </Container>
@@ -24,10 +24,7 @@ const POSTerminals = ({ title }) => {
 };
 
 const posCardWrapperStyle = ctl(`
-grid 
-gap-[50px] 
-lg:grid-cols-2 
-md:overflow-hidden
+md:grid md:grid-cols-3 gap-7 xs:flex xs:flex-col
 `);
 
 POSTerminals.propTypes = {

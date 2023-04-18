@@ -1,0 +1,14 @@
+.c_drag{
+    width: 100%;
+    &_img{
+        position: relative;
+        width:85%;
+        margin: 0 auto;
+        z-index: 1;
+        @extend %nodrag;
+        @extend %noselect;
+        @include media("<=phone-tab"){
+            width: 100%;
+        }
+    }
+}

@@ -8,17 +8,14 @@ const TestimonialCard = ({ name, role, testimonial, image }) => {
     <div className={cardWrapStyle}>
       <div className={textWrapStyle}>
         <div className={testimonialTextStyle}>
-          <Ntext variant="h4" color="primary-100" value={testimonial} />
+          <Ntext variant="text4" color="primary-100" value={testimonial} />
         </div>
 
-        <Ntext
-          variant="h4"
-          color="primary-100"
-          value={name}
-          className="mt-14 "
-        />
+        <div className="md:mt-8 mt-0">
+          <Ntext variant="text3" color="n-grey1" value={name} />
 
-        {role && <Ntext variant="p18" color="primary-100" value={role} />}
+          {role && <Ntext variant="text3" color="n-grey4" value={role} />}
+        </div>
       </div>
 
       <div className={imageWrapStyle}>
@@ -34,7 +31,7 @@ const cardWrapStyle = ctl(`
   flex
   flex-col
   lg:flex-row
-  lg:items-center
+  lg:items-start
   justify-between
   bg-primary
   mb-10
@@ -43,9 +40,9 @@ const textWrapStyle = ctl(`
   xl:max-w-[698px]
   sm:max-w-[570px]
   max-w-[90%]
-  mx-auto
-  slider-margin-left
-  mt-10
+  mt-[30px]
+  md:mt-[63px]
+  slider-padding-left
   mb-10
   lg:mb-0
 `);
@@ -53,10 +50,12 @@ const imageWrapStyle = ctl(`
   lg:w-[40%] 
   w-full 
   lg:h-[541px] 
+  slider-padding-right
   md:h-[800px] 
   sm:h-[620px] 
   xs:h-[484px]
-  h-[383px] 
+  h-[383px]
+  rounded-xl
   relative
 `);
 const yellowLineStyle = ctl(`
@@ -72,9 +71,9 @@ const yellowLineStyle = ctl(`
   -top-3 
 `);
 const testimonialTextStyle = ctl(`
-  lg:mb-[106px] 
+  md:mb-[60px]
+  md:max-w-[490px] 
   min-h-[200px] 
-  sm:min-h-[350px] 
   lg:min-h-max
 `);
 

@@ -12,9 +12,7 @@ const BusinessStageSlide = () => {
       <Container>
         <div className={gridWrapperStyle}>
           <div className="col-span-1">
-            <Ntext variant="h3">
-              We've been with you, at every stage of your business
-            </Ntext>
+            <Ntext variant="h3">We've been with you, at every stage of your business</Ntext>
             <Ntext variant="p18" className="mt-4">
               Have a great look at what we've achieved together
             </Ntext>
@@ -51,11 +49,7 @@ const Slider = () => {
       className="mySwiper"
     >
       {slides.map((slide, index) => {
-        return (
-          <SwiperSlide key={`business_stage_swiper_${index}`}>
-            {slide}
-          </SwiperSlide>
-        );
+        return <SwiperSlide key={`business_stage_swiper_${index}`}>{slide}</SwiperSlide>;
       })}
     </Swiper>
   );
@@ -69,8 +63,8 @@ const slideImageSizeProps = {
 const slides = [
   <StaticImage
     {...slideImageSizeProps}
-    src="../../../assets/images/jpegs/about/Kudi Team.jpg"
-    alt="Kudi Team"
+    src="../../../assets/images/jpegs/about/Kudi lady.jpg"
+    alt="Kudi Lady smiling"
   />,
   <StaticImage
     {...slideImageSizeProps}
@@ -79,8 +73,8 @@ const slides = [
   />,
   <StaticImage
     {...slideImageSizeProps}
-    src="../../../assets/images/jpegs/about/Kudi Old product.jpg"
-    alt="Kudi Old product"
+    src="../../../assets/images/jpegs/about/Kudi Swag.jpg"
+    alt="Kudi man smiling"
   />,
 ];
 

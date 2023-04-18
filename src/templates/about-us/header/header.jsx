@@ -7,17 +7,15 @@ const AboutUsPageHeader = () => {
     <>
       <PageHeader
         pageHeaderText="Improving payment experience for businesses"
-        pageHeaderSubText="We are creating tools for businesses to manage sales, money and payments without hurdles  "
+        pageHeaderSubText="We are creating tools for businesses to manage sales, money and payments without hurdles"
         pageHeaderButtonText="Get Started"
         image={
           <StaticImage
-            width={629}
-            height={644}
+            width={612}
+            height={637}
+            className="rounded-lg shadow-md"
             src="../../../assets/images/jpegs/about/About Us - Improving experience.jpg"
             alt="About Us Improving experience"
-            style={{
-              clipPath: "polygon(0% 100%, 0% 60%, 100% 0%, 100% 100%)",
-            }}
           />
         }
       />

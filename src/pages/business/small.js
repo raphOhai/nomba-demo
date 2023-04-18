@@ -1,28 +1,44 @@
 import React from "react";
 
 import Layout from "components/layout";
-import {
-  GrowingYourSales,
-  MakeYourBusinessEasy,
-  SmallPageHeader,
-  SmallBusinessInfoGridSection,
-} from "templates/business/small";
-import { Testimonial } from "components";
+import { GrowingYourSales, Paralax, SmallPageHeader, PerfectSolutions } from "templates/business/small";
+import { EasySolution } from "components/easy-solution";
+import { AnyTypeOfBusiness } from "components/any-type-of-business";
+import { HomepageTipsAndUpdate } from "templates";
+import { Testimonial, Br } from "components";
 import { SmallBusinessTestimonials } from "config/testimonials";
-
+import { smallBusinesSolutions } from "config/small-business";
+import { easySolutionsForSmallBusiness } from "config/slider";
 const SmallBusiness = () => {
   return (
     <Layout title="Small Business">
       <SmallPageHeader />
       <GrowingYourSales />
-      <MakeYourBusinessEasy />
-      <SmallBusinessInfoGridSection />
-      <div className="pt-2">
-        <Testimonial
-          testimonials={SmallBusinessTestimonials}
-          headingText="Hear what business owners have to say"
-        />
+      <EasySolution
+        title={
+          <>
+            Easy solutions for your&nbsp;
+            <Br on="desktop" />
+            small businesses
+          </>
+        }
+        description="Simplifying success for your business and track payment on multiple channels for every item sold in your store. "
+        data={easySolutionsForSmallBusiness}
+      />
+      <AnyTypeOfBusiness
+        title={
+          <>
+            Nomba is built for all type <Br on="desktop" /> and size of businesses
+          </>
+        }
+        data={smallBusinesSolutions}
+      />
+      <PerfectSolutions />
+      <Paralax />
+      <div className="">
+        <Testimonial testimonials={SmallBusinessTestimonials} headingText="Hear what business partners have to say" />
       </div>
+      <HomepageTipsAndUpdate />
     </Layout>
   );
 };

@@ -11,13 +11,7 @@ const FooterNavigation = () => {
   return (
     <nav className={footerNavigationStyle}>
       {footerMenuKeys.map(footerMenuKey => {
-        return (
-          <NavList
-            key={footerMenuKey}
-            header={footerMenuKey}
-            list={footerMenu[footerMenuKey]}
-          />
-        );
+        return <NavList key={footerMenuKey} header={footerMenuKey} list={footerMenu[footerMenuKey]} />;
       })}
     </nav>
   );
@@ -26,14 +20,16 @@ const FooterNavigation = () => {
 const NavList = ({ header, list }) => {
   return (
     <div>
-      <Ntext variant="h6">{header}</Ntext>
+      <Ntext variant="p16" color="n-grey3">
+        {header}
+      </Ntext>
 
       <ul>
         {list.map((listItem, index) => {
           return (
             <li key={`footer_list_item_${index}`} className="mt-2">
               <NLink {...listItem?.link}>
-                <Ntext variant="p16" color="primary-900">
+                <Ntext variant="text3" color="primary-200">
                   {listItem.title}
                 </Ntext>
               </NLink>

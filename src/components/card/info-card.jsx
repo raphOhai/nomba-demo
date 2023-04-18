@@ -3,43 +3,41 @@ import React from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components/ntext/ntext";
+import { NLink } from "components/nlink";
 import { ReadMore } from "components/read-more";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-
-const InfoCard = ({ title, date, link, image, picture }) => {
+import PlayButton from "svgs/play-button.svg";
+const InfoCard = ({ title, date, link, image, picture, isVideo }) => {
   return (
     <div className={infoCardWrapperStyle}>
-      {image ? (
-        <GatsbyImage image={getImage(image)} />
-      ) : picture ? (
-        picture
-      ) : (
-        <StaticImage
-          src="../../assets/images/jpegs/Edmund.jpg"
-          alt="Edmund smiling"
-          loading="eager"
-          objectFit="cover"
-          placeholder="blurred"
-          objectPosition="50% 50%"
-          className="w-full"
-        />
-      )}
-
-      <div className={infoCardInfoStyle}>
-        <Ntext
-          variant="h6"
-          color="primary-100"
-          value={title}
-          className="mb-2"
-        />
-        {date && <Ntext variant="h7" color="primary-100" value={date} />}
-
-        {link && (
-          <div className={readMoreWrapperStyle}>
-            <ReadMore {...link} />
-          </div>
+      <NLink href={link.href.url}>
+        {image ? (
+          <GatsbyImage image={getImage(image)} />
+        ) : picture ? (
+          picture
+        ) : (
+          <StaticImage
+            src="../../assets/images/jpegs/Edmund.jpg"
+            alt="Edmund smiling"
+            loading="eager"
+            objectFit="cover"
+            placeholder="blurred"
+            objectPosition="50% 50%"
+            className="w-full"
+          />
         )}
-      </div>
+        {isVideo && <PlayButton className="absolute left-0 right-0 top-0 bottom-0 m-auto z-50" />}
+        <div className={infoCardInfoStyle}>
+          <Ntext variant="h6" color="primary-100" value={title} className="mb-2" />
+          {date && <Ntext variant="h7" color="primary-100" value={date} />}
+
+          {link && (
+            <div className={readMoreWrapperStyle}>
+              <ReadMore {...link} />
+            </div>
+          )}
+        </div>
+      </NLink>
     </div>
   );
 };
@@ -89,6 +87,7 @@ InfoCard.propTypes = {
   title: PropTypes.string,
   date: PropTypes.string,
   link: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  isVideo: PropTypes.bool,
 };
 
 export { InfoCard };

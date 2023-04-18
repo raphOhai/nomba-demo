@@ -24,6 +24,15 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        additionalData: `
+          @import "style/terminal-page/abstracts/_mixins.scss";
+          @import "style/terminal-page/abstracts/_variables.scss";
+          `,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -38,6 +47,7 @@ module.exports = {
         components: path.join(__dirname, "src/components"),
         svgs: path.join(__dirname, "src/assets/images/svgs"),
         config: path.join(__dirname, "src/config"),
+        assets: path.join(__dirname, "src/assets"),
         utils: path.join(__dirname, "src/utils"),
         jpegs: path.join(__dirname, "src/assets/images/jpegs"),
         templates: path.join(__dirname, "src/templates"),

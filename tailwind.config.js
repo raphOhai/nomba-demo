@@ -1,20 +1,21 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,svg}"],
   mode: "jit",
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Garant", "sans-serif"],
-        "primary-italic": ["Garant-Italic", "sans-serif"],
+        primary: ["Inter", "sans-serif"],
       },
 
       backgroundImage: theme => ({
         "nomba-pro-hero-bg": "url('src/assets/images/left-slash.png')",
         "nomba-subtract": "url('src/assets/images/jpegs/Subtract.png')",
+        "bg-parallax": "url('src/assets/images/jpegs/small-business/parallax-image.png')",
         "card-bg-1": "url('src/assets/images/card-bg-1.png')",
         "card-bg-2": "url('src/assets/images/card-bg-2.png')",
+        "bg-parallax-blank": "url('src/assets/images/jpegs/small-business/blank.png')",
       }),
 
       colors: {
@@ -70,6 +71,7 @@ module.exports = {
           grey4: "#717171",
           grey5: "#555555",
           grey6: "#383838",
+          grey7: "#828282",
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
@@ -79,6 +81,9 @@ module.exports = {
           dark: "#111111",
           grey4: "#666666",
           faint: "#e5e4da",
+        },
+        gray: {
+          5: "#E0E0E0",
         },
       },
 
@@ -122,12 +127,29 @@ module.exports = {
     },
 
     screens: {
-      xs: "450px",
+      xs: "250px",
       ...defaultTheme.screens,
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          /* IE and Edge */
+          "-ms-overflow-style": "none",
+
+          /* Firefox */
+          "scrollbar-width": "none",
+
+          /* Safari and Chrome */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    }),
+  ],
 };

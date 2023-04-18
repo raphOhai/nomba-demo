@@ -2,54 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Garant-Italic";
-  src: url(assets/fonts/Garant-BoldItalic.otf);
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant";
-  src: url(assets/fonts/Garant-Bold.otf);
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant-Italic";
-  src: url(assets/fonts/Garant-SemiBoldItalic.otf);
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant";
-  src: url(assets/fonts/Garant-SemiBold.otf);
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant-Italic";
-  src: url(assets/fonts/Garant-Italic.otf);
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Garant";
-  src: url(assets/fonts/Garant-Regular.otf);
-  font-weight: 400;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 @layer base {
   body {
     @apply font-primary;
+    overflow-x: hidden !important;
   }
 }
 
 @media (min-width: 1400px) {
   .slider-margin-left {
-    margin-left: calc((100% - 1270px) / 2);
+    margin-left: calc((100% - 1320px) / 2);
+  }
+
+  .slider-margin-right {
+    margin-right: calc((100% - 1320px) / 2);
+  }
+
+  .slider-padding-right {
+    padding-right: calc((100% - 1320px) / 2);
+  }
+
+  .slider-padding-left {
+    padding-left: calc((100% - 1320px) / 2);
   }
 }
+
+.grey-bordered-button {
+  border: 1px solid #999999 !important;
+}
+
 .swiper-pagination > .swiper-pagination-bullet {
   @apply mr-2 rounded-full;
   background: white;
@@ -58,21 +41,51 @@
   width: 11px;
   height: 11px;
 }
+
 .swiper-pagination-bullet-active {
-  @apply !bg-black;
+  background-color: rgb(0, 0, 0) !important;
 }
+
+.swiper-pagination {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pagination-class > .swiper-pagination-progressbar-fill {
+  background-color: rgb(255 204 0) !important;
+  top: -4px !important;
+  height: 5px !important;
+}
+
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  height: 0.5px !important;
+  background-color: rgb(153 153 153) !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
 .react-rotating-text-cursor {
-  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
-    infinite;
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
   font-weight: 100;
 }
+
 @keyframes blinking-cursor {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -81,6 +94,7 @@
 .policy-page {
   @apply py-12;
 }
+
 .policy-page h2 {
   @apply mt-12;
   @apply mb-5;
@@ -89,9 +103,11 @@
 .policy-page p {
   @apply mb-3;
 }
+
 .menu-button-wrap li a {
   @apply w-full;
 }
+
 .policy-page ul {
   list-style-type: disc;
   list-style-position: inside;
@@ -128,13 +144,29 @@ dt {
   @apply my-2;
 }
 
-.illustration svg {
-  @apply mx-auto;
-  @apply min-h-[100px];
+.nomba-max-advert {
+  position: relative;
+  @apply text-center;
+  @apply relative;
+  @apply px-0;
+  @apply mt-20;
 }
 
-@screen md {
-  .illustration svg {
-    @apply mx-0;
-  }
+.nomba-max-advert:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url("src/assets/images/jpegs/Subtract.png");
+  background-repeat: repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+.illustration svg {
+  @apply min-h-[100px];
 }

@@ -1,20 +1,19 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-
 import { SliderCard } from "components";
 import NextIcon from "svgs/chevron-right.svg";
 import PreviousIcon from "svgs/chevron-left.svg";
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 
 const Slider = ({ slides }) => {
   const sliderItems = slides.map(item => (
-    <SwiperSlide key={item.heading}>
+    <SwiperSlide key={item.heading} className="flex items-stretch">
       <SliderCard
         heading={item.heading}
         image={item.image}
@@ -27,22 +26,39 @@ const Slider = ({ slides }) => {
 
   return (
     <div className={sectionWrapStyle}>
-      <SliderNavigation />
-
-      <div className="mt-[42px]">
-        <Swiper
-          navigation={{
-            nextEl: ".next-element",
-            prevEl: ".previous-element",
-          }}
-          className=" "
-          loop={true}
-          spaceBetween={24}
-          slidesPerView={1}
-          breakpoints={breakpoints}
-        >
-          {sliderItems}
-        </Swiper>
+      <div className="hidden md:block">
+        <SliderNavigation />
+        <div className="mt-[42px]">
+          <Swiper
+            navigation={{
+              nextEl: ".next-element",
+              prevEl: ".previous-element",
+            }}
+            pagination={{
+              type: "progressbar",
+              el: ".pagination-class",
+            }}
+            className=" !overflow-x-clip !overflow-visible"
+            loop={true}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={breakpoints}
+          >
+            {sliderItems}
+          </Swiper>
+        </div>
+      </div>
+      <div className="grid gap-10 md:hidden pb-5">
+        {slides.map(item => (
+          <SliderCard
+            heading={item.heading}
+            key={item.heading}
+            image={item.image}
+            text={item.text}
+            link={item?.link}
+            caseStudy={item?.caseStudy}
+          />
+        ))}
       </div>
     </div>
   );
@@ -51,22 +67,16 @@ const Slider = ({ slides }) => {
 const SliderNavigation = () => (
   <div className={controlWrapStyle}>
     <div className={controlButtonWrapStyle}>
-      <button
-        className={`${controlButtonStyle} previous-element`}
-        aria-label="Previous Slide"
-      >
+      <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
         <PreviousIcon />
       </button>
 
-      <button
-        className={`${controlButtonStyle} next-element`}
-        aria-label="Next Slide"
-      >
+      <button className={`${controlButtonStyle} next-element`} aria-label="Next Slide">
         <NextIcon />
       </button>
     </div>
 
-    <div className={blackLineStyle}></div>
+    <div className="pagination-class !relative"></div>
   </div>
 );
 
@@ -98,6 +108,7 @@ const breakpoints = {
 };
 
 const controlWrapStyle = ctl(`
+
   mx-auto 
   flex 
   items-center 
@@ -105,8 +116,8 @@ const controlWrapStyle = ctl(`
   gap-[11px]
 `);
 const sectionWrapStyle = ctl(`
-  slider-margin-left
-  ml-[25px]
+slider-margin-left
+mx-5
 `);
 const blackLineStyle = ctl(`
   bg-primary 
@@ -115,6 +126,7 @@ const blackLineStyle = ctl(`
   h-[.5px]
 `);
 const controlButtonWrapStyle = ctl(`
+  relative
   flex 
   lg:gap-[28px] 
   gap-[11px]
@@ -123,8 +135,7 @@ const controlButtonStyle = ctl(`
   rounded-full
   lg:p-[15px]
   p-[6px]
-  border
-  border-black
+  grey-bordered-button
   hover:bg-secondary-100
 `);
 

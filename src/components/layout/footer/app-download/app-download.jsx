@@ -1,24 +1,23 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
-import { Ntext, Container } from "components";
+import { Ntext, Container, Br } from "components";
 import AppStore from "svgs/apple.svg";
 import PlayStore from "svgs/playstore.svg";
 import SubFooterLeft from "svgs/subfooter-left.svg";
-import SubFooterRight from "svgs/subfooter-right.svg";
 import { DownloadButton } from "./download-button";
 
 const AppDownload = () => {
   return (
     <div className={pageWrapperStyle}>
       <SubFooterLeft className={subFooterLeftImage} />
-      <SubFooterRight className={subFooterRightImage} />
 
       <Container>
         <div className={pageInnerWrapStyle}>
           <div className={textWrapStyle}>
             <Ntext variant="h2" color="primary-100" className={headingStyle}>
-              Say yes to <br className="lg:hidden" /><span className="text-secondary">better</span> business
+              Get a free <span className="text-secondary">Nomba</span>
+              <Br on="mobile" /> account
             </Ntext>
 
             <Ntext
@@ -35,16 +34,14 @@ const AppDownload = () => {
               >
                 <PlayStore /> Google Play
               </DownloadButton>
-              <DownloadButton url="https://apps.apple.com/ng/app/nomba/id1625708506" trackingText="Download on App Store">
+              <DownloadButton
+                url="https://apps.apple.com/ng/app/nomba/id1625708506"
+                trackingText="Download on App Store"
+              >
                 <AppStore /> App Store
               </DownloadButton>
             </div>
           </div>
-
-          <StaticImage
-            src="../../../../assets/images/phone-mockup.png"
-            alt="a phone mockup showing financial transaction"
-          />
         </div>
       </Container>
     </div>
@@ -59,30 +56,27 @@ const pageInnerWrapStyle = ctl(`
   flex flex-col 
   lg:flex-row 
   items-center 
-  justify-between 
+  justify-center 
   lg:pt-4 
 `);
 const textWrapStyle = ctl(`
-  lg:text-left 
+  mt-[50px]
+  lg:mt-[100px]
   text-center
 `);
 const subFooterLeftImage = ctl(`
   absolute 
+  hidden
+  md:block
   lg:-top-10 
   xl:-top-0 
 `);
-const subFooterRightImage = ctl(`
-  absolute 
-  2xl:-right-2 
-  lg:-right-8 
-  sm:-right-36 
-  -right-52 
-  2xl:-bottom-12 bottom-0
-`);
 const headingStyle = ctl(`
   lg:flex gap-2
+  justify-center
+  text-center
   min-w-max
-  mt-[114px]
+
   lg:mt-0
 `);
 const subfooterParagraphStyle = ctl(`
@@ -92,13 +86,13 @@ const subfooterParagraphStyle = ctl(`
   mx-auto 
   normal-case 
   font-normal
-  pt-3 lg:pt-0
+  pt-3 lg:pt-4
   leading-[180%]
 `);
 const buttonWrapStyle = ctl(`
   flex 
-  lg:justify-start 
-  justify-center 
+  lg:justify-center 
+  justify-between 
   lg:gap-6 gap-5 
   mt-8 mb-4 lg:mb-0
 `);

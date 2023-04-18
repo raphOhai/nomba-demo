@@ -1,78 +1,39 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { StaticImage } from "gatsby-plugin-image";
-import { Br, Button, Container, Ntext, ReadMore } from "components";
-import { RotatingText } from "./rotating-text";
+import PropTypes from "prop-types";
+import { Button, Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
+import { HeroSlider, SponsorList } from "./index";
 
-const HomepageHero = () => {
+const HomepageHero = ({ title, description, images, mobileImages }) => {
   const { SIGNUP_URL } = constants;
   return (
     <section className={heroStyle}>
       <Container>
         <div className={heroTextWrapperStyle}>
-          <Ntext variant="h1" color="primary-1000">
-            Get better at business <Br on="desktop" /> with Nomba.
-          </Ntext>
+          <div className={heroTextHeaders}>
+            <Ntext variant="h1" color="primary-1000" className="basis-3/5">
+              {title}
+            </Ntext>
 
-          <Ntext variant="p18" className={subTextStyle}>
-            Over <span className={coloredText}>235,000</span> businesses trust Nomba to securely accept card
-            and transfer payments, manage their money, and grow their
-            business.
-          </Ntext>
+            <Ntext variant="p18" className={subTextStyle}>
+              {description}
+            </Ntext>
+          </div>
           <div className={heroButtonsContainer}>
-            <Button
-              href={{ url: SIGNUP_URL }}
-              size="medium"
-              text="Create an account for Free"
-            />
-            <ReadMore
-              color="n-grey6"
-              variant="text3"
-              href={{ "url": "tel:+23401888899" }}
-              text="Contact sales"
-
-            />
+            <Button href={{ url: SIGNUP_URL }} size="medium" text="Create an account for Free" />
+            <ReadMore color="n-grey6" variant="text3" href={{ url: "tel:+23401888899" }} text="Contact sales" />
           </div>
         </div>
         <div className={imageGridStyle}>
-          <div className={imageWrapperStyle}></div>
-          <div className={imageWrapperStyle}>
-            <StaticImage
-              width={510}
-              height={406}
-              src="../../../assets/images/jpegs/homepage/POS agent - nomba.jpg"
-              style={{
-                clipPath: "polygon(0% 99%, 0 68%, 86% 0, 100% 0, 100% 100%)",
-              }}
-              alt="Nomba POS Agent"
-            />
-          </div>
-          <div className={`${imageWrapperStyle} !block`}>
-            <StaticImage
-              width={746}
-              height={600}
-              src="../../../assets/images/jpegs/homepage/dfrte.png"
-              style={{
-                clipPath:
-                  "polygon(0 0, 100% 0, 100% 50%, 33% 50%, 23% 66%, 0 66%)",
-              }}
-              alt="Woman at the closing store."
-            />
-          </div>
-
-          <div className={imageWrapperStyle}>
-            <StaticImage
-              width={510}
-              height={459}
-              src="../../../assets/images/jpegs/homepage/market woman - nomba.jpg"
-              style={{
-                clipPath: "inset(0% 0% 31%)",
-              }}
-              alt="Woman making payment over POS"
-            />
-          </div>
+          {images.map((image, i) => (
+            <div kay={i} className={imageWrapperStyle}>
+              {image}
+            </div>
+          ))}
         </div>
+        <HeroSlider images={mobileImages} className="md:hidden" />
+        <SponsorList />
       </Container>
     </section>
   );
@@ -81,6 +42,7 @@ const HomepageHero = () => {
 // pb-[120px]
 const heroStyle = ctl(`
 md:pt-[150px]
+md:pb-[50px]
 pt-[100px]
 `);
 
@@ -90,34 +52,40 @@ font-bold
 
 const heroTextWrapperStyle = ctl(`
 lg:max-w-max
-md:max-w-[605px]
 max-w-[100%]
 lg:mb-[80px]
 sm:mb-[120px]
-mb-12
+md:mx-2
+mb-10
+`);
+
+const heroTextHeaders = ctl(`
+md:flex
+md:flex-row
+md:items-start
+mb-10
 `);
 
 const subTextStyle = ctl(`
-lg:max-w-[605px]
-max-w-[405px]
 mb-8
 mt-6
+md:mt-3
+basis-2/5
 `);
 
 const imageWrapperStyle = ctl(`
-md:block
-hidden
-odd:col-span-3
-even:col-span-2
+rounded 
+w-full lg:w-1/3
+text-center
 `);
 const imageGridStyle = ctl(`
-grid
-md:grid-cols-5
-grid-cols-1
-gap-[40px]
-lg:-mt-[450px]
-md:-mt-[350px]
+md:flex flex-nowrap
 pointer-events-none
+hidden
+overflow-x-auto
+mb-10
+md:gap-10
+gap-4
 `);
 
 const heroButtonsContainer = ctl(`
@@ -128,4 +96,9 @@ gap-[30px]
 items-center
 `);
 
+HomepageHero.propTypes = {
+  title: PropTypes.node,
+  description: PropTypes.string,
+  images: PropTypes.array,
+};
 export { HomepageHero };

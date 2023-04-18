@@ -8,7 +8,8 @@ const SectionHeader = ({ children, className }) => {
 };
 
 const headerStyle = ctl(`
-py-16
+pt-[100px]
+pb-[50px]
 text-center
 `);
 

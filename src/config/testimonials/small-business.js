@@ -5,26 +5,26 @@ import { imageStyle } from "./testimonial-image-style";
 const SmallBusinessTestimonials = [
   {
     name: "Auwal Usman",
-    role: "CEO, Auwalus Business Concepts.",
+    role: "CEO, Auwalus Business Concept",
     testimonial:
-      "Nomba (Formerly Kudi) is loved here in Adamawa State and the North because Kudi means money in Hausa and with the Money means Numbers (Nomba). All my referrals using Kudi have been so grateful because of numerous services that meet their needs, particularly the agent loan when they are short of funds.",
+      "Nomba (Formerly Kudi) is loved here in Adamawa State and the North because Kudi means money in Hausa and with the Money means Numbers (Nomba).",
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/small-business/auwal-usman.png"
+        src="../../assets/images/jpegs/small-business/auwal-usman-1.png"
         alt="Auwal Usman"
         className={imageStyle}
       />
     ),
   },
   {
-    name: "Azoronyeahu Uchenna Gentle",
-    role: "CEO, Akjfintech Solutions Global Resources",
+    name: "Goddey Duke",
+    role: "",
     testimonial:
-      "I could speak volumes on the timely responsiveness of the support team, the consistent almost zero network downtime, seamless terminal repairs structure and the down to earth staff. Nomba has blazed the trail for many unique products in the business world, without a shadow of doubt I would choose Nomba over and over.",
+      "In 2018/2019, I was introduced to Nomba (Formerly Kudi), and joining Nomba gave my business a new lease on life. Because I can cash out my funds immediately after a withdrawal, my capital has increased. In June 2021 I became a Nomba partner and in less than a year my business capital has increased 10X.",
     image: (
       <StaticImage
-        src="../../assets/images/jpegs/uchenna.png"
-        alt="Azoronyeahu Uchenna Gentle"
+        src="../../assets/images/jpegs/small-business/Goddey Duke.jpg"
+        alt="Mrs Grace"
         className={imageStyle}
       />
     ),
