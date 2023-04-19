@@ -28,15 +28,15 @@ const BestWayToAcceptPayments = () => {
       <SectionBrandElement />
       <Container>
         <div className={bestWayWrapperStles}>
-          <div>
+          <div className="max-w-[670px]">
             <Ntext variant="h2" color="primary-100">
               The Best Way to Accept <Br on="desktop" /> Offline and Online Payments
             </Ntext>
             <Ntext variant="p18" color="primary-100" className="mt-4">
-              Experience how you receive payments with the new Nomba Pro POS terminal
+              Experience how you receive payments with the new <Br on="desktop" /> Nomba MAX POS terminal
             </Ntext>
             <Ntext variant="p18" color="secondary" className="mt-8">
-              With the Nomba Pro POS Terminal, you can:
+              With the Nomba MAX Terminal, you can:
             </Ntext>
 
             <ul className={listWrapperStyles}>
@@ -51,8 +51,8 @@ const BestWayToAcceptPayments = () => {
           </div>
           <div className={imageWrapperStyles}>
             <StaticImage
-              width={450}
-              height={860}
+              width={421}
+              height={875}
               src="../../../../assets/images/jpegs/Nomba-Max-Front.png"
               alt="Nomba Pro Front"
             />
