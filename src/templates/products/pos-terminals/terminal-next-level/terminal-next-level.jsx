@@ -20,9 +20,7 @@ const TerminalNextLevel = () => {
               height={511}
               src="../../../../assets/images/jpegs/A chance to move your business to the next level.jpg"
               alt="A chance to move your business to the next level"
-              style={{
-                clipPath: "polygon(100% 0, 100% 76%, 74% 100%, 0 100%, 0 0)",
-              }}
+              className="rounded-lg"
             />
           </div>
           <div className={textWrapperStyle}>
@@ -48,11 +46,7 @@ const TerminalNextLevel = () => {
                 </Ntext>
               </li>
             </ul>
-            <ReadMore
-              color="primary"
-              text="Create an account"
-              href={{ url: SIGNUP_URL }}
-            />
+            <ReadMore color="primary" text="Create an account" href={{ url: SIGNUP_URL }} />
           </div>
         </div>
       </Container>
