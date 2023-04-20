@@ -32,7 +32,11 @@ function Waitlist() {
 
   return (
     <>
-      <div onClick={closeModal} className={`confirm_bd animate__animated animate__bounceIn ${show && "shew"}`}>
+      <div
+        onClick={closeModal}
+        onKeyDown={closeModal}
+        className={`confirm_bd animate__animated animate__bounceIn ${show && "shew"}`}
+      >
         <div className="waitlist_success">
           <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="70.5" cy="69.5" r="32.5" fill="white" />

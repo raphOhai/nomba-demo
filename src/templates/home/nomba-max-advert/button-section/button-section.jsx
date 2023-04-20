@@ -1,6 +1,6 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { Button, NLink } from "components";
+import { Button } from "components";
 import { nombaMax } from "templates/products/nomba-pro/constants";
 
 export default function ButtonSection({ link = { href: { url: nombaMax.url } } }) {
@@ -15,13 +15,6 @@ export default function ButtonSection({ link = { href: { url: nombaMax.url } } }
 }
 
 /* button section */
-
-const underlinedLink = ctl(`
-pb-[2px]
-n-dark
-border-b-[2px]
-border-n-yellow
-`);
 
 const buttonSection = ctl(`
 flex

@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Br, ReadMore, Container, SectionHeader } from "components";
 import Add from "svgs/n-icons/add.svg";

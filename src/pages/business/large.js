@@ -1,13 +1,7 @@
 import React from "react";
 
 import Layout from "components/layout";
-import {
-  Convenience,
-  HandlingBusinessPayments,
-  LargePageHeader,
-  LargeBusinessInfoGridSection,
-  CodeBlock,
-} from "templates/business/large";
+import { HandlingBusinessPayments, LargePageHeader, CodeBlock } from "templates/business/large";
 import { EasySolution } from "components/easy-solution";
 import { AnyTypeOfBusiness } from "components/any-type-of-business";
 import { LargeBusinessTestimonials } from "config/testimonials";

@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import SingleDashboard from "illustrations/single-dashboard.svg";
-import POS from "illustrations/pos.svg";
+import PoS from "illustrations/pos.svg";
 import PayBills from "illustrations/bills.svg";
 import CashWithdrawal from "illustrations/cash-withdrawal.svg";
 import { imgClass, imgClassWrapper1, imgClassWrapper2, imgClassWrapper3, imageStyle, gridWrapper } from "./img-clases";
@@ -231,7 +231,7 @@ export const perfectPaymentSolution = [
     link: { to: "https://dashboard.nomba.com/auth/login" },
   },
   {
-    illustration: <POS className="w-[50px]" />,
+    illustration: <PoS className="w-[50px]" />,
     title: "POS Terminal",
     description: "Instantly accept payments, withdrawals and collections on a simple android device. ",
     link: { to: "https://dashboard.nomba.com/auth/login" },
