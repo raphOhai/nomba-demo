@@ -1,7 +1,18 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx,svg}"],
+  content: [
+    "./src/config/**/*.{js,jsx,svg}",
+    "./src/pages/products/*.{js,jsx}",
+    "./src/pages/banking/*.{js,jsx}",
+    "./src/pages/business/*.{js,jsx}",
+    "./src/components/**/*.{html,jsx,js}",
+    "./src/templates/about-us/**/*.{html,jsx,js}",
+    "./src/templates/banking/**/*.{html,jsx,js}",
+    "./src/templates/home/**/*.{html,jsx,js}",
+    "./src/templates/products/**/*.{html,jsx,js}",
+    "./src/templates/business/**/*.{html,jsx,js}",
+  ],
   mode: "jit",
   theme: {
     extend: {
