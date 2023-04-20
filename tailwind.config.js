@@ -2,7 +2,6 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: [
-    "./src/assets/images/**/*.{svg}",
     "./src/config/**/*.{js,jsx,svg}",
     "./src/pages/products/*.{js,jsx}",
     "./src/pages/banking/*.{js,jsx}",
