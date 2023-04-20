@@ -41,17 +41,4 @@ bg-cover
 flex flex-col justify-center items-center
 relative
 `);
-const optionsListStyle = ctl(`
-grid
-grid-cols-1
-md:grid-cols-2
-
-`);
-const subFooterRightImage = ctl(`
-  absolute 
-  hidden
-  md:block
-  -right-5
-  bottom-0
-`);
 export { Paralax };

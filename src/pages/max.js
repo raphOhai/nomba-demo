@@ -10,7 +10,6 @@ import {
   Waitlist,
   ZoomInPos,
   Drag,
-  Footer,
 } from "templates/terminal-page";
 import { split } from "animations/text";
 

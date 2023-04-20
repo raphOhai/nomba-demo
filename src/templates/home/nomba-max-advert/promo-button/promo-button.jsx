@@ -16,10 +16,6 @@ export default function PromoButton() {
   );
 }
 
-const promoText = ctl(`
-font-[400]
-`);
-
 const badgeWrapper = ctl(`
 flex
 justify-center

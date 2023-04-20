@@ -40,21 +40,4 @@ const readmoreSpanStyle = ctl(`
 
 `);
 
-const descriptionBaseStyle = [
-  `
-  block
-  mb-4
-  `,
-  `
-  lg:opacity-0
-  lg:group-hover:opacity-100
-  lg:h-0
-  lg:mb-0
-  mb-4
-  lg:group-hover:mb-4
-  h-auto
-  transition-all
-  lg:group-hover:h-[65px]
-  duration-300`,
-];
 export { SolutionCard };

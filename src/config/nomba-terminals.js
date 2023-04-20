@@ -3,7 +3,6 @@ import React from "react";
 import Visa from "assets/images/svgs/visa.svg";
 import Master from "assets/images/svgs/master.svg";
 import Wifi from "assets/images/svgs/wifi.svg";
-import Printer from "assets/images/svgs/printer.svg";
 import CisUSb from "assets/images/svgs/usb.svg";
 import FourG from "assets/images/svgs/fourg.svg";
 
@@ -13,10 +12,8 @@ import WifiLight from "assets/images/svgs/wifi-light.svg";
 import PrinterLight from "assets/images/svgs/printer-light.svg";
 import CisUSbLight from "assets/images/svgs/usb-light.svg";
 import FourGLight from "assets/images/svgs/fourg-light.svg";
-import Verve from "assets/images/svgs/verve.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
-const image = <StaticImage width={193} height={267} src="../assets/images/jpegs/Nomba Pro 2.png" alt="Nomba Pro 2" />;
 export const posCardData = [
   {
     isMax: false,

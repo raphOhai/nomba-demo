@@ -18,6 +18,7 @@ const AnyTypeOfBusiness = ({ title, data }) => {
                 {data.map((s, i) => (
                   <div
                     key={i}
+                    onKeyDown={() => setActiveSolution(s)}
                     onClick={() => setActiveSolution(s)}
                     className={`${buttonTabStyle} ${isActive(s.title, activeSolution.title)}`}
                   >

@@ -1,8 +1,6 @@
 import React from "react";
 import { Ntext, ReadMore } from "components";
 
-import PosLine from "assets/images/svgs/pos-line.svg";
-
 import ctl from "@netlify/classnames-template-literals";
 const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
   const backgroundColor = isMax ? "bg-n-grey6" : "bg-n-grey1";

@@ -46,10 +46,6 @@ md:pb-[50px]
 pt-[100px]
 `);
 
-const coloredText = ctl(`
-font-bold
-`);
-
 const heroTextWrapperStyle = ctl(`
 lg:max-w-max
 max-w-[100%]

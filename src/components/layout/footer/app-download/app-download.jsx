@@ -1,6 +1,5 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { StaticImage } from "gatsby-plugin-image";
 import { Ntext, Container, Br } from "components";
 import AppStore from "svgs/apple.svg";
 import PlayStore from "svgs/playstore.svg";

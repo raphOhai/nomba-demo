@@ -2,7 +2,6 @@ import React from "react";
 import Payments from "svgs/payment.svg";
 import Bank from "svgs/bank.svg";
 // import Business from "svgs/business.svg";
-import Profile from "svgs/profile.svg";
 import Shop from "svgs/outline/shop-1.svg";
 import Bag from "svgs/outline/bag-5.svg";
 import Globe from "svgs/globe.svg";

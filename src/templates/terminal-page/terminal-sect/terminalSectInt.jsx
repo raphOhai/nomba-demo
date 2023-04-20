@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import "./index.scss";
 import { Br } from "components/br";
 import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
-import Sideways from "assets/images/svgs/terminal/sideways.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
 import TerminalPrint from "assets/images/svgs/terminal/comp.mp4";

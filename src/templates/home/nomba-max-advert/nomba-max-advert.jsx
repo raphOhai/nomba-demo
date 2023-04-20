@@ -1,5 +1,4 @@
 import React from "react";
-import ctl from "@netlify/classnames-template-literals";
 import PromoButton from "./promo-button/promo-button";
 import ButtonSection from "./button-section/button-section";
 import ImageSection from "./image-section/image-section";

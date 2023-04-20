@@ -119,12 +119,6 @@ const sectionWrapStyle = ctl(`
 slider-margin-left
 mx-5
 `);
-const blackLineStyle = ctl(`
-  bg-primary 
-  xl:w-[75%] 
-  w-[70%] 
-  h-[.5px]
-`);
 const controlButtonWrapStyle = ctl(`
   relative
   flex 
