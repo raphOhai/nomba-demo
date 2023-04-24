@@ -4,7 +4,7 @@ import { Br } from "components/br";
 import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
-import TerminalPrint from "assets/images/svgs/terminal/comp.mp4";
+import TerminalPrint from "assets/images/svgs/terminal/Comp.mp4";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useIsMobile from "hooks/useIsMobile";
