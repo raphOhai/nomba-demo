@@ -21,13 +21,9 @@ export const AccordionData = [
   },
 ];
 export const MaxSponsorList = [
-  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/abc-logo.png" loading="lazy" />,
+  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/buypower-logo.png" loading="lazy" />,
+  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/lacore-logo.png" />,
   <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/sneaklin-logo.png" loading="lazy" />,
   <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/marios-logo.png" />,
-  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/lacore-logo.png" />,
-  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/buypower-logo.png" />,
-  // <StaticImage alt="lacore" src="../assets/images/jpegs/terminal/lacore.png" />,
-  // <StaticImage alt="sneaklin" src="../assets/images/jpegs/terminal/sneaklin.png" />,
-  // <StaticImage alt="marios" src="../assets/images/jpegs/terminal/marios.png" />,
-  // <StaticImage alt="abc" src="../assets/images/jpegs/terminal/abc.png" />,
+  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/abc-logo.png" loading="lazy" />,
 ];

@@ -5,8 +5,7 @@ import "./index.scss";
 import Play from "assets/images/svgs/terminal/play.svg";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
 import gsap from "gsap";
-import HeroVid from "assets/images/svgs/terminal/video.mp4";
-import { StaticImage } from "gatsby-plugin-image";
+// import HeroVid from "assets/images/svgs/terminal/video.mp4";
 import { MaxSponsorList } from "config/terminal";
 
 const TerminalHero = () => {
@@ -41,7 +40,7 @@ const TerminalHero = () => {
   return (
     <>
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
-        <video onClick={close} ref={hero_vid} controls src={HeroVid}></video>
+        <video onClick={close} ref={hero_vid} controls src="../../../assets/images/svgs/terminal/video.mp4"></video>
       </div>
       <div className="terminal_hero">
         <div className="terminal_hero_video">
