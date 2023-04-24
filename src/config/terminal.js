@@ -1,3 +1,5 @@
+import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 export const AccordionData = [
   {
     id: 1,
@@ -17,4 +19,11 @@ export const AccordionData = [
     content:
       "Prices for the Nomba MAX caution fee and outright purchase will be announced at its launch. You'll be informed via email used in sign up.",
   },
+];
+export const MaxSponsorList = [
+  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/buypower-logo.png" />,
+  <StaticImage alt="lacore" src="../assets/images/jpegs/terminal/lacore.png" />,
+  <StaticImage alt="sneaklin" src="../assets/images/jpegs/terminal/sneaklin.png" />,
+  <StaticImage alt="marios" src="../assets/images/jpegs/terminal/marios.png" />,
+  <StaticImage alt="abc" src="../assets/images/jpegs/terminal/abc.png" />,
 ];

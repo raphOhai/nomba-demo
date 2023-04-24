@@ -7,6 +7,7 @@ import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
 import gsap from "gsap";
 import HeroVid from "assets/images/svgs/terminal/video.mp4";
 import { StaticImage } from "gatsby-plugin-image";
+import { MaxSponsorList } from "config/terminal";
 
 const TerminalHero = () => {
   const hero_vid = useRef(null);
@@ -155,20 +156,8 @@ const TerminalHero = () => {
         </div>
       </div>
       <div className="mq">
-        <div className="first">
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/buypower-logo.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/lacore.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/sneaklin.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/marios.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/abc.png" />
-        </div>
-        <div className="second">
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/buypower-logo.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/lacore.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/sneaklin.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/marios.png" />
-          <StaticImage alt="" src="../../../assets/images/jpegs/terminal/abc.png" />
-        </div>
+        <div className="first">{MaxSponsorList}</div>
+        <div className="second">{MaxSponsorList}</div>
       </div>
     </>
   );
