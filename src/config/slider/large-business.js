@@ -172,7 +172,7 @@ const easySolutionsForLargeBusiness = [
       "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions",
     link: {
       text: "Get Nomba for your growing business",
-      href: "/business/large",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
 ];

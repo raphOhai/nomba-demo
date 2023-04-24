@@ -91,7 +91,7 @@ const easySolutionsForSmallBusiness = [
       "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "/business/small",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
   {
@@ -107,7 +107,7 @@ const easySolutionsForSmallBusiness = [
       "With Nomba, you can accept payments from customers in a variety of ways, including credit and debit cards, bank transfers, and mobile payments.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "/business/small",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
 
@@ -124,7 +124,7 @@ const easySolutionsForSmallBusiness = [
       "Businesses can improve their inventory accuracy, reduce waste and spoilage, and improve their overall supply chain processes.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "/business/small",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
 
@@ -141,7 +141,7 @@ const easySolutionsForSmallBusiness = [
       "Businesses can generate unique QR codes that customers can scan using their mobile devices to complete their transactions",
     link: {
       text: "Get Nomba for your growing business",
-      href: "/business/large",
+      href: "https://dashboard.nomba.com/auth/login",
     },
   },
 ];
