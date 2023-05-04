@@ -9,26 +9,47 @@ import ctl from "@netlify/classnames-template-literals";
 const ReadMore = ({ text, color, className, defaultStyle = true, active = true, ...props }) => {
   return (
     <div>
-      <NLink {...props} className={readmoreStyle}>
-        <Ntext
-          variant={props.variant || "p16"}
-          color={color}
-          className={`peer ${props.className}transition-all duration-300`}
-          weight={defaultStyle ? "600" : props.weight}
-        >
-          {text}
-        </Ntext>
-        {active ? <Arrow className={arrowStyle} /> : <ArrowGrey className={arrowStyle} />}
-      </NLink>
+      {defaultStyle ? (
+        <NLink {...props} className={readmoreStylDefault}>
+          <Ntext
+            variant={props.variant || "p16"}
+            color={color}
+            className={`peer ${props.className}transition-all duration-300`}
+            weight={defaultStyle ? "600" : props.weight}
+          >
+            {text}
+          </Ntext>
+          {active ? <Arrow className={arrowStyle} /> : <ArrowGrey className={arrowStyle} />}
+        </NLink>
+      ) : (
+        <NLink {...props} className={readmoreStyle}>
+          <Ntext
+            variant={props.variant || "p16"}
+            color={color}
+            className={`peer ${props.className}transition-all duration-300`}
+            weight={defaultStyle ? "600" : props.weight}
+          >
+            {text}
+          </Ntext>
+        </NLink>
+      )}
     </div>
   );
 };
 
+const readmoreStylDefault = ctl(`
+inline-flex
+items-center
+group
+`);
+
 const readmoreStyle = ctl(`
 inline-flex
 items-center
-
 group
+border-b-[3px]
+border-b-n-yellow
+pb-[7px]
 `);
 
 const arrowStyle = ctl(`

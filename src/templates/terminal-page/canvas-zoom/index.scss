@@ -1,11 +1,11 @@
-.c_czoom{
+.c_czoom {
   padding: 7rem 0;
-     position: relative;
-     overflow: hidden;
-     >div{
-      width: 100%;
-     }
-     @include media("<=phone-tab"){
-      padding: 10rem 0;
-   }
+  position: relative;
+  overflow: hidden;
+  > div {
+    width: 100%;
+  }
+  @include media("<=phone-tab") {
+    padding: 10rem 0;
+  }
 }

@@ -18,7 +18,7 @@ const TerminalHero = () => {
       yTo(e.clientY - 150);
     });
 
-    gsap.set(".play_btn", { xPercent: -50, yPercent: -50 });
+    gsap.set(".play_btn", { xPercent: -50, yPercent: -50, opacity: 1 });
     let xTo = gsap.quickTo(".play_btn", "x", { duration: 0.3, delay: 0.2, ease: "power3" }),
       yTo = gsap.quickTo(".play_btn", "y", { duration: 0.3, delay: 0.2, ease: "power3" });
   });
@@ -37,6 +37,7 @@ const TerminalHero = () => {
   const close = () => {
     setPlayVid(!playVideo);
   };
+
   return (
     <>
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
