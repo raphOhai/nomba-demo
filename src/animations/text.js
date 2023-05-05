@@ -9,6 +9,7 @@ export const split = () => {
 
   f.forEach(item => {
     gsap.set(item, {
+      opacity: 1,
       autoAlpha: 0,
       yPercent: 50,
       transformStyle: "preserve-3d",
@@ -29,6 +30,7 @@ export const split = () => {
   g.forEach(item => {
     gsap.set(item, {
       autoAlpha: 0,
+      opacity: 1,
       xPercent: 50,
       transformStyle: "preserve-3d",
     });

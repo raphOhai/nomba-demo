@@ -8,7 +8,7 @@ import ctl from "@netlify/classnames-template-literals";
 
 const ReadMore = ({ text, color, className, defaultStyle = true, active = true, ...props }) => {
   return (
-    <div>
+    <div className={className}>
       {defaultStyle ? (
         <NLink {...props} className={readmoreStylDefault}>
           <Ntext

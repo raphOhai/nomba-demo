@@ -152,4 +152,12 @@ export const maxFeatures = [
   },
 ];
 
-export const spiningTerminal = <h1></h1>;
+export const maxFeaturesBreakdown = [
+  "5.0-inch HD 1280x720 capacitive touchscreen",
+  "5 megapixel auto focus rear camera",
+  "1GB RAM, 8GB ROM support 32GB external TF card",
+  "7.4V/2000mAh rechargeable Li-ion battery",
+  "100~240V AC 50/60HzAdapter",
+  "1x Micro USB2.0, 1x DC jack",
+  "Quad-core CPU",
+];

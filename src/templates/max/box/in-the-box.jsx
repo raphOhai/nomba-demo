@@ -10,13 +10,13 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const WhatsInTheBox = ({ title }) => {
   useEffect(() => {
-    gsap.to(".section_header2", {
+    gsap.to(".section_header4", {
       scrollTrigger: {
-        trigger: ".section_header2",
+        trigger: ".section_header4",
         start: "top 15%",
         scrub: true,
         toggleActions: "play reverse restart reverse",
-        end: "=+200px",
+        end: "=+400px",
       },
       opacity: 0.04,
       autoAlpha: 0,
@@ -28,14 +28,14 @@ const WhatsInTheBox = ({ title }) => {
     });
   });
   return (
-    <section className="pt-[150px] md:pt-[15rem] feature-section2">
+    <section className="pt-[150px] md:pt-[15rem] feature-section4">
       <Container>
-        <div className="md:max-w-[671px] md:mx-auto section_header2 md:text-center">
+        <div className="md:max-w-[671px] md:mx-auto section_header4 md:text-center">
           <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
         </div>
-        <div>
+        <div className="pt-[100px]">
           <BoxSlider slides={InTheBox} />
         </div>
       </Container>

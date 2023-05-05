@@ -23,6 +23,7 @@ const Ntext = ({ value, variant: textVariant, weight, color = "primary", classNa
     "text1",
     "text2",
     "text3",
+    "text4lite",
     "text4",
     "text5lite",
     "text5",
@@ -37,6 +38,7 @@ const Ntext = ({ value, variant: textVariant, weight, color = "primary", classNa
     "readMore",
     "pricing",
     "pricingSub",
+    "pricingMain",
   ];
 
   if (customVariants.includes(textVariant)) {
@@ -161,7 +163,12 @@ const variants = {
     md:leading-[24px]
     font-normal
     `,
-
+  text4lite: `
+    font-[400]
+    text-[20px]
+    leading-[30px]
+    tracking-[-0.02em]
+    `,
   text4: `
     font-[700]
     text-[20px]
@@ -269,6 +276,14 @@ const variants = {
     md:leading-[60px]
     md:tracking-[-0.04em]
     `,
+  pricingMain: `
+    text-[48px]
+    leading-[60px]
+    tracking-[-0.04em]
+    font-[700]
+    md:text-[64px]
+    md:leading-[84px]
+    `,
   pricingSub: `
     font-[500]
     text-[16px]
@@ -293,6 +308,7 @@ const validElements = [
   "text1",
   "text2",
   "text3",
+  "text4lite",
   "text4",
   "text5lite",
   "text5",
@@ -307,6 +323,7 @@ const validElements = [
   "readMore",
   "pricing",
   "pricingSub",
+  "pricingMain",
 ];
 
 Ntext.defaultProps = {};

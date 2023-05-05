@@ -11,6 +11,7 @@ import {
   CommonQuestions,
   GetMax,
   WhatsInTheBox,
+  MaxPricing,
 } from "templates/max";
 import { split } from "animations/text";
 
@@ -49,16 +50,13 @@ const MaxPage = () => {
             Experience the MAX in your <Br on="desktop" /> payment collection
           </>
         }
-        description={
-          <>
-            Designed to the last pixel to give you the max performance - faster transaction, long lasting battery, high
-            speed printer, durable and reliable POS terminal.
-          </>
-        }
+        description="Designed to the last pixel to give you the max performance - faster transaction, long lasting battery, high speed printer, durable and reliable POS terminal."
       />
-      <MaxBusinessTypes title={<>What Businesses Like Yours Think of Nomba MAX.</>} />
-      <WhatsInTheBox title={<>What’s in the box?</>} />
+      <MaxBusinessTypes title="What Businesses Like Yours Think of Nomba MAX." />
+      <WhatsInTheBox title="What’s in the box?" />
+      <MaxPricing title="Pricing & Specifications" price="₦50,000" />
       <CommonQuestions />
+
       <GetMax
         title={<>Get Nomba Max, Get Better</>}
         description={<>For better performance and smoother payment experience, Nomba MAX is here for you.</>}

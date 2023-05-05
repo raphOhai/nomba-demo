@@ -43,9 +43,9 @@ const MaxFeatures = ({ title, description }) => {
     gsap.to(features, {
       scrollTrigger: {
         trigger: ".feature-section",
-        start: "top bottom",
-        toggleActions: "play complete none none",
-        end: "bottom center",
+        start: "top 80%",
+        scrub: true,
+        end: "=+1000px",
       },
       opacity: 1,
       xPercent: 0,
@@ -89,7 +89,7 @@ const MaxFeatures = ({ title, description }) => {
 };
 
 const featureCard = ctl(`
-flex flex-col justify-between p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-primary
+flex flex-col justify-between p-[20px] md:p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-primary
 `);
 const featureContainer = ctl(`
 grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2  mt-[50px] md:mt-[100px]

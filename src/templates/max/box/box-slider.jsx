@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Box } from "./box";
-import NextIcon from "svgs/chevron-right.svg";
-import PreviousIcon from "svgs/chevron-left.svg";
+import NextIcon from "jpegs/terminal/max/svgs/next.svg";
+import PreviousIcon from "jpegs/terminal/max/svgs/prev.svg";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -19,8 +19,8 @@ const BoxSlider = ({ slides }) => {
   ));
 
   return (
-    <div className={sectionWrapStyle}>
-      <div className="hidden md:block">
+    <>
+      <div className={sectionWrapStyle}>
         <div className="mb-[42px]">
           <Swiper
             navigation={{
@@ -42,12 +42,12 @@ const BoxSlider = ({ slides }) => {
         </div>
         <SliderNavigation />
       </div>
-      <div className="grid gap-10 md:hidden pb-5">
+      <div className="md:!hidden flex flex-col items-stretch gap-10  pb-5">
         {slides.map(item => (
           <Box title={item.title} key={item.title} image={item.image} />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
@@ -55,11 +55,11 @@ const SliderNavigation = () => (
   <div className={controlWrapStyle}>
     <div className={controlButtonWrapStyle}>
       <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
-        <PreviousIcon />
+        <PreviousIcon className="mx-auto" />
       </button>
 
       <button className={`${controlButtonStyle} next-element`} aria-label="Next Slide">
-        <NextIcon />
+        <NextIcon className="mx-auto" />
       </button>
     </div>
 
@@ -104,6 +104,8 @@ const controlWrapStyle = ctl(`
 `);
 const sectionWrapStyle = ctl(`
 slider-margin-left
+hidden 
+md:block
 mx-5
 `);
 const controlButtonWrapStyle = ctl(`
@@ -113,11 +115,11 @@ const controlButtonWrapStyle = ctl(`
   gap-[11px]
 `);
 const controlButtonStyle = ctl(`
+  w-[53px]
+  h-[53px]
   rounded-full
-  lg:p-[15px]
-  p-[6px]
   grey-bordered-button
-  hover:bg-secondary-100
+  hover:bg-n-yellow
 `);
 
 BoxSlider.propTypes = {
