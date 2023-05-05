@@ -3,16 +3,16 @@ import { maxFeatures } from "config/terminal";
 import { Container, Ntext } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import useIsMobile from "hooks/useIsMobile";
+// import useIsMobile from "hooks/useIsMobile";
 import ctl from "@netlify/classnames-template-literals";
 
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const MaxFeatures = ({ title, description }) => {
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
   useEffect(() => {
-    const fontSize = isMobile ? "32px" : "48px";
+    // const fontSize = isMobile ? "32px" : "48px";
     gsap.set(".section_header1", {
       // fontSize: 0,
       yPercent: 30,

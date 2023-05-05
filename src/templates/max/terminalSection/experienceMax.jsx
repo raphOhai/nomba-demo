@@ -1,24 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import { maxFeatures } from "config/terminal";
+
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext } from "components";
 import ExperienceTerminal from "svgs/terminal/experience-terminal.svg";
-import gsap from "gsap";
+
 import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import useIsMobile from "hooks/useIsMobile";
+
 import { IO } from "animations/observe";
 
 const ExperienceMax = ({ title, description }) => {
-  const [isHover, setHover] = useState(false);
   const [isHoverVid, setHoverVid] = useState(false);
   const video = useRef(null);
-  const skeleton = useRef(null);
-  const isMobile = useIsMobile();
-
-  const fadeOut = () => {
-    setHover(!isHover);
-  };
 
   const fadeOutVid = () => {
     setHoverVid(true);

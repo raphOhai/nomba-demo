@@ -1,43 +1,31 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Br, Container } from "components";
+import React, { useRef, useEffect } from "react";
+import { Container } from "components";
 // import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
 import { StaticImage } from "gatsby-plugin-image";
 // import TerminalPrint from "assets/images/svgs/terminal/Comp.mp4";
-import { SponsorList } from "./sponsporList";
+import { SponsorList } from "./sponsorsList";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useIsMobile from "hooks/useIsMobile";
-import { IO } from "animations/observe";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TerminalSectionInteractions = () => {
-  const [isHover, setHover] = useState(false);
-  const [isHoverVid, setHoverVid] = useState(false);
-  const video = useRef(null);
   const skeleton = useRef(null);
   const isMobile = useIsMobile();
 
-  const fadeOut = () => {
-    setHover(!isHover);
-  };
-
-  const fadeOutVid = () => {
-    setHoverVid(true);
-  };
   useEffect(() => {
     if (isMobile) {
       const observer = new window.IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setHover(true);
             observer.disconnect();
           }
         });
       });
       observer.observe(skeleton.current);
     }
-  }, [skeleton]);
+  }, [skeleton, isMobile]);
 
   useEffect(() => {
     gsap.set(".img_2", {

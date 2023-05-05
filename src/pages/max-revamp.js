@@ -2,8 +2,16 @@ import React, { useEffect } from "react";
 
 import Layout from "components/layout-max";
 import { Br } from "components";
-import { CaseStudies, ProTerminal } from "templates/about-us";
-import { MaxpageHero, TerminalSectionInteractions, MaxFeatures, ExperienceMax, CommonQuestions } from "templates/max";
+import {
+  MaxpageHero,
+  TerminalSectionInteractions,
+  MaxFeatures,
+  ExperienceMax,
+  MaxBusinessTypes,
+  CommonQuestions,
+  GetMax,
+  WhatsInTheBox,
+} from "templates/max";
 import { split } from "animations/text";
 
 const MaxPage = () => {
@@ -34,6 +42,7 @@ const MaxPage = () => {
           </>
         }
       />
+
       <ExperienceMax
         title={
           <>
@@ -47,9 +56,13 @@ const MaxPage = () => {
           </>
         }
       />
+      <MaxBusinessTypes title={<>What Businesses Like Yours Think of Nomba MAX.</>} />
+      <WhatsInTheBox title={<>What’s in the box?</>} />
       <CommonQuestions />
-      <ProTerminal />
-      <CaseStudies />
+      <GetMax
+        title={<>Get Nomba Max, Get Better</>}
+        description={<>For better performance and smoother payment experience, Nomba MAX is here for you.</>}
+      />
     </Layout>
   );
 };

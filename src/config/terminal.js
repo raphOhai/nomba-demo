@@ -24,11 +24,61 @@ export const AccordionData = [
 export const MaxSponsorList = [
   <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/buypower-logo.png" loading="lazy" />,
   <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/lacore-logo.png" />,
-  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/sneaklin-logo.png" loading="lazy" />,
+  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/Sneaklin.png" loading="lazy" />,
   <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/marios-logo.png" />,
-  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/abc-logo.png" loading="lazy" />,
+  <StaticImage alt="buy power" src="../assets/images/jpegs/terminal/abc.png" loading="lazy" />,
 ];
 
+export const InTheBox = [
+  {
+    title: "Nomba MAX Terminal",
+    image: (
+      <StaticImage
+        width={321}
+        height={350}
+        className=""
+        alt="Nomba Max Terminal"
+        src="../assets/images/jpegs/terminal/max/box/max.png"
+      />
+    ),
+  },
+  {
+    title: "POS Terminal Guide",
+    image: (
+      <StaticImage
+        width={310}
+        height={330}
+        className=""
+        alt="POS guide"
+        src="../assets/images/jpegs/terminal/max/box/guide.png"
+      />
+    ),
+  },
+  {
+    title: "Charger",
+    image: (
+      <StaticImage
+        width={200}
+        height={293}
+        className=""
+        alt="Charger"
+        src="../assets/images/jpegs/terminal/max/box/charger.png"
+      />
+    ),
+  },
+  {
+    title: "Paper Tent",
+    image: (
+      <StaticImage
+        width={350}
+        height={308}
+        className=""
+        alt="Paper Tent"
+        src="../assets/images/jpegs/terminal/max/box/paper.png"
+      />
+    ),
+  },
+];
 export const maxFeatures = [
   {
     title: (
@@ -102,4 +152,4 @@ export const maxFeatures = [
   },
 ];
 
-export const spiningTerminal = <h1>Heloo</h1>;
+export const spiningTerminal = <h1></h1>;

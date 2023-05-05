@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container } from "components";
+import { Container, Ntext } from "components";
 import { AccordionData } from "config/terminal";
 const CommonQuestions = () => {
   useEffect(() => {
@@ -27,11 +27,13 @@ const CommonQuestions = () => {
     });
   });
   return (
-    <section>
+    <section className="bg-black">
       <Container>
-        <div className="c_cmQuestions child_wrap">
+        <div className="c_cmQuestions ">
           <div className="c_cmQuestions_txt">
-            <h1 data-animation="h">FAQ</h1>
+            <Ntext variant="h2" color="primary-100" data-animation="h">
+              FAQ
+            </Ntext>
           </div>
           <div className="c_cmQuestions_acc">
             {AccordionData.map(item => (

@@ -9,10 +9,9 @@ import Marios from "jpegs/terminal/max/sponsors/marios.png";
 import Sneaklin from "jpegs/terminal/max/sponsors/sneaklin.png";
 import Smoke from "jpegs/terminal/max/sponsors/Smoke.png";
 import Kaab from "jpegs/terminal/max/sponsors/Kaab.png";
-import Ghat from "jpegs/terminal/max/sponsors/Ghat.png";
+import Ghat from "jpegs/terminal/max/sponsors/ghat.png";
 import goddis from "jpegs/terminal/max/sponsors/goddis.png";
 import ball from "jpegs/terminal/max/sponsors/ball.png";
-import { StaticImage } from "gatsby-plugin-image";
 const SponsorList = ({ className }) => {
   return (
     <div
