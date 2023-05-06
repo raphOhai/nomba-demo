@@ -9,6 +9,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import Play from "assets/images/svgs/terminal/play.svg";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
 import BusinessVid from "assets/images/svgs/terminal/Video.mp4";
+import { MaxTestimonial } from "./testimonial";
+import { SmallBusinessTestimonials } from "config/testimonials";
+import { maxTestimonial } from "config/terminal";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,9 +93,7 @@ const MaxBusinessTypes = ({ title }) => {
             )}
           </div>
         </div>
-        {/* <div>
-                    <Play />
-                </div> */}
+        <MaxTestimonial testimonials={maxTestimonial} headingText="Don’t just take our word for it" />
       </Container>
     </section>
   );

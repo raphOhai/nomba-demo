@@ -39,6 +39,7 @@ const Ntext = ({ value, variant: textVariant, weight, color = "primary", classNa
     "pricing",
     "pricingSub",
     "pricingMain",
+    "p24",
   ];
 
   if (customVariants.includes(textVariant)) {
@@ -118,6 +119,13 @@ const variants = {
     font-semibold 
     uppercase
     tracking-[3px]
+    `,
+  p24: `
+    md:text-[24px]
+    text-[16px]
+    md:leading-[32px]
+    leading-[24.8px]
+    font-normal
     `,
   p18: `
     md:text-[18px]
@@ -304,6 +312,7 @@ const validElements = [
   "p14",
   "p16",
   "p18",
+  "p24",
   "text0",
   "text1",
   "text2",

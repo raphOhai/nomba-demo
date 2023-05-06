@@ -119,7 +119,7 @@ const controlButtonStyle = ctl(`
   h-[53px]
   rounded-full
   grey-bordered-button
-  hover:bg-n-yellow
+  hover:bg-secondary-100
 `);
 
 BoxSlider.propTypes = {

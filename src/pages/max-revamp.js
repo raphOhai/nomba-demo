@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import Layout from "components/layout-max";
 import { Br } from "components";
+import { AnyTypeOfBusiness } from "components/any-type-of-business";
 import {
   MaxpageHero,
   TerminalSectionInteractions,
@@ -14,6 +15,7 @@ import {
   MaxPricing,
 } from "templates/max";
 import { split } from "animations/text";
+import { smallBusinesSolutions } from "config/small-business";
 
 const MaxPage = () => {
   useEffect(() => {

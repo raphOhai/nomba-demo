@@ -1,0 +1,21 @@
+.max-testimonial {
+    .max-pagination-class {
+      width: 40% !important;
+      margin: 0;
+      margin-right: 25px;
+      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16) !important;
+      bottom: 35px !important;
+
+      margin-top: -100px !important;
+      @include media("<=phone-tab") {
+        bottom: 0 !important;
+        margin-top: -70px !important;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #383838 !important;
+      }
+      .swiper-pagination-bullet {
+       background-color: #ffcc00 !important;
+      }
+    }
+  }
