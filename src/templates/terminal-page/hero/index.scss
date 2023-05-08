@@ -5,60 +5,60 @@
   overflow: hidden;
   cursor: pointer;
   margin: 0 auto;
-  @include media("<=tablet"){
+  @include media("<=tablet") {
     width: 90%;
     height: 60rem;
   }
-  @include media("<=phone-tab"){
+  @include media("<=phone-tab") {
     width: 90%;
     height: 45rem;
   }
 
-  &_video{
+  &_video {
     width: 50%;
     margin: 0 auto;
     position: relative;
-    @include media("<=tablet"){
-       width: 70%;
+    @include media("<=tablet") {
+      width: 70%;
     }
-    @include media("<=phone-tab"){
-       width: 100%;
+    @include media("<=phone-tab") {
+      width: 100%;
     }
     &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-  }
-  &::before {
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.799) 70%);
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+    &::before {
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.799) 70%);
+    }
 
-  &::after {
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.779) 70%);
-  }
+    &::after {
+      background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.779) 70%);
+    }
 
-    video{
+    video {
       width: 100%;
       position: relative;
-      filter: brightness(60%) contrast(100%) ;
-       box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+      filter: brightness(60%) contrast(100%);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
     }
   }
-  &_sect{
+  &_sect {
     position: absolute;
     bottom: 0%;
     @include flex_col(4rem);
     &_txt {
       @include flex(space-between, flex-end, 2.5rem);
-      @include media("<=tablet"){
+      @include media("<=tablet") {
         @include flex_col(3rem);
       }
-      @include media("<=phone-tab"){
+      @include media("<=phone-tab") {
         @include flex_col(2.8rem);
       }
       h1 {
@@ -66,25 +66,25 @@
         text-stroke: 1px $light-txt;
         color: transparent;
       }
-      &_l{
-        @include media("<=tablet"){
+      &_l {
+        @include media("<=tablet") {
           width: 100%;
           @include flex_col(1rem);
         }
-        .one{
-          @include media("<=phone-tab"){
+        .one {
+          @include media("<=phone-tab") {
             display: none !important;
           }
-         }
-        .two{
+        }
+        .two {
           display: none !important;
-          @include media("<=phone-tab"){
+          @include media("<=phone-tab") {
             display: block !important;
           }
-         }
-        svg{
+        }
+        svg {
           max-width: 45rem;
-          @include media("<=phone-tab"){
+          @include media("<=phone-tab") {
             max-width: 100%;
           }
         }
@@ -93,46 +93,45 @@
         z-index: 30;
         @include flex_col(3rem);
         color: $light-txt-1;
-        @include media("<=phone-tab"){
+        @include media("<=phone-tab") {
           @include flex_col(2rem);
         }
-        p{
-          @include media("<=tablet"){
+        p {
+          @include media("<=tablet") {
             max-width: 100%;
           }
         }
-        button{
+        button {
           width: auto;
-          padding: .8rem 1.5rem;
-          border-radius: .8rem;
-          @include flex(center,center,1rem);
+          padding: 0.8rem 1.5rem;
+          border-radius: 0.8rem;
+          @include flex(center, center, 1rem);
           border: 1px solid $yellow;
           font-weight: 500;
           font-size: 1.15rem;
           background: linear-gradient(to right, $yellow 50%, transparent 50%);
           background-size: 200% 100%;
           background-position: right bottom;
-          transition: all .5s ease-out;
-          &:hover{
+          transition: all 0.5s ease-out;
+          &:hover {
             cursor: pointer;
             background-position: left bottom;
             color: $black;
-             svg{
-              path{
-                 stroke: $black;
-              }
-            }
-          }
-          svg{
-            path{
-               stroke: white;
-               @include media("<=phone-tab"){
+            svg {
+              path {
                 stroke: $black;
               }
-
             }
           }
-          @include media("<=phone-tab"){
+          svg {
+            path {
+              stroke: white;
+              @include media("<=phone-tab") {
+                stroke: $black;
+              }
+            }
+          }
+          @include media("<=phone-tab") {
             width: 100%;
             background: $yellow;
             color: $black;
@@ -140,19 +139,18 @@
         }
       }
     }
-    
   }
 }
-.play_mobile{
+.play_mobile {
   display: none;
-    z-index: 25;
-  @include media("<=tablet"){
+  z-index: 25;
+  @include media("<=tablet") {
     display: block;
     position: absolute;
     top: 20%;
     left: 10rem;
   }
-  .close_vid_m{
+  .close_vid_m {
     height: 3rem;
     z-index: 30;
     width: 3rem;
@@ -161,28 +159,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-     span{
+    span {
       width: 0.1rem;
       height: 2rem;
       display: inline-block;
       background-color: $black;
-      &:nth-child(1){
+      &:nth-child(1) {
         transform: rotate(55deg) scale(0.85);
-      } 
-      &:nth-child(2){
-        transform:  rotate(-55deg) scale(0.85);
       }
-    }}
+      &:nth-child(2) {
+        transform: rotate(-55deg) scale(0.85);
+      }
+    }
+  }
 }
-.play_btn{
-  @include media("<=tablet"){
+.play_btn {
+  @include media("<=tablet") {
     display: none;
   }
   z-index: 25;
   position: absolute;
   top: 10%;
   left: 10%;
-  .close_vid{
+  .close_vid {
     height: 5rem;
     width: 5rem;
     background-color: white;
@@ -190,21 +189,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-     span{
+    span {
       width: 0.2rem;
       height: 2rem;
       display: inline-block;
       background-color: $black;
-      &:nth-child(1){
+      &:nth-child(1) {
         transform: rotate(5rem0deg) scale(0.85);
-      } 
-      &:nth-child(2){
-        transform:  rotate(-40deg) scale(0.85);
       }
-     }
+      &:nth-child(2) {
+        transform: rotate(-40deg) scale(0.85);
+      }
+    }
   }
 }
-.hero_video_pl{
+.hero_video_pl {
   height: 100vh;
   position: fixed;
   top: 0;
@@ -213,55 +212,53 @@
   left: 0;
   right: 0;
   z-index: 20;
-  video{
-     width: 100%;
-     height: 100%;
-     outline: none;
-     backdrop-filter: blur(10px);
+  video {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    backdrop-filter: blur(10px);
   }
 }
-.view{
+.view {
   display: block;
 }
-.mq{
+.mq {
   filter: grayscale(100%);
   padding-top: 5rem;
-   width: 80%;
-   overflow: hidden !important;
-   margin: 0 auto;
-  @include flex(flex-start,center,2rem);;
-  >div{
-    @include flex(flex-start,center,3rem);
+  width: 80%;
+  overflow: hidden !important;
+  margin: 0 auto;
+  @include flex(flex-start, center, 2rem);
+  > div {
+    @include flex(flex-start, center, 3rem);
     flex-wrap: nowrap;
-    overflow:visible;
+    overflow: visible;
     flex-shrink: 0;
-    &:nth-child(2){
+    &:nth-child(2) {
       display: none;
-      @include media("<=phone-tab"){
-              display: flex;
-              
-             }
-    }
-    @include media("<=phone-tab"){
-            gap: 3rem;
-            animation: marquee 15s linear 0s infinite normal forwards;
-         }
-  }
-  @include media("<=phone-tab"){
-         width: 100%;
-         gap: 2rem;
-         padding-top: 3.5rem;
+      @include media("<=phone-tab") {
+        display: flex;
       }
-  
+    }
+    @include media("<=phone-tab") {
+      gap: 3rem;
+      animation: marquee 15s linear 0s infinite normal forwards;
+    }
+  }
+  @include media("<=phone-tab") {
+    width: 100%;
+    gap: 2rem;
+    padding-top: 3.5rem;
+  }
 }
 @keyframes marquee {
   0% {
-       transform: translate(0);
+    transform: translate(0);
   }
   100% {
-       transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-.off{
+.off {
   display: none;
 }

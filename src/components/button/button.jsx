@@ -15,6 +15,7 @@ const Button = ({
   disabled: buttonDisabled,
   href,
   to,
+  isflex,
   children,
 }) => {
   const buttonStyle = ctl(`
@@ -42,7 +43,7 @@ const Button = ({
 
   return (
     <ButtonElement className={buttonStyle} onClick={onClick} disabled={buttonDisabled || isLoading} {...linkProps}>
-      <span className={textStyle}>{text || children}</span>
+      <span className={isflex ? "flex flex-row gap-5" : textStyle}>{text || children}</span>
       {isLoading && <Loader />}
     </ButtonElement>
   );
@@ -88,9 +89,9 @@ const sizes = {
   h-[58px]
   `,
   custom: `
-  px-[65px]
-  py-[17px]
-  w-fit
+  rounded-[10px]
+  md:min-w-[212px]
+  h-[50px]
   `,
 };
 
@@ -112,6 +113,7 @@ disabled:text-primary
 Button.defaultProps = {
   variant: "primary",
   size: "xsmall",
+  isflex: false,
 };
 Button.propTypes = {
   text: PropTypes.string,
@@ -122,6 +124,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
+  isflex: PropTypes.bool,
 };
 
 export { Button };

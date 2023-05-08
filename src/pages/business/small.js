@@ -9,6 +9,7 @@ import { Testimonial, Br } from "components";
 import { SmallBusinessTestimonials } from "config/testimonials";
 import { smallBusinesSolutions } from "config/small-business";
 import { easySolutionsForSmallBusiness } from "config/slider";
+
 const SmallBusiness = () => {
   return (
     <Layout title="Small Business">
