@@ -47,13 +47,13 @@ const MaxBusinessTypes = ({ title }) => {
 
   const playVid = () => {
     setPlayVid(!playVideo);
-    const video = document.querySelector(".hero_video_pl video");
-    if (playVideo) {
-      video.pause();
-      video.currentTime = 0;
-    } else {
-      video.play();
-    }
+    // const video = document.querySelector(".hero_video_pl video");
+    // if (playVideo) {
+    //   video.pause();
+    //   video.currentTime = 0;
+    // } else {
+    //   video.play();
+    // }
   };
   const close = () => {
     setPlayVid(!playVideo);
@@ -62,7 +62,7 @@ const MaxBusinessTypes = ({ title }) => {
   return (
     <section className="pt-[150px] md:pt-[16rem] feature-section2" id="business-types">
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
-        <video onClick={close} ref={hero_vid} controls src={BusinessVid}></video>
+        {playVideo && <video onClick={close} ref={hero_vid} controls autoPlay src={BusinessVid}></video>}
       </div>
       <Container>
         <div className="md:max-w-[671px] md:mx-auto section_header2 md:text-center">
