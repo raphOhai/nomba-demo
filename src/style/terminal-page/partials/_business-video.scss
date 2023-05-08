@@ -66,3 +66,14 @@
     }
   }
 }
+
+.box-navigation {
+    &:hover{
+        .icon-dark {
+            display: block !important;
+        }
+        .icon-default {
+            display: none !important;
+        }
+    }
+}

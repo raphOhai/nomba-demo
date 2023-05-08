@@ -27,7 +27,7 @@ const CommonQuestions = () => {
     });
   });
   return (
-    <section className="bg-black">
+    <section className="bg-black" id="faq">
       <Container>
         <div className="c_cmQuestions ">
           <div className="c_cmQuestions_txt">

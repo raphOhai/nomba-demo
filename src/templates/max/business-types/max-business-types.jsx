@@ -8,7 +8,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 import Play from "assets/images/svgs/terminal/play.svg";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
-import BusinessVid from "assets/images/svgs/terminal/Video.mp4";
+import BusinessVid from "assets/images/svgs/terminal/Supermarket.mp4";
 import { MaxTestimonial } from "./testimonial";
 import { SmallBusinessTestimonials } from "config/testimonials";
 import { maxTestimonial } from "config/terminal";
@@ -60,7 +60,7 @@ const MaxBusinessTypes = ({ title }) => {
   };
 
   return (
-    <section className="pt-[150px] md:pt-[16rem] feature-section2">
+    <section className="pt-[150px] md:pt-[16rem] feature-section2" id="business-types">
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
         <video onClick={close} ref={hero_vid} controls src={BusinessVid}></video>
       </div>

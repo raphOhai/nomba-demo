@@ -9,6 +9,9 @@ import { Box } from "./box";
 import NextIcon from "jpegs/terminal/max/svgs/next.svg";
 import PreviousIcon from "jpegs/terminal/max/svgs/prev.svg";
 
+import NextIconDark from "svgs/chevron-right.svg";
+import PreviousIconDark from "svgs/chevron-left.svg";
+
 SwiperCore.use([Navigation, Pagination]);
 
 const BoxSlider = ({ slides }) => {
@@ -24,8 +27,8 @@ const BoxSlider = ({ slides }) => {
         <div className="mb-[42px]">
           <Swiper
             navigation={{
-              nextEl: ".next-element",
-              prevEl: ".previous-element",
+              nextEl: ".next-element-box",
+              prevEl: ".previous-element-box",
             }}
             pagination={{
               type: "progressbar",
@@ -54,12 +57,14 @@ const BoxSlider = ({ slides }) => {
 const SliderNavigation = () => (
   <div className={controlWrapStyle}>
     <div className={controlButtonWrapStyle}>
-      <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
-        <PreviousIcon className="mx-auto" />
+      <button className={`${controlButtonStyle} previous-element-box box-navigation`} aria-label="Previous Slide">
+        <PreviousIcon className="mx-auto icon-default" />
+        <PreviousIconDark className="mx-auto icon-dark hidden" />
       </button>
 
-      <button className={`${controlButtonStyle} next-element`} aria-label="Next Slide">
-        <NextIcon className="mx-auto" />
+      <button className={`${controlButtonStyle} next-element-box box-navigation`} aria-label="Next Slide">
+        <NextIcon className="mx-auto icon-default" />
+        <NextIconDark className="mx-auto icon-dark hidden" />
       </button>
     </div>
 
@@ -95,31 +100,34 @@ const breakpoints = {
 };
 
 const controlWrapStyle = ctl(`
-
   mx-auto 
   flex 
   items-center 
   md:gap-[34px] 
   gap-[11px]
 `);
+
 const sectionWrapStyle = ctl(`
 slider-margin-left
 hidden 
 md:block
 mx-5
 `);
+
 const controlButtonWrapStyle = ctl(`
   relative
   flex 
   lg:gap-[28px] 
   gap-[11px]
 `);
+
 const controlButtonStyle = ctl(`
   w-[53px]
   h-[53px]
   rounded-full
   grey-bordered-button
-  hover:bg-secondary-100
+  hover:!border-0
+  hover:bg-n-yellow
 `);
 
 BoxSlider.propTypes = {

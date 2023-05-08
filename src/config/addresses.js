@@ -13,6 +13,7 @@ export const addressList = [
       "16 Billings Way Oregun Ikeja, Lagos, Nigeria ",
       "19b Bosun Adekoya Street, Lekki Phase 1, Lagos, Nigeria",
     ],
+    country: "Nigeria",
     flag: (
       <StaticImage
         src="../assets/images/jpegs/Flag Nigeria.png"
@@ -24,6 +25,7 @@ export const addressList = [
   },
   {
     location: ["580 California St, 12th Floor, San Francisco, CA 94104"],
+    country: "United States",
     flag: <StaticImage src="../assets/images/jpegs/Flag US.png" alt="Flag US" loading="eager" className={flagStyle} />,
   },
 ];

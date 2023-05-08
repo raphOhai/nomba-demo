@@ -25,14 +25,14 @@
       path {
         stroke: white;
         @include media("<=phone-tab") {
-          stroke: $black;
+          // stroke: $black;
         }
       }
     }
     @include media("<=phone-tab") {
       width: 100%;
-      background: $yellow;
-      color: $black;
+      // background: $yellow;
+      // color: $black;
     }
   }
 
@@ -63,13 +63,13 @@
       path {
         stroke: $black;
         @include media("<=phone-tab") {
-          stroke: $black;
+          // stroke: $black;
         }
       }
     }
     @include media("<=phone-tab") {
       width: 100%;
-      background: $yellow;
-      color: $black;
+      // background: $yellow;
+      // color: $black;
     }
   }

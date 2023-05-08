@@ -53,7 +53,7 @@ const MaxPricing = ({ title, price }) => {
   });
 
   return (
-    <section className="mt-[150px] md:mt-[200px]">
+    <section className="mt-[150px] md:mt-[200px]" id="pricing">
       <div>
         <Container>
           <div className="md:max-w-[671px] md:mx-auto section_header3 md:text-center mb-[30px] md:mb-[80px]">

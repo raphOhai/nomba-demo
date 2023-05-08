@@ -19,15 +19,20 @@ grid
 md:grid-cols-2
 max-w-[1000px]
 gap-4
+md:gap-9
 `);
-const Address = ({ location, flag }) => {
+const Address = ({ location, flag, country }) => {
   return (
     <>
-      <div className="flex">
-        {flag}
+      <div className="flex flex-col">
+        <div>
+          <Ntext variant="p14" color="primary-200">
+            {flag} {country}
+          </Ntext>
+        </div>
         <div className="flex flex-col">
           {location.map((l, i) => (
-            <Ntext key={`${l}_${i}`} variant="p14" color="primary-200" className="ml-2">
+            <Ntext key={`${l}_${i}`} variant="p14" color="primary-200" className="">
               {l}
             </Ntext>
           ))}

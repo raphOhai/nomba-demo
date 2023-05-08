@@ -43,7 +43,7 @@ const MaxTestimonial = ({ testimonials, headingText }) => {
 };
 
 const SliderNavigation = ({ title }) => (
-  <div className="flex flex-row justify-between items-baseline">
+  <div className="flex flex-row justify-between items-baseline" id="testimonials">
     <SectionHeader className="!text-left">
       <Ntext variant="h2" color="primary-100" value={title} className={headingTextStyle} />
     </SectionHeader>
@@ -66,12 +66,11 @@ const controlButtonWrapStyle = ctl(`
   gap-[11px]
 `);
 const controlButtonStyle = ctl(`
-  w-[53px]
-  h-[53px]
+  w-[40px]
+  h-[40px]
   rounded-full
-  grey-bordered-button
   bg-n-yellow
-  hover:bg-secondary-100
+  hover:bg-[#c1940b]
 `);
 const headingTextStyle = ctl(`
 
