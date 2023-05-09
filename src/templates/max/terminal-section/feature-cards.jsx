@@ -3,7 +3,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components";
 import { maxFeatures } from "config/terminal";
 import fastPayment from "assets/images/jpegs/terminal/max/features/fast-payment2.mp4";
-import battery from "assets/images/jpegs/terminal/max/features/battery1.mp4";
+import battery from "assets/images/jpegs/terminal/max/features/battery3.mp4";
 import signal from "assets/images/jpegs/terminal/max/features/signal1.mp4";
 import speedprinters from "assets/images/jpegs/terminal/max/features/speedprinters1.mp4";
 import { IO } from "animations/observe";
@@ -146,7 +146,7 @@ const FeatureCards = () => {
       </div>
 
       {/* Third featureCard */}
-      <div className={`${featureCard} features`}>
+      <div className={`${featureCard} features !bg-[#121113]`}>
         <div>
           <Ntext variant="text6heavy" color="primary-100">
             {maxFeatures[2].title}
@@ -170,6 +170,7 @@ const FeatureCards = () => {
             className={`${isHoverVid3 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
             muted
             playsInline
+            loop
             src={battery}
           ></video>
           {/* </div> */}
@@ -198,7 +199,7 @@ const FeatureCards = () => {
                         <ExperienceTerminal className={isHoverVid ? "fadeOut" : null} /> */}
           <video
             ref={video4}
-            className={`${isHoverVid4 ? "fadeIn" : null}   max-h-[340px] mx-auto`}
+            className={`${isHoverVid4 ? "fadeIn" : null}   max-h-[340px] mx-auto bg-primary`}
             muted
             playsInline
             src={signal}
