@@ -106,7 +106,6 @@ const FeatureCards = () => {
           <video
             ref={video1}
             className={`${isHoverVid1 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
-            loop
             muted
             playsInline
             src={fastPayment}
@@ -138,7 +137,6 @@ const FeatureCards = () => {
           <video
             ref={video2}
             className={`${isHoverVid2 ? "fadeIn" : null}  max-h-[340px]  md:max-h-[400px] mx-auto`}
-            loop
             muted
             playsInline
             src={speedprinters}
@@ -170,7 +168,6 @@ const FeatureCards = () => {
           <video
             ref={video3}
             className={`${isHoverVid3 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
-            loop
             muted
             playsInline
             src={battery}
@@ -203,7 +200,6 @@ const FeatureCards = () => {
             ref={video4}
             className={`${isHoverVid4 ? "fadeIn" : null}   max-h-[340px] mx-auto`}
             muted
-            loop
             playsInline
             src={signal}
           ></video>
@@ -215,7 +211,7 @@ const FeatureCards = () => {
 };
 
 const featureCard = ctl(`
-flex flex-col justify-between p-[20px] md:p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-primary
+flex flex-col justify-between p-[20px] md:p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-[#121113]
 `);
 const featureContainer = ctl(`
 grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2  mt-[50px] md:mt-[100px]
