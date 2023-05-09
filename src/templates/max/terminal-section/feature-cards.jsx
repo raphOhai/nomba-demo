@@ -170,7 +170,6 @@ const FeatureCards = () => {
             className={`${isHoverVid3 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
             muted
             playsInline
-            loop
             src={battery}
           ></video>
           {/* </div> */}
