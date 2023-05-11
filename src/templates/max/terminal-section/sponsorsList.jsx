@@ -15,7 +15,7 @@ import goddis from "jpegs/terminal/max/sponsors/goddis.png";
 const SponsorList = ({ className }) => {
   return (
     <div
-      className={`flex justify-start md:justify-center mx-auto gap-[41px] md:gap-[82px]  items-center flex-wrap ${className}`}
+      className={`flex justify-center md:justify-center mx-auto gap-[41px] md:gap-[82px]  items-center flex-wrap ${className} sponsorList`}
     >
       <img width={80} className="md:max-w-[80px] max-w-[45px]" height={80} src={Abc} alt="ABC" />
       <img width={80} className="md:max-w-[80px] max-w-[45px]" height={28} src={Borough} alt="Borough" />

@@ -87,6 +87,7 @@ module.exports = {
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
+          grey3light: "#99999980",
         },
         c: {
           0: "#000000",

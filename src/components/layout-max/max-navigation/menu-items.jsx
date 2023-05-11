@@ -3,7 +3,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components/ntext";
 import { NLink } from "components/nlink";
 import { SubMenu } from "./sub-menu";
-import { headerMenu } from "../../../config/menu";
+import { headerMenu } from "../../../config/max/menu";
 import Arrow from "assets/images/svgs/chevron-right.svg";
 
 const MenuItems = () => {
@@ -25,43 +25,30 @@ const MenuItems = () => {
     };
   }, [showSubmenu]);
 
-  const menuItems = headerMenuItems.map((item, i) => {
-    const navItem = headerMenu[item];
+  const menuItems = headerMenu.map((item, i) => {
+    // const navItem = headerMenu[item];
 
-    const handleKeyDown = e => {
-      if (e.keyCode === 13) {
-        if (showSubmenu === i) {
-          setShowSubmenu(null);
-        } else {
-          setShowSubmenu(i);
-        }
-      }
-    };
+    // const handleKeyDown = e => {
+    //   if (e.keyCode === 13) {
+    //     if (showSubmenu === i) {
+    //       setShowSubmenu(null);
+    //     } else {
+    //       setShowSubmenu(i);
+    //     }
+    //   }
+    // };
 
     return (
       <li className={itemWrapStyle} key={item}>
         {/* menu items */}
-        {Array.isArray(navItem) ? (
-          <>
-            <button onKeyDown={handleKeyDown}>
-              <Ntext className={menuHeadingStyle} variant="p16" color="primary-100" value={item} />
-            </button>
 
-            <SubMenu items={navItem} submenuOpen={showSubmenu === i} />
-          </>
-        ) : (
-          <div className={menuLinkWrapStyle}>
-            <div>
-              <NLink className={menuLinkStyle} {...navItem}>
-                {item}
-              </NLink>
-
-              <Ntext variant="p12" value={navItem?.description} className="lg:hidden" />
-            </div>
-
-            <Arrow className="lg:hidden" />
+        <div className={menuLinkWrapStyle}>
+          <div>
+            <NLink className={menuLinkStyle} href={item.to}>
+              {item.title}
+            </NLink>
           </div>
-        )}
+        </div>
       </li>
     );
   });
@@ -82,14 +69,7 @@ const itemWrapStyle = ctl(`
   xl:mr-[45px]
   lg:mr-4
 `);
-const menuHeadingStyle = ctl(`
-  uppercase 
-  lg:capitalize 
-  font-semibold 
-  tracking-[0.2em]
-  lg:tracking-normal
-  px-[25px] lg:px-2
-`);
+
 const menuItemStyle = ctl(`
   lg:flex 
 `);
@@ -102,7 +82,7 @@ const menuLinkWrapStyle = ctl(`
 const menuLinkStyle = ctl(`
   text-[16px]
   leading-[28.8px]
-  font-[700]
+  font-[400]
   text-primary-100
 `);
 

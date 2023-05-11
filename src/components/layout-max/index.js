@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import Seo from "./seo";
 import { MainFooter } from "./footer";
 import { NavBar } from "./navbar";
+import { FixedBar } from "./max-navigation";
 // import { Subfooter } from "./subfooter";
 
 const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }) => {
@@ -20,7 +21,7 @@ const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }
       <NavBar />
       {/* All children except the last child */}
       <main>{children}</main>
-
+      <FixedBar />
       {/*Show the last item in the subfooter */}
       {/* <Subfooter>{children[noOfChildren - 1]}</Subfooter> */}
       <MainFooter defaultStyle={defaultStyle} />
