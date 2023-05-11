@@ -1,180 +1,173 @@
-.c_terminal_sectInt{
-    @include flex_col(6rem);
-    color: $fd-gr;
+.c_terminal_sectInt {
+  color: $fd-gr;
+  @include media("<=phone-tab") {
+    @include flex_col(3.5rem);
+  }
+  h1 {
     @include media("<=phone-tab") {
-        @include flex_col(3.5rem);
-   }
-    h1{
-        @include media("<=phone-tab") {
-            font-size: toRem(34) !important;
-            line-height: 2.5rem;
-       }
+      font-size: toRem(34) !important;
+      line-height: 2.5rem;
     }
-    &_paySol{
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-        @include flex_col(0rem);
-        align-items: center;
-        position: relative;
-        min-height:100vh;
-        h1{
-            width: 60%;
-            margin: 0 auto;
-            @include media("<=tablet"){
-                width: 100%;
-            }
-        }
-        @include media("<=phone-tab"){
-            min-height:50vh;
-       }
-     
-        .img_1{
-            width: 81%;
-            position: absolute;
-            bottom: 33%;
-            z-index: 3;
-            svg{
-                width: 100%
-            }
-            @include media("<=tablet"){
-                width: 100%;
-            }
-            @include media("<=phone-tab"){
-                bottom: 16%;
-            }
-        }
-        .img_2{
-            width: 84%;
-            z-index: 2;
-            position: absolute;
-            bottom: 30%;
-            // opacity: 0;
-            @include media("<=tablet"){
-                width: 100%;
-            }
-            @include media("<=phone-tab"){
-                bottom: 13%;
-            }
-        }
+  }
+  &_paySol {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    @include flex_col(0rem);
+    align-items: center;
+    position: relative;
+    min-height: 50vh;
+    @include media("<=phone-tab") {
+      min-height: 200px;
+      width: 100%;
     }
-    &_experience{
-        min-height: 40rem;
-        padding: 3rem 0;
-        @include flex(flex-end,center,0rem);
-        position: relative;
-        cursor: pointer;
-        @include media("<=tablet"){
-            min-height: auto;
-            @include flex_col(4rem);
-            flex-direction: column-reverse;
-            width: 90%;
-            margin: 0 auto;
-            justify-content: flex-start;
-        }
-        > svg{
-            position: absolute;
-            left:12rem;
-            width:21%;
-            @include media("<=tablet"){
-               display: none;
-            }
-        }
-        video{
-            z-index:1;
-            position: absolute;
-            left: -10%;
-            opacity: 0;
-            width: 71%;
-            @include media("<=tablet"){
-                width: 100%;
-                transform: scale(1.4);
-                display: block;
-                position: relative;
-                left: 0;
-                top: 4rem;
-            }
-            @include media("<=phone"){
-                width: 100%;
-                transform: scale(1);
-                left: 0;
-            }
-        }
 
-        &_txt{
-            z-index:2;
-            max-width:55%;   
-            flex-shrink: 0 0;       
-            @include flex_col(2rem);
-            align-items: flex-start;
-            transform: translateX(0rem);
-            @include media("<=tablet"){
-                max-width: 100%;   
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-            }
-            >p{
-                width: 70%;
-                @include media("<=tablet"){
-                    width: 100%;   
-                }
-            }
-            .cta{
-               div{
-                 color: $yellow;
-                 @include flex(space-between,center,1rem);
-               }
-              }
-        }
+    .img_1 {
+      width: 81%;
+      position: absolute;
+      bottom: 33%;
+      z-index: 3;
+      svg {
+        width: 100%;
+      }
+      @include media("<=tablet") {
+        width: 100%;
+      }
+      @include media("<=phone-tab") {
+        bottom: 16%;
+      }
     }
-    &_print{
-        padding: 5rem 0;
-        @include flex_col(0rem);
-        overflow-x: hidden;
-        z-index: 1;
-        @include media("<=tablet"){
-            padding: 4rem 0;
-        }
-        &_fl{
-            @include flex(center,center,0);
-            @include media("<=tablet"){
-                @include flex_col(3rem);
-            }
-            video{
-                width: 40%;
-                @include media("<=tablet"){
-                    width: 100%;
-                }
-            }
-            &_features{
-                z-index: 2;
-                transform: translateX(-7rem) translateY(5rem);
-                 @include flex_col(2rem);
-                 width: 30%;
-                 @include media("<=tablet"){
-                    width: 100%;
-                    transform: translateX(0rem);
-                }
-                 .c_feature{
-                    background-color: $fade-bl;
-                    padding:.5rem 1rem ;
-                    border-top-right-radius:.4rem ;
-                    border-bottom-right-radius:.4rem;
-                    @include flex(flex-start,center,.6rem);
-                    p{
-                        font-size: 1rem;
-                    }
-                 }
-            }
-        }
+    .img_2 {
+      width: 84%;
+      z-index: 2;
+      position: absolute;
+      bottom: 30%;
+      // opacity: 0;
+      @include media("<=tablet") {
+        width: 100%;
+      }
+      @include media("<=phone-tab") {
+        bottom: 13%;
+      }
     }
+  }
+  &_experience {
+    min-height: 40rem;
+    padding: 3rem 0;
+    @include flex(flex-end, center, 0rem);
+    position: relative;
+    cursor: pointer;
+    @include media("<=tablet") {
+      min-height: auto;
+      @include flex_col(4rem);
+      flex-direction: column-reverse;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: flex-start;
+    }
+    > svg {
+      position: absolute;
+      left: 12rem;
+      width: 21%;
+      @include media("<=tablet") {
+        display: none;
+      }
+    }
+    video {
+      z-index: 1;
+      position: absolute;
+      left: -10%;
+      opacity: 0;
+      width: 71%;
+      @include media("<=tablet") {
+        width: 100%;
+        transform: scale(1.4);
+        display: block;
+        position: relative;
+        left: 0;
+        top: 4rem;
+      }
+      @include media("<=phone") {
+        width: 100%;
+        transform: scale(1);
+        left: 0;
+      }
+    }
+
+    &_txt {
+      z-index: 2;
+      max-width: 55%;
+      flex-shrink: 0 0;
+      @include flex_col(2rem);
+      align-items: flex-start;
+      transform: translateX(0rem);
+      @include media("<=tablet") {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      > p {
+        width: 70%;
+        @include media("<=tablet") {
+          width: 100%;
+        }
+      }
+      .cta {
+        div {
+          color: $yellow;
+          @include flex(space-between, center, 1rem);
+        }
+      }
+    }
+  }
+  &_print {
+    padding: 5rem 0;
+    @include flex_col(0rem);
+    overflow-x: hidden;
+    z-index: 1;
+    @include media("<=tablet") {
+      padding: 4rem 0;
+    }
+    &_fl {
+      @include flex(center, center, 0);
+      @include media("<=tablet") {
+        @include flex_col(3rem);
+      }
+      video {
+        width: 40%;
+        @include media("<=tablet") {
+          width: 100%;
+        }
+      }
+      &_features {
+        z-index: 2;
+        transform: translateX(-7rem) translateY(5rem);
+        @include flex_col(2rem);
+        width: 30%;
+        @include media("<=tablet") {
+          width: 100%;
+          transform: translateX(0rem);
+        }
+        .c_feature {
+          background-color: $fade-bl;
+          padding: 0.5rem 1rem;
+          border-top-right-radius: 0.4rem;
+          border-bottom-right-radius: 0.4rem;
+          @include flex(flex-start, center, 0.6rem);
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
 }
-.fadeOut{
-    transition: opacity 2s ease-in-out;
-            opacity: 0 !important;
+.fadeOut {
+  transition: opacity 2s ease-in-out;
+  opacity: 0 !important;
 }
-.fadeIn{
-    transition: opacity 2s ease-in-out;
-            opacity: 1 !important;
+.fadeIn {
+  transition: opacity 2s ease-in-out;
+  opacity: 1 !important;
 }

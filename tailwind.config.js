@@ -12,6 +12,7 @@ module.exports = {
     "./src/templates/home/**/*.{html,jsx,js}",
     "./src/templates/products/**/*.{html,jsx,js}",
     "./src/templates/business/**/*.{html,jsx,js}",
+    "./src/templates/max/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
@@ -86,6 +87,7 @@ module.exports = {
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
+          grey3light: "#99999980",
         },
         c: {
           0: "#000000",
@@ -95,6 +97,13 @@ module.exports = {
         },
         gray: {
           5: "#E0E0E0",
+        },
+        m: {
+          black: "#1E1E1E;",
+          grey1: "#A8A8A8",
+          light: "#FAFAFA",
+          yellow: "#ffd42b",
+          yellow1: "#FFCC001A",
         },
       },
 

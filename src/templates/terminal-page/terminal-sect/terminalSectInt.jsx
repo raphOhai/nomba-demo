@@ -26,18 +26,20 @@ const TerminalSectionInteractions = () => {
   const fadeOutVid = () => {
     setHoverVid(true);
   };
-
-  if (isMobile) {
-    const observer = new window.IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setHover(true);
-          observer.disconnect();
-        }
+  useEffect(() => {
+    if (isMobile) {
+      const observer = new window.IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          alert(1);
+          if (entry.isIntersecting) {
+            setHover(true);
+            observer.disconnect();
+          }
+        });
       });
-    });
-    observer.observe(skeleton.current);
-  }
+      observer.observe(skeleton.current);
+    }
+  }, [skeleton]);
 
   useEffect(() => {
     const wrap = document.querySelector(".c_terminal_sectInt_experience");
@@ -73,7 +75,7 @@ const TerminalSectionInteractions = () => {
       xPercent: 0,
       yPercent: 0,
       stagger: 1.5,
-      duration: 3,
+      duration: 2,
       ease: "easeOut",
     });
   });

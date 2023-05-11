@@ -29,11 +29,7 @@ function BusinessTypes() {
               />
               {/* sub text */}
               <div className="mt-4">
-                <Ntext
-                  variant="text4lite"
-                  className="cursor-pointer"
-                  color={b === activeType ? "primary-900" : "n-grey3"}
-                >
+                <Ntext variant="text3" className="cursor-pointer" color={b === activeType ? "primary-900" : "n-grey3"}>
                   {b.description}
                 </Ntext>
               </div>
@@ -72,7 +68,7 @@ function ItemType({ data }) {
       <div className={`transition-all duration-500 ease-out ${isOpen ? "" : "hidden"}`}>
         <div className="mt-5">{data.images}</div>
         <div className="mt-4">
-          <Ntext variant="text4lite" className="c-0 cursor-pointer">
+          <Ntext variant="text3" className="c-0 cursor-pointer">
             {data.description}
           </Ntext>
         </div>

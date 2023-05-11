@@ -1,0 +1,75 @@
+.animate-button {
+    width: auto;
+    color: $light-txt-1;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    @include flex(center, center, 1rem);
+    border: 1px solid $yellow;
+    font-weight: 500;
+    font-size: 1.15rem;
+    background: linear-gradient(to right, $yellow 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    &:hover {
+      cursor: pointer;
+      background-position: left bottom;
+      color: $black;
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+    svg {
+      path {
+        stroke: white;
+        @include media("<=phone-tab") {
+          // stroke: $black;
+        }
+      }
+    }
+    @include media("<=phone-tab") {
+      width: 100%;
+      // background: $yellow;
+      // color: $black;
+    }
+  }
+
+  .animate-button-reverse {
+    width: auto;
+    color: $black;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    @include flex(center, center, 1rem);
+    border: 1px solid $yellow;
+    font-weight: 500;
+    font-size: 1.15rem;
+    background: linear-gradient(to right, $yellow 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.5s ease-out;
+    &:hover {
+      cursor: pointer;
+      background-position: right bottom;
+      color: $light-txt-1;
+      svg {
+        path {
+          stroke: white;
+        }
+      }
+    }
+    svg {
+      path {
+        stroke: $black;
+        @include media("<=phone-tab") {
+          // stroke: $black;
+        }
+      }
+    }
+    @include media("<=phone-tab") {
+      width: 100%;
+      // background: $yellow;
+      // color: $black;
+    }
+  }

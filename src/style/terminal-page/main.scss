@@ -1,3 +1,9 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
+// @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
 @import "./base/generic";
 @import "./base/normalize";
+@import "./components/common-questions.scss";
+@import "./components/terminal-section.scss";
+@import "./components/terminal-hero.scss";
+@import "./partials/utils";
+@import "./partials/business-video";
+@import "./partials/testimonial";
