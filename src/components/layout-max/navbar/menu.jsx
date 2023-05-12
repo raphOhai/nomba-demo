@@ -1,8 +1,8 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { MenuItems } from "./menu-items";
-import MenuIcon from "assets/images/svgs/menu.svg";
-import CloseIcon from "assets/images/svgs/x.svg";
+import MenuIcon from "assets/images/svgs/menu-light.svg";
+import CloseIcon from "assets/images/svgs/x-light.svg";
 import { Button } from "components/button";
 
 import constants from "config/constants.json";
