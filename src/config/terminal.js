@@ -176,30 +176,4 @@ export const maxTestimonial = [
       />
     ),
   },
-  {
-    testimonial:
-      "“Besides the speed and reliability of transactions, what’s special about Terminal is that it integrates seamlessly with our system. From a single dashboard, we can easily analyse, reconcile, and make strategic decisions for our business.”    ",
-    name: "Cynthia Portable",
-    role: "GIG Motors LTD",
-    image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/terminal/max/testimonials/image1.png"
-        loading="lazy"
-      />
-    ),
-  },
-  {
-    testimonial:
-      "“Besides the speed and reliability of transactions, what’s special about Terminal is that it integrates seamlessly with our system. From a single dashboard, we can easily analyse, reconcile, and make strategic decisions for our business.”    ",
-    name: "Cynthia Portable",
-    role: "GIG Motors LTD",
-    image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/terminal/max/testimonials/image1.png"
-        loading="lazy"
-      />
-    ),
-  },
 ];
