@@ -45,7 +45,7 @@ const MaxTestimonial = ({ testimonials, headingText }) => {
 const SliderNavigation = ({ title }) => (
   <div className="flex flex-row justify-between items-baseline" id="testimonials">
     <SectionHeader className="!text-left">
-      <Ntext variant="h2" color="primary-100" value={title} className={headingTextStyle} data-animation="v" />
+      <Ntext variant="h2" color="primary-100" value={title} className={headingTextStyle} data-animation="h" />
     </SectionHeader>
     <div className={controlButtonWrapStyle}>
       <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
