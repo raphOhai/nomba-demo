@@ -51,7 +51,6 @@ const SliderNavigation = ({ title }) => (
       <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
         <PreviousIcon className="mx-auto" />
       </button>
-
       <button className={`${controlButtonStyle} next-element`} aria-label="Next Slide">
         <NextIcon className="mx-auto" />
       </button>
