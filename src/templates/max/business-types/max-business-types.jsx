@@ -20,30 +20,7 @@ const MaxBusinessTypes = ({ title }) => {
   const [playVideo, setPlayVid] = useState(false);
   const hero_vid = useRef(null);
 
-  useEffect(() => {
-    const fontSize = isMobile ? "32px" : "48px";
-    // gsap.set(".section_header2", {
-    //     // fontSize: 0,
-    //     yPercent: 30,
-    //     opacity: 0,
-    // });
-    gsap.to(".section_header2", {
-      scrollTrigger: {
-        trigger: ".section_header2",
-        start: "top 15%",
-        scrub: true,
-        toggleActions: "play reverse restart reverse",
-        end: "=+200px",
-      },
-      opacity: 0.04,
-      autoAlpha: 0,
-      yPercent: -30,
-      // fontSize: fontSize,
-      xPercent: 0,
-      duration: 0.4,
-      ease: "easeIn",
-    });
-  });
+  useEffect(() => {});
 
   const playVid = () => {
     setPlayVid(!playVideo);
@@ -65,7 +42,7 @@ const MaxBusinessTypes = ({ title }) => {
         {playVideo && <video onClick={close} ref={hero_vid} controls autoPlay src={BusinessVid}></video>}
       </div>
       <Container>
-        <div className="md:max-w-[671px] md:mx-auto section_header2 md:text-center">
+        <div className="md:max-w-[671px] md:mx-auto  md:text-center">
           <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
