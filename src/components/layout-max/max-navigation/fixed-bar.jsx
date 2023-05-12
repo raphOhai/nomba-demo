@@ -19,13 +19,20 @@ const FixedBar = () => {
   };
 
   useEffect(() => {
+    gsap.set(".main-container", {
+      // perspective: 1600,
+      // scale: 0.5
+    });
     gsap.set(".fixedbar", {
       opacity: 1,
       yPercent: 50,
       opacity: 0,
       // skewX: -10,
       // skewY: -50,
-      rotateX: -90,
+      rotateX: -45,
+      // perspective: 1600,
+      // scale: 0.5,
+      transformStyle: "preserve-3d",
     });
     gsap.to(".fixedbar", {
       scrollTrigger: {
@@ -45,6 +52,10 @@ const FixedBar = () => {
       duration: 0.5,
       ease: "easeIn",
     });
+
+    // gsap.to('#link-0', {
+
+    // })
   });
 
   return (
