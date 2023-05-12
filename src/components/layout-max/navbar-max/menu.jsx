@@ -12,7 +12,7 @@ const Menu = ({ openMenu, onToggle }) => {
   const menuIconAriaLabel = openMenu ? "menu icon" : "close menu icon";
 
   return (
-    <div className="lg:w-full ">
+    <div className="lg:w-full  ">
       {/* hamburger menu for mobile */}
       <button onClick={onToggle} className="lg:hidden" aria-label={menuIconAriaLabel}>
         {openMenu ? <CloseIcon /> : <MenuIcon />}
@@ -22,12 +22,16 @@ const Menu = ({ openMenu, onToggle }) => {
         <MenuItems />
 
         <ul className={buttonWrapStyle}>
-          <li className={signInButtonStyle}>
-            <Button variant="alternative" text="Sign in" href={{ url: SIGNIN_URL }} />
-          </li>
+          {/* <li className={signInButtonStyle}>
+            <Button
+              variant="alternative"
+              text="Sign in"
+              href={{ url: SIGNIN_URL }}
+            />
+          </li> */}
 
           <li>
-            <Button text="Get Started" href={{ url: SIGNUP_URL }} />
+            <Button text="Get started now" href={{ url: SIGNUP_URL }} />
           </li>
         </ul>
       </nav>

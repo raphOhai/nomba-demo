@@ -40,7 +40,7 @@ const MaxpageHero = ({ title, description }) => {
 
 // pb-[120px]
 const heroStyle = ctl(`
-md:pt-[146px]
+md:pt-[90px]
 md:pb-[50px]
 bg-black
 pt-[75px]

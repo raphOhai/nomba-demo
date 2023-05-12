@@ -28,7 +28,7 @@ const NavBar = () => {
 const mainHeaderStlye = ctl(`
 lg:bg-black
 bg-primary
-
+fixed
 top-0
 left-0
 w-full
