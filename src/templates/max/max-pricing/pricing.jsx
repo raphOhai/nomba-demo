@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
@@ -10,8 +10,9 @@ import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
 import { maxFeaturesBreakdown } from "config/terminal";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
-const MaxPricing = ({ title, price }) => {
+const MaxPricing = ({ title, price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
+  const [isPurchase, setIsPurchase] = useState(true);
   useEffect(() => {
     gsap.to(".section_header3", {
       scrollTrigger: {
@@ -78,13 +79,22 @@ const MaxPricing = ({ title, price }) => {
 
             <div className={childWrapper2}>
               <div className={badgeWrapper}>
-                <button className={badgeButtonStyle}>
+                <button
+                  className={isPurchase ? badgeButtonStyle : leaseBadgeButtonStyle}
+                  onClick={() => setIsPurchase(true)}
+                >
                   <span>Outright Purchase</span>
+                </button>
+                <button
+                  className={!isPurchase ? badgeButtonStyle : leaseBadgeButtonStyle}
+                  onClick={() => setIsPurchase(false)}
+                >
+                  <span>For Lease</span>
                 </button>
               </div>
               <div>
                 <Ntext variant="pricingMain" color="primary-100" data-animation="v">
-                  {price}
+                  {isPurchase ? price : leasePrice}
                 </Ntext>
               </div>
               <div className="my-10 flex flex-col gap-7 max_features1">
@@ -102,7 +112,7 @@ const MaxPricing = ({ title, price }) => {
                 <ReadMore
                   color="primary-100"
                   weight={500}
-                  className="text-center"
+                  className="text-center "
                   defaultStyle={false}
                   variant="text3"
                   href={{ url: "tel:+23401888899" }}
@@ -141,7 +151,9 @@ items-start
 `);
 
 const badgeWrapper = ctl(`
-
+gap-4
+flex
+flex-row
 mb-[20px]
 
 `);
@@ -152,10 +164,22 @@ rounded-[30px]
 bg-secondary
 px-[20px]
 py-[4px]
+transition-all
 cursor-default
 text-[14px]
 font-[500]
 leading-[22px]
 `);
-
+const leaseBadgeButtonStyle = ctl(`
+transition-all
+text-n-grey2
+rounded-[10px]
+bg-n-grey6
+px-[30px]
+py-[3px]
+cursor-pointer
+text-[14px]
+font-[500]
+leading-[22px]
+`);
 export { MaxPricing };
