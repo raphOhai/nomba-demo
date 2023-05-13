@@ -43,6 +43,18 @@ export const InTheBox = [
     ),
   },
   {
+    title: "Charger",
+    image: (
+      <StaticImage
+        width={353}
+        height={277}
+        className=""
+        alt="Charger"
+        src="../assets/images/jpegs/terminal/max/box/charger.png"
+      />
+    ),
+  },
+  {
     title: "POS Terminal Guide",
     image: (
       <StaticImage
@@ -55,26 +67,38 @@ export const InTheBox = [
     ),
   },
   {
-    title: "Charger",
+    title: "Table stand",
     image: (
       <StaticImage
-        width={200}
-        height={293}
+        width={340}
+        height={303}
         className=""
-        alt="Charger"
-        src="../assets/images/jpegs/terminal/max/box/charger.png"
+        alt="Table Stand"
+        src="../assets/images/jpegs/terminal/max/box/table-stand.png"
       />
     ),
   },
   {
-    title: "Paper Tent",
+    title: "Envelope",
     image: (
       <StaticImage
-        width={350}
-        height={308}
+        width={340}
+        height={303}
         className=""
-        alt="Paper Tent"
-        src="../assets/images/jpegs/terminal/max/box/paper.png"
+        alt="Envelop"
+        src="../assets/images/jpegs/terminal/max/box/envelope.png"
+      />
+    ),
+  },
+  {
+    title: "Sticker",
+    image: (
+      <StaticImage
+        width={328}
+        height={118}
+        className=""
+        alt="Sticker"
+        src="../assets/images/jpegs/terminal/max/box/stickers.png"
       />
     ),
   },
