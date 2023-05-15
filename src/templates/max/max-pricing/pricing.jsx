@@ -13,6 +13,25 @@ gsap.registerPlugin(ScrollTrigger);
 const MaxPricing = ({ title, price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
   const [isPurchase, setIsPurchase] = useState(true);
+
+  const changePrice = item => {
+    gsap.set(item, {
+      autoAlpha: 0,
+      opacity: 0,
+      xPercent: isPurchase ? -50 : 50,
+      transformStyle: "preserve-3d",
+    });
+    gsap.to(item, {
+      autoAlpha: 1,
+      xPercent: 0,
+      duration: 0.5,
+      ease: "easeOut",
+    });
+  };
+  const setPurchase = (p, d) => {
+    setIsPurchase(p);
+    changePrice(d);
+  };
   useEffect(() => {
     gsap.to(".section_header3", {
       scrollTrigger: {
@@ -81,20 +100,25 @@ const MaxPricing = ({ title, price, leasePrice }) => {
               <div className={badgeWrapper}>
                 <button
                   className={isPurchase ? badgeButtonStyle : leaseBadgeButtonStyle}
-                  onClick={() => setIsPurchase(true)}
+                  onClick={() => setPurchase(true, ".purchase")}
                 >
                   <span>Outright Purchase</span>
                 </button>
                 <button
                   className={!isPurchase ? badgeButtonStyle : leaseBadgeButtonStyle}
-                  onClick={() => setIsPurchase(false)}
+                  onClick={() => setPurchase(false, ".lease")}
                 >
                   <span>For Lease</span>
                 </button>
               </div>
-              <div>
+              <div className={`${!isPurchase ? "hidden" : ""} purchase`}>
                 <Ntext variant="pricingMain" color="primary-100" data-animation="v">
-                  {isPurchase ? price : leasePrice}
+                  {price}
+                </Ntext>
+              </div>
+              <div className={`${!isPurchase ? "" : "hidden "} lease`}>
+                <Ntext variant="pricingMain" color="primary-100">
+                  {leasePrice}
                 </Ntext>
               </div>
               <div className="my-10 flex flex-col gap-7 max_features1">
@@ -165,13 +189,17 @@ bg-secondary
 px-[20px]
 py-[4px]
 transition-all
+ease-linear
 cursor-default
 text-[14px]
 font-[500]
+delay-200
 leading-[22px]
 `);
 const leaseBadgeButtonStyle = ctl(`
 transition-all
+ease-linear
+delay-200
 text-n-grey2
 rounded-[10px]
 bg-n-grey6
