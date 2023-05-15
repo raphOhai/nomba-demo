@@ -23,21 +23,18 @@ flex
 flex-col
 justify-between 
 shadow-lg 
-hover:shadow-xl 
-hover:border-n-yellow
-hover:border-2
-hover:transition-all
-duration-500
+hover:shadow-xl
 cursor-pointer
-rounded-lg 
+rounded-[10px] 
 bg-primary 
 md:max-w-[380px] 
 h-[400px] 
 max-w-[388px] 
 md:h-[408px] 
-hover:!text-primary-100
 p-[30px]
 overflow-hidden
+box-wrapper
+md:ml-1
 `);
 
 export { Box };

@@ -47,16 +47,21 @@ const MaxBusinessTypes = ({ title }) => {
             {title}
           </Ntext>
         </div>
-        <div className="flex flex-row mt-12">
+        <div className="md:flex md:flex-row mt-12 gap-6 hidden">
           <div className={businessTab}>For small businesses</div>
           <div className={businessTab}>For large businesses</div>
         </div>
         <div className="relative">
           <div className="mt-[50px] business-video ">
             <StaticImage
-              className={coverVideo}
+              className={`${coverVideo} hidden md:block`}
               alt="video cover"
               src="../../../assets/images/jpegs/terminal/max/video-cover.png"
+            />
+            <StaticImage
+              className={`${coverVideo} md:hidden`}
+              alt="video cover"
+              src="../../../assets/images/jpegs/terminal/max/video-cover-mobile.png"
             />
           </div>
           <div onClick={playVid} className="play_mobile">
@@ -69,6 +74,10 @@ const MaxBusinessTypes = ({ title }) => {
               <PlayMobile />
             )}
           </div>
+        </div>
+        <div className="flex flex-col mt-12 gap-6 md:!hidden">
+          <div className={businessTabMobile}>For small businesses</div>
+          <div className={businessTabMobile}>For large businesses</div>
         </div>
         <MaxTestimonial testimonials={maxTestimonial} headingText="Don’t just take our word for it" />
       </Container>
@@ -86,6 +95,19 @@ text-center
 border 
 border-m-yellow
 py-[23px]
+text-primary-100 
+rounded-[10px]
+`);
+const businessTabMobile = ctl(`
+flex-1 
+text-[14px] 
+md:text-[17px] 
+leading-[22px] 
+md:leading-8 
+text-center 
+border 
+border-m-yellow
+py-[13px]
 text-primary-100 
 rounded-[10px]
 `);

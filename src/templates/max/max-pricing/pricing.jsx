@@ -73,7 +73,7 @@ const MaxPricing = ({ title, price, leasePrice }) => {
   });
 
   return (
-    <section className="mt-[150px] md:mt-[200px]" id="pricing">
+    <section className="mt-[100px] md:mt-[150px]" id="pricing">
       <div>
         <Container>
           <div className="md:max-w-[671px] md:mx-auto section_header3 md:text-center mb-[30px] md:mb-[80px]">
@@ -178,15 +178,15 @@ const badgeWrapper = ctl(`
 gap-4
 flex
 flex-row
-mb-[20px]
-
+my-[20px]
 `);
 
 const badgeButtonStyle = ctl(`
 c-0
 rounded-[30px]
 bg-secondary
-px-[20px]
+md:px-[20px]
+px-[16px]
 py-[4px]
 transition-all
 ease-linear
@@ -203,7 +203,8 @@ delay-200
 text-n-grey2
 rounded-[10px]
 bg-n-grey6
-px-[30px]
+md:px-[30px]
+px-[24px]
 py-[3px]
 cursor-pointer
 text-[14px]

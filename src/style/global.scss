@@ -33,7 +33,7 @@
   border: 1px solid #999999 !important;
 }
 
-.swiper-pagination > .swiper-pagination-bullet {
+.swiper-pagination>.swiper-pagination-bullet {
   @apply mr-2 rounded-full;
   background: white;
   opacity: 1;
@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-.pagination-class > .swiper-pagination-progressbar-fill {
+.pagination-class>.swiper-pagination-progressbar-fill {
   background-color: rgb(255 204 0) !important;
   top: -4px !important;
   height: 5px !important;
@@ -115,7 +115,7 @@
   list-style-position: inside;
 }
 
-.policy-page ul > li {
+.policy-page ul>li {
   @apply my-2;
 }
 
@@ -171,4 +171,23 @@ dt {
 
 .illustration svg {
   @apply min-h-[100px];
+}
+
+.box-wrapper {
+  outline: 0px solid #121212;
+  transition: outline 0.6s ease 0s;
+
+  div {
+    color: #717171 !important;
+    transition: all 0.6s ease 0s;
+  }
+
+  &:hover {
+    outline: 3px solid #ffcc00;
+
+    div {
+      color: #fff !important;
+      // @apply transition-colors transition-all duration-500;
+    }
+  }
 }

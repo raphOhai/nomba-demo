@@ -54,7 +54,7 @@ flex
 md:flex-row
 flex-col
 items-stretch
-gap-3
+gap-[24px]
 overflow-hidden
 `);
 
