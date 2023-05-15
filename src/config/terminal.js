@@ -4,21 +4,21 @@ import { Br } from "components";
 export const AccordionData = [
   {
     id: 1,
-    header: "Who is the Nomba MAX for",
+    header: "Who is the Nomba MAX for?",
     content:
-      "The Nomba MAX was specially designed for businesses that want to improve their payment collection experience and boost their business  growth.",
+      "The Nomba MAX was specially designed for businesses that want to improve their payment experience and boost their business growth.",
   },
   {
     id: 2,
-    header: "Where can i get the Nomba MAX?",
+    header: "Does Nomba MAX print receipts?",
     content:
-      "The Nomba MAX is coming soon. Once you’ve signed up to join the waitlist; you'll be the first to know when it’s available.",
+      "Nomba MAX prints receipts and also allows for several re-prints.",
   },
   {
     id: 3,
-    header: "How much is the Nomba MAX?",
+    header: "What else can I do with my Nomba MAX?",
     content:
-      "Prices for the Nomba MAX caution fee and outright purchase will be announced at its launch. You'll be informed via email used in sign up.",
+      "We are constantly working on updates and improvements for the Nomba MAX to improve your experience; please stay tuned to your email and our social media to keep up.",
   },
 ];
 export const MaxSponsorList = [
