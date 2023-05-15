@@ -174,8 +174,8 @@ dt {
 }
 
 .box-wrapper {
-  outline: 0px solid #121212;
-  transition: outline 0.6s ease 0s;
+  border: 0px solid #121212;
+  transition: all 0.6s ease 0s;
 
   div {
     color: #717171 !important;
@@ -183,7 +183,7 @@ dt {
   }
 
   &:hover {
-    outline: 3px solid #ffcc00;
+    border: 3px solid #ffcc00;
 
     div {
       color: #fff !important;
