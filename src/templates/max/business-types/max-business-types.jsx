@@ -53,16 +53,20 @@ const MaxBusinessTypes = ({ title }) => {
         </div>
         <div className="relative">
           <div className="mt-[50px] business-video ">
-            <StaticImage
-              className={`${coverVideo} hidden md:block`}
-              alt="video cover"
-              src="../../../assets/images/jpegs/terminal/max/video-cover.png"
-            />
-            <StaticImage
-              className={`${coverVideo} md:hidden`}
-              alt="video cover"
-              src="../../../assets/images/jpegs/terminal/max/video-cover-mobile.png"
-            />
+            <div className="!hidden md:!block">
+              <StaticImage
+                className={coverVideo}
+                alt="video cover"
+                src="../../../assets/images/jpegs/terminal/max/video-cover.png"
+              />
+            </div>
+            <div className="md:!hidden">
+              <StaticImage
+                className={coverVideo}
+                alt="video cover"
+                src="../../../assets/images/jpegs/terminal/max/video-cover-mobile.png"
+              />
+            </div>
           </div>
           <div onClick={playVid} className="play_mobile">
             {playVideo ? (
