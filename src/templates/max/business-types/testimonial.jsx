@@ -74,7 +74,7 @@ const controlButtonStyle = ctl(`
 const headingTextStyle = ctl(`
 
 md:mb-[62px]
-mb-[30px]
+mb-[1px]
 `);
 
 MaxTestimonial.propTypes = {

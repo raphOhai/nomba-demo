@@ -24,13 +24,6 @@ const MaxBusinessTypes = ({ title }) => {
 
   const playVid = () => {
     setPlayVid(!playVideo);
-    // const video = document.querySelector(".hero_video_pl video");
-    // if (playVideo) {
-    //   video.pause();
-    //   video.currentTime = 0;
-    // } else {
-    //   video.play();
-    // }
   };
   const close = () => {
     setPlayVid(!playVideo);

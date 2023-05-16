@@ -11,7 +11,7 @@ const MaxTestimonialCard = ({ name, role, testimonial, image }) => {
           <Ntext variant="p24" color="n-grey1" value={testimonial} />
         </div>
 
-        <div className="md:mt-8 -mt-4">
+        <div className="mt-8 ">
           <Ntext variant="text3" color="n-light" value={name} className="mb-2" />
 
           {role && <Ntext variant="text3" color="n-grey3" value={role} />}
@@ -52,7 +52,6 @@ const imageWrapStyle = ctl(`
   slider-padding-right
   md:h-[474px] 
   sm:h-[400px]
-  h-[383px]
   rounded-[10px]
   relative
 `);
