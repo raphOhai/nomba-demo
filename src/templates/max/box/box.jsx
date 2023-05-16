@@ -14,7 +14,7 @@ const Box = ({ image, title }) => {
 };
 
 const imageStyle = ctl(`  
-my-auto
+
 
 `);
 
@@ -31,7 +31,8 @@ md:max-w-[380px]
 h-[400px] 
 max-w-[388px] 
 md:h-[408px] 
-p-[30px]
+px-[30px]
+pt-[30px]
 overflow-hidden
 box-wrapper
 md:ml-1

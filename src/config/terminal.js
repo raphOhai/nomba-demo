@@ -11,8 +11,7 @@ export const AccordionData = [
   {
     id: 2,
     header: "Does Nomba MAX print receipts?",
-    content:
-      "Nomba MAX prints receipts and also allows for several re-prints.",
+    content: "Nomba MAX prints receipts and also allows for several re-prints.",
   },
   {
     id: 3,
@@ -35,7 +34,7 @@ export const InTheBox = [
     image: (
       <StaticImage
         width={321}
-        height={350}
+        height={300}
         className=""
         alt="Nomba Max Terminal"
         src="../assets/images/jpegs/terminal/max/box/max.png"
@@ -47,7 +46,7 @@ export const InTheBox = [
     image: (
       <StaticImage
         width={353}
-        height={277}
+        height={300}
         className=""
         alt="Charger"
         src="../assets/images/jpegs/terminal/max/box/charger.png"
@@ -59,7 +58,7 @@ export const InTheBox = [
     image: (
       <StaticImage
         width={310}
-        height={330}
+        height={300}
         className=""
         alt="POS guide"
         src="../assets/images/jpegs/terminal/max/box/guide.png"
@@ -71,7 +70,7 @@ export const InTheBox = [
     image: (
       <StaticImage
         width={340}
-        height={303}
+        height={300}
         className=""
         alt="Table Stand"
         src="../assets/images/jpegs/terminal/max/box/table-stand.png"
@@ -82,8 +81,8 @@ export const InTheBox = [
     title: "Envelope",
     image: (
       <StaticImage
-        width={340}
-        height={303}
+        width={310}
+        height={300}
         className=""
         alt="Envelop"
         src="../assets/images/jpegs/terminal/max/box/envelope.png"
@@ -95,7 +94,7 @@ export const InTheBox = [
     image: (
       <StaticImage
         width={328}
-        height={118}
+        height={300}
         className=""
         alt="Sticker"
         src="../assets/images/jpegs/terminal/max/box/stickers.png"
@@ -179,19 +178,20 @@ export const maxFeatures = [
 export const maxFeaturesBreakdown = [
   "5.0-inch HD 1280x720 capacitive touchscreen",
   "5 megapixel auto focus rear camera",
-  "1GB RAM, 8GB ROM support 32GB external TF card",
+  "Android 11.0 with 1GB RAM, 8GB ROM support 32GB external TF card",
   "7.4V/2000mAh rechargeable Li-ion battery",
   "100~240V AC 50/60HzAdapter",
   "1x Micro USB2.0, 1x DC jack",
   "Quad-core CPU",
+  "Type-C charger",
 ];
 
 export const maxTestimonial = [
   {
     testimonial:
-      "“Besides the speed and reliability of transactions, what’s special about Terminal is that it integrates seamlessly with our system. From a single dashboard, we can easily analyse, reconcile, and make strategic decisions for our business.”    ",
-    name: "Cynthia Portable",
-    role: "GIG Motors LTD",
+      "“I like their products and I’ve even introduced them to others like my hotelier colleagues; the speed and lack of network error especially. Anytime we use them - we see the alert, we get our money. Also, for every transaction, I see it on my POS and I see it on my phone.”",
+    name: "Alhaji Hassan Musaibu",
+    role: "Owner of Ghatsview Supermarket",
     image: (
       <StaticImage
         alt="Testimonial Image"
