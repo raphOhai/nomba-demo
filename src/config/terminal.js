@@ -30,6 +30,7 @@ export const MaxSponsorList = [
 
 export const InTheBox = [
   {
+    id: 1,
     title: "Nomba MAX Terminal",
     image: (
       <StaticImage
@@ -42,6 +43,7 @@ export const InTheBox = [
     ),
   },
   {
+    id: 2,
     title: "Charger",
     image: (
       <StaticImage
@@ -54,6 +56,7 @@ export const InTheBox = [
     ),
   },
   {
+    id: 3,
     title: "POS Terminal Guide",
     image: (
       <StaticImage
@@ -66,6 +69,7 @@ export const InTheBox = [
     ),
   },
   {
+    id: 4,
     title: "Table stand",
     image: (
       <StaticImage
@@ -78,6 +82,7 @@ export const InTheBox = [
     ),
   },
   {
+    id: 5,
     title: "Envelope",
     image: (
       <StaticImage
@@ -90,6 +95,7 @@ export const InTheBox = [
     ),
   },
   {
+    id: 6,
     title: "Sticker",
     image: (
       <StaticImage

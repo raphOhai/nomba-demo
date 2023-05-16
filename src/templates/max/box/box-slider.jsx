@@ -16,8 +16,8 @@ SwiperCore.use([Navigation, Pagination]);
 
 const BoxSlider = ({ slides }) => {
   const sliderItems = slides.map(item => (
-    <SwiperSlide key={item.title}>
-      <Box title={item.title} image={item.image} />
+    <SwiperSlide key={item.id}>
+      <Box title={item.title} image={item.image} key={item.id} />
     </SwiperSlide>
   ));
 
@@ -47,7 +47,7 @@ const BoxSlider = ({ slides }) => {
       </div>
       <div className="md:!hidden flex flex-col items-stretch gap-10  pb-5">
         {slides.map(item => (
-          <Box title={item.title} key={item.title} image={item.image} />
+          <Box title={item.title} key={item.id} image={item.image} />
         ))}
       </div>
     </>
