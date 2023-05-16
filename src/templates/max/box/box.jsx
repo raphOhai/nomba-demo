@@ -15,7 +15,6 @@ const Box = ({ image, title }) => {
 
 const imageStyle = ctl(`  
 
-
 `);
 
 const boxWrapper = ctl(`

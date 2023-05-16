@@ -33,22 +33,6 @@ const MaxPricing = ({ title, price, leasePrice }) => {
     changePrice(d);
   };
   useEffect(() => {
-    gsap.to(".section_header3", {
-      scrollTrigger: {
-        trigger: ".section_header3",
-        start: "top 15%",
-        scrub: true,
-        toggleActions: "play reverse restart reverse",
-        end: "=+400px",
-      },
-      opacity: 0.04,
-      autoAlpha: 0,
-      yPercent: -30,
-      // fontSize: fontSize,
-      xPercent: 0,
-      duration: 0.4,
-      ease: "easeIn",
-    });
     const sections = gsap.utils.toArray(".max_feature1");
     gsap.set(sections, {
       opacity: 0,

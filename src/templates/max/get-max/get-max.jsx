@@ -47,7 +47,7 @@ gap-5
 
 const subTextStyle = ctl(`
 mb-8
-mt-6
+mt-[40px]
 md:mt-3
 md:basis-2/5
 flex 
