@@ -1,16 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import { maxFeatures } from "config/terminal";
 import { Container, Ntext } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useIsMobile from "hooks/useIsMobile";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
-import Play from "assets/images/svgs/terminal/play.svg";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
-import BusinessVid from "assets/images/svgs/terminal/Supermarket.mp4";
+import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
 import { MaxTestimonial } from "./testimonial";
-import { SmallBusinessTestimonials } from "config/testimonials";
 import { maxTestimonial } from "config/terminal";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
