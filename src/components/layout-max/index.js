@@ -16,7 +16,7 @@ import { FixedBar } from "./max-navigation";
 const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }) => {
   const noOfChildren = children.length;
   return (
-    <div className=" bg-black">
+    <div className="main-container bg-black">
       <Seo title={title} ignoreSiteName={ignoreSiteName} />
       <NavBar />
       {/* All children except the last child */}

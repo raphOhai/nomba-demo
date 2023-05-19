@@ -31,7 +31,7 @@ const Menu = ({ openMenu, onToggle }) => {
           </li> */}
 
           <li>
-            <Button text="Get started now" href={{ url: SIGNUP_URL }} />
+            <Button text="Get your terminal" href={{ url: SIGNUP_URL }} />
           </li>
         </ul>
       </nav>

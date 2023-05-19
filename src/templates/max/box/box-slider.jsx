@@ -15,11 +15,11 @@ import PreviousIconDark from "svgs/chevron-left.svg";
 SwiperCore.use([Navigation, Pagination]);
 
 const BoxSlider = ({ slides }) => {
-  const sliderItems = slides.map(item => (
-    <SwiperSlide key={item.title}>
-      <Box title={item.title} image={item.image} />
-    </SwiperSlide>
-  ));
+  // const sliderItems = slides.map(item => (
+  //   <SwiperSlide key={item.id}>
+  //     <Box title={item.title} image={item.image} key={item.id} />
+  //   </SwiperSlide>
+  // ));
 
   return (
     <>
@@ -40,14 +40,32 @@ const BoxSlider = ({ slides }) => {
             slidesPerView={1}
             breakpoints={breakpoints}
           >
-            {sliderItems}
+            {/* {sliderItems} */}
+            <SwiperSlide>
+              <Box title={slides[0].title} image={slides[0].image} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box title={slides[1].title} image={slides[1].image} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box title={slides[2].title} image={slides[2].image} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box title={slides[3].title} image={slides[3].image} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box title={slides[4].title} image={slides[4].image} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box title={slides[5].title} image={slides[5].image} />
+            </SwiperSlide>
           </Swiper>
         </div>
         <SliderNavigation />
       </div>
       <div className="md:!hidden flex flex-col items-stretch gap-10  pb-5">
         {slides.map(item => (
-          <Box title={item.title} key={item.title} image={item.image} />
+          <Box title={item.title} key={item.id} image={item.image} />
         ))}
       </div>
     </>

@@ -4,21 +4,20 @@ import { Br } from "components";
 export const AccordionData = [
   {
     id: 1,
-    header: "Who is the Nomba MAX for",
+    header: "Who is the Nomba MAX for?",
     content:
-      "The Nomba MAX was specially designed for businesses that want to improve their payment collection experience and boost their business  growth.",
+      "The Nomba MAX was specially designed for businesses that want to improve their payment experience and boost their business growth.",
   },
   {
     id: 2,
-    header: "Where can i get the Nomba MAX?",
-    content:
-      "The Nomba MAX is coming soon. Once you’ve signed up to join the waitlist; you'll be the first to know when it’s available.",
+    header: "Does Nomba MAX print receipts?",
+    content: "Nomba MAX prints receipts and also allows for several re-prints.",
   },
   {
     id: 3,
-    header: "How much is the Nomba MAX?",
+    header: "What else can I do with my Nomba MAX?",
     content:
-      "Prices for the Nomba MAX caution fee and outright purchase will be announced at its launch. You'll be informed via email used in sign up.",
+      "We are constantly working on updates and improvements for the Nomba MAX to improve your experience; please stay tuned to your email and our social media to keep up.",
   },
 ];
 export const MaxSponsorList = [
@@ -31,11 +30,12 @@ export const MaxSponsorList = [
 
 export const InTheBox = [
   {
+    id: 1,
     title: "Nomba MAX Terminal",
     image: (
       <StaticImage
         width={321}
-        height={350}
+        height={300}
         className=""
         alt="Nomba Max Terminal"
         src="../assets/images/jpegs/terminal/max/box/max.png"
@@ -43,23 +43,12 @@ export const InTheBox = [
     ),
   },
   {
-    title: "POS Terminal Guide",
-    image: (
-      <StaticImage
-        width={310}
-        height={330}
-        className=""
-        alt="POS guide"
-        src="../assets/images/jpegs/terminal/max/box/guide.png"
-      />
-    ),
-  },
-  {
+    id: 2,
     title: "Charger",
     image: (
       <StaticImage
-        width={200}
-        height={293}
+        width={353}
+        height={300}
         className=""
         alt="Charger"
         src="../assets/images/jpegs/terminal/max/box/charger.png"
@@ -67,14 +56,54 @@ export const InTheBox = [
     ),
   },
   {
-    title: "Paper Tent",
+    id: 3,
+    title: "POS Terminal Guide",
     image: (
       <StaticImage
-        width={350}
-        height={308}
+        width={310}
+        height={300}
         className=""
-        alt="Paper Tent"
-        src="../assets/images/jpegs/terminal/max/box/paper.png"
+        alt="POS guide"
+        src="../assets/images/jpegs/terminal/max/box/guide.png"
+      />
+    ),
+  },
+  {
+    id: 4,
+    title: "Table stand",
+    image: (
+      <StaticImage
+        width={340}
+        height={300}
+        className=""
+        alt="Table Stand"
+        src="../assets/images/jpegs/terminal/max/box/table-stand.png"
+      />
+    ),
+  },
+  {
+    id: 5,
+    title: "Envelope",
+    image: (
+      <StaticImage
+        width={310}
+        height={300}
+        className=""
+        alt="Envelop"
+        src="../assets/images/jpegs/terminal/max/box/envelope.png"
+      />
+    ),
+  },
+  {
+    id: 6,
+    title: "Sticker",
+    image: (
+      <StaticImage
+        width={328}
+        height={300}
+        className=""
+        alt="Sticker"
+        src="../assets/images/jpegs/terminal/max/box/stickers.png"
       />
     ),
   },
@@ -155,49 +184,24 @@ export const maxFeatures = [
 export const maxFeaturesBreakdown = [
   "5.0-inch HD 1280x720 capacitive touchscreen",
   "5 megapixel auto focus rear camera",
-  "1GB RAM, 8GB ROM support 32GB external TF card",
+  "Android 11.0 with 1GB RAM, 8GB ROM support 32GB external TF card",
   "7.4V/2000mAh rechargeable Li-ion battery",
   "100~240V AC 50/60HzAdapter",
   "1x Micro USB2.0, 1x DC jack",
   "Quad-core CPU",
+  "Type-C charger",
 ];
 
 export const maxTestimonial = [
   {
     testimonial:
-      "“Besides the speed and reliability of transactions, what’s special about Terminal is that it integrates seamlessly with our system. From a single dashboard, we can easily analyse, reconcile, and make strategic decisions for our business.”    ",
-    name: "Cynthia Portable",
-    role: "GIG Motors LTD",
+      "“I like their products and I’ve even introduced them to others like my hotelier colleagues; the speed and lack of network error especially. Anytime we use them - we see the alert, we get our money. Also, for every transaction, I see it on my POS and I see it on my phone.”",
+    name: "Alhaji Hassan Musaibu",
+    role: "Owner of Ghatsview Supermarket",
     image: (
       <StaticImage
         alt="Testimonial Image"
-        src="../assets/images/jpegs/terminal/max/testimonials/image1.png"
-        loading="lazy"
-      />
-    ),
-  },
-  {
-    testimonial:
-      "“Besides the speed and reliability of transactions, what’s special about Terminal is that it integrates seamlessly with our system. From a single dashboard, we can easily analyse, reconcile, and make strategic decisions for our business.”    ",
-    name: "Cynthia Portable",
-    role: "GIG Motors LTD",
-    image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/terminal/max/testimonials/image1.png"
-        loading="lazy"
-      />
-    ),
-  },
-  {
-    testimonial:
-      "“Besides the speed and reliability of transactions, what’s special about Terminal is that it integrates seamlessly with our system. From a single dashboard, we can easily analyse, reconcile, and make strategic decisions for our business.”    ",
-    name: "Cynthia Portable",
-    role: "GIG Motors LTD",
-    image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/terminal/max/testimonials/image1.png"
+        src="../assets/images/jpegs/terminal/max/testimonials/image1.jpg"
         loading="lazy"
       />
     ),

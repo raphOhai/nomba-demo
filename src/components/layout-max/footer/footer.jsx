@@ -29,7 +29,7 @@ const MainFooter = ({ defaultStyle }) => {
 
 const footerStyle = ctl(`
 pt-16
-md:pb-16
+md:pb-[80px]
 pb-6
 relative
 bg-primary

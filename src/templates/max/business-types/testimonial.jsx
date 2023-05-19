@@ -45,13 +45,12 @@ const MaxTestimonial = ({ testimonials, headingText }) => {
 const SliderNavigation = ({ title }) => (
   <div className="flex flex-row justify-between items-baseline" id="testimonials">
     <SectionHeader className="!text-left">
-      <Ntext variant="h2" color="primary-100" value={title} className={headingTextStyle} />
+      <Ntext variant="h2" color="primary-100" value={title} className={headingTextStyle} data-animation="h" />
     </SectionHeader>
     <div className={controlButtonWrapStyle}>
       <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
         <PreviousIcon className="mx-auto" />
       </button>
-
       <button className={`${controlButtonStyle} next-element`} aria-label="Next Slide">
         <NextIcon className="mx-auto" />
       </button>
@@ -74,7 +73,8 @@ const controlButtonStyle = ctl(`
 `);
 const headingTextStyle = ctl(`
 
-  mb-[62px]
+md:mb-[62px]
+mb-[1px]
 `);
 
 MaxTestimonial.propTypes = {

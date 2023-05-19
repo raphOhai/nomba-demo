@@ -4,7 +4,10 @@ import { Ntext } from "components/ntext";
 import { NLink } from "components/nlink";
 import { SubMenu } from "./sub-menu";
 import { headerMenu } from "../../../config/max/menu";
-import Arrow from "assets/images/svgs/chevron-right.svg";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const MenuItems = () => {
   const [showSubmenu, setShowSubmenu] = useState(null);
@@ -25,6 +28,26 @@ const MenuItems = () => {
     };
   }, [showSubmenu]);
 
+  useEffect(() => {
+    headerMenu.forEach((item, i) => {
+      gsap.to(`.link-${i}`, {
+        scrollTrigger: {
+          trigger: item.to,
+          start: "top 90%",
+          scrub: true,
+          toggleActions: "play none none reverse",
+          end: "+=500px",
+        },
+        color: "#ffffff",
+        duration: 0.4,
+      });
+    });
+
+    // gsap.to('#link-0', {
+
+    // })
+  });
+
   const menuItems = headerMenu.map((item, i) => {
     // const navItem = headerMenu[item];
 
@@ -44,7 +67,7 @@ const MenuItems = () => {
 
         <div className={menuLinkWrapStyle}>
           <div>
-            <NLink className={menuLinkStyle} href={item.to}>
+            <NLink className={`${menuLinkStyle} link-${i}`} href={item.to}>
               {item.title}
             </NLink>
           </div>
@@ -83,7 +106,7 @@ const menuLinkStyle = ctl(`
   text-[16px]
   leading-[28.8px]
   font-[400]
-  text-primary-100
+  text-n-grey3light
 `);
 
 export { MenuItems };

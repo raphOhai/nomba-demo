@@ -28,14 +28,14 @@ const WhatsInTheBox = ({ title }) => {
     });
   });
   return (
-    <section className="pt-[150px] md:pt-[15rem] feature-section4">
+    <section className="md:pt-[50px] feature-section4">
       <Container>
         <div className="md:max-w-[671px] md:mx-auto section_header4 md:text-center">
-          <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
+          <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
         </div>
-        <div className="pt-[100px]">
+        <div className="pt-[50px] md:pt-[100px]">
           <BoxSlider slides={InTheBox} />
         </div>
       </Container>

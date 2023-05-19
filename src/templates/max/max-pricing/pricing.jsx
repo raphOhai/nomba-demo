@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
@@ -10,25 +10,29 @@ import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
 import { maxFeaturesBreakdown } from "config/terminal";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
-const MaxPricing = ({ title, price }) => {
+const MaxPricing = ({ title, price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
-  useEffect(() => {
-    gsap.to(".section_header3", {
-      scrollTrigger: {
-        trigger: ".section_header3",
-        start: "top 15%",
-        scrub: true,
-        toggleActions: "play reverse restart reverse",
-        end: "=+400px",
-      },
-      opacity: 0.04,
+  const [isPurchase, setIsPurchase] = useState(true);
+
+  const changePrice = item => {
+    gsap.set(item, {
       autoAlpha: 0,
-      yPercent: -30,
-      // fontSize: fontSize,
-      xPercent: 0,
-      duration: 0.4,
-      ease: "easeIn",
+      opacity: 0,
+      xPercent: isPurchase ? -50 : 50,
+      transformStyle: "preserve-3d",
     });
+    gsap.to(item, {
+      autoAlpha: 1,
+      xPercent: 0,
+      duration: 0.5,
+      ease: "easeOut",
+    });
+  };
+  const setPurchase = (p, d) => {
+    setIsPurchase(p);
+    changePrice(d);
+  };
+  useEffect(() => {
     const sections = gsap.utils.toArray(".max_feature1");
     gsap.set(sections, {
       opacity: 0,
@@ -53,7 +57,7 @@ const MaxPricing = ({ title, price }) => {
   });
 
   return (
-    <section className="mt-[150px] md:mt-[200px]" id="pricing">
+    <section className="mt-[100px] md:mt-[150px]" id="pricing">
       <div>
         <Container>
           <div className="md:max-w-[671px] md:mx-auto section_header3 md:text-center mb-[30px] md:mb-[80px]">
@@ -78,13 +82,27 @@ const MaxPricing = ({ title, price }) => {
 
             <div className={childWrapper2}>
               <div className={badgeWrapper}>
-                <button className={badgeButtonStyle}>
+                <button
+                  className={isPurchase ? badgeButtonStyle : leaseBadgeButtonStyle}
+                  onClick={() => setPurchase(true, ".purchase")}
+                >
                   <span>Outright Purchase</span>
                 </button>
+                <button
+                  className={!isPurchase ? badgeButtonStyle : leaseBadgeButtonStyle}
+                  onClick={() => setPurchase(false, ".lease")}
+                >
+                  <span>For Lease</span>
+                </button>
               </div>
-              <div>
+              <div className={`${!isPurchase ? "hidden" : ""} purchase`}>
                 <Ntext variant="pricingMain" color="primary-100" data-animation="v">
                   {price}
+                </Ntext>
+              </div>
+              <div className={`${!isPurchase ? "" : "hidden "} lease`}>
+                <Ntext variant="pricingMain" color="primary-100">
+                  {leasePrice}
                 </Ntext>
               </div>
               <div className="my-10 flex flex-col gap-7 max_features1">
@@ -102,7 +120,7 @@ const MaxPricing = ({ title, price }) => {
                 <ReadMore
                   color="primary-100"
                   weight={500}
-                  className="text-center"
+                  className="text-center "
                   defaultStyle={false}
                   variant="text3"
                   href={{ url: "tel:+23401888899" }}
@@ -141,21 +159,40 @@ items-start
 `);
 
 const badgeWrapper = ctl(`
-
-mb-[20px]
-
+gap-4
+flex
+flex-row
+my-[20px]
 `);
 
 const badgeButtonStyle = ctl(`
 c-0
 rounded-[30px]
 bg-secondary
-px-[20px]
+md:px-[20px]
+px-[16px]
 py-[4px]
+transition-all
+ease-linear
 cursor-default
+text-[14px]
+font-[500]
+delay-200
+leading-[22px]
+`);
+const leaseBadgeButtonStyle = ctl(`
+transition-all
+ease-linear
+delay-200
+text-n-grey2
+rounded-[10px]
+bg-n-grey6
+md:px-[30px]
+px-[24px]
+py-[3px]
+cursor-pointer
 text-[14px]
 font-[500]
 leading-[22px]
 `);
-
 export { MaxPricing };
