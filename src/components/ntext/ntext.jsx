@@ -33,6 +33,7 @@ const Ntext = ({ value, variant: textVariant, weight, color = "primary", classNa
     "text7",
     "text8",
     "text9",
+    "text9lite",
     "prohero",
     "prosubText",
     "readMore",
@@ -252,6 +253,14 @@ const variants = {
     md:text-[64px]
     md:leading-[84px]
     `,
+  text9lite: `
+    font-[600]
+    text-[32px]
+    md:text-[64px]
+    leading-[40px]
+    md:leading-[74px]
+    tracking-[-0.04em]
+  `,
   prohero: `
     font-[700]
     text-[48px]
@@ -327,6 +336,7 @@ const validElements = [
   "text7",
   "text8",
   "text9",
+  "text9lite",
   "prohero",
   "prosubText",
   "readMore",
