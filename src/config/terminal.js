@@ -201,7 +201,7 @@ export const maxTestimonial = [
     image: (
       <StaticImage
         alt="Testimonial Image"
-        src="../assets/images/jpegs/terminal/max/testimonials/image1.png"
+        src="../assets/images/jpegs/terminal/max/testimonials/image1.jpg"
         loading="lazy"
       />
     ),
