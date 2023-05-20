@@ -149,7 +149,7 @@ const controlButtonStyle = ctl(`
 `);
 
 BoxSlider.propTypes = {
-  slides: PropTypes.object,
+  slides: PropTypes.array,
 };
 
 export { BoxSlider };

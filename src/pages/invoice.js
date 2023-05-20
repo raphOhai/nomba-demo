@@ -3,9 +3,17 @@ import React, { useEffect } from "react";
 import Layout from "components/layout-max";
 import { Br } from "components";
 import { AnyTypeOfBusiness } from "components/any-type-of-business";
-import { InvoicepageHero, InvoiceBusinessTypes, WhatsInTheBox, SponsorList } from "templates/invoice";
+import {
+  InvoicepageHero,
+  InvoiceBusinessTypes,
+  WhatsInTheBox,
+  SponsorList,
+  InvoiceTools,
+  HowInvoicingWorks,
+} from "templates/invoice";
 import { split } from "animations/text";
 import { smallBusinesSolutions } from "config/small-business";
+import { InvoiceBusinessTools } from "config/invoice";
 
 const InvoicePage = () => {
   useEffect(() => {
@@ -24,7 +32,8 @@ const InvoicePage = () => {
       />
 
       <SponsorList title="Over 10,000+ businesses use Nomba Invoice to get paid daily " />
-      <InvoiceBusinessTypes title="What Businesses Like Yours Think of Nomba MAX." />
+      <InvoiceTools title="Upselling invoice as a tool for your business " invoiceTools={InvoiceBusinessTools} />
+      <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <WhatsInTheBox title="What’s in the box?" />
     </Layout>
   );

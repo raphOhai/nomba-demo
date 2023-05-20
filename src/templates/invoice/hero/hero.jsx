@@ -49,7 +49,6 @@ const InvoicepageHero = ({ title, description }) => {
 // pb-[120px]
 const heroStyle = ctl(`
 md:pt-[90px]
-md:pb-[50px]
 bg-black
 pt-[75px]
 `);
@@ -58,10 +57,8 @@ const heroTextWrapperStyle = ctl(`
 lg:max-w-[692px]
 lg:mx-auto
 max-w-[100%]
-lg:mb-[80px]
-sm:mb-[120px]
+lg:mb-[50px]
 md:mx-2
-mb-10
 `);
 
 const heroTextHeaders = ctl(`
