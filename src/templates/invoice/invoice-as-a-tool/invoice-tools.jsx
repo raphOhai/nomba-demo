@@ -1,33 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext } from "components";
 import constants from "config/constants.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import useIsMobile from "hooks/useIsMobile";
 gsap.registerPlugin(ScrollTrigger);
 const InvoiceTools = ({ title, invoiceTools }) => {
   const { SIGNUP_URL } = constants;
-  const [isMobile, setIsMobile] = useState(false);
-  const isBrowser = () => typeof window !== "undefined";
-
-  const calculateWidth = () => {
-    if (window.innerWidth < 768) return setIsMobile(true);
-    setIsMobile(false);
-  };
-
-  useEffect(() => {
-    isBrowser() &&
-      window.addEventListener("resize", function () {
-        calculateWidth();
-      });
-    calculateWidth();
-  }, []);
-
   useEffect(() => {
     setTimeout(function () {
-      if (isMobile) {
+      if (window.innerWidth > 760) {
         let pin = document.querySelector(".invoice-tool-header");
         let content = document.querySelector(".invoice-tool-content");
         let g = document.querySelectorAll(".content-card");
@@ -59,7 +42,7 @@ const InvoiceTools = ({ title, invoiceTools }) => {
         });
       }
     }, 2000);
-  }, [isMobile]);
+  }, []);
 
   return (
     <section className="md:py-[150px] py-[50px]">
