@@ -10,37 +10,36 @@ const InvoiceTools = ({ title, invoiceTools }) => {
   const { SIGNUP_URL } = constants;
   useEffect(() => {
     setTimeout(function () {
+      let pin = document.querySelector(".invoice-tool-header");
+      let content = document.querySelector(".invoice-tool-content");
+      let g = document.querySelectorAll(".content-card");
       if (window.innerWidth > 760) {
-        let pin = document.querySelector(".invoice-tool-header");
-        let content = document.querySelector(".invoice-tool-content");
-        let g = document.querySelectorAll(".content-card");
         ScrollTrigger.create({
           trigger: ".invoice-tool-header",
           start: "center center",
           end: `${content.offsetHeight - 500} ${pin.offsetHeight}`,
           pin: true,
         });
-
-        g.forEach(item => {
-          gsap.set(item, {
-            opacity: 0.2,
-          });
-          gsap.to(item, {
-            scrollTrigger: {
-              trigger: item,
-              start: "top 90%",
-              scrub: true,
-              end: "+=700px",
-            },
-            opacity: 1,
-            // // fontSize: fontSize,
-            // xPercent: 0,
-            // yPercent: -20,
-            duration: 1,
-            ease: "easeOut",
-          });
-        });
       }
+
+      g.forEach(item => {
+        gsap.set(item, {
+          opacity: 0.1,
+          yPercent: 30,
+        });
+        gsap.to(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            scrub: true,
+            end: "+=700px",
+          },
+          opacity: 1,
+          yPercent: 0,
+          duration: 1,
+          ease: "easeOut",
+        });
+      });
     }, 2000);
   }, []);
 
@@ -48,18 +47,18 @@ const InvoiceTools = ({ title, invoiceTools }) => {
     <section className="md:py-[150px] py-[50px]">
       <Container>
         <div className={heroTextHeaders}>
-          <div className="md:basis-1/2 md:mt-[120px] invoice-tool-header">
+          <div className="md:basis-1/2 md:mt-[120px] invoice-tool-header mb-5">
             <div className=" md:max-w-[485px]">
-              <Ntext variant="text8" color="primary-100" className="md:basis-3/5 " data-animation="h">
+              <Ntext variant="h2" color="primary-100" className="md:basis-3/5 text-center" data-animation="h">
                 {title}
               </Ntext>
             </div>
           </div>
 
-          <div className="md:basis-1/2 flex flex-col gap-[36px] invoice-tool-content">
+          <div className="md:basis-1/2 md:flex flex-col gap-[36px] invoice-tool-content">
             {invoiceTools.map(inv => (
               <div
-                className="max-w-[345px] overflow-hidden h-[289px] border-n-grey2 border rounded-[10px] py-10 content-card"
+                className="max-w-[345px] overflow-hidden h-[289px] border-n-grey2 border rounded-[10px] py-10 content-card mx-auto mb-[36px] md:m-0"
                 key={inv.id}
               >
                 <div className="flex flex-col gap-[16px] justify-around mx-auto max-w-[280px]">
