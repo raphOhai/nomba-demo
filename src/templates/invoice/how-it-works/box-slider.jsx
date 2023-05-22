@@ -15,11 +15,11 @@ import PreviousIconDark from "svgs/chevron-left.svg";
 SwiperCore.use([Navigation, Pagination]);
 
 const BoxSlider = ({ slides }) => {
-  // const sliderItems = slides.map(item => (
-  //   <SwiperSlide key={item.id}>
-  //     <Box title={item.title} image={item.image} key={item.id} />
-  //   </SwiperSlide>
-  // ));
+  const sliderItems = slides.map(item => (
+    <SwiperSlide key={item.id}>
+      <Box title={item.title} image={item.image} key={item.id} />
+    </SwiperSlide>
+  ));
 
   return (
     <>
@@ -40,8 +40,8 @@ const BoxSlider = ({ slides }) => {
             slidesPerView={1}
             breakpoints={breakpoints}
           >
-            {/* {sliderItems} */}
-            <SwiperSlide>
+            {sliderItems}
+            {/* <SwiperSlide>
               <Box title={slides[0].title} image={slides[0].image} />
             </SwiperSlide>
             <SwiperSlide>
@@ -58,7 +58,7 @@ const BoxSlider = ({ slides }) => {
             </SwiperSlide>
             <SwiperSlide>
               <Box title={slides[5].title} image={slides[5].image} />
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
         <SliderNavigation />
