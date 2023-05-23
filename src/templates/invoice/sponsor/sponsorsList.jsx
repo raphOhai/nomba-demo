@@ -22,12 +22,12 @@ const Sponsors = ({ className }) => {
         <img width={80} className="md:max-w-[80px] max-w-[45px]" height={56} src={Gig} alt="Gig" />
         <img width={98} className="md:max-w-[98px] max-w-[50px]" height={60} src={goddis} alt="goddis" />
         <img width={119} className="md:max-w-[119px] max-w-[55px]" height={66} src={Lacore} alt="Lacore" />
+        <img width={130} className="md:max-w-[130px] max-w-[45px]" height={32} src={Ghat} alt="Ghatview" />
         <img width={80} className="md:max-w-[80px] max-w-[45px]" height={52} src={Marios} alt="Marios" />
         <img width={67} className="md:max-w-[80px] max-w-[45px]" height={67} src={ball} alt="ball" />
         <img width={73} className="md:max-w-[80px] max-w-[45px]" height={73} src={Sneaklin} alt="Sneaklin" />
         <img width={62} className="md:max-w-[80px] max-w-[45px]" height={61} src={Smoke} alt="Smoke" />
         <img width={117} className="md:max-w-[117px] max-w-[45px]" height={35} src={Kaab} alt="Kaab" />
-        <img width={130} className="md:max-w-[130px] max-w-[45px]" height={32} src={Ghat} alt="Ghatview" />
       </div>
     </div>
   );

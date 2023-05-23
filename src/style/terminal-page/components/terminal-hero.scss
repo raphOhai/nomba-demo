@@ -264,54 +264,6 @@
   display: block;
 }
 
-.mq {
-  // filter: grayscale(100%);
-  padding: 5rem 0;
-  width: 100%;
-  overflow: hidden !important;
-  @include flex(flex-start, center, 2rem);
-
-  >div {
-    @include flex(flex-start, center, 3rem);
-    flex-wrap: nowrap;
-    overflow: visible;
-    flex-shrink: 0;
-    animation: marquee 25s linear 0s infinite normal forwards;
-
-    &:nth-child(2) {
-      display: none;
-
-      @include media("<=phone-tab") {
-        display: flex;
-      }
-    }
-
-    @include media("<=phone-tab") {
-      gap: 3rem;
-
-    }
-  }
-
-  @include media("<=phone-tab") {
-    width: 100%;
-    gap: 2rem;
-    padding-top: 3.5rem;
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translate(0);
-  }
-
-  50% {
-    transform: translateX(20%);
-  }
-
-  100% {
-    transform: translateX(-20%);
-  }
-}
 
 .off {
   display: none;
