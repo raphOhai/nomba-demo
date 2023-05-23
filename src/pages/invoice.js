@@ -4,7 +4,8 @@ import Layout from "components/layout-max";
 import { Br } from "components";
 import { InvoicepageHero, SponsorList, InvoiceTools, HowInvoicingWorks, InvoiceTestimonial } from "templates/invoice";
 import { split } from "animations/text";
-import { InvoiceBusinessTools, invoiceTestimonial } from "config/invoice";
+import { InvoiceBusinessTools, invoiceTestimonial, resourceData } from "config/invoice";
+import { Resources } from "templates/invoice/resources";
 
 const InvoicePage = () => {
   useEffect(() => {
@@ -26,6 +27,15 @@ const InvoicePage = () => {
       <InvoiceTools title="Upselling invoice as a tool for your business " invoiceTools={InvoiceBusinessTools} />
       <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <InvoiceTestimonial testimonials={invoiceTestimonial} />
+      <Resources
+        title={
+          <>
+            {" "}
+            Resources to help you make informed <Br on="all" /> decisions about your business.
+          </>
+        }
+        data={resourceData}
+      />
     </Layout>
   );
 };

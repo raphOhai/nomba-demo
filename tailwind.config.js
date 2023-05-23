@@ -103,6 +103,7 @@ module.exports = {
         m: {
           black: "#1E1E1E;",
           grey1: "#A8A8A8",
+          grey2: "#4C4D50",
           light: "#FAFAFA",
           yellow: "#ffd42b",
           yellow1: "#FFCC001A",
