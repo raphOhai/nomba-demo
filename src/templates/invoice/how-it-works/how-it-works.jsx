@@ -23,7 +23,7 @@ const HowInvoicingWorks = ({ title }) => {
           }
           ScrollTrigger.create({
             trigger: panel,
-            start: () => (panel.offsetHeight < window.innerHeight ? "top 20%" : "bottom bottom"), // if it's shorter than the viewport, we prefer to pin it at the top
+            start: () => (panel.offsetHeight < window.innerHeight ? "top 18%" : "bottom bottom"), // if it's shorter than the viewport, we prefer to pin it at the top
             pin: true,
             pinSpacing: false,
             onToggle: self => self.isActive && setSection(panel),
@@ -63,7 +63,7 @@ const HowInvoicingWorks = ({ title }) => {
   return (
     <section className="feature-section2 md:pb-[150px] bg-primary" id="business-types">
       <Container>
-        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center mb-5">
+        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
@@ -102,6 +102,7 @@ flex-col
 md:gap-[100px]
 gap-[50px]
 pb-20
+md:h-[100vh]
 items-end
 how-it-works-container
 `);
