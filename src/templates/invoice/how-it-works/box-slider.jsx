@@ -63,11 +63,11 @@ const BoxSlider = ({ slides }) => {
         </div>
         <SliderNavigation />
       </div>
-      <div className="md:!hidden flex flex-col items-stretch gap-10  pb-5">
+      {/* <div className="md:!hidden flex flex-col items-stretch gap-10  pb-5">
         {slides.map(item => (
           <Box title={item.title} key={item.id} image={item.image} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
@@ -95,16 +95,16 @@ const breakpoints = {
     slidesPerView: 1,
   },
   320: {
-    slidesPerView: 1.15,
+    slidesPerView: 1.3,
   },
   390: {
-    slidesPerView: 1.2,
-  },
-  450: {
     slidesPerView: 1.4,
   },
+  450: {
+    slidesPerView: 1.6,
+  },
   640: {
-    slidesPerView: 1.7,
+    slidesPerView: 2,
   },
   850: {
     slidesPerView: 2,
@@ -127,14 +127,14 @@ const controlWrapStyle = ctl(`
 
 const sectionWrapStyle = ctl(`
 slider-margin-left
-hidden 
-md:block
-mx-5
+
+
 `);
 
 const controlButtonWrapStyle = ctl(`
   relative
-  flex 
+  md:flex
+  hidden 
   lg:gap-[28px] 
   gap-[11px]
 `);
