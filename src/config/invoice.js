@@ -95,7 +95,7 @@ export const howItWorksSlider = [
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/slider/image1.jpg"
-        className="rounded-[10px]"
+        className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
         height={392}
@@ -110,7 +110,7 @@ export const howItWorksSlider = [
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/slider/image2.jpg"
-        className="rounded-[10px]"
+        className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
         height={392}
@@ -125,7 +125,7 @@ export const howItWorksSlider = [
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/slider/image3.jpg"
-        className="rounded-[10px]"
+        className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
         height={392}
@@ -140,7 +140,7 @@ export const howItWorksSlider = [
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/slider/image1.jpg"
-        className="rounded-[10px]"
+        className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
         height={392}

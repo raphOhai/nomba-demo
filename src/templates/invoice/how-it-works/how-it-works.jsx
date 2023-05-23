@@ -48,11 +48,11 @@ const HowInvoicingWorks = ({ title }) => {
               trigger: item,
               start: "top 90%",
               scrub: true,
-              end: "+=700px",
+              end: "+=500px",
             },
             opacity: 1,
             yPercent: 0,
-            duration: 1,
+            duration: 0.7,
             ease: "easeOut",
           });
         });

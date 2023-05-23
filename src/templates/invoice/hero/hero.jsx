@@ -24,7 +24,7 @@ const InvoicepageHero = ({ title, description }) => {
             <Button text="Get Started" href={{ url: SIGNUP_URL }} />
           </div>
         </div>
-        <div className="flex flex-row justify-center items-baseline">
+        <div className="hidden md:flex flex-row justify-center items-baseline">
           <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-1.png"
             alt="Testimonial Image"
@@ -40,6 +40,9 @@ const InvoicepageHero = ({ title, description }) => {
             width={436}
             height={420}
           />
+        </div>
+        <div className="block md:hidden">
+          <StaticImage src="../../../assets/images/jpegs/invoice/hero/m-mobile.png" alt="Mobile Image" loading="lazy" />
         </div>
       </Container>
     </section>
