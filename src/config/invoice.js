@@ -164,3 +164,60 @@ export const invoiceTestimonial = [
     ),
   },
 ];
+
+export const resourceData = [
+  {
+    id: 1,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/resources/image1.png"
+        alt="Invoicing Image"
+        width={394}
+        height={218}
+        className=""
+      />
+    ),
+    heading: "Why invoices are the perfect use case for open banking payments",
+    text: "Being kind and willing to help others is more important than showing off one's skills or knowledge.",
+    link: {
+      text: "Read more",
+      href: "https://dashboard.nomba.com/auth/login",
+    },
+  },
+  {
+    id: 2,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/resources/image2.png"
+        alt="Invoicing Image"
+        width={394}
+        height={218}
+        className=""
+      />
+    ),
+    heading: "Why invoices are the perfect use case for open banking payments",
+    text: "Being kind and willing to help others is more important than showing off one's skills or knowledge.",
+    link: {
+      text: "Read more",
+      href: "https://dashboard.nomba.com/auth/login",
+    },
+  },
+  {
+    id: 3,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/resources/image3.png"
+        alt="Invoicing Image"
+        width={394}
+        height={218}
+        className=""
+      />
+    ),
+    heading: "Why invoices are the perfect use case for open banking payments",
+    text: "Being kind and willing to help others is more important than showing off one's skills or knowledge.",
+    link: {
+      text: "Read more",
+      href: "https://dashboard.nomba.com/auth/login",
+    },
+  },
+];
