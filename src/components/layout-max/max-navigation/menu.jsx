@@ -4,6 +4,7 @@ import { MenuItems } from "./menu-items";
 import MenuIcon from "assets/images/svgs/menu-light.svg";
 import CloseIcon from "assets/images/svgs/x-light.svg";
 import { Button } from "components/button";
+import { MaxButton } from "components/max-button";
 
 import constants from "config/constants.json";
 
@@ -31,7 +32,9 @@ const Menu = ({ openMenu, onToggle }) => {
           </li> */}
 
           <li>
-            <Button text="Get your terminal" href={{ url: SIGNUP_URL }} />
+            {/* <Button text="" href={{ url: SIGNUP_URL }} />
+             */}
+            <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
           </li>
         </ul>
       </nav>

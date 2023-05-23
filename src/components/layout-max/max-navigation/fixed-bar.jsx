@@ -67,8 +67,11 @@ const FixedBar = () => {
 
         <Menu openMenu={openMenu} onToggle={onToggle} />
       </nav>
+
+      {/* Display on mobile only */}
       <div className="flex justify-center flex-col items-stretch w-full md:!hidden px-[25px]      ">
-        <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+        {/* <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} /> */}
+        <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
       </div>
     </header>
   );

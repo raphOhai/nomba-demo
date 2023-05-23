@@ -23,7 +23,7 @@ const GetMax = ({ title, description }) => {
           </div>
 
           <div className={subTextStyle}>
-            <div className="btn">
+            <div className="btn opacity-0">
               <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
             </div>
             <div className="btn">
