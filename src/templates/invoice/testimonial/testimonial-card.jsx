@@ -11,8 +11,8 @@ const InvoiceTestimonialCard = ({ name, role, testimonial, image }) => {
           <Ntext variant="p24" color="primary" value={testimonial} />
         </div>
 
-        <div className="mt-8 ">
-          <Ntext variant="p18" color="n-dark" value={name} className="mb-2 !font-[600]" />
+        <div className="mt-8">
+          <Ntext variant="p18" color="n-dark" value={name} className="mb-1 !font-[600]" />
 
           {role && <Ntext variant="p18" color="n-grey3" value={role} className="!font-[600]" />}
         </div>
@@ -61,7 +61,6 @@ const yellowLineStyle = ctl(`
 const testimonialTextStyle = ctl(`
   md:mb-[60px]
   md:max-w-[608px] 
-  min-h-[200px] 
   lg:min-h-max
 `);
 
