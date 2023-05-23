@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { Container, Ntext } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import useIsMobile from "hooks/useIsMobile";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
@@ -14,7 +13,6 @@ import { func } from "prop-types";
 gsap.registerPlugin(ScrollTrigger);
 
 const MaxBusinessTypes = ({ title }) => {
-  const isMobile = useIsMobile();
   const [playVideo, setPlayVid] = useState(false);
   const [loadVideo, setLoadVideo] = useState(false);
   const hero_vid = useRef(null);

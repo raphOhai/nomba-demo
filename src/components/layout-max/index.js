@@ -13,7 +13,7 @@ import { NavBar } from "./navbar";
 import { FixedBar } from "./max-navigation";
 // import { Subfooter } from "./subfooter";
 
-const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }) => {
+const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true, useStickyNav = true }) => {
   const noOfChildren = children.length;
   return (
     <div className="main-container bg-black">
@@ -21,7 +21,7 @@ const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }
       <NavBar />
       {/* All children except the last child */}
       <main>{children}</main>
-      <FixedBar />
+      {useStickyNav && <FixedBar />}
       {/*Show the last item in the subfooter */}
       {/* <Subfooter>{children[noOfChildren - 1]}</Subfooter> */}
       <MainFooter defaultStyle={defaultStyle} />

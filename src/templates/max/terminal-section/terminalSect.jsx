@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Container } from "components";
-// import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
 import { StaticImage } from "gatsby-plugin-image";
-// import TerminalPrint from "assets/images/svgs/terminal/Comp.mp4";
 import { SponsorList } from "./sponsorsList";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -62,19 +60,11 @@ const TerminalSectionInteractions = () => {
     });
   });
 
-  //   const sections = gsap.utils.toArray(".c_feature");
-  //   gsap.set(sections, {
-  //     opacity: 0,
-  //     xPercent: 10,
-  //     yPercent: 10,
-  //   });
-
   return (
     <section>
       <Container>
         <div className="c_terminal_sectInt">
           <div className="c_terminal_sectInt_paySol">
-            {/* <h1 data-animation="h">The perfect payment solution for smooth business transaction</h1> */}
             <div ref={skeleton} className={` img_1 img `}>
               <StaticImage src="../../../assets/images/svgs/terminal/sideways-skeleton.svg" alt="" />
             </div>

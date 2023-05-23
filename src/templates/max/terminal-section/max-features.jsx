@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
-import { maxFeatures } from "config/terminal";
 import { Container, Ntext } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-// import useIsMobile from "hooks/useIsMobile";
-import ctl from "@netlify/classnames-template-literals";
 import { FeatureCards } from "./feature-cards";
 
 // register scrolltrigger

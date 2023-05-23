@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { InTheBox } from "config/terminal";
 import { Container, Ntext } from "components";
-import ctl from "@netlify/classnames-template-literals";
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -42,11 +41,4 @@ const WhatsInTheBox = ({ title }) => {
     </section>
   );
 };
-
-const featureCard = ctl(`
-flex flex-col justify-between p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-primary
-`);
-const featureContainer = ctl(`
-grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2  mt-[50px] md:mt-[100px]
-`);
 export { WhatsInTheBox };
