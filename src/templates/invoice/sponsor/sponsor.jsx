@@ -1,13 +1,10 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import { Container, Ntext, ReadMore, Button } from "components";
-import constants from "config/constants.json";
-import { StaticImage } from "gatsby-plugin-image";
+import { Ntext } from "components";
 import { Sponsors } from "./sponsorsList";
 
 const SponsorList = ({ title }) => {
-  const { SIGNUP_URL } = constants;
   return (
     <section className={heroStyle}>
       <div className={heroTextWrapperStyle}>

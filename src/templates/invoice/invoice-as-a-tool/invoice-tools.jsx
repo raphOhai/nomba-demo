@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext } from "components";
-import constants from "config/constants.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 const InvoiceTools = ({ title, invoiceTools }) => {
-  const { SIGNUP_URL } = constants;
   useEffect(() => {
     setTimeout(function () {
       let pin = document.querySelector(".invoice-tool-header");
@@ -44,7 +43,7 @@ const InvoiceTools = ({ title, invoiceTools }) => {
   }, []);
 
   return (
-    <section className="md:py-[150px] py-[50px]">
+    <section className="md:py-[150px] py-[50px] bg-primary">
       <Container>
         <div className={heroTextHeaders}>
           <div className="md:basis-1/2 md:mt-[120px] invoice-tool-header mb-5">
@@ -55,13 +54,10 @@ const InvoiceTools = ({ title, invoiceTools }) => {
             </div>
           </div>
 
-          <div className="md:basis-1/2 md:flex flex-col gap-[36px] invoice-tool-content">
+          <div className={containerTools}>
             {invoiceTools.map(inv => (
-              <div
-                className="max-w-[345px] overflow-hidden h-[289px] border-n-grey2 border rounded-[10px] py-10 content-card mx-auto mb-[36px] md:m-0"
-                key={inv.id}
-              >
-                <div className="flex flex-col gap-[16px] justify-around mx-auto max-w-[280px]">
+              <div className={cardWrapStyle} key={inv.id}>
+                <div className={cardInnerWrapper}>
                   <div className="flex flex-col gap-[30px]">
                     {inv.icon}
                     <Ntext variant="text4" color="primary-100">
@@ -82,6 +78,13 @@ const InvoiceTools = ({ title, invoiceTools }) => {
     </section>
   );
 };
+const containerTools = ctl(`
+md:basis-1/2 
+md:flex 
+flex-col 
+gap-[36px] 
+invoice-tool-content
+`);
 
 const heroTextHeaders = ctl(`
 md:flex
@@ -93,18 +96,29 @@ mb-10
 gap-5
 `);
 
-const subTextStyle = ctl(`
-mb-8
-mt-[40px]
-md:mt-3
-md:basis-2/5
-flex 
-md:flex-row
-flex-col
-items-stretch
-gap-[24px]
-overflow-hidden
+const cardWrapStyle = ctl(`
+max-w-[345px] 
+overflow-hidden 
+h-[289px] 
+border-n-grey2 
+border 
+rounded-[10px] 
+py-10 
+content-card 
+mx-auto
+mb-[36px] 
+md:m-0
 `);
+
+const cardInnerWrapper = ctl(`
+flex 
+flex-col 
+gap-[16px]
+justify-around
+mx-auto
+max-w-[280px]
+`);
+
 InvoiceTools.propTypes = {
   title: PropTypes.node,
   invoiceTools: PropTypes.array,

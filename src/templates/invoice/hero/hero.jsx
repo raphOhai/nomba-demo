@@ -1,7 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import { Container, Ntext, ReadMore, Button } from "components";
+import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
 import { StaticImage } from "gatsby-plugin-image";
 

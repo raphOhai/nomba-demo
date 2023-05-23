@@ -126,7 +126,7 @@ const variants = {
     text-[16px]
     md:leading-[32px]
     leading-[24.8px]
-    font-normal
+    font-[500]
     `,
   p18: `
     md:text-[18px]

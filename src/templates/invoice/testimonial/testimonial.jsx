@@ -6,12 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { InvoiceTestimonialCard } from "./testimonial-card";
-import { SectionHeader } from "components";
-import { Ntext } from "components/ntext";
 import NextIcon from "svgs/chevron-right.svg";
 import PreviousIcon from "svgs/chevron-left.svg";
+import { Container } from "components";
 
-const InvoiceTestimonial = ({ testimonials, headingText }) => {
+const InvoiceTestimonial = ({ testimonials }) => {
   const testimonialList = testimonials.map(item => (
     <SwiperSlide key={item.name}>
       <InvoiceTestimonialCard {...item} />
@@ -21,32 +20,31 @@ const InvoiceTestimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <div className="py-10 max-testimonial">
-      <SliderNavigation title={headingText} />
-      <Swiper
-        pagination={{
-          clickable: true,
-          type: "bullets",
-          el: ".max-pagination-class",
-        }}
-        navigation={{
-          nextEl: ".next-element",
-          prevEl: ".previous-element",
-        }}
-        modules={[Pagination, Navigation]}
-      >
-        {testimonialList}
-      </Swiper>
-      <div className="max-pagination-class !relative"></div>
-    </div>
+    <section className="md:py-[150px] py-[100px] bg-primary-100">
+      <Container>
+        <SliderNavigation />
+        <Swiper
+          pagination={{
+            clickable: true,
+            type: "bullets",
+            el: ".max-pagination-class",
+          }}
+          navigation={{
+            nextEl: ".next-element",
+            prevEl: ".previous-element",
+          }}
+          modules={[Pagination, Navigation]}
+        >
+          {testimonialList}
+        </Swiper>
+        <div className="max-pagination-class !relative"></div>
+      </Container>
+    </section>
   );
 };
 
-const SliderNavigation = ({ title }) => (
+const SliderNavigation = () => (
   <div className="flex flex-row justify-between items-baseline" id="testimonials">
-    <SectionHeader className="!text-left">
-      <Ntext variant="h2" color="primary-100" value={title} className={headingTextStyle} data-animation="h" />
-    </SectionHeader>
     <div className={controlButtonWrapStyle}>
       <button className={`${controlButtonStyle} previous-element`} aria-label="Previous Slide">
         <PreviousIcon className="mx-auto" />
@@ -71,15 +69,9 @@ const controlButtonStyle = ctl(`
   bg-n-yellow
   hover:bg-[#c1940b]
 `);
-const headingTextStyle = ctl(`
-
-md:mb-[62px]
-mb-[1px]
-`);
 
 InvoiceTestimonial.propTypes = {
   testimonials: PropTypes.array,
-  headingText: PropTypes.string,
 };
 
 export { InvoiceTestimonial };

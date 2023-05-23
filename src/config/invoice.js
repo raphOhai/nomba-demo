@@ -93,7 +93,13 @@ export const howItWorksSlider = [
     description:
       "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
-      <StaticImage src="../assets/images/jpegs/invoice/slider/image1.jpg" alt="How it works" width={392} height={392} />
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image1.jpg"
+        className="rounded-[10px]"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
     ),
   },
   {
@@ -102,7 +108,13 @@ export const howItWorksSlider = [
     description:
       "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
-      <StaticImage src="../assets/images/jpegs/invoice/slider/image2.jpg" alt="How it works" width={392} height={392} />
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image2.jpg"
+        className="rounded-[10px]"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
     ),
   },
   {
@@ -111,7 +123,13 @@ export const howItWorksSlider = [
     description:
       "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
-      <StaticImage src="../assets/images/jpegs/invoice/slider/image3.jpg" alt="How it works" width={392} height={392} />
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image3.jpg"
+        className="rounded-[10px]"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
     ),
   },
   {
@@ -120,7 +138,29 @@ export const howItWorksSlider = [
     description:
       "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
-      <StaticImage src="../assets/images/jpegs/invoice/slider/image1.jpg" alt="How it works" width={392} height={392} />
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image1.jpg"
+        className="rounded-[10px]"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
+    ),
+  },
+];
+
+export const invoiceTestimonial = [
+  {
+    testimonial:
+      "We’ve been able to build something in 3 years that a lot of brands haven’t actually gotten to in 10 years.",
+    name: "Adeuche",
+    role: "Co-founder & CEO Randle Inc",
+    image: (
+      <StaticImage
+        alt="Testimonial Image"
+        src="../assets/images/jpegs/invoice/testimonials/image1.png"
+        loading="lazy"
+      />
     ),
   },
 ];

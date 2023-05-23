@@ -1,42 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { howItWorksSlider } from "config/invoice";
 import { Container } from "components";
-import ctl from "@netlify/classnames-template-literals";
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
-const HowItWorksSlider = ({ title }) => {
-  // useEffect(() => {
-  //   gsap.to(".section_header4", {
-  //     scrollTrigger: {
-  //       trigger: ".section_header4",
-  //       start: "top 15%",
-  //       scrub: true,
-  //       toggleActions: "play reverse restart reverse",
-  //       end: "=+400px",
-  //     },
-  //     opacity: 0.04,
-  //     autoAlpha: 0,
-  //     yPercent: -30,
-  //     // fontSize: fontSize,
-  //     xPercent: 0,
-  //     duration: 0.4,
-  //     ease: "easeIn",
-  //   });
-  // });
+const HowItWorksSlider = () => {
   return (
-    <section className="md:pt-[50px] feature-section4">
+    <section className="md:pt-[900px] feature-section4">
       <Container>
-        {/* <SectionHeader>
-          <div className="md:max-w-[671px] md:mx-auto section_header4 md:text-center">
-          <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
-            {title}
-          </Ntext>
-        </div>
-        </SectionHeader> */}
         <div className="pt-[50px] md:pt-[100px]">
           <BoxSlider slides={howItWorksSlider} />
         </div>
@@ -45,10 +19,4 @@ const HowItWorksSlider = ({ title }) => {
   );
 };
 
-const featureCard = ctl(`
-flex flex-col justify-between p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-primary
-`);
-const featureContainer = ctl(`
-grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2  mt-[50px] md:mt-[100px]
-`);
 export { HowItWorksSlider };
