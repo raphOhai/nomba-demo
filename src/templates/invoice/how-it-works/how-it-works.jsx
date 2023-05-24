@@ -47,7 +47,7 @@ const HowInvoicingWorks = ({ title }) => {
             scrollTrigger: {
               trigger: item,
               start: "top 90%",
-              scrub: true,
+              scrub: 1,
               end: "+=500px",
             },
             opacity: 1,

@@ -21,21 +21,22 @@ const InvoiceTools = ({ title, invoiceTools }) => {
         });
       }
 
-      g.forEach(item => {
+      g.forEach((item, i) => {
         gsap.set(item, {
           opacity: 0.1,
-          yPercent: 30,
+          yPercent: i === 0 ? 30 : 100,
         });
         gsap.to(item, {
           scrollTrigger: {
             trigger: item,
-            start: "top 90%",
-            scrub: true,
-            end: "+=700px",
+            start: "top 100%",
+            scrub: 1,
+            end: "+=900px",
           },
           opacity: 1,
-          yPercent: 0,
-          duration: 1,
+          yPercent: 30,
+          duration: 0.7,
+          stagger: 1,
           ease: "easeOut",
         });
       });
@@ -56,7 +57,7 @@ const InvoiceTools = ({ title, invoiceTools }) => {
 
           <div className={containerTools}>
             {invoiceTools.map(inv => (
-              <div className={cardWrapStyle} key={inv.id}>
+              <div className={`${cardWrapStyle}`} key={inv.id}>
                 <div className={cardInnerWrapper}>
                   <div className="flex flex-col gap-[30px]">
                     {inv.icon}
@@ -106,8 +107,9 @@ rounded-[10px]
 py-10 
 content-card 
 mx-auto
+md:mx-0
 mb-[36px] 
-md:m-0
+md:mb-[100px]
 `);
 
 const cardInnerWrapper = ctl(`
