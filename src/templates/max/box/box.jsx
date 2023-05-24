@@ -8,10 +8,10 @@ const Box = ({ image, path, title }) => {
       <Ntext variant="text4lite" color="n-grey4">
         {title}
       </Ntext>
-      <div className={imageStyle}>
+      {/* <div className={imageStyle}>
         <img className="" width={310} height={300} src={path} alt="ABC" />
-      </div>
-      {/* <div className={imageStyle}>{image}</div> */}
+      </div> */}
+      <div className={imageStyle}>{image}</div>
     </div>
   );
 };
