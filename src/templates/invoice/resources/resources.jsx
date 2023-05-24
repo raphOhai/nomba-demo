@@ -1,8 +1,8 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import { Ntext, SectionHeader, SliderCard, Container } from "components";
-
+import { Ntext, SectionHeader, Container } from "components";
+import { ResourceCard } from "./resource-card";
 const Resources = ({ title, data }) => {
   return (
     <section className="bg-primary-100">
@@ -15,7 +15,7 @@ const Resources = ({ title, data }) => {
           </SectionHeader>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-16">
             {data.map((item, i) => (
-              <SliderCard
+              <ResourceCard
                 key={i}
                 heading={item.heading}
                 image={item.image}
