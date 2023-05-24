@@ -2,13 +2,16 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components";
 
-const Box = ({ image, title }) => {
+const Box = ({ image, path, title }) => {
   return (
     <div className={boxWrapper}>
       <Ntext variant="text4lite" color="n-grey4">
         {title}
       </Ntext>
-      <div className={imageStyle}>{image}</div>
+      <div className={imageStyle}>
+        <img className="" width={310} height={300} src={path} alt="ABC" />
+      </div>
+      {/* <div className={imageStyle}>{image}</div> */}
     </div>
   );
 };

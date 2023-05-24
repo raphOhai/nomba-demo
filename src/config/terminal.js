@@ -1,6 +1,13 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Br } from "components";
+import box1 from "assets/images/jpegs/terminal/max/box/max.png";
+import box2 from "assets/images/jpegs/terminal/max/box/charger.png";
+import box3 from "assets/images/jpegs/terminal/max/box/guide.png";
+import box4 from "assets/images/jpegs/terminal/max/box/table-stand.png";
+import box5 from "assets/images/jpegs/terminal/max/box/envelope.png";
+import box6 from "assets/images/jpegs/terminal/max/box/stickers.png";
+
 export const AccordionData = [
   {
     id: 1,
@@ -41,6 +48,7 @@ export const InTheBox = [
         src="../assets/images/jpegs/terminal/max/box/max.png"
       />
     ),
+    path: box1,
   },
   {
     id: 2,
@@ -54,6 +62,7 @@ export const InTheBox = [
         src="../assets/images/jpegs/terminal/max/box/charger.png"
       />
     ),
+    path: box2,
   },
   {
     id: 3,
@@ -67,6 +76,7 @@ export const InTheBox = [
         src="../assets/images/jpegs/terminal/max/box/guide.png"
       />
     ),
+    path: box3,
   },
   {
     id: 4,
@@ -80,6 +90,7 @@ export const InTheBox = [
         src="../assets/images/jpegs/terminal/max/box/table-stand.png"
       />
     ),
+    path: box4,
   },
   {
     id: 5,
@@ -93,6 +104,7 @@ export const InTheBox = [
         src="../assets/images/jpegs/terminal/max/box/envelope.png"
       />
     ),
+    path: box5,
   },
   {
     id: 6,
@@ -106,6 +118,7 @@ export const InTheBox = [
         src="../assets/images/jpegs/terminal/max/box/stickers.png"
       />
     ),
+    path: box6,
   },
 ];
 export const maxFeatures = [
