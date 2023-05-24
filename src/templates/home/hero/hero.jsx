@@ -32,7 +32,9 @@ const HomepageHero = ({ title, description, images, mobileImages }) => {
             </div>
           ))}
         </div>
-        <HeroSlider images={mobileImages} className="md:hidden" />
+        <div className="md:hidden">
+          <HeroSlider images={mobileImages} />
+        </div>
         <SponsorList />
       </Container>
     </section>
