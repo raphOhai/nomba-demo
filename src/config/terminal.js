@@ -93,6 +93,20 @@ export const InTheBox = [
     path: box4,
   },
   {
+    id: 6,
+    title: "Nomba MAX Terminal",
+    image: (
+      <StaticImage
+        width={321}
+        height={300}
+        className=""
+        alt="Nomba Max Terminal"
+        src="../assets/images/jpegs/terminal/max/box/max.png"
+      />
+    ),
+    path: box1,
+  },
+  {
     id: 5,
     title: "Envelope",
     image: (

@@ -106,8 +106,8 @@ const MaxPricing = ({ title, price, leasePrice }) => {
                 </Ntext>
               </div>
               <div className="my-10 flex flex-col gap-7 max_features1">
-                {maxFeaturesBreakdown.map(f => (
-                  <div className="flex flex-row gap-5 items-center max_feature1">
+                {maxFeaturesBreakdown.map((f, i) => (
+                  <div className="flex flex-row gap-5 items-center max_feature1" key={i + 7}>
                     <Bullet />{" "}
                     <Ntext variant="text3" className="!leading-[24px]" color="m-light">
                       {f}
