@@ -78,7 +78,7 @@ mb-[1px]
 `);
 
 MaxTestimonial.propTypes = {
-  testimonials: PropTypes.object,
+  testimonials: PropTypes.array,
   headingText: PropTypes.string,
 };
 
