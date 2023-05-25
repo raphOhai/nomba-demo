@@ -34,10 +34,10 @@ const WhatsInTheBox = ({ title }) => {
             {title}
           </Ntext>
         </div>
-        <div className="pt-[50px] md:pt-[100px]">
-          <BoxSlider slides={InTheBox} />
-        </div>
       </Container>
+      <div className="pt-[50px] md:pt-[100px]">
+        <BoxSlider slides={InTheBox} />
+      </div>
     </section>
   );
 };
