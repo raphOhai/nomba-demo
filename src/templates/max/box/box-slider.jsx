@@ -64,20 +64,17 @@ const BoxSlider = ({ slides }) => {
     850: {
       slidesPerView: 2,
     },
-    1000: {
-      slidesPerView: 3,
+    900: {
+      slidesPerView: 2.3,
     },
     1100: {
-      slidesPerView: 3.1,
+      slidesPerView: 3,
     },
     1200: {
-      slidesPerView: 3.2,
-    },
-    1300: {
-      slidesPerView: 3.3,
+      slidesPerView: 3.1,
     },
     1400: {
-      slidesPerView: 3.5,
+      slidesPerView: 3.3,
     },
   };
 
