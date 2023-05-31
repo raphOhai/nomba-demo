@@ -87,7 +87,7 @@
     flex-wrap: nowrap;
     overflow: visible;
     flex-shrink: 0;
-    animation: marquee 25s linear 0s infinite normal forwards;
+    animation: marquee 80s linear 0s infinite normal forwards;
 
     &:nth-child(2) {
       display: none;
@@ -99,8 +99,8 @@
 
     @include media("<=phone-tab") {
       gap: 2rem;
-      animation: marqueeMobile 25s linear 0s infinite normal forwards;
-      -webkit-animation: marqueeMobile 25s linear 0s infinite normal forwards;
+      animation: marqueeMobile 80s linear 0s infinite normal forwards;
+      -webkit-animation: marqueeMobile 80s linear 0s infinite normal forwards;
 }
   }
 
@@ -114,15 +114,23 @@
 @keyframes marquee {
   0% {
     transform: translate(0);
-  }
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+}
 
-  50% {
-    transform: translateX(20%);
-  }
+  // 50% {
+  //   transform: translateX(20%);
+  // }
 
   100% {
-    transform: translateX(-20%);
-  }
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
 }
 @keyframes marqueeMobile {
   0% {

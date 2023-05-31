@@ -13,11 +13,22 @@ import Ghat from "jpegs/terminal/max/sponsors/ghat.png";
 import goddis from "jpegs/terminal/max/sponsors/goddis.png";
 import ball from "jpegs/terminal/max/sponsors/ball.png";
 const Sponsors = ({ className }) => {
+  const images = [Abc, Borough, crossFit, Gig, goddis, Lacore, Ghat, Marios, ball, Sneaklin, Smoke, Kaab];
   return (
     <div className={`mq`}>
       <div>
-        <img width={80} className="md:max-w-[80px] max-w-[45px]" height={80} src={Abc} alt="ABC" />
-        <img width={80} className="md:max-w-[80px] max-w-[45px]" height={28} src={Borough} alt="Borough" />
+        {Array.from({ length: 50 }, (_, index) => (
+          <img
+            key={index}
+            width={80}
+            className="md:max-w-[80px] max-w-[45px]"
+            height={80}
+            src={images[index % images.length]}
+            alt={`Sponsor ${index}`}
+          />
+        ))}
+
+        {/* <img width={80} className="md:max-w-[80px] max-w-[45px]" height={28} src={Borough} alt="Borough" />
         <img width={123} className="md:max-w-[123px] max-w-[65px]" height={46} src={crossFit} alt="crossFit" />
         <img width={80} className="md:max-w-[80px] max-w-[45px]" height={56} src={Gig} alt="Gig" />
         <img width={98} className="md:max-w-[98px] max-w-[50px]" height={60} src={goddis} alt="goddis" />
@@ -27,7 +38,7 @@ const Sponsors = ({ className }) => {
         <img width={67} className="md:max-w-[80px] max-w-[45px]" height={67} src={ball} alt="ball" />
         <img width={73} className="md:max-w-[80px] max-w-[45px]" height={73} src={Sneaklin} alt="Sneaklin" />
         <img width={62} className="md:max-w-[80px] max-w-[45px]" height={61} src={Smoke} alt="Smoke" />
-        <img width={117} className="md:max-w-[117px] max-w-[45px]" height={35} src={Kaab} alt="Kaab" />
+        <img width={117} className="md:max-w-[117px] max-w-[45px]" height={35} src={Kaab} alt="Kaab" /> */}
       </div>
     </div>
   );

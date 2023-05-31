@@ -17,7 +17,7 @@ const InvoicePage = () => {
         title={
           <>
             {" "}
-            Invoice Matters, <Br on="all" /> Made Super Easy!
+            Organise your billing process <Br on="all" /> with Nomba invoice
           </>
         }
         description=" Enjoy the benefits of automated reminders, helping you to stay on top of outstanding payments and minimize late payments."

@@ -4,23 +4,31 @@ import React from "react";
 import EasyAdoption from "assets/images/jpegs/invoice/svgs/receipt-text.svg";
 import AllBusinesses from "assets/images/jpegs/invoice/svgs/dcube.svg";
 import Scalable from "assets/images/jpegs/invoice/svgs/frame.svg";
+import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
 
 export const InvoiceBusinessTools = [
   {
     id: 1,
-    title: "Easy to use",
-    icon: <EasyAdoption />,
-    description: "Create, customise and send invoice to your customers stress-free and in less than 5 minutes.",
+    title: "Accept global payments",
+    icon: <GlobalPayment />,
+    description:
+      "Nomba online invoices are optimised across mobile, tablet, and desktop. 70% of Stripe invoices are paid within 24 hours.",
   },
   {
     id: 2,
-    title: "Suited for all businesses",
+    title: "Easy adoption",
+    icon: <EasyAdoption />,
+    description: "Create, customise, and send a Nomba-hosted or PDF invoice in minutes – with no code required.",
+  },
+  {
+    id: 3,
+    title: "Made for any use case",
     icon: <AllBusinesses />,
     description:
       "Collect one-time or recurring payments. Add line items, discounts, and tax rates directly to your invoices.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Scalable for your needs",
     icon: <Scalable />,
     description: "Nomba APIs help automate your invoicing workflows and accounts receivable processes. ",
