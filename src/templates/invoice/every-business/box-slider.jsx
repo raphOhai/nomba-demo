@@ -17,7 +17,7 @@ const BoxSlider = ({ slides }) => {
       duration: 2,
       scrollTrigger: {
         trigger: ".box-slider",
-        start: "top 20%",
+        start: "top 30%",
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),

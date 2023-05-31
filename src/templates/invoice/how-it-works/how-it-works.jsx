@@ -4,7 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ctl from "@netlify/classnames-template-literals";
 import { howItWorks } from "config/invoice";
-import { HowItWorksSlider } from "./slider-how-it-works";
+import { HowItWorksSlider } from "../every-business/every-business";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,13 +72,13 @@ const HowInvoicingWorks = ({ title }) => {
   return (
     <section className="feature-section2 pb-[100px] md:pb-[150px] bg-primary" id="business-types">
       <Container>
-        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center md:mb-[-150px] ">
+        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center md:mb-[50px] ">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
         </SectionHeader>
-        {howItWorks.map(h => (
-          <div key={h.id} className={cardWrapStyle}>
+        {howItWorks.map((h, i) => (
+          <div key={h.id} className={`${cardWrapStyle} ${i === howItWorks.length - 1 ? "how-it-works-last" : ""}`}>
             <div className="md:basis-1/2 how-it-works-image">
               <div>{h.image}</div>
             </div>
@@ -103,7 +103,6 @@ const HowInvoicingWorks = ({ title }) => {
             </div>
           </div>
         ))}
-        <HowItWorksSlider />
       </Container>
     </section>
   );
@@ -116,7 +115,7 @@ flex-col
 md:gap-[100px]
 gap-[50px]
 pb-20
-md:h-[100vh]
+md:h-[80vh]
 items-end
 how-it-works-container
 `);

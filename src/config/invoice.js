@@ -94,7 +94,7 @@ export const howItWorks = [
   },
 ];
 
-export const howItWorksSlider = [
+export const everyBusinesses = [
   {
     id: 1,
     title: "Manage invoices",
