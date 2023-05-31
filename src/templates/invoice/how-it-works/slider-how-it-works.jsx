@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { howItWorksSlider } from "config/invoice";
-import { Container } from "components";
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-// register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 const HowItWorksSlider = () => {
   return (

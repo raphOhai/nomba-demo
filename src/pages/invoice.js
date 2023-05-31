@@ -6,6 +6,8 @@ import { InvoicepageHero, SponsorList, InvoiceTools, HowInvoicingWorks, InvoiceT
 import { split } from "animations/text";
 import { InvoiceBusinessTools, invoiceTestimonial, resourceData } from "config/invoice";
 import { Resources } from "templates/invoice/resources";
+import { CommonQuestions } from "components/common-questions";
+import { AccordionData } from "config/terminal";
 
 const InvoicePage = () => {
   useEffect(() => {
@@ -36,6 +38,7 @@ const InvoicePage = () => {
         }
         data={resourceData}
       />
+      <CommonQuestions questions={AccordionData} />
     </Layout>
   );
 };

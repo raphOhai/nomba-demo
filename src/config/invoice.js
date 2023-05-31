@@ -43,7 +43,7 @@ export const howItWorks = [
       "Generate invoices with ease by adding product and customer information. Customize the invoice to match your brand and choose manual or automated tax settings. Save your details in the Dashboard for quick and efficient invoicing",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/create.png"
         alt="How it works"
         width={572}
         height={572}
@@ -57,7 +57,7 @@ export const howItWorks = [
       "Effortlessly send professional invoices to your customers with a simple click. Choose between emailing them a PDF invoice or sharing a link to a hosted invoice page where payment details can be accessed",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/share.png"
         alt="How it works"
         width={572}
         height={572}
@@ -71,7 +71,7 @@ export const howItWorks = [
       "Unlock the convenience of receiving payments for shared invoices effortlessly. Provide your customers with seamless payment options, allowing them to settle their invoice obligations quickly and conveniently.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/receive.png"
         alt="How it works"
         width={572}
         height={572}
@@ -85,7 +85,7 @@ export const howItWorks = [
       "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/manage.png"
         alt="How it works"
         width={572}
         height={572}
@@ -98,11 +98,10 @@ export const howItWorksSlider = [
   {
     id: 1,
     title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
+
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image1.jpg"
+        src="../assets/images/jpegs/invoice/slider/image1.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
@@ -113,11 +112,10 @@ export const howItWorksSlider = [
   {
     id: 2,
     title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
+
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image2.jpg"
+        src="../assets/images/jpegs/invoice/slider/image2.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
@@ -127,12 +125,9 @@ export const howItWorksSlider = [
   },
   {
     id: 3,
-    title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image3.jpg"
+        src="../assets/images/jpegs/invoice/slider/image3.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
@@ -142,12 +137,33 @@ export const howItWorksSlider = [
   },
   {
     id: 4,
-    title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image1.jpg"
+        src="../assets/images/jpegs/invoice/slider/image4.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
+    ),
+  },
+  {
+    id: 5,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image5.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
+    ),
+  },
+  {
+    id: 6,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image6.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}

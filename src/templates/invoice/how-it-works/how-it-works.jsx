@@ -12,6 +12,7 @@ const HowInvoicingWorks = ({ title }) => {
   useEffect(() => {
     setTimeout(function () {
       let panels = gsap.utils.toArray(".how-it-works-container");
+      let titles = gsap.utils.toArray(".how-it-works-title");
 
       let currentSection = panels[0];
       if (window.innerWidth > 767) {
@@ -20,18 +21,26 @@ const HowInvoicingWorks = ({ title }) => {
             gsap.set(panel, {
               opacity: 0,
             });
+            gsap.set(titles[i], {
+              opacity: 1,
+              autoAlpha: 0,
+              yPercent: 50,
+              transformStyle: "preserve-3d",
+            });
           }
+
           ScrollTrigger.create({
             trigger: panel,
             start: () => (panel.offsetHeight < window.innerHeight ? "top 18%" : "bottom bottom"), // if it's shorter than the viewport, we prefer to pin it at the top
             pin: true,
             pinSpacing: false,
-            onToggle: self => self.isActive && setSection(panel),
+            onToggle: self => self.isActive && setSection(panel, i),
           });
         });
 
-        function setSection(newSection) {
+        function setSection(newSection, n) {
           if (newSection !== currentSection) {
+            // gsap.to(titles[n], { opacity: 1, yPercent: 0, duration: 1, ease: "easeOut" });
             gsap.to(currentSection, { autoAlpha: 0, opacity: 0 });
             gsap.to(newSection, { scale: 1, autoAlpha: 1, opacity: 1 });
             currentSection = newSection;
@@ -63,7 +72,7 @@ const HowInvoicingWorks = ({ title }) => {
   return (
     <section className="feature-section2 pb-[100px] md:pb-[150px] bg-primary" id="business-types">
       <Container>
-        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center">
+        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center ">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
@@ -76,7 +85,12 @@ const HowInvoicingWorks = ({ title }) => {
             <div className={cardContentStyle}>
               <div className={contentCardStyle}>
                 <div>
-                  <Ntext variant="text8" color="primary-100" className="mb-[28px]" data-animation="h">
+                  <Ntext
+                    variant="text8"
+                    color="primary-100"
+                    className="mb-[28px] how-it-works-title"
+                    data-animation="j"
+                  >
                     {h.title}
                   </Ntext>
                 </div>
