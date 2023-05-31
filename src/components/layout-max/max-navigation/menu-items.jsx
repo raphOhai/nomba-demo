@@ -62,7 +62,7 @@ const MenuItems = () => {
     // };
 
     return (
-      <li className={itemWrapStyle} key={item}>
+      <li className={itemWrapStyle} key={item.title}>
         {/* menu items */}
 
         <div className={menuLinkWrapStyle}>

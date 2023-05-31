@@ -57,7 +57,7 @@ pt-[75px]
 `);
 
 const heroTextWrapperStyle = ctl(`
-lg:max-w-[692px]
+lg:max-w-[851px]
 lg:mx-auto
 max-w-[100%]
 lg:mb-[50px]

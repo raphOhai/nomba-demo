@@ -6,6 +6,8 @@ import { InvoicepageHero, SponsorList, InvoiceTools, HowInvoicingWorks, InvoiceT
 import { split } from "animations/text";
 import { InvoiceBusinessTools, invoiceTestimonial, resourceData } from "config/invoice";
 import { Resources } from "templates/invoice/resources";
+import { CommonQuestions } from "components/common-questions";
+import { AccordionData } from "config/terminal";
 
 const InvoicePage = () => {
   useEffect(() => {
@@ -17,7 +19,7 @@ const InvoicePage = () => {
         title={
           <>
             {" "}
-            Invoice Matters, <Br on="all" /> Made Super Easy!
+            Organise your billing process <Br on="all" /> with Nomba invoice
           </>
         }
         description=" Enjoy the benefits of automated reminders, helping you to stay on top of outstanding payments and minimize late payments."
@@ -36,6 +38,7 @@ const InvoicePage = () => {
         }
         data={resourceData}
       />
+      <CommonQuestions questions={AccordionData} />
     </Layout>
   );
 };

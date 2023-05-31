@@ -8,12 +8,13 @@ import {
   MaxFeatures,
   ExperienceMax,
   MaxBusinessTypes,
-  CommonQuestions,
   GetMax,
   WhatsInTheBox,
   MaxPricing,
 } from "templates/max";
 import { split } from "animations/text";
+import { AccordionData } from "config/terminal";
+import { CommonQuestions } from "components/common-questions";
 
 const MaxPage = () => {
   useEffect(() => {
@@ -55,7 +56,7 @@ const MaxPage = () => {
       <MaxBusinessTypes title="What Businesses Like Yours Think of Nomba MAX." />
       <WhatsInTheBox title="What’s in the box?" />
       <MaxPricing title="Pricing & Specifications" price="₦80,000" leasePrice="₦45,000" />
-      <CommonQuestions />
+      <CommonQuestions questions={AccordionData} />
 
       <GetMax
         title={<>Get Nomba Max, Get Better</>}

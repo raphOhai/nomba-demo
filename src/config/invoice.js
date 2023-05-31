@@ -4,23 +4,31 @@ import React from "react";
 import EasyAdoption from "assets/images/jpegs/invoice/svgs/receipt-text.svg";
 import AllBusinesses from "assets/images/jpegs/invoice/svgs/dcube.svg";
 import Scalable from "assets/images/jpegs/invoice/svgs/frame.svg";
+import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
 
 export const InvoiceBusinessTools = [
   {
     id: 1,
-    title: "Easy to use",
-    icon: <EasyAdoption />,
-    description: "Create, customise and send invoice to your customers stress-free and in less than 5 minutes.",
+    title: "Accept global payments",
+    icon: <GlobalPayment />,
+    description:
+      "Nomba online invoices are optimised across mobile, tablet, and desktop. 70% of Stripe invoices are paid within 24 hours.",
   },
   {
     id: 2,
-    title: "Suited for all businesses",
+    title: "Easy adoption",
+    icon: <EasyAdoption />,
+    description: "Create, customise, and send a Nomba-hosted or PDF invoice in minutes – with no code required.",
+  },
+  {
+    id: 3,
+    title: "Made for any use case",
     icon: <AllBusinesses />,
     description:
       "Collect one-time or recurring payments. Add line items, discounts, and tax rates directly to your invoices.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Scalable for your needs",
     icon: <Scalable />,
     description: "Nomba APIs help automate your invoicing workflows and accounts receivable processes. ",
@@ -35,7 +43,7 @@ export const howItWorks = [
       "Generate invoices with ease by adding product and customer information. Customize the invoice to match your brand and choose manual or automated tax settings. Save your details in the Dashboard for quick and efficient invoicing",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/create.png"
         alt="How it works"
         width={572}
         height={572}
@@ -49,7 +57,7 @@ export const howItWorks = [
       "Effortlessly send professional invoices to your customers with a simple click. Choose between emailing them a PDF invoice or sharing a link to a hosted invoice page where payment details can be accessed",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/share.png"
         alt="How it works"
         width={572}
         height={572}
@@ -63,7 +71,7 @@ export const howItWorks = [
       "Unlock the convenience of receiving payments for shared invoices effortlessly. Provide your customers with seamless payment options, allowing them to settle their invoice obligations quickly and conveniently.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/receive.png"
         alt="How it works"
         width={572}
         height={572}
@@ -77,7 +85,7 @@ export const howItWorks = [
       "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/generate.png"
+        src="../assets/images/jpegs/invoice/how-it-works/manage.png"
         alt="How it works"
         width={572}
         height={572}
@@ -90,11 +98,10 @@ export const howItWorksSlider = [
   {
     id: 1,
     title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
+
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image1.jpg"
+        src="../assets/images/jpegs/invoice/slider/image1.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
@@ -105,11 +112,10 @@ export const howItWorksSlider = [
   {
     id: 2,
     title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
+
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image2.jpg"
+        src="../assets/images/jpegs/invoice/slider/image2.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
@@ -119,12 +125,9 @@ export const howItWorksSlider = [
   },
   {
     id: 3,
-    title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image3.jpg"
+        src="../assets/images/jpegs/invoice/slider/image3.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
@@ -134,12 +137,33 @@ export const howItWorksSlider = [
   },
   {
     id: 4,
-    title: "Manage invoices",
-    description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/invoice/slider/image1.jpg"
+        src="../assets/images/jpegs/invoice/slider/image4.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
+    ),
+  },
+  {
+    id: 5,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image5.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={392}
+        height={392}
+      />
+    ),
+  },
+  {
+    id: 6,
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/slider/image6.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={392}
