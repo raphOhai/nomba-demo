@@ -4,16 +4,16 @@ import React from "react";
 import EasyAdoption from "assets/images/jpegs/invoice/svgs/receipt-text.svg";
 import AllBusinesses from "assets/images/jpegs/invoice/svgs/dcube.svg";
 import Scalable from "assets/images/jpegs/invoice/svgs/frame.svg";
-import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
+// import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
 
 export const InvoiceBusinessTools = [
-  {
-    id: 1,
-    title: "Accept global payments",
-    icon: <GlobalPayment />,
-    description:
-      "Nomba online invoices are optimised across mobile, tablet, and desktop. 70% of Stripe invoices are paid within 24 hours.",
-  },
+  // {
+  //   id: 1,
+  //   title: "Accept global payments",
+  //   icon: <GlobalPayment />,
+  //   description:
+  //     "Nomba online invoices are optimised across mobile, tablet, and desktop. 70% of Stripe invoices are paid within 24 hours.",
+  // },
   {
     id: 2,
     title: "Easy adoption",
@@ -40,7 +40,7 @@ export const howItWorks = [
     id: 1,
     title: "Create an invoice",
     description:
-      "Generate invoices with ease by adding product and customer information. Customize the invoice to match your brand and choose manual or automated tax settings. Save your details in the Dashboard for quick and efficient invoicing",
+      "Add product and customer information to create your invoice. Then include a more detailed product description, size, quantity, discount and tax; as needed.",
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/how-it-works/create.png"
@@ -54,7 +54,7 @@ export const howItWorks = [
     id: 2,
     title: "Share invoice",
     description:
-      "Effortlessly send professional invoices to your customers with a simple click. Choose between emailing them a PDF invoice or sharing a link to a hosted invoice page where payment details can be accessed",
+      "In only two clicks, you can send professional invoices to your customers by emailing them a PDF invoice or even sharing a link.",
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/how-it-works/share.png"
@@ -68,7 +68,7 @@ export const howItWorks = [
     id: 3,
     title: "Receive payments",
     description:
-      "Unlock the convenience of receiving payments for shared invoices effortlessly. Provide your customers with seamless payment options, allowing them to settle their invoice obligations quickly and conveniently.",
+      "Enjoy the convenience of receiving payments seamlessly from customers directly into your Nomba account. ",
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/how-it-works/receive.png"
@@ -82,7 +82,7 @@ export const howItWorks = [
     id: 4,
     title: "Manage invoices",
     description:
-      "Oversee your invoicing operations directly from the  user-friendly Dashboard. Seamlessly manage every aspect of your invoices, from creation to customization, tracking, and payment status monitoring, all within a single centralized platform.",
+      "Manage every aspect of your invoice within this single platform; creating, tracking, payment status monitoring, automating payment reminders and auto-settlement.",
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/how-it-works/manage.png"
@@ -243,5 +243,35 @@ export const resourceData = [
       text: "Read more",
       href: "https://dashboard.nomba.com/auth/login",
     },
+  },
+];
+
+export const faqData = [
+  {
+    id: 1,
+    header: "Who can use Nomba invoice?",
+    content:
+      "Any business owner regardless of size or type (including freelancers) can use the Nomba invoice to organise their business payment.",
+  },
+  {
+    id: 2,
+    header: "Can I send the Invoice via Whatsapp?",
+    content: "Yes, Nomba invoice enables you send invoices to your customers via WhatsApp and even email.",
+  },
+  {
+    id: 3,
+    header: "Can I make an invoice recurring?",
+    content: "Yes, you can set an invoice to be sent to your customers periodically.",
+  },
+  {
+    id: 4,
+    header: "Can I monitor the status of my invoice?",
+    content:
+      "Yes, you can easily monitor  the status of invoices on your Nomba dashboard; whether pending or completed.",
+  },
+  {
+    id: 5,
+    header: "Is the invoice actually free? ",
+    content: "It definitely is, with no hidden charges too! All you need is a Nomba business account.",
   },
 ];

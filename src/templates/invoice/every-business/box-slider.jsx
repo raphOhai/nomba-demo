@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BoxSlider = ({ slides }) => {
   useEffect(() => {
-    let sections = gsap.utils.toArray(".panel");
+    let sections = gsap.utils.toArray(".box-panel");
     gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
       ease: "none",

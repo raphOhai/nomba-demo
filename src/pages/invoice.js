@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import Layout from "components/layout-max";
 import { Br } from "components";
+import { HomepageTipsAndUpdate } from "templates";
 import {
   InvoicepageHero,
   SponsorList,
@@ -11,10 +12,8 @@ import {
   EveryBusiness,
 } from "templates/invoice";
 import { split } from "animations/text";
-import { InvoiceBusinessTools, invoiceTestimonial, resourceData } from "config/invoice";
-import { Resources } from "templates/invoice/resources";
+import { InvoiceBusinessTools, faqData, invoiceTestimonial, resourceData } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
-import { AccordionData } from "config/terminal";
 import { everyBusinesses } from "config/invoice";
 const InvoicePage = () => {
   useEffect(() => {
@@ -37,16 +36,8 @@ const InvoicePage = () => {
       <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
       <InvoiceTestimonial testimonials={invoiceTestimonial} />
-      <Resources
-        title={
-          <>
-            {" "}
-            Resources to help you make informed <Br on="all" /> decisions about your business.
-          </>
-        }
-        data={resourceData}
-      />
-      <CommonQuestions questions={AccordionData} />
+      <HomepageTipsAndUpdate />
+      <CommonQuestions questions={faqData} />
     </Layout>
   );
 };

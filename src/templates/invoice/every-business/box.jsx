@@ -11,7 +11,7 @@ shadow-lg
 hover:shadow-xl
 cursor-pointer
 rounded-[10px] 
-panel
+box-panel
 `);
 
 export { Box };
