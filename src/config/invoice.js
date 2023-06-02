@@ -1,37 +1,31 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-// import { Br } from "components";
 import EasyAdoption from "assets/images/jpegs/invoice/svgs/receipt-text.svg";
 import AllBusinesses from "assets/images/jpegs/invoice/svgs/dcube.svg";
 import Scalable from "assets/images/jpegs/invoice/svgs/frame.svg";
 // import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
+import createInvoice from "jpegs/invoice/how-it-works/create.mp4";
 
 export const InvoiceBusinessTools = [
-  // {
-  //   id: 1,
-  //   title: "Accept global payments",
-  //   icon: <GlobalPayment />,
-  //   description:
-  //     "Nomba online invoices are optimised across mobile, tablet, and desktop. 70% of Stripe invoices are paid within 24 hours.",
-  // },
   {
     id: 2,
-    title: "Easy adoption",
+    title: "Easy to Use",
     icon: <EasyAdoption />,
-    description: "Create, customise, and send a Nomba-hosted or PDF invoice in minutes – with no code required.",
+    description: "Create, customise and send invoice to your customers stress-free and in less than 5 minutes",
   },
   {
     id: 3,
-    title: "Made for any use case",
+    title: "Suited for all businesses",
     icon: <AllBusinesses />,
     description:
-      "Collect one-time or recurring payments. Add line items, discounts, and tax rates directly to your invoices.",
+      "Regardless of your industry, Nomba invoice helps you accept and organise payments, as well as automate reminders",
   },
   {
     id: 4,
-    title: "Scalable for your needs",
+    title: "Customise to Your Needs",
     icon: <Scalable />,
-    description: "Nomba APIs help automate your invoicing workflows and accounts receivable processes. ",
+    description:
+      "Create invoices to suit your business needs. Add item line, tax, available discounts and receive recurring payments, as you wish.",
   },
 ];
 
@@ -41,14 +35,15 @@ export const howItWorks = [
     title: "Create an invoice",
     description:
       "Add product and customer information to create your invoice. Then include a more detailed product description, size, quantity, discount and tax; as needed.",
-    image: (
-      <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/create.png"
-        alt="How it works"
-        width={572}
-        height={572}
-      />
-    ),
+    // image: (
+    //   <StaticImage
+    //     src="../assets/images/jpegs/invoice/how-it-works/create.png"
+    //     alt="How it works"
+    //     width={572}
+    //     height={572}
+    //   />
+    // ),
+    image: <video width={572} height={572} muted playsInline autoPlay loop src={createInvoice}></video>,
   },
   {
     id: 2,

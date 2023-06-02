@@ -32,12 +32,12 @@ const InvoicePage = () => {
       />
 
       <SponsorList title="Over 10,000+ businesses use Nomba Invoice to get paid daily " />
-      <InvoiceTools title="Upselling invoice as a tool for your business " invoiceTools={InvoiceBusinessTools} />
+      <InvoiceTools title="Nomba Invoice as a tool to upgrade your business. " invoiceTools={InvoiceBusinessTools} />
       <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
+      <CommonQuestions questions={faqData} />
       <InvoiceTestimonial testimonials={invoiceTestimonial} />
       <HomepageTipsAndUpdate />
-      <CommonQuestions questions={faqData} />
     </Layout>
   );
 };

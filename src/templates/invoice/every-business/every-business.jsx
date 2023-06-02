@@ -21,7 +21,7 @@ const EveryBusiness = ({ title, slides }) => {
     });
   });
   return (
-    <section className="md:pt-[950px] pb-[100px] bg-primary -pt-10 every-businesses">
+    <section className="md:pt-[950px] pb-[100px] bg-c-0 -pt-10 every-businesses">
       <Container>
         <SectionHeader className="md:max-w-[671px] md:mx-auto header-text-every-businesses md:text-center">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">

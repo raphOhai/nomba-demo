@@ -44,12 +44,17 @@ const InvoiceTools = ({ title, invoiceTools }) => {
   }, []);
 
   return (
-    <section className="md:py-[150px] py-[50px] bg-primary">
+    <section className="md:py-[150px] py-[50px] bg-c-0">
       <Container>
         <div className={heroTextHeaders}>
           <div className="md:basis-1/2 md:mt-[120px] invoice-tool-header mb-5">
-            <div className=" md:max-w-[485px]">
-              <Ntext variant="h2" color="primary-100" className="md:basis-3/5 text-center" data-animation="h">
+            <div className=" md:max-w-[650px]">
+              <Ntext
+                variant="h2"
+                color="primary-100"
+                className="md:basis-3/5 text-center md:text-left"
+                data-animation="h"
+              >
                 {title}
               </Ntext>
             </div>

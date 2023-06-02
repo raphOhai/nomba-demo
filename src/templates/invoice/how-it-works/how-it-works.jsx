@@ -81,7 +81,7 @@ const HowInvoicingWorks = ({ title }) => {
   });
 
   return (
-    <section className="invoice-section3 md:pb-[150px] bg-primary" id="business-types">
+    <section className="invoice-section3 md:pb-[150px] bg-c-0" id="business-types">
       <Container>
         <SectionHeader className="md:max-w-[671px] md:mx-auto header-text md:text-center md:mb-[80px] ">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
