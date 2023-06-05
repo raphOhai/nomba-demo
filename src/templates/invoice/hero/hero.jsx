@@ -21,10 +21,17 @@ const InvoicepageHero = ({ title, description }) => {
       xPercent: 50,
       transformStyle: "preserve-3d",
     });
-    gsap.set(".invoice-hero-image", {
+    gsap.set(".invoice-desktop", {
       opacity: 0,
       yPercent: 10,
       scaleY: 0,
+      // skewX: -10,
+      transformStyle: "preserve-3d",
+    });
+    gsap.set(".invoice-mobile", {
+      opacity: 0,
+      yPercent: 60,
+      scaleY: 1,
       // skewX: -10,
       transformStyle: "preserve-3d",
     });
@@ -72,13 +79,23 @@ const InvoicepageHero = ({ title, description }) => {
         ease: "easeOut",
       }
     );
-    tl.to(".invoice-hero-image", {
+    tl.to(".invoice-desktop", {
       autoAlpha: 1,
       yPercent: 0,
       stagger: 1,
       scaleY: 1,
       opacity: 1,
-      duration: 0.4,
+      duration: 0.5,
+      skewX: 0,
+      ease: "easeOut",
+    });
+    tl.to(".invoice-mobile", {
+      autoAlpha: 1,
+      yPercent: 0,
+      stagger: 1,
+      scaleY: 1,
+      opacity: 1,
+      duration: 0.5,
       skewX: 0,
       ease: "easeOut",
     });
@@ -107,15 +124,17 @@ const InvoicepageHero = ({ title, description }) => {
         </div>
         <div className="hidden md:flex flex-row md:absolute md:bottom-0 justify-center items-baseline invoice-hero-image ">
           <StaticImage
-            src="../../../assets/images/jpegs/invoice/hero/desktop-1.png"
-            alt="Testimonial Image"
+            src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
+            alt="Desktop Image"
+            className="invoice-desktop"
             loading="lazy"
             width={837}
             height={381}
           />
           <StaticImage
-            src="../../../assets/images/jpegs/invoice/hero/mobile.png"
+            src="../../../assets/images/jpegs/invoice/hero/mobile-4x.png"
             alt="Mobile Image"
+            className="invoice-mobile"
             loading="lazy"
             style={{ marginLeft: "-20px" }}
             width={436}
