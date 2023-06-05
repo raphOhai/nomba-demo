@@ -10,6 +10,7 @@ import {
   HowInvoicingWorks,
   InvoiceTestimonial,
   EveryBusiness,
+  GetStarted,
 } from "templates/invoice";
 import { split } from "animations/text";
 import { InvoiceBusinessTools, faqData, invoiceTestimonial, resourceData } from "config/invoice";
@@ -35,6 +36,7 @@ const InvoicePage = () => {
       <InvoiceTools title="Nomba Invoice as a tool to upgrade your business. " invoiceTools={InvoiceBusinessTools} />
       <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
+      <GetStarted title="Get started with Nomba Invoice today" />
       <CommonQuestions questions={faqData} />
       <InvoiceTestimonial testimonials={invoiceTestimonial} />
       <HomepageTipsAndUpdate />

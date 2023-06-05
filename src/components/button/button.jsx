@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 
 import Loader from "src/assets/images/svgs/loader.svg";
+import ArrowRight from "src/assets/images/svgs/arrow-right.svg";
 import { NLink } from "../nlink";
 
 const Button = ({
@@ -11,7 +12,9 @@ const Button = ({
   variant: buttonVariant = "primary",
   size: buttonSize = "xsmall",
   isLoading,
+  withArrow,
   onClick,
+  className,
   disabled: buttonDisabled,
   href,
   to,
@@ -42,9 +45,15 @@ const Button = ({
   }
 
   return (
-    <ButtonElement className={buttonStyle} onClick={onClick} disabled={buttonDisabled || isLoading} {...linkProps}>
+    <ButtonElement
+      className={`${buttonStyle} ${className}`}
+      onClick={onClick}
+      disabled={buttonDisabled || isLoading}
+      {...linkProps}
+    >
       <span className={isflex ? "flex flex-row gap-5" : textStyle}>{text || children}</span>
       {isLoading && <Loader />}
+      {withArrow && <ArrowRight />}
     </ButtonElement>
   );
 };
@@ -57,6 +66,7 @@ const baseStyle = ctl(`
 rounded
 text-primary
 text-center
+gap-2
 font-semibold
 text-[16px]
 transition
@@ -117,6 +127,7 @@ Button.defaultProps = {
 };
 Button.propTypes = {
   text: PropTypes.string,
+  className: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "alternative"]),
   size: PropTypes.oneOf(["xsmall", "small", "medium", "large", "xlarge"]),
   href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
@@ -124,6 +135,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
+  withArrow: PropTypes.bool,
   isflex: PropTypes.bool,
 };
 

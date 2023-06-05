@@ -97,7 +97,12 @@ const InvoicepageHero = ({ title, description }) => {
             </Ntext>
           </div>
           <div className={heroButtonsContainer}>
-            <Button text="Get Started" href={{ url: SIGNUP_URL }} />
+            <Button
+              className="!font-medium !text-[16px]"
+              text="Get Started"
+              href={{ url: SIGNUP_URL }}
+              withArrow={true}
+            />
           </div>
         </div>
         <div className="hidden md:flex flex-row md:absolute md:bottom-0 justify-center items-baseline invoice-hero-image ">
