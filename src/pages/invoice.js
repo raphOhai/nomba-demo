@@ -28,7 +28,7 @@ const InvoicePage = () => {
             Organise your billing process <Br on="all" /> with Nomba invoice
           </>
         }
-        description=" Enjoy the benefits of automated reminders, helping you to stay on top of outstanding payments and minimize late payments."
+        description="Enjoy benefits of automated reminders, helping you to stay on top of outstanding payments"
       />
 
       <SponsorList title="Over 10,000+ businesses use Nomba Invoice to get paid daily " />

@@ -62,18 +62,20 @@ const InvoiceTools = ({ title, invoiceTools }) => {
 
           <div className={containerTools}>
             {invoiceTools.map(inv => (
-              <div className={`${cardWrapStyle}`} key={inv.id}>
-                <div className={cardInnerWrapper}>
-                  <div className="flex flex-col gap-[30px]">
-                    {inv.icon}
-                    <Ntext variant="text4" color="primary-100">
-                      {inv.title}
-                    </Ntext>
-                  </div>
-                  <div className="">
-                    <Ntext variant="p16" color="m-light">
-                      {inv.description}
-                    </Ntext>
+              <div className={cardWrapParentStyle}>
+                <div className={`${cardWrapStyle}`} key={inv.id}>
+                  <div className={cardInnerWrapper}>
+                    <div className="flex flex-col gap-[30px]">
+                      {inv.icon}
+                      <Ntext variant="text5" color="primary-100">
+                        {inv.title}
+                      </Ntext>
+                    </div>
+                    <div className="">
+                      <Ntext variant="text4lite" color="m-light">
+                        {inv.description}
+                      </Ntext>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -103,13 +105,26 @@ gap-5
 `);
 
 const cardWrapStyle = ctl(`
-max-w-[345px] 
-overflow-hidden 
-h-[289px] 
+-mt-[10px]
+-ml-[10px]
+max-w-[429px] 
+py-10
+min-h-[330px] 
 border-n-grey2 
+bg-black
+border 
+rounded-[10px]
+`);
+
+const cardWrapParentStyle = ctl(`
+max-w-[429px] 
+
+min-h-[330px] 
+border-n-grey2 
+bg-n-yellow
 border 
 rounded-[10px] 
-py-10 
+
 content-card 
 mx-auto
 md:mx-0
@@ -123,7 +138,7 @@ flex-col
 gap-[16px]
 justify-around
 mx-auto
-max-w-[280px]
+max-w-[320px]
 `);
 
 InvoiceTools.propTypes = {

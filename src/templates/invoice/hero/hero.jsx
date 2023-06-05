@@ -16,7 +16,7 @@ const InvoicepageHero = ({ title, description }) => {
               {title}
             </Ntext>
 
-            <Ntext variant="text5lite" className={subTextStyle} color="n-grey1" data-animation="v">
+            <Ntext variant="text4lite" className={subTextStyle} color="n-grey3" data-animation="v">
               {description}
             </Ntext>
           </div>
@@ -57,11 +57,11 @@ pt-[75px]
 `);
 
 const heroTextWrapperStyle = ctl(`
-lg:max-w-[851px]
+lg:max-w-[880px]
 lg:mx-auto
 max-w-[100%]
 lg:mb-[50px]
-md:mx-2
+
 `);
 
 const heroTextHeaders = ctl(`

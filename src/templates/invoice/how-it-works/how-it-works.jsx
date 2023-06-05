@@ -127,6 +127,7 @@ md:gap-[100px]
 gap-[50px]
 pb-20
 md:h-[70vh]
+md:items-center
 items-end
 how-it-works-container
 `);
