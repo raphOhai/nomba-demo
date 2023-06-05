@@ -7,6 +7,7 @@ export const split = () => {
   const f = document.querySelectorAll("[data-animation='h']");
   const g = document.querySelectorAll("[data-animation='v']");
   const j = document.querySelectorAll("[data-animation='j']");
+  const upBeat = document.querySelectorAll("[data-animation='up-beat']");
   f.forEach(item => {
     gsap.set(item, {
       opacity: 1,
@@ -67,5 +68,42 @@ export const split = () => {
       yPercent: 0,
       ease: "easeInOut",
     });
+  });
+
+  upBeat.forEach(item => {
+    gsap.set(item, {
+      autoAlpha: 1,
+      // rotateX: -90,
+      yPercent: 10,
+      scaleY: 0.5,
+      skewX: -20,
+      transformStyle: "preserve-3d",
+    });
+
+    IO(item).then(
+      () => {
+        gsap.to(item, {
+          autoAlpha: 1,
+          yPercent: 0,
+          delay: 1,
+          stagger: 1,
+          scaleY: 1,
+          duration: 2,
+          skewX: 0,
+          // rotateX: 90,
+          ease: "easeOut",
+        });
+        gsap.to(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "300px",
+            scrub: 1,
+          },
+          skewX: -20,
+          duration: 1.5,
+        });
+      },
+      { threshold: 1 }
+    );
   });
 };
