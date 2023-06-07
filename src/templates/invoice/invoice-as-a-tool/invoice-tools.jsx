@@ -16,7 +16,7 @@ const InvoiceTools = ({ title, invoiceTools }) => {
         ScrollTrigger.create({
           trigger: ".invoice-tool-header",
           start: "center center",
-          end: `${content.offsetHeight - 500} ${pin.offsetHeight}`,
+          end: `${content.offsetHeight - 750} ${pin.offsetHeight}`,
           pin: true,
         });
       }
@@ -24,14 +24,15 @@ const InvoiceTools = ({ title, invoiceTools }) => {
       g.forEach((item, i) => {
         gsap.set(item, {
           opacity: 0.1,
-          yPercent: i === 0 ? 30 : 100,
+          yPercent: i === 0 ? 0 : 140,
         });
         gsap.to(item, {
           scrollTrigger: {
             trigger: item,
             start: "top 100%",
-            scrub: 1,
-            end: "+=900px",
+            scrub: 1.5,
+            // toggleActions: "play reverse none none",
+            end: "+=500px",
           },
           opacity: 1,
           yPercent: 30,

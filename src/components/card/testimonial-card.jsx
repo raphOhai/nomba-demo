@@ -14,7 +14,7 @@ const TestimonialCard = ({ name, role, testimonial, image }) => {
         <div className="md:mt-8 mt-0">
           <Ntext variant="text3" color="n-grey1" value={name} />
 
-          {role && <Ntext variant="text3" color="n-grey4" value={role} />}
+          {role && <Ntext className=" italic" variant="text3" color="n-grey4" value={role} />}
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const cardWrapStyle = ctl(`
   lg:flex-row
   lg:items-start
   justify-between
-  bg-primary
+
   mb-10
 `);
 const textWrapStyle = ctl(`

@@ -3,29 +3,39 @@ import React from "react";
 import EasyAdoption from "assets/images/jpegs/invoice/svgs/receipt-text.svg";
 import AllBusinesses from "assets/images/jpegs/invoice/svgs/dcube.svg";
 import Scalable from "assets/images/jpegs/invoice/svgs/frame.svg";
+import Shareable from "assets/images/jpegs/invoice/svgs/share.svg";
 // import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
 import createInvoice from "jpegs/invoice/how-it-works/create.mp4";
+import shareInvoice from "jpegs/invoice/how-it-works/share.webm";
+import receivePayment from "jpegs/invoice/how-it-works/receive.webm";
 
 export const InvoiceBusinessTools = [
   {
-    id: 2,
+    id: 1,
     title: "Easy to Use",
     icon: <EasyAdoption />,
     description: "Create, customise and send invoice to your customers stress-free and in less than 5 minutes",
   },
   {
-    id: 3,
+    id: 2,
     title: "Suited for all businesses",
     icon: <AllBusinesses />,
     description:
       "Regardless of your industry, Nomba invoice helps you accept and organise payments, as well as automate reminders",
   },
   {
-    id: 4,
+    id: 3,
     title: "Customise to Your Needs",
     icon: <Scalable />,
     description:
       "Create invoices to suit your business needs. Add item line, tax, available discounts and receive recurring payments, as you wish.",
+  },
+  {
+    id: 4,
+    title: "Share easy",
+    icon: <Shareable />,
+    description:
+      "Share your Nomba invoice effortlessly with your clients either via email, sms, or Whatsapp and get paid easily",
   },
 ];
 
@@ -50,28 +60,30 @@ export const howItWorks = [
     title: "Share invoice",
     description:
       "In only two clicks, you can send professional invoices to your customers by emailing them a PDF invoice or even sharing a link.",
-    image: (
-      <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/share.png"
-        alt="How it works"
-        width={572}
-        height={572}
-      />
-    ),
+    // image: (
+    //   <StaticImage
+    //     src="../assets/images/jpegs/invoice/how-it-works/share.png"
+    //     alt="How it works"
+    //     width={572}
+    //     height={572}
+    //   />
+    // ),
+    image: <video width={572} height={572} muted playsInline autoPlay loop src={shareInvoice}></video>,
   },
   {
     id: 3,
     title: "Receive payments",
     description:
       "Enjoy the convenience of receiving payments seamlessly from customers directly into your Nomba account. ",
-    image: (
-      <StaticImage
-        src="../assets/images/jpegs/invoice/how-it-works/receive.png"
-        alt="How it works"
-        width={572}
-        height={572}
-      />
-    ),
+    // image: (
+    //   <StaticImage
+    //     src="../assets/images/jpegs/invoice/how-it-works/receive.png"
+    //     alt="How it works"
+    //     width={572}
+    //     height={572}
+    //   />
+    // ),
+    image: <video width={572} height={572} muted playsInline autoPlay loop src={receivePayment}></video>,
   },
   {
     id: 4,
@@ -81,6 +93,19 @@ export const howItWorks = [
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/how-it-works/manage.png"
+        alt="How it works"
+        width={572}
+        height={572}
+      />
+    ),
+  },
+  {
+    id: 5,
+    title: "Schedule reminders",
+    description: "Manage your invoices with scheduled reminders to enhance productivity and never miss a deadline.",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/invoice/how-it-works/reminders.png"
         alt="How it works"
         width={572}
         height={572}

@@ -7,6 +7,7 @@ import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
 import { StaticImage } from "gatsby-plugin-image";
+import mobile from "jpegs/invoice/hero/mobile.webm";
 
 gsap.registerPlugin([ScrollTrigger]);
 const InvoicepageHero = ({ title, description }) => {
@@ -14,98 +15,99 @@ const InvoicepageHero = ({ title, description }) => {
 
   useEffect(() => {
     const titleText = new SplitType(".invoice-hero-title", { type: "chars" });
-
-    gsap.set(".invoice-hero-description", {
-      autoAlpha: 0,
-      opacity: 1,
-      xPercent: 50,
-      transformStyle: "preserve-3d",
-    });
-    gsap.set(".invoice-desktop", {
-      opacity: 0,
-      yPercent: 10,
-      scaleY: 0,
-      // skewX: -10,
-      transformStyle: "preserve-3d",
-    });
-    gsap.set(".invoice-mobile", {
-      opacity: 0,
-      yPercent: 60,
-      scaleY: 1,
-      // skewX: -10,
-      transformStyle: "preserve-3d",
-    });
-    const tl = gsap.timeline();
-    tl.fromTo(
-      titleText.chars,
-      {
-        fontSize: "6rem",
-        opacity: 0,
-        y: "13rem",
-        lineHeight: "6.5rem",
-        // yPercent: 50,
-      },
-      {
-        y: "11rem",
+    if (window.innerWidth > 767) {
+      gsap.set(".invoice-hero-description", {
+        autoAlpha: 0,
         opacity: 1,
-        stagger: 0.05,
-        duration: 0.8,
-        ease: "power4.out",
-      }
-    );
-    tl.to(titleText.chars, {
-      fontSize: "4rem",
-      y: "0",
-      lineHeight: "5.25rem",
-      duration: 1,
-      ease: "easeOut",
-    });
-    tl.to(".invoice-hero-description", {
-      autoAlpha: 1,
-      xPercent: 0,
-      duration: 0.8,
-      ease: "easeOut",
-    });
-    tl.fromTo(
-      ".invoice-hero-button",
-      {
-        yPercent: 20,
+        xPercent: 50,
+        transformStyle: "preserve-3d",
+      });
+      gsap.set(".invoice-desktop", {
         opacity: 0,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
+        yPercent: 10,
+        scaleY: 0,
+        // skewX: -10,
+        transformStyle: "preserve-3d",
+      });
+      gsap.set(".invoice-mobile", {
+        opacity: 0,
+        yPercent: 60,
+        scaleY: 1,
+        // skewX: -10,
+        transformStyle: "preserve-3d",
+      });
+      const tl = gsap.timeline();
+      tl.fromTo(
+        titleText.chars,
+        {
+          fontSize: window.innerWidth > 767 ? "6rem" : "5rem",
+          opacity: 0,
+          y: window.innerWidth > 760 ? "13rem" : "6rem",
+          lineHeight: window.innerWidth > 767 ? "6.5rem" : "5.3rem",
+          // yPercent: 50,
+        },
+        {
+          y: window.innerWidth > 760 ? "11rem" : "7.5rem",
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.8,
+          ease: "power4.out",
+        }
+      );
+      tl.to(titleText.chars, {
+        fontSize: window.innerWidth > 767 ? "4rem " : "3rem",
+        y: "0",
+        lineHeight: window.innerWidth > 767 ? "5.25rem" : "3.3rem",
+        duration: 1,
         ease: "easeOut",
-      }
-    );
-    tl.to(".invoice-desktop", {
-      autoAlpha: 1,
-      yPercent: 0,
-      stagger: 1,
-      scaleY: 1,
-      opacity: 1,
-      duration: 0.5,
-      skewX: 0,
-      ease: "easeOut",
-    });
-    tl.to(".invoice-mobile", {
-      autoAlpha: 1,
-      yPercent: 0,
-      stagger: 1,
-      scaleY: 1,
-      opacity: 1,
-      duration: 0.5,
-      skewX: 0,
-      ease: "easeOut",
-    });
+      });
+      tl.to(".invoice-hero-description", {
+        autoAlpha: 1,
+        xPercent: 0,
+        duration: 0.8,
+        ease: "easeOut",
+      });
+      tl.fromTo(
+        ".invoice-hero-button",
+        {
+          yPercent: 20,
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "easeOut",
+        }
+      );
+      tl.to(".invoice-desktop", {
+        autoAlpha: 1,
+        yPercent: 0,
+        stagger: 1,
+        scaleY: 1,
+        opacity: 1,
+        duration: 0.5,
+        skewX: 0,
+        ease: "easeOut",
+      });
+      tl.to(".invoice-mobile", {
+        autoAlpha: 1,
+        yPercent: 0,
+        stagger: 1,
+        scaleY: 1,
+        opacity: 1,
+        duration: 0.5,
+        skewX: 0,
+        ease: "easeOut",
+      });
+    }
   });
   return (
     <section className={heroStyle}>
       <Container>
         <div className={heroTextWrapperStyle}>
           <div className={heroTextHeaders}>
-            <Ntext variant="text9" color="primary-100" className="mb-[28px] text-center invoice-hero-title">
+            <Ntext variant="text9" color="primary-100" className=" text-center invoice-hero-title">
               {title}
             </Ntext>
 
@@ -122,7 +124,7 @@ const InvoicepageHero = ({ title, description }) => {
             />
           </div>
         </div>
-        <div className="hidden md:flex flex-row md:absolute md:bottom-0 justify-center items-baseline invoice-hero-image ">
+        <div className="hidden md:flex flex-row md:absolute md:bottom-[-7px] justify-center items-baseline invoice-hero-image ">
           <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
@@ -131,7 +133,7 @@ const InvoicepageHero = ({ title, description }) => {
             width={837}
             height={381}
           />
-          <StaticImage
+          {/* <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/mobile-4x.png"
             alt="Mobile Image"
             className="invoice-mobile"
@@ -139,10 +141,23 @@ const InvoicepageHero = ({ title, description }) => {
             style={{ marginLeft: "-20px" }}
             width={436}
             height={420}
-          />
+          /> */}
+          <video
+            width={436}
+            className="invoice-mobile"
+            style={{ marginLeft: "-20px" }}
+            height={420}
+            muted
+            playsInline
+            autoPlay
+            loop
+            src={mobile}
+          ></video>
+          ,
         </div>
-        <div className="block md:hidden">
-          <StaticImage src="../../../assets/images/jpegs/invoice/hero/m-mobile.png" alt="Mobile Image" loading="lazy" />
+        <div className="flex flex-row items-end md:!hidden bottom-[-7px] ">
+          {/* <StaticImage src="../../../assets/images/jpegs/invoice/hero/m-mobile.png" alt="Mobile Image" loading="lazy" /> */}
+          <video width={436} height={420} muted playsInline autoPlay loop src={mobile}></video>,
         </div>
       </Container>
     </section>
@@ -153,9 +168,9 @@ const InvoicepageHero = ({ title, description }) => {
 const heroStyle = ctl(`
 md:pt-[90px]
 bg-black
-pt-[75px]
+pt-[55px]
 overflow-hidden
-md:min-h-[100vh] relative
+md:min-h-[880px] relative
 `);
 
 const heroTextWrapperStyle = ctl(`
@@ -176,7 +191,7 @@ lg:mb-[50px]
 
 const subTextStyle = ctl(`
 text-center
-opacity-0
+md:opacity-0
 invoice-hero-description
 `);
 
@@ -185,11 +200,11 @@ flex
 flex-col
 md:flex-row
 md:justify-center
-gap-[30px]
 md:items-center
+mb-5
 w-full items-stretch 
 invoice-hero-button
-opacity-0
+md:opacity-0
 `);
 
 InvoicepageHero.propTypes = {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import Layout from "components/layout-max";
-import { Br } from "components";
+import { Br, Testimonial } from "components";
 import { HomepageTipsAndUpdate } from "templates";
 import {
   InvoicepageHero,
@@ -36,9 +36,14 @@ const InvoicePage = () => {
       <InvoiceTools title="Nomba Invoice as a tool to upgrade your business. " invoiceTools={InvoiceBusinessTools} />
       <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
-      <GetStarted title="Get started with Nomba Invoice today" />
+      <Testimonial
+        className="!bg-black"
+        headingText={<>Hear what business partners have to say</>}
+        testimonials={invoiceTestimonial}
+      />
       <CommonQuestions questions={faqData} />
-      <InvoiceTestimonial testimonials={invoiceTestimonial} />
+
+      <GetStarted title="Get started with Nomba Invoice today" />
       <HomepageTipsAndUpdate />
     </Layout>
   );
