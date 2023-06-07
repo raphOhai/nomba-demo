@@ -53,7 +53,18 @@ export const howItWorks = [
     //     height={572}
     //   />
     // ),
-    image: <video width={572} height={572} muted playsInline autoPlay loop src={createInvoice}></video>,
+    image: (
+      <video
+        width={572}
+        height={572}
+        muted
+        playsInline
+        autoPlay
+        loop
+        src={createInvoice}
+        className="rounded-lg"
+      ></video>
+    ),
   },
   {
     id: 2,
@@ -68,7 +79,9 @@ export const howItWorks = [
     //     height={572}
     //   />
     // ),
-    image: <video width={572} height={572} muted playsInline autoPlay loop src={shareInvoice}></video>,
+    image: (
+      <video width={572} height={572} muted playsInline autoPlay loop src={shareInvoice} className="rounded-lg"></video>
+    ),
   },
   {
     id: 3,
@@ -83,7 +96,18 @@ export const howItWorks = [
     //     height={572}
     //   />
     // ),
-    image: <video width={572} height={572} muted playsInline autoPlay loop src={receivePayment}></video>,
+    image: (
+      <video
+        width={572}
+        height={572}
+        muted
+        playsInline
+        autoPlay
+        loop
+        className="rounded-lg"
+        src={receivePayment}
+      ></video>
+    ),
   },
   {
     id: 4,

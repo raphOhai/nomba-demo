@@ -25,7 +25,7 @@ const PageHeaderNew = ({ pageHeaderText, pageHeaderSubText, pageHeaderButtonText
           <div className={imageOverlayStyle}>{image[1]}</div>
         </div>
       </section>
-      <HeroSlider images={image} className="md:hidden" />
+      <HeroSlider images={image} className="md:!hidden" />
     </Container>
   );
 };
