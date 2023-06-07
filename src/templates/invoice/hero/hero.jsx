@@ -7,7 +7,7 @@ import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
 import { StaticImage } from "gatsby-plugin-image";
-import mobile from "jpegs/invoice/hero/mobile.webm";
+import mobile from "jpegs/invoice/hero/mobile.mp4";
 
 gsap.registerPlugin([ScrollTrigger]);
 const InvoicepageHero = ({ title, description }) => {

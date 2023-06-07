@@ -6,8 +6,8 @@ import Scalable from "assets/images/jpegs/invoice/svgs/frame.svg";
 import Shareable from "assets/images/jpegs/invoice/svgs/share.svg";
 // import GlobalPayment from "assets/images/jpegs/invoice/svgs/global.svg";
 import createInvoice from "jpegs/invoice/how-it-works/create.mp4";
-import shareInvoice from "jpegs/invoice/how-it-works/share.webm";
-import receivePayment from "jpegs/invoice/how-it-works/receive.webm";
+import shareInvoice from "jpegs/invoice/how-it-works/share.mp4";
+import receivePayment from "jpegs/invoice/how-it-works/receive.mp4";
 
 export const InvoiceBusinessTools = [
   {
