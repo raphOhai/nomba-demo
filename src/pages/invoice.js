@@ -26,7 +26,7 @@ const InvoicePage = () => {
         title={
           <>
             {" "}
-            Organise your billing process <Br on="all" /> with Nomba invoice
+            Organise your billing process <Br on="desktop" /> with Nomba invoice
           </>
         }
         description="Enjoy benefits of automated reminders, helping you to stay on top of outstanding payments"
