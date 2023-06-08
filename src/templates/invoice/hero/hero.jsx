@@ -133,11 +133,11 @@ const InvoicepageHero = ({ title, description }) => {
             />
           </div>
         </div>
-        <div className="hidden md:flex flex-row md:absolute md:bottom-[-7px] -ml-5 justify-center items-baseline invoice-hero-image ">
+        <div className="flex flex-row md:absolute -mb-2 md:bottom-[-7px] md:-ml-5 justify-center md:items-baseline items-end invoice-hero-image ">
           <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
-            className="invoice-desktop"
+            className="invoice-desktop hidden md:block"
             loading="lazy"
             width={837}
             height={381}
@@ -162,11 +162,7 @@ const InvoicepageHero = ({ title, description }) => {
             loop
             src={mobile}
           ></video> */}
-          <div ref={animationContainer} className="-ml-16 invoice-mobile max-h-[515px] max-w-[543px]"></div>
-        </div>
-        <div className="flex flex-row items-end md:!hidden -mb-2">
-          {/* <StaticImage src="../../../assets/images/jpegs/invoice/hero/m-mobile.png" alt="Mobile Image" loading="lazy" /> */}
-          <div ref={animationContainer} className=" "></div>
+          <div ref={animationContainer} className="md:-ml-16 invoice-mobile max-h-[515px] max-w-[543px]"></div>
         </div>
       </Container>
     </section>
