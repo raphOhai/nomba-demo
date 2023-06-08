@@ -141,8 +141,6 @@ export const howItWorks = [
 export const everyBusinesses = [
   {
     id: 1,
-    title: "Manage invoices",
-
     image: (
       <StaticImage
         src="../assets/images/jpegs/invoice/slider/image1.png"
@@ -155,7 +153,6 @@ export const everyBusinesses = [
   },
   {
     id: 2,
-    title: "Manage invoices",
 
     image: (
       <StaticImage
