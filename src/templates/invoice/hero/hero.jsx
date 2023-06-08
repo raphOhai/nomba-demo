@@ -142,26 +142,7 @@ const InvoicepageHero = ({ title, description }) => {
             width={837}
             height={381}
           />
-          {/* <StaticImage
-            src="../../../assets/images/jpegs/invoice/hero/mobile-4x.png"
-            alt="Mobile Image"
-            className="invoice-mobile"
-            loading="lazy"
-            style={{ marginLeft: "-20px" }}
-            width={436}
-            height={420}
-          /> */}
-          {/* <video
-            width={436}
-            className="invoice-mobile"
-            style={{ marginLeft: "-20px" }}
-            height={420}
-            muted
-            playsInline
-            autoPlay
-            loop
-            src={mobile}
-          ></video> */}
+
           <div ref={animationContainer} className="md:-ml-16 invoice-mobile max-h-[515px] max-w-[543px]"></div>
         </div>
       </Container>
