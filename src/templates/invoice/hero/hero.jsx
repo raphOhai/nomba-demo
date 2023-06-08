@@ -137,7 +137,7 @@ const InvoicepageHero = ({ title, description }) => {
           <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
-            className="invoice-desktop hidden md:block"
+            className="invoice-desktop !hidden md:!block"
             loading="lazy"
             width={837}
             height={381}
