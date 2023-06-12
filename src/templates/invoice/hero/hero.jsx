@@ -1,18 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, createRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
+import Lottie from "lottie-web";
 import constants from "config/constants.json";
 import { StaticImage } from "gatsby-plugin-image";
 import mobile from "jpegs/invoice/hero/mobile.mp4";
-
+import animation from "./animations/vid_fone.json";
 gsap.registerPlugin([ScrollTrigger]);
 const InvoicepageHero = ({ title, description }) => {
   const { SIGNUP_URL } = constants;
-
+  let animationContainer = createRef();
+  useEffect(() => {
+    const instance = Lottie.loadAnimation({
+      container: animationContainer.current,
+      animationData: animation,
+    });
+    // Return clean up function here
+    return () => instance.destroy();
+  }, [animationContainer]);
   useEffect(() => {
     const titleText = new SplitType(".invoice-hero-title", { type: "chars" });
     if (window.innerWidth > 767) {
@@ -124,40 +133,17 @@ const InvoicepageHero = ({ title, description }) => {
             />
           </div>
         </div>
-        <div className="hidden md:flex flex-row md:absolute md:bottom-[-7px] justify-center items-baseline invoice-hero-image ">
+        <div className="flex flex-row md:absolute -mb-2 md:bottom-[-7px] md:-ml-5 justify-center md:items-baseline items-end invoice-hero-image ">
           <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
-            className="invoice-desktop"
+            className="invoice-desktop !hidden md:!block"
             loading="lazy"
             width={837}
             height={381}
           />
-          {/* <StaticImage
-            src="../../../assets/images/jpegs/invoice/hero/mobile-4x.png"
-            alt="Mobile Image"
-            className="invoice-mobile"
-            loading="lazy"
-            style={{ marginLeft: "-20px" }}
-            width={436}
-            height={420}
-          /> */}
-          <video
-            width={436}
-            className="invoice-mobile"
-            style={{ marginLeft: "-20px" }}
-            height={420}
-            muted
-            playsInline
-            autoPlay
-            loop
-            src={mobile}
-          ></video>
-          ,
-        </div>
-        <div className="flex flex-row items-end md:!hidden bottom-[-7px] ">
-          {/* <StaticImage src="../../../assets/images/jpegs/invoice/hero/m-mobile.png" alt="Mobile Image" loading="lazy" /> */}
-          <video width={436} height={420} muted playsInline autoPlay loop src={mobile}></video>,
+
+          <div ref={animationContainer} className="md:-ml-16 invoice-mobile max-h-[515px] max-w-[543px]"></div>
         </div>
       </Container>
     </section>
