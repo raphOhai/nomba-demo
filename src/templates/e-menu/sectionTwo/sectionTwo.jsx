@@ -1,39 +1,26 @@
-import { Container, Ntext, Button } from "components";
-import React, { useEffect } from "react";
-import heroVideo from "jpegs/e-menu/hero/hero.mp4";
-import constants from "config/constants.json";
+import React, { useEffect, createRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
+import PropTypes from "prop-types";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+import { Container, Ntext, Button } from "components";
+import constants from "config/constants.json";
+import iPhone from "jpegs/e-menu/phone1.png";
+import heroVideo from "jpegs/e-menu/hero/hero.mp4";
+import { StaticImage } from "gatsby-plugin-image";
 
+gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection2 = () => {
   const { SIGNUP_URL } = constants;
+  useEffect(() => {
+    const titleText = new SplitType(".emenu-hero-title", { type: "chars" });
+  });
   return (
     <section class=" bg-n-yellow1">
-      <Container className="mt-8 md:mt-[100px]">
-        <div class="relative min-h-[100vh]">
-          <div className="absolute lg:left-[13.5rem] top-[2rem] max-w-[336px] md:max-w-[23rem]">
-            <Ntext variant="h1" color="primary-100">
-              Power your Restaurant
-            </Ntext>
-          </div>
-          <div className="flex justify-center md:-ml-[12rem] -ml-[10rem] md:mt-[-5rem] -mt-[2rem]">
-            <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={793} height={990}></video>
-          </div>
-          <div class="absolute lg:right-[12rem] right-0 md:top-[57%] top-[70%] max-w-[290px] md:max-w-[21rem]">
-            {" "}
-            <Ntext variant="h1" className="" color="primary-100">
-              Scan. <br /> view. pay
-            </Ntext>
-          </div>
-          <div className={heroButtonsContainer} side>
-            <div className="mx-auto w-[195px]">
-              <Button
-                className="!font-medium !text-[16px]"
-                text="Get Started"
-                href={{ url: SIGNUP_URL }}
-                withArrow={true}
-              />
-            </div>
-          </div>
+      <Container className="mt-8 md:mt-[100px] ">
+        <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center">
+          <img src={iPhone} width={347} height={682} />
         </div>
       </Container>
     </section>

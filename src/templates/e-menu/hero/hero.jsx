@@ -9,7 +9,7 @@ const EmenuHero = () => {
   useEffect(() => {
     const ltr = document.querySelector("[data-animation='ltr']");
     const rtl = document.querySelector("[data-animation='rtl']");
-    console.log(rtl);
+    // console.log(rtl);
   });
 
   return (
