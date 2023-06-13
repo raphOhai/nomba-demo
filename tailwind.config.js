@@ -14,6 +14,7 @@ module.exports = {
     "./src/templates/business/**/*.{html,jsx,js}",
     "./src/templates/max/**/*.{html,jsx,js}",
     "./src/templates/invoice/**/*.{html,jsx,js}",
+    "./src/templates/e-menu/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {

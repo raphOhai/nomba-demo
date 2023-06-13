@@ -4,10 +4,10 @@ import heroVideo from "jpegs/e-menu/hero/hero.mp4";
 import constants from "config/constants.json";
 import ctl from "@netlify/classnames-template-literals";
 
-const EmenuHero = () => {
+const EmenuSection2 = () => {
   const { SIGNUP_URL } = constants;
   return (
-    <section>
+    <section bg>
       <Container className="mt-8 md:mt-[100px]">
         <div class="relative w-full">
           <div className="absolute lg:left-[13.5rem] top-[3rem] max-w-[336px] md:max-w-[23rem]">
@@ -45,4 +45,4 @@ md:top-[77%] top-[83%]
 w-full
 text-center
 `);
-export { EmenuHero };
+export { EmenuSection2 };
