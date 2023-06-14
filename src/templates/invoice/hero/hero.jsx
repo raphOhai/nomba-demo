@@ -142,7 +142,7 @@ const InvoicepageHero = ({ title, description }) => {
             />
           </div>
         </div>
-        <div className="flex flex-row -mb-2 md:bottom-[-7px] md:absolute justify-center md:items-baseline items-end invoice-hero-image ">
+        <div className="flex flex-row -mb-2 md:bottom-[-7px] md:left-0 justify-center md:items-baseline items-end invoice-hero-image ">
           {/* <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
@@ -151,7 +151,7 @@ const InvoicepageHero = ({ title, description }) => {
             width={837}
             height={381}
           /> */}
-          <div ref={desktopContainer} className="invoice-desktop !hidden md:!block max-w-[900px] "></div>
+          <div ref={desktopContainer} className="invoice-desktop !hidden md:!block "></div>
           <div ref={mobileContainer} className="md:-ml-40 invoice-mobile max-h-[500px] max-w-[483px]"></div>
         </div>
       </Container>
@@ -165,7 +165,7 @@ md:pt-[90px]
 bg-black
 pt-[55px]
 overflow-hidden
-md:min-h-[760px] relative
+md:min-h-[880px] relative
 `);
 
 const heroTextWrapperStyle = ctl(`
