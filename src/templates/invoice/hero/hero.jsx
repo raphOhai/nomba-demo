@@ -9,19 +9,28 @@ import Lottie from "lottie-web";
 import constants from "config/constants.json";
 import { StaticImage } from "gatsby-plugin-image";
 import mobile from "jpegs/invoice/hero/mobile.mp4";
-import animation from "./animations/vid_fone.json";
+import mobileAnimation from "./animations/vid_fone.json";
+import desktopAnimation from "./animations/laptopda.json";
 gsap.registerPlugin([ScrollTrigger]);
 const InvoicepageHero = ({ title, description }) => {
   const { SIGNUP_URL } = constants;
-  let animationContainer = createRef();
+  let mobileContainer = createRef();
+  let desktopContainer = createRef();
   useEffect(() => {
-    const instance = Lottie.loadAnimation({
-      container: animationContainer.current,
-      animationData: animation,
+    const mobileInstance = Lottie.loadAnimation({
+      container: mobileContainer.current,
+      animationData: mobileAnimation,
+    });
+    const desktopInstance = Lottie.loadAnimation({
+      container: desktopContainer.current,
+      animationData: desktopAnimation,
     });
     // Return clean up function here
-    return () => instance.destroy();
-  }, [animationContainer]);
+    return () => {
+      desktopInstance.destroy();
+      mobileInstance.destroy();
+    };
+  }, [mobileContainer, desktopContainer]);
   useEffect(() => {
     const titleText = new SplitType(".invoice-hero-title", { type: "chars" });
     if (window.innerWidth > 767) {
@@ -133,17 +142,17 @@ const InvoicepageHero = ({ title, description }) => {
             />
           </div>
         </div>
-        <div className="flex flex-row md:absolute -mb-2 md:bottom-[-7px] md:-ml-5 justify-center md:items-baseline items-end invoice-hero-image ">
-          <StaticImage
+        <div className="flex flex-row -mb-2 md:bottom-[-7px] md:left-0 justify-center md:items-baseline items-end invoice-hero-image ">
+          {/* <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
             className="invoice-desktop !hidden md:!block"
             loading="lazy"
             width={837}
             height={381}
-          />
-
-          <div ref={animationContainer} className="md:-ml-16 invoice-mobile max-h-[515px] max-w-[543px]"></div>
+          /> */}
+          <div ref={desktopContainer} className="invoice-desktop !hidden md:!block max-w-[900px] "></div>
+          <div ref={mobileContainer} className="md:-ml-40 invoice-mobile max-h-[500px] max-w-[483px]"></div>
         </div>
       </Container>
     </section>
@@ -156,7 +165,7 @@ md:pt-[90px]
 bg-black
 pt-[55px]
 overflow-hidden
-md:min-h-[880px] relative
+md:min-h-[760px] relative
 `);
 
 const heroTextWrapperStyle = ctl(`
