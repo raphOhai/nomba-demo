@@ -18,7 +18,8 @@ const EmenuSection2 = () => {
     const dom = document.querySelector(".section-two-image");
     const titleText = new SplitType(".section-two-title", { type: "chars" });
     gsap.set("setion-two-image", {
-      opacity: 0,
+      opacity: 0.5,
+      yPercent: -100,
     });
     gsap.set(titleText.chars, {
       fontSize: window.innerWidth > 767 ? "6rem" : "5rem",
@@ -60,21 +61,21 @@ const EmenuSection2 = () => {
           duration: 0.5,
           skewX: 0,
           ease: "easeOut",
-        });
+        }).delay(3.5);
       },
       { threshold: 1 }
     );
   });
   return (
     <section class=" bg-n-yellow1 relative section-two">
-      <Container className="">
-        <Ntext variant="text9" color="c-0" className=" text-center section-two-title">
-          Everything you need
-        </Ntext>
-        <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
-          <img src={iPhone} width={347} height={682} />
-        </div>
-      </Container>
+      {/* <Container className=""> */}
+      <Ntext variant="text9" color="c-0" className=" text-center section-two-title">
+        Everything you need to know
+      </Ntext>
+      <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
+        <img src={iPhone} width={347} height={682} />
+      </div>
+      {/* </Container> */}
     </section>
   );
 };
