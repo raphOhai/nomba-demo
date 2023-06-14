@@ -142,7 +142,7 @@ const InvoicepageHero = ({ title, description }) => {
             />
           </div>
         </div>
-        <div className="flex flex-row -mb-2 md:bottom-[-7px] md:left-0 justify-center md:items-baseline items-end invoice-hero-image ">
+        <div className="flex flex-row -mb-2 md:bottom-[-7px] md:absolute justify-center md:items-baseline items-end invoice-hero-image ">
           {/* <StaticImage
             src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
             alt="Desktop Image"
