@@ -152,7 +152,7 @@ const InvoicepageHero = ({ title, description }) => {
             height={381}
           /> */}
           <div ref={desktopContainer} className="invoice-desktop !hidden md:!block "></div>
-          <div ref={mobileContainer} className="md:-ml-40 invoice-mobile max-h-[500px] max-w-[483px]"></div>
+          <div ref={mobileContainer} className="md:-ml-40 invoice-mobile max-h-[500px] max-w-[503px]"></div>
         </div>
       </Container>
     </section>
