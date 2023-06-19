@@ -23,6 +23,10 @@ const EmenuSection2 = () => {
       yPercent: 150,
       xPercent: 50,
     });
+    gsap.set(".section-three-image", {
+      yPercent: 50,
+      opacity: 0,
+    });
     gsap.set(titleText.chars, {
       fontSize: window.innerWidth > 767 ? "18rem" : "5rem",
       opacity: 0,
@@ -45,22 +49,41 @@ const EmenuSection2 = () => {
         ease: "power4.out",
       })
       .then(() => {
-        gsap.to(".section-two-image", {
-          scrollTrigger: {
-            trigger: ".section-three",
-            start: "top 3%",
-            end: "+=1200px",
-            scrub: true,
-            // pin: true,
-          },
-          yPercent: 114,
-          xPercent: 20,
-          stagger: 0.05,
-          duration: 0.8,
-          ease: "power4.out",
-        });
-      });
+        gsap
+          .to(".section-two-image", {
+            scrollTrigger: {
+              trigger: ".section-three",
+              start: "top 5%",
+              end: "+=1000px",
+              scrub: true,
+              // pin: true,
+            },
+            yPercent: 114,
+            xPercent: 20,
+            stagger: 0.05,
 
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out",
+          })
+          .then(() => {});
+      });
+    gsap.to(".section-three-image", {
+      scrollTrigger: {
+        trigger: ".section-three",
+        start: "bottom 20%",
+        end: "+=1000px",
+        scrub: true,
+        // pin: true,
+      },
+      yPercent: 0,
+      xPercent: 0,
+      stagger: 0.05,
+
+      opacity: 1,
+      duration: 1,
+      ease: "power4.out",
+    });
     IO(dom).then(
       () => {
         // tl.to(titleText.chars, {
@@ -107,10 +130,6 @@ const EmenuSection2 = () => {
         <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
           <img src={iPhone} width={347} height={682} />
         </div>
-        {/* </Container> */}
-        {/* </section> */}
-        {/* <section class=" bg-n-yellow1 relative section-two"> */}
-
         <div className="flex md:flex-row flex-col justify-between md:items-center section-three md:mt-[200px] slider-padding-left">
           <div className="flex flex-col gap-[20px] -mt-10">
             <Ntext variant="h1" color="c-0" className="max-w-[702px]">
@@ -130,7 +149,7 @@ const EmenuSection2 = () => {
             </div>
           </div>
 
-          <div class="relative max-w-[728px] with-hand mt-[32px]">
+          <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image">
             <img src={iPhoneWithHand} width={718} height={796} />
           </div>
         </div>
