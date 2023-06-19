@@ -71,7 +71,7 @@ const EmenuSection2 = () => {
     gsap.to(".section-three-image", {
       scrollTrigger: {
         trigger: ".section-three",
-        start: "bottom 20%",
+        start: "bottom 30%",
         end: "+=1000px",
         scrub: true,
         // pin: true,
