@@ -1,4 +1,4 @@
-import React, { useEffect, createRef } from "react";
+import React, { useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
@@ -14,6 +14,7 @@ import { IO } from "src/animations/observe";
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection4 = ({ headingText, tools }) => {
   const { SIGNUP_URL } = constants;
+  const [active, setActive] = useState(0);
   useEffect(() => {
     const dom = document.querySelector(".section-four");
     // const titleText = new SplitType(".section-two-title", { type: "chars" });
@@ -62,7 +63,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
         gsap.set(element, { position: "absolute", yPercent: 0 });
       }
       tl.to(element, {
-        yPercent: 0,
+        yPercent: 4 * i,
         stagger: 0.5,
         opacity: 1,
         scrollTrigger: {
@@ -70,10 +71,23 @@ const EmenuSection4 = ({ headingText, tools }) => {
           markers: true,
           start: "top top",
           scrub: true,
+          onScrubComplete() {
+            console.log(i);
+          },
         },
-      }).then(function () {
-        // gsap.to(element)
-      });
+      }).then(function () {});
+      if (i > 0) {
+        tl.to(container[i - 1], {
+          scrollTrigger: {
+            trigger: element,
+            markers: true,
+            start: "top top",
+            scrub: true,
+          },
+          scale: 0.7 + (i - 1) * 0.1,
+          // yPercent: 20 * i
+        });
+      }
     });
     // gsap.to(container, {
     //   yPercent: 0,
@@ -93,7 +107,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
     //     gsap.set(element, { position: "absolute", yPercent: 0 });
     //   }
     // });
-  });
+  }, [active]);
   return (
     <section class=" bg-n-light relative section-four pb-20">
       <Container className="">
@@ -104,6 +118,11 @@ const EmenuSection4 = ({ headingText, tools }) => {
             </Ntext>
           </div>
         </SectionHeader>
+        <div className="text-center pb-10">
+          {tools.map((t, i) => (
+            <div className={`px-5 py-2 inline-flex rounded-full border border-black`}>{t.title}</div>
+          ))}
+        </div>
         <div className="relative section-four-rect">
           {tools.map((t, i) => (
             <div class={`w-full ${t.color} rounded-[20px] section-four-rect-card section-four-rect-card-${i}`} key={i}>
