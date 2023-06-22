@@ -1,0 +1,23 @@
+.section-four {
+  padding-bottom: 200px;
+  &-rect {
+    padding-bottom: 600px;
+    &-card {
+      position: relative;
+      --spacing: 4rem;
+
+      &:nth-child(2) {
+        top: calc(var(--spacing) * 0.5);
+      }
+      &:nth-child(3) {
+        top: calc(var(--spacing) * 1);
+      }
+      &:nth-child(4) {
+        top: calc(var(--spacing) * 1.5);
+      }
+      &:nth-child(5) {
+        top: calc(var(--spacing) * 5);
+      }
+    }
+  }
+}

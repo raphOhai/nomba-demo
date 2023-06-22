@@ -8,6 +8,7 @@ import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
 import iPhone from "jpegs/e-menu/phone1.png";
 import iPhoneWithHand from "jpegs/e-menu/iPhone-with-hand.png";
+import iPhoneWithHandMobie from "jpegs/e-menu/iPhone-with-hand2.png";
 
 import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
@@ -28,10 +29,10 @@ const EmenuSection2 = () => {
       opacity: 0,
     });
     gsap.set(titleText.chars, {
-      fontSize: window.innerWidth > 767 ? "18rem" : "5rem",
+      fontSize: "18rem",
       opacity: 0,
-      yPercent: window.innerWidth > 760 ? 200 : 30,
-      lineHeight: window.innerWidth > 767 ? "6.5rem" : "5.3rem",
+      yPercent: 200,
+      lineHeight: "6.5rem",
     });
     gsap
       .to(titleText.chars, {
@@ -53,7 +54,7 @@ const EmenuSection2 = () => {
           .to(".section-two-image", {
             scrollTrigger: {
               trigger: ".section-three",
-              start: "top 5%",
+              start: "top 20%",
               end: "+=1000px",
               scrub: true,
               // pin: true,
@@ -68,11 +69,11 @@ const EmenuSection2 = () => {
           })
           .then(() => {});
       });
-    gsap.to(".section-three-image", {
+    tl.to(".section-three-image", {
       scrollTrigger: {
         trigger: ".section-three",
-        start: "bottom 30%",
-        end: "+=1000px",
+        start: "bottom 60%",
+        end: "+=600px",
         scrub: true,
         // pin: true,
       },
@@ -84,6 +85,7 @@ const EmenuSection2 = () => {
       duration: 1,
       ease: "power4.out",
     });
+
     IO(dom).then(
       () => {
         // tl.to(titleText.chars, {
@@ -128,11 +130,11 @@ const EmenuSection2 = () => {
         </Ntext>
 
         <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
-          <img src={iPhone} width={347} height={682} />
+          <StaticImage src="../../../assets/images/jpegs/e-menu/phone1.png" width={347} height={682} />
         </div>
-        <div className="flex md:flex-row flex-col justify-between md:items-center section-three md:mt-[200px] slider-padding-left">
-          <div className="flex flex-col gap-[20px] -mt-10">
-            <Ntext variant="h1" color="c-0" className="max-w-[702px]">
+        <div className="flex md:flex-row flex-col justify-between items-center section-three md:mt-[200px] slider-padding-left">
+          <div className="flex flex-col gap-[20px] md:-mt-20 px-3 md:px-0">
+            <Ntext variant="h1" color="c-0" className="max-w-[672px]">
               All you need to elevate your business
             </Ntext>
             <Ntext variant="text5lite" color="c-0" className="max-w-[544px]">
@@ -149,8 +151,11 @@ const EmenuSection2 = () => {
             </div>
           </div>
 
-          <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image">
-            <img src={iPhoneWithHand} width={718} height={796} />
+          <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image md:hidden">
+            <StaticImage src="../../../assets/images/jpegs/e-menu/iPhone-with-hand2.png" width={336} height={464} />
+          </div>
+          <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image hidden md:block">
+            <StaticImage src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.png" width={718} height={796} />
           </div>
         </div>
       </section>
