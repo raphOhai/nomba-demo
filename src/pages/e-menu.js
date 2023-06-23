@@ -7,7 +7,7 @@ import { EmenuHero, EmenuSection2, EmenuSection4, EmenuSection5 } from "template
 import { faqData } from "config/invoice";
 import { eMenuTestimonial, businessTool, howItworks } from "config/e-menu";
 import { split } from "animations/text";
-const InvoicePage = () => {
+const EmenuPage = () => {
   useEffect(() => {
     split();
   });
@@ -19,7 +19,7 @@ const InvoicePage = () => {
         tools={businessTool}
         headingText="Fully integrated tool for smoothly running your restaurant business"
       />
-      {/* <EmenuSection5 cards={howItworks} /> */}
+      <EmenuSection5 cards={howItworks} />
       <TestimonialLight headingText={<>Why businesses are choosing Nomba</>} testimonials={eMenuTestimonial} />
       <CommonQuestions questions={faqData} />
 
@@ -29,4 +29,4 @@ const InvoicePage = () => {
   );
 };
 
-export default InvoicePage;
+export default EmenuPage;

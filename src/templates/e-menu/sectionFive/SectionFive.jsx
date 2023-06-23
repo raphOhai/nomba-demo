@@ -10,13 +10,12 @@ import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
-const EmenuSection5 = () => {
+const EmenuSection5 = ({ cards }) => {
   const { SIGNUP_URL } = constants;
   useEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-five");
     const titleText = new SplitType(".section-five-title", { type: "chars" });
-
     gsap.set(titleText.chars, {
       fontSize: "18rem",
       opacity: 0,
@@ -27,7 +26,7 @@ const EmenuSection5 = () => {
       .to(titleText.chars, {
         scrollTrigger: {
           trigger: ".section-five",
-          start: "top -15%",
+          start: "top top",
           end: "+=1000px",
           // scrub: true,
           pin: true,
@@ -73,15 +72,33 @@ const EmenuSection5 = () => {
   });
   return (
     <div>
-      <section class=" bg-n-yellow1 relative section-five">
+      <section class=" bg-n-yellow1 relative section-five h-[120vh]">
         <Ntext
           variant="text9"
           color="c-0"
           className="section-five-title whitespace-nowrap flex flex-row overflow-x-visible flex-nowrap"
         >
-          Everything you need to know
+          How it works
         </Ntext>
-
+        <div className="relative max-w-[550px] mx-auto flex flex-col items-center justify-center mt-10">
+          {cards.map((t, i) => (
+            <div
+              className={`flex flex-col gap-[50px] rounded-[10px] p-[30px] h-[438px] w-[438px] ${t.color} absolute top-0`}
+            >
+              <div className="rounded-full flex flex-col justify-center items-center font-semibold h-[71px] w-[71px] bg-c-0 text-[24px] text-white">
+                {t.id}
+              </div>
+              <div className="flex flex-col gap-3">
+                <Ntext variant="text6lite" color="c-0">
+                  {t.title}
+                </Ntext>
+                <Ntext variant="p24" color="c-0" className="!leading-[36px] ">
+                  {t.description}
+                </Ntext>
+              </div>
+            </div>
+          ))}
+        </div>
         {/* </Container> */}
       </section>
     </div>
