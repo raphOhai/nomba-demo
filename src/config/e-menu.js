@@ -81,3 +81,38 @@ export const businessTool = [
     color: "bg-[#EFD9F2]",
   },
 ];
+
+export const howItworks = [
+  {
+    title: "Create",
+    id: "01",
+    description: "Add your detailed menu list and create your QR code.",
+    color: "#FAC412",
+  },
+  {
+    id: "02",
+    title: "Receive Order",
+    description: "Place customers’ orders on your Nomba POS and automatically send to the kitchen in just one click.",
+    color: "#EFD9F2",
+  },
+  {
+    id: "03",
+    title: "Accept payment",
+    description: "With your Nomba POS, you can receive payment from your customers.",
+    color: "#FCDCCF",
+  },
+  {
+    id: "04",
+    title: "Reconcile",
+    description:
+      "Save time by getting instant reconciliation of all payments, on one device, at the end of every business day.",
+    color: "#D9F2F2",
+  },
+  {
+    id: "05",
+    title: "Generate",
+    description:
+      "Add a product and customer information to create an invoice. Manually set a tax rate or automatically collect sales taxes. Customise your invoice to.",
+    color: "#F7E189",
+  },
+];
