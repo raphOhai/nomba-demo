@@ -1,69 +1,89 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { Container, Ntext, Button, SectionHeader, ReadMore } from "components";
 import constants from "config/constants.json";
 
-gsap.registerPlugin([ScrollTrigger]);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const EmenuSection4 = ({ headingText, tools }) => {
   const { SIGNUP_URL } = constants;
-  const [active, setActive] = useState(0);
 
-  function setActiveState(n) {
-    setActive(n);
-  }
-  useEffect(() => {
+  const comp = useRef(); // create a ref for the root level element (for scoping)
+  const circle = useRef();
+
+  useLayoutEffect(() => {
     const dom = document.querySelector(".section-four");
-
-    const container = gsap.utils.toArray(".section-four-rect-card");
-    const height = container[0].offsetHeight;
-    ScrollTrigger.create({
-      trigger: dom,
-      start: "center center",
-      end: `${dom.offsetHeight} ${height}`,
-      pin: true,
-    });
-    const tl = gsap.timeline();
-    container.forEach((element, i) => {
-      if (i !== 0) {
-        gsap.set(element, { position: "absolute", yPercent: 100 * i, opacity: 0 });
-      } else {
-        gsap.set(element, { position: "absolute", yPercent: 0 });
-      }
-      tl.to(element, {
-        yPercent: 2 * i,
-        stagger: 0.5,
-        opacity: 1,
+    // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
+    let ctx = gsap.context(() => {
+      let tl1 = gsap.timeline({
         scrollTrigger: {
-          trigger: element,
-          start: "top top",
-          scrub: true,
+          trigger: comp.current,
+          pin: true,
+          markers: { fontSize: "18px" },
+          start: "top -10%", // when the top of the trigger hits the top of the viewport
+          end: "+=3000px", // end after scrolling 1000px beyond the start
+          scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         },
-        onComplete: function () {
-          // setActiveState(i);
-          console.log(i);
-        },
-      }).then(function () {
-        // setActiveState(i);
-        console.log(i);
       });
-      if (i > 0) {
-        tl.to(container[i - 1], {
-          scrollTrigger: {
-            trigger: element,
-            start: "top top",
-            scrub: true,
-          },
-          scaleX: 0.75 + (i - 1) * 0.1,
-          height: height - 150,
+      tools.forEach((card, i) => {
+        if (i === 0) {
+          tl1.addLabel(`card${i}`);
+          tl1.to(`.section-four-rect-card-${i}`, {
+            yPercent: 0,
+            opacity: 1,
+          });
+        } else {
+          tl1.from(`.section-four-rect-card-${i}`, {
+            yPercent: 75,
+            opacity: 0,
+          });
+          tl1.addLabel(`card${i}`);
+          // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
+          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+          tl1.to(
+            `.section-four-rect-card-${i - 1}`,
+            {
+              scale: 0.9 + (i - 1) * 0.03,
+              yPercent: -(8 - (i - 1) * 4),
+              opacity: 0.7,
+            },
+            "-=0.5"
+          );
+
+          tl1.to(`.section-four-rect-card-${i}`, {
+            yPercent: 0,
+            opacity: 1,
+          });
+        }
+      });
+
+      gsap.utils.toArray(".section-nav-link a").forEach((a, i) => {
+        a.addEventListener("click", e => {
+          e.preventDefault();
+          console.log(tl1.scrollTrigger.direction);
+          console.log(i);
+          let pad = i === 0 ? 0 : tl1.scrollTrigger.direction > 0 ? 2 : -2;
+          gsap.to(window, { scrollTo: labelToScroll(tl1, "card" + i) + 2 });
         });
+      });
+      function labelToScroll(timeline, label) {
+        let st = timeline.scrollTrigger,
+          progress = timeline.labels[label] / timeline.duration();
+        return st.start + (st.end - st.start) * progress;
       }
-    });
-  });
+      let circles = gsap.utils.toArray(".section-nav-link .circle");
+      function setActiveNav(index) {
+        circles.forEach((circle, i) => circle.classList[i === index ? "add" : "remove"]("border"));
+      }
+    }, comp); // <- IMPORTANT! Scopes selector text
+
+    return () => ctx.revert(); // cleanup
+  }, []); // <- empty dependency Array so it doesn't re-run on every render
   return (
-    <section class=" bg-n-light relative section-four pb-20">
+    <section class=" bg-n-light relative h-[120vh] section-four " ref={comp}>
       <Container className="">
         <SectionHeader>
           <div className="flex flex-row justify-center max-w-[753px] mx-auto pt-10">
@@ -72,9 +92,13 @@ const EmenuSection4 = ({ headingText, tools }) => {
             </Ntext>
           </div>
         </SectionHeader>
-        <div className="text-center pb-10">
+        <div className="text-center pb-10 section-nav-link flex-row flex justify-center">
           {tools.map((t, i) => (
-            <div className={`px-5 py-2 inline-flex rounded-full section-four-title-${i}`}>{t.title}</div>
+            <div
+              className={`cursor-pointer transition-all px-5 py-2 inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
+            >
+              <a href={`#card-${i}`}>{t.title}</a>
+            </div>
           ))}
         </div>
         <div className="relative section-four-rect">

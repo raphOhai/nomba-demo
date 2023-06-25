@@ -1,9 +1,9 @@
 .section-four {
-  padding-bottom: 200px;
+  // padding-bottom: 200px;
   &-rect {
-    padding-bottom: 600px;
+    // padding-bottom: 600px;
     &-card {
-      position: relative;
+      position: absolute;
       --spacing: 4rem;
 
       &:nth-child(2) {
@@ -13,7 +13,7 @@
         top: calc(var(--spacing) * 0.6);
       }
       &:nth-child(4) {
-        top: calc(var(--spacing) * 0.9);
+        top: calc(var(--spacing) * 1.2);
       }
       // &:nth-child(5) {
       //   top: calc(var(--spacing) * 5);

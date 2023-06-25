@@ -1,4 +1,4 @@
-import React, { useEffect, createRef } from "react";
+import React, { useLayoutEffect, createRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
@@ -16,7 +16,7 @@ import { IO } from "src/animations/observe";
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection2 = () => {
   const { SIGNUP_URL } = constants;
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-two");
     const titleText = new SplitType(".section-two-title", { type: "chars" });

@@ -12,7 +12,7 @@ const EmenuPage = () => {
     split();
   });
   return (
-    <Layout title="Invoice" useStickyNav={false}>
+    <Layout title="E-menu" useStickyNav={false}>
       <EmenuHero />
       <EmenuSection2 />
       <EmenuSection4
