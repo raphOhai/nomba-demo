@@ -22,7 +22,6 @@ const EmenuSection4 = ({ headingText, tools }) => {
         scrollTrigger: {
           trigger: comp.current,
           pin: true,
-          markers: { fontSize: "18px" },
           start: "top -10%", // when the top of the trigger hits the top of the viewport
           end: "+=3000px", // end after scrolling 1000px beyond the start
           scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar

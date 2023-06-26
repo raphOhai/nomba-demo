@@ -73,7 +73,6 @@ const EmenuSection5 = ({ cards }) => {
           opacity: 0,
           scrollTrigger: {
             pin: ".section-five",
-            markers: true,
             scrub: true,
             start: "top top",
             end: "+=3000",

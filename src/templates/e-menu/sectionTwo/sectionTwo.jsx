@@ -6,9 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
-import iPhone from "jpegs/e-menu/phone1.png";
-import iPhoneWithHand from "jpegs/e-menu/iPhone-with-hand.png";
-import iPhoneWithHandMobie from "jpegs/e-menu/iPhone-with-hand2.png";
 
 import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
