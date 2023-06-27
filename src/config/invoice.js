@@ -218,7 +218,7 @@ export const invoiceTestimonial = [
   {
     testimonial:
       "Nomba's invoicing system has made it possible for me to collect and reconcile payments from my retailers. I can easily share and set reminders which makes it easy for them to remember.",
-    name: "Adeuche",
+    name: "Mrs Unekwu",
     role: "Co-founder & CEO Randle Inc",
     image: (
       <StaticImage
