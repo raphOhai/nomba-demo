@@ -4,7 +4,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ctl from "@netlify/classnames-template-literals";
 import { howItWorks } from "config/invoice";
-import { HowItWorksSlider } from "./slider-how-it-works";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +19,7 @@ const HowInvoicingWorks = ({ title }) => {
           if (i !== 0) {
             gsap.set(panel, {
               opacity: 0,
+              yPercent: 20,
             });
             gsap.set(titles[i], {
               opacity: 1,
@@ -31,7 +31,7 @@ const HowInvoicingWorks = ({ title }) => {
 
           ScrollTrigger.create({
             trigger: panel,
-            start: () => (panel.offsetHeight < window.innerHeight ? "top 18%" : "bottom bottom"), // if it's shorter than the viewport, we prefer to pin it at the top
+            start: () => (panel.offsetHeight < window.innerHeight ? "top 33%" : "bottom bottom"), // if it's shorter than the viewport, we prefer to pin it at the top
             pin: true,
             pinSpacing: false,
             onToggle: self => self.isActive && setSection(panel, i),
@@ -46,6 +46,17 @@ const HowInvoicingWorks = ({ title }) => {
             currentSection = newSection;
           }
         }
+        console.log(panels[0].offsetHeight * panels.length);
+        gsap.to(".header-text", {
+          scrollTrigger: {
+            trigger: ".header-text",
+            pin: true,
+            start: "top top",
+            pinSpacing: false,
+            end: `+=${panels[0].offsetHeight * panels.length + 200}px`,
+            // end: "+=4000px",
+          },
+        });
       } else {
         panels.forEach(item => {
           gsap.set(item, {
@@ -70,15 +81,15 @@ const HowInvoicingWorks = ({ title }) => {
   });
 
   return (
-    <section className="feature-section2 pb-[100px] md:pb-[150px] bg-primary" id="business-types">
+    <section className="invoice-section3 md:pb-[150px] bg-c-0" id="business-types">
       <Container>
-        <SectionHeader className="md:max-w-[671px] md:mx-auto  md:text-center md:mb-[-150px] ">
+        <SectionHeader className="md:max-w-[671px] md:mx-auto header-text md:text-center md:mb-[80px] ">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>
         </SectionHeader>
-        {howItWorks.map(h => (
-          <div key={h.id} className={cardWrapStyle}>
+        {howItWorks.map((h, i) => (
+          <div key={h.id} className={`${cardWrapStyle} ${i === howItWorks.length - 1 ? "how-it-works-last" : ""}`}>
             <div className="md:basis-1/2 how-it-works-image">
               <div>{h.image}</div>
             </div>
@@ -103,7 +114,6 @@ const HowInvoicingWorks = ({ title }) => {
             </div>
           </div>
         ))}
-        <HowItWorksSlider />
       </Container>
     </section>
   );
@@ -116,7 +126,8 @@ flex-col
 md:gap-[100px]
 gap-[50px]
 pb-20
-md:h-[100vh]
+md:h-[70vh]
+md:items-center
 items-end
 how-it-works-container
 `);

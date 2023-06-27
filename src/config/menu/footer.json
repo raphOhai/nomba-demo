@@ -11,6 +11,10 @@
     {
       "title": "POS Terminals",
       "link": { "to": "/products/pos-terminals" }
+    },
+    {
+      "title": "Invoice",
+      "link": { "to": "/invoice" }
     }
   ],
   "Nomba": [

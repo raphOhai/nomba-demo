@@ -27,6 +27,10 @@ const headerMenu = {
           title: "POS Terminals",
           to: "/products/pos-terminals",
         },
+        {
+          title: "Invoicing",
+          to: "/invoice",
+        },
       ],
     },
     {

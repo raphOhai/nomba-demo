@@ -21,7 +21,7 @@ const HomepageTipsAndUpdate = () => {
 };
 
 const tipsAndNewsUpdateWrapStyle = ctl(`
-  bg-primary-200 
+  bg-primary-200 pb-20
 `);
 
 export { HomepageTipsAndUpdate };

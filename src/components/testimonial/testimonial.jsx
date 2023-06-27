@@ -10,7 +10,7 @@ import { TestimonialCard } from "components/card";
 import { SectionHeader, Container } from "components";
 import { Ntext } from "components/ntext";
 
-const Testimonial = ({ testimonials, headingText }) => {
+const Testimonial = ({ testimonials, headingText, className }) => {
   const testimonialList = testimonials.map(item => (
     <SwiperSlide key={item.name}>
       <TestimonialCard {...item} />
@@ -27,7 +27,7 @@ const Testimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <div className="pb-10 bg-primary">
+    <div className={`pb-10 ${className}`}>
       <Container>
         <SectionHeader className="!text-left">
           <Ntext variant="h2" color="primary-100" value={headingText} className={headingTextStyle} />
@@ -52,9 +52,13 @@ const headingTextStyle = ctl(`
   mb-[62px]
 `);
 
+Testimonial.defaultProps = {
+  className: "bg-primary",
+};
 Testimonial.propTypes = {
   testimonials: PropTypes.object,
   headingText: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export { Testimonial };
