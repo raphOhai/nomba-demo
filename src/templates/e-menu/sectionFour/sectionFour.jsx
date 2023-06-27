@@ -1,115 +1,88 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { Container, Ntext, Button, SectionHeader, ReadMore } from "components";
 import constants from "config/constants.json";
-import iPhoneWithHand from "jpegs/e-menu/section4/page1.png";
-import heroVideo from "jpegs/e-menu/hero/hero.mp4";
-import { StaticImage } from "gatsby-plugin-image";
-import { IO } from "src/animations/observe";
 
-gsap.registerPlugin([ScrollTrigger]);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const EmenuSection4 = ({ headingText, tools }) => {
   const { SIGNUP_URL } = constants;
-  const [active, setActive] = useState(0);
-  useEffect(() => {
+
+  const comp = useRef(); // create a ref for the root level element (for scoping)
+  const circle = useRef();
+
+  useLayoutEffect(() => {
     const dom = document.querySelector(".section-four");
-    // const titleText = new SplitType(".section-two-title", { type: "chars" });
-    // gsap.set("setion-two-image", {
-    //   opacity: 0.5,
-    //   yPercent: -100,
-    // });
-    // gsap.set(titleText.chars, {
-    //   fontSize: window.innerWidth > 767 ? "18rem" : "5rem",
-    //   opacity: 0,
-    //   yPercent: window.innerWidth > 760 ? 200 : 30,
-    //   lineHeight: window.innerWidth > 767 ? "6.5rem" : "5.3rem",
-    // });
-    // gsap.to(titleText.chars, {
-    //   scrollTrigger: {
-    //     trigger: ".section-two",
-    //     start: "top top",
-    //     end: "+=1000px",
-    //     // scrub: true,
-    //     pin: true,
-    //   },
-    //   yPercent: window.innerWidth > 760 ? 400 : 20,
-    //   opacity: 1,
-    //   stagger: 0.05,
-    //   duration: 0.8,
-    //   ease: "power4.out",
-    // });
-    // IO(dom).then(
-    //   () => {
-
-    //   },
-    //   { threshold: 1 }
-    // );
-    const container = gsap.utils.toArray(".section-four-rect-card");
-    ScrollTrigger.create({
-      trigger: dom,
-      start: "center center",
-      end: `${dom.offsetHeight} ${container[0].offsetHeight}`,
-      pin: true,
-    });
-    const tl = gsap.timeline();
-    container.forEach((element, i) => {
-      if (i !== 0) {
-        gsap.set(element, { position: "absolute", yPercent: 100 * i, opacity: 0 });
-      } else {
-        gsap.set(element, { position: "absolute", yPercent: 0 });
-      }
-      tl.to(element, {
-        yPercent: 4 * i,
-        stagger: 0.5,
-        opacity: 1,
+    // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
+    let ctx = gsap.context(() => {
+      let tl1 = gsap.timeline({
         scrollTrigger: {
-          trigger: element,
-          markers: true,
-          start: "top top",
-          scrub: true,
-          onScrubComplete() {
-            console.log(i);
-          },
+          trigger: comp.current,
+          pin: true,
+          start: "top -10%", // when the top of the trigger hits the top of the viewport
+          end: "+=3000px", // end after scrolling 1000px beyond the start
+          scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         },
-      }).then(function () {});
-      if (i > 0) {
-        tl.to(container[i - 1], {
-          scrollTrigger: {
-            trigger: element,
-            markers: true,
-            start: "top top",
-            scrub: true,
-          },
-          scale: 0.7 + (i - 1) * 0.1,
-          // yPercent: 20 * i
-        });
-      }
-    });
-    // gsap.to(container, {
-    //   yPercent: 0,
-    //   stagger: 0.5,
-    //   opacity: 1,
-    //   scrollTrigger: {
-    //     trigger: dom,
-    //     markers: true,
-    //     start: "top top",
-    //     //   end: "+=6000px",
-    //     pin: true,
+      });
+      tools.forEach((card, i) => {
+        if (i === 0) {
+          tl1.addLabel(`card${i}`);
+          tl1.to(`.section-four-rect-card-${i}`, {
+            yPercent: 0,
+            opacity: 1,
+          });
+        } else {
+          tl1.from(`.section-four-rect-card-${i}`, {
+            yPercent: 75,
+            opacity: 0,
+          });
+          tl1.addLabel(`card${i}`);
+          // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
+          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+          tl1.to(
+            `.section-four-rect-card-${i - 1}`,
+            {
+              scale: 0.9 + (i - 1) * 0.03,
+              yPercent: -(8 - (i - 1) * 4),
+              opacity: 0.7,
+            },
+            "-=0.5"
+          );
 
-    //     scrub: true,
-    //   },
-    // });
-    //   } else {
-    //     gsap.set(element, { position: "absolute", yPercent: 0 });
-    //   }
-    // });
-  }, [active]);
+          tl1.to(`.section-four-rect-card-${i}`, {
+            yPercent: 0,
+            opacity: 1,
+          });
+        }
+      });
+
+      gsap.utils.toArray(".section-nav-link a").forEach((a, i) => {
+        a.addEventListener("click", e => {
+          e.preventDefault();
+          console.log(tl1.scrollTrigger.direction);
+          console.log(i);
+          let pad = i === 0 ? 0 : tl1.scrollTrigger.direction > 0 ? 2 : -2;
+          gsap.to(window, { scrollTo: labelToScroll(tl1, "card" + i) + 2 });
+        });
+      });
+      function labelToScroll(timeline, label) {
+        let st = timeline.scrollTrigger,
+          progress = timeline.labels[label] / timeline.duration();
+        return st.start + (st.end - st.start) * progress;
+      }
+      let circles = gsap.utils.toArray(".section-nav-link .circle");
+      function setActiveNav(index) {
+        circles.forEach((circle, i) => circle.classList[i === index ? "add" : "remove"]("border"));
+      }
+    }, comp); // <- IMPORTANT! Scopes selector text
+
+    return () => ctx.revert(); // cleanup
+  }, []); // <- empty dependency Array so it doesn't re-run on every render
   return (
-    <section class=" bg-n-light relative section-four pb-20">
+    <section class=" bg-n-light relative h-[120vh] section-four " ref={comp}>
       <Container className="">
         <SectionHeader>
           <div className="flex flex-row justify-center max-w-[753px] mx-auto pt-10">
@@ -118,14 +91,21 @@ const EmenuSection4 = ({ headingText, tools }) => {
             </Ntext>
           </div>
         </SectionHeader>
-        <div className="text-center pb-10">
+        <div className="text-center pb-10 section-nav-link flex-row flex justify-center">
           {tools.map((t, i) => (
-            <div className={`px-5 py-2 inline-flex rounded-full border border-black`}>{t.title}</div>
+            <div
+              className={`cursor-pointer transition-all px-5 py-2 inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
+            >
+              <a href={`#card-${i}`}>{t.title}</a>
+            </div>
           ))}
         </div>
         <div className="relative section-four-rect">
           {tools.map((t, i) => (
-            <div class={`w-full ${t.color} rounded-[20px] section-four-rect-card section-four-rect-card-${i}`} key={i}>
+            <div
+              class={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
+              key={i}
+            >
               <div className="flex md:flex-row flex-col justify-between items-center">
                 <div className="flex flex-col gap-[10px] p-10 md:pt-0 md:pl-[60px]">
                   <Ntext variant="text7" color="c-0" className="max-w-[410px]">
@@ -144,7 +124,11 @@ const EmenuSection4 = ({ headingText, tools }) => {
                     />
                   </div>
                 </div>
-                <div class="md:min-h-[490px] flex flex-col justify-end mt-[20px] ">{t.image}</div>
+                <div
+                  className={`md:min-h-[300px] flex flex-col justify-end mt-[20px] section-four-rect-card-image-${i}`}
+                >
+                  {t.image}
+                </div>
               </div>
             </div>
           ))}

@@ -1,4 +1,4 @@
-import React, { useEffect, createRef } from "react";
+import React, { useLayoutEffect, createRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
@@ -6,9 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
-import iPhone from "jpegs/e-menu/phone1.png";
-import iPhoneWithHand from "jpegs/e-menu/iPhone-with-hand.png";
-import iPhoneWithHandMobie from "jpegs/e-menu/iPhone-with-hand2.png";
 
 import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
@@ -16,7 +13,7 @@ import { IO } from "src/animations/observe";
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection2 = () => {
   const { SIGNUP_URL } = constants;
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-two");
     const titleText = new SplitType(".section-two-title", { type: "chars" });
