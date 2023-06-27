@@ -126,7 +126,11 @@ const EmenuSection2 = () => {
           color="c-0"
           className="section-two-title whitespace-nowrap flex flex-row overflow-x-visible flex-nowrap"
         >
-          Everything you need to know
+          Everything <span> &nbsp; </span>
+          <span> &nbsp; </span> you <span> &nbsp; </span>
+          <span> &nbsp; </span> need<span> &nbsp; </span>
+          <span> &nbsp; </span> to<span> &nbsp; </span>
+          <span> &nbsp; </span> know
         </Ntext>
 
         <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
