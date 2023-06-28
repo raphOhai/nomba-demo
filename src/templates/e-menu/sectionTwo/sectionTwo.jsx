@@ -39,6 +39,7 @@ const EmenuSection2 = () => {
           end: "+=1000px",
           // scrub: true,
           pin: true,
+          invalidateOnRefresh: true,
         },
         yPercent: window.innerWidth > 760 ? 400 : 20,
         opacity: 1,
@@ -72,6 +73,7 @@ const EmenuSection2 = () => {
         start: "bottom 60%",
         end: "+=600px",
         scrub: true,
+        invalidateOnRefresh: true,
         // pin: true,
       },
       yPercent: 0,
@@ -110,14 +112,14 @@ const EmenuSection2 = () => {
           skewX: 0,
           ease: "easeOut",
         }).delay(2.5);
-        tl.to(text, { duration: 5, x: -text.offsetWidth, ease: "none", repeat: -1 });
+        tl.to(text, { duration: 10, x: -text.offsetWidth, ease: "none", repeat: -1 });
       },
       { threshold: 1 }
     );
   });
   return (
-    <div>
-      <section class=" bg-n-yellow1 relative section-two">
+    <div className=" bg-n-yellow1 relative">
+      <div class=" section-two">
         <Ntext
           variant="text9"
           color="c-0"
@@ -127,7 +129,8 @@ const EmenuSection2 = () => {
           <span> &nbsp; </span> you <span> &nbsp; </span>
           <span> &nbsp; </span> need<span> &nbsp; </span>
           <span> &nbsp; </span> to<span> &nbsp; </span>
-          <span> &nbsp; </span> know
+          <span> &nbsp; </span> know <span> &nbsp; </span>
+          <span> &nbsp; </span>
         </Ntext>
 
         <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
@@ -159,7 +162,7 @@ const EmenuSection2 = () => {
             <StaticImage src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.png" width={718} height={796} />
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

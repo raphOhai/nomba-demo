@@ -20,10 +20,11 @@ const EmenuSection4 = ({ headingText, tools }) => {
     let ctx = gsap.context(() => {
       let tl1 = gsap.timeline({
         scrollTrigger: {
+          invalidateOnRefresh: true,
           trigger: comp.current,
           pin: true,
-          start: "top -10%", // when the top of the trigger hits the top of the viewport
-          end: "+=3000px", // end after scrolling 1000px beyond the start
+          start: "top 5%", // when the top of the trigger hits the top of the viewport
+          end: "+=3500px", // end after scrolling 1000px beyond the start
           scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         },
       });
@@ -82,7 +83,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
     return () => ctx.revert(); // cleanup
   }, []); // <- empty dependency Array so it doesn't re-run on every render
   return (
-    <section class=" bg-n-light relative h-[120vh] section-four " ref={comp}>
+    <div class=" bg-n-light relative section-four">
       <Container className="">
         <SectionHeader>
           <div className="flex flex-row justify-center max-w-[753px] mx-auto pt-10">
@@ -91,50 +92,52 @@ const EmenuSection4 = ({ headingText, tools }) => {
             </Ntext>
           </div>
         </SectionHeader>
-        <div className="text-center pb-10 section-nav-link flex-row flex justify-center">
-          {tools.map((t, i) => (
-            <div
-              className={`cursor-pointer transition-all px-5 py-2 inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
-            >
-              <a href={`#card-${i}`}>{t.title}</a>
-            </div>
-          ))}
-        </div>
-        <div className="relative section-four-rect">
-          {tools.map((t, i) => (
-            <div
-              class={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
-              key={i}
-            >
-              <div className="flex md:flex-row flex-col justify-between items-center">
-                <div className="flex flex-col gap-[10px] p-10 md:pt-0 md:pl-[60px]">
-                  <Ntext variant="text7" color="c-0" className="max-w-[410px]">
-                    {t.heading}
-                  </Ntext>
-                  <Ntext variant="text3" color="c-0" className="max-w-[353px]">
-                    {t.description}
-                  </Ntext>
+        <div ref={comp} className=" min-h-[120vh]">
+          <div className="text-center pb-10 section-nav-link flex-row flex justify-center">
+            {tools.map((t, i) => (
+              <div
+                className={`cursor-pointer transition-all px-5 py-2 inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
+              >
+                <a href={`#card-${i}`}>{t.title}</a>
+              </div>
+            ))}
+          </div>
+          <div className="relative section-four-rect mb-36">
+            {tools.map((t, i) => (
+              <div
+                class={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
+                key={i}
+              >
+                <div className="flex md:flex-row flex-col justify-between items-center">
+                  <div className="flex flex-col gap-[10px] p-10 md:pt-0 md:pl-[60px]">
+                    <Ntext variant="text7" color="c-0" className="max-w-[410px]">
+                      {t.heading}
+                    </Ntext>
+                    <Ntext variant="text3" color="c-0" className="max-w-[353px]">
+                      {t.description}
+                    </Ntext>
 
-                  <div className="md:mt-10 mt-5">
-                    <ReadMore
-                      className="!font-medium !text-[16px] !text-primary"
-                      text="Get Started on menu"
-                      color="primary"
-                      href={{ url: SIGNUP_URL }}
-                    />
+                    <div className="md:mt-10 mt-5">
+                      <ReadMore
+                        className="!font-medium !text-[16px] !text-primary"
+                        text="Get Started on menu"
+                        color="primary"
+                        href={{ url: SIGNUP_URL }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={`md:min-h-[300px] flex flex-col justify-end mt-[20px] section-four-rect-card-image-${i}`}
+                  >
+                    {t.image}
                   </div>
                 </div>
-                <div
-                  className={`md:min-h-[300px] flex flex-col justify-end mt-[20px] section-four-rect-card-image-${i}`}
-                >
-                  {t.image}
-                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
-    </section>
+    </div>
   );
 };
 const heroButtonsContainer = ctl(`
