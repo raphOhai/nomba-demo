@@ -24,7 +24,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
           trigger: comp.current,
           pin: true,
           start: "top 5%", // when the top of the trigger hits the top of the viewport
-          end: "+=3500px", // end after scrolling 1000px beyond the start
+          end: "+=4000px", // end after scrolling 1000px beyond the start
           scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         },
       });
@@ -37,8 +37,8 @@ const EmenuSection4 = ({ headingText, tools }) => {
           });
         } else {
           tl1.from(`.section-four-rect-card-${i}`, {
-            yPercent: 75,
-            opacity: 0,
+            yPercent: 200,
+            opacity: 1,
           });
           tl1.addLabel(`card${i}`);
           // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
@@ -48,7 +48,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
             {
               scale: 0.9 + (i - 1) * 0.03,
               yPercent: -(8 - (i - 1) * 4),
-              opacity: 0.7,
+              opacity: 1,
             },
             "-=0.5"
           );
