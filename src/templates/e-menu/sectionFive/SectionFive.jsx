@@ -102,7 +102,7 @@ const EmenuSection5 = ({ cards }) => {
             How <span> &nbsp; </span>
             <span> &nbsp; </span> it <span> &nbsp; </span>
             <span> &nbsp; </span> works <span> &nbsp; </span>
-            <span> &nbsp; </span> -
+            <span> &nbsp; </span> • <span> &nbsp; </span> <span> &nbsp; </span>
           </Ntext>
           <div className="relative max-w-[550px] mx-auto flex flex-col items-center justify-center mt-10">
             {cards.map((t, i) => (

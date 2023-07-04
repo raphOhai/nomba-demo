@@ -55,6 +55,7 @@ const EmenuSection2 = () => {
               start: "top 20%",
               end: "+=1000px",
               scrub: true,
+              invalidateOnRefresh: true,
               // pin: true,
             },
             yPercent: 114,
@@ -70,7 +71,7 @@ const EmenuSection2 = () => {
     tl.to(".section-three-image", {
       scrollTrigger: {
         trigger: ".section-three",
-        start: "bottom 60%",
+        start: "bottom 120%",
         end: "+=600px",
         scrub: true,
         invalidateOnRefresh: true,
