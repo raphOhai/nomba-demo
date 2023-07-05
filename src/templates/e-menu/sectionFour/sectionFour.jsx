@@ -96,7 +96,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
           <div className="text-center pb-10 section-nav-link flex-row flex justify-center">
             {tools.map((t, i) => (
               <div
-                className={`cursor-pointer transition-all px-5 py-2 inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
+                className={`cursor-pointer transition-all px-5 py-2 border-black inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
               >
                 <a href={`#card-${i}`}>{t.title}</a>
               </div>
