@@ -7,6 +7,9 @@ import { EmenuHero, EmenuSection2, EmenuSection4, EmenuSection5, EmenuTestimonia
 import { faqData } from "config/invoice";
 import { eMenuTestimonial, businessTool, howItworks } from "config/e-menu";
 import { split } from "animations/text";
+import scroll from "../animations/scroll";
+import "../style/lenis/lenis.scss";
+scroll();
 const EmenuPage = () => {
   useEffect(() => {
     split();
