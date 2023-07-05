@@ -8,9 +8,9 @@ import { split } from "animations/text";
 import { InvoiceBusinessTools, faqData, invoiceTestimonial } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
 import { everyBusinesses } from "config/invoice";
-import scroll from "../animations/scroll";
-import "../style/lenis/lenis.scss";
-scroll();
+// import scroll from "../animations/scroll";
+// import "../style/lenis/lenis.scss";
+// scroll();
 const InvoicePage = () => {
   useEffect(() => {
     split();

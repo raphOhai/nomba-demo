@@ -16,7 +16,7 @@ const EmenuHero = () => {
     <section class="bg-black min-h-[100vh]">
       <Container className="mt-8 md:mt-10">
         <div class="relative w-full min-h-[600px]">
-          <div className="absolute lg:left-[13.5rem] top-[-4rem] md:top-[-8rem] max-w-[336px] md:max-w-[23rem]">
+          <div className="absolute lg:left-[13.5rem] top-[-5rem] md:top-[-8rem] max-w-[336px] md:max-w-[23rem]">
             <Ntext variant="h1" color="primary-100" className=" md:leading-[63px]" data-animation="ltr">
               Power your Restaurant
             </Ntext>
