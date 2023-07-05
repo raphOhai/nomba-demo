@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, createRef } from "react";
+import React, { useLayoutEffect, useEffect, createRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
 import constants from "config/constants.json";
+import Lottie from "lottie-web";
+import animation from "./animations/section2.json";
 
 import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
@@ -13,6 +15,15 @@ import { IO } from "src/animations/observe";
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection2 = () => {
   const { SIGNUP_URL } = constants;
+  let animationContainer = createRef();
+  useEffect(() => {
+    const instance = Lottie.loadAnimation({
+      container: animationContainer.current,
+      animationData: animation,
+    });
+    // Return clean up function here
+    return () => instance.destroy();
+  }, [animationContainer]);
   useLayoutEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-two");
@@ -135,7 +146,7 @@ const EmenuSection2 = () => {
         </Ntext>
 
         <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
-          <StaticImage src="../../../assets/images/jpegs/e-menu/phone1.png" width={347} height={682} />
+          <div ref={animationContainer} className="max-h-[682px] max-w-[547px]"></div>
         </div>
         <div className="flex md:flex-row flex-col justify-between items-center section-three md:mt-[200px] slider-padding-left">
           <div className="flex flex-col gap-[20px] md:-mt-20 px-3 md:px-0">
