@@ -7,7 +7,7 @@ const GetStarted = ({ title }) => {
   return (
     <section className=" py-[100px] bg-primary-200">
       <Container>
-        <SectionHeader className=" md:mx-auto header-text-every-businesses md:text-center">
+        <SectionHeader className=" md:mx-auto md:text-center">
           <Ntext variant="h2" className="text-center" color="c-0" data-animation="h">
             {title}
           </Ntext>

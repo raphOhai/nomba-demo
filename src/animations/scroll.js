@@ -1,3 +1,4 @@
+"use client";
 import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { gsap } from "gsap";

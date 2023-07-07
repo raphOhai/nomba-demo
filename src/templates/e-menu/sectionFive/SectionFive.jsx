@@ -107,6 +107,7 @@ const EmenuSection5 = ({ cards }) => {
           <div className="relative max-w-[550px] mx-auto flex flex-col items-center justify-center mt-10">
             {cards.reverse().map((t, i) => (
               <div
+                key={i}
                 className={`flex flex-col md:gap-[50px] gap-[30px] rounded-[10px] p-[20px] md:p-[30px] h-[360px] md:h-[438px] w-[360px] md:w-[438px] ${t.color} top-0 section-five-card`}
               >
                 <div className="rounded-full flex flex-col justify-center items-center font-semibold h-[71px] w-[71px] bg-c-0 text-[24px] text-white">

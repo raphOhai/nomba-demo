@@ -168,10 +168,20 @@ const EmenuSection2 = () => {
           </div>
 
           <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image md:hidden">
-            <StaticImage src="../../../assets/images/jpegs/e-menu/iPhone-with-hand2.png" width={336} height={464} />
+            <StaticImage
+              alt="Iphone with hand"
+              src="../../../assets/images/jpegs/e-menu/iPhone-with-hand2.png"
+              width={336}
+              height={464}
+            />
           </div>
           <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image hidden md:block">
-            <StaticImage src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.png" width={718} height={796} />
+            <StaticImage
+              alt="iphone in hand"
+              src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.png"
+              width={718}
+              height={796}
+            />
           </div>
         </div>
       </div>

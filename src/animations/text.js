@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { IO } from "./observe";
-gsap.registerPlugin(ScrollTrigger);
 
 export const split = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const f = document.querySelectorAll("[data-animation='h']");
   const g = document.querySelectorAll("[data-animation='v']");
   const j = document.querySelectorAll("[data-animation='j']");

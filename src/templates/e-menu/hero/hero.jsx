@@ -13,9 +13,9 @@ const EmenuHero = () => {
   });
 
   return (
-    <section class="bg-black min-h-[100vh]">
+    <section className="bg-black min-h-[100vh]">
       <Container className="mt-8 md:mt-10">
-        <div class="relative w-full min-h-[600px]">
+        <div className="relative w-full min-h-[600px]">
           <div className="absolute lg:left-[13.5rem] top-[-5rem] md:top-[-8rem] max-w-[336px] md:max-w-[23rem]">
             <Ntext variant="h1" color="primary-100" className=" md:leading-[63px]" data-animation="ltr">
               Power your Restaurant
@@ -24,13 +24,13 @@ const EmenuHero = () => {
           <div className="flex flex-col justify-center items-center md:-ml-[2rem] mt-28 md:mt-52 ">
             <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={430} height={500}></video>
           </div>
-          <div class="absolute lg:right-[9rem] right-10 md:top-[68%] bottom-[-13%] max-w-[290px] md:max-w-[21rem]">
+          <div className="absolute lg:right-[9rem] right-10 md:top-[68%] bottom-[-13%] max-w-[290px] md:max-w-[21rem]">
             {" "}
             <Ntext variant="h1" className=" md:leading-[63px]" color="primary-100" data-animation="rtl">
               Scan. <br /> view. pay
             </Ntext>
           </div>
-          <div className={heroButtonsContainer} side>
+          <div className={heroButtonsContainer}>
             <div className="mx-auto w-[195px]">
               <Button
                 className="!font-medium !text-[16px]"
