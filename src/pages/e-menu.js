@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import Layout from "components/layout-max";
 import { GetStarted } from "components";
@@ -19,30 +19,44 @@ import {
 } from "templates/e-menu";
 
 import { eMenuTestimonial, businessTool, howItworks } from "config/e-menu";
+import { gsap } from "gsap";
 
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 const EmenuPage = () => {
+  const lenisRef = useRef();
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.raf(time * 1000);
+    }
+
+    gsap.ticker.add(update);
+
+    return () => {
+      gsap.ticker.remove(update);
+    };
+  });
   useEffect(() => {
     split();
   });
   return (
-    <Layout title="E-menu" useStickyNav={false}>
-      <EmenuHero />
-      <EmenuSection2 />
-      <EmenuSection4
-        tools={businessTool}
-        headingText="Fully integrated tool for smoothly running your restaurant business"
-      />
-      <EmenuSection5 cards={howItworks} />
-      <EmenuTestimonial headingText="Why businesses are choosing Nomba" testimonials={eMenuTestimonial} />
-      <CommonQuestions questions={faqData} />
+    <ReactLenis root ref={lenisRef} autoRaf={false}>
+      <Layout title="E-menu" useStickyNav={false}>
+        <EmenuHero />
+        <EmenuSection2 />
+        <EmenuSection4
+          tools={businessTool}
+          headingText="Fully integrated tool for smoothly running your restaurant business"
+        />
+        <EmenuSection5 cards={howItworks} />
+        <EmenuTestimonial headingText="Why businesses are choosing Nomba" testimonials={eMenuTestimonial} />
+        <CommonQuestions questions={faqData} />
 
-      <GetStarted title="Get started with E-menu today" />
+        <GetStarted title="Get started with E-menu today" />
 
-      {/* <InvoiceTools title="Nomba Invoice as a tool to upgrade your business. " invoiceTools={InvoiceBusinessTools} /> */}
-      {/* <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." /> */}
-      <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
-      <HomepageTipsAndUpdate />
-    </Layout>
+        <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
+        <HomepageTipsAndUpdate />
+      </Layout>
+    </ReactLenis>
   );
 };
 

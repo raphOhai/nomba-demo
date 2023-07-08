@@ -11,21 +11,19 @@ import Seo from "./seo";
 import { MainFooter } from "./footer";
 import { NavBar } from "./navbar";
 import { Subfooter } from "./subfooter";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+
 const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }) => {
   const noOfChildren = children.length;
   return (
     <>
-      <ReactLenis root>
-        <Seo title={title} ignoreSiteName={ignoreSiteName} />
-        <NavBar />
-        {/* All children except the last child */}
-        <main>{children.slice(0, noOfChildren - 1)}</main>
+      <Seo title={title} ignoreSiteName={ignoreSiteName} />
+      <NavBar />
+      {/* All children except the last child */}
+      <main>{children.slice(0, noOfChildren - 1)}</main>
 
-        {/*Show the last item in the subfooter */}
-        <Subfooter>{children[noOfChildren - 1]}</Subfooter>
-        <MainFooter defaultStyle={defaultStyle} />
-      </ReactLenis>
+      {/*Show the last item in the subfooter */}
+      <Subfooter>{children[noOfChildren - 1]}</Subfooter>
+      <MainFooter defaultStyle={defaultStyle} />
     </>
   );
 };
