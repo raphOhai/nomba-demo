@@ -13,25 +13,39 @@ const EmenuHero = () => {
   });
 
   return (
-    <section className="bg-black min-h-[100vh]">
+    <section className="bg-black min-h-[95vh]">
       <Container className="mt-8 md:mt-10">
-        <div className="relative w-full min-h-[600px]">
-          <div className="absolute lg:left-[13.5rem] top-[-5rem] md:top-[-8rem] max-w-[336px] md:max-w-[23rem]">
-            <Ntext variant="h1" color="primary-100" className=" md:leading-[63px]" data-animation="ltr">
-              Power your Restaurant
-            </Ntext>
-          </div>
-          <div className="flex flex-col justify-center items-center md:-ml-[2rem] mt-28 md:mt-52 ">
+        <div className=" w-full">
+          <div className="flex md:flex-row flex-col justify-center items-center md:-ml-[2rem] mt-10 ">
+            <div className="   max-w-[336px] md:max-w-[23rem]">
+              <Ntext
+                variant="h1"
+                color="primary-100"
+                className="text-center md:text-left md:leading-[63px]"
+                data-animation="ltr"
+              >
+                Power your Restaurant
+              </Ntext>
+            </div>
             <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={430} height={500}></video>
+            <div className=" mx-auto md:mx-0 max-w-[290px] md:max-w-[21rem]">
+              {" "}
+              <Ntext variant="h1" className="md:leading-[63px]" color="primary-100" data-animation="rtl">
+                Scan. <br /> view. pay
+              </Ntext>
+              <div className="absolute md:block pt-3 w-[195px] hidden">
+                <Button
+                  className="!font-medium !text-[16px]"
+                  text="Get Started"
+                  href={{ url: SIGNUP_URL }}
+                  withArrow={true}
+                />
+              </div>
+            </div>
           </div>
-          <div className="absolute lg:right-[9rem] right-10 md:top-[68%] bottom-[-13%] max-w-[290px] md:max-w-[21rem]">
-            {" "}
-            <Ntext variant="h1" className=" md:leading-[63px]" color="primary-100" data-animation="rtl">
-              Scan. <br /> view. pay
-            </Ntext>
-          </div>
+
           <div className={heroButtonsContainer}>
-            <div className="mx-auto w-[195px]">
+            <div className="mx-auto w-[195px] ">
               <Button
                 className="!font-medium !text-[16px]"
                 text="Get Started"
@@ -46,8 +60,8 @@ const EmenuHero = () => {
   );
 };
 const heroButtonsContainer = ctl(`
-absolute
-bottom-[-27%] md:bottom-[-10%] 
+mt-10
+block md:hidden
 w-full
 text-center
 `);

@@ -37,22 +37,22 @@ const EmenuSection2 = () => {
       opacity: 0,
     });
     gsap.set(titleText.chars, {
-      fontSize: "18rem",
+      fontSize: window.innerWidth < 760 ? "6.25rem" : "18rem",
       opacity: 0,
-      yPercent: 200,
-      lineHeight: "6.5rem",
+      yPercent: window.innerWidth < 760 ? 100 : 200,
+      lineHeight: window.innerWidth < 760 ? "7.5rem" : "6.5rem",
     });
     gsap
       .to(titleText.chars, {
         scrollTrigger: {
           trigger: ".section-two",
-          start: "top -15%",
+          start: window.innerWidth < 760 ? "top -5%" : "top -15%",
           end: "+=1000px",
           // scrub: true,
           pin: true,
           invalidateOnRefresh: true,
         },
-        yPercent: window.innerWidth > 760 ? 400 : 20,
+        yPercent: window.innerWidth > 760 ? 400 : 350,
         opacity: 1,
         stagger: 0.05,
         duration: 0.8,
@@ -70,7 +70,7 @@ const EmenuSection2 = () => {
               // pin: true,
             },
             yPercent: 114,
-            xPercent: 20,
+            xPercent: window.innerWidth < 760 ? -20 : 20,
             stagger: 0.05,
 
             opacity: 0,
@@ -128,7 +128,7 @@ const EmenuSection2 = () => {
       },
       { threshold: 1 }
     );
-  });
+  }, [window.innerWidth]);
   return (
     <div className=" bg-n-yellow1 relative">
       <div class=" section-two">
@@ -145,7 +145,7 @@ const EmenuSection2 = () => {
           <span> &nbsp; </span>
         </Ntext>
 
-        <div class="relative py-[200px] md:py-24 md:px-0 px-[50px] min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
+        <div class="relative  md:py-24 md:px-0  min-h-[100vh] flex flex-col justify-center items-center section-two-image opacity-0">
           <div ref={animationContainer} className="max-h-[802px] max-w-[647px]"></div>
         </div>
         <div className="flex md:flex-row flex-col justify-between items-center section-three md:mt-[200px] slider-padding-left">

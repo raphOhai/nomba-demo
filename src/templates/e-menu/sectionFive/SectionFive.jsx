@@ -27,10 +27,10 @@ const EmenuSection5 = ({ cards }) => {
       });
     });
     gsap.set(titleText.chars, {
-      fontSize: "18rem",
+      fontSize: window.innerWidth < 760 ? "6.25rem" : "18rem",
       opacity: 0,
-      yPercent: 200,
-      lineHeight: "6.5rem",
+      yPercent: window.innerWidth < 760 ? 100 : 200,
+      lineHeight: window.innerWidth < 760 ? "7.5rem" : "6.5rem",
     });
 
     IO(dom).then(
@@ -38,7 +38,7 @@ const EmenuSection5 = ({ cards }) => {
         // gsap.to(cardTile, { yPercent: 10 });
         let text = document.querySelector(".section-five-title");
         tl.to(titleText.chars, {
-          yPercent: window.innerWidth > 760 ? 400 : 20,
+          yPercent: window.innerWidth > 760 ? 400 : 210,
           opacity: 1,
           stagger: 0.05,
           duration: 0.8,
@@ -79,7 +79,7 @@ const EmenuSection5 = ({ cards }) => {
           scrollTrigger: {
             pin: ".section-five",
             scrub: true,
-            start: "top -10%",
+            start: window.innerWidth > 760 ? "top 5%" : "top 10%",
             end: "+=3000",
             invalidateOnRefresh: true,
           },
@@ -89,7 +89,7 @@ const EmenuSection5 = ({ cards }) => {
       },
       { threshold: 1 }
     );
-  });
+  }, [window.innerWidth]);
   return (
     <div>
       <section class=" bg-n-light relative ">

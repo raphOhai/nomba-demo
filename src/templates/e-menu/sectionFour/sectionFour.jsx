@@ -38,7 +38,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
         } else {
           tl1.from(`.section-four-rect-card-${i}`, {
             yPercent: 200,
-            opacity: 1,
+            opacity: 0,
           });
           tl1.addLabel(`card${i}`);
           // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
@@ -128,7 +128,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
                     </div>
                   </div>
                   <div
-                    className={`md:min-h-[300px] flex flex-col justify-end mt-[20px] section-four-rect-card-image-${i}`}
+                    className={`hidden md:min-h-[300px] md:flex flex-col justify-end mt-[20px] section-four-rect-card-image-${i}`}
                   >
                     {t.image}
                   </div>
