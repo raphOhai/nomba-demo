@@ -89,7 +89,7 @@ const EmenuSection5 = ({ cards }) => {
       },
       { threshold: 1 }
     );
-  }, [window.innerWidth]);
+  });
   return (
     <div>
       <section class=" bg-n-light relative ">

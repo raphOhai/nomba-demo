@@ -128,7 +128,7 @@ const EmenuSection2 = () => {
       },
       { threshold: 1 }
     );
-  }, [window.innerWidth]);
+  });
   return (
     <div className=" bg-n-yellow1 relative">
       <div class=" section-two">
