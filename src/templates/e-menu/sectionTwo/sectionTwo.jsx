@@ -72,7 +72,7 @@ const EmenuSection2 = () => {
             yPercent: 114,
             xPercent: window.innerWidth < 760 ? -20 : 20,
             stagger: 0.05,
-            scale: 0.7,
+            scale: window.innerWidth < 760 ? 0.7 : 1,
             opacity: 0,
             duration: 1,
             ease: "power4.out",
