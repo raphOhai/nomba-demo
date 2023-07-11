@@ -13,8 +13,8 @@ const EmenuHero = () => {
   });
 
   return (
-    <section className="bg-black min-h-[95vh]">
-      <Container className="mt-8 md:mt-10">
+    <section className="bg-black min-h-[100vh] md:mt-[-70px] flex flex-col justify-center items-center">
+      <Container className="">
         <div className=" w-full">
           <div className="flex md:flex-row flex-col justify-center items-center md:-ml-[2rem] mt-10 ">
             <div className="   max-w-[336px] md:max-w-[23rem]">
@@ -28,7 +28,7 @@ const EmenuHero = () => {
               </Ntext>
             </div>
             <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={430} height={500}></video>
-            <div className=" mx-auto md:mx-0 max-w-[290px] md:max-w-[21rem]">
+            <div className=" mx-auto  max-w-[290px] md:max-w-[21rem]">
               {" "}
               <Ntext variant="h1" className="md:leading-[63px]" color="primary-100" data-animation="rtl">
                 Scan. <br /> view. pay
