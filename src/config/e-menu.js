@@ -19,7 +19,7 @@ export const eMenuTestimonial = [
 
 export const businessTool = [
   {
-    title: "Robust Menu",
+    title: "Robust menu",
     heading: "Robust menu list",
     description: "Enjoy the flexibility to create a detailed menu list that showcases all your offerings.",
     image: (

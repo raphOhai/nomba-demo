@@ -30,19 +30,20 @@ const EmenuSection4 = ({ headingText, tools }) => {
       });
       tools.forEach((card, i) => {
         if (i === 0) {
-          tl1.addLabel(`card${i}`);
           tl1.to(`.section-four-rect-card-${i}`, {
             yPercent: 0,
             opacity: 1,
           });
+          tl1.addLabel(`card${i}`);
+          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
         } else {
           tl1.from(`.section-four-rect-card-${i}`, {
             yPercent: 200,
             opacity: 0,
           });
-          tl1.addLabel(`card${i}`);
+
           // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
-          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+
           tl1.to(
             `.section-four-rect-card-${i - 1}`,
             {
@@ -57,6 +58,8 @@ const EmenuSection4 = ({ headingText, tools }) => {
             yPercent: 0,
             opacity: 1,
           });
+          tl1.addLabel(`card${i}`);
+          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
         }
       });
 
@@ -76,7 +79,15 @@ const EmenuSection4 = ({ headingText, tools }) => {
       }
       let circles = gsap.utils.toArray(".section-nav-link .circle");
       function setActiveNav(index) {
-        circles.forEach((circle, i) => circle.classList[i === index ? "add" : "remove"]("border"));
+        circles.forEach((circle, i) => {
+          if (i === index) {
+            circle.scrollIntoView(false, { behavior: "smooth", inline: "start" });
+          }
+          circle.classList[i === index ? "add" : "remove"]("md:border");
+
+          circle.classList[i === index ? "add" : "remove"]("text-black");
+        });
+        // document.querySelector(`#card-${i}`).scrollIntoView(true, { behavior: 'smooth'});
       }
     }, comp); // <- IMPORTANT! Scopes selector text
 
@@ -93,13 +104,15 @@ const EmenuSection4 = ({ headingText, tools }) => {
           </div>
         </SectionHeader>
         <div ref={comp} className=" min-h-[120vh]">
-          <div className="text-center pb-10 section-nav-link flex-row flex justify-center">
+          <div className="flex justify-start text-center pb-10 text-n-grey2 section-nav-link flex-row scrollbar-hide overflow-auto md:justify-center">
             {tools.map((t, i) => (
               <div
                 key={i}
-                className={`cursor-pointer transition-all px-5 py-2 border-black inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
+                className={`cursor-pointer transition-all  md:px-5 py-2 first:pr-2 px-2 md:border-black inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
               >
-                <a href={`#card-${i}`}>{t.title}</a>
+                <a href={`#card-${i}`} className="text-[14px] md:text-[20px] whitespace-pre">
+                  {t.title}
+                </a>
               </div>
             ))}
           </div>
@@ -118,7 +131,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
                       {t.description}
                     </Ntext>
 
-                    <div className="md:mt-10 mt-5">
+                    <div className="md:mt-10 mt-28">
                       <ReadMore
                         className="!font-medium !text-[16px] !text-primary"
                         text="Get Started on menu"
