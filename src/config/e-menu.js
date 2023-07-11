@@ -73,7 +73,7 @@ export const businessTool = [
       <StaticImage
         alt="Robust Menu"
         src="../assets/images/jpegs/e-menu/section4/page4.png"
-        width={597}
+        width={556}
         height={471}
         className="md:my-10"
       />
