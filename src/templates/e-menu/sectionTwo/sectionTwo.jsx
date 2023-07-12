@@ -30,7 +30,7 @@ const EmenuSection2 = () => {
     const titleText = new SplitType(".section-two-title", { type: "chars" });
     gsap.set(".section-two-image", {
       yPercent: 150,
-      xPercent: 50,
+      xPercent: window.innerWidth < 760 ? 0 : 50,
     });
     gsap.set(".section-three-image", {
       yPercent: 50,
@@ -131,7 +131,7 @@ const EmenuSection2 = () => {
   });
   return (
     <div className=" bg-n-yellow1 relative">
-      <div class=" section-two">
+      <div class=" section-two overflow-hidden">
         <Ntext
           variant="text9"
           color="c-0"

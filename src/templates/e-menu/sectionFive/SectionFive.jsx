@@ -93,7 +93,7 @@ const EmenuSection5 = ({ cards }) => {
   return (
     <div>
       <section class=" bg-n-light relative ">
-        <div className="min-h-[120vh] section-five ">
+        <div className="min-h-[120vh] section-five overflow-hidden">
           <Ntext variant="text9" color="c-0" className="section-five-title whitespace-nowrap flex flex-row flex-nowrap">
             How <span> &nbsp; </span>
             <span> &nbsp; </span> it <span> &nbsp; </span>
