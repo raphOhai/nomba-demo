@@ -30,7 +30,7 @@ const EmenuSection2 = () => {
     const titleText = new SplitType(".section-two-title", { type: "chars" });
     gsap.set(".section-two-image", {
       yPercent: 150,
-      xPercent: 50,
+      xPercent: window.innerWidth < 760 ? 0 : 50,
     });
     gsap.set(".section-three-image", {
       yPercent: 50,
@@ -112,7 +112,7 @@ const EmenuSection2 = () => {
           clonedText.firstChild.childNodes.forEach(e => {
             text.firstChild.appendChild(e.cloneNode(true));
           });
-        }, 4000);
+        }, 1000);
         tl.to(".section-two-image", {
           autoAlpha: 1,
           yPercent: 0,
@@ -131,11 +131,11 @@ const EmenuSection2 = () => {
   });
   return (
     <div className=" bg-n-yellow1 relative">
-      <div class=" section-two">
+      <div class=" section-two overflow-hidden">
         <Ntext
           variant="text9"
           color="c-0"
-          className="section-two-title whitespace-nowrap flex flex-row overflow-x-visible flex-nowrap absolute top-[11rem] md:top-[0rem]"
+          className="section-two-title whitespace-nowrap flex flex-row flex-nowrap absolute top-[11rem] md:top-[0rem]"
         >
           Everything <span> &nbsp; </span>
           <span> &nbsp; </span> you <span> &nbsp; </span>
