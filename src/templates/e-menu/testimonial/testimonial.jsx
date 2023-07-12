@@ -5,7 +5,7 @@ import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { InvoiceTestimonialCard } from "./testimonial-card";
+import { EmenuTestimonialCard } from "./testimonial-card";
 import NextIcon from "svgs/chevron-right.svg";
 import PreviousIcon from "svgs/chevron-left.svg";
 import { Container, SectionHeader, Ntext } from "components";
@@ -13,7 +13,7 @@ import { Container, SectionHeader, Ntext } from "components";
 const EmenuTestimonial = ({ testimonials, headingText }) => {
   const testimonialList = testimonials.map(item => (
     <SwiperSlide key={item.name}>
-      <InvoiceTestimonialCard {...item} />
+      <EmenuTestimonialCard {...item} />
     </SwiperSlide>
   ));
 
