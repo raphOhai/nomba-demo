@@ -5,6 +5,6 @@ export const nombaPro = {
   appleStoreUrl: "https://apps.apple.com/ng/app/nomba/id1625708506",
 };
 export const nombaMax = {
-  orderText: "Join waitlist",
+  orderText: "Learn more",
   url: "/max",
 };

@@ -27,7 +27,7 @@ const InvoicePage = () => {
         description="Enjoy benefits of automated reminders, helping you to stay on top of outstanding payments"
       />
 
-      <SponsorList title="Over 10,000+ businesses use Nomba Invoice to get paid daily " />
+      <SponsorList title="Over 10,000+ Nomba Invoices have been created for payment" />
       <InvoiceTools title="Nomba Invoice as a tool to upgrade your business. " invoiceTools={InvoiceBusinessTools} />
       <HowInvoicingWorks title="How Nomba Invoicing is Perfect For Your Business." />
       <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
