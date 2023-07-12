@@ -5,16 +5,24 @@ const CommonQuestions = ({ questions }) => {
   useEffect(() => {
     const accordionItems = document.querySelectorAll(".c_wrapItem");
     let activeAccordionItem = null;
-
-    function toggleAccordionItem(item) {
+    let activeSpan = null;
+    function toggleAccordionItem(item, header) {
+      const span = header.querySelector(".vertical");
       if (activeAccordionItem === item) {
         item.classList.remove("active");
+        span.classList.remove("!h-0");
+
+        activeSpan = null;
         activeAccordionItem = null;
       } else {
         if (activeAccordionItem) {
           activeAccordionItem.classList.remove("active");
+          activeSpan.classList.remove("!h-0");
         }
         item.classList.add("active");
+        span.classList.add("!h-0");
+
+        activeSpan = span;
         activeAccordionItem = item;
       }
     }
@@ -22,7 +30,7 @@ const CommonQuestions = ({ questions }) => {
     accordionItems.forEach(item => {
       const accordionHeader = item.querySelector(".header");
       accordionHeader.addEventListener("click", () => {
-        toggleAccordionItem(item.querySelector(".c_wrapItem_acc"));
+        toggleAccordionItem(item.querySelector(".c_wrapItem_acc"), accordionHeader);
       });
     });
   });
@@ -32,7 +40,7 @@ const CommonQuestions = ({ questions }) => {
         <div className="c_cmQuestions ">
           <div className="c_cmQuestions_txt">
             <Ntext variant="h2" color="primary-100" data-animation="h">
-              FAQ
+              FAQs
             </Ntext>
           </div>
           <div className="c_cmQuestions_acc">
@@ -41,8 +49,8 @@ const CommonQuestions = ({ questions }) => {
                 <div className="c_wrapItem_head header">
                   <h3 data-animation="h">{item.header}</h3>
                   <div className="c_wrapItem_head_toggleView content_btn">
-                    <span></span>
-                    <span></span>
+                    <span className="horizontal"></span>
+                    <span className="vertical"></span>
                   </div>
                 </div>
                 <div className={`c_wrapItem_acc`}>
