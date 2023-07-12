@@ -39,20 +39,20 @@ const EmenuSection2 = () => {
     gsap.set(titleText.chars, {
       fontSize: window.innerWidth < 760 ? "6.25rem" : "18rem",
       opacity: 0,
-      yPercent: window.innerWidth < 760 ? 100 : 200,
+      yPercent: window.innerWidth < 760 ? 100 : 0,
       lineHeight: window.innerWidth < 760 ? "7.5rem" : "6.5rem",
     });
     gsap
       .to(titleText.chars, {
         scrollTrigger: {
           trigger: ".section-two",
-          start: window.innerWidth < 760 ? "top -5%" : "top -15%",
+          start: window.innerWidth < 760 ? "top -5%" : "top -5%",
           end: "+=1000px",
           // scrub: true,
           pin: true,
           invalidateOnRefresh: true,
         },
-        yPercent: window.innerWidth > 760 ? 400 : 350,
+        yPercent: window.innerWidth > 760 ? 400 : 100,
         opacity: 1,
         stagger: 0.05,
         duration: 0.8,
@@ -72,7 +72,7 @@ const EmenuSection2 = () => {
             yPercent: 114,
             xPercent: window.innerWidth < 760 ? -20 : 20,
             stagger: 0.05,
-
+            scale: window.innerWidth < 760 ? 0.7 : 1,
             opacity: 0,
             duration: 1,
             ease: "power4.out",
@@ -135,7 +135,7 @@ const EmenuSection2 = () => {
         <Ntext
           variant="text9"
           color="c-0"
-          className="section-two-title whitespace-nowrap flex flex-row overflow-x-visible flex-nowrap"
+          className="section-two-title whitespace-nowrap flex flex-row overflow-x-visible flex-nowrap absolute top-[11rem] md:top-[0rem]"
         >
           Everything <span> &nbsp; </span>
           <span> &nbsp; </span> you <span> &nbsp; </span>
