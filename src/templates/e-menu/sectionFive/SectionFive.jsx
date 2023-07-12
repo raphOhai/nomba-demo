@@ -124,11 +124,30 @@ const EmenuSection5 = ({ cards }) => {
               </div>
             ))}
           </div>
+          <div className={buttonContainer}>
+            <Button
+              className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
+              text="Get Started now"
+              href={{ url: SIGNUP_URL }}
+              withArrow={true}
+            />
+          </div>
         </div>
         {/* </Container> */}
       </section>
     </div>
   );
 };
+const buttonContainer = ctl(`
+flex
+flex-col
+text-center
+md:flex-row
+justify-center
+absolute
+bottom-[18rem]
+items-center
+w-full 
 
+`);
 export { EmenuSection5 };
