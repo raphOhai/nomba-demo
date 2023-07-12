@@ -32,9 +32,7 @@ const Menu = ({ openMenu, onToggle }) => {
           </li> */}
 
           <li>
-            {/* <Button text="" href={{ url: SIGNUP_URL }} />
-             */}
-            <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
+            <Button text="Get your terminal" href={{ url: SIGNUP_URL }} />
           </li>
         </ul>
       </nav>
