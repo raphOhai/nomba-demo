@@ -59,7 +59,7 @@ export const posCardData = [
     isMax: true,
     device: {
       name: "Nomba MAX",
-      price: null,
+      price: "₦85,000",
       type: "max",
     },
 

@@ -44,10 +44,6 @@ const FixedBar = () => {
       },
       opacity: 1,
       rotateX: 0,
-      // fontSize: fontSize,
-      // xPercent: 0,
-      // skewX: 0,
-      // skewY: 0,
       yPercent: 0,
       duration: 0.5,
       ease: "easeIn",
@@ -70,8 +66,8 @@ const FixedBar = () => {
 
       {/* Display on mobile only */}
       <div className="flex justify-center flex-col items-stretch w-full md:!hidden px-[25px]      ">
-        {/* <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} /> */}
-        <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
+        <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+        {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
       </div>
     </header>
   );
@@ -89,7 +85,7 @@ lg:h-auto
 `);
 
 const navStyle = ctl(`
-hidden
+  hidden
   lg:bg-[#ffffff0d]
   bg-[#ffffff0d]
   backdrop-blur-[500px]

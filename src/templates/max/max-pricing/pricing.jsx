@@ -116,8 +116,8 @@ const MaxPricing = ({ title, price, leasePrice }) => {
                 ))}
               </div>
               <div className="flex md:flex-row flex-col w-full  gap-8 items-stretch md:items-center">
-                <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
-                {/* <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+                {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
+                <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
                 <ReadMore
                   color="primary-100"
                   weight={500}
@@ -126,7 +126,7 @@ const MaxPricing = ({ title, price, leasePrice }) => {
                   variant="text3"
                   href={{ url: "tel:+23401888899" }}
                   text="Contact sales"
-                /> */}
+                />
               </div>
             </div>
           </div>

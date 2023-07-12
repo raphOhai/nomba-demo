@@ -54,7 +54,7 @@ const MaxPage = () => {
       />
       <MaxBusinessTypes title="What Businesses Like Yours Think of Nomba MAX." />
       <WhatsInTheBox title="What’s in the box?" />
-      <MaxPricing title="Pricing & Specifications" price="₦80,000" leasePrice="₦45,000" />
+      <MaxPricing title="Pricing & Specifications" price="₦85,000" leasePrice="₦45,000" />
       <CommonQuestions questions={AccordionData} />
 
       <GetMax
