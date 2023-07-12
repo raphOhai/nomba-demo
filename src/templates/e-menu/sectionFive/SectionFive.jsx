@@ -19,7 +19,7 @@ const EmenuSection5 = ({ cards }) => {
     const titleText = new SplitType(".section-five-title", { type: "chars" });
     const height = cardTile[0].offsetHeight;
 
-    gsap.set(cardTile, { position: "absolute", yPercent: 200 });
+    gsap.set(cardTile, { position: "absolute" });
 
     cardTile.forEach((card, i) => {
       gsap.set(card, {
@@ -68,9 +68,9 @@ const EmenuSection5 = ({ cards }) => {
         //   });
         // });
         // cardTile.forEach((card, i) => {
-        tl.to(cardTile, {
-          yPercent: 10,
-        });
+        // tl.to(cardTile, {
+        //   yPercent: 10,
+        // });
         tl.to(cardTile.reverse(), {
           yPercent: -100,
           stagger: 0.5,
