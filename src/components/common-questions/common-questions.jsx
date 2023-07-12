@@ -40,7 +40,7 @@ const CommonQuestions = ({ questions }) => {
         <div className="c_cmQuestions ">
           <div className="c_cmQuestions_txt">
             <Ntext variant="h2" color="primary-100" data-animation="h">
-              FAQ
+              FAQs
             </Ntext>
           </div>
           <div className="c_cmQuestions_acc">
