@@ -8,12 +8,12 @@ const EmenuTestimonialCard = ({ name, role, testimonial, image }) => {
   return (
     <div className={cardWrapStyle}>
       <div className={textWrapStyle}>
-        <div className="bg-[#EEEEEE] p-10 rounded-[10px] mb-5">
+        <div className="bg-[#EEEEEE] p-10 rounded-[10px] mb-4">
           <div className={testimonialTextStyle}>
-            <Ntext variant="p24" color="primary" value={testimonial} />
+            <Ntext variant="p24regular" color="primary" value={testimonial} />
           </div>
 
-          <div className="mt-5">
+          <div className="mt-4">
             <Ntext variant="p18" color="n-dark" value={name} className="mb-1 !font-[600]" />
 
             {role && <Ntext variant="p18" color="n-grey3" value={role} className="!font-[600]" />}
