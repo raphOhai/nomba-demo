@@ -1,6 +1,6 @@
 import { Container, Ntext, Button } from "components";
 import React, { useEffect } from "react";
-import heroVideo from "jpegs/e-menu/hero/hero.mp4";
+import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
 import constants from "config/constants.json";
 import ctl from "@netlify/classnames-template-literals";
 
