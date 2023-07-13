@@ -159,7 +159,7 @@ const EmenuSection2 = () => {
 
             <div className="mt-5">
               <Button
-                className="!font-medium !text-[16px]"
+                className="!font-medium !text-[16px] !min-w-[100px] !w-[200px]"
                 text="Get Started"
                 href={{ url: SIGNUP_URL }}
                 withArrow={true}
