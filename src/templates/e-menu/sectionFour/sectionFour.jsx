@@ -16,7 +16,11 @@ const EmenuSection4 = ({ headingText, tools }) => {
 
   useLayoutEffect(() => {
     const dom = document.querySelector(".section-four");
-    // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
+    /**
+     * create our context.
+     * This function is invoked immediately and all GSAP animations and ScrollTriggers created
+     * during the execution of this function get recorded so we can revert() them later (cleanup)
+     */
     let ctx = gsap.context(() => {
       let tl1 = gsap.timeline({
         scrollTrigger: {
