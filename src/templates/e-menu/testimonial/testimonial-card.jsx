@@ -19,7 +19,9 @@ const EmenuTestimonialCard = ({ name, role, testimonial, image }) => {
             {role && <Ntext variant="p18" color="n-grey3" value={role} className="!font-[600]" />}
           </div>
         </div>
-        <StaticImage src="../../../assets/images/jpegs/e-menu/burgers.png" class="hidden md:block" />
+        <div class="hidden md:block">
+          <StaticImage src="../../../assets/images/jpegs/e-menu/burgers.png" />
+        </div>
       </div>
 
       <div className={imageWrapStyle}>
