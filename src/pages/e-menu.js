@@ -7,7 +7,6 @@ import { HomepageTipsAndUpdate } from "templates";
 import { split } from "animations/text";
 import { faqData } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
-import { everyBusinesses } from "config/invoice";
 
 import {
   EmenuHero,
@@ -53,7 +52,7 @@ const EmenuPage = () => {
 
         <GetStarted title="Get started with E-menu today" />
 
-        <EveryBusiness title="Built for every kind of business" slides={everyBusinesses} />
+        <EveryBusiness />
         <HomepageTipsAndUpdate />
       </Layout>
     </ReactLenis>
