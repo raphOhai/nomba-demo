@@ -80,6 +80,7 @@ module.exports = {
         n: {
           yellow: "#ffcc00",
           yellow1: "#FFFAE6",
+          yellow2: "#FFF5CC",
           light: "#ffffff",
           grey1: "#eeeeee",
           grey2: "#c6c6c6",
@@ -91,6 +92,8 @@ module.exports = {
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
+          green2: "#D9F2F2",
+          pink1: "#EFD9F2",
           grey3light: "#99999980",
         },
         c: {

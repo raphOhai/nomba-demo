@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import Layout from "components/layout-max";
 import { Br } from "components";
 import { MaxpageHero, TerminalSectionInteractions, MaxFeatures, WhatsInTheBox } from "templates/max";
-import { EveryBusiness } from "templates/every-business";
-import { MiniTestimonial, MiniPricing, GetMini, ThinkOfMini } from "templates/mini";
+
+import { MiniTestimonial, MiniPricing, GetMini, ThinkOfMini, EveryBusiness, WhyMini } from "templates/mini";
 import { split } from "animations/text";
-import { Testimonial, AccordionData } from "config/mini";
+import { Testimonial, AccordionData, everyBusinesses } from "config/mini";
 import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
@@ -53,7 +53,8 @@ const MiniPage = () => {
             </>
           }
         />
-
+        <WhyMini />
+        <EveryBusiness slides={everyBusinesses} />
         <MiniPricing title="Pricing & Specifications" price="₦25,000" leasePrice="₦15,000" />
 
         <ThinkOfMini title="What Businesses Like Yours Think of Nomba Mini." />
@@ -65,7 +66,7 @@ const MiniPage = () => {
           title={<>Get Nomba Mini, Get Better</>}
           description={<>For better performance and smoother payment experience, Nomba Mini is here for you.</>}
         />
-        <EveryBusiness />
+
         <HomepageTipsAndUpdate />
       </Layout>
     </ReactLenis>

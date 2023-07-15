@@ -43,3 +43,71 @@ export const miniFeaturesBreakdown = [
   "100~240V AC 50/60HzAdapter",
   "1x Micro USB2.0, 1x DC jack",
 ];
+
+export const everyBusinesses = [
+  {
+    id: 1,
+    title: "Restaurant",
+    color: "n-yellow2",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image1.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={821}
+      />
+    ),
+  },
+  {
+    id: 2,
+    title: "Pharmacy",
+    color: "n-green2",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image1.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={821}
+      />
+    ),
+  },
+  {
+    id: 3,
+    title: "Bolt driving",
+    color: "n-pink1",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image1.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={821}
+      />
+    ),
+  },
+  {
+    id: 3,
+    title: "Bolt driving",
+    color: "n-pink1",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image1.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={821}
+      />
+    ),
+  },
+  {
+    id: 3,
+    title: "Bolt driving",
+    color: "n-pink1",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image1.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={821}
+      />
+    ),
+  },
+];
