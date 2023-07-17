@@ -8,8 +8,8 @@ import image1 from "jpegs/mini/terminal/image1.png";
 import image2 from "jpegs/mini/terminal/image2.png";
 import image3 from "jpegs/mini/terminal/image3.png";
 import image4 from "jpegs/mini/terminal/image4.png";
-import image5 from "jpegs/mini/terminal/image5.png";
-import image6 from "jpegs/mini/terminal/image6.png";
+import network from "jpegs/mini/terminal/image5.png";
+import lgBa3 from "jpegs/mini/terminal/image6.png";
 import Pres from "svgs/pres.svg";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -32,18 +32,18 @@ const MiniFeatures2 = ({ title, features }) => {
           trigger: comp.current,
           pin: true,
           start: "top top", // when the top of the trigger hits the top of the viewport
-          end: "+=5000px", // end after scrolling 1000px beyond the start
+          end: "+=5400px", // end after scrolling 1000px beyond the start
           scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         },
       });
+      tl1.addLabel(`card${0}`);
+      tl1.add(() => setActiveImage(0), "-=0.15");
       for (let i = 0; i <= features.length; i++) {
         if (i === 0) {
           // tl1.to(`.sub-description-${i}`, {
           //   yPercent: 0,
           //   opacity: 1,
           // });
-          tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveImage(i), "-=0.15");
         } else {
           tl1.from(`.sub-description-${i}`, {
             height: 0,
@@ -156,7 +156,7 @@ const MiniFeatures2 = ({ title, features }) => {
           <div className="relative min-w-[400px]   h-[706px]">
             <div className="absolute">
               <img
-                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                className="max-w-[381px] h-[706px] mini-images transition-opacity duration-1000 ease-out"
                 src={image1}
                 width={381}
                 height={706}
@@ -165,7 +165,7 @@ const MiniFeatures2 = ({ title, features }) => {
             </div>
             <div className="absolute">
               <img
-                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                className="max-w-[381px] h-[706px] opacity-0 mini-images transition-opacity duration-1000 ease-out"
                 src={image2}
                 width={381}
                 height={706}
@@ -174,8 +174,8 @@ const MiniFeatures2 = ({ title, features }) => {
             </div>
             <div className="absolute">
               <img
-                className="max-w-[381px] h-[706px] opacity-0 mini-images"
-                src={image3}
+                className="max-w-[381px] h-[706px] opacity-0 mini-images transition-opacity duration-1000 ease-out"
+                src={lgBa3}
                 width={381}
                 height={706}
                 alt="mini 1"
@@ -183,7 +183,7 @@ const MiniFeatures2 = ({ title, features }) => {
             </div>
             <div className="absolute">
               <img
-                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                className="max-w-[381px] h-[706px] opacity-0 mini-images transition-opacity duration-1000 ease-out"
                 src={image4}
                 width={381}
                 height={706}
@@ -192,8 +192,8 @@ const MiniFeatures2 = ({ title, features }) => {
             </div>
             <div className="absolute">
               <img
-                className="max-w-[381px] h-[706px] opacity-0 mini-images"
-                src={image6}
+                className="max-w-[381px] h-[706px] opacity-0 mini-images transition-opacity duration-1000 ease-out"
+                src={network}
                 width={381}
                 height={706}
                 alt="mini 1"
