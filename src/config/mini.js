@@ -1,6 +1,9 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-
+import BusinessIcon from "svgs/n-icons/outline/business.svg";
+import Wifi from "svgs/n-icons/outline/wifi.svg";
+import Globe from "svgs/n-icons/outline/globe.svg";
+import Battery from "svgs/battery-charging.svg";
 export const Testimonial = [
   {
     testimonial:
@@ -109,5 +112,32 @@ export const everyBusinesses = [
         width={821}
       />
     ),
+  },
+];
+
+export const miniFeatures = [
+  {
+    title: "Portablity",
+    icon: <BusinessIcon />,
+    description: "A new portable medium to collect physical payments",
+    more_description: "Collect payment anywhere, anytime and seamlessly",
+  },
+  {
+    title: "Long lasting battery",
+    icon: <Battery />,
+    description: "A new portable medium to collect physical payments",
+    more_description: "Collect payment anywhere, anytime and seamlessly",
+  },
+  {
+    title: "Faster Transactions",
+    icon: <Wifi />,
+    description: "A new portable medium to collect physical payments",
+    more_description: "Collect payment anywhere, anytime and seamlessly",
+  },
+  {
+    title: "Reliable network",
+    icon: <Globe />,
+    description: "A new portable medium to collect physical payments",
+    more_description: "Collect payment anywhere, anytime and seamlessly",
   },
 ];

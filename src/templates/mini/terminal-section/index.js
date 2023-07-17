@@ -1,4 +1,4 @@
 export * from "./terminalSect";
-export * from "./max-features";
+export * from "./mini-features";
 export * from "./sponsorsList";
 export * from "./experienceMax";

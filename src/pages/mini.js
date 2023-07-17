@@ -1,11 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import Layout from "components/layout-max";
 import { Br } from "components";
-import { MaxpageHero, TerminalSectionInteractions, MaxFeatures, WhatsInTheBox } from "templates/max";
+import { WhatsInTheBox } from "templates/max";
 
-import { MiniTestimonial, MiniPricing, GetMini, ThinkOfMini, EveryBusiness, WhyMini } from "templates/mini";
+import {
+  MiniTestimonial,
+  MiniPricing,
+  GetMini,
+  ThinkOfMini,
+  EveryBusiness,
+  WhyMini,
+  MiniFeatures,
+  MiniHero,
+  TerminalSectionInteractions,
+} from "templates/mini";
 import { split } from "animations/text";
-import { Testimonial, AccordionData, everyBusinesses } from "config/mini";
+import { Testimonial, AccordionData, everyBusinesses, miniFeatures } from "config/mini";
 import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
@@ -30,8 +40,8 @@ const MiniPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="Mini">
-        <MaxpageHero
+      <Layout title="Mini" useStickyNav={false}>
+        <MiniHero
           title={
             <>
               {" "}
@@ -41,17 +51,13 @@ const MiniPage = () => {
           description="Get Nomba MAX, the all-in-one business solution that offers more than just payment processing."
         />
         <TerminalSectionInteractions />
-        <MaxFeatures
+        <MiniFeatures
           title={
             <>
               Unlike any POS you’ve <Br on="all" /> used before
             </>
           }
-          description={
-            <>
-              Comprised of the best features to give you an efficient and seamless <Br on="desktop" /> performance.
-            </>
-          }
+          features={miniFeatures}
         />
         <WhyMini />
         <EveryBusiness slides={everyBusinesses} />

@@ -33,7 +33,7 @@
   border: 1px solid #999999 !important;
 }
 
-.swiper-pagination>.swiper-pagination-bullet {
+.swiper-pagination > .swiper-pagination-bullet {
   @apply mr-2 rounded-full;
   background: white;
   opacity: 1;
@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-.pagination-class>.swiper-pagination-progressbar-fill {
+.pagination-class > .swiper-pagination-progressbar-fill {
   background-color: rgb(255 204 0) !important;
   top: -4px !important;
   height: 5px !important;
@@ -76,8 +76,6 @@
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
   font-weight: 100;
 }
-
-
 
 @keyframes blinking-cursor {
   0% {
@@ -115,7 +113,7 @@
   list-style-position: inside;
 }
 
-.policy-page ul>li {
+.policy-page ul > li {
   @apply my-2;
 }
 
@@ -193,4 +191,10 @@ dt {
   .hero-image-margin {
     margin-left: -200px !important;
   }
+}
+.center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

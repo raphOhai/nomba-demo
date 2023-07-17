@@ -1,124 +1,79 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Container, Ntext } from "components";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useState, useRef } from "react";
+import { Ntext } from "components";
+
 import ctl from "@netlify/classnames-template-literals";
-import { StaticImage } from "gatsby-plugin-image";
-import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
+import PlayMobile from "assets/images/svgs/play-grey.svg";
+import PauseMobile from "assets/images/svgs/pause-grey.svg";
 import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
-import constants from "config/constants.json";
-// register scrolltrigger
-gsap.registerPlugin(ScrollTrigger);
 
 const WhyMini = ({ title }) => {
-  const { SIGNUP_URL } = constants;
-  const [playVideo, setPlayVid] = useState(false);
-  const [loadVideo, setLoadVideo] = useState(false);
-  const hero_vid = useRef(null);
+  const [playVideo, setPlayVid] = useState(true);
 
-  useEffect(() => {
-    setTimeout(function () {
-      setLoadVideo(true);
-    }, 5000);
-  });
+  const vid = useRef(null);
 
-  const playVid = () => {
+  const togglePlay = () => {
     setPlayVid(!playVideo);
-    const video = document.querySelector(".hero_video_pl video");
     if (playVideo) {
-      video.pause();
-      video.currentTime = 0;
+      vid.current.pause();
     } else {
-      video.play();
-    }
-  };
-  const close = () => {
-    setPlayVid(!playVideo);
-    const video = document.querySelector(".hero_video_pl video");
-    if (playVideo) {
-      video.pause();
-      video.currentTime = 0;
+      vid.current.play();
     }
   };
 
   return (
-    // <section className="pt-[150px] md:pt-[16rem] feature-section2" id="business-types">
-    //   <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
-    //     {loadVideo && <video onClick={close} ref={hero_vid} controls src={BusinessVid}></video>}
-    //   </div>
-    //   <Container>
-    //     <div className="md:max-w-[671px] md:mx-auto  md:text-center">
-    //       <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
-    //         {title}
-    //       </Ntext>
-    //     </div>
-
-    //     <div className="relative">
-    //       <div className="mt-[50px] business-video ">
-    //         <div className="!hidden md:!block">
-    //           <StaticImage
-    //             className={coverVideo}
-    //             alt="video cover"
-    //             src="../../../assets/images/jpegs/terminal/max/video-cover.png"
-    //           />
-    //         </div>
-    //         <div className="md:!hidden">
-    //           <StaticImage
-    //             className={coverVideo}
-    //             alt="video cover"
-    //             src="../../../assets/images/jpegs/terminal/max/video-cover-mobile.png"
-    //           />
-    //         </div>
-    //       </div>
-    //       <div onClick={playVid} className="play_mobile">
-    //         {playVideo ? (
-    //           <div className="close_vid_m">
-    //             <span></span>
-    //             <span></span>
-    //           </div>
-    //         ) : (
-    //           <PlayMobile />
-    //         )}
-    //       </div>
-    //     </div>
-    //   </Container>
-    // </section>
-    <section className="bg-black min-h-[100vh] md:mt-[-70px] flex flex-col justify-center items-center">
-      <Container className="relative">
-        <div className=" w-full">
-          <div className="flex md:flex-row flex-col justify-center items-center md:-ml-[2rem] mt-10 ">
-            {/* <div className="   max-w-[336px] md:max-w-[23rem]">
-              <Ntext
-                variant="h1"
-                color="primary-100"
-                className="text-center md:text-left md:leading-[63px]"
-                data-animation="ltr"
-              >
-                Power your Restaurant
-              </Ntext>
-            </div> */}
-            <div className="">
-              <video
-                src={BusinessVid}
-                controls={false}
-                muted
-                playsInline
-                className=""
-                autoPlay
-                loop
-                width={1440}
-                height={808}
-              ></video>
+    <section className="bg-black min-h-[100vh]  flex flex-col justify-center items-center relative">
+      <div className=" w-full">
+        <div className="flex md:flex-row flex-col justify-center items-center ">
+          <div className="">
+            <video
+              src={BusinessVid}
+              controls={false}
+              muted
+              playsInline
+              className="opacity-40 w-full h-[100vh]"
+              autoPlay
+              loop
+              ref={vid}
+              width={1440}
+              height={808}
+            ></video>
+          </div>
+          <div className="absolute">
+            <div className="flex  flex-col  mt-10   rounded-md">
+              <div className=" md:p-0 p-5">
+                <Ntext variant="text9" color="primary-100" data-animation="rtl">
+                  Nomba Mini
+                </Ntext>
+              </div>
+              <div className="max-w-[972px] md:p-0 p-5">
+                <Ntext variant="text6lite" color="primary-100" className="!font-[400]" data-animation="rtl">
+                  Nomba mini is your pocket-sized payment padi that guarantees a reliable, fast and smooth payment
+                  experience. From instant alert to auto-settlements and lower transaction charges, the Nomba mini
+                  provides you with maximum productivity and therefore, sales
+                </Ntext>
+              </div>
+              <div className="flex flex-row  mt-[50px] gap-[20px] md:gap-[50px] md:justify-start justify-center ">
+                {[1, 2, 3].map(t => (
+                  <div className="">
+                    <div className="text-[16px] text-n-light">Up to</div>
+                    <div>
+                      <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                        3.4x
+                      </Ntext>
+                    </div>
+                    <div className="text-[14px] font-semibold w-[127px] text-n-light">Faster CPU performance</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            {/* <div className=" mx-auto  max-w-[290px] md:max-w-[21rem]">
-              {" "}
-              <Ntext variant="h1" className="md:leading-[63px]" color="primary-100" data-animation="rtl">
-                Scan. <br /> view. pay
-              </Ntext>
-            </div> */}
+          </div>
+          <div className="absolute bottom-16 right-20">
+            <div onClick={togglePlay} className="play_mobile">
+              {playVideo ? <PauseMobile /> : <PlayMobile />}
+            </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
