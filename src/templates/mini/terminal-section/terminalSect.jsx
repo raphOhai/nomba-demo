@@ -16,27 +16,31 @@ const TerminalSectionInteractions = () => {
         trigger: ".mini-section-2",
         pin: true,
         start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=3000px", // end after scrolling 1000px beyond the start
+        end: "+=1000px", // end after scrolling 1000px beyond the start
+        toggleActions: "play reverse play reverse",
         // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       },
     });
     tl1.to(".mini-2", {
       opacity: 0,
-      xPercent: 0,
-      yPercent: 0,
+      // xPercent: 0,
+      // height: 0,
+
+      delay: 0.5,
       duration: 1,
       ease: "easeOut",
     });
     tl1.fromTo(
       ".mini-1",
       {
-        opacity: 0,
+        yPercent: 300,
+
         // xPercent: 0,
         // yPercent: 0,
         // ease: "easeOut",
       },
       {
-        opacity: 1,
+        yPercent: -50,
 
         // yPercent: 600,
         // // duration: 1.5,
@@ -96,15 +100,15 @@ const TerminalSectionInteractions = () => {
         </div>
         <div className="terminal-mini-section">
           <div className="relative">
-            <div className={`mini-2  img `}>
+            <div className={`mini-2 flex flex-row justify-center  img `}>
               <StaticImage src="../../../assets/images/jpegs/mini/hero/mini2.png" alt="" />
             </div>
-            <div className="center-child mini-1  opacity-0 img  ">
+            <div className="center-child mini-1   img  ">
               <div className="flex-row flex justify-center items-center">
                 <StaticImage
                   className=""
-                  height={600}
-                  width={900}
+                  height={630}
+                  width={920}
                   alt=""
                   src="../../../assets/images/jpegs/mini/hero/mini.png"
                 />
