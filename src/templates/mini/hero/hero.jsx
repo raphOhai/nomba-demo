@@ -12,7 +12,7 @@ const MiniHero = ({ title, benefits }) => {
   return (
     <section className={heroStyle}>
       <Container className="relative">
-        <div className="md:min-h-[100vh]">
+        <div className="md:min-h-[100vh] flex md:flex-row flex-col">
           <div className={heroTextWrapperStyle}>
             <div className="flex flex-row items-end gap-3 ">
               <div>
@@ -43,7 +43,7 @@ const MiniHero = ({ title, benefits }) => {
                 text="Contact sales"
               />
             </div>
-            <div className="flex gap-4 mt-10 ">
+            <div className="flex gap-4 mt-10 md:min-w-[575px] ">
               {Array.from({ length: Math.ceil(benefits.length / 2) }, (_, index) =>
                 benefits.slice(index * 2, index * 2 + 2)
               ).map((arr, i) => (
@@ -64,8 +64,8 @@ const MiniHero = ({ title, benefits }) => {
               ))}
             </div>
           </div>
-          <div className="absolute rotate-[120deg] top-[10rem] right-[6rem] hover:animate-pulseCustom">
-            <StaticImage className="" height={355} alt="" src="../../../assets/images/svgs/terminal/sideways.png" />
+          <div className=" hover:animate-pulseCustom">
+            <StaticImage className="" alt="" src="../../../assets/images/jpegs/mini/hero/hero.png" />
           </div>
         </div>
       </Container>
@@ -89,6 +89,7 @@ lg:mb-[80px]
 sm:mb-[120px]
 md:mx-2
 mb-10
+
 `);
 
 const heroTextHeaders = ctl(`
