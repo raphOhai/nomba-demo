@@ -14,12 +14,12 @@ import Pres from "svgs/pres.svg";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
-const MiniFeatures = ({ title, features }) => {
+const MiniFeatures2 = ({ title, features }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
   const circle = useRef();
 
   useLayoutEffect(() => {
-    const dom = document.querySelector(".feature-section");
+    // const images = document.querySelectorAll(".mini-images");
     /**
      * create our context.
      * This function is invoked immediately and all GSAP animations and ScrollTriggers created
@@ -32,18 +32,18 @@ const MiniFeatures = ({ title, features }) => {
           trigger: comp.current,
           pin: true,
           start: "top top", // when the top of the trigger hits the top of the viewport
-          end: "+=4000px", // end after scrolling 1000px beyond the start
+          end: "+=5000px", // end after scrolling 1000px beyond the start
           scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         },
       });
-      features.forEach((card, i) => {
+      for (let i = 0; i <= features.length; i++) {
         if (i === 0) {
           // tl1.to(`.sub-description-${i}`, {
           //   yPercent: 0,
           //   opacity: 1,
           // });
           tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+          tl1.add(() => setActiveImage(i), "-=0.15");
         } else {
           tl1.from(`.sub-description-${i}`, {
             height: 0,
@@ -52,24 +52,27 @@ const MiniFeatures = ({ title, features }) => {
 
           // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
 
+          tl1.to(`.sub-description-${i}`, {
+            // yPercent: -100,
+            height: 250,
+            opacity: 1,
+          });
           tl1.to(
             `.sub-description-${i - 1}`,
             {
-              opacity: 1,
+              opacity: 0,
               height: 0,
             },
             "-=0.5"
           );
 
-          tl1.to(`.sub-description-${i}`, {
-            yPercent: -100,
-            height: 200,
-            opacity: 1,
-          });
           tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+          tl1.add(() => setActiveImage(i), "-=0.15");
         }
-      });
+      }
+      // features.forEach((card, i) => {
+
+      // });
 
       gsap.utils.toArray(".section-nav-link a").forEach((a, i) => {
         a.addEventListener("click", e => {
@@ -85,15 +88,14 @@ const MiniFeatures = ({ title, features }) => {
           progress = timeline.labels[label] / timeline.duration();
         return st.start + (st.end - st.start) * progress;
       }
-      let circles = gsap.utils.toArray(".section-nav-link .circle");
-      function setActiveNav(index) {
-        circles.forEach((circle, i) => {
+      let images = gsap.utils.toArray(".mini-images");
+      function setActiveImage(index) {
+        images.forEach((image, i) => {
           if (i === index) {
-            circle.scrollIntoView(false, { behavior: "smooth", inline: "start" });
+            image.classList["remove"]("opacity-0");
+          } else {
+            image.classList["add"]("opacity-0");
           }
-          circle.classList[i === index ? "add" : "remove"]("md:border");
-
-          circle.classList[i === index ? "add" : "remove"]("text-black");
         });
         // document.querySelector(`#card-${i}`).scrollIntoView(true, { behavior: 'smooth'});
       }
@@ -106,8 +108,8 @@ const MiniFeatures = ({ title, features }) => {
       <Container>
         <div className="flex flex-col md:flex-row justify-around md:gap-[100px]">
           <div className=" bg-primary md:w-[597px] rounded-[10px] p-5 md:p-[40px]">
-            <div className="  bg-primary  flex flex-col gap-[40px]">
-              <div className="sub-description-0">
+            <div className="overflow-hidden  bg-primary  flex flex-col gap-[40px]">
+              <div className="sub-description-0 overflow-hidden">
                 <div>
                   <Pres />
                 </div>
@@ -132,7 +134,7 @@ const MiniFeatures = ({ title, features }) => {
 
                     {t.icon}
                   </div>
-                  <div className={`sub-description sub-description-${i + 1} h-0 overflow-hidden bg-primary`}>
+                  <div className={`sub-description sub-description-${i + 1}  overflow-hidden bg-primary`}>
                     <div>
                       <div className="max-w-[454px] mt-5">
                         <Ntext variant="text7" color="n-light">
@@ -153,13 +155,49 @@ const MiniFeatures = ({ title, features }) => {
 
           <div className="relative min-w-[400px]   h-[706px]">
             <div className="absolute">
-              <img className="max-w-[381px] h-[706px]" src={image1} width={381} height={706} alt="mini 1" />
+              <img
+                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                src={image1}
+                width={381}
+                height={706}
+                alt="mini 1"
+              />
             </div>
             <div className="absolute">
-              <img className="max-w-[381px] h-[706px] opacity-0" src={image2} width={381} height={706} alt="mini 1" />
+              <img
+                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                src={image2}
+                width={381}
+                height={706}
+                alt="mini 1"
+              />
             </div>
             <div className="absolute">
-              <img className="max-w-[381px] h-[706px] opacity-0" src={image3} width={381} height={706} alt="mini 1" />
+              <img
+                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                src={image3}
+                width={381}
+                height={706}
+                alt="mini 1"
+              />
+            </div>
+            <div className="absolute">
+              <img
+                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                src={image4}
+                width={381}
+                height={706}
+                alt="mini 1"
+              />
+            </div>
+            <div className="absolute">
+              <img
+                className="max-w-[381px] h-[706px] opacity-0 mini-images"
+                src={image6}
+                width={381}
+                height={706}
+                alt="mini 1"
+              />
             </div>
             {/* </div> */}
           </div>
@@ -169,4 +207,4 @@ const MiniFeatures = ({ title, features }) => {
   );
 };
 
-export { MiniFeatures };
+export { MiniFeatures2 };

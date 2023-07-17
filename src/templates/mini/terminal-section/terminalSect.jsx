@@ -16,7 +16,7 @@ const TerminalSectionInteractions = () => {
         trigger: ".mini-section-2",
         pin: true,
         start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=1000px", // end after scrolling 1000px beyond the start
+        end: "+=1500px", // end after scrolling 1000px beyond the start
         toggleActions: "play reverse play reverse",
         // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       },
@@ -27,7 +27,7 @@ const TerminalSectionInteractions = () => {
       // height: 0,
 
       delay: 0.5,
-      duration: 1,
+      duration: 0.6,
       ease: "easeOut",
     });
     tl1.fromTo(
@@ -40,7 +40,7 @@ const TerminalSectionInteractions = () => {
         // ease: "easeOut",
       },
       {
-        yPercent: -50,
+        yPercent: -62,
 
         // yPercent: 600,
         // // duration: 1.5,
@@ -51,7 +51,7 @@ const TerminalSectionInteractions = () => {
 
   return (
     <section className="min-h-[100vh] mini-section-2">
-      <div className="justify-between flex flex-col h-full px-5 pt-5">
+      <div className="justify-between flex flex-col h-full px-5 pt-20">
         <div>
           <div className="flex justify-center flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="16" viewBox="0 0 42 16" fill="none">

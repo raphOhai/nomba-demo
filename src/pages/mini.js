@@ -11,6 +11,7 @@ import {
   EveryBusiness,
   WhyMini,
   MiniFeatures,
+  MiniFeatures2,
   MiniHero,
   TerminalSectionInteractions,
 } from "templates/mini";
@@ -51,7 +52,7 @@ const MiniPage = () => {
           description="Get Nomba MAX, the all-in-one business solution that offers more than just payment processing."
         />
         <TerminalSectionInteractions />
-        <MiniFeatures
+        <MiniFeatures2
           title={
             <>
               Unlike any POS you’ve <Br on="all" /> used before
