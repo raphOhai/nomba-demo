@@ -111,8 +111,8 @@ const MiniFeatures2 = ({ title, features }) => {
       <Container className="!px-0 md:px-[25px]">
         <div className="flex flex-col md:flex-row justify-around md:gap-[100px]">
           <div className=" bg-primary md:w-[597px] rounded-[10px] p-5 md:p-[40px]">
-            <div className="overflow-hidden  bg-primary  flex flex-col gap-[40px]">
-              <div className="sub-description-0 overflow-hidden pb-10 border-b md:border-none  border-n-grey3">
+            <div className="overflow-hidden  bg-primary  flex flex-col gap-[30px]">
+              <div className="sub-description-0 overflow-hidden pb-[30px] ">
                 <div>
                   <Pres />
                 </div>
@@ -126,15 +126,15 @@ const MiniFeatures2 = ({ title, features }) => {
                     The new pocket-sized terminal for swift and successful transactions
                   </Ntext>
                 </div>
-                <div className="flex md:!hidden flex-row justify-center">
+                <div className="flex md:!hidden flex-row justify-center  border-b md:border-none border-n-grey3 pt-[40px] pb-[40px]">
                   <Mini className="max-w-[153px] h-[290px]" />
                 </div>
               </div>
             </div>
             <div class=" bg-primary flex flex-col gap-[30px]">
               {features.map((t, i) => (
-                <div>
-                  <div className="flex justify-between flex-row items-center md:text-n-grey4 text-n-light pt-[5px]">
+                <div className="pt-[5px]">
+                  <div className="flex justify-between flex-row items-center md:text-n-grey4 text-n-light ">
                     <div className=" font-[600] text-[22px] md:text-[24px]">{t.title}</div>
 
                     {t.icon}
