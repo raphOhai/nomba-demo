@@ -3,7 +3,6 @@ import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext, ReadMore } from "components";
 import { StaticImage } from "gatsby-plugin-image";
-
 import constants from "config/constants.json";
 import { MaxButton } from "components/max-button";
 import LogoMini from "jpegs/mini/logo.svg";
