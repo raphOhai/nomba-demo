@@ -68,11 +68,11 @@ const MiniPricing = ({ title, price, leasePrice }) => {
                 </Ntext>
               </div>
 
-              <div className="my-10 flex flex-col gap-7 max_features1">
+              <div className="my-10 flex items-center flex-col gap-7 max_features1">
                 <div className="flex flex-row gap-5 items-center max_feature1">
                   <Bullet />{" "}
                   <Ntext variant="text3" className="!leading-[24px]" color="m-light">
-                    Enjoy lower transaction fee at 0.42% <del className="text-n-grey3">0.5%</del>
+                    Enjoy lower transaction fee at 0.42% <del className="text-n-grey3">0.5%</del> capped at N80
                   </Ntext>
                 </div>
                 <div className="flex flex-row gap-5 items-center max_feature1">
@@ -130,7 +130,7 @@ const childWrapper1 = ctl(`
 
 `);
 const childWrapper2 = ctl(`
-flex flex-col items-center justify-center
+flex flex-col items-center justify-center mt-5
 `);
 
 const badgeWrapper = ctl(`
