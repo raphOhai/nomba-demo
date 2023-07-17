@@ -16,7 +16,7 @@ import {
   TerminalSectionInteractions,
 } from "templates/mini";
 import { split } from "animations/text";
-import { Testimonial, AccordionData, everyBusinesses, miniFeatures } from "config/mini";
+import { Testimonial, AccordionData, everyBusinesses, miniFeatures, miniBenefits } from "config/mini";
 import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
@@ -49,7 +49,7 @@ const MiniPage = () => {
               Switch to the MAX, <Br on="all" /> experience more than payments!
             </>
           }
-          description="Get Nomba MAX, the all-in-one business solution that offers more than just payment processing."
+          benefits={miniBenefits}
         />
         <TerminalSectionInteractions />
         <MiniFeatures2

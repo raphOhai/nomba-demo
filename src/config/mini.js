@@ -47,6 +47,13 @@ export const miniFeaturesBreakdown = [
   "1x Micro USB2.0, 1x DC jack",
 ];
 
+export const miniBenefits = [
+  "Lower transaction charges",
+  "Handy and convenient",
+  "Send paperless receipts",
+  "Get instant alerts and auto-settlement",
+];
+
 export const everyBusinesses = [
   {
     id: 1,

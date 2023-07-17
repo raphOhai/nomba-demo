@@ -11,12 +11,12 @@ import image4 from "jpegs/mini/terminal/image4.png";
 import network from "jpegs/mini/terminal/image5.png";
 import lgBa3 from "jpegs/mini/terminal/image6.png";
 import Pres from "svgs/pres.svg";
+
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const MiniFeatures2 = ({ title, features }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
-  const circle = useRef();
 
   useLayoutEffect(() => {
     // const images = document.querySelectorAll(".mini-images");
@@ -39,18 +39,11 @@ const MiniFeatures2 = ({ title, features }) => {
       tl1.addLabel(`card${0}`);
       tl1.add(() => setActiveImage(0), "-=0.15");
       for (let i = 0; i <= features.length; i++) {
-        if (i === 0) {
-          // tl1.to(`.sub-description-${i}`, {
-          //   yPercent: 0,
-          //   opacity: 1,
-          // });
-        } else {
+        if (i !== 0) {
           tl1.from(`.sub-description-${i}`, {
             height: 0,
             // opacity: 0,
           });
-
-          // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
 
           tl1.to(`.sub-description-${i}`, {
             // yPercent: -100,
@@ -67,7 +60,7 @@ const MiniFeatures2 = ({ title, features }) => {
           );
 
           tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveImage(i), "-=0.15");
+          tl1.add(() => setActiveImage(i), tl1.scrollTrigger.direction > 0 ? "-=0.15" : "+=0.15");
         }
       }
       // features.forEach((card, i) => {
@@ -109,7 +102,7 @@ const MiniFeatures2 = ({ title, features }) => {
         <div className="flex flex-col md:flex-row justify-around md:gap-[100px]">
           <div className=" bg-primary md:w-[597px] rounded-[10px] p-5 md:p-[40px]">
             <div className="overflow-hidden  bg-primary  flex flex-col gap-[40px]">
-              <div className="sub-description-0 overflow-hidden">
+              <div className="sub-description-0 overflow-hidden pb-10">
                 <div>
                   <Pres />
                 </div>

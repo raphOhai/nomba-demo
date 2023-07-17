@@ -8,12 +8,12 @@ import constants from "config/constants.json";
 import { MaxButton } from "components/max-button";
 import LogoMini from "jpegs/mini/logo.svg";
 import Check from "svgs/yellow-check.svg";
-const MiniHero = ({ title, description }) => {
+const MiniHero = ({ title, benefits }) => {
   const { SIGNUP_URL } = constants;
   return (
     <section className={heroStyle}>
       <Container className="relative">
-        <div className="min-h-[100vh]">
+        <div className="md:min-h-[100vh]">
           <div className={heroTextWrapperStyle}>
             <div className="flex flex-row items-end gap-3 ">
               <div>
@@ -29,7 +29,7 @@ const MiniHero = ({ title, description }) => {
                 </div>
               </div>
             </div>
-            <LogoMini />
+            <LogoMini className="max-w-[360px] md:max-w-none" />
 
             <div className={heroButtonsContainer}>
               <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
@@ -44,27 +44,25 @@ const MiniHero = ({ title, description }) => {
                 text="Contact sales"
               />
             </div>
-            <div className="flex gap-4 mt-10">
-              <div className="flex gap-[7px] items-center">
-                <div>
-                  <Check />
+            <div className="flex gap-4 mt-10 ">
+              {Array.from({ length: Math.ceil(benefits.length / 2) }, (_, index) =>
+                benefits.slice(index * 2, index * 2 + 2)
+              ).map((arr, i) => (
+                <div className="flex flex-col gap-4 mt-10">
+                  {arr.map(b => (
+                    <div key={b} className="flex basis-1/2 gap-[7px] items-center">
+                      <div>
+                        <Check />
+                      </div>
+                      <div>
+                        <Ntext variant="p16" className="!leading-[24px] " color="m-light">
+                          {b}
+                        </Ntext>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <Ntext variant="p16" className="!leading-[24px] " color="m-light">
-                    Enjoy 0.4% transaction fee
-                  </Ntext>
-                </div>
-              </div>
-              <div className="flex gap-[7px] items-center">
-                <div>
-                  <Check />
-                </div>
-                <div>
-                  <Ntext variant="p16" className="!leading-[24px] " color="m-light">
-                    Long lasting battery
-                  </Ntext>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="absolute rotate-[120deg] top-[10rem] right-[6rem] hover:animate-pulseCustom">
@@ -86,7 +84,7 @@ pt-[75px]
 
 const heroTextWrapperStyle = ctl(`
 lg:max-w-[692px]
-md:mt-[120px]
+md:mt-[100px]
 max-w-[100%]
 lg:mb-[80px]
 sm:mb-[120px]

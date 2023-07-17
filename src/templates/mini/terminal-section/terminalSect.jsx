@@ -9,48 +9,44 @@ import useIsMobile from "hooks/useIsMobile";
 gsap.registerPlugin(ScrollTrigger);
 
 const TerminalSectionInteractions = () => {
+  const isMobile = useIsMobile();
+
   useLayoutEffect(() => {
-    let tl1 = gsap.timeline({
-      scrollTrigger: {
-        invalidateOnRefresh: true,
-        trigger: ".mini-section-2",
-        pin: true,
-        start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "+=1500px", // end after scrolling 1000px beyond the start
-        toggleActions: "play reverse play reverse",
-        // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      },
-    });
-    tl1.to(".mini-2", {
-      opacity: 0,
-      // xPercent: 0,
-      // height: 0,
-
-      delay: 0.5,
-      duration: 0.6,
-      ease: "easeOut",
-    });
-    tl1.fromTo(
-      ".mini-1",
-      {
-        yPercent: 300,
-
+    if (window.innerWidth > 760) {
+      let tl1 = gsap.timeline({
+        scrollTrigger: {
+          invalidateOnRefresh: true,
+          trigger: ".mini-section-2",
+          pin: true,
+          start: "top top", // when the top of the trigger hits the top of the viewport
+          end: "+=1500px", // end after scrolling 1000px beyond the start
+          toggleActions: "play reverse play reverse",
+          // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        },
+      });
+      tl1.to(".mini-2", {
+        opacity: 0,
         // xPercent: 0,
-        // yPercent: 0,
-        // ease: "easeOut",
-      },
-      {
-        yPercent: -62,
+        // height: 0,
 
-        // yPercent: 600,
-        // // duration: 1.5,
-        // ease: "easeOut",
-      }
-    );
+        delay: 0.5,
+        duration: 0.6,
+        ease: "easeOut",
+      });
+      tl1.fromTo(
+        ".mini-1",
+        {
+          yPercent: window.innerWidth < 760 ? 400 : 300,
+        },
+        {
+          yPercent: -62,
+        }
+      );
+    }
   });
 
   return (
-    <section className="min-h-[100vh] mini-section-2">
+    <section className="md:min-h-[100vh] mini-section-2">
       <div className="justify-between flex flex-col h-full px-5 pt-20">
         <div>
           <div className="flex justify-center flex-col items-center">
@@ -99,11 +95,11 @@ const TerminalSectionInteractions = () => {
           </div>
         </div>
         <div className="terminal-mini-section">
-          <div className="relative">
-            <div className={`mini-2 flex flex-row justify-center  img `}>
+          <div className="relative hidden md:block">
+            <div className={`mini-2 md:flex flex-row justify-center hidden img `}>
               <StaticImage src="../../../assets/images/jpegs/mini/hero/mini2.png" alt="" />
             </div>
-            <div className="center-child mini-1   img  ">
+            <div className="center-child mini-1    img  ">
               <div className="flex-row flex justify-center items-center">
                 <StaticImage
                   className=""
@@ -114,6 +110,9 @@ const TerminalSectionInteractions = () => {
                 />
               </div>
             </div>
+          </div>
+          <div className={` md:hidden flex flex-row justify-center  `}>
+            <StaticImage src="../../../assets/images/jpegs/mini/hero/mini.png" alt="" />
           </div>
         </div>
       </div>
