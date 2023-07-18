@@ -70,8 +70,8 @@ const MiniPage = () => {
         <CommonQuestions questions={AccordionData} />
 
         <GetMini
-          title={<>Get Nomba Mini, Get Better</>}
-          description={<>For better performance and smoother payment experience, Nomba Mini is here for you.</>}
+          title={<>Everyone deserves a Payment Padi</>}
+          description={<>Get your Nomba Mini for better performance and smoother payment experience at lower costs.</>}
         />
 
         <HomepageTipsAndUpdate />

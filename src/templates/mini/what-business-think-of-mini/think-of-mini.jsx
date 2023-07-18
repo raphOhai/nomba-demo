@@ -46,7 +46,7 @@ const ThinkOfMini = ({ title }) => {
         {loadVideo && <video onClick={close} ref={hero_vid} controls src={BusinessVid}></video>}
       </div>
       <Container>
-        <div className="md:max-w-[671px] md:mx-auto  md:text-center">
+        <div className="md:max-w-[700px] md:mx-auto  md:text-center">
           <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>

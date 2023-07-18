@@ -139,7 +139,7 @@ const BoxSlider = ({ slides }) => {
           <SliderNavigation />
         </div>
       </div>
-      <div className="md:!hidden flex flex-col items-stretch gap-10  pb-5">
+      <div className="md:!hidden flex flex-col items-center  gap-10  pb-5">
         {slides.map(item => (
           <Box title={item.title} key={item.id} image={item.image} />
         ))}

@@ -27,20 +27,29 @@ export const Testimonial = [
 export const AccordionData = [
   {
     id: 1,
-    header: "Who is the Nomba MAX for?",
-    content:
-      "The Nomba MAX was specially designed for businesses that want to improve their payment experience and boost their business growth.",
+    header: "Is the price for outright purchase?",
+    content: "Yes, when you pay for the Nomba mini POS terminal, it fully belongs to you. It is not a caution fee.",
   },
   {
     id: 2,
-    header: "Does Nomba MAX print receipts?",
-    content: "Nomba MAX prints receipts and also allows for several re-prints.",
+    header: "Does the Nomba Mini terminal print receipts?",
+    content: "No, it doesn’t. However, you can send receipts via text message or email on the terminal for free.",
   },
   {
     id: 3,
-    header: "What else can I do with my Nomba MAX?",
+    header: "Does it connect to WiFi?",
+    content: "No, you need to insert a dedicated sim into the sim card slot to access data service.",
+  },
+  {
+    id: 3,
+    header: "Do I need to connect it to a phone before I can start to use it?",
+    content: "No, the Nomba Mini is a standalone device; this means all you need to transact is on your terminal.",
+  },
+  {
+    id: 3,
+    header: "Can I raise complaints on the terminal?",
     content:
-      "We are constantly working on updates and improvements for the Nomba MAX to improve your experience; please stay tuned to your email and our social media to keep up.",
+      "Yes. In rare cases where a payment is declined on your terminal, you can issue a dispute request and we will initiate a refund.",
   },
 ];
 export const miniFeaturesBreakdown = [
