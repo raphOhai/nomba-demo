@@ -1,16 +1,19 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { Ntext } from "components";
 
 import ctl from "@netlify/classnames-template-literals";
 import PlayMobile from "assets/images/svgs/play-grey.svg";
 import PauseMobile from "assets/images/svgs/pause-grey.svg";
 import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const WhyMini = ({ title }) => {
   const [playVideo, setPlayVid] = useState(true);
 
   const vid = useRef(null);
-
+  const comp = useRef(null);
   const togglePlay = () => {
     setPlayVid(!playVideo);
     if (playVideo) {
@@ -20,8 +23,19 @@ const WhyMini = ({ title }) => {
     }
   };
 
+  useLayoutEffect(() => {
+    ScrollTrigger.create({
+      trigger: comp.current,
+      start: "top top", // if it's shorter than the viewport, we prefer to pin it at the top
+      pin: true,
+      end: "+=1000",
+      // pinSpacing: false,
+      // onToggle: self => self.isActive && setSection(panel, i),
+    });
+  });
+
   return (
-    <section className="bg-black min-h-[100vh]  flex flex-col justify-center items-center relative">
+    <section ref={comp} className="bg-black min-h-[100vh]  flex flex-col justify-center items-center relative why-mini">
       <div className=" w-full">
         <div className="flex md:flex-row flex-col justify-center items-center ">
           <div className="">

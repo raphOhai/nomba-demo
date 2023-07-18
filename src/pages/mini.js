@@ -64,8 +64,8 @@ const MiniPage = () => {
         <EveryBusiness slides={everyBusinesses} />
         <MiniPricing title="Pricing & Specifications" price="₦25,000" leasePrice="₦15,000" />
 
-        <ThinkOfMini title="What Businesses Like Yours Think of Nomba Mini." />
-        <MiniTestimonial headingText="Why businesses are choosing Nomba" testimonials={Testimonial} />
+        <ThinkOfMini title="Why Businesses Rely on Nomba Mini as their Payment Padi." />
+        <MiniTestimonial headingText="Businesses Love Nomba Mini." testimonials={Testimonial} />
         <WhatsInTheBox title="What’s in the box?" />
         <CommonQuestions questions={AccordionData} />
 
