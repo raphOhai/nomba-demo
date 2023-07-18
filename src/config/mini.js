@@ -4,6 +4,11 @@ import BusinessIcon from "svgs/n-icons/outline/business.svg";
 import Wifi from "svgs/n-icons/outline/wifi.svg";
 import Globe from "svgs/n-icons/outline/globe.svg";
 import Battery from "svgs/battery-charging.svg";
+import box1 from "assets/images/jpegs/mini/inthebox/1.png";
+import box2 from "assets/images/jpegs/mini/inthebox/2.png";
+import box3 from "assets/images/jpegs/mini/inthebox/3.png";
+import box4 from "assets/images/jpegs/mini/inthebox/4.png";
+import box5 from "assets/images/jpegs/mini/inthebox/5.png";
 export const Testimonial = [
   {
     testimonial:
@@ -146,5 +151,107 @@ export const miniFeatures = [
     icon: <Globe />,
     description: "A new portable medium to collect physical payments",
     more_description: "Collect payment anywhere, anytime and seamlessly",
+  },
+];
+
+export const InTheBox = [
+  {
+    id: 1,
+    title: "Nomba Mini Terminal",
+    image: (
+      <StaticImage
+        width={321}
+        height={300}
+        className=""
+        alt="Nomba Max Terminal"
+        src="../assets/images/jpegs/mini/inthebox/1.png"
+      />
+    ),
+    path: box1,
+  },
+  {
+    id: 2,
+    title: "Charger",
+    image: (
+      <StaticImage
+        width={353}
+        height={300}
+        className=""
+        alt="Charger"
+        src="../assets/images/jpegs/mini/inthebox/2.png"
+      />
+    ),
+    path: box2,
+  },
+  {
+    id: 3,
+    title: "POS Terminal Guide",
+    image: (
+      <StaticImage
+        width={310}
+        height={300}
+        className=""
+        alt="POS guide"
+        src="../assets/images/jpegs/mini/inthebox/3.png"
+      />
+    ),
+    path: box3,
+  },
+  {
+    id: 4,
+    title: "Table stand",
+    image: (
+      <StaticImage
+        width={340}
+        height={300}
+        className=""
+        alt="Table Stand"
+        src="../assets/images/jpegs/mini/inthebox/4.png"
+      />
+    ),
+    path: box4,
+  },
+  {
+    id: 6,
+    title: "Nomba Mini Terminal",
+    image: (
+      <StaticImage
+        width={321}
+        height={300}
+        className=""
+        alt="Nomba Mini Terminal"
+        src="../assets/images/jpegs/mini/inthebox/1.png"
+      />
+    ),
+    path: box1,
+  },
+
+  {
+    id: 6,
+    title: "Sticker",
+    image: (
+      <StaticImage
+        width={328}
+        height={300}
+        className=""
+        alt="Sticker"
+        src="../assets/images/jpegs/mini/inthebox/5.png"
+      />
+    ),
+    path: box5,
+  },
+  {
+    id: 7,
+    title: "Table stand",
+    image: (
+      <StaticImage
+        width={340}
+        height={300}
+        className=""
+        alt="Table Stand"
+        src="../assets/images/jpegs/mini/inthebox/4.png"
+      />
+    ),
+    path: box4,
   },
 ];

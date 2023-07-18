@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { InTheBox } from "config/terminal";
 import { Container, Ntext } from "components";
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";
@@ -7,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
-const WhatsInTheBox = ({ title }) => {
+const WhatsInTheBox = ({ title, InTheBox }) => {
   useEffect(() => {
     gsap.to(".section_header4", {
       scrollTrigger: {

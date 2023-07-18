@@ -12,7 +12,7 @@ import {
   MaxPricing,
 } from "templates/max";
 import { split } from "animations/text";
-import { AccordionData } from "config/terminal";
+import { AccordionData, InTheBox } from "config/terminal";
 import { CommonQuestions } from "components/common-questions";
 
 const MaxPage = () => {
@@ -53,7 +53,7 @@ const MaxPage = () => {
         description="Designed to the last pixel to give you the max performance - faster transaction, long lasting battery, high speed printer, durable and reliable POS terminal."
       />
       <MaxBusinessTypes title="What Businesses Like Yours Think of Nomba MAX." />
-      <WhatsInTheBox title="What’s in the box?" />
+      <WhatsInTheBox title="What’s in the box?" InTheBox={InTheBox} />
       <MaxPricing title="Pricing & Specifications" price="₦85,000" leasePrice="₦45,000" />
       <CommonQuestions questions={AccordionData} />
 

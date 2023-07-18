@@ -16,7 +16,7 @@ import {
   TerminalSectionInteractions,
 } from "templates/mini";
 import { split } from "animations/text";
-import { Testimonial, AccordionData, everyBusinesses, miniFeatures, miniBenefits } from "config/mini";
+import { Testimonial, AccordionData, everyBusinesses, miniFeatures, miniBenefits, InTheBox } from "config/mini";
 import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
@@ -66,7 +66,7 @@ const MiniPage = () => {
 
         <ThinkOfMini title="Why Businesses Rely on Nomba Mini as their Payment Padi." />
         <MiniTestimonial headingText="Businesses Love Nomba Mini." testimonials={Testimonial} />
-        <WhatsInTheBox title="What’s in the box?" />
+        <WhatsInTheBox title="What’s in the box?" InTheBox={InTheBox} />
         <CommonQuestions questions={AccordionData} />
 
         <GetMini
