@@ -6,6 +6,8 @@ import PlayMobile from "assets/images/svgs/play-grey.svg";
 import PauseMobile from "assets/images/svgs/pause-grey.svg";
 import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
 import gsap from "gsap";
+import { IO } from "animations/observe";
+
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +26,16 @@ const WhyMini = ({ title }) => {
   };
 
   useLayoutEffect(() => {
+    IO(comp.current).then(
+      () => {
+        setTimeout(() => {
+          vid.current.play();
+        }, 1200);
+      },
+      {
+        threshold: 1,
+      }
+    );
     ScrollTrigger.create({
       trigger: comp.current,
       start: "top top", // if it's shorter than the viewport, we prefer to pin it at the top
@@ -45,7 +57,6 @@ const WhyMini = ({ title }) => {
               muted
               playsInline
               className="opacity-40 w-full h-[100vh]"
-              autoPlay
               loop
               ref={vid}
               width={1440}

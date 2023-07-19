@@ -10,7 +10,6 @@ import {
   ThinkOfMini,
   EveryBusiness,
   WhyMini,
-  MiniFeatures,
   MiniFeatures2,
   MiniHero,
   TerminalSectionInteractions,
