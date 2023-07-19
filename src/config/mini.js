@@ -139,27 +139,31 @@ export const everyBusinesses = [
 export const miniFeatures = [
   {
     title: "Portablity",
-    icon: <BusinessIcon />,
-    description: "A new portable medium to collect physical payments",
-    more_description: "Collect payment anywhere, anytime and seamlessly",
+    icon: <BusinessIcon className="mini-svg-1" />,
+    description: "Introducing Nomba Mini: Your Pocket-Sized Payment Padi for On-the-Go Transactions!",
+    more_description:
+      "The Nomba Mini is palm size and can fit into your pocket. Handy and convenient, your payment padi is ready to go anywhere and at anytime.  ",
   },
   {
     title: "Long lasting battery",
-    icon: <Battery />,
-    description: "A new portable medium to collect physical payments",
-    more_description: "Collect payment anywhere, anytime and seamlessly",
+    icon: <Battery className="mini-svg-2" />,
+    description: "Endless Reliability: Nomba Mini Terminal Keeps You Going!",
+    more_description:
+      "With an initial charge of two hours, your terminal is ready to deliver long-lasting performance that you can rely on.",
   },
   {
     title: "Faster Transactions",
-    icon: <Wifi />,
-    description: "A new portable medium to collect physical payments",
-    more_description: "Collect payment anywhere, anytime and seamlessly",
+    icon: <Wifi className="mini-svg-3" />,
+    description: "Seamless Payments: Quick Transactions, Instant Alerts, Auto-Settlement!",
+    more_description:
+      "Enhance your payment process with quick and seamless transactions, instant alerts, and auto-settlement for both you and your customers.",
   },
   {
     title: "Reliable network",
-    icon: <Globe />,
-    description: "A new portable medium to collect physical payments",
-    more_description: "Collect payment anywhere, anytime and seamlessly",
+    icon: <Globe className="mini-svg-4" />,
+    description: "An uninterrupted connectivity with 4G and WiFi Support",
+    more_description:
+      "Enjoy uninterrupted connectivity with your Nomba Mini terminal. 4G and WiFi-enabled, it does not require being connected to an android device.",
   },
 ];
 

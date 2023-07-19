@@ -39,7 +39,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
             opacity: 1,
           });
           tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+          tl1.add(() => setActiveNav(i), "-=0.15");
         } else {
           tl1.from(`.section-four-rect-card-${i}`, {
             yPercent: 200,
@@ -63,7 +63,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
             opacity: 1,
           });
           tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveNav(tl1.scrollTrigger.direction > 0 ? i : 0), "-=0.15");
+          tl1.add(() => setActiveNav(i), "-=0.15");
         }
       });
 
