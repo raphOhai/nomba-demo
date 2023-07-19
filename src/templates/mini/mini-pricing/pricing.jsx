@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useLayoutEffect, useState, useRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
@@ -6,40 +6,17 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { MaxButton } from "components/max-button";
 import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
-import Mini from "svgs/mini.svg";
-import spinTerminal from "jpegs/mini/terminal/MINI.mp4";
+
 import Check from "svgs/yellow-check.svg";
-import { IO } from "animations/observe";
 import { miniFeaturesBreakdown } from "config/mini";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 const MiniPricing = ({ title, price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
-  const [isHoverVid, setHoverVid] = useState(false);
-  const video = useRef(null);
 
-  const fadeOutVid = () => {
-    setHoverVid(true);
-  };
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     const sections = gsap.utils.toArray(".max_feature1");
-    const wrap = document.querySelector(".spininTerminal");
-    IO(wrap).then(
-      () => {
-        console.log(90);
-        setTimeout(() => {
-          fadeOutVid();
-        }, 500);
-        setTimeout(() => {
-          video.current.playbackRate = 0.5;
-          video.current.play();
-        }, 2000);
-      },
-      {
-        threshold: 1,
-      }
-    );
+
     gsap.set(sections, {
       opacity: 0,
       xPercent: 10,
@@ -63,29 +40,13 @@ const MiniPricing = ({ title, price, leasePrice }) => {
   });
 
   return (
-    <section className="mt-[100px] md:mt-[150px] pricing-mini" id="pricing">
+    <section className="mt-[100px] md:mt-[150px]  min-h-[100vh]" id="pricing">
       <div>
         <Container>
-          <div className="md:max-w-[671px] md:mx-auto section_header3 md:text-center mb-[30px] md:mb-[80px]">
+          <div className="md:max-w-[671px] md:mx-auto  md:text-center  md:mb-[80px]">
             <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
               {title}
             </Ntext>
-          </div>
-        </Container>
-      </div>
-      <div className=" rounded-[6px]">
-        <Container className="">
-          <div className="c_terminal_sectInt_experience spininTerminal">
-            <Mini className={isHoverVid ? "fadeOut" : null} />
-            <video
-              ref={video}
-              className={isHoverVid ? "fadeIn" : null}
-              loop
-              autoPlay
-              muted
-              playsInline
-              src={spinTerminal}
-            ></video>
           </div>
           <div className={wrapper}>
             {/* <div className={childWrapper1}>
@@ -134,7 +95,7 @@ const MiniPricing = ({ title, price, leasePrice }) => {
           </div>
           <div className="flex flex-wrap items-start justify-center mt-20">
             {miniFeaturesBreakdown.map(f => (
-              <div className="flex-col flex w-[275px] items-center md:mx-16 mt-16">
+              <div key={f} className="flex-col flex w-[275px] items-center md:mx-16 mt-16">
                 <div>
                   <Check />
                 </div>
@@ -155,7 +116,7 @@ const MiniPricing = ({ title, price, leasePrice }) => {
 const wrapper = ctl(`
 flex
 flex-col
-py-10
+pb-10
 items-center
 justify-center
 gap-5
@@ -166,7 +127,7 @@ const childWrapper1 = ctl(`
 
 `);
 const childWrapper2 = ctl(`
-flex flex-col items-center justify-center mt-5
+flex flex-col items-center justify-center mt-[5rem] md:mt-5
 `);
 
 const badgeWrapper = ctl(`

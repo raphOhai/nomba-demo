@@ -9,6 +9,7 @@ import {
   GetMini,
   ThinkOfMini,
   EveryBusiness,
+  ExperienceMini,
   WhyMini,
   MiniFeatures2,
   MiniHero,
@@ -61,6 +62,13 @@ const MiniPage = () => {
         />
         <WhyMini />
         <EveryBusiness slides={everyBusinesses} />
+        <ExperienceMini
+          title={
+            <>
+              Experience the Mini in your <Br on="desktop" /> payment collection
+            </>
+          }
+        />
         <MiniPricing title="Pricing & Specifications" price="₦25,000" leasePrice="₦15,000" />
 
         <ThinkOfMini title="Why Businesses Rely on Nomba Mini as their Payment Padi." />

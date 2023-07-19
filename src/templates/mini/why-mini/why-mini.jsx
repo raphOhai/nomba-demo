@@ -26,24 +26,27 @@ const WhyMini = ({ title }) => {
   };
 
   useLayoutEffect(() => {
-    IO(comp.current).then(
-      () => {
-        setTimeout(() => {
-          vid.current.play();
-        }, 1200);
-      },
-      {
-        threshold: 1,
-      }
-    );
-    ScrollTrigger.create({
-      trigger: comp.current,
-      start: "top top", // if it's shorter than the viewport, we prefer to pin it at the top
-      pin: true,
-      end: "+=1000",
-      // pinSpacing: false,
-      // onToggle: self => self.isActive && setSection(panel, i),
+    let ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: comp.current,
+        start: "top top", // if it's shorter than the viewport, we prefer to pin it at the top
+        pin: true,
+        end: "+=1000",
+        // pinSpacing: false,
+        // onToggle: self => self.isActive && setSection(panel, i),
+      });
+      IO(comp.current).then(
+        () => {
+          setTimeout(() => {
+            vid.current.play();
+          }, 1200);
+        },
+        {
+          threshold: 1,
+        }
+      );
     });
+    return () => ctx.revert();
   });
 
   return (
@@ -79,7 +82,7 @@ const WhyMini = ({ title }) => {
               </div>
               <div className="flex flex-row  mt-[50px] gap-[20px] md:gap-[50px] md:justify-start justify-center ">
                 {[1, 2, 3].map(t => (
-                  <div className="">
+                  <div className="" key={t}>
                     <div className="text-[16px] text-n-light">Up to</div>
                     <div>
                       <Ntext variant="text8" color="primary-100" data-animation="rtl">
