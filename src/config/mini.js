@@ -72,65 +72,138 @@ export const everyBusinesses = [
   {
     id: 1,
     title: "Restaurant",
-    color: "n-yellow2",
+    color: "b-1",
     image: (
       <StaticImage
         src="../assets/images/jpegs/mini/business-types/image1.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
-        width={821}
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile1.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
       />
     ),
   },
   {
     id: 2,
+    title: "Supermarket",
+    color: "b-2",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image2.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile2.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
+      />
+    ),
+  },
+  {
+    id: 3,
     title: "Pharmacy",
-    color: "n-green2",
+    color: "b-3",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/mini/business-types/image1.png"
+        src="../assets/images/jpegs/mini/business-types/image3.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
-        width={821}
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile3.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
       />
     ),
   },
   {
-    id: 3,
-    title: "Bolt driving",
-    color: "n-pink1",
+    id: 4,
+    title: "Fashion",
+    color: "b-4",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/mini/business-types/image1.png"
+        src="../assets/images/jpegs/mini/business-types/image4.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
-        width={821}
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile4.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
       />
     ),
   },
   {
-    id: 3,
-    title: "Bolt driving",
-    color: "n-pink1",
+    id: 5,
+    title: "Marketplace",
+    color: "b-5",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/mini/business-types/image1.png"
+        src="../assets/images/jpegs/mini/business-types/image5.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
-        width={821}
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile5.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
       />
     ),
   },
   {
-    id: 3,
-    title: "Bolt driving",
-    color: "n-pink1",
+    id: 6,
+    title: "Taxi - Uber/Bolt",
+    color: "b-6",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/mini/business-types/image1.png"
+        src="../assets/images/jpegs/mini/business-types/image6.png"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
-        width={821}
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile6.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
       />
     ),
   },

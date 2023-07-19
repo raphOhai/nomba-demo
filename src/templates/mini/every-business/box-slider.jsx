@@ -13,6 +13,7 @@ const BoxSlider = ({ slides }) => {
   useLayoutEffect(() => {
     let sections = gsap.utils.toArray(".box-panel");
     let titles = document.querySelectorAll(".b-title");
+    let slider = document.querySelector(".box-slider");
     // gsap.to(sections, {
     //   xPercent: -150 * (sections.length - 1),
     //   ease: "none",
@@ -38,8 +39,8 @@ const BoxSlider = ({ slides }) => {
           pin: true,
           start: "top 30%",
           scrub: 1,
-          end: "+=3000px",
-          snap: 1 / sections.length,
+          end: `+=${slider.offsetWidth + 2500}px`,
+          snap: 1 / (sections.length - 1),
           // onSnapComplete() {
           //   alert(4);
           // },
@@ -53,16 +54,16 @@ const BoxSlider = ({ slides }) => {
                   if (item === t) {
                     // t.classList.remove("hidden");
                   } else {
-                    item.classList.add("hidden");
-                    t.classList.remove("hidden");
+                    item.classList.remove("md:block");
+                    t.classList.add("md:block");
                     item = t;
                   }
                 } else {
-                  t.classList.remove("hidden");
+                  t.classList.add("md:block");
                   item = t;
                 }
               } else {
-                t.classList.add("hidden");
+                t.classList.remove("md:block");
               }
             });
           },
@@ -71,17 +72,18 @@ const BoxSlider = ({ slides }) => {
 
       // sections.forEach((card, i) => {
       tl1.to(sections, {
-        xPercent: -250,
+        xPercent: -100 * (sections.length - 1),
       });
       // });
     });
+    return () => ctx.revert();
   });
 
   return (
     <>
       <div className="flex justify-start gap-7 mt-[50px] items-center flex-nowrap flex-row scrollbar-hide overflow-auto box-slider">
         {slides.map((item, i) => (
-          <Box key={i} className={`box-panel-${i}`} image={item.image} />
+          <Box key={i} className={`box-panel-${i}`} image={item.image} mobileImage={item.mobileImage} />
         ))}
       </div>
     </>

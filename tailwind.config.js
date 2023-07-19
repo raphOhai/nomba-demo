@@ -114,6 +114,14 @@ module.exports = {
           yellow: "#ffd42b",
           yellow1: "#FFCC001A",
         },
+        b: {
+          1: "#FFF5CC",
+          2: "#D9F2F2",
+          3: "#CFF1CC",
+          4: "#EFD9F2",
+          5: "#D9F3F3",
+          6: "#FFEEAA",
+        },
       },
 
       boxShadow: {
