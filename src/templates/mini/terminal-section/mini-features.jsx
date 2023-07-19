@@ -9,8 +9,6 @@ import image2 from "jpegs/mini/terminal/image2.png";
 import image3 from "jpegs/mini/terminal/image6.png";
 import image4 from "jpegs/mini/terminal/image4.png";
 import image5 from "jpegs/mini/terminal/image5.png";
-import network from "jpegs/mini/terminal/image5.png";
-import lgBa3 from "jpegs/mini/terminal/image6.png";
 import Pres from "svgs/pres.svg";
 import Mini from "svgs/mini.svg";
 // register scrolltrigger
@@ -49,11 +47,25 @@ const MiniFeatures2 = ({ title, features }) => {
         tl1.add(() => setActiveImage(0), "-=0.15");
         for (let i = 0; i <= features.length; i++) {
           if (i !== 0) {
+            let path1 = document.querySelector(`.mini-svg-${i}`).getElementsByTagName("path");
+
             tl1.from(`.sub-description-${i}`, {
               height: 0,
               // opacity: 0,
             });
-
+            tl1
+              .add("start")
+              .to(`.feature-title-${i}`, { color: "#FFFFFF", duration: 0.3 }, "start")
+              .to(`.feature-title-${i - 1}`, { color: "#717171", duration: 0.1 }, "start")
+              .to(path1, {
+                stroke: "#FFFFFF",
+              });
+            if (i > 1) {
+              let path2 = document.querySelector(`.mini-svg-${i - 1}`).getElementsByTagName("path");
+              tl1.to(path2, {
+                stroke: "#717171",
+              });
+            }
             tl1.to(`.sub-description-${i}`, {
               // yPercent: -100,
               height: 250,
@@ -123,7 +135,7 @@ const MiniFeatures2 = ({ title, features }) => {
                 </div>
                 <div className="max-w-[300px] mt-5">
                   <Ntext variant="text-3" color="n-yellow">
-                    The new pocket-sized terminal for swift and successful transactions
+                    Conveniently receive any type of payment, anywhere.
                   </Ntext>
                 </div>
                 <div className="flex md:!hidden flex-row justify-center  border-b md:border-none border-n-grey3 pt-[40px] pb-[40px]">
@@ -134,7 +146,11 @@ const MiniFeatures2 = ({ title, features }) => {
             <div class=" bg-primary flex flex-col gap-[30px]">
               {features.map((t, i) => (
                 <div className="pt-[5px]">
-                  <div className="flex justify-between flex-row items-center md:text-n-grey4 text-n-light ">
+                  <div
+                    className={`feature-title-${
+                      i + 1
+                    } flex justify-between flex-row items-center md:text-n-grey4 text-n-light`}
+                  >
                     <div className=" font-[600] text-[22px] md:text-[24px]">{t.title}</div>
 
                     {t.icon}
@@ -143,12 +159,12 @@ const MiniFeatures2 = ({ title, features }) => {
                     <div>
                       <div className="max-w-[454px] mt-5">
                         <Ntext variant="text7" color="n-light">
-                          The new pocket-sized terminal for swift and successful transactions
+                          {t.description}
                         </Ntext>
                       </div>
                       <div className="max-w-[300px] mt-5">
-                        <Ntext variant="text-3" color="n-yellow">
-                          The new pocket-sized terminal for swift and successful transactions
+                        <Ntext variant="text-3" color="n-grey2">
+                          {t.more_description}
                         </Ntext>
                       </div>
                     </div>
