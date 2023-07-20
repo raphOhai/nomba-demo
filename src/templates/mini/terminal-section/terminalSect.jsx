@@ -1,9 +1,8 @@
-import React, { useRef, useLayoutEffect } from "react";
-import { Container, Ntext } from "components";
+import React, { useLayoutEffect } from "react";
+import { Ntext } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import useIsMobile from "hooks/useIsMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,9 +22,6 @@ const TerminalSectionInteractions = () => {
       });
       tl1.to(".mini-2", {
         opacity: 0,
-        // xPercent: 0,
-        // height: 0,
-
         delay: 0.5,
         duration: 0.6,
         ease: "easeOut",

@@ -14,23 +14,7 @@ const BoxSlider = ({ slides }) => {
     let sections = gsap.utils.toArray(".box-panel");
     let titles = document.querySelectorAll(".b-title");
     let slider = document.querySelector(".box-slider");
-    // gsap.to(sections, {
-    //   xPercent: -150 * (sections.length - 1),
-    //   ease: "none",
-    //   duration: 5,
-    //   delay: 1,
-    //   scrollTrigger: {
-    //     trigger: ".box-slider",
-    //     start: "top 30%",
-    //     pin: true,
-    //     scrub: 4,
-    //     snap: 1 / (sections.length - 1),
-    //     // base vertical scrolling on how wide the container is so it feels more natural.
-    //     end: "+=500px",
-    //   },
-    // });
 
-    console.log(titles);
     let ctx = gsap.context(() => {
       let tl1 = gsap.timeline({
         scrollTrigger: {

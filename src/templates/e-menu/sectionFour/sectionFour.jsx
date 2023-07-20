@@ -1,10 +1,8 @@
-import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
-import ctl from "@netlify/classnames-template-literals";
-import PropTypes from "prop-types";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { Container, Ntext, Button, SectionHeader, ReadMore } from "components";
+import { Container, Ntext, SectionHeader, ReadMore } from "components";
 import constants from "config/constants.json";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -12,10 +10,8 @@ const EmenuSection4 = ({ headingText, tools }) => {
   const { SIGNUP_URL } = constants;
 
   const comp = useRef(); // create a ref for the root level element (for scoping)
-  const circle = useRef();
 
   useLayoutEffect(() => {
-    const dom = document.querySelector(".section-four");
     /**
      * create our context.
      * This function is invoked immediately and all GSAP animations and ScrollTriggers created
@@ -70,9 +66,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
       gsap.utils.toArray(".section-nav-link a").forEach((a, i) => {
         a.addEventListener("click", e => {
           e.preventDefault();
-          console.log(tl1.scrollTrigger.direction);
-          console.log(i);
-          let pad = i === 0 ? 0 : tl1.scrollTrigger.direction > 0 ? 2 : -2;
+
           gsap.to(window, { scrollTo: labelToScroll(tl1, "card" + i) + 2 });
         });
       });
@@ -96,7 +90,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
     }, comp); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
-  }, []); // <- empty dependency Array so it doesn't re-run on every render
+  }, [tools]); // <- empty dependency Array so it doesn't re-run on every render
   return (
     <div class=" bg-n-light relative section-four">
       <Container className="">
@@ -158,10 +152,5 @@ const EmenuSection4 = ({ headingText, tools }) => {
     </div>
   );
 };
-const heroButtonsContainer = ctl(`
-absolute
-md:top-[77%] top-[83%]
-w-full
-text-center
-`);
+
 export { EmenuSection4 };

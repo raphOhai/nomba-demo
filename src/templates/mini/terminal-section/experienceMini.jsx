@@ -1,6 +1,4 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
-
-import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext } from "components";
 import Mini from "svgs/mini.svg";
 import spinTerminal from "jpegs/mini/terminal/MINI1.mp4";
@@ -30,7 +28,6 @@ const ExperienceMini = ({ title, description }) => {
       const wrap = document.querySelector(".spininTerminal");
       IO(wrap).then(
         () => {
-          console.log(90);
           setTimeout(() => {
             fadeOutVid();
           }, 500);
@@ -73,24 +70,5 @@ const ExperienceMini = ({ title, description }) => {
     </section>
   );
 };
-
-const heroTextHeaders = ctl(`
-md:flex
-md:flex-row
-md:items-start
-mb-10
-gap-5
-`);
-
-const subTextStyle = ctl(`
-mb-8
-mt-6
-md:mt-3
-basis-2/5
-flex 
-flex-col
-gap-10
-max-w-[426.85px]
-`);
 
 export { ExperienceMini };

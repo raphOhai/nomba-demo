@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import Layout from "components/layout-max";
 import { GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
-// import { HowInvoicingWorks, EveryBusiness } from "templates/invoice";
 import { split } from "animations/text";
 import { faqData } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
@@ -20,7 +19,7 @@ import {
 import { eMenuTestimonial, businessTool, howItworks } from "config/e-menu";
 import { gsap } from "gsap";
 
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 const EmenuPage = () => {
   const lenisRef = useRef();
   useEffect(() => {

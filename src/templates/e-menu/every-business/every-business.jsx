@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";

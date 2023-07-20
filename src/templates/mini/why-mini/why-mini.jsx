@@ -11,7 +11,7 @@ import { IO } from "animations/observe";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const WhyMini = ({ title }) => {
+const WhyMini = () => {
   const [playVideo, setPlayVid] = useState(true);
 
   const vid = useRef(null);
@@ -50,7 +50,10 @@ const WhyMini = ({ title }) => {
   });
 
   return (
-    <section ref={comp} className="bg-black min-h-[100vh]  flex flex-col justify-center items-center relative why-mini">
+    <section
+      ref={comp}
+      className="bg-black md:min-h-[100vh]  flex flex-col justify-center items-center relative why-mini"
+    >
       <div className=" w-full">
         <div className="flex md:flex-row flex-col justify-center items-center ">
           <div className="">

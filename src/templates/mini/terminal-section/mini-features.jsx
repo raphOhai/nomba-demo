@@ -2,8 +2,6 @@ import React, { useLayoutEffect, useRef } from "react";
 import { Container, Ntext } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { FeatureCards } from "./feature-cards";
-import { StaticImage } from "gatsby-plugin-image";
 import image1 from "jpegs/mini/terminal/image1.png";
 import image2 from "jpegs/mini/terminal/image2.png";
 import image3 from "jpegs/mini/terminal/image6.png";
@@ -14,7 +12,7 @@ import Mini from "svgs/mini.svg";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
-const MiniFeatures2 = ({ title, features }) => {
+const MiniFeatures2 = ({ features }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
 
   const mobileImages = {
@@ -91,9 +89,6 @@ const MiniFeatures2 = ({ title, features }) => {
         gsap.utils.toArray(".section-nav-link a").forEach((a, i) => {
           a.addEventListener("click", e => {
             e.preventDefault();
-            console.log(tl1.scrollTrigger.direction);
-            console.log(i);
-            let pad = i === 0 ? 0 : tl1.scrollTrigger.direction > 0 ? 2 : -2;
             gsap.to(window, { scrollTo: labelToScroll(tl1, "card" + i) + 2 });
           });
         });
@@ -117,7 +112,7 @@ const MiniFeatures2 = ({ title, features }) => {
 
       return () => ctx.revert(); // cleanup
     }
-  }, []); // <- empty dependency Array so it doesn't re-run on every render
+  }, [features]); // <- empty dependency Array so it doesn't re-run on every render
   return (
     <section ref={comp} className="min-h-[100vh] py-[100px] feature-section bg-n-grey1" id="features">
       <Container className="!px-0 md:px-[25px]">

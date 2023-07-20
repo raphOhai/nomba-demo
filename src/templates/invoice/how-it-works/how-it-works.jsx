@@ -46,7 +46,7 @@ const HowInvoicingWorks = ({ title }) => {
             currentSection = newSection;
           }
         }
-        console.log(panels[0].offsetHeight * panels.length);
+
         gsap.to(".header-text", {
           scrollTrigger: {
             trigger: ".header-text",

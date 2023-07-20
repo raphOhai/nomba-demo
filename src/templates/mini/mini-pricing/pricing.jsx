@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState, useRef } from "react";
+import React, { useLayoutEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
@@ -123,9 +123,7 @@ gap-5
 px-5
 rounded-[6px]
 `);
-const childWrapper1 = ctl(`
 
-`);
 const childWrapper2 = ctl(`
 flex flex-col items-center justify-center mt-[5rem] md:mt-5
 `);
@@ -150,21 +148,6 @@ cursor-default
 text-[14px]
 font-[500]
 delay-200
-leading-[22px]
-`);
-const leaseBadgeButtonStyle = ctl(`
-transition-all
-ease-linear
-delay-200
-text-n-grey2
-rounded-[10px]
-bg-n-grey6
-md:px-[30px]
-px-[24px]
-py-[3px]
-cursor-pointer
-text-[14px]
-font-[500]
 leading-[22px]
 `);
 export { MiniPricing };

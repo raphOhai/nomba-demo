@@ -11,7 +11,6 @@ const EveryBusiness = ({ slides }) => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      console.log(isMobile);
       let panels = gsap.utils.toArray(".box-panel");
       gsap.to(".header-text-every-business-mini", {
         scrollTrigger: {

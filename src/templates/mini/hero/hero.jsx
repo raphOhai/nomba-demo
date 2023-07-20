@@ -92,19 +92,6 @@ mb-10
 
 `);
 
-const heroTextHeaders = ctl(`
-md:flex
-md:flex-col
-md:items-start
-mb-[40px]
-lg:mb-[50px]
-`);
-
-const subTextStyle = ctl(`
-
-opacity-0
-`);
-
 const heroButtonsContainer = ctl(`
 flex
 flex-col

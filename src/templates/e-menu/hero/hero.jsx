@@ -1,16 +1,11 @@
 import { Container, Ntext, Button } from "components";
-import React, { useEffect } from "react";
+import React from "react";
 import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
 import constants from "config/constants.json";
 import ctl from "@netlify/classnames-template-literals";
 
 const EmenuHero = () => {
   const { SIGNUP_URL } = constants;
-  useEffect(() => {
-    const ltr = document.querySelector("[data-animation='ltr']");
-    const rtl = document.querySelector("[data-animation='rtl']");
-    // console.log(rtl);
-  });
 
   return (
     <section className="bg-black min-h-[100vh] md:mt-[-70px] flex flex-col justify-center items-center">

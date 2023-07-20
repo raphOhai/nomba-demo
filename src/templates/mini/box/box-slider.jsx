@@ -22,7 +22,6 @@ const BoxSlider = ({ slides }) => {
 
   const goNext = () => {
     if (ref.current !== null && ref.current.swiper !== null) {
-      console.log(ref);
       ref.current.swiper.slideNext();
     }
   };
@@ -35,7 +34,6 @@ const BoxSlider = ({ slides }) => {
   // Add eventlisteners for swiper after initializing
   useEffect(() => {
     if (swiper !== null) {
-      console.log(swiper);
       swiper.on("slideChange", () => updateCurrentIndex(swiper.realIndex));
     }
 

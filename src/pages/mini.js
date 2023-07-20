@@ -20,7 +20,7 @@ import { Testimonial, AccordionData, everyBusinesses, miniFeatures, miniBenefits
 import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 const MiniPage = () => {
   const lenisRef = useRef();

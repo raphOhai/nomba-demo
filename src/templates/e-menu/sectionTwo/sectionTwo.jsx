@@ -1,10 +1,8 @@
 import React, { useLayoutEffect, useEffect, createRef } from "react";
-import ctl from "@netlify/classnames-template-literals";
-import PropTypes from "prop-types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Container, Ntext, Button } from "components";
+import { Ntext, Button } from "components";
 import constants from "config/constants.json";
 import Lottie from "lottie-web";
 import animation from "./animations/section22.json";
@@ -99,13 +97,6 @@ const EmenuSection2 = () => {
 
     IO(dom).then(
       () => {
-        // tl.to(titleText.chars, {
-        //   // fontSize: window.innerWidth > 767 ? "4rem " : "3rem",
-        //   // y: "0",
-        //   // lineHeight: window.innerWidth > 767 ? "5.25rem" : "3.3rem",
-        //   duration: 1,
-        //   ease: "easeOut",
-        // });
         let text = document.querySelector(".section-two-title");
         setTimeout(function () {
           const clonedText = text.cloneNode(true);
@@ -188,10 +179,5 @@ const EmenuSection2 = () => {
     </div>
   );
 };
-const heroButtonsContainer = ctl(`
-absolute
-md:top-[77%] top-[83%]
-w-full
-text-center
-`);
+
 export { EmenuSection2 };
