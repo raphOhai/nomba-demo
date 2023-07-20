@@ -15,7 +15,7 @@ import { split } from "animations/text";
 import { AccordionData, InTheBox } from "config/terminal";
 import { CommonQuestions } from "components/common-questions";
 import { Button, useDisclosure } from "@chakra-ui/react";
-import { Checkout } from "components/checkout";
+import { Cart } from "components/checkout";
 const MaxPage = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
@@ -29,7 +29,7 @@ const MaxPage = () => {
         <Button ref={btnRef} colorScheme="yellow" position="fixed " onClick={onOpen}>
           Open
         </Button>
-        <Checkout isOpen={isOpen} onClose={onClose} finalFocusRef={btnRef} />
+        <Cart isOpen={isOpen} onClose={onClose} finalFocusRef={btnRef} />
       </div>
       <MaxpageHero
         title={
