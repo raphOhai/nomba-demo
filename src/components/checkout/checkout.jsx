@@ -31,28 +31,23 @@ const Checkout = ({ itemCount, userInfo }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between">
-        <div>PRODUCT DETAILS</div>
+      <div className="flex justify-between mt-5 items-center">
+        <div>DELIVERY INFORMATION</div>
         <div className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">Update</div>
       </div>
-      <div className="bg-n-grey6 px-5 py-6 mt-4">
-        <div className="flex md:flex-row flex-col justify-between">
-          <div className="md:max-w-[250px] flex flex-row gap-6">
+      <div className="bg-n-grey6 px-5 py-6 mt-4 ">
+        <div className="flex flex-col gap-5 justify-between">
+          <div className="flex flex-col gap-2">
+            <div className="text-n-grey3 text-[12px]">Continue</div>
             <div>
-              <StaticImage height={120} width={63} src="../../assets/images/jpegs/cart/max.png" alt="Nomba Max" />
+              {userInfo.firstName} {userInfo.lastName}, {userInfo.phone}, {userInfo.email}
             </div>
-            <div className="flex flex-col justify-end gap-3">
-              <div>
-                <Ntext variant="text5" color="n-light">
-                  Nomba Max
-                </Ntext>
-              </div>
-              <div>
-                <Ntext variant="p24" color="n-light" className="!font-[700]">
-                  ₦ 25,000
-                </Ntext>
-              </div>
-              <div className="text-[12px] font-medium leading-5">{itemCount} Item</div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <div className="text-n-grey3 text-[12px]">Delivery address</div>
+            <div>
+              {userInfo.deliveryAddress}, {userInfo.lga}, {userInfo.state}
             </div>
           </div>
         </div>
@@ -60,4 +55,5 @@ const Checkout = ({ itemCount, userInfo }) => {
     </div>
   );
 };
+
 export { Checkout };
