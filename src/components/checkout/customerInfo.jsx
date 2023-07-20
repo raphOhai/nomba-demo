@@ -19,7 +19,8 @@ const CustomerInfo = ({ state, setState }) => {
               className={inputClass}
               placeholder=""
               onChange={e => setState({ ...state, firstName: e.target.value })}
-              role="input"
+              role="textbox"
+              required
             />
           </div>
         </div>
@@ -35,7 +36,8 @@ const CustomerInfo = ({ state, setState }) => {
               className={inputClass}
               placeholder=""
               onChange={e => setState({ ...state, lastName: e.target.value })}
-              role="input"
+              role="textbox"
+              required
             />
           </div>
         </div>
@@ -53,7 +55,8 @@ const CustomerInfo = ({ state, setState }) => {
               className={inputClass}
               placeholder=""
               onChange={e => setState({ ...state, email: e.target.value })}
-              role="input"
+              role="textbox"
+              required
             />
           </div>
         </div>
@@ -71,7 +74,8 @@ const CustomerInfo = ({ state, setState }) => {
               className={inputClass}
               placeholder=""
               onChange={e => setState({ ...state, phone: e.target.value })}
-              role="input"
+              role="textbox"
+              required
             />
           </div>
         </div>
@@ -90,6 +94,7 @@ const CustomerInfo = ({ state, setState }) => {
               placeholder=""
               onChange={e => setState({ ...state, deliveryAddress: e.target.value })}
               role="textbox"
+              required
             />
           </div>
         </div>
@@ -107,7 +112,8 @@ const CustomerInfo = ({ state, setState }) => {
               className={inputClass}
               placeholder=""
               onChange={e => setState({ ...state, lga: e.target.value })}
-              role="input"
+              role="textbox"
+              required
             />
           </div>
         </div>
@@ -123,7 +129,8 @@ const CustomerInfo = ({ state, setState }) => {
               className={inputClass}
               placeholder=""
               onChange={e => setState({ ...state, state: e.target.value })}
-              role="input"
+              role="textbox"
+              required
             />
           </div>
         </div>
@@ -133,7 +140,17 @@ const CustomerInfo = ({ state, setState }) => {
 };
 
 const inputClass = ctl(`
-text-white bg-primary p-[15px] rounded-md !outline outline-n-grey6 focus:outline-n-grey2 transition-all w-full text-[16px] leading-6
+text-white 
+bg-primary 
+p-[15px] 
+rounded-md 
+!outline 
+outline-n-grey6 
+focus:outline-n-grey2 
+transition-all 
+w-full 
+text-[16px] 
+leading-6
 `);
 
 const labelClass = ctl(`

@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   Drawer,
@@ -37,6 +37,17 @@ const Cart = ({ isOpen, onClose, finalFocusRef }) => {
   const handleTabsChange = index => {
     setTabIndex(index);
   };
+
+  // set error states for user input
+  const [hasError, setHasError] = useState(true);
+  useEffect(() => {
+    setHasError(
+      Object.keys(info)
+        .map(r => !!info[r].length)
+        .includes(false)
+    );
+  }, [info]);
+
   return (
     <Drawer
       colorScheme="yellow"
@@ -64,7 +75,7 @@ const Cart = ({ isOpen, onClose, finalFocusRef }) => {
               <Tab py="6" _selected={tabStyle} color="#717171">
                 Add Information
               </Tab>
-              <Tab _selected={tabStyle} color="#717171">
+              <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
                 Payment
               </Tab>
             </TabList>
@@ -93,7 +104,13 @@ const Cart = ({ isOpen, onClose, finalFocusRef }) => {
                 Cancel
               </button>
             </div>
-            <Button fontWeight={500} fontSize={16} colorScheme="yellow" onClick={() => setTabIndex(tabIndex + 1)}>
+            <Button
+              isDisabled={tabIndex === 0 ? false : hasError}
+              fontWeight={500}
+              fontSize={16}
+              colorScheme="yellow"
+              onClick={() => setTabIndex(tabIndex + 1)}
+            >
               Continue to payment
             </Button>
           </div>

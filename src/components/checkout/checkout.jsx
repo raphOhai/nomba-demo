@@ -1,12 +1,17 @@
-import React, { useReducer } from "react";
-import { Ntext, ReadMore } from "components";
+import React, { useState } from "react";
+import { NLink, Ntext, Button } from "components";
 import { StaticImage } from "gatsby-plugin-image";
-
+import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
+import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
 const Checkout = ({ itemCount, userInfo }) => {
+  const [isTermsAccepted, setTermsAccepted] = useState(false);
+  const formatMoneyToInput = value => value.replace("₦", "").replaceAll(",", "").trim();
+  const formatMoney = n => "₦" + " " + (Math.round(n * 100) / 100).toLocaleString();
+
   return (
     <div className="mt-5">
       <div className="flex justify-between">
-        <div>PRODUCT DETAILS</div>
+        <div className="text-sm font-medium text-m-light">PRODUCT DETAILS</div>
         <div className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">Update</div>
       </div>
       <div className="bg-n-grey6 px-5 py-6 mt-4">
@@ -32,10 +37,10 @@ const Checkout = ({ itemCount, userInfo }) => {
         </div>
       </div>
       <div className="flex justify-between mt-5 items-center">
-        <div>DELIVERY INFORMATION</div>
+        <div className="text-sm font-medium text-m-light">DELIVERY INFORMATION</div>
         <div className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">Update</div>
       </div>
-      <div className="bg-n-grey6 px-5 py-6 mt-4 ">
+      <div className="bg-n-grey6 px-5 rounded-lg py-6 mt-4 ">
         <div className="flex flex-col gap-5 justify-between">
           <div className="flex flex-col gap-2">
             <div className="text-n-grey3 text-[12px]">Continue</div>
@@ -51,6 +56,46 @@ const Checkout = ({ itemCount, userInfo }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex gap-5 font-normal text-sm text-n-grey2 mt-20 ">
+        <div>
+          {isTermsAccepted ? (
+            <CheckboxTrue className="cursor-pointer" onClick={() => setTermsAccepted(!isTermsAccepted)} />
+          ) : (
+            <CheckboxFalse className="cursor-pointer" onClick={() => setTermsAccepted(!isTermsAccepted)} />
+          )}
+        </div>
+        <span>
+          I have read and agreed to Nomba’s terminal{" "}
+          <NLink to="/terms-of-service" className="underline text-n-light">
+            Terms & Conditions
+          </NLink>
+        </span>
+      </div>
+
+      <div className="mt-5 py-7 !text-[16px] gap-4">
+        <div className="flex justify-between">
+          <span>Price</span>
+          <span>₦ 25,000</span>
+        </div>
+        <div className="flex justify-between">
+          <sapn>Quantity</sapn>
+          <sapn>{itemCount}</sapn>
+        </div>
+        <div className="flex justify-between">
+          <span>Shipping fee</span>
+          <span>₦ 0</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Total Price</span>
+          <Ntext variant="p24" color="n-light" className="!font-[700]">
+            {formatMoney(itemCount * Number(formatMoneyToInput("₦ 25,000")))}
+          </Ntext>
+        </div>
+      </div>
+      <div className="my-5 ">
+        <Button className="!font-medium !text-[16px] !w-full" text="Proceed" disabled={!isTermsAccepted} />
       </div>
     </div>
   );
