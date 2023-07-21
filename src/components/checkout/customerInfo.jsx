@@ -150,6 +150,7 @@ p-[15px]
 rounded-md 
 !outline 
 outline-n-grey6 
+
 focus:outline-n-grey2 
 transition-all 
 w-full 
@@ -163,7 +164,7 @@ bg-primary
 p-[15px] 
 rounded-md 
 outline-none 
-
+h-full
 transition-all 
 w-full 
 text-[16px] 

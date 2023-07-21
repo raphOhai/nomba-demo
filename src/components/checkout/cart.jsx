@@ -62,7 +62,7 @@ const Cart = ({ finalFocusRef }) => {
               </Tab>
             </TabList>
 
-            <TabPanels px={5}>
+            <TabPanels px={[2, 4, 4, 4]}>
               <TabPanel>
                 <CartIem counter={counter} dispatcher={dispatch} />
               </TabPanel>
