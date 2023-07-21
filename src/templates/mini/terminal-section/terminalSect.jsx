@@ -40,7 +40,7 @@ const TerminalSectionInteractions = () => {
   });
 
   return (
-    <section className="md:h-[100vh] mini-section-2">
+    <section className="md:h-[100vh] mini-section-2 mt-[500px] md:mt-0">
       <div className="justify-between items-center flex flex-col h-full px-5 pt-20">
         <div>
           <div className="flex justify-center flex-col items-center">
