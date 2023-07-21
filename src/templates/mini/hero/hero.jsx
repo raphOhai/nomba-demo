@@ -119,7 +119,7 @@ mt-[50px]
 const badgeWrapper = ctl(`
 flex
 justify-center
-mb-[20px]
+md:mb-[20px]
 `);
 
 const badgeButtonStyle = ctl(`
