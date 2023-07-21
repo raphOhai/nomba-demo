@@ -8,7 +8,7 @@ function Submit({ isTermsAccepted, data }) {
   const { onClose, resetInfo } = useContext(AppContext);
   const submit = () => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbz7m0iNqh2-Wj7WKbo3HrfyYRQxvOGFh3pC6saEcji0p_buSXGpJpEhCabd3AoWmvJlOg/exec",
+      "https://script.google.com/macros/s/AKfycbyTGq_7hiZXf1M86ISh_JkOy4LUX4_DL8xLJE-7w5YzoApp2wI5sDgD5nf4d-3-_EYr0A/exec",
       {
         method: "POST",
         body: JSON.stringify(data),
