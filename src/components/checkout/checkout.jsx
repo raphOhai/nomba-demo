@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
 import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
 import { Submit } from "./submit";
-const Checkout = ({ itemCount, userInfo }) => {
+const Checkout = ({ itemCount, userInfo, setTabIndex }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
   const formatMoneyToInput = value => value.replace("₦", "").replaceAll(",", "").trim();
   const formatMoney = n => "₦" + " " + (Math.round(n * 100) / 100).toLocaleString();
@@ -13,7 +13,12 @@ const Checkout = ({ itemCount, userInfo }) => {
     <div className="mt-5">
       <div className="flex justify-between">
         <div className="text-sm font-medium text-m-light">PRODUCT DETAILS</div>
-        <div className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">Update</div>
+        <div
+          className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer"
+          onClick={() => setTabIndex(0)}
+        >
+          Update
+        </div>
       </div>
       <div className="bg-n-grey6 px-5 py-6 mt-4">
         <div className="flex md:flex-row flex-col justify-between">
@@ -39,7 +44,12 @@ const Checkout = ({ itemCount, userInfo }) => {
       </div>
       <div className="flex justify-between mt-5 items-center">
         <div className="text-sm font-medium text-m-light">DELIVERY INFORMATION</div>
-        <div className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">Update</div>
+        <div
+          className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer"
+          onClick={() => setTabIndex(1)}
+        >
+          Update
+        </div>
       </div>
       <div className="bg-n-grey6 px-5 rounded-lg py-6 mt-4 ">
         <div className="flex flex-col gap-5 justify-between">

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
@@ -6,14 +6,14 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { MaxButton } from "components/max-button";
 import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
-
+import { AppContext } from "states/context";
 import Check from "svgs/yellow-check.svg";
 import { miniFeaturesBreakdown } from "config/mini";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 const MiniPricing = ({ title, price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
-
+  const { onOpen } = useContext(AppContext);
   useLayoutEffect(() => {
     const sections = gsap.utils.toArray(".max_feature1");
 
@@ -80,7 +80,9 @@ const MiniPricing = ({ title, price, leasePrice }) => {
                 </div>
               </div>
               <div className="flex md:flex-row flex-col justify-center gap-8 items-stretch md:items-center">
-                <MaxButton text="Buy now" type="animate-button-reverse" link={SIGNUP_URL} />
+                <div onClick={onOpen}>
+                  <MaxButton text="Buy now" type="animate-button-reverse" />
+                </div>
                 <ReadMore
                   color="primary-100"
                   weight={500}

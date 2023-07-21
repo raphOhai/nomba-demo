@@ -70,7 +70,7 @@ const Cart = ({ finalFocusRef }) => {
                 <CustomerInfo state={info} setState={setInfo} />
               </TabPanel>
               <TabPanel>
-                <Checkout itemCount={counter.count} userInfo={info} />
+                <Checkout itemCount={counter.count} userInfo={info} setTabIndex={setTabIndex} />
               </TabPanel>
             </TabPanels>
           </Tabs>

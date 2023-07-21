@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext, ReadMore } from "components";
-import { StaticImage } from "gatsby-plugin-image";
 import constants from "config/constants.json";
 import { MaxButton } from "components/max-button";
 import LogoMini from "jpegs/mini/logo.svg";
@@ -99,13 +98,12 @@ pt-[75px]
 
 const heroTextWrapperStyle = ctl(`
 lg:max-w-[692px]
-md:mt-[100px]
+md:mt-[50px]
 max-w-[100%]
 lg:mb-[80px]
 sm:mb-[120px]
 md:mx-2
 mb-10
-
 `);
 
 const heroButtonsContainer = ctl(`
@@ -122,7 +120,6 @@ const badgeWrapper = ctl(`
 flex
 justify-center
 mb-[20px]
-
 `);
 
 const badgeButtonStyle = ctl(`
