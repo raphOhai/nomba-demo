@@ -16,9 +16,9 @@ const EveryBusiness = ({ slides }) => {
         scrollTrigger: {
           trigger: ".header-text-every-business-mini",
           pin: true,
-          start: "top top",
+          start: "top -10%",
           pinSpacing: false,
-          end: `+=${(panels[0].offsetWidth - (window.innerWidth < 760 ? -50 : 200)) * panels.length}px`,
+          end: `+=${(panels[0].offsetWidth - (window.innerWidth < 760 ? -50 : 280)) * panels.length}px`,
 
           // end: "+=4000px",
         },
@@ -29,7 +29,7 @@ const EveryBusiness = ({ slides }) => {
   return (
     <section className=" pb-[100px] bg-c-0 -pt-10 every-business-mini">
       <Container>
-        <SectionHeader className="flex flex-row justify-between items-baseline header-text-every-business-mini ">
+        <SectionHeader className="flex flex-row justify-between items-baseline header-text-every-business-mini  ">
           <div className="max-w-[600px]">
             <Ntext variant="h2" className="text-left" color="primary-100" data-animation="h">
               Designed for businesses like yours

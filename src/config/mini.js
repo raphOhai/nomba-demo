@@ -9,6 +9,7 @@ import box2 from "assets/images/jpegs/mini/inthebox/2.png";
 import box3 from "assets/images/jpegs/mini/inthebox/3.png";
 import box4 from "assets/images/jpegs/mini/inthebox/4.png";
 import box5 from "assets/images/jpegs/mini/inthebox/5.png";
+import box6 from "assets/images/jpegs/mini/inthebox/6.png";
 export const Testimonial = [
   {
     testimonial:
@@ -207,6 +208,29 @@ export const everyBusinesses = [
       />
     ),
   },
+  {
+    id: 7,
+    title: "Bar",
+    color: "b-5",
+    image: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/image7.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={937}
+        height={526}
+      />
+    ),
+    mobileImage: (
+      <StaticImage
+        src="../assets/images/jpegs/mini/business-types/mobile7.png"
+        className="rounded-[10px] box-wrapper"
+        alt="How it works"
+        width={369}
+        height={461}
+      />
+    ),
+  },
 ];
 
 export const miniFeatures = [
@@ -314,7 +338,7 @@ export const InTheBox = [
 
   {
     id: 6,
-    title: "Sticker",
+    title: "Sticker Mascot",
     image: (
       <StaticImage
         width={328}
@@ -328,16 +352,16 @@ export const InTheBox = [
   },
   {
     id: 7,
-    title: "Table stand",
+    title: "Sticker",
     image: (
       <StaticImage
         width={340}
         height={300}
         className=""
-        alt="Table Stand"
-        src="../assets/images/jpegs/mini/inthebox/4.png"
+        alt="Sticker"
+        src="../assets/images/jpegs/mini/inthebox/6.png"
       />
     ),
-    path: box4,
+    path: box6,
   },
 ];

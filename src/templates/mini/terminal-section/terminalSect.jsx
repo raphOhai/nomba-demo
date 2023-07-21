@@ -29,18 +29,19 @@ const TerminalSectionInteractions = () => {
       tl1.fromTo(
         ".mini-1",
         {
-          yPercent: 200,
+          bottom: "-100px",
         },
         {
-          yPercent: -62,
+          bottom: "0px",
+          opacity: 1,
         }
       );
     }
   });
 
   return (
-    <section className="md:min-h-[100vh] mini-section-2">
-      <div className="justify-between flex flex-col h-full px-5 pt-20">
+    <section className="md:h-[100vh] mini-section-2">
+      <div className="justify-between items-center flex flex-col h-full px-5 pt-20">
         <div>
           <div className="flex justify-center flex-col items-center">
             <div className="text-n-yellow text-[20px] font-[700]">
@@ -58,7 +59,7 @@ const TerminalSectionInteractions = () => {
             <div className={`mini-2 flex flex-row justify-center  img `}>
               <StaticImage src="../../../assets/images/jpegs/mini/hero/mini2.png" alt="" />
             </div>
-            <div className="center-child mini-1    img  ">
+            <div className=" mini-1 absolute opacity-0  img  ">
               <div className="flex-row flex justify-center items-center">
                 <StaticImage
                   className=""

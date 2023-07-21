@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import constants from "config/constants.json";
 import { MaxButton } from "components/max-button";
 import LogoMini from "jpegs/mini/logo.svg";
+import HeroVid from "jpegs/mini/hero/heroVid.mp4";
 import Check from "svgs/yellow-check.svg";
 import { AppContext } from "states/context";
 
@@ -71,7 +72,16 @@ const MiniHero = ({ title, benefits }) => {
             </div>
           </div>
           <div className=" hover:animate-pulseCustom">
-            <StaticImage className="" alt="" src="../../../assets/images/jpegs/mini/hero/hero.png" />
+            <video
+              className={`absolute`}
+              loop
+              autoPlay
+              height={724}
+              width={791}
+              muted
+              playsInline
+              src={HeroVid}
+            ></video>
           </div>
         </div>
       </Container>
