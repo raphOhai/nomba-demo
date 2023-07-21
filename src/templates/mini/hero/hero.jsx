@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext, ReadMore } from "components";
@@ -7,8 +7,11 @@ import constants from "config/constants.json";
 import { MaxButton } from "components/max-button";
 import LogoMini from "jpegs/mini/logo.svg";
 import Check from "svgs/yellow-check.svg";
+import { AppContext } from "states/context";
+
 const MiniHero = ({ title, benefits }) => {
   const { SIGNUP_URL } = constants;
+  const { onOpen } = useContext(AppContext);
   return (
     <section className={heroStyle}>
       <Container className="relative">
@@ -31,7 +34,10 @@ const MiniHero = ({ title, benefits }) => {
             <LogoMini className="max-w-[360px] md:max-w-none" />
 
             <div className={heroButtonsContainer}>
-              <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+              <div onClick={onOpen}>
+                <MaxButton text="Get your terminal" type="animate-button-reverse" />
+              </div>
+
               {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
               <ReadMore
                 color="primary-100"
@@ -126,6 +132,7 @@ tracking-[0.2rem]
 MiniHero.propTypes = {
   title: PropTypes.node,
   description: PropTypes.string,
+  openSide: PropTypes.func,
 };
 
 export { MiniHero };

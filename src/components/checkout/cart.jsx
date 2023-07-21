@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import {
   Drawer,
@@ -15,38 +15,20 @@ import {
   TabPanel,
   Button,
 } from "@chakra-ui/react";
-import { reducer } from "./reducer";
+
 import { Ntext } from "components/ntext";
 import { CartIem, Checkout, CustomerInfo } from "./index";
 
-const Cart = ({ isOpen, onClose, finalFocusRef }) => {
-  const initialItems = { count: 1 };
+import { AppContext } from "states/context";
 
-  const [counter, dispatch] = useReducer(reducer, initialItems);
-  const [info, setInfo] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    deliveryAddress: "",
-    lga: "",
-    state: "",
-  });
+const Cart = ({ finalFocusRef }) => {
   const [tabIndex, setTabIndex] = useState(0);
-
+  const { isOpen, onClose, hasError, counter, dispatch, info, setInfo } = useContext(AppContext);
   const handleTabsChange = index => {
     setTabIndex(index);
   };
 
   // set error states for user input
-  const [hasError, setHasError] = useState(true);
-  useEffect(() => {
-    setHasError(
-      Object.keys(info)
-        .map(r => !!info[r].length)
-        .includes(false)
-    );
-  }, [info]);
 
   return (
     <Drawer
@@ -58,7 +40,7 @@ const Cart = ({ isOpen, onClose, finalFocusRef }) => {
       size="lg"
     >
       <DrawerOverlay />
-      <DrawerContent bg="#121212" color="white" px="0">
+      <DrawerContent bg="#121212" color="white" px="0" data-lenis-prevent>
         <DrawerCloseButton color="white" colorScheme="yellow" />
         <DrawerHeader>
           <Ntext variant="text3" color="n-light">

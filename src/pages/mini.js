@@ -21,7 +21,7 @@ import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
 import { ReactLenis } from "@studio-freight/react-lenis";
-
+import { Cart } from "components/checkout";
 const MiniPage = () => {
   const lenisRef = useRef();
 
@@ -82,6 +82,9 @@ const MiniPage = () => {
         />
 
         <HomepageTipsAndUpdate />
+        <div data-lenis-prevent>
+          <Cart />
+        </div>
       </Layout>
     </ReactLenis>
   );

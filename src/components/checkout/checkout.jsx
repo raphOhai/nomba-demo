@@ -3,6 +3,7 @@ import { NLink, Ntext, Button } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
 import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
+import { Submit } from "./submit";
 const Checkout = ({ itemCount, userInfo }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
   const formatMoneyToInput = value => value.replace("₦", "").replaceAll(",", "").trim();
@@ -94,9 +95,8 @@ const Checkout = ({ itemCount, userInfo }) => {
           </Ntext>
         </div>
       </div>
-      <div className="my-5 ">
-        <Button className="!font-medium !text-[16px] !w-full" text="Proceed" disabled={!isTermsAccepted} />
-      </div>
+
+      <Submit isTermsAccepted={isTermsAccepted} data={{ ...userInfo, amount: itemCount }} />
     </div>
   );
 };
