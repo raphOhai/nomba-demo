@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
-import { Input } from "@chakra-ui/react";
-
+import { nigeriaStates } from "./states";
 const CustomerInfo = ({ state, setState }) => {
   return (
     <div className="mt-5 flex-col flex gap-5">
@@ -121,17 +120,22 @@ const CustomerInfo = ({ state, setState }) => {
           <div className={labelClass}>
             <label htmlFor="state">State</label>
           </div>
-          <div>
-            <input
+          <div className={`${inputClass} !py-0 !pl-0`}>
+            <select
               name="state"
-              type="text"
+              className={selectClass}
               id="state"
-              className={inputClass}
-              placeholder=""
               onChange={e => setState({ ...state, state: e.target.value })}
               role="textbox"
               required
-            />
+            >
+              <option value="" disabled selected>
+                Select a state
+              </option>
+              {nigeriaStates.map(state => (
+                <option value={state}>{state}</option>
+              ))}
+            </select>
           </div>
         </div>
       </div>
@@ -147,6 +151,19 @@ rounded-md
 !outline 
 outline-n-grey6 
 focus:outline-n-grey2 
+transition-all 
+w-full 
+text-[16px] 
+leading-6
+`);
+
+const selectClass = ctl(`
+text-white 
+bg-primary 
+p-[15px] 
+rounded-md 
+outline-none 
+
 transition-all 
 w-full 
 text-[16px] 

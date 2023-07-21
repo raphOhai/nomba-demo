@@ -56,11 +56,9 @@ function Submit({ isTermsAccepted, data }) {
           </svg>
           <div className="waitlist_success_txt text-center">
             <h1>
-              We’ve added you to our <Br on="desktop" /> waiting list!
+              We’ve added your order to <Br on="desktop" /> waiting list!
             </h1>
-            <p>
-              Kindly check your email to know when the Nomba MAX <Br on="desktop" /> terminal is out for sale
-            </p>
+            <p>Our sales team will contact you soon</p>
           </div>
         </div>
       </div>
