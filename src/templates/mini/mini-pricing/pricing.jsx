@@ -13,7 +13,7 @@ import { miniFeaturesBreakdown } from "config/mini";
 gsap.registerPlugin(ScrollTrigger);
 const MiniPricing = ({ title, price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
-  const { onOpen } = useContext(AppContext);
+  const { addToCart } = useContext(AppContext);
   useLayoutEffect(() => {
     const sections = gsap.utils.toArray(".max_feature1");
 
@@ -80,7 +80,7 @@ const MiniPricing = ({ title, price, leasePrice }) => {
                 </div>
               </div>
               <div className="flex md:flex-row flex-col justify-center gap-8 items-stretch md:items-center">
-                <div onClick={onOpen}>
+                <div onClick={() => addToCart(3)}>
                   <MaxButton text="Buy now" type="animate-button-reverse" />
                 </div>
                 <ReadMore

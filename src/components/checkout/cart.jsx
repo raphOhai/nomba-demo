@@ -20,10 +20,11 @@ import { Ntext } from "components/ntext";
 import { CartIem, Checkout, CustomerInfo } from "./index";
 
 import { AppContext } from "states/context";
+import { CartTerminals } from "config/cart";
 
 const Cart = ({ finalFocusRef }) => {
   const [tabIndex, setTabIndex] = useState(0);
-  const { isOpen, onClose, hasError, counter, dispatch, info, setInfo } = useContext(AppContext);
+  const { isOpen, onClose, hasError, counter, dispatch, info, setInfo, itemIndex } = useContext(AppContext);
   const handleTabsChange = index => {
     setTabIndex(index);
   };
@@ -64,13 +65,19 @@ const Cart = ({ finalFocusRef }) => {
 
             <TabPanels px={[2, 4, 4, 4]}>
               <TabPanel>
-                <CartIem counter={counter} dispatcher={dispatch} />
+                {/* Select the active terminal by index set */}
+                <CartIem counter={counter} dispatcher={dispatch} item={CartTerminals[itemIndex]} />
               </TabPanel>
               <TabPanel>
                 <CustomerInfo state={info} setState={setInfo} />
               </TabPanel>
               <TabPanel>
-                <Checkout itemCount={counter.count} userInfo={info} setTabIndex={setTabIndex} />
+                <Checkout
+                  itemCount={counter.count}
+                  item={CartTerminals[itemIndex]}
+                  userInfo={info}
+                  setTabIndex={setTabIndex}
+                />
               </TabPanel>
             </TabPanels>
           </Tabs>

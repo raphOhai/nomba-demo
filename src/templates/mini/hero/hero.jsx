@@ -11,7 +11,7 @@ import { AppContext } from "states/context";
 
 const MiniHero = ({ title, benefits }) => {
   const { SIGNUP_URL } = constants;
-  const { onOpen } = useContext(AppContext);
+  const { addToCart } = useContext(AppContext);
   return (
     <section className={heroStyle}>
       <Container className="relative">
@@ -34,7 +34,7 @@ const MiniHero = ({ title, benefits }) => {
             <LogoMini className="max-w-[360px] md:max-w-none" />
 
             <div className={heroButtonsContainer}>
-              <div onClick={onOpen}>
+              <div onClick={() => addToCart(3)}>
                 <MaxButton text="Get your terminal" type="animate-button-reverse" />
               </div>
 

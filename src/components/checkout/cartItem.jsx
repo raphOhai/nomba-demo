@@ -1,21 +1,18 @@
-import React, { useReducer } from "react";
+import React from "react";
 import { Ntext, ReadMore } from "components";
-import { StaticImage } from "gatsby-plugin-image";
 import Minus from "jpegs/cart/minus.svg";
 import Add from "jpegs/cart/add.svg";
 
-const CartIem = ({ counter, dispatcher }) => {
+const CartIem = ({ counter, dispatcher, item }) => {
   return (
     <div className="bg-n-grey6 rounded-lg px-5 py-6 mt-5">
       <div className="flex md:flex-row flex-col justify-between">
         <div className="md:max-w-[250px] flex flex-row gap-6">
-          <div>
-            <StaticImage height={120} width={63} src="../../assets/images/jpegs/cart/max.png" alt="Nomba Max" />
-          </div>
+          <div>{item.image}</div>
           <div className="flex flex-col justify-between">
             <div>
               <Ntext variant="text5" color="n-light">
-                Nomba Max
+                {item.name}
               </Ntext>
             </div>
             <div>
@@ -31,7 +28,7 @@ const CartIem = ({ counter, dispatcher }) => {
             </div>
             <div>
               <Ntext variant="p24" color="n-light" className="!font-[700]">
-                ₦ 25,000
+                {item.price}
               </Ntext>
             </div>
           </div>

@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
 import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
 import { Submit } from "./submit";
-const Checkout = ({ itemCount, userInfo, setTabIndex }) => {
+const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
   const formatMoneyToInput = value => value.replace("₦", "").replaceAll(",", "").trim();
   const formatMoney = n => "₦" + " " + (Math.round(n * 100) / 100).toLocaleString();
@@ -23,18 +23,16 @@ const Checkout = ({ itemCount, userInfo, setTabIndex }) => {
       <div className="bg-n-grey6 px-5 py-6 mt-4">
         <div className="flex md:flex-row flex-col justify-between">
           <div className="md:max-w-[250px] flex flex-row gap-6">
-            <div>
-              <StaticImage height={120} width={63} src="../../assets/images/jpegs/cart/max.png" alt="Nomba Max" />
-            </div>
-            <div className="flex flex-col justify-end gap-3">
+            <div>{item.image}</div>
+            <div className="flex flex-col justify-end gap-1">
               <div>
                 <Ntext variant="text5" color="n-light">
-                  Nomba Max
+                  {item.name}
                 </Ntext>
               </div>
               <div>
                 <Ntext variant="p24" color="n-light" className="!font-[700]">
-                  ₦ 25,000
+                  {item.price}
                 </Ntext>
               </div>
               <div className="text-[12px] font-medium leading-5">{itemCount} Item</div>
@@ -88,7 +86,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex }) => {
       <div className="mt-5 py-7 !text-[16px] gap-4">
         <div className="flex justify-between">
           <span>Price</span>
-          <span>₦ 25,000</span>
+          <span>{item.price}</span>
         </div>
         <div className="flex justify-between">
           <sapn>Quantity</sapn>
@@ -101,12 +99,12 @@ const Checkout = ({ itemCount, userInfo, setTabIndex }) => {
         <div className="flex justify-between">
           <span>Total Price</span>
           <Ntext variant="p24" color="n-light" className="!font-[700]">
-            {formatMoney(itemCount * Number(formatMoneyToInput("₦ 25,000")))}
+            {formatMoney(itemCount * Number(formatMoneyToInput(item.price)))}
           </Ntext>
         </div>
       </div>
 
-      <Submit isTermsAccepted={isTermsAccepted} data={{ ...userInfo, amount: itemCount }} />
+      <Submit isTermsAccepted={isTermsAccepted} data={{ ...userInfo, amount: itemCount, type: item.name }} />
     </div>
   );
 };
