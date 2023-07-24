@@ -59,7 +59,7 @@ const Cart = ({ finalFocusRef }) => {
                 Add Information
               </Tab>
               <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
-                Payment
+                Summary
               </Tab>
             </TabList>
 
@@ -100,7 +100,7 @@ const Cart = ({ finalFocusRef }) => {
               colorScheme="yellow"
               onClick={() => setTabIndex(tabIndex + 1)}
             >
-              Continue to payment
+              Continue
             </Button>
           </div>
         )}

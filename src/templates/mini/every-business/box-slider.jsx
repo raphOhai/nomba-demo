@@ -10,9 +10,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BoxSlider = ({ slides }) => {
   let item = null;
+
+  const elementIsVisibleInViewport = el => {
+    const { top, left, bottom, right } = el.getBoundingClientRect();
+    const { innerHeight, innerWidth } = window;
+    return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+  };
+
   useLayoutEffect(() => {
     let sections = gsap.utils.toArray(".box-panel");
-    let titles = document.querySelectorAll(".b-title");
+    let titles = gsap.utils.toArray(".b-title");
     let slider = document.querySelector(".box-slider");
 
     let ctx = gsap.context(() => {
@@ -25,19 +32,13 @@ const BoxSlider = ({ slides }) => {
           scrub: 1,
           end: `+=${slider.offsetWidth + 2500}px`,
           snap: 1 / (sections.length - 1),
-          // onSnapComplete() {
-          //   alert(4);
-          // },
-          onUpdate(val) {
-            titles.forEach((t, i) => {
-              let lowerBound = i === 0 ? 0 : (i - 0.6) / sections.length;
-              let upperBound = (i + 0.6) / sections.length;
 
-              if (lowerBound <= val.progress && val.progress < upperBound) {
+          onUpdate() {
+            sections.forEach((s, i) => {
+              const t = titles[i];
+              if (elementIsVisibleInViewport(s)) {
                 if (item) {
-                  if (item === t) {
-                    // t.classList.remove("hidden");
-                  } else {
+                  if (item !== t) {
                     item.classList.remove("md:block");
                     t.classList.add("md:block");
                     item = t;
@@ -65,7 +66,7 @@ const BoxSlider = ({ slides }) => {
 
   return (
     <>
-      <div className="flex justify-start gap-7 mt-[50px] items-center flex-nowrap flex-row scrollbar-hide overflow-auto box-slider">
+      <div className="flex justify-start gap-7 mt-[50px] items-center flex-nowrap flex-row scrollbar-hide overflow-auto box-slider slider-margin-left">
         {slides.map((item, i) => (
           <Box key={i} className={`box-panel-${i}`} image={item.image} mobileImage={item.mobileImage} />
         ))}

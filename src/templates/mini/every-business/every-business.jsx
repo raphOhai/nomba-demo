@@ -44,9 +44,8 @@ const EveryBusiness = ({ slides }) => {
             </div>
           ))}
         </SectionHeader>
-
-        <BoxSlider slides={slides} />
       </Container>
+      <BoxSlider slides={slides} />
     </section>
   );
 };

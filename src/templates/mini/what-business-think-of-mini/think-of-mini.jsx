@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
-import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
+import BusinessVid from "assets/images/jpegs/mini/backgroundMini.mp4";
 
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);

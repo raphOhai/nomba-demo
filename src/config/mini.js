@@ -10,21 +10,22 @@ import box3 from "assets/images/jpegs/mini/inthebox/3.png";
 import box4 from "assets/images/jpegs/mini/inthebox/4.png";
 import box5 from "assets/images/jpegs/mini/inthebox/5.png";
 import box6 from "assets/images/jpegs/mini/inthebox/6.png";
-export const Testimonial = [
+
+export const miniTestimonial = [
   {
     testimonial:
-      "We’ve been able to build something in 3 years that a lot of brands haven’t actually gotten to in 10 years.",
-    name: "Adeuche",
-    role: "Co-founder & CEO Randle Inc",
+      "I take my Nomba Mini everywhere I go. I’m always on the move to deliver orders, and my Nomba Mini has been very reliable in collecting payments",
+    name: "Pati Ifang",
+    role: "Fashion Entrepreneur",
     image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/invoice/testimonials/image1.png"
-        loading="lazy"
-      />
+      <StaticImage alt="Testimonial Image" src="../assets/images/jpegs/mini/testimonials/main.png" loading="lazy" />
+    ),
+    side: (
+      <StaticImage alt="Testimonial Image" src="../assets/images/jpegs/mini/testimonials/side.png" loading="lazy" />
     ),
   },
 ];
+
 export const AccordionData = [
   {
     id: 1,
@@ -76,7 +77,7 @@ export const everyBusinesses = [
     color: "b-1",
     image: (
       <StaticImage
-        src="../assets/images/jpegs/mini/business-types/image1.png"
+        src="../assets/images/jpegs/mini/business-types/image1.jpg"
         className="rounded-[10px] box-wrapper"
         alt="How it works"
         width={937}
@@ -235,23 +236,23 @@ export const everyBusinesses = [
 
 export const miniFeatures = [
   {
-    title: "Portablity",
+    title: "Introducing Nomba Mini",
     icon: <BusinessIcon className="mini-svg-1" />,
-    description: "Introducing Nomba Mini: Your Pocket-Sized Payment Padi for On-the-Go Transactions!",
+    description: "Your Pocket-Sized Payment Padi for On-the-Go Transactions!",
     more_description:
       "The Nomba Mini is palm size and can fit into your pocket. Handy and convenient, your payment padi is ready to go anywhere and at anytime.  ",
   },
   {
-    title: "Long lasting battery",
+    title: "Endless Reliability",
     icon: <Battery className="mini-svg-2" />,
-    description: "Endless Reliability: Nomba Mini Terminal Keeps You Going!",
+    description: "Nomba Mini Terminal Keeps You Going!",
     more_description:
       "With an initial charge of two hours, your terminal is ready to deliver long-lasting performance that you can rely on.",
   },
   {
-    title: "Faster Transactions",
+    title: "Seamless Payments",
     icon: <Wifi className="mini-svg-3" />,
-    description: "Seamless Payments: Quick Transactions, Instant Alerts, Auto-Settlement!",
+    description: " Quick Transactions, Instant Alerts, Auto-Settlement!",
     more_description:
       "Enhance your payment process with quick and seamless transactions, instant alerts, and auto-settlement for both you and your customers.",
   },
@@ -308,20 +309,6 @@ export const InTheBox = [
     path: box3,
   },
   {
-    id: 4,
-    title: "Table stand",
-    image: (
-      <StaticImage
-        width={340}
-        height={300}
-        className=""
-        alt="Table Stand"
-        src="../assets/images/jpegs/mini/inthebox/4.png"
-      />
-    ),
-    path: box4,
-  },
-  {
     id: 6,
     title: "Nomba Mini Terminal",
     image: (
@@ -349,6 +336,20 @@ export const InTheBox = [
       />
     ),
     path: box5,
+  },
+  {
+    id: 21,
+    title: "Charger",
+    image: (
+      <StaticImage
+        width={353}
+        height={300}
+        className=""
+        alt="Charger"
+        src="../assets/images/jpegs/mini/inthebox/2.png"
+      />
+    ),
+    path: box2,
   },
   {
     id: 7,

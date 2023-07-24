@@ -6,8 +6,8 @@ import Add from "jpegs/cart/add.svg";
 const CartIem = ({ counter, dispatcher, item }) => {
   return (
     <div className="bg-n-grey6 rounded-lg px-5 py-6 mt-5">
-      <div className="flex md:flex-row flex-col justify-between">
-        <div className="md:max-w-[250px] flex flex-row gap-6">
+      <div className="flex md:flex-row flex-col justify-between gap-4 ">
+        <div className=" flex flex-row gap-6">
           <div>{item.image}</div>
           <div className="flex flex-col justify-between">
             <div>
@@ -16,15 +16,7 @@ const CartIem = ({ counter, dispatcher, item }) => {
               </Ntext>
             </div>
             <div>
-              <ReadMore
-                color="primary-100"
-                className=""
-                weight={500}
-                defaultStyle={false}
-                variant="text3"
-                href={{ url: "/max" }}
-                text="Product info"
-              />
+              <div className="text-[14px] font-normal">{item.info}</div>
             </div>
             <div>
               <Ntext variant="p24" color="n-light" className="!font-[700]">
@@ -33,7 +25,7 @@ const CartIem = ({ counter, dispatcher, item }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between items-end">
+        <div className="flex flex-row md:flex-col justify-between md:items-end">
           <div className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">Remove</div>
           <div className="text-white flex items-center gap-5">
             <Minus

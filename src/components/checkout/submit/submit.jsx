@@ -5,8 +5,10 @@ import { AppContext } from "states/context";
 
 function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { onClose, resetInfo } = useContext(AppContext);
   const submit = () => {
+    setIsLoading(true);
     fetch(
       "https://script.google.com/macros/s/AKfycbyTGq_7hiZXf1M86ISh_JkOy4LUX4_DL8xLJE-7w5YzoApp2wI5sDgD5nf4d-3-_EYr0A/exec",
       {
@@ -20,7 +22,10 @@ function Submit({ isTermsAccepted, data }) {
         } else {
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const closeModal = e => {
@@ -65,8 +70,9 @@ function Submit({ isTermsAccepted, data }) {
       <div className="my-5 ">
         <Button
           className="!font-medium !text-[16px] !w-full"
-          text="Proceed"
+          text="Confirm"
           disabled={!isTermsAccepted}
+          isLoading={isLoading}
           onClick={() => submit()}
         />
       </div>

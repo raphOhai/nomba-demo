@@ -4,7 +4,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components/ntext";
 import { StaticImage } from "gatsby-plugin-image";
 
-const TestimonialCard = ({ name, role, testimonial, image }) => {
+const TestimonialCard = ({ name, role, testimonial, image, side }) => {
   return (
     <div className={cardWrapStyle}>
       <div className={textWrapStyle}>
@@ -19,9 +19,7 @@ const TestimonialCard = ({ name, role, testimonial, image }) => {
             {role && <Ntext variant="p18" color="n-light" value={role} className="!font-[600]" />}
           </div>
         </div>
-        <div class="hidden md:block">
-          <StaticImage src="../../../assets/images/jpegs/e-menu/burgers.png" />
-        </div>
+        <div class="hidden md:block">{side}</div>
       </div>
 
       <div className={imageWrapStyle}>

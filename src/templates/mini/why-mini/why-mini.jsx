@@ -4,7 +4,7 @@ import { Ntext } from "components";
 import ctl from "@netlify/classnames-template-literals";
 import PlayMobile from "assets/images/svgs/play-grey.svg";
 import PauseMobile from "assets/images/svgs/pause-grey.svg";
-import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
+import BusinessVid from "assets/images/jpegs/mini/backgroundMini.mp4";
 import gsap from "gsap";
 import { IO } from "animations/observe";
 
@@ -84,25 +84,41 @@ const WhyMini = () => {
                 </Ntext>
               </div>
               <div className="flex flex-row  mt-[50px] gap-[20px] md:gap-[50px] md:justify-start justify-center ">
-                {[1, 2, 3].map(t => (
-                  <div className="" key={t}>
-                    <div className="text-[16px] text-n-light">Up to</div>
-                    <div>
-                      <Ntext variant="text8" color="primary-100" data-animation="rtl">
-                        3.4x
-                      </Ntext>
-                    </div>
-                    <div className="text-[14px] font-semibold w-[127px] text-n-light">Faster CPU performance</div>
+                <div className="">
+                  <div className="text-[16px] text-n-light">Up to</div>
+                  <div>
+                    <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                      5.0
+                    </Ntext>
                   </div>
-                ))}
+                  <div className="text-[14px] font-semibold w-[127px] text-n-light">inch HD</div>
+                </div>
+                <div className="">
+                  <div className="text-[16px] text-n-light">Up to</div>
+                  <div>
+                    <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                      1GB
+                    </Ntext>
+                  </div>
+                  <div className="text-[14px] font-semibold w-[127px] text-n-light">RAM</div>
+                </div>
+                <div className="">
+                  <div className="text-[16px] text-n-light">Up to</div>
+                  <div>
+                    <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                      7.4V
+                    </Ntext>
+                  </div>
+                  <div className="text-[14px] font-semibold w-[127px] text-n-light">2000mAh battery</div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="absolute bottom-16 right-20">
+          {/* <div className="absolute bottom-16 right-20">
             <div onClick={togglePlay} className="play_mobile">
               {playVideo ? <PauseMobile /> : <PlayMobile />}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
