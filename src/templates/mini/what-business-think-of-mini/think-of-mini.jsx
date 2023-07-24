@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
-import BusinessVid from "assets/images/jpegs/mini/backgroundMini.mp4";
+import BusinessVid from "assets/images/jpegs/mini/BusinessVideo.mp4";
 
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -53,19 +53,19 @@ const ThinkOfMini = ({ title }) => {
         </div>
 
         <div className="relative">
-          <div className="mt-[50px] business-video ">
+          <div className="mt-[50px] text-center mx-auto business-video ">
             <div className="!hidden md:!block">
               <StaticImage
                 className={coverVideo}
                 alt="video cover"
-                src="../../../assets/images/jpegs/terminal/max/video-cover.png"
+                src="../../../assets/images/jpegs/mini/video-cover.png"
               />
             </div>
             <div className="md:!hidden">
               <StaticImage
                 className={coverVideo}
                 alt="video cover"
-                src="../../../assets/images/jpegs/terminal/max/video-cover-mobile.png"
+                src="../../../assets/images/jpegs/mini/video-cover-mobile.png"
               />
             </div>
           </div>

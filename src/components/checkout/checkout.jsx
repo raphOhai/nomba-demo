@@ -4,10 +4,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
 import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
 import { Submit } from "./submit";
+import { formatMoney, formatMoneyToInput } from "utils/helpers";
 const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
-  const formatMoneyToInput = value => value.replace("₦", "").replaceAll(",", "").trim();
-  const formatMoney = n => "₦" + " " + (Math.round(n * 100) / 100).toLocaleString();
 
   return (
     <div className="mt-5">
@@ -32,7 +31,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
               </div>
               <div>
                 <Ntext variant="p24" color="n-light" className="!font-[700]">
-                  {item.price}
+                  {formatMoney(formatMoneyToInput(item.price) * itemCount)}
                 </Ntext>
               </div>
               <div className="text-[12px] font-medium leading-5">{itemCount} Item</div>
@@ -52,7 +51,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
       <div className="bg-n-grey6 px-5 rounded-lg py-6 mt-4 ">
         <div className="flex flex-col gap-5 justify-between">
           <div className="flex flex-col gap-2">
-            <div className="text-n-grey3 text-[12px]">Continue</div>
+            <div className="text-n-grey3 text-[12px]">Contact</div>
             <div>
               {userInfo.firstName} {userInfo.lastName}, {userInfo.phone}, {userInfo.email}
             </div>

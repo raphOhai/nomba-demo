@@ -2,6 +2,7 @@ import React from "react";
 import { Ntext, ReadMore } from "components";
 import Minus from "jpegs/cart/minus.svg";
 import Add from "jpegs/cart/add.svg";
+import { formatMoney, formatMoneyToInput } from "utils/helpers";
 
 const CartIem = ({ counter, dispatcher, item }) => {
   return (
@@ -20,7 +21,7 @@ const CartIem = ({ counter, dispatcher, item }) => {
             </div>
             <div>
               <Ntext variant="p24" color="n-light" className="!font-[700]">
-                {item.price}
+                {formatMoney(formatMoneyToInput(item.price) * counter.count)}
               </Ntext>
             </div>
           </div>

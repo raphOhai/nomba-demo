@@ -22,7 +22,7 @@ export const CartTerminals = [
   },
   {
     name: "Nomba Mini",
-    price: "₦ 8,000",
+    price: "₦ 25,000",
     image: <StaticImage height={83} width={48} src="../assets/images/jpegs/cart/mini.png" alt="Nomba Mini" />,
     info: "1GB RAM, 7.4V/2000mAh Battery",
   },

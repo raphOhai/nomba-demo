@@ -85,7 +85,7 @@ const WhyMini = () => {
               </div>
               <div className="flex flex-row  mt-[50px] gap-[20px] md:gap-[50px] md:justify-start justify-center ">
                 <div className="">
-                  <div className="text-[16px] text-n-light">Up to</div>
+                  <div className="text-[16px] text-n-light"></div>
                   <div>
                     <Ntext variant="text8" color="primary-100" data-animation="rtl">
                       5.0
@@ -94,7 +94,7 @@ const WhyMini = () => {
                   <div className="text-[14px] font-semibold w-[127px] text-n-light">inch HD</div>
                 </div>
                 <div className="">
-                  <div className="text-[16px] text-n-light">Up to</div>
+                  <div className="text-[16px] text-n-light"></div>
                   <div>
                     <Ntext variant="text8" color="primary-100" data-animation="rtl">
                       1GB
@@ -103,7 +103,7 @@ const WhyMini = () => {
                   <div className="text-[14px] font-semibold w-[127px] text-n-light">RAM</div>
                 </div>
                 <div className="">
-                  <div className="text-[16px] text-n-light">Up to</div>
+                  <div className="text-[16px] text-n-light"></div>
                   <div>
                     <Ntext variant="text8" color="primary-100" data-animation="rtl">
                       7.4V

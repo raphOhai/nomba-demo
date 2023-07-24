@@ -60,9 +60,7 @@ function Submit({ isTermsAccepted, data }) {
             </defs>
           </svg>
           <div className="waitlist_success_txt text-center">
-            <h1>
-              We’ve added your order to <Br on="desktop" /> waiting list!
-            </h1>
+            <h1>We’ve added your order to waiting list!</h1>
             <p>Our sales team will contact you soon</p>
           </div>
         </div>
