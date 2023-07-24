@@ -167,7 +167,7 @@ const MiniFeatures2 = ({ features }) => {
                   <div className="flex md:!hidden flex-row justify-center border-b md:border-none border-n-grey3 py-[40px]">
                     <img
                       className="max-w-[206px] mx-auto h-[381px]"
-                      src={mobileImages[i]}
+                      src={mobileImages[i + 1]}
                       width={381}
                       height={706}
                       alt="mini 1"
