@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import "./css/index.scss";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 import { nigeriaStates } from "./states";
+import Caret from "svgs/caret-down.svg";
+
 const CustomerInfo = ({ state, setState }) => {
   return (
     <div className="mt-5 flex-col flex gap-5">
@@ -116,26 +119,27 @@ const CustomerInfo = ({ state, setState }) => {
             />
           </div>
         </div>
+        <div className={`${inputClass} flex items-center !py-0 !pl-0`}>
+          <select
+            name="state"
+            className={selectClass}
+            id="state"
+            onChange={e => setState({ ...state, state: e.target.value })}
+            role="textbox"
+            required
+          >
+            <option value="" disabled selected>
+              Select a state
+            </option>
+            {nigeriaStates.map(state => (
+              <option value={state}>{state}</option>
+            ))}
+          </select>
+          <Caret />
+        </div>
         <div className="basis-1/2">
           <div className={labelClass}>
             <label htmlFor="state">State</label>
-          </div>
-          <div className={`${inputClass} !py-0 !pl-0`}>
-            <select
-              name="state"
-              className={selectClass}
-              id="state"
-              onChange={e => setState({ ...state, state: e.target.value })}
-              role="textbox"
-              required
-            >
-              <option value="" disabled selected>
-                Select a state
-              </option>
-              {nigeriaStates.map(state => (
-                <option value={state}>{state}</option>
-              ))}
-            </select>
           </div>
         </div>
       </div>
@@ -169,6 +173,7 @@ transition-all
 w-full 
 text-[16px] 
 leading-6
+custom-select
 `);
 
 const labelClass = ctl(`

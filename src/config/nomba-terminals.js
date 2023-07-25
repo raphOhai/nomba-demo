@@ -60,9 +60,9 @@ export const posCardData = [
     isHighlight: false,
     device: {
       name: "Nomba Pro",
-      price: "₦25,000",
+      price: "₦62,000",
       type: "pro",
-      priceType: "Lease Price",
+      priceType: "Outright Purchase",
     },
 
     features:

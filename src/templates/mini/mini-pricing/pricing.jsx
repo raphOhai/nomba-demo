@@ -69,7 +69,7 @@ const MiniPricing = ({ title, price, leasePrice }) => {
                 <div className="flex flex-row gap-5 items-center max_feature1">
                   <Bullet />{" "}
                   <Ntext variant="text3" className="!leading-[24px]" color="m-light">
-                    Enjoy lower transaction fee at 0.42% <del className="text-n-grey3">0.5%</del> capped at N80
+                    Enjoy lower transaction fee at 0.4% <del className="text-n-grey3">0.5%</del> capped at N80
                   </Ntext>
                 </div>
                 <div className="flex flex-row gap-5 items-center max_feature1">
