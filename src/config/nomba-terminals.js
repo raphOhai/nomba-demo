@@ -22,7 +22,8 @@ export const posCardData = [
       name: "Nomba Mini",
       price: "₦25,000",
       type: "mini",
-      priceType: "Outright Purchase",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
     },
 
     features: "Accept all Bank Cards, the new pocket-sized terminal for swift and successful transactions.",
@@ -43,9 +44,10 @@ export const posCardData = [
     isHighlight: false,
     device: {
       name: "Nomba Lite",
-      price: "₦15,000",
+      price: "₦30,000",
       type: "lite",
       priceType: "Lease Price",
+      ctaText: "Lease now",
     },
 
     features: "Accept all Bank Cards, Connects to WiFi",
@@ -62,7 +64,8 @@ export const posCardData = [
       name: "Nomba Pro",
       price: "₦62,000",
       type: "pro",
-      priceType: "Outright Purchase",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
     },
 
     features:
@@ -88,7 +91,8 @@ export const posCardData = [
       name: "Nomba MAX",
       price: "₦85,000",
       type: "max",
-      priceType: "Outright Purchase",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
     },
 
     features:
