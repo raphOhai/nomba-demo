@@ -21,9 +21,9 @@ const MaxpageHero = ({ title, description }) => {
             </Ntext>
           </div>
           <div className={heroButtonsContainer}>
-            {/* <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} /> */}
-            <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
-            {/* <ReadMore
+            <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+            {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
+            <ReadMore
               color="primary-100"
               className="text-center"
               weight={500}
@@ -31,7 +31,7 @@ const MaxpageHero = ({ title, description }) => {
               variant="text3"
               href={{ url: "tel:+23401888899" }}
               text="Contact sales"
-            /> */}
+            />
           </div>
         </div>
       </Container>
