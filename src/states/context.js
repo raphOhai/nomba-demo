@@ -7,6 +7,8 @@ export const ContextWrapper = ({ children }) => {
   const initialItems = { count: 1 };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [hasError, setHasError] = useState(true);
+  const [hasEmailError, setHasEmailError] = useState(false);
+  const [hasMobileError, setHasMobileError] = useState(false);
   const [itemIndex, setItemIndex] = useState(0);
   const [counter, dispatch] = useReducer(reducer, initialItems);
   const [info, setInfo] = useState({
@@ -59,6 +61,12 @@ export const ContextWrapper = ({ children }) => {
 
         hasError,
         setHasError,
+
+        hasEmailError,
+        setHasEmailError,
+
+        hasMobileError,
+        setHasMobileError,
 
         itemIndex,
         addToCart,

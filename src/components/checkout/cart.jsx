@@ -24,7 +24,18 @@ import { CartTerminals } from "config/cart";
 
 const Cart = ({ finalFocusRef }) => {
   const [tabIndex, setTabIndex] = useState(0);
-  const { isOpen, onClose, hasError, counter, dispatch, info, setInfo, itemIndex } = useContext(AppContext);
+  const {
+    isOpen,
+    onClose,
+    hasError,
+    hasEmailError,
+    hasMobileError,
+    counter,
+    dispatch,
+    info,
+    setInfo,
+    itemIndex,
+  } = useContext(AppContext);
   const handleTabsChange = index => {
     setTabIndex(index);
   };
@@ -94,7 +105,7 @@ const Cart = ({ finalFocusRef }) => {
               </button>
             </div>
             <Button
-              isDisabled={tabIndex === 0 ? false : hasError}
+              isDisabled={tabIndex === 0 ? false : hasError || hasEmailError || hasMobileError}
               fontWeight={500}
               fontSize={16}
               colorScheme="yellow"

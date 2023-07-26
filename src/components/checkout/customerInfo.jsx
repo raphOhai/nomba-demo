@@ -1,17 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import "./css/index.scss";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 import { nigeriaStates } from "./states";
 import Caret from "svgs/caret-down.svg";
+import { AppContext } from "states/context";
 
 const CustomerInfo = ({ state, setState }) => {
   const [lgasInState, setLgasInState] = useState([]);
+  // const [hasemailError, setEmailError] = useState(false);
+
+  const { hasEmailError, setHasEmailError, hasMobileError, setHasMobileError } = useContext(AppContext);
 
   const setStateValue = e => {
     setState({ ...state, state: e.target.value });
 
     setLgasInState(nigeriaStates.find(s => s.state === e.target.value).lga);
+  };
+
+  const validateEmail = e => {
+    setHasEmailError(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value));
+  };
+
+  const validateMobile = e => {
+    setHasMobileError(!/^0[7-9][0-1]\d{8}$/.test(e.target.value));
+  };
+
+  const checkEmailValidations = e => {
+    if (hasEmailError) {
+      setHasEmailError(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value));
+    }
+    setState({ ...state, email: e.target.value });
+  };
+
+  const checkMobileValidations = e => {
+    if (hasMobileError) {
+      setHasMobileError(!/^0[7-9][0-1]\d{8}$/.test(e.target.value));
+    }
+    setState({ ...state, phone: e.target.value.slice(0, 11) });
   };
 
   return (
@@ -63,11 +89,13 @@ const CustomerInfo = ({ state, setState }) => {
               type="email"
               id="emailAddress"
               className={inputClass}
+              onBlur={e => validateEmail(e)}
               placeholder=""
-              onChange={e => setState({ ...state, email: e.target.value })}
+              onChange={e => checkEmailValidations(e)}
               role="textbox"
               required
             />
+            {hasEmailError && <div className=" text-red-300 text-right text-sm">Email is not valid</div>}
           </div>
         </div>
       </div>
@@ -79,14 +107,17 @@ const CustomerInfo = ({ state, setState }) => {
           <div>
             <input
               name="phoneNumber"
-              type="tel"
+              type="number"
+              value={state.phone}
               id="phoneNumber"
+              onBlur={e => validateMobile(e)}
               className={inputClass}
               placeholder=""
-              onChange={e => setState({ ...state, phone: e.target.value })}
+              onChange={e => checkMobileValidations(e)}
               role="textbox"
               required
             />
+            {hasMobileError && <div className=" text-red-300 text-right text-sm">Phone is not valid</div>}
           </div>
         </div>
       </div>
