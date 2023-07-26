@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/index.scss";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
@@ -6,8 +6,12 @@ import { nigeriaStates } from "./states";
 import Caret from "svgs/caret-down.svg";
 
 const CustomerInfo = ({ state, setState }) => {
+  const [lgasInState, setLgasInState] = useState([]);
+
   const setStateValue = e => {
-    setState({ ...state, email: e.target.value });
+    setState({ ...state, state: e.target.value });
+
+    setLgasInState(nigeriaStates.find(s => s.state === e.target.value).lga);
   };
 
   return (
@@ -60,7 +64,7 @@ const CustomerInfo = ({ state, setState }) => {
               id="emailAddress"
               className={inputClass}
               placeholder=""
-              onChange={e => setStateValue(e)}
+              onChange={e => setState({ ...state, email: e.target.value })}
               role="textbox"
               required
             />
@@ -115,7 +119,7 @@ const CustomerInfo = ({ state, setState }) => {
               name="state"
               className={selectClass}
               id="state"
-              onChange={e => setState({ ...state, state: e.target.value })}
+              onChange={e => setStateValue(e)}
               role="textbox"
               required
             >
@@ -123,7 +127,7 @@ const CustomerInfo = ({ state, setState }) => {
                 Select a state
               </option>
               {nigeriaStates.map(state => (
-                <option value={state}>{state}</option>
+                <option value={state.state}>{state.state}</option>
               ))}
             </select>
             <Caret />
@@ -138,15 +142,15 @@ const CustomerInfo = ({ state, setState }) => {
               name="state"
               className={selectClass}
               id="state"
-              onChange={e => setState({ ...state, state: e.target.value })}
+              onChange={e => setState({ ...state, lga: e.target.value })}
               role="textbox"
               required
             >
               <option value="" disabled selected>
-                Select a state
+                Select LGA
               </option>
-              {nigeriaStates.map(state => (
-                <option value={state}>{state}</option>
+              {lgasInState.map(lga => (
+                <option value={lga}>{lga}</option>
               ))}
             </select>
             <Caret />

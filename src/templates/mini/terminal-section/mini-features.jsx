@@ -152,13 +152,13 @@ const MiniFeatures2 = ({ features }) => {
                   </div>
                   <div className={`sub-description sub-description-${i + 1}  overflow-hidden bg-primary `}>
                     <div>
-                      <div className="max-w-[454px] mt-5">
-                        <Ntext variant="text7" color="n-light">
+                      <div className=" mt-5">
+                        <Ntext variant="text7" color="n-light" className="text-balance">
                           {t.description}
                         </Ntext>
                       </div>
-                      <div className="max-w-[300px] mt-5">
-                        <Ntext variant="text-3" color="n-grey2">
+                      <div className=" mt-5">
+                        <Ntext variant="text-3" color="n-grey2" className="text-balance">
                           {t.more_description}
                         </Ntext>
                       </div>

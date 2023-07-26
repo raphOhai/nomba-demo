@@ -15,8 +15,8 @@ export const miniTestimonial = [
   {
     testimonial:
       "I take my Nomba Mini everywhere I go. I’m always on the move to deliver orders, and my Nomba Mini has been very reliable in collecting payments",
-    name: "Pati Ifang",
-    role: "Fashion Entrepreneur",
+    name: "",
+    role: "Pati Ifang | Fashion Entrepreneur",
     image: (
       <StaticImage alt="Testimonial Image" src="../assets/images/jpegs/mini/testimonials/main.png" loading="lazy" />
     ),
@@ -188,7 +188,7 @@ export const everyBusinesses = [
   },
   {
     id: 6,
-    title: "Taxi - Uber/Bolt",
+    title: "Taxi",
     color: "b-6",
     image: (
       <StaticImage
@@ -238,9 +238,9 @@ export const miniFeatures = [
   {
     title: "Introducing Nomba Mini",
     icon: <BusinessIcon className="mini-svg-1" />,
-    description: "Your Pocket-Sized Payment Padi for On-the-Go Transactions!",
+    description: "Your Payment Padi for on-the-go transactions!",
     more_description:
-      "The Nomba Mini is palm size and can fit into your pocket. Handy and convenient, your payment padi is ready to go anywhere and at anytime.  ",
+      "The Nomba Mini is palm size and can fit into your pocket. Handy and convenient, your payment padi is ready to go anywhere and at anytime.",
   },
   {
     title: "Endless Reliability",
