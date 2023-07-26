@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "components/layout-max";
+import { WhatsInTheBox } from "components/in-the-box";
 import { Br } from "components";
 import {
   MaxpageHero,
@@ -8,7 +9,6 @@ import {
   ExperienceMax,
   MaxBusinessTypes,
   GetMax,
-  WhatsInTheBox,
   MaxPricing,
 } from "templates/max";
 import { split } from "animations/text";

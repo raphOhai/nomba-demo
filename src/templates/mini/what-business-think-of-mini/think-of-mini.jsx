@@ -41,13 +41,13 @@ const ThinkOfMini = ({ title }) => {
   };
 
   return (
-    <section className="pt-[150px] md:pt-[16rem] feature-section2" id="business-types">
+    <section className="feature-section2" id="business-types">
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
         {loadVideo && <video onClick={close} ref={hero_vid} controls src={BusinessVid}></video>}
       </div>
       <Container>
         <div className="md:max-w-[700px] md:mx-auto  md:text-center">
-          <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
+          <Ntext variant="h2" className="text-center text-balance" color="primary-100" data-animation="h">
             {title}
           </Ntext>
         </div>

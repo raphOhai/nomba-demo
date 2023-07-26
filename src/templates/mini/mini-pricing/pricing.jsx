@@ -11,7 +11,7 @@ import Check from "svgs/yellow-check.svg";
 import { miniFeaturesBreakdown } from "config/mini";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
-const MiniPricing = ({ title, price, leasePrice }) => {
+const MiniPricing = ({ price, leasePrice }) => {
   const { SIGNUP_URL } = constants;
   const { addToCart } = useContext(AppContext);
   useLayoutEffect(() => {
@@ -40,14 +40,9 @@ const MiniPricing = ({ title, price, leasePrice }) => {
   });
 
   return (
-    <section className="mt-[100px] md:mt-[150px]  min-h-[100vh]" id="pricing">
+    <section className="pb-[60px]  " id="pricing">
       <div>
         <Container>
-          <div className="md:max-w-[671px] md:mx-auto  md:text-center  md:mb-[80px]">
-            <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
-              {title}
-            </Ntext>
-          </div>
           <div className={wrapper}>
             {/* <div className={childWrapper1}>
               <Mini />
@@ -95,9 +90,9 @@ const MiniPricing = ({ title, price, leasePrice }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap items-start justify-center mt-20">
+          <div className="flex flex-wrap items-start justify-center ">
             {miniFeaturesBreakdown.map(f => (
-              <div key={f} className="flex-col flex w-[275px] items-center md:mx-16 mt-16">
+              <div key={f} className="flex-col flex w-[275px] items-center md:mx-16 mb-10 mt-5">
                 <div>
                   <Check />
                 </div>
@@ -127,7 +122,7 @@ rounded-[6px]
 `);
 
 const childWrapper2 = ctl(`
-flex flex-col items-center justify-center mt-[5rem] md:mt-5
+flex flex-col items-center justify-center 
 `);
 
 const badgeWrapper = ctl(`

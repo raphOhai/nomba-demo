@@ -20,7 +20,7 @@ const MiniTestimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <section className="md:py-[150px] py-[100px] ">
+    <section className="">
       <Container>
         <SectionHeader className="text-center">
           <Ntext variant="h2" color="n-light" value={headingText} className={headingTextStyle} />

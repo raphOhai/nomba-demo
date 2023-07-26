@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Layout from "components/layout-max";
 import { Br } from "components";
-import { WhatsInTheBox } from "templates/max";
-
+import { WhatsInTheBox } from "components/in-the-box";
 import {
   MiniTestimonial,
   MiniPricing,
@@ -69,12 +68,12 @@ const MiniPage = () => {
             </>
           }
         />
-        <MiniPricing title="Pricing & Specifications" price="₦25,000" leasePrice="₦15,000" />
+        <MiniPricing price="₦25,000" leasePrice="₦15,000" />
 
         <ThinkOfMini title="Why Businesses Rely on Nomba Mini as their Payment Padi." />
         <MiniTestimonial headingText="Businesses Love Nomba Mini." testimonials={miniTestimonial} />
         <WhatsInTheBox title="What’s in the box?" InTheBox={InTheBox} />
-        <CommonQuestions questions={AccordionData} />
+        <CommonQuestions questions={AccordionData} className="padding-100" />
 
         <GetMini
           title={<>Everyone deserves a Payment Padi</>}

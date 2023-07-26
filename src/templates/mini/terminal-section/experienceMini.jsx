@@ -21,7 +21,7 @@ const ExperienceMini = ({ title, description }) => {
       ScrollTrigger.create({
         trigger: comp.current,
         start: "top top",
-        end: "+=1000px",
+        end: "+=800px",
         pin: true,
         // pinSpacing: false,
       });
@@ -44,9 +44,9 @@ const ExperienceMini = ({ title, description }) => {
     return () => ctx.revert();
   });
   return (
-    <section ref={comp} className="my-[75px] md:mt-[100px] md:pt-[100px] pt-[75px] bg-black experience-mini">
+    <section ref={comp} className="pb-[100px]   bg-black experience-mini">
       <Container>
-        <div className="md:max-w-[671px] md:mx-auto  md:text-center mb-[30px] md:mb-[80px]">
+        <div className="md:max-w-[671px] md:mx-auto  md:text-center mb-[30px] md:mb-[50px]">
           <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">
             {title}
           </Ntext>

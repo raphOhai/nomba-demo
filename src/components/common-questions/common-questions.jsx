@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, Ntext } from "components";
 
-const CommonQuestions = ({ questions }) => {
+const CommonQuestions = ({ questions, className }) => {
   useEffect(() => {
     const accordionItems = document.querySelectorAll(".c_wrapItem");
     let activeAccordionItem = null;
@@ -37,7 +37,7 @@ const CommonQuestions = ({ questions }) => {
   return (
     <section className="bg-black" id="faq">
       <Container>
-        <div className="c_cmQuestions ">
+        <div className={`c_cmQuestions ${className}`}>
           <div className="c_cmQuestions_txt">
             <Ntext variant="h2" color="primary-100" data-animation="h">
               FAQs
