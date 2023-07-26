@@ -10,17 +10,20 @@ import VisaLight from "assets/images/svgs/visa-light.svg";
 import MasterLight from "assets/images/svgs/master-light.svg";
 import WifiLight from "assets/images/svgs/wifi-light.svg";
 import PrinterLight from "assets/images/svgs/printer-light.svg";
+import Printer from "assets/images/svgs/printer.svg";
 import CisUSbLight from "assets/images/svgs/usb-light.svg";
 import FourGLight from "assets/images/svgs/fourg-light.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 export const posCardData = [
   {
-    isMax: false,
+    isHighlight: false,
     device: {
       name: "Nomba Lite",
-      price: "₦15,000",
+      price: "₦30,000",
       type: "lite",
+      priceType: "Lease Price",
+      ctaText: "Lease now",
     },
 
     features: "Accept all Bank Cards, Connects to WiFi",
@@ -32,11 +35,13 @@ export const posCardData = [
     link: "https://dashboard.nomba.com/auth/signup",
   },
   {
-    isMax: false,
+    isHighlight: false,
     device: {
       name: "Nomba Pro",
-      price: "₦25,000",
+      price: "₦62,000",
       type: "pro",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
     },
 
     features:
@@ -56,11 +61,14 @@ export const posCardData = [
     ],
   },
   {
-    isMax: true,
+    isHighlight: true,
+
     device: {
       name: "Nomba MAX",
       price: "₦85,000",
       type: "max",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
     },
 
     features:
@@ -75,7 +83,6 @@ export const posCardData = [
       <PrinterLight key="printer" />,
       <FourGLight key="4g" />,
       <CisUSbLight key="usb" />,
-      // <StaticImage src="../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
     ],
   },
 ];

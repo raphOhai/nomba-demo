@@ -2,14 +2,16 @@ import React from "react";
 import { Ntext, ReadMore } from "components";
 
 import ctl from "@netlify/classnames-template-literals";
-const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
-  const backgroundColor = isMax ? "bg-n-grey6" : "bg-n-grey1";
-  const textColor = isMax ? "primary-100" : "primary";
-  const textColor2 = isMax ? "primary-100" : "primary-900";
-  const featuresColor = isMax ? "primary-100" : "n-grey6";
-  const iconsGridColumn = device.type !== "lite" ? `grid-cols-6` : "grid-cols-3";
+
+const TerminalCard = ({ device, image, isHighlight, features, link, icons }) => {
+  const backgroundColor = isHighlight ? "bg-n-grey6" : "bg-n-grey1";
+  const textColor = isHighlight ? "primary-100" : "primary";
+  const textColor2 = isHighlight ? "primary-100" : "primary-900";
+  const featuresColor = isHighlight ? "primary-100" : "n-grey6";
+  const iconsGridColumn = device.type !== "lite" ? "grid-cols-6" : "grid-cols-3";
+  
   return (
-    <section className={`shadow-md hover:shadow-xl rounded-lg relative py-8 ${backgroundColor}`}>
+    <section className={`shadow-md hover:shadow-xl rounded-lg relative py-8 ${backgroundColor} md:min-w-[397px]`}>
       <div className="h-full flex flex-col justify-between">
         <div className="text-center ">
           {image}
@@ -29,13 +31,14 @@ const TerminalCard = ({ device, image, isMax, features, link, icons }) => {
         <div className="-mt-[5px] mx-5">
           <div>
             <Ntext variant="p12" color={textColor2} className=" m-0 p-0">
-              {isMax ? "Outright Purchase" : "Lease Price"}
+              {device.priceType}
             </Ntext>
             <div className="flex flex-row  justify-between items-baseline">
               <Ntext variant="text5" color={textColor} className="flex">
                 {device.price}
               </Ntext>
-              <ReadMore variant="text3" text="Buy now" color={textColor} href={link} />
+              <ReadMore variant="text3" text={device.ctaText} color={textColor} href={link} />
+
             </div>
           </div>
         </div>
