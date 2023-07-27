@@ -9,13 +9,11 @@ export function ImageCarouselSection() {
   return (
     <div className="bg-gradient-to-b  from-n-light to-[#F3F3F3]">
       <SectionWrapper className={`${imageSectionWrapper}`}>
-        {/* <Slider {...settings}> */}
         <div className={imagesContainer}>
           {images.map((image, index) => {
             return <img key={index} src={image} className={defaultImageStyle} alt={`img-${index}`} />;
           })}
         </div>
-        {/* </Slider> */}
       </SectionWrapper>
     </div>
   );
@@ -47,36 +45,8 @@ md:h-[542px]
 mr-[20px]
 `);
 
-// blur:rounded-[5px]
-// const secondImage = ctl(`
-// rounded-[250px]
-// `);
-
 const imageSectionWrapper = ctl(`
 pl-[0%]
 text-center 
 md:pb-[44px] 
 `);
-
-// import useIsMobile from "hooks/useIsMobile";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// const mobile = useIsMobile();
-// var settings = {
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   dots: false,
-//   autoplay: true,
-//   adaptiveHeight: true,
-//   draggable: true,
-//   easing: "linear",
-//   focusOnSelect: true,
-//   pauseOnHover: false,
-//   row: 1,
-//   swipeToSlide: true,
-//   variableWidth: true,
-//   centerMode: !mobile && true
-// };
