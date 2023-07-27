@@ -31,6 +31,10 @@ const headerMenu = {
           title: "Invoicing",
           to: "/invoice",
         },
+        {
+          title: "Service Status",
+          to: "https://dashboard.nomba.com/guest/card-bank-performance",
+        },
       ],
     },
     {
