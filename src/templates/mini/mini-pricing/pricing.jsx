@@ -67,12 +67,6 @@ const MiniPricing = ({ price, leasePrice }) => {
                     Enjoy lower transaction fee at 0.4% <del className="text-n-grey3">0.5%</del> capped at N80
                   </Ntext>
                 </div>
-                <div className="flex flex-row gap-5 items-center max_feature1">
-                  <Bullet />{" "}
-                  <Ntext variant="text3" className="!leading-[24px]" color="m-light">
-                    ₦0 charge on your first 100 transactions
-                  </Ntext>
-                </div>
               </div>
               <div className="flex md:flex-row flex-col justify-center gap-8 items-stretch md:items-center">
                 <div onClick={() => addToCart(3)}>

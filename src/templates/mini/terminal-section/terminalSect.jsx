@@ -49,7 +49,7 @@ const TerminalSectionInteractions = () => {
             </div>
             <div>
               <Ntext variant="h2" className="text-center" color="n-light">
-                Activate the power of <br /> your payment padi.
+                Activate the power of <br /> your payment padi
               </Ntext>
             </div>
           </div>

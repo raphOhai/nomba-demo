@@ -64,7 +64,7 @@ export const miniFeaturesBreakdown = [
 ];
 
 export const miniBenefits = [
-  "lowest processing fees in the market",
+  "Lowest processing fees in the market",
   "Handy and convenient",
   "Send paperless receipts",
   "Get instant alerts and auto-settlement",

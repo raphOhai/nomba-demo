@@ -72,12 +72,12 @@ const WhyMini = () => {
           <div className="absolute">
             <div className="flex  flex-col  mt-10   rounded-md">
               <div className=" md:p-0 p-5">
-                <Ntext variant="text9" color="primary-100" data-animation="rtl">
+                <Ntext variant="text9" color="primary-100" data-animation="h">
                   Nomba Mini
                 </Ntext>
               </div>
               <div className="max-w-[972px] md:p-0 p-5">
-                <Ntext variant="text6lite" color="primary-100" className="!font-[400]" data-animation="rtl">
+                <Ntext variant="text6lite" color="primary-100" className="!font-[400]" data-animation="h">
                   Nomba mini is your pocket-sized payment padi that guarantees a reliable, fast and smooth payment
                   experience. From instant alert to auto-settlements and lower transaction charges, the Nomba mini
                   provides you with maximum productivity and therefore, sales
@@ -87,7 +87,7 @@ const WhyMini = () => {
                 <div className="">
                   <div className="text-[16px] text-n-light"></div>
                   <div>
-                    <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                    <Ntext variant="text8" color="primary-100" data-animation="h">
                       5.0
                     </Ntext>
                   </div>
@@ -96,7 +96,7 @@ const WhyMini = () => {
                 <div className="">
                   <div className="text-[16px] text-n-light"></div>
                   <div>
-                    <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                    <Ntext variant="text8" color="primary-100" data-animation="h">
                       1GB
                     </Ntext>
                   </div>
@@ -105,7 +105,7 @@ const WhyMini = () => {
                 <div className="">
                   <div className="text-[16px] text-n-light"></div>
                   <div>
-                    <Ntext variant="text8" color="primary-100" data-animation="rtl">
+                    <Ntext variant="text8" color="primary-100" data-animation="h">
                       7.4V
                     </Ntext>
                   </div>

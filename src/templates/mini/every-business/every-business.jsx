@@ -3,7 +3,7 @@ import React, { useLayoutEffect } from "react";
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Container, Ntext, SectionHeader } from "components";
+import { Container, Br, Ntext, SectionHeader } from "components";
 import useIsMobile from "hooks/useIsMobile";
 gsap.registerPlugin(ScrollTrigger);
 const EveryBusiness = ({ slides }) => {
@@ -29,10 +29,10 @@ const EveryBusiness = ({ slides }) => {
   return (
     <section className=" pb-[100px] bg-c-0 -pt-10 every-business-mini">
       <Container>
-        <SectionHeader className="flex flex-row justify-between items-baseline header-text-every-business-mini  ">
-          <div className="max-w-[600px]">
+        <SectionHeader className="flex flex-row justify-between items-center header-text-every-business-mini  ">
+          <div className="max-w-[700px]">
             <Ntext variant="h2" className="text-left" color="primary-100" data-animation="h">
-              Designed for businesses like yours
+              Designed for <Br on="desktop" /> businesses like yours
             </Ntext>
           </div>
 
