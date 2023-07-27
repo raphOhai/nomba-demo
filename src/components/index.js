@@ -15,4 +15,3 @@ export * from "./timeline";
 export * from "./testimonial";
 export * from "./common-questions";
 export * from "./get-started";
-export * from "./testimonial-light";
