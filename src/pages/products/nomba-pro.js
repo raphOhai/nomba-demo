@@ -1,7 +1,7 @@
 import React from "react";
 import { Br } from "components";
 import Layout from "components/layout";
-import "templates/products/nomba-pro/css/index.css";
+import "templates/products/nomba-terminal/css/index.css";
 import {
   NombaProHeroSection,
   ImageCarouselSection,
@@ -13,7 +13,7 @@ import {
   DownloadApp,
   NeverLoseASale,
   BecomeAnAgentToday,
-} from "templates/products/nomba-pro";
+} from "templates/products/nomba-terminal";
 import { Accordion } from "templates";
 import { Faq } from "config/faq/faq";
 
@@ -24,17 +24,14 @@ function NombaproPage() {
       <NombaProHeroSection
         proHeaderText={
           <>
-            <div className="pl-0 inline-flex underline decoration-5 decoration-secondary">
-              Never
-            </div>{" "}
-            lose a sale <Br on="desktop" />
+            <div className="pl-0 inline-flex underline decoration-5 decoration-secondary">Never</div> lose a sale{" "}
+            <Br on="desktop" />
             with Nomba Pro
           </>
         }
         proHeaderSubText={
           <>
-            Receive payments at lightening speed, make transfers,{" "}
-            <Br on="desktop" />
+            Receive payments at lightening speed, make transfers, <Br on="desktop" />
             use tools that will help you grow your business
           </>
         }
@@ -49,11 +46,7 @@ function NombaproPage() {
       <StartSellingOnTheGo />
       <DownloadApp />
       <NeverLoseASale />
-      <Accordion
-        heading="Frequently Asked Questions"
-        hasImages={false}
-        accordionListArray={Faq}
-      />
+      <Accordion heading="Frequently Asked Questions" hasImages={false} accordionListArray={Faq} />
       <BecomeAnAgentToday />
       <div></div>
     </Layout>

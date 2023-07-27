@@ -20,7 +20,6 @@ const ExperienceMax = ({ title, description }) => {
     const wrap = document.querySelector(".spininTerminal");
     IO(wrap).then(
       () => {
-        console.log(90);
         setTimeout(() => {
           fadeOutVid();
         }, 500);

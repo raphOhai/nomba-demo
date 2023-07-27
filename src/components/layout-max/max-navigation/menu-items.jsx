@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { Ntext } from "components/ntext";
 import { NLink } from "components/nlink";
-import { SubMenu } from "./sub-menu";
 import { headerMenu } from "../../../config/max/menu";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MenuItems = () => {
   const [showSubmenu, setShowSubmenu] = useState(null);
-  const headerMenuItems = Object.keys(headerMenu);
 
   const ref = useRef();
 
@@ -42,25 +39,9 @@ const MenuItems = () => {
         duration: 0.4,
       });
     });
-
-    // gsap.to('#link-0', {
-
-    // })
   });
 
   const menuItems = headerMenu.map((item, i) => {
-    // const navItem = headerMenu[item];
-
-    // const handleKeyDown = e => {
-    //   if (e.keyCode === 13) {
-    //     if (showSubmenu === i) {
-    //       setShowSubmenu(null);
-    //     } else {
-    //       setShowSubmenu(i);
-    //     }
-    //   }
-    // };
-
     return (
       <li className={itemWrapStyle} key={item.title}>
         {/* menu items */}

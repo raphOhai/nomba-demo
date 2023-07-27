@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "components/layout-max";
+import { WhatsInTheBox } from "components/in-the-box";
 import { Br } from "components";
 import {
   MaxpageHero,
@@ -8,11 +9,10 @@ import {
   ExperienceMax,
   MaxBusinessTypes,
   GetMax,
-  WhatsInTheBox,
   MaxPricing,
 } from "templates/max";
 import { split } from "animations/text";
-import { AccordionData } from "config/terminal";
+import { AccordionData, InTheBox } from "config/terminal";
 import { CommonQuestions } from "components/common-questions";
 
 const MaxPage = () => {
@@ -53,8 +53,8 @@ const MaxPage = () => {
         description="Designed to the last pixel to give you the max performance - faster transaction, long lasting battery, high speed printer, durable and reliable POS terminal."
       />
       <MaxBusinessTypes title="What Businesses Like Yours Think of Nomba MAX." />
-      <WhatsInTheBox title="What’s in the box?" />
-      <MaxPricing title="Pricing & Specifications" price="₦80,000" leasePrice="₦45,000" />
+      <WhatsInTheBox title="What’s in the box?" InTheBox={InTheBox} />
+      <MaxPricing title="Pricing & Specifications" price="₦85,000" leasePrice="₦45,000" />
       <CommonQuestions questions={AccordionData} />
 
       <GetMax

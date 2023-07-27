@@ -7,8 +7,6 @@ import SplitType from "split-type";
 import { Container, Ntext, Button } from "components";
 import Lottie from "lottie-web";
 import constants from "config/constants.json";
-import { StaticImage } from "gatsby-plugin-image";
-import mobile from "jpegs/invoice/hero/mobile.mp4";
 import mobileAnimation from "./animations/vid_fone.json";
 import desktopAnimation from "./animations/laptopda.json";
 gsap.registerPlugin([ScrollTrigger]);
@@ -143,14 +141,6 @@ const InvoicepageHero = ({ title, description }) => {
           </div>
         </div>
         <div className="flex flex-row -mb-2 md:bottom-[-7px] md:left-0 justify-center md:items-baseline items-end invoice-hero-image ">
-          {/* <StaticImage
-            src="../../../assets/images/jpegs/invoice/hero/desktop-4x.png"
-            alt="Desktop Image"
-            className="invoice-desktop !hidden md:!block"
-            loading="lazy"
-            width={837}
-            height={381}
-          /> */}
           <div ref={desktopContainer} className="invoice-desktop !hidden md:!block "></div>
           <div ref={mobileContainer} className="md:-ml-40 invoice-mobile max-h-[500px] max-w-[503px]"></div>
         </div>
