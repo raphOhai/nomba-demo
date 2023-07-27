@@ -11,8 +11,7 @@ const HomepageTipsAndUpdate = () => {
         list={tipsAndUpdatesList}
         heading={
           <Ntext variant="h3">
-            Tips, updates and stories from <Br />
-            our community
+            Tips, updates and stories <Br on="desktop" /> from our community
           </Ntext>
         }
       />

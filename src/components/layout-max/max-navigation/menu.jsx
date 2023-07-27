@@ -4,12 +4,11 @@ import { MenuItems } from "./menu-items";
 import MenuIcon from "assets/images/svgs/menu-light.svg";
 import CloseIcon from "assets/images/svgs/x-light.svg";
 import { Button } from "components/button";
-import { MaxButton } from "components/max-button";
 
 import constants from "config/constants.json";
 
 const Menu = ({ openMenu, onToggle }) => {
-  const { SIGNUP_URL, SIGNIN_URL } = constants;
+  const { SIGNUP_URL } = constants;
   const menuIconAriaLabel = openMenu ? "menu icon" : "close menu icon";
 
   return (
@@ -23,14 +22,6 @@ const Menu = ({ openMenu, onToggle }) => {
         <MenuItems />
 
         <ul className={buttonWrapStyle}>
-          {/* <li className={signInButtonStyle}>
-            <Button
-              variant="alternative"
-              text="Sign in"
-              href={{ url: SIGNIN_URL }}
-            />
-          </li> */}
-
           <li>
             <Button text="Get your terminal" href={{ url: SIGNUP_URL }} />
           </li>
@@ -66,10 +57,4 @@ const buttonWrapStyle = ctl(`
   mb-10
   menu-button-wrap
 `);
-const signInButtonStyle = ctl(`
-  lg:mr-[17px] 
-  mb-[17px] 
-  lg:mb-0
-`);
-
 export { Menu };

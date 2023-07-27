@@ -3,7 +3,7 @@ import * as React from "react";
 import Layout from "components/layout";
 import { HomepageHero, HomepageGotOptions, HomepageFeatures, HomepageTipsAndUpdate } from "templates/home";
 import { Br, POSTerminals } from "components";
-import NombaProAdvert from "templates/home/nomba-max-advert/nomba-max-advert";
+import NombaTerminalAdvert from "templates/home/nomba-terminal-advert/nomba-terminal-advert";
 import { BusinessTypes } from "templates/home/business-types";
 import { heroHomePage } from "config/home";
 
@@ -11,7 +11,7 @@ const IndexPage = () => {
   return (
     <Layout title="Nomba" ignoreSiteName={true}>
       <HomepageHero {...heroHomePage} />
-      <NombaProAdvert>
+      <NombaTerminalAdvert>
         <HomepageFeatures
           title={
             <>
@@ -20,7 +20,7 @@ const IndexPage = () => {
           }
         />
         <BusinessTypes />
-      </NombaProAdvert>
+      </NombaTerminalAdvert>
 
       <HomepageGotOptions />
       <POSTerminals

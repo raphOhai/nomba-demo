@@ -1,21 +1,16 @@
 import React, { useEffect } from "react";
 
 import Layout from "components/layout-max";
-import { Br, Testimonial } from "components";
+import { Br, Testimonial, GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
-import {
-  InvoicepageHero,
-  SponsorList,
-  InvoiceTools,
-  HowInvoicingWorks,
-  InvoiceTestimonial,
-  EveryBusiness,
-  GetStarted,
-} from "templates/invoice";
+import { InvoicepageHero, SponsorList, InvoiceTools, HowInvoicingWorks, EveryBusiness } from "templates/invoice";
 import { split } from "animations/text";
-import { InvoiceBusinessTools, faqData, invoiceTestimonial, resourceData } from "config/invoice";
+import { InvoiceBusinessTools, faqData, invoiceTestimonial } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
 import { everyBusinesses } from "config/invoice";
+// import scroll from "../animations/scroll";
+// import "../style/lenis/lenis.scss";
+// scroll();
 const InvoicePage = () => {
   useEffect(() => {
     split();

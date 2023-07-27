@@ -12,19 +12,33 @@ const POSTerminals = ({ title }) => {
           <SectionHeader>
             <Ntext variant="h3">{title}</Ntext>
           </SectionHeader>
-        )}
-        <div className={posCardWrapperStyle}>
-          {posCardData.map((posdetails, index) => (
-            <TerminalCard {...posdetails} key={`pos_card_${index}`} />
-          ))}
-        </div>
+        )}{" "}
       </Container>
+      <div className={posCardWrapperStyle}>
+        {posCardData.map((posdetails, index) => (
+          <TerminalCard {...posdetails} key={`pos_card_${index}`} />
+        ))}
+      </div>
     </section>
   );
 };
 
 const posCardWrapperStyle = ctl(`
-md:grid md:grid-cols-3 gap-7 xs:flex xs:flex-col
+flex 
+justify-start 
+px-[25px] 
+md:px-0 
+gap-10 
+mt-[50px] 
+items-center 
+md:items-stretch
+md:flex-nowrap 
+flex-col 
+md:flex-row  
+scrollbar-hide
+overflow-auto 
+ slider-margin-left
+ md:pb-[30px]
 `);
 
 POSTerminals.propTypes = {

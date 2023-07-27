@@ -17,6 +17,30 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export const posCardData = [
   {
+    isHighlight: true,
+    device: {
+      name: "Nomba Mini",
+      price: "₦25,000",
+      type: "mini",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
+    },
+
+    features: "Accept all Bank Cards, the new pocket-sized terminal for swift and successful transactions.",
+
+    image: (
+      <StaticImage width={151} height={262} src="../assets/images/jpegs/homepage/Nomba-Mini-1.png" alt="Nomba Mini" />
+    ),
+    icons: [
+      <VisaLight key="visacard" />,
+      <MasterLight key="mastercard" />,
+      <WifiLight key="wifi" />,
+      <FourGLight key="4g" />,
+      <CisUSbLight key="usb" />,
+    ],
+    link: "/mini",
+  },
+  {
     isHighlight: false,
     device: {
       name: "Nomba Lite",
@@ -61,7 +85,7 @@ export const posCardData = [
     ],
   },
   {
-    isHighlight: true,
+    isHighlight: false,
 
     device: {
       name: "Nomba MAX",
@@ -77,12 +101,13 @@ export const posCardData = [
     image: <StaticImage width={124} height={267} src="../assets/images/jpegs/homepage/Nomba-Max.png" alt="Nomba Max" />,
     link: "/max",
     icons: [
-      <VisaLight key="visacard" />,
-      <MasterLight key="mastercard" />,
-      <WifiLight key="wifi" />,
-      <PrinterLight key="printer" />,
-      <FourGLight key="4g" />,
-      <CisUSbLight key="usb" />,
+      <Visa key="visacard" />,
+      <Master key="mastercard" />,
+      <Wifi key="wifi" />,
+      <Printer key="printer" />,
+      <FourG key="4g" />,
+      <CisUSb key="usb" />,
+      // <StaticImage src="../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
     ],
   },
 ];

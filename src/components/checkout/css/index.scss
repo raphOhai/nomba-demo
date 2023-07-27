@@ -1,0 +1,17 @@
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  &:after {
+    content: "\0025BC";
+    font: normal normal normal 12px/1 FontAwesome;
+    color: white;
+    right: 14px;
+    top: 4px;
+    height: 26px;
+    padding: 15px 0px 0px 8px;
+    position: absolute;
+    pointer-events: none;
+  }
+}

@@ -41,6 +41,7 @@ const Ntext = ({ value, variant: textVariant, weight, color = "primary", classNa
     "pricingSub",
     "pricingMain",
     "p24",
+    "p24regular",
   ];
 
   if (customVariants.includes(textVariant)) {
@@ -126,7 +127,15 @@ const variants = {
     text-[16px]
     md:leading-[32px]
     leading-[24.8px]
-    font-[500]
+    font-[200]
+    `,
+  p24regular: `
+    md:text-[24px]
+    text-[16px]
+    md:leading-[32px]
+    leading-[24.8px]
+    md:font-[500]
+    font-[400]
     `,
   p18: `
     md:text-[18px]
@@ -210,8 +219,8 @@ const variants = {
     md:tracking-[-0.03em]
       `,
   text6lite: `
-    font-[700]
-    text-[20px]
+    font-[600]
+    text-[24px]
     leading-[30px]
     tracking-[-0.02em]
     md:text-[32px]
@@ -322,6 +331,7 @@ const validElements = [
   "p16",
   "p18",
   "p24",
+  "p24regular",
   "text0",
   "text1",
   "text2",
