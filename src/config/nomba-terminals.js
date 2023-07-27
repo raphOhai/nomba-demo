@@ -9,7 +9,6 @@ import FourG from "assets/images/svgs/fourg.svg";
 import VisaLight from "assets/images/svgs/visa-light.svg";
 import MasterLight from "assets/images/svgs/master-light.svg";
 import WifiLight from "assets/images/svgs/wifi-light.svg";
-import PrinterLight from "assets/images/svgs/printer-light.svg";
 import Printer from "assets/images/svgs/printer.svg";
 import CisUSbLight from "assets/images/svgs/usb-light.svg";
 import FourGLight from "assets/images/svgs/fourg-light.svg";
@@ -107,7 +106,6 @@ export const posCardData = [
       <Printer key="printer" />,
       <FourG key="4g" />,
       <CisUSb key="usb" />,
-      // <StaticImage src="../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
     ],
   },
 ];
