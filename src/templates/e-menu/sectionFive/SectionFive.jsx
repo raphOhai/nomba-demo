@@ -4,9 +4,8 @@ import ctl from "@netlify/classnames-template-literals";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Container, Ntext, Button } from "components";
+import { Ntext, Button } from "components";
 import constants from "config/constants.json";
-import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
@@ -35,7 +34,6 @@ const EmenuSection5 = ({ cards }) => {
 
     IO(dom).then(
       () => {
-        // gsap.to(cardTile, { yPercent: 10 });
         let text = document.querySelector(".section-five-title");
         tl.to(titleText.chars, {
           yPercent: window.innerWidth > 760 ? 400 : 210,
@@ -50,27 +48,7 @@ const EmenuSection5 = ({ cards }) => {
             text.firstChild.appendChild(e.cloneNode(true));
           });
         }, 1000);
-        // cardTile.forEach((card, i) => {
-        //   tl.to(card, {
-        //     scrollTrigger: {
-        //       trigger: card,
-        //       start: "top center",
-        //       scrub: true,
-        //       end: "+=4000px",
-        //     },
-        //     rotate: 30,
-        //     stagger: 50,
-        //     // duration: 1,
-        //     yPercent: -100,
-        //     // delay: 1,
-        //     opacity: 0,
-        //     ease: "easeOut",
-        //   });
-        // });
-        // cardTile.forEach((card, i) => {
-        // tl.to(cardTile, {
-        //   yPercent: 10,
-        // });
+
         tl.to(cardTile.reverse(), {
           yPercent: -100,
           stagger: 0.5,
@@ -129,7 +107,6 @@ const EmenuSection5 = ({ cards }) => {
             />
           </div>
         </div>
-        {/* </Container> */}
       </section>
     </div>
   );
