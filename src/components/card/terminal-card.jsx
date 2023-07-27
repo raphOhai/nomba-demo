@@ -36,7 +36,13 @@ const TerminalCard = ({ device, image, isHighlight, features, link, icons }) => 
               <Ntext variant="text5" color={textColor} className="flex">
                 {device.price}
               </Ntext>
-              <ReadMore variant="text3" text={device.ctaText} color={textColor} href={link} />
+              <ReadMore
+                extraTrackText={device.name}
+                variant="text3"
+                text={device.ctaText}
+                color={textColor}
+                href={link}
+              />
             </div>
           </div>
         </div>
