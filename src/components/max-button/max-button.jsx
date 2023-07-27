@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { NLink } from "components/nlink";
 
 const MaxButton = ({ text, link, type }) => {
   return (
-    <a href={link}>
+    <NLink href={link} trackingText={`max-${text}`}>
       <button className={`${type}`}>
         {text}
         <svg
@@ -24,7 +25,7 @@ const MaxButton = ({ text, link, type }) => {
           <path d="M12.5 9L15.5 12L12.5 15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
-    </a>
+    </NLink>
   );
 };
 

@@ -31,7 +31,7 @@ const SliderCard = ({ image, heading, text, caseStudy, link }) => {
 
             <Ntext variant="text3" value={text} color="n-grey4" />
 
-            {link && <ReadMore {...link} color="primary" />}
+            {link && <ReadMore extraTrackText={heading} {...link} color="primary" />}
           </div>
         )}
       </div>

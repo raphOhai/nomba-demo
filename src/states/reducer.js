@@ -1,7 +1,7 @@
 function reducer(state, action) {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1 };
+      return { count: state.count === 10 ? 10 : state.count + 1 };
     case "decrement":
       return { count: state.count === 1 ? 1 : state.count - 1 };
     default:
