@@ -43,12 +43,12 @@ export const AccordionData = [
     content: "No, you need to insert a dedicated sim into the sim card slot to access data service.",
   },
   {
-    id: 3,
+    id: 4,
     header: "Do I need to connect it to a phone before I can start to use it?",
     content: "No, the Nomba Mini is a standalone device; this means all you need to transact is on your terminal.",
   },
   {
-    id: 3,
+    id: 5,
     header: "Can I raise complaints on the terminal?",
     content:
       "Yes. In rare cases where a payment is declined on your terminal, you can issue a dispute request and we will initiate a refund.",
