@@ -4,7 +4,7 @@ import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { MaxButton } from "components/max-button";
+import { GetTerminal } from "components";
 import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
 import { AppContext } from "states/context";
 import Check from "svgs/yellow-check.svg";
@@ -70,7 +70,7 @@ const MiniPricing = ({ price, leasePrice }) => {
               </div>
               <div className="flex md:flex-row flex-col justify-center gap-8 items-stretch md:items-center">
                 <div onClick={() => addToCart(3)}>
-                  <MaxButton text="Buy now" type="animate-button-reverse" />
+                  <GetTerminal text="Buy now" type="animate-button-reverse" />
                 </div>
                 <ReadMore
                   color="primary-100"

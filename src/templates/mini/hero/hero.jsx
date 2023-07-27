@@ -3,7 +3,7 @@ import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext, ReadMore } from "components";
 import constants from "config/constants.json";
-import { MaxButton } from "components/max-button";
+import { GetTerminal } from "components";
 import LogoMini from "jpegs/mini/logo.svg";
 import HeroVid from "jpegs/mini/hero/heroVid.mp4";
 import Check from "svgs/yellow-check.svg";
@@ -35,10 +35,10 @@ const MiniHero = ({ title, benefits }) => {
 
             <div className={heroButtonsContainer}>
               <div onClick={() => addToCart(3)}>
-                <MaxButton text="Get your terminal" type="animate-button-reverse" />
+                <GetTerminal text="Get your terminal" type="animate-button-reverse" />
               </div>
 
-              {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
+              {/* <GetTerminal text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
               <ReadMore
                 color="primary-100"
                 className="text-center"
