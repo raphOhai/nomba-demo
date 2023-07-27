@@ -105,7 +105,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
           <div className="flex justify-start text-center pb-10 text-n-grey2 section-nav-link flex-row scrollbar-hide overflow-auto md:justify-center">
             {tools.map((t, i) => (
               <div
-                key={i}
+                key={t.title}
                 className={`cursor-pointer transition-all  md:px-5 py-2  px-2 md:border-black inline-flex rounded-full section-four-title-${i} circle flex flex-col justify-center items-center`}
               >
                 <a href={`#card-${i}`} className="text-[14px] md:text-[20px] whitespace-pre">
@@ -118,7 +118,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
             {tools.map((t, i) => (
               <div
                 class={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
-                key={i}
+                key={t.heading}
               >
                 <div className="flex md:flex-row flex-col justify-between items-center">
                   <div className="flex flex-col gap-[10px] p-10 md:pt-0 md:pl-[60px]">
