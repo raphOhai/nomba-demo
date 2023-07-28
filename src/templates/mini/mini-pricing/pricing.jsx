@@ -77,6 +77,7 @@ const MiniPricing = ({ price, leasePrice }) => {
                   weight={500}
                   className="text-center "
                   defaultStyle={false}
+                  extraTrackText="Contact sales"
                   variant="text3"
                   href={{ url: "tel:+23401888899" }}
                   text="Contact sales"

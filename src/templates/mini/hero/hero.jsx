@@ -45,6 +45,7 @@ const MiniHero = ({ title, benefits }) => {
                 weight={500}
                 defaultStyle={false}
                 variant="text3"
+                extraTrackText="Contact sales"
                 href={{ url: "tel:+23401888899" }}
                 text="Contact sales"
               />
