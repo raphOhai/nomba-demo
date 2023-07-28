@@ -73,7 +73,7 @@ const MiniHero = ({ title, benefits }) => {
           </div>
           <div className=" hover:animate-pulseCustom">
             <video
-              className={`absolute`}
+              className={`absolute left-0 md:left-auto`}
               loop
               autoPlay
               height={724}
