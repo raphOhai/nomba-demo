@@ -19,7 +19,7 @@ module.exports = {
       resolve: "gatsby-plugin-mixpanel",
       options: {
         apiToken: process.env.MIXPANEL_API_TOKEN,
-        enableOnDevMode: process.env.NODE_ENV !== "production",
+        enableOnDevMode: true,
         pageViews: "all",
       },
     },
@@ -74,8 +74,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "GTM-5PXCRHL",
+        id: process.env.GOOGLE_TAG_API_TOKEN,
         includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: process.env.FACEBOOK_PIXEL_API_TOKEN,
       },
     },
     {
