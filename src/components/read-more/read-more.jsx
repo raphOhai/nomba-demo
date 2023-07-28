@@ -6,11 +6,15 @@ import Arrow from "svgs/readmore.svg";
 import ArrowGrey from "svgs/readmore-grey.svg";
 import ctl from "@netlify/classnames-template-literals";
 
-const ReadMore = ({ text, color, className, defaultStyle = true, active = true, ...props }) => {
+const ReadMore = ({ text, color, className, extraTrackText, defaultStyle = true, active = true, ...props }) => {
   return (
     <div className={className}>
       {defaultStyle ? (
-        <NLink {...props} className={readmoreStylDefault}>
+        <NLink
+          {...props}
+          trackingText={extraTrackText ? `${extraTrackText}-${text}` : text}
+          className={readmoreStylDefault}
+        >
           <Ntext
             variant={props.variant || "p16"}
             color={color}
@@ -22,7 +26,7 @@ const ReadMore = ({ text, color, className, defaultStyle = true, active = true, 
           {active ? <Arrow className={arrowStyle} /> : <ArrowGrey className={arrowStyle} />}
         </NLink>
       ) : (
-        <NLink {...props} className={readmoreStyle}>
+        <NLink {...props} trackingText={extraTrackText ? `${extraTrackText}-${text}` : text} className={readmoreStyle}>
           <Ntext
             variant={props.variant || "p16"}
             color={color}

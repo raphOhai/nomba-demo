@@ -6,6 +6,7 @@ module.exports = {
     "./src/pages/products/*.{js,jsx}",
     "./src/pages/banking/*.{js,jsx}",
     "./src/pages/business/*.{js,jsx}",
+    "./src/pages/mini.js",
     "./src/components/**/*.{html,jsx,js}",
     "./src/templates/about-us/**/*.{html,jsx,js}",
     "./src/templates/banking/**/*.{html,jsx,js}",
@@ -14,6 +15,8 @@ module.exports = {
     "./src/templates/business/**/*.{html,jsx,js}",
     "./src/templates/max/**/*.{html,jsx,js}",
     "./src/templates/invoice/**/*.{html,jsx,js}",
+    "./src/templates/e-menu/**/*.{html,jsx,js}",
+    "./src/templates/mini/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
@@ -78,6 +81,7 @@ module.exports = {
         n: {
           yellow: "#ffcc00",
           yellow1: "#FFFAE6",
+          yellow2: "#FFF5CC",
           light: "#ffffff",
           grey1: "#eeeeee",
           grey2: "#c6c6c6",
@@ -89,6 +93,8 @@ module.exports = {
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
+          green2: "#D9F2F2",
+          pink1: "#EFD9F2",
           grey3light: "#99999980",
         },
         c: {
@@ -108,6 +114,14 @@ module.exports = {
           light2: "#F5F5F5",
           yellow: "#ffd42b",
           yellow1: "#FFCC001A",
+        },
+        b: {
+          1: "#FFF5CC",
+          2: "#D9F2F2",
+          3: "#CFF1CC",
+          4: "#EFD9F2",
+          5: "#D9F3F3",
+          6: "#FFEEAA",
         },
       },
 

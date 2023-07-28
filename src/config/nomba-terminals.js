@@ -9,13 +9,36 @@ import FourG from "assets/images/svgs/fourg.svg";
 import VisaLight from "assets/images/svgs/visa-light.svg";
 import MasterLight from "assets/images/svgs/master-light.svg";
 import WifiLight from "assets/images/svgs/wifi-light.svg";
-import PrinterLight from "assets/images/svgs/printer-light.svg";
 import Printer from "assets/images/svgs/printer.svg";
 import CisUSbLight from "assets/images/svgs/usb-light.svg";
 import FourGLight from "assets/images/svgs/fourg-light.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 export const posCardData = [
+  {
+    isHighlight: true,
+    device: {
+      name: "Nomba Mini",
+      price: "₦25,000",
+      type: "mini",
+      priceType: "Outright purchase",
+      ctaText: "Buy now",
+    },
+
+    features: "Accept all Bank Cards, the new pocket-sized terminal for swift and successful transactions.",
+
+    image: (
+      <StaticImage width={151} height={262} src="../assets/images/jpegs/homepage/Nomba-Mini-1.png" alt="Nomba Mini" />
+    ),
+    icons: [
+      <VisaLight key="visacard" />,
+      <MasterLight key="mastercard" />,
+      <WifiLight key="wifi" />,
+      <FourGLight key="4g" />,
+      <CisUSbLight key="usb" />,
+    ],
+    link: "/mini",
+  },
   {
     isHighlight: false,
     device: {
@@ -61,7 +84,7 @@ export const posCardData = [
     ],
   },
   {
-    isHighlight: true,
+    isHighlight: false,
 
     device: {
       name: "Nomba MAX",
@@ -77,12 +100,12 @@ export const posCardData = [
     image: <StaticImage width={124} height={267} src="../assets/images/jpegs/homepage/Nomba-Max.png" alt="Nomba Max" />,
     link: "/max",
     icons: [
-      <VisaLight key="visacard" />,
-      <MasterLight key="mastercard" />,
-      <WifiLight key="wifi" />,
-      <PrinterLight key="printer" />,
-      <FourGLight key="4g" />,
-      <CisUSbLight key="usb" />,
+      <Visa key="visacard" />,
+      <Master key="mastercard" />,
+      <Wifi key="wifi" />,
+      <Printer key="printer" />,
+      <FourG key="4g" />,
+      <CisUSb key="usb" />,
     ],
   },
 ];

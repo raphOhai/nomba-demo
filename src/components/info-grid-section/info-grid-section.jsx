@@ -26,7 +26,7 @@ gap-8
 `);
 
 InfoGridSection.propTypes = {
-  list: PropTypes.object,
-  heading: PropTypes.string,
+  list: PropTypes.array,
+  heading: PropTypes.node,
 };
 export { InfoGridSection };
