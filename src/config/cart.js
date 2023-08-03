@@ -10,13 +10,13 @@ export const CartTerminals = [
   },
   {
     name: "Nomba Pro",
-    price: "₦ 25,000",
+    price: "₦ 62,000",
     image: <StaticImage height={82} width={60} src="../assets/images/jpegs/cart/pro.png" alt="Nomba Pro" />,
     info: "1GB RAM, 7.4V/2000mAh Battery",
   },
   {
     name: "Nomba Lite",
-    price: "₦ 15,000",
+    price: "₦ 30,000",
     image: <StaticImage height={82} width={41} src="../assets/images/jpegs/cart/lite.png" alt="Nomba Lite" />,
     info: "1GB RAM, 7.4V/2000mAh Battery",
   },
