@@ -68,7 +68,7 @@ export const terminalData = [
     icons: [<Visa key="visacard" />, <Master key="mastercard" />, <Wifi key="wifi" />],
     link: "https://dashboard.nomba.com/auth/signup",
 
-    bgColor: "bg-[#383838]",
+    bgColor: "bg-[#EEEEEE]",
     textColor: "primary",
   },
   {
@@ -94,14 +94,14 @@ export const terminalData = [
     ),
     link: "https://dashboard.nomba.com/auth/signup",
     icons: [
-      <Visa key="visacard" />,
-      <Master key="mastercard" />,
-      <Wifi key="wifi" />,
-      <FourG key="4g" />,
-      <CisUSb key="usb" />,
+      <VisaLight key="visacard" />,
+      <MasterLight key="mastercard" />,
+      <WifiLight key="wifi" />,
+      <FourGLight key="4g" />,
+      <CisUSbLight key="usb" />,
       // <StaticImage src="../../../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
     ],
-    bgColor: "bg-[#EEEEEE]",
+    bgColor: "bg-primary",
     textColor: "n-light",
   },
   {

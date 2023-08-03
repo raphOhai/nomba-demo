@@ -4,7 +4,6 @@ import { Ntext, ReadMore } from "components";
 import ctl from "@netlify/classnames-template-literals";
 const TerminalCard = ({ device, image, textColor, features, link, icons, bgColor }) => {
   const textColor2 = "primary-900";
-  const featuresColor = "n-grey6";
   const iconsGridColumn = device.type !== "lite" ? "grid-cols-6" : "grid-cols-3";
 
   return (
@@ -19,7 +18,7 @@ const TerminalCard = ({ device, image, textColor, features, link, icons, bgColor
               </Ntext>
               <div className={`${posTitleIconStyle} ${iconsGridColumn}`}>{icons}</div>
             </header>{" "}
-            <Ntext variant="p14" color={featuresColor} className="mt-5">
+            <Ntext variant="p14" color={textColor} className="mt-5">
               {features}
             </Ntext>
           </div>
@@ -27,7 +26,7 @@ const TerminalCard = ({ device, image, textColor, features, link, icons, bgColor
 
         <div className="-mt-[5px] mx-5">
           <div>
-            <Ntext variant="p12" color={textColor2} className=" m-0 p-0">
+            <Ntext variant="p12" color={textColor} className=" m-0 p-0">
               {device.priceType}
             </Ntext>
             <div className="flex flex-row  justify-between items-baseline">
