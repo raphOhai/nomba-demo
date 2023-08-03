@@ -23,7 +23,7 @@ export const terminalData = [
       priceType: "Outright purchase",
       ctaText: "Buy now",
     },
-
+    index: 3,
     features: "Accept all Bank Cards, the new pocket-sized terminal for swift and successful transactions.",
 
     image: (
@@ -54,6 +54,7 @@ export const terminalData = [
       priceType: "Lease Price",
       ctaText: "Lease now",
     },
+    index: 2,
 
     features: "Accept all Bank Cards, Connects to WiFi",
 
@@ -80,6 +81,7 @@ export const terminalData = [
       priceType: "Outright purchase",
       ctaText: "Buy now",
     },
+    index: 1,
 
     features:
       "Accept all Bank Cards, Pocket Friendly Light and Sleeky, Easy to operate Connects to 4G/3G/2G WiFi Bluetooth Connectivity",
@@ -117,6 +119,8 @@ export const terminalData = [
 
     features:
       "This device has faster transaction speed, Long lasting battery, High speed printer and is Sleek & Durable to give an overall high speed performance.",
+    index: 0,
+
     image: (
       <StaticImage
         width={217}

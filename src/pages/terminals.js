@@ -4,7 +4,8 @@ import Layout from "components/layout-max";
 import { HomepageTipsAndUpdate } from "templates";
 import { split } from "animations/text";
 import { TerminalList, TerminalsHero } from "templates/terminals";
-import { posCardData } from "config/nomba-terminals";
+import { Cart } from "components/checkout";
+
 const TerminalsPage = () => {
   useEffect(() => {
     split();
@@ -14,6 +15,9 @@ const TerminalsPage = () => {
       <TerminalsHero />
       <TerminalList />
       <HomepageTipsAndUpdate />
+      <div data-lenis-prevent>
+        <Cart />
+      </div>
     </Layout>
   );
 };

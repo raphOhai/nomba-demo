@@ -1,9 +1,10 @@
-import React from "react";
-import { Ntext, ReadMore } from "components";
+import React, { useContext } from "react";
+import { Ntext, GetTerminal } from "components";
 
 import ctl from "@netlify/classnames-template-literals";
-const TerminalCard = ({ device, image, textColor, features, link, icons, bgColor }) => {
-  const textColor2 = "primary-900";
+import { AppContext } from "states/context";
+const TerminalCard = ({ device, image, textColor, features, link, icons, bgColor, index }) => {
+  const { addToCart } = useContext(AppContext);
   const iconsGridColumn = device.type !== "lite" ? "grid-cols-6" : "grid-cols-3";
 
   return (
@@ -33,13 +34,9 @@ const TerminalCard = ({ device, image, textColor, features, link, icons, bgColor
               <Ntext variant="text5" color={textColor} className="flex">
                 {device.price}
               </Ntext>
-              <ReadMore
-                extraTrackText={device.name}
-                variant="text3"
-                text={device.ctaText}
-                color={textColor}
-                href={link}
-              />
+              <div className="btn" onClick={() => addToCart(index)}>
+                <GetTerminal text="By now" type="animate-button-reverse" />
+              </div>
             </div>
           </div>
         </div>

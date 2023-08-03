@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import { Container, Ntext, ReadMore } from "components";
-import constants from "config/constants.json";
-import { MaxButton } from "components/max-button";
+import { Container, Ntext, ReadMore, GetTerminal } from "components";
+import { AppContext } from "states/context";
 
 const MaxpageHero = ({ title, description }) => {
-  const { SIGNUP_URL } = constants;
+  const { addToCart } = useContext(AppContext);
   return (
     <section className={heroStyle}>
       <Container>
@@ -21,7 +20,9 @@ const MaxpageHero = ({ title, description }) => {
             </Ntext>
           </div>
           <div className={heroButtonsContainer}>
-            <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+            <div onClick={() => addToCart(0)}>
+              <GetTerminal text="Get your terminal" type="animate-button-reverse" />
+            </div>
             {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
             <ReadMore
               color="primary-100"

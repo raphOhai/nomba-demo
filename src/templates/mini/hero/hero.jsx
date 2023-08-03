@@ -1,16 +1,13 @@
 import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
-import { Container, Ntext, ReadMore } from "components";
-import constants from "config/constants.json";
-import { GetTerminal } from "components";
+import { Container, Ntext, ReadMore, GetTerminal } from "components";
 import LogoMini from "jpegs/mini/logo.svg";
 import HeroVid from "jpegs/mini/hero/heroVid.mp4";
 import Check from "svgs/yellow-check.svg";
 import { AppContext } from "states/context";
 
-const MiniHero = ({ title, benefits }) => {
-  const { SIGNUP_URL } = constants;
+const MiniHero = ({ benefits }) => {
   const { addToCart } = useContext(AppContext);
   return (
     <section className={heroStyle}>

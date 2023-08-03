@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import Logo from "assets/images/jpegs/terminal/max/svgs/logo.svg";
-import constants from "config/constants.json";
+import React, { useState, useEffect, useContext } from "react";
+import LogoMax from "jpegs/terminal/max/svgs/logo.svg";
+import LogoMini from "jpegs/mini/logo-small.svg";
 import ctl from "@netlify/classnames-template-literals";
 import { Menu } from "./menu";
-import { NLink } from "components/nlink";
-import { MaxButton } from "components/max-button";
+import { GetTerminal, NLink } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { AppContext } from "states/context";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FixedBar = () => {
-  const { SIGNUP_URL } = constants;
+const FixedBar = ({ terminalIndex }) => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { isOpen, addToCart } = useContext(AppContext);
 
   const onToggle = () => {
     setOpenMenu(!openMenu);
@@ -46,21 +46,32 @@ const FixedBar = () => {
   });
 
   return (
-    <header className={`${mainHeaderStlye} ${openMenu && "h-full"} fixedbar opacity-0`}>
-      <nav className={navStyle}>
-        <NLink to="/max" className="mr-[55px] px-2 -ml-2">
-          <Logo className="w-[94px] " />
-        </NLink>
+    !isOpen && (
+      <header className={`${mainHeaderStlye} ${openMenu && "h-full"} fixedbar opacity-0`}>
+        <nav className={navStyle}>
+          {terminalIndex === 0 && (
+            <NLink to="/max" className="mr-[55px] px-2 -ml-2">
+              <LogoMax className="w-[94px] " />
+            </NLink>
+          )}
+          {terminalIndex === 3 && (
+            <NLink to="/mini" className="mr-[55px] px-2 -ml-2">
+              <LogoMini className="w-[94px] " />
+            </NLink>
+          )}
+          <Menu openMenu={openMenu} onToggle={onToggle} index={terminalIndex}>
+            <div onClick={() => addToCart(terminalIndex)}>
+              <GetTerminal text="Get your terminal" type="animate-button-reverse" />
+            </div>
+          </Menu>
+        </nav>
 
-        <Menu openMenu={openMenu} onToggle={onToggle} />
-      </nav>
-
-      {/* Display on mobile only */}
-      <div className="flex justify-center flex-col items-stretch w-full md:!hidden px-[25px]      ">
-        <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
-        {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
-      </div>
-    </header>
+        {/* Display on mobile only */}
+        <div className="flex justify-center flex-col items-stretch w-full md:!hidden px-[25px]      ">
+          {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
+        </div>
+      </header>
+    )
   );
 };
 

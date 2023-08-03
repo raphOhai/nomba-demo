@@ -7,7 +7,7 @@ import { Button } from "components/button";
 
 import constants from "config/constants.json";
 
-const Menu = ({ openMenu, onToggle }) => {
+const Menu = ({ openMenu, onToggle, index = 0, children }) => {
   const { SIGNUP_URL } = constants;
   const menuIconAriaLabel = openMenu ? "menu icon" : "close menu icon";
 
@@ -19,12 +19,10 @@ const Menu = ({ openMenu, onToggle }) => {
       </button>
 
       <nav className={`${navWrapStyle} ${openMenu ? "block" : "hidden"}`}>
-        <MenuItems />
+        <MenuItems itemIndex={index} />
 
         <ul className={buttonWrapStyle}>
-          <li>
-            <Button text="Get your terminal" href={{ url: SIGNUP_URL }} />
-          </li>
+          <li>{children}</li>
         </ul>
       </nav>
     </div>

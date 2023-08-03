@@ -1,9 +1,7 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { Ntext } from "components";
 
 import ctl from "@netlify/classnames-template-literals";
-import PlayMobile from "assets/images/svgs/play-grey.svg";
-import PauseMobile from "assets/images/svgs/pause-grey.svg";
 import BusinessVid from "assets/images/jpegs/mini/backgroundMini.mp4";
 import gsap from "gsap";
 import { IO } from "animations/observe";
@@ -12,18 +10,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const WhyMini = () => {
-  const [playVideo, setPlayVid] = useState(true);
-
   const vid = useRef(null);
   const comp = useRef(null);
-  const togglePlay = () => {
-    setPlayVid(!playVideo);
-    if (playVideo) {
-      vid.current.pause();
-    } else {
-      vid.current.play();
-    }
-  };
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -114,46 +102,10 @@ const WhyMini = () => {
               </div>
             </div>
           </div>
-          {/* <div className="absolute bottom-16 right-20">
-            <div onClick={togglePlay} className="play_mobile">
-              {playVideo ? <PauseMobile /> : <PlayMobile />}
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
   );
 };
 
-const businessTab = ctl(`
-flex-1 
-text-[14px] 
-md:text-[17px] 
-leading-[22px] 
-md:leading-8 
-text-center 
-border 
-border-m-yellow
-py-[23px]
-text-primary-100 
-rounded-[10px]
-`);
-const businessTabMobile = ctl(`
-flex-1 
-text-[14px] 
-md:text-[17px] 
-leading-[22px] 
-md:leading-8 
-text-center 
-border 
-border-m-yellow
-py-[13px]
-text-primary-100 
-rounded-[10px]
-`);
-const coverVideo = ctl(`
-rounded-[3.23px]
-bg-gradient-to-r from-m-yellow1
-
-`);
 export { WhyMini };
