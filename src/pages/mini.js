@@ -40,7 +40,7 @@ const MiniPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="Mini" useStickyNav={false}>
+      <Layout title="Mini" useStickyNav={true} index={3}>
         <MiniHero
           title={
             <>
