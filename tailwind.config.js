@@ -17,6 +17,7 @@ module.exports = {
     "./src/templates/invoice/**/*.{html,jsx,js}",
     "./src/templates/e-menu/**/*.{html,jsx,js}",
     "./src/templates/mini/**/*.{html,jsx,js}",
+    "./src/templates/terminals/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
