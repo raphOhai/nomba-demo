@@ -1,11 +1,11 @@
 import { Container, Ntext, Button } from "components";
 import React from "react";
 import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
-import constants from "config/constants.json";
 import ctl from "@netlify/classnames-template-literals";
 
 const EmenuHero = () => {
-  const { SIGNUP_URL } = constants;
+  const FormLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSd9XaGc6D__UlcPMnz6A0xwPq9b_TB3_ipENnRkGwQ-AGJS3g/viewform?usp=sf_link";
 
   return (
     <section className="bg-black min-h-[100vh] md:mt-[-70px] flex flex-col justify-center items-center">
@@ -26,13 +26,13 @@ const EmenuHero = () => {
             <div className=" mx-auto  max-w-[290px] md:max-w-[21rem]">
               {" "}
               <Ntext variant="h1" className="md:leading-[63px]" color="primary-100" data-animation="rtl">
-                Scan. <br /> view. pay
+                Scan. <br /> Order. Pay
               </Ntext>
               <div className="absolute md:block pt-3 w-[195px] hidden">
                 <Button
-                  className="!font-medium !text-[16px]"
-                  text="Get Started"
-                  href={{ url: SIGNUP_URL }}
+                  className="!font-medium !text-[16px] !w-[195px]"
+                  text="Get Started now"
+                  href={{ url: FormLink }}
                   withArrow={true}
                 />
               </div>
@@ -42,9 +42,11 @@ const EmenuHero = () => {
           <div className={heroButtonsContainer}>
             <div className="mx-auto w-[195px] ">
               <Button
-                className="!font-medium !text-[16px]"
-                text="Get Started"
-                href={{ url: SIGNUP_URL }}
+                className="!font-medium !text-[16px] !w-[195px]"
+                text="Get Started now"
+                href={{
+                  url: FormLink,
+                }}
                 withArrow={true}
               />
             </div>
