@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { Container, Ntext, ReadMore } from "components";
-import constants from "config/constants.json";
+import { Container, Ntext, ReadMore, GetTerminal } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { StaticImage } from "gatsby-plugin-image";
-import { MaxButton } from "components/max-button";
 import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
 import { maxFeaturesBreakdown } from "config/terminal";
+import { AppContext } from "states/context";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 const MaxPricing = ({ title, price, leasePrice }) => {
-  const { SIGNUP_URL } = constants;
+  const { addToCart } = useContext(AppContext);
   const [isPurchase, setIsPurchase] = useState(true);
 
   const changePrice = item => {
@@ -117,7 +116,9 @@ const MaxPricing = ({ title, price, leasePrice }) => {
               </div>
               <div className="flex md:flex-row flex-col w-full  gap-8 items-stretch md:items-center">
                 {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
-                <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+                <div onClick={() => addToCart(0)}>
+                  <GetTerminal text="Get your terminal" type="animate-button-reverse" />
+                </div>
                 <ReadMore
                   color="primary-100"
                   weight={500}

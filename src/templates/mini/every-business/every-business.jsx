@@ -27,7 +27,7 @@ const EveryBusiness = ({ slides }) => {
     return () => ctx.revert();
   }, [isMobile]);
   return (
-    <section className=" pb-[100px] bg-c-0 -pt-10 every-business-mini">
+    <section className=" pb-[100px] bg-c-0 -pt-10 every-business-mini" id="business-types">
       <Container>
         <SectionHeader className="flex flex-row justify-between items-center header-text-every-business-mini  ">
           <div className="max-w-[700px]">

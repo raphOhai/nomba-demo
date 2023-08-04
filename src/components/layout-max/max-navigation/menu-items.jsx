@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { NLink } from "components/nlink";
-import { headerMenu } from "../../../config/max/menu";
+import { terminalMenu } from "../../../config/max/menu";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MenuItems = () => {
+const MenuItems = ({ itemIndex }) => {
   const [showSubmenu, setShowSubmenu] = useState(null);
 
   const ref = useRef();
@@ -26,7 +26,7 @@ const MenuItems = () => {
   }, [showSubmenu]);
 
   useEffect(() => {
-    headerMenu.forEach((item, i) => {
+    terminalMenu[itemIndex].forEach((item, i) => {
       gsap.to(`.link-${i}`, {
         scrollTrigger: {
           trigger: item.to,
@@ -41,7 +41,7 @@ const MenuItems = () => {
     });
   });
 
-  const menuItems = headerMenu.map((item, i) => {
+  const menuItems = terminalMenu[itemIndex].map((item, i) => {
     return (
       <li className={itemWrapStyle} key={item.title}>
         {/* menu items */}

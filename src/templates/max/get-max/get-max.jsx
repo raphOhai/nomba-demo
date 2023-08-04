@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
-import { Container, Ntext } from "components";
+import { Container, Ntext, GetTerminal } from "components";
 import constants from "config/constants.json";
 import { MaxButton } from "components/max-button";
+import { AppContext } from "states/context";
 
 const GetMax = ({ title, description }) => {
-  const { SIGNUP_URL } = constants;
+  const { addToCart } = useContext(AppContext);
 
   return (
     <section className="pb-[100px]">
@@ -24,7 +25,9 @@ const GetMax = ({ title, description }) => {
 
           <div className={subTextStyle}>
             <div className="btn">
-              <MaxButton text="Get your terminal" type="animate-button-reverse" link={SIGNUP_URL} />
+              <div onClick={() => addToCart(0)}>
+                <GetTerminal text="Get your terminal" type="animate-button-reverse" />
+              </div>
             </div>
             <div className="btn">
               <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />

@@ -12,14 +12,14 @@ import { MainFooter } from "./footer";
 import { NavBar } from "./navbar";
 import { FixedBar } from "./max-navigation";
 import { ContextWrapper } from "states/context";
-const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true, useStickyNav = true }) => {
+const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true, useStickyNav = true, index = 0 }) => {
   return (
     <ContextWrapper>
       <div className="main-container bg-black">
         <Seo title={title} ignoreSiteName={ignoreSiteName} />
         <NavBar />
         <main>{children}</main>
-        {useStickyNav && <FixedBar />}
+        {useStickyNav && <FixedBar terminalIndex={index} />}
         <MainFooter defaultStyle={defaultStyle} />
       </div>
     </ContextWrapper>

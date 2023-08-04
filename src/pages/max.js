@@ -14,13 +14,14 @@ import {
 import { split } from "animations/text";
 import { AccordionData, InTheBox } from "config/terminal";
 import { CommonQuestions } from "components/common-questions";
+import { Cart } from "components/checkout";
 
 const MaxPage = () => {
   useEffect(() => {
     split();
   });
   return (
-    <Layout title="Max">
+    <Layout title="Max" index={0}>
       <MaxpageHero
         title={
           <>
@@ -61,6 +62,9 @@ const MaxPage = () => {
         title={<>Get Nomba Max, Get Better</>}
         description={<>For better performance and smoother payment experience, Nomba MAX is here for you.</>}
       />
+      <div data-lenis-prevent>
+        <Cart />
+      </div>
     </Layout>
   );
 };
