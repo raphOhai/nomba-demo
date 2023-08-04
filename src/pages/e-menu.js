@@ -4,7 +4,6 @@ import Layout from "components/layout-max";
 import { GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
 import { split } from "animations/text";
-import { faqData } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
 
 import {
@@ -16,7 +15,7 @@ import {
   EveryBusiness,
 } from "templates/e-menu";
 
-import { eMenuTestimonial, businessTool, howItworks } from "config/e-menu";
+import { eMenuTestimonial, businessTool, howItworks, faqData } from "config/e-menu";
 import { gsap } from "gsap";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
