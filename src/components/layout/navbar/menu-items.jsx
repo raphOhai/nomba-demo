@@ -44,12 +44,7 @@ const MenuItems = () => {
         {Array.isArray(navItem) ? (
           <>
             <button onKeyDown={handleKeyDown}>
-              <Ntext
-                className={menuHeadingStyle}
-                variant="p16"
-                color="primary-900"
-                value={item}
-              />
+              <Ntext className={menuHeadingStyle} variant="p16" color="primary-900" value={item} />
             </button>
 
             <SubMenu items={navItem} submenuOpen={showSubmenu === i} />
@@ -61,11 +56,7 @@ const MenuItems = () => {
                 {item}
               </NLink>
 
-              <Ntext
-                variant="p12"
-                value={navItem?.description}
-                className="lg:hidden"
-              />
+              <Ntext variant="p12" value={navItem?.description} className="lg:hidden" />
             </div>
 
             <Arrow className="lg:hidden" />
@@ -94,7 +85,8 @@ const itemWrapStyle = ctl(`
 const menuHeadingStyle = ctl(`
   uppercase 
   lg:capitalize 
-  font-semibold 
+  md:font-normal 
+  font-semibold
   tracking-[0.2em]
   lg:tracking-normal
   px-[25px] lg:px-2
@@ -111,7 +103,7 @@ const menuLinkWrapStyle = ctl(`
 const menuLinkStyle = ctl(`
   text-[16px]
   leading-[28.8px]
-  font-semibold
+  font-normal
   text-primary-900
 `);
 
