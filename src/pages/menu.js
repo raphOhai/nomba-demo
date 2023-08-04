@@ -37,7 +37,7 @@ const EmenuPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="menu" useStickyNav={false}>
+      <Layout title="Menu" useStickyNav={false}>
         <EmenuHero />
         <EmenuSection2 />
         <EmenuSection4
