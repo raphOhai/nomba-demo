@@ -35,7 +35,8 @@ export const AccordionData = [
   {
     id: 2,
     header: "Does the Nomba Mini terminal print receipts?",
-    content: "No, it doesn’t. However, you can send receipts via text message or email on the terminal for free.",
+    content:
+      "No, it doesn’t but you can send receipts to customers’ phones for FREE via WhatsApp, email or SMS and you won’t lose it, unlike paper receipts.",
   },
   {
     id: 3,
