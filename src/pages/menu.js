@@ -37,7 +37,7 @@ const EmenuPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="E-menu" useStickyNav={false}>
+      <Layout title="menu" useStickyNav={false}>
         <EmenuHero />
         <EmenuSection2 />
         <EmenuSection4
@@ -48,7 +48,7 @@ const EmenuPage = () => {
         <EmenuTestimonial headingText="Why businesses are choosing Nomba" testimonials={eMenuTestimonial} />
         <CommonQuestions questions={faqData} />
 
-        <GetStarted title="Get started with E-menu today" />
+        <GetStarted title="Get started with menu today" />
 
         <EveryBusiness />
         <HomepageTipsAndUpdate />
