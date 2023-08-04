@@ -10,7 +10,7 @@ import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection5 = ({ cards }) => {
-  const { SIGNUP_URL } = constants;
+  const { E_MENU_FORM } = constants;
   useEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-five");
@@ -97,7 +97,7 @@ const EmenuSection5 = ({ cards }) => {
             <Button
               className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
               text="Get Started now"
-              href={{ url: SIGNUP_URL }}
+              href={{ url: E_MENU_FORM }}
               withArrow={true}
             />
           </div>

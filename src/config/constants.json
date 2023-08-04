@@ -1,4 +1,5 @@
 {
   "SIGNUP_URL": "https://dashboard.nomba.com/auth/signup",
-  "SIGNIN_URL": "https://dashboard.nomba.com/auth/login"
+  "SIGNIN_URL": "https://dashboard.nomba.com/auth/login",
+  "E_MENU_FORM": "https://docs.google.com/forms/d/e/1FAIpQLSd9XaGc6D__UlcPMnz6A0xwPq9b_TB3_ipENnRkGwQ-AGJS3g/viewform?usp=sf_link"
 }

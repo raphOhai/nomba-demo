@@ -12,7 +12,7 @@ import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection2 = () => {
-  const { SIGNUP_URL } = constants;
+  const { E_MENU_FORM } = constants;
   let animationContainer = createRef();
   useEffect(() => {
     const instance = Lottie.loadAnimation({
@@ -152,7 +152,7 @@ const EmenuSection2 = () => {
               <Button
                 className="!font-medium !text-[16px] !min-w-[100px] !w-[200px]"
                 text="Get Started"
-                href={{ url: SIGNUP_URL }}
+                href={{ url: E_MENU_FORM }}
                 withArrow={true}
               />
             </div>
