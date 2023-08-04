@@ -96,10 +96,10 @@ const EmenuHero = () => {
               </Ntext>
               <div className="md:h-[60px] h-[44px] overflow-hidden ">
                 <ul class="v-slides p-0 m-0">
-                  <li className={vSlide}>Restaurant</li>
-                  <li className={vSlide}>Bars</li>
-                  <li className={vSlide}>Cafe</li>
-                  <li className={vSlide}>Restaurant</li>
+                  <li className={`${vSlide} text-[#FFF5CC]`}>Restaurant</li>
+                  <li className={`${vSlide} text-[#D9F2F2]`}>Bars</li>
+                  <li className={`${vSlide} text-[#CFF1CC]`}>Cafe</li>
+                  <li className={`${vSlide} text-[#FFF5CC]`}>Restaurant</li>
                 </ul>
               </div>
             </div>
@@ -145,6 +145,6 @@ text-center
 `);
 
 const vSlide = ctl(`
-md:text-[65px] text-[37px]  leading-[44.4px] font-bold text-center md:text-left md:leading-[63px] text-[#FFF5CC]  v-slide
+md:text-[65px] text-[37px]  leading-[44.4px] font-bold  md:leading-[63px]   v-slide
 `);
 export { EmenuHero };

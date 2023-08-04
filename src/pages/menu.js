@@ -48,8 +48,6 @@ const EmenuPage = () => {
         <EmenuTestimonial headingText="Why businesses are choosing Nomba" testimonials={eMenuTestimonial} />
         <CommonQuestions questions={faqData} />
 
-        <GetStarted title="Get started with menu today" />
-
         <EveryBusiness />
         <HomepageTipsAndUpdate />
       </Layout>

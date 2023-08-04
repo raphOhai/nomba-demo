@@ -7,7 +7,7 @@ import constants from "config/constants.json";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const EmenuSection4 = ({ headingText, tools }) => {
-  const { SIGNUP_URL } = constants;
+  const { E_MENU_FORM } = constants;
 
   const comp = useRef(); // create a ref for the root level element (for scoping)
 
@@ -134,7 +134,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
                         className="!font-medium !text-[16px] !text-primary"
                         text="Get Started on menu"
                         color="primary"
-                        href={{ url: SIGNUP_URL }}
+                        href={{ url: E_MENU_FORM }}
                       />
                     </div>
                   </div>
