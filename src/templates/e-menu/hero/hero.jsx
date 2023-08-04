@@ -10,8 +10,9 @@ const EmenuHero = () => {
   const { E_MENU_FORM } = constants;
 
   useEffect(() => {
-    window.addEventListener("load", e => {
-      document.getElementById("rootLoader").style.display = "none";
+    window.addEventListener("load", () => {
+      console.log("Loaded Menu");
+      document.querySelector(".rootLoader").style.display = "none";
     });
 
     var vsOpts = {
@@ -73,7 +74,7 @@ const EmenuHero = () => {
 
   return (
     <section className="bg-black min-h-[100vh] md:mt-[-70px] flex flex-col justify-center items-center">
-      <div id="rootLoader">
+      <div className="rootLoader" id="rootLoader">
         <div class="loader-wrapper">
           <div class="loader"></div>
         </div>
