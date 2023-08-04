@@ -10,10 +10,13 @@ const EmenuHero = () => {
   const { E_MENU_FORM } = constants;
 
   useEffect(() => {
-    window.addEventListener("load", () => {
-      console.log("Loaded Menu");
+    if (document.readyState === "complete") {
       document.querySelector(".rootLoader").style.display = "none";
-    });
+    } else {
+      window.addEventListener("load", () => {
+        document.querySelector(".rootLoader").style.display = "none";
+      });
+    }
 
     var vsOpts = {
       slides: document.querySelectorAll(".v-slide"),
