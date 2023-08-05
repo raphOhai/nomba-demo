@@ -240,8 +240,7 @@ export const miniFeatures = [
     title: "Introducing Nomba Mini",
     icon: <BusinessIcon className="mini-svg-1" />,
     description: "Your Payment Padi for on-the-go transactions!",
-    more_description:
-      "The Nomba Mini is palm size and can fit into your pocket. Handy and convenient, your payment padi is ready to go anywhere and at anytime.",
+    more_description: "The Nomba Mini is small enough to carry with you anywhere, anytime.",
   },
   {
     title: "Endless Reliability",

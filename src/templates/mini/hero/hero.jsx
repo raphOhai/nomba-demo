@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import { Container, Ntext, ReadMore, GetTerminal } from "components";
@@ -9,8 +9,22 @@ import { AppContext } from "states/context";
 
 const MiniHero = ({ benefits }) => {
   const { addToCart } = useContext(AppContext);
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      document.querySelector(".rootLoader").style.display = "none";
+    } else {
+      window.addEventListener("load", () => {
+        document.querySelector(".rootLoader").style.display = "none";
+      });
+    }
+  });
   return (
     <section className={heroStyle}>
+      <div className="rootLoader" id="rootLoader">
+        <div class="loader-wrapper">
+          <div class="loader"></div>
+        </div>
+      </div>
       <Container className="relative">
         <div className="md:min-h-[100vh] flex md:flex-row flex-col">
           <div className={heroTextWrapperStyle}>

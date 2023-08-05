@@ -34,9 +34,9 @@ const TestimonialCard = ({ name, role, testimonial, image, side }) => {
 const cardWrapStyle = ctl(`
   flex
   flex-col-reverse
-  lg:flex-row-reverse
+  md:flex-row-reverse
   gap-5
-  lg:items-start
+  md:items-stretch
   justify-center
   mb-10
 `);
