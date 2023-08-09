@@ -1,15 +1,12 @@
-import { Container, Ntext, Button, GetTerminal } from "components";
-import React, { useEffect, useContext } from "react";
+import { Container, Ntext } from "components";
+import React, { useEffect } from "react";
 import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
 import ctl from "@netlify/classnames-template-literals";
-import constants from "config/constants.json";
 import gsap from "gsap";
 import SplitType from "split-type";
-import { AppContext } from "states/context";
+import { Button } from "../button";
 
 const EmenuHero = () => {
-  const { addToCart } = useContext(AppContext);
-
   useEffect(() => {
     if (document.readyState === "complete") {
       document.querySelector(".rootLoader").style.display = "none";
@@ -110,18 +107,22 @@ const EmenuHero = () => {
                 Scan. <br /> Order. Pay
               </Ntext>
               <div className="absolute md:block pt-3  hidden">
-                <div onClick={() => addToCart(0)}>
-                  <GetTerminal text="Get Started Now" type="animate-button-reverse" />
-                </div>
+                <Button
+                  className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
+                  text="Get Started Now"
+                  withArrow={true}
+                />
               </div>
             </div>
           </div>
 
           <div className={heroButtonsContainer}>
             <div className="mx-auto ">
-              <div onClick={() => addToCart(0)}>
-                <GetTerminal text="Get Started Now" type="animate-button-reverse" />
-              </div>
+              <Button
+                className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
+                text="Get Started Now"
+                withArrow={true}
+              />
             </div>
           </div>
         </div>
