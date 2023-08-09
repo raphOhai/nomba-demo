@@ -1,11 +1,8 @@
 import React, { useEffect, useRef } from "react";
-
 import Layout from "components/layout-max";
-import { GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
 import { split } from "animations/text";
 import { CommonQuestions } from "components/common-questions";
-
 import {
   EmenuHero,
   EmenuSection2,
@@ -13,11 +10,11 @@ import {
   EmenuSection5,
   EmenuTestimonial,
   EveryBusiness,
+  Cart,
 } from "templates/e-menu";
 
 import { eMenuTestimonial, businessTool, howItworks, faqData } from "config/e-menu";
 import { gsap } from "gsap";
-
 import { ReactLenis } from "@studio-freight/react-lenis";
 const EmenuPage = () => {
   const lenisRef = useRef();
@@ -50,6 +47,9 @@ const EmenuPage = () => {
 
         <EveryBusiness />
         <HomepageTipsAndUpdate />
+        <div data-lenis-prevent>
+          <Cart />
+        </div>
       </Layout>
     </ReactLenis>
   );

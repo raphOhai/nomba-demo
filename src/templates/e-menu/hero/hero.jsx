@@ -1,13 +1,14 @@
-import { Container, Ntext, Button } from "components";
-import React, { useEffect } from "react";
+import { Container, Ntext, Button, GetTerminal } from "components";
+import React, { useEffect, useContext } from "react";
 import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
 import ctl from "@netlify/classnames-template-literals";
 import constants from "config/constants.json";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { AppContext } from "states/context";
 
 const EmenuHero = () => {
-  const { E_MENU_FORM } = constants;
+  const { addToCart } = useContext(AppContext);
 
   useEffect(() => {
     if (document.readyState === "complete") {
@@ -85,7 +86,7 @@ const EmenuHero = () => {
       <Container className="">
         <div className=" w-full">
           <div className="flex md:flex-row flex-col justify-center items-center md:-ml-[2rem] mt-10 ">
-            <div className="   max-w-[336px] md:max-w-[23rem]">
+            <div className="max-w-[336px] md:max-w-[23rem]">
               <Ntext
                 variant="h1"
                 color="primary-100"
@@ -105,31 +106,22 @@ const EmenuHero = () => {
             </div>
             <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={430} height={500}></video>
             <div className=" mx-auto  max-w-[290px] md:max-w-[21rem]">
-              {" "}
               <Ntext variant="h1" className="md:leading-[63px]" color="primary-100" data-animation="rtl">
                 Scan. <br /> Order. Pay
               </Ntext>
-              <div className="absolute md:block pt-3 w-[195px] hidden">
-                <Button
-                  className="!font-medium !text-[16px] !w-[195px]"
-                  text="Get Started now"
-                  href={{ url: E_MENU_FORM }}
-                  withArrow={true}
-                />
+              <div className="absolute md:block pt-3  hidden">
+                <div onClick={() => addToCart(0)}>
+                  <GetTerminal text="Get Started Now" type="animate-button-reverse" />
+                </div>
               </div>
             </div>
           </div>
 
           <div className={heroButtonsContainer}>
-            <div className="mx-auto w-[195px]">
-              <Button
-                className="!font-medium !text-[16px] !w-[195px]"
-                text="Get Started now"
-                href={{
-                  url: E_MENU_FORM,
-                }}
-                withArrow={true}
-              />
+            <div className="mx-auto ">
+              <div onClick={() => addToCart(0)}>
+                <GetTerminal text="Get Started Now" type="animate-button-reverse" />
+              </div>
             </div>
           </div>
         </div>
@@ -147,4 +139,5 @@ text-center
 const vSlide = ctl(`
 md:text-[65px] text-[37px]  leading-[44.4px] font-bold  md:leading-[63px]   v-slide
 `);
+
 export { EmenuHero };
