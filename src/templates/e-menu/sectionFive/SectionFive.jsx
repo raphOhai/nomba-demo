@@ -4,13 +4,12 @@ import ctl from "@netlify/classnames-template-literals";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Ntext, Button } from "components";
-import constants from "config/constants.json";
+import { Ntext } from "components";
+import { Button } from "../button";
 import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection5 = ({ cards }) => {
-  const { E_MENU_FORM } = constants;
   useEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-five");
@@ -96,8 +95,7 @@ const EmenuSection5 = ({ cards }) => {
           <div className={buttonContainer}>
             <Button
               className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
-              text="Get Started now"
-              href={{ url: E_MENU_FORM }}
+              text="Get Started Now"
               withArrow={true}
             />
           </div>
@@ -113,7 +111,7 @@ text-center
 md:flex-row
 justify-center
 absolute
-bottom-[18rem]
+bottom-[16rem]
 items-center
 w-full 
 
