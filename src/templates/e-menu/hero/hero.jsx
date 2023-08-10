@@ -104,9 +104,9 @@ const EmenuHero = () => {
                   <li className={`${vSlide} text-[#FFF5CC]`}>Restaurant</li>
                 </ul>
               </div>
-              <div className="mt-5 p-2 hidden md:flex justify-between w-[182px] border-[0.34px] border-n-grey5 bg-n-grey10">
+              <div className={qrClass}>
                 <QrCode />
-                <div className="text-[14px] font-semibold my-auto  text-white">
+                <div className="text-[14px] font-semibold my-auto leading-4 mr-[6px] text-white">
                   Scan to <br /> view Demo
                 </div>
               </div>
@@ -115,7 +115,7 @@ const EmenuHero = () => {
             <div className=" mx-auto  max-w-[350px] md:max-w-[21rem] mt-3 md:mt-0">
               <Ntext
                 variant="h1"
-                className="md:leading-[63px] md:text-left text-center"
+                className="md:leading-[63px] md:text-left text-center "
                 color="primary-100"
                 data-animation="rtl"
               >
@@ -156,7 +156,24 @@ text-center
 `);
 
 const vSlide = ctl(`
-md:text-[65px] text-[37px]  leading-[44.4px] font-bold  md:leading-[63px]   v-slide
+md:text-[65px] 
+text-[37px]  
+leading-[44.4px] 
+font-bold  
+md:leading-[63px]   
+v-slide
 `);
 
+const qrClass = ctl(`
+mt-5 
+p-2 
+hidden 
+md:flex 
+justify-between 
+w-[182px] 
+border-[0.34px] 
+border-n-grey5 
+bg-n-grey10 
+rounded-[3.4px]
+`);
 export { EmenuHero };
