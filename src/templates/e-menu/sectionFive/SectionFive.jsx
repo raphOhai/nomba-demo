@@ -1,11 +1,10 @@
-import React, { useEffect, createRef } from "react";
+import React, { useEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Ntext } from "components";
-import { Button } from "../button";
 import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
@@ -92,30 +91,11 @@ const EmenuSection5 = ({ cards }) => {
               </div>
             ))}
           </div>
-          <div className={buttonContainer}>
-            <Button
-              className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
-              text="Get Started Now"
-              withArrow={true}
-            />
-          </div>
         </div>
       </section>
     </div>
   );
 };
-const buttonContainer = ctl(`
-flex
-flex-col
-text-center
-md:flex-row
-justify-center
-absolute
-bottom-[16rem]
-items-center
-w-full 
-
-`);
 
 const cardContainer = ctl(`
 flex 
