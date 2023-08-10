@@ -24,7 +24,7 @@ const MenuSection6 = ({}) => {
               <input
                 maxLength={20}
                 onChange={e => setIsAvailable(e.target.value.length > 3)}
-                className="bg-c-0 text-white max-w-[300px] md:max-w-[500px]"
+                className="bg-c-0 text-white max-w-[300px] md:max-w-[500px] placeholder:text-n-grey2"
                 type="text"
                 placeholder="yourbusinessname"
               />
