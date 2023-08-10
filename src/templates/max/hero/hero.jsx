@@ -20,9 +20,8 @@ const MaxpageHero = ({ title, description }) => {
             </Ntext>
           </div>
           <div className={heroButtonsContainer}>
-            <div onClick={() => addToCart(0)}>
-              <GetTerminal text="Get your terminal" type="animate-button-reverse" />
-            </div>
+            <GetTerminal onClick={() => addToCart(0)} text="Get your terminal" type="animate-button-reverse" />
+
             {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
             <ReadMore
               color="primary-100"

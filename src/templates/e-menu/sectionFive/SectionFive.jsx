@@ -6,12 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Ntext } from "components";
 import { Button } from "../button";
-import constants from "config/constants.json";
 import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection5 = ({ cards }) => {
-  const { E_MENU_FORM } = constants;
   useEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-five");

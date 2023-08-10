@@ -90,10 +90,12 @@ module.exports = {
           grey5: "#555555",
           grey6: "#383838",
           grey7: "#828282",
+          grey10: "rgba(217, 217, 217, 0.15)",
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
           green2: "#D9F2F2",
+
           pink1: "#EFD9F2",
           grey3light: "#99999980",
         },

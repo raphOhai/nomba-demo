@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Ntext } from "components";
-import constants from "config/constants.json";
 import Lottie from "lottie-web";
 import animation from "./animations/section22.json";
 import { StaticImage } from "gatsby-plugin-image";
@@ -11,9 +10,7 @@ import { IO } from "src/animations/observe";
 import { Button } from "../button";
 
 gsap.registerPlugin([ScrollTrigger]);
-const EmenuSection2 = ({ onOpen }) => {
-  const { E_MENU_FORM } = constants;
-
+const EmenuSection2 = () => {
   let animationContainer = createRef();
   useEffect(() => {
     const instance = Lottie.loadAnimation({

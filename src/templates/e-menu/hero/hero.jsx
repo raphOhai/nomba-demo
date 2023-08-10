@@ -1,12 +1,16 @@
-import { Container, Ntext } from "components";
 import React, { useEffect } from "react";
-import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
 import ctl from "@netlify/classnames-template-literals";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { Container, Ntext, Br, NLink } from "components";
+import heroVideo from "jpegs/e-menu/hero/hero1.mp4";
+import QrCode from "jpegs/e-menu/qr-code.svg";
 import { Button } from "../button";
+import constants from "config/constants.json";
 
 const EmenuHero = () => {
+  const { MENU_DEMO } = constants;
+
   useEffect(() => {
     if (document.readyState === "complete") {
       document.querySelector(".rootLoader").style.display = "none";
@@ -82,8 +86,8 @@ const EmenuHero = () => {
       </div>
       <Container className="">
         <div className=" w-full">
-          <div className="flex md:flex-row flex-col justify-center items-center md:-ml-[2rem] mt-10 ">
-            <div className="max-w-[336px] md:max-w-[23rem]">
+          <div className="flex md:flex-row flex-col justify-center items-center md:-ml-[2rem] mt-6 ">
+            <div className="max-w-[336px] md:max-w-[23rem] md:mt-0 -mt-4">
               <Ntext
                 variant="h1"
                 color="primary-100"
@@ -100,11 +104,22 @@ const EmenuHero = () => {
                   <li className={`${vSlide} text-[#FFF5CC]`}>Restaurant</li>
                 </ul>
               </div>
+              <div className="mt-5 p-2 hidden md:flex justify-between w-[182px] border-[0.34px] border-n-grey5 bg-n-grey10">
+                <QrCode />
+                <div className="text-[14px] font-semibold my-auto  text-white">
+                  Scan to <br /> view Demo
+                </div>
+              </div>
             </div>
-            <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={430} height={500}></video>
-            <div className=" mx-auto  max-w-[290px] md:max-w-[21rem]">
-              <Ntext variant="h1" className="md:leading-[63px]" color="primary-100" data-animation="rtl">
-                Scan. <br /> Order. Pay
+            <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={400} height={470}></video>
+            <div className=" mx-auto  max-w-[350px] md:max-w-[21rem] mt-3 md:mt-0">
+              <Ntext
+                variant="h1"
+                className="md:leading-[63px] md:text-left text-center"
+                color="primary-100"
+                data-animation="rtl"
+              >
+                Scan. <Br on="all" /> Order. Pay
               </Ntext>
               <div className="absolute md:block pt-3  hidden">
                 <Button
@@ -117,13 +132,16 @@ const EmenuHero = () => {
           </div>
 
           <div className={heroButtonsContainer}>
-            <div className="mx-auto ">
+            <div className="mx-auto mb-4">
               <Button
                 className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
                 text="Get Started Now"
                 withArrow={true}
               />
             </div>
+            <NLink className="text-white" href={MENU_DEMO}>
+              Click to view Demo
+            </NLink>
           </div>
         </div>
       </Container>
@@ -131,7 +149,7 @@ const EmenuHero = () => {
   );
 };
 const heroButtonsContainer = ctl(`
-mt-10
+mt-7
 block md:hidden
 w-full
 text-center
