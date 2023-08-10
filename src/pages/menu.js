@@ -17,6 +17,7 @@ import {
 import { eMenuTestimonial, businessTool, howItworks, faqData } from "config/e-menu";
 import { gsap } from "gsap";
 import { ReactLenis } from "@studio-freight/react-lenis";
+
 const EmenuPage = () => {
   const lenisRef = useRef();
   useEffect(() => {

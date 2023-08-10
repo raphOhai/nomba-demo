@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import SeoConf from "config/seo/meta";
 import Layout from "components/layout";
 import { HomepageHero, HomepageGotOptions, HomepageFeatures, HomepageTipsAndUpdate } from "templates/home";
 import { Br, POSTerminals } from "components";
@@ -9,7 +9,7 @@ import { heroHomePage } from "config/home";
 
 const IndexPage = () => {
   return (
-    <Layout title="Nomba" ignoreSiteName={true}>
+    <Layout title={SeoConf.index.title} description={SeoConf.index.description} ignoreSiteName={true}>
       <HomepageHero {...heroHomePage} />
       <NombaTerminalAdvert>
         <HomepageFeatures
