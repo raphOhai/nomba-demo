@@ -20,7 +20,7 @@ const EmenuTestimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <section className=" pb-[100px] bg-primary-100">
+    <section className="py-[100px] bg-primary-100">
       <Container>
         <div className="text-center pb-20">
           <Ntext variant="h2" color="c-0" value={headingText} className={headingTextStyle} />

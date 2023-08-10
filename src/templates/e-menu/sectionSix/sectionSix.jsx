@@ -8,7 +8,7 @@ const MenuSection6 = ({}) => {
   const [isAvailable, setIsAvailable] = useState(false);
 
   return (
-    <section className="bg-c-0 my-40 md:my-48">
+    <section className="bg-c-0 my-40 md:my-48 ">
       <Container>
         <div className="">
           <Ntext variant="prohero" color="n-light">
@@ -22,19 +22,21 @@ const MenuSection6 = ({}) => {
             </Ntext>
             <div className={text8}>
               <input
-                maxLength={10}
+                maxLength={20}
                 onChange={e => setIsAvailable(e.target.value.length > 3)}
-                className="bg-c-0 text-white max-w-[400px]"
+                className="bg-c-0 text-white max-w-[300px] md:max-w-[500px]"
                 type="text"
                 placeholder="yourbusinessname"
               />
-              {isAvailable && <div className={subText}>Such a beautiful name. We love it </div>}
+              <div className={`${subText} ${isAvailable ? "opacity-100" : "opacity-0 "}`}>
+                Such a beautiful name. We love it
+              </div>
             </div>
-            {isAvailable && <Check />}
+            <Check className={`${checkClass} ${isAvailable ? "opacity-100" : "opacity-0 "}`} />
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 ">
           <Button className="!font-medium !text-[16px] !min-w-[100px] !w-[200px]" text="Get Started" withArrow={true} />
         </div>
       </Container>
@@ -58,6 +60,16 @@ text-n-yellow
 md:leading-[28px]
 leading-[14px]
 tracking-normal
+mt-2
+transition-opacity
+duration-300
 `);
-
+const checkClass = ctl(`
+transition-opacity 
+duration-300 
+delay-300 
+ml-3 
+w-[24px] 
+md:w-[54px]
+`);
 export { MenuSection6 };
