@@ -11,6 +11,9 @@ const MenuSection6 = ({}) => {
     <section className="bg-c-0 my-40 md:my-48 ">
       <Container>
         <div className="">
+          <div className="flex flex-col justify-center items-center py-[10px] rounded-[52px] !w-[86px] bg-[#FEA] font-bold">
+            Demo
+          </div>
           <Ntext variant="prohero" color="n-light">
             Personalize your <Br on="all" /> Menu web address
           </Ntext>
