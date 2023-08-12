@@ -112,7 +112,7 @@ const EmenuHero = () => {
               </div>
             </div>
             <video src={heroVideo} controls={false} muted playsInline autoPlay loop width={400} height={470}></video>
-            <div className=" mx-auto  max-w-[350px] md:max-w-[21rem] mt-3 md:mt-0">
+            <div className=" mx-auto  max-w-[350px] md:max-w-[21rem] mt-3 md:mt-[-93px]">
               <Ntext
                 variant="h1"
                 className="md:leading-[63px] md:text-left text-center "

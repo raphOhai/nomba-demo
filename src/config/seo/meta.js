@@ -19,4 +19,9 @@ export default {
     description:
       "Take your business to the next level with the Nomba invoice. Avoid debt in business, send online invoices and automated reminders to receive payments the easy way. Get Started Here",
   },
+  menu: {
+    title: "Serve your customers better with Nomba Menu",
+    description:
+      "Reduce your customer’s wait time and provide them with a seamless 5-star payment experience. With a customized QR code for payments, an integrated ordering system and auto-settlement, you also get to reduce the stress of your staff.  Get the Nomba Menu for FREE today",
+  },
 };

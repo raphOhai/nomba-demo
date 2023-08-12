@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Layout from "components/layout-max";
 import { HomepageTipsAndUpdate } from "templates";
+import SeoConf from "config/seo/meta";
 import { split } from "animations/text";
 import { CommonQuestions } from "components/common-questions";
 import {
@@ -36,7 +37,7 @@ const EmenuPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="Menu" useStickyNav={false}>
+      <Layout title={SeoConf.menu.title} description={SeoConf.menu.description} useStickyNav={false}>
         <EmenuHero />
         <EmenuSection2 />
         <EmenuSection4
