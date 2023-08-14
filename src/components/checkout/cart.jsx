@@ -23,10 +23,9 @@ import { AppContext } from "states/context";
 import { CartTerminals } from "config/cart";
 
 const Cart = ({ finalFocusRef }) => {
-  const [tabIndex, setTabIndex] = useState(0);
   const {
     isOpen,
-    onClose,
+    closeAndReset,
     hasError,
     hasEmailError,
     hasMobileError,
@@ -35,10 +34,11 @@ const Cart = ({ finalFocusRef }) => {
     info,
     setInfo,
     itemIndex,
+
+    tabIndex,
+    setTabIndex,
+    handleTabsChange,
   } = useContext(AppContext);
-  const handleTabsChange = index => {
-    setTabIndex(index);
-  };
 
   // set error states for user input
 
@@ -47,7 +47,7 @@ const Cart = ({ finalFocusRef }) => {
       colorScheme="yellow"
       isOpen={isOpen}
       placement="right"
-      onClose={onClose}
+      onClose={closeAndReset}
       finalFocusRef={finalFocusRef}
       size="lg"
     >
@@ -99,7 +99,7 @@ const Cart = ({ finalFocusRef }) => {
             <div>
               <button
                 className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white"
-                onClick={onClose}
+                onClick={closeAndReset}
               >
                 Cancel
               </button>

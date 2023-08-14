@@ -25,11 +25,20 @@ import { AppContext } from "states/context";
 
 const Cart = ({ finalFocusRef }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
-  const [tabIndex, setTabIndex] = useState(0);
-  const { isOpen, onClose, hasError, hasEmailError, hasMobileError, info, setInfo } = useContext(AppContext);
-  const handleTabsChange = index => {
-    setTabIndex(index);
-  };
+  const {
+    isOpen,
+    closeAndReset,
+    hasError,
+    hasEmailError,
+    hasMobileError,
+
+    info,
+    setInfo,
+
+    tabIndex,
+    setTabIndex,
+    handleTabsChange,
+  } = useContext(AppContext);
 
   // set error states for user input
 
@@ -38,7 +47,7 @@ const Cart = ({ finalFocusRef }) => {
       colorScheme="yellow"
       isOpen={isOpen}
       placement="right"
-      onClose={onClose}
+      onClose={closeAndReset}
       finalFocusRef={finalFocusRef}
       size="lg"
     >
@@ -78,13 +87,13 @@ const Cart = ({ finalFocusRef }) => {
             <div>
               <button
                 className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white"
-                onClick={onClose}
+                onClick={closeAndReset}
               >
                 Cancel
               </button>
             </div>
             <Button
-              isDisabled={tabIndex === 0 ? false : hasError || hasEmailError || hasMobileError}
+              isDisabled={hasError || hasEmailError || hasMobileError}
               fontWeight={500}
               fontSize={16}
               colorScheme="yellow"

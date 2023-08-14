@@ -7,7 +7,7 @@ import constants from "config/constants.json";
 function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { onClose, resetInfo } = useContext(AppContext);
+  const { closeAndReset } = useContext(AppContext);
   const { TERMINAL_FORM_SPREADSHEET } = constants;
 
   const submit = () => {
@@ -31,8 +31,7 @@ function Submit({ isTermsAccepted, data }) {
   const closeModal = e => {
     if (!e.target.classList.contains("waitlist_success")) {
       setShow(!show);
-      resetInfo();
-      onClose();
+      closeAndReset();
     }
   };
 

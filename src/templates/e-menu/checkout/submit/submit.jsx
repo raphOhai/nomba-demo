@@ -7,18 +7,15 @@ import constants from "config/constants.json";
 function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { onClose, resetInfo } = useContext(AppContext);
+  const { closeAndReset } = useContext(AppContext);
   const { MENU_FORM_SPREADSHEET } = constants;
 
   const submit = () => {
     setIsLoading(true);
-    fetch(
-      "https://script.google.com/macros/s/AKfycbyBo4-jKzZRtyzOw0jjqv8O6XkKjX6xXI1O68NShygMSid7JcQrN1FES82dyZYyMJgigw/exec",
-      {
-        method: "POST",
-        body: JSON.stringify(data),
-      }
-    )
+    fetch(MENU_FORM_SPREADSHEET, {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
       .then(res => {
         if (res.ok) {
           setShow(!show);
@@ -34,8 +31,7 @@ function Submit({ isTermsAccepted, data }) {
   const closeModal = e => {
     if (!e.target.classList.contains("waitlist_success")) {
       setShow(!show);
-      resetInfo();
-      onClose();
+      closeAndReset();
     }
   };
 

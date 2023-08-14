@@ -9,6 +9,8 @@ export const ContextWrapper = ({ children }) => {
   const [hasError, setHasError] = useState(true);
   const [hasEmailError, setHasEmailError] = useState(false);
   const [hasMobileError, setHasMobileError] = useState(false);
+
+  const [tabIndex, setTabIndex] = useState(0);
   const [itemIndex, setItemIndex] = useState(0);
   const [counter, dispatch] = useReducer(reducer, initialItems);
   const [info, setInfo] = useState({
@@ -33,11 +35,28 @@ export const ContextWrapper = ({ children }) => {
       state: "",
       timestamp: new Date().toLocaleString(),
     });
+
+    setHasEmailError(false);
+    setHasMobileError(false);
+
+    // reset tab
+    setTabIndex(0);
+    setHasError(true);
+  };
+
+  const closeAndReset = () => {
+    console.log("closing");
+    onClose();
+    resetInfo();
   };
 
   const addToCart = index => {
     setItemIndex(index);
     onOpen();
+  };
+
+  const handleTabsChange = index => {
+    setTabIndex(index);
   };
   useEffect(() => {
     setHasError(
@@ -52,7 +71,7 @@ export const ContextWrapper = ({ children }) => {
       value={{
         onOpen,
         isOpen,
-        onClose,
+        closeAndReset,
 
         info,
         setInfo,
@@ -72,6 +91,10 @@ export const ContextWrapper = ({ children }) => {
 
         itemIndex,
         addToCart,
+
+        tabIndex,
+        setTabIndex,
+        handleTabsChange,
       }}
     >
       {children}
