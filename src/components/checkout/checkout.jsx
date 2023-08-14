@@ -82,7 +82,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
         </span>
       </div>
 
-      <div className="mt-5 py-7 !text-[16px] gap-4">
+      <div className="mt-5 py-7 flex flex-col !text-[16px] gap-5 ">
         <div className="flex justify-between">
           <span>Price</span>
           <span>{item.price}</span>

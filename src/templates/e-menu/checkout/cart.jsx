@@ -121,7 +121,7 @@ const Cart = ({ finalFocusRef }) => {
             </div>
             <div className=" border-t border-t-n-grey6 mt-[20px]"></div>
             <div className="px-[25px]">
-              <div className="mt-5 py-7 flex flex-col !text-[16px] gap-4">
+              <div className="mt-5 py-7 flex flex-col !text-[16px] gap-5">
                 <div className="flex justify-between">
                   <span className="text-n-grey2">Services fee</span>
                   <span>₦ 0</span>
