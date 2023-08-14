@@ -45,7 +45,6 @@ export const ContextWrapper = ({ children }) => {
   };
 
   const closeAndReset = () => {
-    console.log("closing");
     onClose();
     resetInfo();
   };
