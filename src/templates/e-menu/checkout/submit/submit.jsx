@@ -2,15 +2,18 @@ import React, { useContext, useState } from "react";
 import "./index.scss";
 import { Button, Br } from "components";
 import { AppContext } from "states/context";
+import constants from "config/constants.json";
 
 function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { onClose, resetInfo } = useContext(AppContext);
+  const { MENU_FORM_SPREADSHEET } = constants;
+
   const submit = () => {
     setIsLoading(true);
     fetch(
-      "https://script.google.com/macros/s/AKfycbyTGq_7hiZXf1M86ISh_JkOy4LUX4_DL8xLJE-7w5YzoApp2wI5sDgD5nf4d-3-_EYr0A/exec",
+      "https://script.google.com/macros/s/AKfycbyBo4-jKzZRtyzOw0jjqv8O6XkKjX6xXI1O68NShygMSid7JcQrN1FES82dyZYyMJgigw/exec",
       {
         method: "POST",
         body: JSON.stringify(data),

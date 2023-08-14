@@ -19,6 +19,7 @@ export const ContextWrapper = ({ children }) => {
     deliveryAddress: "",
     lga: "",
     state: "",
+    timestamp: new Date().toLocaleString(),
   });
 
   const resetInfo = () => {
@@ -30,6 +31,7 @@ export const ContextWrapper = ({ children }) => {
       deliveryAddress: "",
       lga: "",
       state: "",
+      timestamp: new Date().toLocaleString(),
     });
   };
 
