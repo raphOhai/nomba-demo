@@ -30,7 +30,12 @@ const Button = ({
   const { onOpen } = useContext(AppContext);
 
   return (
-    <ButtonElement className={`${buttonStyle} ${className}`} onClick={onOpen} disabled={buttonDisabled || isLoading}>
+    <ButtonElement
+      className={`${buttonStyle} ${className}`}
+      onClick={onOpen}
+      disabled={buttonDisabled || isLoading}
+      trackingText={text}
+    >
       <span className={isflex ? "flex flex-row gap-5" : textStyle}>{text || children}</span>
       {isLoading && <Loader />}
       {withArrow && <ArrowRight />}
