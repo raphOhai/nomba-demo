@@ -25,7 +25,7 @@ const GetMax = ({ title, description }) => {
 
           <div className={subTextStyle}>
             <div className="btn">
-              <GetTerminal onClick={() => addToCart(0)} text="Get your terminal" type="animate-button-reverse" />
+              <GetTerminal onClick={() => addToCart(0)} text="Get your POS" type="animate-button-reverse" />
             </div>
             <div className="btn">
               <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
