@@ -117,7 +117,7 @@ const MaxPricing = ({ title, price, leasePrice }) => {
               <div className="flex md:flex-row flex-col w-full  gap-8 items-stretch md:items-center">
                 {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
 
-                <GetTerminal onClick={() => addToCart(0)} text="Get your terminal" type="animate-button-reverse" />
+                <GetTerminal onClick={() => addToCart(0)} text="Get your POS" type="animate-button-reverse" />
 
                 <ReadMore
                   color="primary-100"

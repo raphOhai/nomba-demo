@@ -45,7 +45,7 @@ const MiniHero = ({ benefits }) => {
             <LogoMini className="max-w-[360px] md:max-w-none" />
 
             <div className={heroButtonsContainer}>
-              <GetTerminal onClick={() => addToCart(3)} text="Get your terminal" type="animate-button-reverse" />
+              <GetTerminal onClick={() => addToCart(3)} text="Get your POS" type="animate-button-reverse" />
 
               <ReadMore
                 color="primary-100"
