@@ -6,7 +6,7 @@ import { formatMoney, formatMoneyToInput } from "utils/helpers";
 import { AppContext } from "states/context";
 
 const CartIem = ({ counter, dispatcher, item }) => {
-  const { closeAndReset } = useContext(AppContext);
+  const { onClose } = useContext(AppContext);
 
   return (
     <div className="bg-n-grey6 rounded-lg px-5 py-6 mt-5">
@@ -30,7 +30,7 @@ const CartIem = ({ counter, dispatcher, item }) => {
           </div>
         </div>
         <div className="flex flex-row md:flex-col justify-between md:items-end">
-          <div onClick={closeAndReset} className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">
+          <div onClick={onClose} className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer">
             Remove
           </div>
           <div className="text-white flex items-center gap-5">
