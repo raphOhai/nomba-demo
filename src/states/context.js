@@ -70,6 +70,7 @@ export const ContextWrapper = ({ children }) => {
       value={{
         onOpen,
         isOpen,
+        onClose,
         closeAndReset,
 
         info,

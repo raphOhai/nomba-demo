@@ -5,7 +5,7 @@ import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
 import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
 import { Submit } from "./submit";
 import { formatMoney, formatMoneyToInput } from "utils/helpers";
-const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
+const Checkout = ({ itemCount, userInfo, setTabIndex, item, moveToPayment, isLoading }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
 
   return (
@@ -82,7 +82,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
         </span>
       </div>
 
-      <div className="mt-5 py-7 flex flex-col !text-[16px] gap-5 ">
+      <div className="mt-5 py-7 !text-[16px] gap-4">
         <div className="flex justify-between">
           <span>Price</span>
           <span>{item.price}</span>
@@ -103,7 +103,13 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item }) => {
         </div>
       </div>
 
-      <Submit isTermsAccepted={isTermsAccepted} data={{ ...userInfo, amount: itemCount, type: item.name }} />
+      <Button
+        className="!font-medium !text-[16px] !w-full"
+        text="Make payment"
+        isLoading={isLoading}
+        disabled={!isTermsAccepted}
+        onClick={() => moveToPayment()}
+      />
     </div>
   );
 };
