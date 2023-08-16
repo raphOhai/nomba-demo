@@ -12,11 +12,11 @@ import { MainFooter } from "./footer";
 import { NavBar } from "./navbar";
 import { Subfooter } from "./subfooter";
 
-const Layout = ({ children, title, ignoreSiteName = false, defaultStyle = true }) => {
+const Layout = ({ children, description, title, ignoreSiteName = false, defaultStyle = true }) => {
   const noOfChildren = children.length;
   return (
     <>
-      <Seo title={title} ignoreSiteName={ignoreSiteName} />
+      <Seo title={title} description={description} ignoreSiteName={ignoreSiteName} />
       <NavBar />
       {/* All children except the last child */}
       <main>{children.slice(0, noOfChildren - 1)}</main>

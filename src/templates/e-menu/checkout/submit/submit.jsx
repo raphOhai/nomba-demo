@@ -8,11 +8,11 @@ function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { closeAndReset } = useContext(AppContext);
-  const { TERMINAL_FORM_SPREADSHEET } = constants;
+  const { MENU_FORM_SPREADSHEET } = constants;
 
   const submit = () => {
     setIsLoading(true);
-    fetch(TERMINAL_FORM_SPREADSHEET, {
+    fetch(MENU_FORM_SPREADSHEET, {
       method: "POST",
       body: JSON.stringify(data),
     })
@@ -77,7 +77,6 @@ function Submit({ isTermsAccepted, data }) {
           onClick={() => submit()}
         />
       </div>
-      <hr />
       <Br on="desktop" />
       <Br on="desktop" />
     </>

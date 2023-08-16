@@ -85,7 +85,8 @@ const itemWrapStyle = ctl(`
 const menuHeadingStyle = ctl(`
   uppercase 
   lg:capitalize 
-  font-semibold 
+  md:font-normal 
+  font-semibold
   tracking-[0.2em]
   lg:tracking-normal
   px-[25px] lg:px-2
@@ -102,7 +103,7 @@ const menuLinkWrapStyle = ctl(`
 const menuLinkStyle = ctl(`
   text-[16px]
   leading-[28.8px]
-  font-[700]
+  font-[400]
   text-primary-100
 `);
 

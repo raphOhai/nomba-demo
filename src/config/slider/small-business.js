@@ -91,7 +91,7 @@ const easySolutionsForSmallBusiness = [
       "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com/auth/login",
+      href: "/invoice",
     },
   },
   {

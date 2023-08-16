@@ -1,16 +1,14 @@
-import React, { useEffect, createRef } from "react";
+import React, { useEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Ntext, Button } from "components";
-import constants from "config/constants.json";
+import { Ntext } from "components";
 import { IO } from "src/animations/observe";
 
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection5 = ({ cards }) => {
-  const { SIGNUP_URL } = constants;
   useEffect(() => {
     const tl = gsap.timeline();
     const dom = document.querySelector(".section-five");
@@ -78,15 +76,10 @@ const EmenuSection5 = ({ cards }) => {
             <span> &nbsp; </span> works <span> &nbsp; </span>
             <span> &nbsp; </span> • <span> &nbsp; </span> <span> &nbsp; </span>
           </Ntext>
-          <div className="relative max-w-[550px] mx-auto flex flex-col items-center justify-center mt-10">
+          <div className={cardWrapper}>
             {cards.reverse().map((t, i) => (
-              <div
-                key={i}
-                className={`flex flex-col md:gap-[50px] gap-[30px] rounded-[10px] p-[20px] md:p-[30px] h-[360px] md:h-[438px] w-[360px] md:w-[438px] ${t.color} top-0 section-five-card`}
-              >
-                <div className="rounded-full flex flex-col justify-center items-center font-semibold h-[71px] w-[71px] bg-c-0 text-[24px] text-white">
-                  {t.id}
-                </div>
+              <div key={i} className={`${cardContainer} ${t.color} section-five-card`}>
+                <div className={cardId}>{t.id}</div>
                 <div className="flex flex-col gap-3">
                   <Ntext variant="text6lite" color="c-0">
                     {t.title}
@@ -98,29 +91,49 @@ const EmenuSection5 = ({ cards }) => {
               </div>
             ))}
           </div>
-          <div className={buttonContainer}>
-            <Button
-              className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
-              text="Get Started now"
-              href={{ url: SIGNUP_URL }}
-              withArrow={true}
-            />
-          </div>
         </div>
       </section>
     </div>
   );
 };
-const buttonContainer = ctl(`
-flex
-flex-col
-text-center
-md:flex-row
-justify-center
-absolute
-bottom-[18rem]
-items-center
-w-full 
 
+const cardContainer = ctl(`
+flex 
+flex-col 
+md:gap-[50px] 
+gap-[30px] 
+rounded-[10px] 
+p-[20px] 
+md:p-[30px] 
+h-[360px] 
+md:h-[438px] 
+w-[360px] 
+md:w-[438px]
+top-0 
+`);
+
+const cardId = ctl(`
+rounded-full 
+flex 
+flex-col 
+justify-center 
+items-center 
+font-semibold 
+h-[71px] 
+w-[71px] 
+bg-c-0 
+text-[24px] 
+text-white
+`);
+
+const cardWrapper = ctl(`
+relative 
+max-w-[550px] 
+mx-auto 
+flex 
+flex-col 
+items-center 
+justify-center 
+mt-10
 `);
 export { EmenuSection5 };

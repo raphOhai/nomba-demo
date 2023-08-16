@@ -78,12 +78,12 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-facebook-pixel`,
-    //   options: {
-    //     pixelId: process.env.FACEBOOK_PIXEL_API_TOKEN,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: process.env.FACEBOOK_PIXEL_API_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

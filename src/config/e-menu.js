@@ -116,3 +116,28 @@ export const howItworks = [
     color: "bg-[#F7E189]",
   },
 ];
+
+export const faqData = [
+  {
+    id: 1,
+    header: "How do I become eligible for the Nomba Menu?",
+    content:
+      "For Nomba users, simply tap the “Get started now” and follow the simple instructions. For non-Nomba users, you can create a Nomba account under 2 mins and request your preferred POS terminal. Then tap the “Get started Now” button on this page.",
+  },
+  {
+    id: 2,
+    header: "Is the Nomba Menu free?",
+    content: "Yes it is. All you need is a Nomba account and Nomba POS terminal to be eligible for the menu feature.",
+  },
+  {
+    id: 3,
+    header: "Can I update the menu items and prices in real-time?",
+    content: "Yes, you can. Nomba Menu items and prices can be updated real-time on your Nomba dashboard.",
+  },
+  {
+    id: 4,
+    header: "Can I use the Nomba menu for both online and offline orders?",
+    content:
+      "Yes, you can. Offline, you can receive payments via cash, card and transfers; online, you can receive payments via transfer only.",
+  },
+];

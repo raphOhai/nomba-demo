@@ -22,7 +22,7 @@ const homepageSliderData = [
       "Create and send invoices to collect payments stress-free. Automate reminders to customers/clients. We'll prioritise your payment collection for you.",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com/auth/login",
+      href: "/invoice",
     },
   },
   {
@@ -61,12 +61,12 @@ const homepageSliderData = [
     image: (
       <StaticImage src="../../assets/images/jpegs/business-tools/e-menu.png" alt="E menu" className={imageStyle} />
     ),
-    heading: "E-menu",
+    heading: "Menu",
     text:
-      "With Nomba's e-menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants. ",
+      "With Nomba's menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants. ",
     link: {
       text: "Get Nomba for your growing business",
-      href: "https://dashboard.nomba.com/auth/login",
+      href: "/menu",
     },
   },
   {

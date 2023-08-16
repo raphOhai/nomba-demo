@@ -69,9 +69,8 @@ const MiniPricing = ({ price, leasePrice }) => {
                 </div>
               </div>
               <div className="flex md:flex-row flex-col justify-center gap-8 items-stretch md:items-center">
-                <div onClick={() => addToCart(3)}>
-                  <GetTerminal text="Buy now" type="animate-button-reverse" />
-                </div>
+                <GetTerminal onClick={() => addToCart(3)} text="Buy now" type="animate-button-reverse" />
+
                 <ReadMore
                   color="primary-100"
                   weight={500}

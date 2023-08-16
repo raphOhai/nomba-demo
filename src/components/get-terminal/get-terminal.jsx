@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const GetTerminal = ({ text, type }) => {
+const GetTerminal = ({ text, type, onClick }) => {
   return (
-    <button className={`${type}`}>
+    <button className={type} onClick={onClick} trackingText={text} extraTrack={text}>
       {text}
       <svg
         className="btn_svg"

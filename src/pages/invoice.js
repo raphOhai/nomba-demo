@@ -8,13 +8,14 @@ import { split } from "animations/text";
 import { InvoiceBusinessTools, faqData, invoiceTestimonial } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
 import { everyBusinesses } from "config/invoice";
+import SeoConf from "config/seo/meta";
 
 const InvoicePage = () => {
   useEffect(() => {
     split();
   });
   return (
-    <Layout title="Invoice" useStickyNav={false}>
+    <Layout title={SeoConf.invoice.title} description={SeoConf.invoice.description} useStickyNav={false}>
       <InvoicepageHero
         title={
           <>

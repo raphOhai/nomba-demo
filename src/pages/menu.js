@@ -1,25 +1,24 @@
 import React, { useEffect, useRef } from "react";
-
 import Layout from "components/layout-max";
-import { GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
+import SeoConf from "config/seo/meta";
 import { split } from "animations/text";
-import { faqData } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
-
 import {
   EmenuHero,
   EmenuSection2,
   EmenuSection4,
   EmenuSection5,
+  MenuSection6,
   EmenuTestimonial,
   EveryBusiness,
+  Cart,
 } from "templates/e-menu";
 
-import { eMenuTestimonial, businessTool, howItworks } from "config/e-menu";
+import { eMenuTestimonial, businessTool, howItworks, faqData } from "config/e-menu";
 import { gsap } from "gsap";
-
 import { ReactLenis } from "@studio-freight/react-lenis";
+
 const EmenuPage = () => {
   const lenisRef = useRef();
   useEffect(() => {
@@ -38,7 +37,7 @@ const EmenuPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="E-menu" useStickyNav={false}>
+      <Layout title={SeoConf.menu.title} description={SeoConf.menu.description} useStickyNav={false}>
         <EmenuHero />
         <EmenuSection2 />
         <EmenuSection4
@@ -47,12 +46,14 @@ const EmenuPage = () => {
         />
         <EmenuSection5 cards={howItworks} />
         <EmenuTestimonial headingText="Why businesses are choosing Nomba" testimonials={eMenuTestimonial} />
+        <MenuSection6 />
         <CommonQuestions questions={faqData} />
-
-        <GetStarted title="Get started with E-menu today" />
 
         <EveryBusiness />
         <HomepageTipsAndUpdate />
+        <div data-lenis-prevent>
+          <Cart />
+        </div>
       </Layout>
     </ReactLenis>
   );

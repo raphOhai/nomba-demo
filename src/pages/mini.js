@@ -21,6 +21,8 @@ import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { Cart } from "components/checkout";
+import SeoConf from "config/seo/meta";
+
 const MiniPage = () => {
   const lenisRef = useRef();
 
@@ -40,7 +42,7 @@ const MiniPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="Mini" useStickyNav={true} index={3}>
+      <Layout title={SeoConf.mini.title} description={SeoConf.mini.description} useStickyNav={true} index={3}>
         <MiniHero
           title={
             <>
