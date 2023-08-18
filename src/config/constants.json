@@ -2,6 +2,6 @@
   "SIGNUP_URL": "https://dashboard.nomba.com/auth/signup",
   "SIGNIN_URL": "https://dashboard.nomba.com/auth/login",
   "MENU_DEMO": "https://menu.nomba.com/pyo8we",
-  "MENU_FORM_SPREADSHEET": "https://script.google.com/a/macros/nomba.com/s/AKfycbwPCmZd-huQaEmnpbANVGcVgBgHDiWGE7FxQ4pgZ7mCU9bR727bjwkXgyd7Vl1Mec66/exec",
+  "MENU_FORM_SPREADSHEET": "https://script.google.com/macros/s/AKfycbwPCmZd-huQaEmnpbANVGcVgBgHDiWGE7FxQ4pgZ7mCU9bR727bjwkXgyd7Vl1Mec66/exec",
   "TERMINAL_FORM_SPREADSHEET": "https://script.google.com/macros/s/AKfycbyTGq_7hiZXf1M86ISh_JkOy4LUX4_DL8xLJE-7w5YzoApp2wI5sDgD5nf4d-3-_EYr0A/exec"
 }

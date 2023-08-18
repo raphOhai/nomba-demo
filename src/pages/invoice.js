@@ -7,6 +7,7 @@ import { InvoicepageHero, SponsorList, InvoiceTools, HowInvoicingWorks, EveryBus
 import { split } from "animations/text";
 import { InvoiceBusinessTools, faqData, invoiceTestimonial } from "config/invoice";
 import { CommonQuestions } from "components/common-questions";
+import { Cart } from "components/product-checkout";
 import { everyBusinesses } from "config/invoice";
 import SeoConf from "config/seo/meta";
 
@@ -39,6 +40,7 @@ const InvoicePage = () => {
 
       <GetStarted title="Get started with Nomba Invoice today" />
       <HomepageTipsAndUpdate />
+      <Cart title="Get Started With Invoicing" type="Invoice" />
     </Layout>
   );
 };

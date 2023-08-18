@@ -3,12 +3,14 @@ import "./index.scss";
 import { Button, Br } from "components";
 import { AppContext } from "states/context";
 import constants from "config/constants.json";
+import { useMixpanel } from "gatsby-plugin-mixpanel";
 
 function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { closeAndReset } = useContext(AppContext);
   const { MENU_FORM_SPREADSHEET } = constants;
+  const mixpanel = useMixpanel();
 
   const submit = () => {
     setIsLoading(true);
@@ -19,10 +21,18 @@ function Submit({ isTermsAccepted, data }) {
       .then(res => {
         if (res.ok) {
           setShow(!show);
+          mixpanel.track(`${data.type} - checkout - Customer has submited their info`, {
+            customerData: JSON.stringify(data),
+          });
         } else {
         }
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        mixpanel.track(`${data.type} - checkout - Error submitting customer info`, {
+          customerData: JSON.stringify(data),
+        });
+        console.log(err);
+      })
       .finally(() => {
         setIsLoading(false);
       });
