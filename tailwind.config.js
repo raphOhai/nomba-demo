@@ -17,6 +17,7 @@ module.exports = {
     "./src/templates/invoice/**/*.{html,jsx,js}",
     "./src/templates/e-menu/**/*.{html,jsx,js}",
     "./src/templates/mini/**/*.{html,jsx,js}",
+    "./src/templates/api/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
@@ -82,6 +83,7 @@ module.exports = {
           yellow: "#ffcc00",
           yellow1: "#FFFAE6",
           yellow2: "#FFF5CC",
+          yellow3: "#FFEEAA",
           light: "#ffffff",
           grey1: "#eeeeee",
           grey2: "#c6c6c6",
