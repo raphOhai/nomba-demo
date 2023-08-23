@@ -24,7 +24,6 @@ const Features = ({ title, description }) => {
         end: "+=700px",
       },
       opacity: 1,
-      // fontSize: fontSize,
       xPercent: 0,
       yPercent: -20,
       duration: 2,
@@ -53,7 +52,7 @@ const Features = ({ title, description }) => {
     });
   });
   return (
-    <section className="mt-[150px] md:mt-[200px] feature-section" id="features">
+    <section className="mt-[150px] md:mt-[200px] feature-section mb-20" id="features">
       <Container>
         <div className="md:max-w-[819px] md:mx-auto section_header1 text-center">
           <Ntext variant="h2" className="md:text-center" color="primary-100">

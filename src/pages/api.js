@@ -4,10 +4,10 @@ import Layout from "components/layout-max";
 import { Br, Testimonial, GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
 import { split } from "animations/text";
-import { faqData, apiTestimonial } from "config/api";
+import { faqData, apiTestimonial, categories, apiSection } from "config/api";
 import { CommonQuestions } from "components/common-questions";
 import SeoConf from "config/seo/meta";
-import { Features, ApiHero } from "templates/api";
+import { Features, ApiHero, DocSection, SectionTwo } from "templates/api";
 
 const ApiPage = () => {
   useEffect(() => {
@@ -23,7 +23,11 @@ const ApiPage = () => {
         }
         subtext="The most powerful Virtual Account, Seamless Transfers, and Real-Time Webhooks to scale your business"
       />
-
+      <SectionTwo
+        title={<>Checkout our Amazing Offerings</>}
+        description={"Here's how our APIs come together to bring ideas to life"}
+        data={apiSection}
+      />
       <Features
         title={
           <>
@@ -33,6 +37,20 @@ const ApiPage = () => {
         }
         description={<>Discover the tools that will supercharge your Financial innovations</>}
       />
+      <DocSection
+        title={
+          <>
+            Easy, Seamless Developer <Br on="desktop" /> Access and Experience
+          </>
+        }
+        description={
+          <>
+            A simple, elegant interface so you can start integrating in minutes. Leverage our APIs to transform your
+            businesses and products
+          </>
+        }
+        data={categories}
+      />
       <Testimonial
         className="!bg-black"
         headingText={<>Hear what business partners have to say</>}
@@ -40,7 +58,7 @@ const ApiPage = () => {
       />
       <CommonQuestions questions={faqData} />
 
-      <GetStarted title="Get started with Nomba Invoice today" />
+      <GetStarted title="Get started with Nomba API today" />
       <HomepageTipsAndUpdate />
     </Layout>
   );

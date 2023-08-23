@@ -6,7 +6,7 @@ import { SponsorList } from "../feature-section";
 
 const ApiHero = ({ title, subtext }) => {
   return (
-    <section>
+    <section className="pb-20">
       <Container>
         <div className="flex flex-col-reverse gap-10 md:flex-row md:gap-[57px] items-center justify-center md:justify-between mb-24">
           <div className={heroTextWrapperStyle}>
