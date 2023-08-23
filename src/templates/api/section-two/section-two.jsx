@@ -8,7 +8,7 @@ const SectionTwo = ({ title, description, data }) => {
   return (
     <section className="bg-[#38383874] py-20 ">
       <Container>
-        <div className="md:max-w-[819px] md:mx-auto  text-center md:my-12 ">
+        <div className="md:max-w-[819px] md:mx-auto  text-center md:mt-12 mb-7">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
             {title}
           </Ntext>
