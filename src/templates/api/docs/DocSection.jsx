@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Container, Ntext } from "components";
-import { CodeBlock } from "components/code-block/code";
+import { Container, Ntext, CodeBlock } from "components";
 import ctl from "@netlify/classnames-template-literals";
 
 const DocSection = ({ title, description, data }) => {
@@ -10,7 +9,7 @@ const DocSection = ({ title, description, data }) => {
   return (
     <section className="bg-[#38383874] py-20 ">
       <Container>
-        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center mt-12 md:mt-20">
+        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  md:mt-20">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
             {title}
           </Ntext>

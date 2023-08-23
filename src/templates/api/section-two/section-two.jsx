@@ -8,7 +8,7 @@ const SectionTwo = ({ title, description, data }) => {
   return (
     <section className="bg-[#38383874] py-20 ">
       <Container>
-        <div className="md:max-w-[819px] md:mx-auto  text-center my-12 ">
+        <div className="md:max-w-[819px] md:mx-auto  text-center md:my-12 ">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
             {title}
           </Ntext>
@@ -19,7 +19,7 @@ const SectionTwo = ({ title, description, data }) => {
         <div className="flex justify-between">
           {data.map(s => (
             <div key={s.title} className={`${cardWrapStyle}`}>
-              <div className="md:hidden">{s.iconMobile}</div>
+              <div className="md:hidden ">{s.iconMobile}</div>
               <div className={cardInnerWrapper}>
                 <div className="flex items-center gap-[20px]">
                   {s.icon}
