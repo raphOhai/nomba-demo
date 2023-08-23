@@ -7,7 +7,7 @@ const DocSection = ({ title, description, data }) => {
   const [languageIndex, setLanguageIndex] = useState(1);
 
   return (
-    <section className="bg-[#38383874] py-20 ">
+    <section className="bg-[#38383874] py-20 overflow-hidden">
       <Container>
         <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  md:mt-20">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
@@ -16,17 +16,17 @@ const DocSection = ({ title, description, data }) => {
           <Ntext variant="text3" className="md:px-5 mt-[28px]" color="primary-500">
             {description}
           </Ntext>
-          <div className="flex md:justify-center justify-between gap-10 mt-10 md:mt-[50px]">
+          <div className="flex justify-center  md:gap-10 gap-4 mt-10 md:mt-[50px]">
             {data.map((type, i) => (
               <div
                 key={type.slug}
                 onClick={() => setCategoryIndex(i)}
-                className="flex flex-col items-center min-w-[120px] md:min-w-[175px] gap-[10px] "
+                className="flex flex-col items-center min-w-[100px] md:min-w-[175px] gap-[10px] "
               >
                 <div className="p-3 border border-n-grey6 rounded-md">
                   {categoryIndex == i ? type.icon_active : type.icon}
                 </div>
-                <Ntext variant="text4lite" className="md:text-center" color="primary-100">
+                <Ntext variant="text3" className="md:text-center !font-mono whitespace-nowrap" color="primary-100">
                   {type.name}
                 </Ntext>
               </div>

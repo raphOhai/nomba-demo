@@ -2,6 +2,7 @@ import * as React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Br, Container, ReadMore, GetTerminal } from "components";
 import ApiLogo from "jpegs/api/api-logo.svg";
+import ApiLogoMobile from "jpegs/api/api-logo-mobile.svg";
 import { SponsorList } from "../feature-section";
 
 const ApiHero = ({ title, subtext }) => {
@@ -47,7 +48,8 @@ const ApiHero = ({ title, subtext }) => {
             </div>
           </div>
           <div>
-            <ApiLogo />
+            <ApiLogo className="hidden md:block" />
+            <ApiLogoMobile className="md:hidden mt-10" />
           </div>
         </div>
         <div className="text-center">
