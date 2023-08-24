@@ -3,12 +3,16 @@ import React from "react";
 import { Ntext, PolicyPageHeader } from "components";
 import { Container } from "components";
 import { StaticImage } from "gatsby-plugin-image";
+import { Flex } from "@chakra-ui/react";
 
 const PrivacyPolicy = () => {
   return (
     <Layout title="INTEGRATED MANAGEMENT SYSTEM">
       <PolicyPageHeader heading="INTEGRATED MANAGEMENT SYSTEM Objective Policy Statement" date="September 13, 2022" />
       <Container className="policy-page">
+        <Flex justifyContent={"center"}>
+          <StaticImage src="../assets/images/ISO.jpg" alt="ISO" />
+        </Flex>
         <Ntext variant="h2" value="Purpose" />
         <Ntext variant="p16">
           This policy statement defines the framework within which the integrated management system (information
@@ -71,7 +75,7 @@ const PrivacyPolicy = () => {
           <br />
           <br />
         </Ntext>
-        <StaticImage src="../assets/images/signature.png" alt="Signature" />,
+        <StaticImage src="../assets/images/signature.png" alt="Signature" />
       </Container>
       <div></div>
     </Layout>
