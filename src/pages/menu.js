@@ -12,9 +12,8 @@ import {
   MenuSection6,
   EmenuTestimonial,
   EveryBusiness,
-  Cart,
 } from "templates/e-menu";
-
+import { Cart } from "components/product-checkout";
 import { eMenuTestimonial, businessTool, howItworks, faqData } from "config/e-menu";
 import { gsap } from "gsap";
 import { ReactLenis } from "@studio-freight/react-lenis";
@@ -52,7 +51,7 @@ const EmenuPage = () => {
         <EveryBusiness />
         <HomepageTipsAndUpdate />
         <div data-lenis-prevent>
-          <Cart />
+          <Cart title="Get Started With Menu" type="Menu" />
         </div>
       </Layout>
     </ReactLenis>

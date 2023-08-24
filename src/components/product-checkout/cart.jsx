@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -16,14 +15,15 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-import { Checkout, CustomerInfo } from "./index";
+import { CustomerInfo } from "../checkout/index";
+import { Checkout } from "./index";
 import { NLink, Ntext } from "components";
 import CheckboxTrue from "jpegs/cart/checkbox-true.svg";
 import CheckboxFalse from "jpegs/cart/checkbox-false.svg";
 import { Submit } from "./submit";
 import { AppContext } from "states/context";
 
-const Cart = ({ finalFocusRef }) => {
+const Cart = ({ finalFocusRef, type, title }) => {
   const [isTermsAccepted, setTermsAccepted] = useState(false);
   const {
     isOpen,
@@ -56,7 +56,7 @@ const Cart = ({ finalFocusRef }) => {
         <DrawerCloseButton color="white" colorScheme="yellow" />
         <DrawerHeader>
           <Ntext variant="text3" color="n-light">
-            Get Started With Menu
+            {title}
           </Ntext>
         </DrawerHeader>
 
@@ -73,7 +73,7 @@ const Cart = ({ finalFocusRef }) => {
 
             <TabPanels px={[2, 4, 4, 4]}>
               <TabPanel>
-                <CustomerInfo state={info} setState={setInfo} />
+                <CustomerInfo state={info} setState={setInfo} deliveryRequired={false} />
               </TabPanel>
               <TabPanel>
                 <Checkout userInfo={info} setTabIndex={setTabIndex} />
@@ -134,7 +134,7 @@ const Cart = ({ finalFocusRef }) => {
                 </div>
               </div>
 
-              <Submit isTermsAccepted={isTermsAccepted} data={{ ...info }} />
+              <Submit isTermsAccepted={isTermsAccepted} data={{ ...info, type: type }} />
             </div>
           </div>
         )}

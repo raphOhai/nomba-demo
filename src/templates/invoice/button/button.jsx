@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 
 import ctl from "@netlify/classnames-template-literals";
-
+import { AppContext } from "states/context";
 import Loader from "src/assets/images/svgs/loader.svg";
-import { NLink } from "components";
+import ArrowRight from "src/assets/images/svgs/arrow-right.svg";
 
 const Button = ({
   text,
   variant: buttonVariant = "primary",
   size: buttonSize = "xsmall",
   isLoading,
-  onClick,
+  withArrow,
+  className,
   disabled: buttonDisabled,
-  href,
-  to,
+
+  isflex,
   children,
 }) => {
   const buttonStyle = ctl(`
@@ -26,24 +27,18 @@ const Button = ({
   `);
 
   let ButtonElement = "button";
-  let linkProps = {};
-
-  if (href || to) {
-    ButtonElement = NLink;
-    if (to) {
-      linkProps.to = to;
-    }
-
-    if (href) {
-      linkProps.href = href;
-    }
-    linkProps.trackingText = text;
-  }
+  const { onOpen } = useContext(AppContext);
 
   return (
-    <ButtonElement className={buttonStyle} onClick={onClick} disabled={buttonDisabled || isLoading} {...linkProps}>
-      <span className={textStyle}>{text || children}</span>
+    <ButtonElement
+      className={`${buttonStyle} ${className}`}
+      onClick={onOpen}
+      disabled={buttonDisabled || isLoading}
+      trackingText={text}
+    >
+      <span className={isflex ? "flex flex-row gap-5" : textStyle}>{text || children}</span>
       {isLoading && <Loader />}
+      {withArrow && <ArrowRight />}
     </ButtonElement>
   );
 };
@@ -56,6 +51,7 @@ const baseStyle = ctl(`
 rounded
 text-primary
 text-center
+gap-2
 font-semibold
 text-[16px]
 transition
@@ -88,9 +84,9 @@ const sizes = {
   h-[58px]
   `,
   custom: `
-  px-[65px]
-  py-[17px]
-  w-fit
+  rounded-[10px]
+  md:min-w-[212px]
+  h-[50px]
   `,
 };
 
@@ -112,16 +108,18 @@ disabled:text-primary
 Button.defaultProps = {
   variant: "primary",
   size: "xsmall",
+  isflex: false,
 };
 Button.propTypes = {
   text: PropTypes.string,
+  className: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "alternative"]),
   size: PropTypes.oneOf(["xsmall", "small", "medium", "large", "xlarge"]),
-  href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  to: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
+  withArrow: PropTypes.bool,
+  isflex: PropTypes.bool,
 };
 
 export { Button };

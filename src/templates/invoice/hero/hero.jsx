@@ -4,11 +4,13 @@ import PropTypes from "prop-types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Container, Ntext, Button } from "components";
+import { Container, Ntext } from "components";
+import { Button } from "../button";
 import Lottie from "lottie-web";
 import constants from "config/constants.json";
 import mobileAnimation from "./animations/vid_fone.json";
 import desktopAnimation from "./animations/laptopda.json";
+
 gsap.registerPlugin([ScrollTrigger]);
 const InvoicepageHero = ({ title, description }) => {
   const { SIGNUP_URL } = constants;
@@ -132,12 +134,7 @@ const InvoicepageHero = ({ title, description }) => {
             </Ntext>
           </div>
           <div className={heroButtonsContainer}>
-            <Button
-              className="!font-medium !text-[16px]"
-              text="Get Started"
-              href={{ url: SIGNUP_URL }}
-              withArrow={true}
-            />
+            <Button className="!font-medium !text-[16px]" text="Get Started" withArrow={true} />
           </div>
         </div>
         <div className="flex flex-row -mb-2 md:bottom-[-7px] md:left-0 justify-center md:items-baseline items-end invoice-hero-image ">

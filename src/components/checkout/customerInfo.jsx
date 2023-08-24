@@ -6,7 +6,7 @@ import { nigeriaStates } from "./states";
 import Caret from "svgs/caret-down.svg";
 import { AppContext } from "states/context";
 
-const CustomerInfo = ({ state, setState }) => {
+const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   const [lgasInState, setLgasInState] = useState([]);
   // const [hasemailError, setEmailError] = useState(false);
 
@@ -124,7 +124,7 @@ const CustomerInfo = ({ state, setState }) => {
       <div className="flex flex-row gap-6">
         <div className="w-full">
           <div className={labelClass}>
-            <label htmlFor="deliveryAddress">Delivery address</label>
+            <label htmlFor="deliveryAddress">{deliveryRequired ? "Delivery address" : "Address"}</label>
           </div>
           <div>
             <input
