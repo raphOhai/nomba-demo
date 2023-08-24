@@ -6,5 +6,9 @@
   {
     "title": "Terms of Service",
     "link": { "to": "/terms-of-service" }
+  },
+  {
+    "title": "Integrated Management System",
+    "link": { "to": "/ims" }
   }
 ]
