@@ -8,7 +8,7 @@ import { Flex } from "@chakra-ui/react";
 const PrivacyPolicy = () => {
   return (
     <Layout title="INTEGRATED MANAGEMENT SYSTEM">
-      <PolicyPageHeader heading="INTEGRATED MANAGEMENT SYSTEM Objective Policy Statement" date="September 13, 2022" />
+      <PolicyPageHeader heading="INTEGRATED MANAGEMENT SYSTEM Objective Policy Statement" />
       <Container className="policy-page">
         <Flex justifyContent={"center"}>
           <StaticImage src="../assets/images/ISO.jpg" alt="ISO" />
@@ -75,7 +75,6 @@ const PrivacyPolicy = () => {
           <br />
           <br />
         </Ntext>
-        <StaticImage src="../assets/images/signature.png" alt="Signature" />
       </Container>
       <div></div>
     </Layout>
