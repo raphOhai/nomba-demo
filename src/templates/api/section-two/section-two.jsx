@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const SectionTwo = ({ title, description, data }) => {
   return (
-    <section className="bg-[#38383874] py-20 ">
+    <section className="bg-[#38383874] pt-20 ">
       <Container>
         <div className="md:max-w-[819px] md:mx-auto  text-center md:mt-12 mb-7">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
@@ -19,7 +19,8 @@ const SectionTwo = ({ title, description, data }) => {
         <div className="flex justify-between">
           {data.map(s => (
             <div key={s.title} className={`${cardWrapStyle}`}>
-              <div className="md:hidden ">{s.iconMobile}</div>
+              <div className="absolute h-full bg-n-grey6 w-[80%] "> </div>
+              <div className="md:hidden absolute w-full h-full px-10 py-5">{s.iconMobile}</div>
               <div className={cardInnerWrapper}>
                 <div className="flex items-center gap-[20px]">
                   {s.icon}
@@ -38,7 +39,7 @@ const SectionTwo = ({ title, description, data }) => {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 max-h-[680px] overflow-y-hidden">
           <StaticImage src="../../../assets/images/jpegs/api/image-temp.png" alt="Temp Doc" />
         </div>
       </Container>
@@ -47,16 +48,14 @@ const SectionTwo = ({ title, description, data }) => {
 };
 
 const cardWrapStyle = ctl(`
-
+relative
 md:w-[400px] 
-md:py-10
-py-5
-px-10
-md:px-0
+w-[120px]
 md:h-[200px]
 h-[80px] 
 border-n-grey5 
-bg-n-grey6
+overflow-hidden
+bg-primary
 border 
 rounded-[10px]
 `);
@@ -64,9 +63,12 @@ rounded-[10px]
 const cardInnerWrapper = ctl(`
 md:flex 
 flex-col 
+z-10
 gap-[16px]
+absolute
 justify-around
-mx-auto
+pl-10
+py-10
 max-w-[340px]
 hidden
 `);

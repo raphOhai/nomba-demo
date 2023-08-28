@@ -26,7 +26,11 @@ const DocSection = ({ title, description, data }) => {
                 <div className="p-3 border border-n-grey6 rounded-md">
                   {categoryIndex == i ? type.icon_active : type.icon}
                 </div>
-                <Ntext variant="text3" className="md:text-center !font-mono whitespace-nowrap" color="primary-100">
+                <Ntext
+                  variant="text3"
+                  className="md:text-center !font-mono whitespace-nowrap"
+                  color={`${categoryIndex == i ? "primary-100" : "m-grey1"}`}
+                >
                   {type.name}
                 </Ntext>
               </div>
