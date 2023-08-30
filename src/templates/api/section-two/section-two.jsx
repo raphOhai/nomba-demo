@@ -10,13 +10,23 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const SectionTwo = ({ title, description, data }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
   const [currentLabel, setCurrentLabel] = useState(0);
+
+  function calculateNormalizedPercentage(value, lowerBound, upperBound) {
+    const normalizedPercentage = ((value - lowerBound) / (upperBound - lowerBound)) * 100;
+    return `${normalizedPercentage}%`;
+  }
   useLayoutEffect(() => {
     /**
      * create our context.
      * This function is invoked immediately and all GSAP animations and ScrollTriggers created
      * during the execution of this function get recorded so we can revert() them later (cleanup)
      */
-
+    for (let i = 0; i < data.length; i++) {
+      gsap.to(`.section-two-rect-card-no-${i}`, {
+        opacity: 0,
+      });
+    }
+    const d = document;
     let ctx = gsap.context(() => {
       let tl1 = gsap.timeline({
         scrollTrigger: {
@@ -27,66 +37,41 @@ const SectionTwo = ({ title, description, data }) => {
           end: "+=5000px", // end after scrolling 1000px beyond the start
           scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
           onUpdate(self) {
-            data.forEach((c, i) => {
-              // console.log(self.progress / (i + 1) / data.length) * 100))
-              gsap.to(`.scroll-progress-${i}`, {
-                width:
-                  self.progress > i / data.length && self.progress <= (i + 1) / data.length
-                    ? `${(self.progress / ((i + 1) / data.length)) * 100}%`
-                    : "0%",
-              });
-            });
+            for (let i = 0; i < data.length; i++) {
+              if (self.progress > i / data.length) {
+                d.querySelector(`.scroll-progress-${i}`).style.width =
+                  self.progress <= (i + 1) / 3
+                    ? calculateNormalizedPercentage(self.progress, i / data.length, (i + 1) / 3)
+                    : "100%";
+
+                if (self.progress <= (i + 1) / 3) {
+                  d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 1;
+                } else {
+                  d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 0;
+                }
+              } else {
+                d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 0;
+              }
+            }
           },
         },
       });
-      data.forEach((card, i) => {
-        if (i === 0) {
-          tl1.to(`.section-four-rect-card-no-${i}`, {
-            yPercent: 0,
-            opacity: 1,
-          });
-          tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveNav(i), "-=0.15");
-        } else {
-          tl1.from(`.section-four-rect-card-no-${i}`, {
-            yPercent: 100,
-            opacity: 0,
-          });
-
-          // set the active section based on the direction, and position it part-way through the transition because that's more intuitive
-
-          tl1.to(
-            `.section-four-rect-card-no-${i - 1}`,
-            {
-              scale: 0.9 + (i - 1) * 0.03,
-              // yPercent: -(8 - (i - 1) * 4),
-              yPercent: -3,
-              opacity: 1,
-            },
-            "-=0.5"
-          );
-
-          tl1.to(`.section-four-rect-card-no-${i}`, {
-            yPercent: -3,
-            opacity: 1,
-          });
-
-          tl1.addLabel(`card${i}`);
-          tl1.add(() => setActiveNav(i), "-=0.15");
-        }
-      });
+      for (let i = 0; i < data.length; i++) {
+        tl1.addLabel(`card${i}`);
+        tl1.add(() => setActiveNav(i), "-=0.15");
+      }
 
       gsap.utils.toArray(".section-nav-link .circle").forEach((a, i) => {
         a.addEventListener("click", e => {
           e.preventDefault();
 
-          gsap.to(window, { scrollTo: labelToScroll(tl1, "card" + i) + 2 });
+          gsap.to(window, { scrollTo: labelToScroll(i / data.length) + 10 });
         });
       });
 
-      function labelToScroll(timeline, label) {
-        let st = timeline.scrollTrigger,
-          progress = timeline.labels[label] / timeline.duration();
+      function labelToScroll(progress) {
+        let st = tl1.scrollTrigger;
+
         return st.start + (st.end - st.start) * progress;
       }
       let circles = gsap.utils.toArray(".section-nav-link .circle");
@@ -121,8 +106,8 @@ const SectionTwo = ({ title, description, data }) => {
           <div className="flex justify-between section-nav-link ">
             {data.map((s, i) => (
               <div key={s.title} className={`${cardWrapStyle}`}>
-                <div className={`absolute h-full bg-n-grey6 scroll-progress-${i} `}> </div>
-                <div className="md:hidden absolute w-full h-[150%] px-10 py-5">{s.iconMobile}</div>
+                <div className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} `}> </div>
+                <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div>
                 <div className={cardInnerWrapper}>
                   <div className="flex items-center gap-[20px]">
                     {s.icon}
@@ -145,7 +130,7 @@ const SectionTwo = ({ title, description, data }) => {
             {data.map((t, i) => (
               <div
                 key={t.title}
-                className={`mt-10 max-h-[680px] overflow-y-hidden section-four-rect-card section-four-rect-card-no-${i}`}
+                className={`mt-10 opacity-0 max-h-[680px] overflow-y-hidden transition-opacity duration-1000 section-two-rect-card section-two-rect-card-no-${i} absolute top-7`}
               >
                 <StaticImage src="../../../assets/images/jpegs/api/image-temp.png" alt="Temp Doc" />
               </div>
@@ -164,7 +149,6 @@ w-[120px]
 md:h-[200px]
 h-[80px] 
 border-n-grey5 
-overflow-hidden
 bg-primary
 border circle
 rounded-[10px]
