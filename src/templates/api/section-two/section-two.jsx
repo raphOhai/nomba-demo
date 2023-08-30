@@ -102,7 +102,7 @@ const SectionTwo = ({ title, description, data }) => {
             {description}
           </Ntext>
         </div>
-        <div ref={comp} className="md:min-h-[940px] min-h-[400px]">
+        <div ref={comp} className="md:min-h-[940px] min-h-[400px] overflow-y-hidden">
           <div className="flex justify-between section-nav-link ">
             {data.map((s, i) => (
               <div key={s.title} className={`${cardWrapStyle}`}>
