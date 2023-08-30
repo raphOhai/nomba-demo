@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Container, Ntext, CodeBlock } from "components";
 import ctl from "@netlify/classnames-template-literals";
+import { useToast } from "@chakra-ui/react";
 
 const DocSection = ({ title, description, data }) => {
   const [categoryIndex, setCategoryIndex] = useState(0);
   const [languageIndex, setLanguageIndex] = useState(1);
-
+  const toast = useToast();
   return (
     <section className="bg-[#38383874] py-20 overflow-hidden">
       <Container>
@@ -39,15 +40,44 @@ const DocSection = ({ title, description, data }) => {
         </div>
 
         <div className={codeSection}>
-          <div className=" p-5 md:px-9 md:py-6 flex gap-[10px] border-b border-n-grey5">
-            {data[categoryIndex].docs.map((doc, i) => (
-              <div
-                className={`${langStyle} ${languageIndex == i ? activeLangStyle : ""}`}
-                onClick={() => setLanguageIndex(i)}
-              >
-                {doc.label}
-              </div>
-            ))}
+          <div className="p-5 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
+            <div className="  flex gap-[10px] ">
+              {data[categoryIndex].docs.map((doc, i) => (
+                <div
+                  className={`${langStyle} ${languageIndex == i ? activeLangStyle : ""}`}
+                  onClick={() => setLanguageIndex(i)}
+                >
+                  {doc.label}
+                </div>
+              ))}
+            </div>
+
+            <div
+              onClick={() => {
+                navigator.clipboard.writeText(data[categoryIndex].docs[languageIndex].snippet);
+                toast({
+                  position: "top-right",
+                  title: "Copied!",
+                  status: "success",
+                  duration: 9000,
+                  isClosable: true,
+                });
+              }}
+              className={`${langStyle} flex gap-[10px] justify-center items-center  border border-[#555] rounded-[10px]`}
+            >
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M15.3 15.3V22H2V8.7H8.7M15.3 15.3H22V2H8.7V8.7M15.3 15.3V8.7H8.7"
+                    stroke="white"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>COPY</span>
+            </div>
           </div>
           <div className=" md:p-8  p-2  h-[450px] md:h-[650px] overflow-y-scroll">
             <CodeBlock

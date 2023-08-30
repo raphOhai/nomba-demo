@@ -9,7 +9,7 @@ const ApiHero = ({ title, subtext }) => {
   return (
     <section className="pb-20">
       <Container>
-        <div className="flex flex-col-reverse gap-10 md:flex-row md:gap-[57px] items-center justify-center md:justify-between mb-24">
+        <div className="flex flex-col-reverse gap-10 md:flex-row md:gap-[57px] items-center justify-center md:justify-between mb-24 md:h-[90vh]">
           <div className={heroTextWrapperStyle}>
             <div className="flex flex-row justify-center md:justify-start gap-3 ">
               <div className="rounded-full px-5 py-[10px] border border-n-grey6">
