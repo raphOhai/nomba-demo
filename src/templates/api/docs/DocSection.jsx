@@ -5,8 +5,11 @@ import { useToast } from "@chakra-ui/react";
 
 const DocSection = ({ title, description, data }) => {
   const [categoryIndex, setCategoryIndex] = useState(0);
+
   const [languageIndex, setLanguageIndex] = useState(1);
+
   const toast = useToast();
+
   return (
     <section className="bg-[#38383874] py-20 overflow-hidden">
       <Container>
