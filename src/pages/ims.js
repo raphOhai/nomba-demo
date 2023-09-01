@@ -7,8 +7,8 @@ import { Flex } from "@chakra-ui/react";
 
 const PrivacyPolicy = () => {
   return (
-    <Layout title="INTEGRATED MANAGEMENT SYSTEM">
-      <PolicyPageHeader heading="INTEGRATED MANAGEMENT SYSTEM Objective Policy Statement" />
+    <Layout title="Information Security and Business Continuity Policy">
+      <PolicyPageHeader heading="Information Security and Business Continuity Objective Policy Statement" />
       <Container className="policy-page">
         <Flex justifyContent={"center"}>
           <StaticImage src="../assets/images/ISO.jpg" alt="ISO" />
@@ -17,15 +17,15 @@ const PrivacyPolicy = () => {
         <Ntext variant="p16">
           This policy statement defines the framework within which the integrated management system (information
           security management system and business continuity management system) will be managed across Nomba and
-          demonstrates top management commitment and support for integrated management system throughout Nomba. This
-          policy iserves as the basis from which all information security, business continuity and data protection
+          demonstrates top management commitment and support for the Integrated Management System throughout Nomba. This
+          policy serves as the basis from which all information security, business continuity and data protection
           related policies emanate.
         </Ntext>
         <Ntext variant="h2" value="Scope" />
         <Ntext variant="p16">
           This policy is applicable to all Nomba personnel, contractors, vendors, and other parties, and covers all
           information entrusted to or owned by Nomba and stored, processed, or transmitted on the organizations
-          information systems and operated by the organization
+          information systems and operated by the organization.
         </Ntext>
         <Ntext variant="h2" value="Information Security Objectives" />
         <Ntext variant="p16">
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
           <b>Objective 1</b>– Achieve 100% protection of Confidentiality and integrity of Nomba Information assets.
         </Ntext>
         <Ntext variant="p16">
-          <b>Objective 2</b>– Achieve 90% Information Security Awareness culture across the organisation.
+          <b>Objective 2</b>– Achieve 90% Information Security Awareness culture across the organization.
         </Ntext>
         <Ntext variant="p16">
           <b>Objective 3</b>– Provide assurance of information systems resilience – 99.6 availability.
@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
           the time of an incident.
         </Ntext>
         <Ntext variant="p16">
-          <b>Objective 2</b>– Comply with the Nomba requirements, contractual, regulatory, and legal requirement.
+          <b>Objective 2</b>– Comply with Nomba’s contractual, regulatory, and legal requirements.
         </Ntext>
         <Ntext variant="p16">
           <b>Objective 3</b>– Preserve the ability to meet stakeholder expectations in a wide range of circumstances,
@@ -55,7 +55,7 @@ const PrivacyPolicy = () => {
         <Ntext variant="p16">
           <b>Objective 4</b>– Provide for an orderly and expedited recovery after a disruptive event.
         </Ntext>
-        <Ntext variant="h2" value="Integrated Management System Policy" />
+        <Ntext variant="h2" value="Information Security and Business Continuity Policy" />
         <Ntext variant="p16">
           Nomba is committed to the confidentiality, integrity and availability of her information assets and shall
           implement measures through the establishment.
