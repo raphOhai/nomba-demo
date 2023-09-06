@@ -1,5 +1,5 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { Container, Ntext } from "components";
+import React, { useContext, useLayoutEffect, useRef } from "react";
+import { Container, GetTerminal, Ntext } from "components";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import image1 from "jpegs/mini/terminal/image1.png";
@@ -9,12 +9,13 @@ import image4 from "jpegs/mini/terminal/image4.png";
 import image5 from "jpegs/mini/terminal/image5.png";
 import Pres from "svgs/pres.svg";
 import Mini from "svgs/mini.svg";
+import { AppContext } from "states/context";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const MiniFeatures2 = ({ features }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
-
+  const { addToCart } = useContext(AppContext);
   const mobileImages = {
     0: image1,
     1: image2,
@@ -132,6 +133,9 @@ const MiniFeatures2 = ({ features }) => {
                   <Ntext variant="text-3" color="n-yellow">
                     Conveniently receive any type of payment, anywhere.
                   </Ntext>
+                </div>
+                <div className="max-w-[300px] mt-5">
+                  <GetTerminal onClick={() => addToCart(3)} text="Buy your POS" type="animate-button" />
                 </div>
                 <div className="flex md:!hidden flex-row justify-center  border-b md:border-none border-n-grey3 pt-[40px] pb-[40px]">
                   <Mini className="max-w-[153px] h-[290px]" />

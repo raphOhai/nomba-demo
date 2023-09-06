@@ -1,12 +1,16 @@
-import React, { useLayoutEffect } from "react";
-
+import React, { useLayoutEffect, useContext } from "react";
+import ctl from "@netlify/classnames-template-literals";
 import { BoxSlider } from "./box-slider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Container, Br, Ntext, SectionHeader } from "components";
+import { Container, Br, Ntext, SectionHeader, GetTerminal } from "components";
 import useIsMobile from "hooks/useIsMobile";
+import { AppContext } from "states/context";
+
 gsap.registerPlugin(ScrollTrigger);
 const EveryBusiness = ({ slides }) => {
+  const { addToCart } = useContext(AppContext);
+
   const isMobile = useIsMobile();
 
   useLayoutEffect(() => {
@@ -34,6 +38,9 @@ const EveryBusiness = ({ slides }) => {
             <Ntext variant="h2" className="text-left" color="primary-100" data-animation="h">
               Designed for <Br on="desktop" /> businesses like yours
             </Ntext>
+            <div className={heroButtonsContainer}>
+              <GetTerminal onClick={() => addToCart(3)} text="Buy your POS" type="animate-button-reverse" />
+            </div>
           </div>
 
           {slides.map((s, i) => (
@@ -49,5 +56,15 @@ const EveryBusiness = ({ slides }) => {
     </section>
   );
 };
+
+const heroButtonsContainer = ctl(`
+flex
+flex-col
+md:flex-row
+gap-[30px]
+md:items-center
+w-full items-stretch 
+mt-[30px]
+`);
 
 export { EveryBusiness };

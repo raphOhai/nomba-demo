@@ -11,11 +11,11 @@ import {
   ExperienceMini,
   WhyMini,
   MiniFeatures2,
-  MiniHero,
   TerminalSectionInteractions,
+  MiniHeroV2,
 } from "templates/mini";
 import { split } from "animations/text";
-import { AccordionData, everyBusinesses, miniFeatures, miniBenefits, InTheBox, miniTestimonial } from "config/mini";
+import { AccordionData, everyBusinesses, miniFeatures, miniBenefitsV2, InTheBox, miniTestimonial } from "config/mini";
 import { CommonQuestions } from "components/common-questions";
 import { HomepageTipsAndUpdate } from "templates";
 import { gsap } from "gsap";
@@ -43,7 +43,7 @@ const MiniPage = () => {
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
       <Layout title={SeoConf.mini.title} description={SeoConf.mini.description} useStickyNav={true} index={3}>
-        <MiniHero benefits={miniBenefits} />
+        <MiniHeroV2 benefits={miniBenefitsV2} />
         <TerminalSectionInteractions />
         <MiniFeatures2
           title={
