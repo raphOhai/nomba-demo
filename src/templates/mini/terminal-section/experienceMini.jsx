@@ -8,7 +8,6 @@ import { IO } from "animations/observe";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const ExperienceMini = ({ title, description }) => {
-  const comp = useRef(null);
   const [isHoverVid, setHoverVid] = useState(false);
   const video = useRef(null);
 
@@ -18,13 +17,13 @@ const ExperienceMini = ({ title, description }) => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: comp.current,
-        start: "top top",
-        end: "+=800px",
-        pin: true,
-        // pinSpacing: false,
-      });
+      // ScrollTrigger.create({
+      //   trigger: ".experience-mini",
+      //   start: "top top",
+      //   end: "+=800px",
+      //   pin: true,
+      //   // pinSpacing: false,
+      // });
       const wrap = document.querySelector(".spininTerminal");
       IO(wrap).then(
         () => {
@@ -44,7 +43,7 @@ const ExperienceMini = ({ title, description }) => {
     return () => ctx.revert();
   });
   return (
-    <section ref={comp} className="pb-[100px]   bg-black experience-mini">
+    <section className="pb-[100px]   bg-black experience-mini">
       <Container>
         <div className="md:max-w-[671px] md:mx-auto  md:text-center mb-[30px] md:mb-[50px]">
           <Ntext variant="h2" className="md:text-center" color="primary-100" data-animation="h">

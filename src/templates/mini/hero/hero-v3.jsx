@@ -8,7 +8,7 @@ import Check from "svgs/yellow-check.svg";
 import { AppContext } from "states/context";
 import { FloatingBanner } from "./floater1";
 
-const MiniHeroV3 = ({ benefits }) => {
+const MiniHeroV3 = ({ benefits, hasFloater = true, children }) => {
   const { addToCart } = useContext(AppContext);
   useEffect(() => {
     if (document.readyState === "complete") {
@@ -27,7 +27,7 @@ const MiniHeroV3 = ({ benefits }) => {
         </div>
       </div>
       <Container className="relative">
-        <div className="md:min-h-[90vh] flex md:flex-row flex-col">
+        <div className=" md:min-h-[750px]  min-h-[900px] flex md:flex-row flex-col">
           <div className={heroTextWrapperStyle}>
             <div className="flex flex-row">
               <div>
@@ -38,26 +38,7 @@ const MiniHeroV3 = ({ benefits }) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row  ">
-              <Ntext variant="prohero" className="!text-[84px] !leading-[96px]" color="n-light">
-                POS with
-              </Ntext>
-            </div>
-            <div className="flex flex-row ">
-              <Ntext variant="prohero" className="!text-[84px] !leading-[96px]" color="b-1">
-                No Target
-              </Ntext>
-            </div>
-            <div className="flex flex-row ">
-              <Ntext variant="p18" className="pt-5 " color="m-grey1">
-                The best, affordable option for your business
-              </Ntext>
-            </div>
-            <div className="flex flex-row pt-5">
-              <Ntext variant="text5" className="!leading-[24px]" color="m-light">
-                <span className="font-[400]">Price:</span> ₦25,000 <del className="text-n-grey3">₦45,000</del>
-              </Ntext>
-            </div>
+            {children}
             <div className={heroButtonsContainer}>
               <GetTerminal onClick={() => addToCart(3)} text="Buy your POS" type="animate-button-reverse" />
             </div>
@@ -82,7 +63,7 @@ const MiniHeroV3 = ({ benefits }) => {
               ))}
             </div>
           </div>
-          <FloatingBanner className="absolute right-0 z-40 md:bottom-60" />
+          {hasFloater && <FloatingBanner className="absolute right-0 z-40 md:bottom-60" />}
           <div className=" hover:animate-pulseCustom">
             <video
               className={`absolute left-0 md:left-auto`}
@@ -110,7 +91,7 @@ pt-[75px]
 `);
 
 const heroTextWrapperStyle = ctl(`
-lg:max-w-[692px]
+lg:max-w-[752px]
 md:mt-[50px]
 max-w-[100%]
 lg:mb-[80px]

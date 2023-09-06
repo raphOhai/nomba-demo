@@ -9,12 +9,13 @@ import image4 from "jpegs/mini/terminal/image4.png";
 import image5 from "jpegs/mini/terminal/image5.png";
 import Pres from "svgs/pres.svg";
 import Mini from "svgs/mini.svg";
+import { BuyTerminal } from "../buy-terminal/buy-terminal";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
-const MiniFeatures2 = ({ features }) => {
+const MiniFeatures3 = ({ features }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
-
+  // const { addToCart } = useContext(AppContext);
   const mobileImages = {
     0: image1,
     1: image2,
@@ -133,6 +134,7 @@ const MiniFeatures2 = ({ features }) => {
                     Conveniently receive any type of payment, anywhere.
                   </Ntext>
                 </div>
+                <BuyTerminal className="mt-5" reverse={false} />
                 <div className="flex md:!hidden flex-row justify-center  border-b md:border-none border-n-grey3 pt-[40px] pb-[40px]">
                   <Mini className="max-w-[153px] h-[290px]" />
                 </div>
@@ -199,4 +201,4 @@ const MiniFeatures2 = ({ features }) => {
   );
 };
 
-export { MiniFeatures2 };
+export { MiniFeatures3 };

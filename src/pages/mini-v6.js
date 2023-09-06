@@ -11,7 +11,6 @@ import {
   ExperienceMini,
   WhyMini,
   MiniFeatures3,
-  TerminalSectionInteractions,
   MiniHeroV3,
 } from "templates/mini";
 import { split } from "animations/text";
@@ -43,25 +42,20 @@ const MiniPage = () => {
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
       <Layout title={SeoConf.mini.title} description={SeoConf.mini.description} useStickyNav={true} index={3}>
-        <MiniHeroV3 benefits={miniBenefitsV2}>
+        <MiniHeroV3 benefits={miniBenefitsV2} hasFloater={false}>
           <div className="flex flex-row  ">
             <Ntext variant="prohero" color="n-light">
-              POS with
+              Enjoy Zero Target and
             </Ntext>
           </div>
           <div className="flex flex-row ">
-            <Ntext variant="prohero" color="b-1">
-              No Target
+            <Ntext variant="prohero" color="n-light">
+              Lower Charges
             </Ntext>
           </div>
           <div className="flex flex-row ">
             <Ntext variant="p18" className="pt-5 " color="m-grey1">
-              The best, affordable option for your business
-            </Ntext>
-          </div>
-          <div className="flex flex-row pt-5">
-            <Ntext variant="text5" className="!leading-[24px]" color="m-light">
-              <span className="font-[400]">Price:</span> ₦25,000 <del className="text-n-grey3">₦45,000</del>
+              Get the affordable and handy POS that helps you receive payments faster and with ease
             </Ntext>
           </div>
         </MiniHeroV3>

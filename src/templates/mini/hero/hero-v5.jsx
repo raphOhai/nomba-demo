@@ -27,7 +27,7 @@ const MiniHeroV5 = ({ benefits }) => {
         </div>
       </div>
       <Container className="relative">
-        <div className="md:min-h-[90vh] flex md:flex-row flex-col">
+        <div className="md:min-h-[90vh]  min-h-[900px] flex md:flex-row flex-col">
           <div className={heroTextWrapperStyle}>
             <div className="flex flex-row">
               <div>
@@ -39,12 +39,12 @@ const MiniHeroV5 = ({ benefits }) => {
               </div>
             </div>
             <div className="flex flex-row  ">
-              <Ntext variant="prohero" className="!text-[84px] !leading-[96px]" color="n-light">
+              <Ntext variant="prohero" color="n-light">
                 Affordable and
               </Ntext>
             </div>
             <div className="flex flex-row ">
-              <Ntext variant="prohero" className="!text-[84px] !leading-[96px]" color="b-1">
+              <Ntext variant="prohero" color="b-1">
                 Target-free POS
               </Ntext>
             </div>

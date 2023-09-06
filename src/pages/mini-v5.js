@@ -10,8 +10,7 @@ import {
   EveryBusiness,
   ExperienceMini,
   WhyMini,
-  MiniFeatures2,
-  TerminalSectionInteractions,
+  MiniFeatures3,
   MiniHeroV5,
 } from "templates/mini";
 import { split } from "animations/text";
@@ -45,7 +44,7 @@ const MiniPage = () => {
       <Layout title={SeoConf.mini.title} description={SeoConf.mini.description} useStickyNav={true} index={3}>
         <MiniHeroV5 benefits={miniBenefitsV2} />
         <EveryBusiness slides={everyBusinesses} />
-        <MiniFeatures2
+        <MiniFeatures3
           title={
             <>
               Unlike any POS you’ve <Br on="all" /> used before
