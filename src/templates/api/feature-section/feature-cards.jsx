@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components";
 import { apiFeatures } from "config/api";
-import fastPayment from "assets/images/jpegs/terminal/max/features/fast-payment2.mp4";
-import battery from "assets/images/jpegs/terminal/max/features/battery5.mp4";
-import signal from "assets/images/jpegs/terminal/max/features/signal1.mp4";
-import speedprinters from "assets/images/jpegs/terminal/max/features/speedprinters1.mp4";
+import feat1 from "assets/images/jpegs/api/features/feat-1.mp4";
+import feat2 from "assets/images/jpegs/api/features/feat-2.mp4";
+import feat3 from "assets/images/jpegs/api/features/feat-3.mp4";
+import feat4 from "assets/images/jpegs/api/features/feat-4.mp4";
 import { IO } from "animations/observe";
 
 const FeatureCards = () => {
@@ -18,70 +18,70 @@ const FeatureCards = () => {
   const video3 = useRef(null);
   const video4 = useRef(null);
 
-  // useEffect(() => {
-  //   const wrap1 = document.querySelector(".card1");
-  //   IO(wrap1).then(
-  //     () => {
-  //       setTimeout(() => {
-  //         setHoverVid1(true);
-  //       }, 500);
-  //       setTimeout(() => {
-  //         video1.current.play();
-  //       }, 1600);
-  //     },
-  //     {
-  //       threshold: 1,
-  //     }
-  //   );
+  useEffect(() => {
+    const wrap1 = document.querySelector(".card1");
+    IO(wrap1).then(
+      () => {
+        setTimeout(() => {
+          setHoverVid1(true);
+        }, 500);
+        setTimeout(() => {
+          video1.current.play();
+        }, 1600);
+      },
+      {
+        threshold: 1,
+      }
+    );
 
-  //   // wrapper 2
-  //   const wrap2 = document.querySelector(".card2");
-  //   IO(wrap2).then(
-  //     () => {
-  //       setTimeout(() => {
-  //         setHoverVid2(true);
-  //       }, 500);
-  //       setTimeout(() => {
-  //         video2.current.play();
-  //       }, 1600);
-  //     },
-  //     {
-  //       threshold: 1,
-  //     }
-  //   );
+    // wrapper 2
+    const wrap2 = document.querySelector(".card2");
+    IO(wrap2).then(
+      () => {
+        setTimeout(() => {
+          setHoverVid2(true);
+        }, 500);
+        setTimeout(() => {
+          video2.current.play();
+        }, 1600);
+      },
+      {
+        threshold: 1,
+      }
+    );
 
-  //   // wrapper 3
-  //   const wrap3 = document.querySelector(".card3");
-  //   IO(wrap3).then(
-  //     () => {
-  //       setTimeout(() => {
-  //         setHoverVid3(true);
-  //       }, 500);
-  //       setTimeout(() => {
-  //         video3.current.play();
-  //       }, 1600);
-  //     },
-  //     {
-  //       threshold: 1,
-  //     }
-  //   );
+    // wrapper 3
+    const wrap3 = document.querySelector(".card3");
+    IO(wrap3).then(
+      () => {
+        setTimeout(() => {
+          setHoverVid3(true);
+        }, 500);
+        setTimeout(() => {
+          video3.current.play();
+        }, 1600);
+      },
+      {
+        threshold: 1,
+      }
+    );
 
-  //   // wrapper 4
-  //   const wrap4 = document.querySelector(".card4");
-  //   IO(wrap4).then(
-  //     () => {
-  //       setTimeout(() => {
-  //         setHoverVid4(true);
-  //       }, 500);
-  //       setTimeout(() => {
-  //         video4.current.play();
-  //       }, 1600);
-  //     },
-  //     {
-  //       threshold: 1,
-  //     }
-  //   );
-  // });
+    // wrapper 4
+    const wrap4 = document.querySelector(".card4");
+    IO(wrap4).then(
+      () => {
+        setTimeout(() => {
+          setHoverVid4(true);
+        }, 500);
+        setTimeout(() => {
+          video4.current.play();
+        }, 1600);
+      },
+      {
+        threshold: 1,
+      }
+    );
+  });
   return (
     <div className={featureContainer}>
       <div className={`${featureCard} features`}>
@@ -96,14 +96,20 @@ const FeatureCards = () => {
         </div>
 
         <div className="relative card1">
-          <div className={`${isHoverVid1 ? "fadeOut" : null}  `}>{apiFeatures[0].image}</div>
-          {/* <video
+          <div
+            className={`${
+              isHoverVid1 ? "fadeOut" : null
+            }  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 `}
+          >
+            {apiFeatures[0].image}
+          </div>
+          <video
             ref={video1}
             className={`${isHoverVid1 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
             muted
             playsInline
-            src={fastPayment}
-          ></video> */}
+            src={feat1}
+          ></video>
         </div>
       </div>
 
@@ -120,14 +126,18 @@ const FeatureCards = () => {
         </div>
 
         <div className="relative card2">
-          <div className={`${isHoverVid2 ? "fadeOut" : null} `}>{apiFeatures[1].image}</div>
-          {/* <video
+          <div
+            className={`${isHoverVid2 ? "fadeOut" : null}  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}
+          >
+            {apiFeatures[1].image}
+          </div>
+          <video
             ref={video2}
             className={`${isHoverVid2 ? "fadeIn" : null}  max-h-[340px]  md:max-h-[400px] mx-auto`}
             muted
             playsInline
-            src={speedprinters}
-          ></video> */}
+            src={feat2}
+          ></video>
         </div>
       </div>
 
@@ -144,14 +154,18 @@ const FeatureCards = () => {
         </div>
 
         <div className="text-center relative card3">
-          <div className={`${isHoverVid3 ? "fadeOut" : null} `}>{apiFeatures[2].image}</div>
-          {/* <video
+          <div
+            className={`${isHoverVid3 ? "fadeOut" : null}  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}
+          >
+            {apiFeatures[2].image}
+          </div>
+          <video
             ref={video3}
             className={`${isHoverVid3 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
             muted
             playsInline
-            src={battery}
-          ></video> */}
+            src={feat3}
+          ></video>
         </div>
       </div>
 
@@ -168,14 +182,20 @@ const FeatureCards = () => {
         </div>
 
         <div className="text-center relative card4">
-          <div className={`${isHoverVid4 ? "fadeOut" : null}  `}>{apiFeatures[3].image}</div>
-          {/* <video
+          <div
+            className={`${
+              isHoverVid4 ? "fadeOut" : null
+            }   absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}
+          >
+            {apiFeatures[3].image}
+          </div>
+          <video
             ref={video4}
             className={`${isHoverVid4 ? "fadeIn" : null}   max-h-[340px] mx-auto bg-primary`}
             muted
             playsInline
-            src={signal}
-          ></video> */}
+            src={feat4}
+          ></video>
         </div>
       </div>
     </div>

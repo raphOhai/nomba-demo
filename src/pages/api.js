@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import Layout from "components/layout-max";
 import { Br, Testimonial, GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
