@@ -95,11 +95,10 @@ export const apiFeatures = [
   {
     title: (
       <>
-        Real-time Insights and <Br on="all" /> Actions with Webhooks
+        Simplify Transaction with <Br on="desktop" /> our Online Checkout
       </>
     ),
-    description:
-      "Stay connected to your users in real-time; and receive instant notifications about account activities",
+    description: "Effortlessly boost sales, enhance user experiences and increase conversion rates.",
     image: (
       <StaticImage
         width={360}
@@ -164,8 +163,8 @@ export const apiSection = [
     ),
   },
   {
-    title: "Webhooks",
-    description: "Bring all your tools into one place with our Webhooks.",
+    title: "Checkout API",
+    description: "Process and manage your payments easily and securely wherever you are.",
     icon: <Webhooks />,
     iconMobile: (
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">

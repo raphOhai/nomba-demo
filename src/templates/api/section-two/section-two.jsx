@@ -119,7 +119,18 @@ const SectionTwo = ({ title, description, data }) => {
                     <Ntext variant="text3" color="m-light">
                       {s.description}
                     </Ntext>
-                    <ReadMore color="secondary" variant="text2" href={{ url: "tel:+23401888899" }} text="Learn more" />
+                    {i !== 2 ? (
+                      <ReadMore
+                        color="secondary"
+                        variant="text2"
+                        href={{ url: "tel:+23401888899" }}
+                        text="Learn more"
+                      />
+                    ) : (
+                      <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                        Coming soon
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

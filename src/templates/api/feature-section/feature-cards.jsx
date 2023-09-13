@@ -4,8 +4,8 @@ import { Ntext } from "components";
 import { apiFeatures } from "config/api";
 import feat1 from "assets/images/jpegs/api/features/feat-1.mp4";
 import feat2 from "assets/images/jpegs/api/features/feat-2.mp4";
-import feat3 from "assets/images/jpegs/api/features/feat-3.mp4";
-import feat4 from "assets/images/jpegs/api/features/feat-4.mp4";
+import feat4 from "assets/images/jpegs/api/features/feat-3.mp4";
+import feat3 from "assets/images/jpegs/api/features/feat-4.mp4";
 import { IO } from "animations/observe";
 
 const FeatureCards = () => {
