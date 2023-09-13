@@ -13,7 +13,7 @@ const DocSection = ({ title, description, data }) => {
   return (
     <section className="bg-[#38383874] py-20 overflow-hidden">
       <Container>
-        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  md:mt-20">
+        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  mt-20">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
             {title}
           </Ntext>
@@ -43,7 +43,7 @@ const DocSection = ({ title, description, data }) => {
         </div>
 
         <div className={codeSection}>
-          <div className="py-3 px-6 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
+          <div className="py-3 px-1 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
             <div className="  flex gap-1 md:gap-[10px] ">
               {data[categoryIndex].docs.map((doc, i) => (
                 <div
