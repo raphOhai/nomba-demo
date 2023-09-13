@@ -27,7 +27,7 @@ const DocSection = ({ title, description, data }) => {
                 onClick={() => setCategoryIndex(i)}
                 className="flex flex-col items-center min-w-[100px] md:min-w-[175px] gap-[10px] "
               >
-                <div className="p-3 border border-n-grey6 rounded-md">
+                <div className="md:p-3 p-2 border border-n-grey6 rounded-md">
                   {categoryIndex == i ? type.icon_active : type.icon}
                 </div>
                 <Ntext
@@ -43,8 +43,8 @@ const DocSection = ({ title, description, data }) => {
         </div>
 
         <div className={codeSection}>
-          <div className="p-5 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
-            <div className="  flex gap-[10px] ">
+          <div className="py-3 px-6 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
+            <div className="  flex gap-1 md:gap-[10px] ">
               {data[categoryIndex].docs.map((doc, i) => (
                 <div
                   className={`${langStyle} ${languageIndex == i ? activeLangStyle : ""}`}
@@ -66,7 +66,7 @@ const DocSection = ({ title, description, data }) => {
                   isClosable: true,
                 });
               }}
-              className={`${langStyle} flex gap-[10px] justify-center items-center  border border-[#555] rounded-[10px]`}
+              className={`${langStyle} flex gap-1 md:gap-[10px] justify-center items-center  border border-[#555] rounded-[10px]`}
             >
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -79,7 +79,7 @@ const DocSection = ({ title, description, data }) => {
                   />
                 </svg>
               </span>
-              <span>COPY</span>
+              <span className="hidden md:block">COPY</span>
             </div>
           </div>
           <div className=" md:p-8  p-2  h-[450px] md:h-[650px] overflow-y-scroll">
@@ -104,8 +104,10 @@ overflow-hidden
 `);
 
 const langStyle = ctl(`
-  px-5 
-  py-3 
+  md:px-5 
+  md:py-3 
+  px-4
+  py-2
   text-white 
   text-[20px] 
   leading-[30px] 
