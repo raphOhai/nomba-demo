@@ -11,8 +11,13 @@ const SectionTwo = ({ title, description, data }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
   const [currentLabel, setCurrentLabel] = useState(0);
 
-  function calculateNormalizedPercentage(value, lowerBound, upperBound) {
+  function calculateNormalizedPercentage(value, lowerBound, upperBound, dom) {
     const normalizedPercentage = ((value - lowerBound) / (upperBound - lowerBound)) * 100;
+    if (normalizedPercentage < 2) {
+      dom.style.opacity = 0;
+    } else {
+      dom.style.opacity = 1;
+    }
     return `${normalizedPercentage}%`;
   }
   useLayoutEffect(() => {
@@ -41,7 +46,12 @@ const SectionTwo = ({ title, description, data }) => {
               if (self.progress > i / data.length) {
                 d.querySelector(`.scroll-progress-${i}`).style.width =
                   self.progress <= (i + 1) / 3
-                    ? calculateNormalizedPercentage(self.progress, i / data.length, (i + 1) / 3)
+                    ? calculateNormalizedPercentage(
+                        self.progress,
+                        i / data.length,
+                        (i + 1) / 3,
+                        d.querySelector(`.scroll-progress-${i}`)
+                      )
                     : "100%";
 
                 if (self.progress <= (i + 1) / 3) {
@@ -106,7 +116,9 @@ const SectionTwo = ({ title, description, data }) => {
           <div className="flex justify-between section-nav-link ">
             {data.map((s, i) => (
               <div key={s.title} className={`${cardWrapStyle}`}>
-                <div className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} `}> </div>
+                <div className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all  `}>
+                  {" "}
+                </div>
                 <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div>
                 <div className={cardInnerWrapper}>
                   <div className="flex items-center gap-[20px]">
