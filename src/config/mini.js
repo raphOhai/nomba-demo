@@ -70,6 +70,12 @@ export const miniBenefits = [
   "Send paperless receipts",
   "Get instant alerts and auto-settlement",
 ];
+export const miniBenefitsV2 = [
+  "No targets",
+  "0.4% transaction charge",
+  "Free digital receipts",
+  "Fast and reliable network",
+];
 
 export const everyBusinesses = [
   {

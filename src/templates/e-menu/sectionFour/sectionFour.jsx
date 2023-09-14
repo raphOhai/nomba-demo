@@ -119,7 +119,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
           <div className="relative section-four-rect mb-36">
             {tools.map((t, i) => (
               <div
-                class={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
+                className={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
                 key={t.heading}
               >
                 <div className="flex md:flex-row flex-col justify-between items-center">
