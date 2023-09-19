@@ -19,6 +19,13 @@ export default {
     description:
       "Take your business to the next level with the Nomba invoice. Avoid debt in business, send online invoices and automated reminders to receive payments the easy way. Get Started Here",
   },
+
+  // WIP
+  api: {
+    title: "Developer API",
+    description:
+      "Take your business to the next level with the Nomba invoice. Avoid debt in business, send online invoices and automated reminders to receive payments the easy way. Get Started Here",
+  },
   menu: {
     title: "Serve your customers better with Nomba Menu",
     description:
