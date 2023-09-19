@@ -60,7 +60,7 @@ const FixedBar = ({ terminalIndex }) => {
             </NLink>
           )}
           <Menu openMenu={openMenu} onToggle={onToggle} index={terminalIndex}>
-            <GetTerminal onClick={() => addToCart(terminalIndex)} text="Get your POS" type="animate-button-reverse" />
+            <GetTerminal onClick={() => addToCart(terminalIndex)} text="Buy your POS" type="animate-button-reverse" />
           </Menu>
         </nav>
 

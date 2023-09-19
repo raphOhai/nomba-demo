@@ -8,11 +8,7 @@ export const eMenuTestimonial = [
     name: "Adeuche",
     role: "Co-founder & CEO Randle Inc",
     image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/invoice/testimonials/image1.png"
-        loading="lazy"
-      />
+      <StaticImage alt="Testimonial Image" src="../assets/images/jpegs/e-menu/testimonials/image1.png" loading="lazy" />
     ),
   },
 ];

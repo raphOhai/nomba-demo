@@ -16,3 +16,4 @@ export * from "./testimonial";
 export * from "./common-questions";
 export * from "./get-started";
 export * from "./get-terminal";
+export * from "./code-block";
