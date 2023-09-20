@@ -21,84 +21,94 @@ const SectionTwo = ({ title, description, data }) => {
     return `${normalizedPercentage}%`;
   }
   useLayoutEffect(() => {
-    /**
-     * create our context.
-     * This function is invoked immediately and all GSAP animations and ScrollTriggers created
-     * during the execution of this function get recorded so we can revert() them later (cleanup)
-     */
-    for (let i = 0; i < data.length; i++) {
-      gsap.to(`.section-two-rect-card-no-${i}`, {
-        opacity: 0,
-      });
-    }
-    const d = document;
-    let ctx = gsap.context(() => {
-      let tl1 = gsap.timeline({
-        scrollTrigger: {
-          invalidateOnRefresh: true,
-          trigger: comp.current,
-          pin: true,
-          start: "top 5%", // when the top of the trigger hits the top of the viewport
-          end: "+=5000px", // end after scrolling 1000px beyond the start
-          scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          onUpdate(self) {
-            for (let i = 0; i < data.length; i++) {
-              if (self.progress > i / data.length) {
-                d.querySelector(`.scroll-progress-${i}`).style.width =
-                  self.progress <= (i + 1) / 3
-                    ? calculateNormalizedPercentage(
-                        self.progress,
-                        i / data.length,
-                        (i + 1) / 3,
-                        d.querySelector(`.scroll-progress-${i}`)
-                      )
-                    : "100%";
+    function initLayout() {
+      /**
+       * create our context.
+       * This function is invoked immediately and all GSAP animations and ScrollTriggers created
+       * during the execution of this function get recorded so we can revert() them later (cleanup)
+       */
+      for (let i = 0; i < data.length; i++) {
+        gsap.to(`.section-two-rect-card-no-${i}`, {
+          opacity: 0,
+        });
+      }
 
-                if (self.progress <= (i + 1) / 3) {
-                  d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 1;
+      const d = document;
+      let ctx = gsap.context(() => {
+        let tl1 = gsap.timeline({
+          scrollTrigger: {
+            invalidateOnRefresh: true,
+            trigger: comp.current,
+            pin: true,
+            start: "top 5%", // when the top of the trigger hits the top of the viewport
+            end: "+=5000px", // end after scrolling 1000px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            onUpdate(self) {
+              for (let i = 0; i < data.length; i++) {
+                if (self.progress > i / data.length) {
+                  d.querySelector(`.scroll-progress-${i}`).style.width =
+                    self.progress <= (i + 1) / 3
+                      ? calculateNormalizedPercentage(
+                          self.progress,
+                          i / data.length,
+                          (i + 1) / 3,
+                          d.querySelector(`.scroll-progress-${i}`)
+                        )
+                      : "100%";
+
+                  if (self.progress <= (i + 1) / 3) {
+                    d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 1;
+                  } else {
+                    d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 0;
+                  }
                 } else {
                   d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 0;
                 }
-              } else {
-                d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 0;
               }
-            }
+            },
           },
-        },
-      });
-      for (let i = 0; i < data.length; i++) {
-        tl1.addLabel(`card${i}`);
-        tl1.add(() => setActiveNav(i), "-=0.15");
-      }
-
-      gsap.utils.toArray(".section-nav-link .circle").forEach((a, i) => {
-        a.addEventListener("click", e => {
-          e.preventDefault();
-
-          gsap.to(window, { scrollTo: labelToScroll(i / data.length) + 10 });
         });
-      });
+        for (let i = 0; i < data.length; i++) {
+          tl1.addLabel(`card${i}`);
+          tl1.add(() => setActiveNav(i), "-=0.15");
+        }
 
-      function labelToScroll(progress) {
-        let st = tl1.scrollTrigger;
+        gsap.utils.toArray(".section-nav-link .circle").forEach((a, i) => {
+          a.addEventListener("click", e => {
+            e.preventDefault();
 
-        return st.start + (st.end - st.start) * progress;
-      }
-      let circles = gsap.utils.toArray(".section-nav-link .circle");
-      function setActiveNav(index) {
-        circles.forEach((circle, i) => {
-          if (i === index) {
-            circle.scrollIntoView(false, { behavior: "smooth", inline: "start" });
-          }
-          circle.classList[i === index ? "add" : "remove"]("md:border");
-
-          circle.classList[i === index ? "add" : "remove"]("text-black");
+            gsap.to(window, { scrollTo: labelToScroll(i / data.length) + 10 });
+          });
         });
-        // document.querySelector(`#card-${i}`).scrollIntoView(true, { behavior: 'smooth'});
-      }
-    }, comp); // <- IMPORTANT! Scopes selector text
 
-    return () => ctx.revert(); // cleanup
+        function labelToScroll(progress) {
+          let st = tl1.scrollTrigger;
+
+          return st.start + (st.end - st.start) * progress;
+        }
+        let circles = gsap.utils.toArray(".section-nav-link .circle");
+        function setActiveNav(index) {
+          circles.forEach((circle, i) => {
+            if (i === index) {
+              circle.scrollIntoView(false, { behavior: "smooth", inline: "start" });
+            }
+            circle.classList[i === index ? "add" : "remove"]("md:border");
+
+            circle.classList[i === index ? "add" : "remove"]("text-black");
+          });
+          // document.querySelector(`#card-${i}`).scrollIntoView(true, { behavior: 'smooth'});
+        }
+      }, comp); // <- IMPORTANT! Scopes selector text
+      return () => ctx.revert(); // cleanup
+    }
+    if (window.innerWidth > 746) {
+      initLayout();
+    }
+    window.addEventListener("resize", e => {
+      if (e.target.innerWidth > 746) {
+        initLayout();
+      }
+    });
   }, [data]);
 
   return (
@@ -115,11 +125,13 @@ const SectionTwo = ({ title, description, data }) => {
         <div ref={comp} className="md:min-h-[940px] min-h-[400px] overflow-y-hidden">
           <div className="flex justify-between section-nav-link ">
             {data.map((s, i) => (
-              <div key={s.title} className={`${cardWrapStyle}`}>
-                <div className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all  `}>
+              <div key={s.title} className={`${cardWrapStyle} hidden md:block`}>
+                <div
+                  className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all duration-75 `}
+                >
                   {" "}
                 </div>
-                <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div>
+                {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
                 <div className={cardInnerWrapper}>
                   <div className="flex items-center gap-[20px]">
                     {s.icon}
@@ -151,12 +163,47 @@ const SectionTwo = ({ title, description, data }) => {
 
           <div className="relative">
             {data.map((t, i) => (
-              <div
-                key={t.title}
-                className={`mt-10 opacity-0 max-h-[680px] overflow-y-hidden transition-opacity duration-1000 section-two-rect-card section-two-rect-card-no-${i} absolute top-7`}
-              >
-                <StaticImage src="../../../assets/images/jpegs/api/image-temp.png" alt="Temp Doc" />
-              </div>
+              <>
+                <div key={t.title} className={`${cardWrapStyle} md:hidden `}>
+                  <div
+                    className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all duration-75 `}
+                  >
+                    {" "}
+                  </div>
+                  {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
+                  <div className={cardInnerWrapper}>
+                    <div className="flex items-center gap-[20px]">
+                      {t.icon}
+                      <Ntext variant="text5" color="primary-100">
+                        {t.title}
+                      </Ntext>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <Ntext variant="text3" color="m-light">
+                        {t.description}
+                      </Ntext>
+                      {i !== 2 ? (
+                        <ReadMore
+                          color="secondary"
+                          variant="text2"
+                          href={{ url: "tel:+23401888899" }}
+                          text="Learn more"
+                        />
+                      ) : (
+                        <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                          Coming soon
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  key={t.title}
+                  className={`mt-5 mb-20 md:mb-0 md:mt-10  md:opacity-0 md:max-h-[680px] overflow-y-hidden transition-opacity duration-1000  section-two-rect-card-no-${i} md:absolute md:top-7`}
+                >
+                  <StaticImage src="../../../assets/images/jpegs/api/image-temp.png" alt="Temp Doc" />
+                </div>
+              </>
             ))}
           </div>
         </div>
@@ -168,9 +215,8 @@ const SectionTwo = ({ title, description, data }) => {
 const cardWrapStyle = ctl(`
 relative
 md:w-[400px] 
-w-[120px]
-md:h-[200px]
-h-[80px] 
+w-full
+h-[200px]
 border-n-grey5 
 bg-primary
 border circle
@@ -178,15 +224,17 @@ rounded-[10px]
 `);
 
 const cardInnerWrapper = ctl(`
-md:flex 
+flex 
 flex-col 
 z-10
 gap-[16px]
 absolute
-justify-around
+md:justify-around
+justify-center
 pl-10
-py-10
+py-5
+md:py-7
 max-w-[340px]
-hidden
+
 `);
 export { SectionTwo };
