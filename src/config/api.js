@@ -189,100 +189,89 @@ export const categories = [
     docs: [
       {
         language: "js",
-        label: "cURL",
-        snippet: `
-{
-  "id": 60,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-                `,
-      },
-      {
-        language: "js",
         label: "Node.js",
         snippet: `
-{
-  "id": 900,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-                `,
+const http = require('https');
+const options = {
+  method: 'POST',
+  hostname: 'api.nomba.com',
+  port: null,
+  path: '/v1/accounts',
+  headers: {
+    accountId: '',
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    Authorization: 'Bearer undefined'
+  }
+};
+
+const req = http.request(options, function (res) {
+  const chunks = [];
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.write(JSON.stringify({
+  accountRef: '1oWbJQQHLyQqqf1SwxjSpudeA21',
+  phoneNumber: '2348188667581',
+  email: 'ifeol-subaccount@exmple.com',
+  bvn: '12234412345',
+  pin: '1234',
+  accountName: 'Daniel Scorsese',
+  currency: 'NGN'
+}));
+req.end();
+        `,
       },
       {
         language: "js",
         label: "PHP",
         snippet: `
-{
-  "id": 900,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
+<?php
+        
+$curl = curl_init();
+        
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.nomba.com/v1/accounts",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => json_encode([
+    'accountRef' => '1oWbJQQHLyQqqf1SwxjSpudeA21',
+    'phoneNumber' => '2348188667581',
+    'email' => 'ifeol-subaccount@exmple.com',
+    'bvn' => '12234412345',
+    'pin' => '1234',
+    'accountName' => 'Daniel Scorsese',
+    'currency' => 'NGN'
+  ]),
+  CURLOPT_HTTPHEADER => [
+    "Accept: application/json",
+    "Authorization: Bearer undefined",
+    "Content-Type: application/json",
+    "accountId: "
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
 }
                 `,
       },
@@ -297,100 +286,90 @@ export const categories = [
     docs: [
       {
         language: "js",
-        label: "cURL",
-        snippet: `
-{
-  "id": 660,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-                `,
-      },
-      {
-        language: "js",
         label: "Node.js",
         snippet: `
-{
-  "id": 6780,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-                `,
+const http = require('https');
+
+const options = {
+  method: 'POST',
+  hostname: 'api.nomba.com',
+  port: null,
+  path: '/v1/transfers/bank/2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d',
+  headers: {
+    accountId: '2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d',
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    Authorization: 'Bearer undefined'
+  }
+};
+
+const req = http.request(options, function (res) {
+  const chunks = [];
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.write(JSON.stringify({
+  amount: 3500,
+  accountNumber: '0554772814',
+  accountName: 'M.A Animashaun',
+  bankCode: '058',
+  merchantTxRef: 'UNQ_123abGGhh5546',
+  senderName: 'Nightly Post',
+  pin: '2222'
+}));
+req.end();
+        `,
       },
       {
         language: "js",
         label: "PHP",
         snippet: `
-{
-  "id": 630,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.nomba.com/v1/transfers/bank/2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => json_encode([
+    'amount' => 3500,
+    'accountNumber' => '0554772814',
+    'accountName' => 'M.A Animashaun',
+    'bankCode' => '058',
+    'merchantTxRef' => 'UNQ_123abGGhh5546',
+    'senderName' => 'Nightly Post',
+    'pin' => '2222'
+  ]),
+  CURLOPT_HTTPHEADER => [
+    "Accept: application/json",
+    "Authorization: Bearer undefined",
+    "Content-Type: application/json",
+    "accountId: 2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
 }
                 `,
       },
@@ -398,44 +377,11 @@ export const categories = [
   },
 
   {
-    name: "WebHooks",
-    slug: "webhooks",
+    name: "Checkout",
+    slug: "checkout",
     icon: <WebHook />,
     icon_active: <WebHookActive />,
     docs: [
-      {
-        language: "js",
-        label: "cURL",
-        snippet: `
-{
-  "id": 67750,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-                `,
-      },
       {
         language: "js",
         label: "Node.js",

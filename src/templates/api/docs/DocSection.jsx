@@ -24,8 +24,11 @@ const DocSection = ({ title, description, data }) => {
             {data.map((type, i) => (
               <div
                 key={type.slug}
-                onClick={() => setCategoryIndex(i)}
-                className="flex flex-col items-center min-w-[100px] md:min-w-[175px] gap-[10px] "
+                onClick={() => (i !== 2 ? setCategoryIndex(i) : null)}
+                className={`flex flex-col items-center min-w-[100px] md:min-w-[175px] gap-[10px] ${
+                  i == 2 ? "cursor-not-allowed" : ""
+                }`}
+                title={i == 2 ? "Coming soon" : type.name}
               >
                 <div className="md:p-3 p-2 border border-n-grey6 rounded-md">
                   {categoryIndex == i ? type.icon_active : type.icon}
