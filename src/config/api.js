@@ -3,7 +3,7 @@ import { Br } from "components";
 import React from "react";
 import VirtualAccount from "jpegs/api/icons/pages.svg";
 import VirtualAccountActive from "jpegs/api/icons/pages-active.svg";
-import WebHook from "jpegs/api/icons/asterisk.svg";
+import Checkout from "jpegs/api/icons/checkout.svg";
 import WebHookActive from "jpegs/api/icons/asterisk-active.svg";
 import TransferTo from "jpegs/api/icons/transfer.svg";
 import TransferToActive from "jpegs/api/icons/transfer-active.svg";
@@ -379,7 +379,7 @@ if ($err) {
   {
     name: "Checkout",
     slug: "checkout",
-    icon: <WebHook />,
+    icon: <Checkout />,
     icon_active: <WebHookActive />,
     docs: [
       {
