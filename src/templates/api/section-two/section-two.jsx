@@ -235,6 +235,32 @@ const SectionTwo = ({ title, description, data }) => {
                 </div>
               </>
             ))}
+
+            {/* Checkout Api coming soon */}
+            <div className={`${cardWrapStyle} md:hidden `}>
+              <div
+                className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
+              >
+                {" "}
+              </div>
+              {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
+              <div className={cardInnerWrapper}>
+                <div className="flex items-center gap-[20px]">
+                  <CheckoutApi />
+                  <Ntext variant="text5" color="primary-100">
+                    Checkout API
+                  </Ntext>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <Ntext variant="text3" color="m-light">
+                    Process and manage your payments easily and securely wherever you are.
+                  </Ntext>
+                  <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                    Coming soon
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
