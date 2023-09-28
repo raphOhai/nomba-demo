@@ -237,7 +237,7 @@ const SectionTwo = ({ title, description, data }) => {
             ))}
 
             {/* Checkout Api coming soon */}
-            <div className={`${cardWrapStyle} md:hidden `}>
+            <div className={`${cardWrapStyle} md:hidden mb-5 md:mb-0 `}>
               <div
                 className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
               >
