@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { StaticImage } from "gatsby-plugin-image";
+import CheckoutApi from "jpegs/api/icons/n-icons/checkout.svg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const SectionTwo = ({ title, description, data }) => {
@@ -47,16 +48,16 @@ const SectionTwo = ({ title, description, data }) => {
               for (let i = 0; i < data.length; i++) {
                 if (self.progress > i / data.length) {
                   d.querySelector(`.scroll-progress-${i}`).style.width =
-                    self.progress <= (i + 1) / 3
+                    self.progress <= (i + 1) / data.length
                       ? calculateNormalizedPercentage(
                           self.progress,
                           i / data.length,
-                          (i + 1) / 3,
+                          (i + 1) / data.length,
                           d.querySelector(`.scroll-progress-${i}`)
                         )
                       : "100%";
 
-                  if (self.progress <= (i + 1) / 3) {
+                  if (self.progress <= (i + 1) / data.length) {
                     d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 1;
                   } else {
                     d.querySelector(`.section-two-rect-card-no-${i}`).style.opacity = 0;
@@ -159,6 +160,31 @@ const SectionTwo = ({ title, description, data }) => {
                 </div>
               </div>
             ))}
+
+            {/* Checkout API - coming soon */}
+
+            <div className={`${cardWrapStyle} hidden md:block`}>
+              <div
+                className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
+              ></div>
+              {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
+              <div className={cardInnerWrapper}>
+                <div className="flex items-center gap-[20px]">
+                  <CheckoutApi />
+                  <Ntext variant="text5" color="primary-100">
+                    Checkout API
+                  </Ntext>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <Ntext variant="text3" color="m-light">
+                    Process and manage your payments easily and securely wherever you are.
+                  </Ntext>
+                  <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                    Coming soon
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="relative">
@@ -201,7 +227,11 @@ const SectionTwo = ({ title, description, data }) => {
                   key={t.title}
                   className={`mt-5 mb-20 md:mb-0 md:mt-10  md:opacity-0 md:max-h-[680px] overflow-y-hidden transition-opacity duration-1000  section-two-rect-card-no-${i} md:absolute md:top-7`}
                 >
-                  <StaticImage src="../../../assets/images/jpegs/api/image-temp.png" alt="Temp Doc" />
+                  <StaticImage
+                    src="../../../assets/images/jpegs/api/image-temp.png"
+                    alt="Temp Doc"
+                    className=" border-[2px] border-[#383838] rounded-lg md:rounded-2xl"
+                  />
                 </div>
               </>
             ))}

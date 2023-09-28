@@ -10,7 +10,7 @@ import TransferToActive from "jpegs/api/icons/transfer-active.svg";
 
 import VirtualAccountAPI from "jpegs/api/icons/n-icons/virtual-account.svg";
 import TransferApi from "jpegs/api/icons/n-icons/transfer-api.svg";
-import Webhooks from "jpegs/api/icons/n-icons/webhooks.svg";
+import CheckoutApi from "jpegs/api/icons/n-icons/checkout.svg";
 export const apiTestimonial = [
   {
     testimonial:
@@ -133,51 +133,28 @@ export const apiSection = [
     title: "Virtual Account API",
     description: "Manage unique payment accounts of their customers.",
     icon: <VirtualAccountAPI />,
-    iconMobile: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="29.3327" cy="9.88808" rx="10.6667" ry="9.41176" fill="#FFCC00" />
-        <path
-          d="M16.666 16.6667H13.3327H16.666ZM26.666 30H13.3327H26.666ZM26.666 23.3333H13.3327H26.666ZM6.66602 36.6667V3.33334H23.3327L33.3327 13.3333V36.6667H6.66602Z"
-          stroke="#FFFAE6"
-          stroke-miterlimit="10"
-          stroke-linecap="square"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
   },
   {
     title: "Transfer API",
     description: "Automatically transfer money directly to your customers' bank accounts.",
     icon: <TransferApi />,
-    iconMobile: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <ellipse cx="29.3327" cy="9.88808" rx="10.6667" ry="9.41176" fill="#FFCC00" />
-        <path
-          d="M18.0648 13.7666H25.8067V21.8957M7.74219 5.6376H33.5486V32.7344H7.74219V5.6376ZM15.4841 24.6053L25.8067 13.7666L15.4841 24.6053Z"
-          stroke="#FFFAE6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
   },
-  {
-    title: "Checkout API",
-    description: "Process and manage your payments easily and securely wherever you are.",
-    icon: <Webhooks />,
-    iconMobile: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <ellipse cx="29.3327" cy="9.88808" rx="10.6667" ry="9.41176" fill="#FFCC00" />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M22.4103 9.36914L22.41 15.0381L27.3205 12.2041L29.8205 16.5342L24.91 19.3681L29.8205 22.2041L27.3205 26.5342L22.41 23.6991L22.4103 29.3691H17.4103L17.41 23.6991L12.5 26.5342L10 22.2041L14.91 19.3691L10 16.5342L12.5 12.2041L17.41 15.0381L17.4103 9.36914H22.4103Z"
-          stroke="#FFFAE6"
-        />
-      </svg>
-    ),
-  },
+  // {
+  //   title: "Checkout API",
+  //   description: "Process and manage your payments easily and securely wherever you are.",
+  //   icon: <CheckoutApi />,
+  //   iconMobile: (
+  //     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  //       <ellipse cx="29.3327" cy="9.88808" rx="10.6667" ry="9.41176" fill="#FFCC00" />
+  //       <path
+  //         fill-rule="evenodd"
+  //         clip-rule="evenodd"
+  //         d="M22.4103 9.36914L22.41 15.0381L27.3205 12.2041L29.8205 16.5342L24.91 19.3681L29.8205 22.2041L27.3205 26.5342L22.41 23.6991L22.4103 29.3691H17.4103L17.41 23.6991L12.5 26.5342L10 22.2041L14.91 19.3691L10 16.5342L12.5 12.2041L17.41 15.0381L17.4103 9.36914H22.4103Z"
+  //         stroke="#FFFAE6"
+  //       />
+  //     </svg>
+  //   ),
+  // },
 ];
 
 export const categories = [
@@ -190,8 +167,7 @@ export const categories = [
       {
         language: "js",
         label: "Node.js",
-        snippet: `
-const http = require('https');
+        snippet: `const http = require('https');
 const options = {
   method: 'POST',
   hostname: 'api.nomba.com',
@@ -233,8 +209,7 @@ req.end();
       {
         language: "js",
         label: "PHP",
-        snippet: `
-<?php
+        snippet: `<?php
         
 $curl = curl_init();
         
@@ -287,8 +262,7 @@ if ($err) {
       {
         language: "js",
         label: "Node.js",
-        snippet: `
-const http = require('https');
+        snippet: `const http = require('https');
 
 const options = {
   method: 'POST',
@@ -331,8 +305,7 @@ req.end();
       {
         language: "js",
         label: "PHP",
-        snippet: `
-<?php
+        snippet: `<?php
 
 $curl = curl_init();
 
@@ -385,68 +358,12 @@ if ($err) {
       {
         language: "js",
         label: "Node.js",
-        snippet: `
-{
-  "id": 7760,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-                `,
+        snippet: `console.log('Coming soon')`,
       },
       {
         language: "js",
         label: "PHP",
-        snippet: `
-{
-  "id": 960,
-  "userId": 1,
-  "vasTransactionRef": "6798201",
-  "transactionDetails": {
-    "your_reference": "xutzy01690881363158",
-    "provider_reference": "6798201",
-    "our_reference": "6798201",
-    "provider_message": "Successful",
-    "value_number": "10430734755",
-    "provider_response": {
-      "status": "Successful",
-      "statusCode": "00",
-      "data": {
-        "TrxRef": "5856102"
-      }
-    }
-  },
-  "status": "CONFIRMED",
-  "amount": 9000,
-  "packageName": "compact",
-  "email": null,
-  "createdAt": "2023-08-01T10:16:07.755+01:00",
-  "updatedAt": "2023-08-01T10:16:07.755+01:00",
-  "customerId": "10430734755",
-  "vasProvider": "null",
-}
-        `,
+        snippet: `<?php echo 'Coming soon' ?>`,
       },
     ],
   },
