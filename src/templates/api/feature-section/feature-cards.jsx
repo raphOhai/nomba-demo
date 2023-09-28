@@ -105,7 +105,7 @@ const FeatureCards = () => {
           </div>
           <video
             ref={video1}
-            className={`${isHoverVid1 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
+            className={`${isHoverVid1 ? "fadeIn" : null} md:w-[430px]  max-h-[340px] md:max-h-[550px] `}
             muted
             playsInline
             src={feat1}
@@ -133,7 +133,7 @@ const FeatureCards = () => {
           </div>
           <video
             ref={video2}
-            className={`${isHoverVid2 ? "fadeIn" : null}  max-h-[340px]  md:max-h-[400px] mx-auto`}
+            className={`${isHoverVid2 ? "fadeIn" : null} md:w-[430px]  max-h-[340px] md:max-h-[550px] `}
             muted
             playsInline
             src={feat2}
@@ -142,7 +142,7 @@ const FeatureCards = () => {
       </div>
 
       {/* Third featureCard */}
-      <div className={`${featureCard} features !bg-[#121113]`}>
+      <div className={`${featureCard} features `}>
         <div>
           <Ntext variant="text6heavy" color="primary-100">
             {apiFeatures[2].title}
@@ -161,7 +161,7 @@ const FeatureCards = () => {
           </div>
           <video
             ref={video3}
-            className={`${isHoverVid3 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
+            className={`${isHoverVid3 ? "fadeIn" : null} md:mt-5  md:w-[420px]  max-h-[340px] md:max-h-[400px] ml-5`}
             muted
             playsInline
             src={feat3}
@@ -181,7 +181,7 @@ const FeatureCards = () => {
           </Ntext>
         </div>
 
-        <div className="text-center relative card4">
+        <div className="text-center relative  card4">
           <div
             className={`${
               isHoverVid4 ? "fadeOut" : null
@@ -191,7 +191,7 @@ const FeatureCards = () => {
           </div>
           <video
             ref={video4}
-            className={`${isHoverVid4 ? "fadeIn" : null}   max-h-[340px] mx-auto bg-primary`}
+            className={`${isHoverVid4 ? "fadeIn" : null}  md:w-[430px]  max-h-[340px] md:max-h-[450px] `}
             muted
             playsInline
             src={feat4}
@@ -203,7 +203,7 @@ const FeatureCards = () => {
 };
 
 const featureCard = ctl(`
-flex flex-col justify-between p-[20px] md:p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-[#121113] rounded-[10px]
+flex flex-col justify-between overflow-hidden p-[20px] md:p-[40px] h-[495px] md:h-[680px] md:mx-4 bg-[#100f13] rounded-[10px]
 `);
 const featureContainer = ctl(`
 grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2  mt-[50px] md:mt-[100px]

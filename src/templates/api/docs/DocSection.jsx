@@ -35,10 +35,16 @@ const DocSection = ({ title, description, data }) => {
                 </div>
                 <Ntext
                   variant="text3"
-                  className="md:text-center !font-mono whitespace-nowrap"
+                  className="md:text-center relative !font-mono whitespace-nowrap"
                   color={`${categoryIndex == i ? "primary-100" : "m-grey1"}`}
                 >
                   {type.name}
+                  <span>&nbsp;</span>
+                  {i === 2 ? (
+                    <span className="absolute  text-n-yellow px-[10px] py-[5px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-xs">
+                      Coming soon
+                    </span>
+                  ) : null}
                 </Ntext>
               </div>
             ))}
