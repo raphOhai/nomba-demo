@@ -26,7 +26,7 @@ const DocSection = ({ title, description, data }) => {
                 key={type.slug}
                 onClick={() => (i !== 2 ? setCategoryIndex(i) : null)}
                 className={`flex flex-col cursor-pointer items-center min-w-[100px] md:min-w-[175px] gap-[10px] ${
-                  i == 2 ? "cursor-not-allowed" : ""
+                  i == 2 ? "cursor-not-allowed " : ""
                 }`}
                 title={i == 2 ? "Coming soon" : type.name}
               >
@@ -41,7 +41,7 @@ const DocSection = ({ title, description, data }) => {
                   {type.name}
                   <span>&nbsp;</span>
                   {i === 2 ? (
-                    <span className="absolute  text-n-yellow px-[10px] py-[5px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-xs">
+                    <span className="absolute md:inline hidden text-n-yellow px-[10px] py-[5px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-xs">
                       Coming soon
                     </span>
                   ) : null}
@@ -52,7 +52,7 @@ const DocSection = ({ title, description, data }) => {
         </div>
 
         <div className={codeSection}>
-          <div className="py-3 px-1 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
+          <div className="py-3 px-3 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
             <div className="  flex gap-1 md:gap-[10px] ">
               {data[categoryIndex].docs.map((doc, i) => (
                 <div
