@@ -1,8 +1,7 @@
 import * as React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Br, Container, ReadMore, GetTerminal } from "components";
-import ApiLogo from "jpegs/api/api-logo.svg";
-import ApiLogoMobile from "jpegs/api/api-logo-mobile.svg";
+import heroVideo from "jpegs/api/hero.mp4";
 import { SponsorList } from "../feature-section";
 
 const ApiHero = ({ title, subtext }) => {
@@ -48,8 +47,31 @@ const ApiHero = ({ title, subtext }) => {
             </div>
           </div>
           <div>
-            <ApiLogo className="hidden md:block" />
-            <ApiLogoMobile className="md:hidden mt-10" />
+            {/* <ApiLogo className="hidden md:block" />
+            <ApiLogoMobile className="md:hidden mt-10" /> */}
+
+            <video
+              src={heroVideo}
+              controls={false}
+              className="hidden md:block"
+              muted
+              playsInline
+              autoPlay
+              loop
+              width={516}
+              height={516}
+            ></video>
+            <video
+              src={heroVideo}
+              controls={false}
+              className="md:hidden mt-10"
+              muted
+              playsInline
+              autoPlay
+              loop
+              width={300}
+              height={300}
+            ></video>
           </div>
         </div>
         <div className="text-center">
