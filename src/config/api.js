@@ -30,30 +30,30 @@ export const apiTestimonial = [
 export const faqData = [
   {
     id: 1,
-    header: "Who can use Nomba invoice?",
+    header: "How can I get my API keys?",
     content:
-      "Any business owner regardless of size or type (including freelancers) can use the Nomba invoice to organise their business payment.",
+      "Your API keys are on your nomba dashboard. Please login to your nomba dashboard, navigate to the settings and click on the API Keys tab to copy your Keys. ",
   },
   {
     id: 2,
-    header: "Can I send the Api via Whatsapp?",
-    content: "Yes, Nomba invoice enables you send invoices to your customers via WhatsApp and even email.",
+    header: "How will I be notified if a payment is made into my virtual account?",
+    content:
+      "You will receive notifications via webhook. Please login to your nomba dashboard, navigate to the webhook tab within settings to supply your webhook details and select the events you will like to be notified on.",
   },
   {
     id: 3,
-    header: "Can I make an invoice recurring?",
-    content: "Yes, you can set an invoice to be sent to your customers periodically.",
+    header: "When will I receive settlements if my customers make payment into the virtual account?",
+    content: "Successful transactions will be instantly settled into your nomba wallet.",
   },
   {
     id: 4,
-    header: "Can I monitor the status of my invoice?",
-    content:
-      "Yes, you can easily monitor  the status of invoices on your Nomba dashboard; whether pending or completed.",
+    header: "What types of transfers are supported by the API?",
+    content: "The transfers supported on the API are bank-to-bank, wallet-to-bank  and wallet-to-wallet transfers.",
   },
   {
     id: 5,
-    header: "Is the invoice actually free? ",
-    content: "It definitely is, with no hidden charges too! All you need is a Nomba business account.",
+    header: "Is there a limit to the number of virtual accounts I can create for my customers? ",
+    content: "There is no fixed limit to the number of virtual accounts you can create for your customers.",
   },
 ];
 
