@@ -227,11 +227,7 @@ const SectionTwo = ({ title, description, data }) => {
                   key={t.title}
                   className={`mt-5 mb-20 md:mb-0 md:mt-10  md:opacity-0 md:max-h-[680px] overflow-y-hidden transition-opacity duration-1000  section-two-rect-card-no-${i} md:absolute md:top-7`}
                 >
-                  <StaticImage
-                    src="../../../assets/images/jpegs/api/image-temp.png"
-                    alt="Temp Doc"
-                    className=" border-[2px] border-[#383838] rounded-lg md:rounded-2xl"
-                  />
+                  {t.image}
                 </div>
               </>
             ))}

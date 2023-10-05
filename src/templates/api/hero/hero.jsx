@@ -41,7 +41,7 @@ const ApiHero = ({ title, subtext }) => {
                 defaultStyle={false}
                 variant="text3"
                 extraTrackText="Documentation"
-                href={{ url: "tel:+23401888899" }}
+                href={{ url: "https://docs.nomba.com" }}
                 text="Documentation"
               />
             </div>

@@ -133,11 +133,25 @@ export const apiSection = [
     title: "Virtual Account API",
     description: "Manage unique payment accounts of their customers.",
     icon: <VirtualAccountAPI />,
+    image: (
+      <StaticImage
+        alt="Temp Doc"
+        className="  rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/virtual-account.png"
+      />
+    ),
   },
   {
     title: "Transfer API",
     description: "Automatically transfer money directly to your customers' bank accounts.",
     icon: <TransferApi />,
+    image: (
+      <StaticImage
+        alt="Temp Doc"
+        className=" rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/transfer.png"
+      />
+    ),
   },
   // {
   //   title: "Checkout API",
