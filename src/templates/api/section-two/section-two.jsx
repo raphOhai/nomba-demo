@@ -145,12 +145,7 @@ const SectionTwo = ({ title, description, data }) => {
                       {s.description}
                     </Ntext>
                     {i !== 2 ? (
-                      <ReadMore
-                        color="secondary"
-                        variant="text2"
-                        href={{ url: "tel:+23401888899" }}
-                        text="Learn more"
-                      />
+                      <ReadMore color="secondary" variant="text2" href={{ url: s.link }} text="Learn more" />
                     ) : (
                       <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
                         Coming soon
@@ -209,12 +204,7 @@ const SectionTwo = ({ title, description, data }) => {
                         {t.description}
                       </Ntext>
                       {i !== 2 ? (
-                        <ReadMore
-                          color="secondary"
-                          variant="text2"
-                          href={{ url: "tel:+23401888899" }}
-                          text="Learn more"
-                        />
+                        <ReadMore color="secondary" variant="text2" href={{ url: t.link }} text="Learn more" />
                       ) : (
                         <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
                           Coming soon

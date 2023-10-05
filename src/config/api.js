@@ -140,6 +140,7 @@ export const apiSection = [
         src="../assets/images/jpegs/api/virtual-account.png"
       />
     ),
+    link: "https://docs.nomba.com/api#/operations/List%20all%20accounts",
   },
   {
     title: "Transfer API",
@@ -152,6 +153,7 @@ export const apiSection = [
         src="../assets/images/jpegs/api/transfer.png"
       />
     ),
+    link: "https://docs.nomba.com/api#/operations/Fetch%20bank%20codes%20and%20names",
   },
   // {
   //   title: "Checkout API",
