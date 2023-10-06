@@ -7,6 +7,7 @@ module.exports = {
     "./src/pages/banking/*.{js,jsx}",
     "./src/pages/business/*.{js,jsx}",
     "./src/pages/mini.js",
+    "./src/pages/terminals.js",
     "./src/components/**/*.{html,jsx,js}",
     "./src/templates/about-us/**/*.{html,jsx,js}",
     "./src/templates/banking/**/*.{html,jsx,js}",
