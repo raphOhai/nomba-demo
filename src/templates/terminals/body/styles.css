@@ -4,7 +4,7 @@ tr:nth-child(even) {
 }
 th:first-child,
 td:first-child {
-  width: 350px; /* Set the width of the first column */
+  @apply md:w-[350px] w-[200px];
 }
 td {
   padding: 12px 20px;

@@ -12,40 +12,42 @@ const CompareTerminals = ({ title }) => {
           </Ntext>
         </div>
       </div>
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th>~</th>
-            {nombaTerminals.map(r => (
-              <th>
-                <div className="flex flex-col justify-center items-center">
-                  <img width="41" height="71" src={r.path} alt="" />
-                  <div class=" block text-white">{r.title}</div>
-                </div>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {comparisonData.map(d => (
-            <tr className="text-white ">
-              <td>{d.title}</td>
-              <td>
-                <div className="flex flex-col justify-center items-center">{d.mini}</div>
-              </td>
-              <td>
-                <div className="flex flex-col justify-center items-center">{d.lite}</div>
-              </td>
-              <td>
-                <div className="flex flex-col justify-center items-center">{d.pro}</div>
-              </td>
-              <td>
-                <div className="flex flex-col justify-center items-center">{d.max}</div>
-              </td>
+      <div className="w-full  overflow-scroll">
+        <table className="md:w-full w-[700px] overflow-scroll">
+          <thead>
+            <tr>
+              <th>~</th>
+              {nombaTerminals.map(r => (
+                <th className="">
+                  <div className="h-[100px] flex flex-col justify-end align-baseline items-center">
+                    <img width="41" height="71" src={r.path} alt="" />
+                    <div class=" block text-white">{r.title}</div>
+                  </div>
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {comparisonData.map(d => (
+              <tr className="text-white ">
+                <td>{d.title}</td>
+                <td>
+                  <div className="flex flex-col justify-center items-center">{d.mini}</div>
+                </td>
+                <td>
+                  <div className="flex flex-col justify-center items-center">{d.lite}</div>
+                </td>
+                <td>
+                  <div className="flex flex-col justify-center items-center">{d.pro}</div>
+                </td>
+                <td>
+                  <div className="flex flex-col justify-center items-center">{d.max}</div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </Container>
   );
 };
