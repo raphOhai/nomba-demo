@@ -1,0 +1,15 @@
+tr:nth-child(even) {
+  background-color: #383838;
+  padding-left: 20px;
+}
+th:first-child,
+td:first-child {
+  width: 350px; /* Set the width of the first column */
+}
+td {
+  padding: 12px 20px;
+}
+
+td:not(:first-child) {
+  text-align: center;
+}

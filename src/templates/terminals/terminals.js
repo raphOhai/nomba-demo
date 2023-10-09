@@ -13,6 +13,13 @@ import CisUSbLight from "assets/images/svgs/usb-light.svg";
 import FourGLight from "assets/images/svgs/fourg-light.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
+import Check from "svgs/n-icons/check.svg";
+import Close from "svgs/n-icons/outline/x-c.svg";
+import mini from "jpegs/nomba-terminals/mini.png";
+import max from "jpegs/nomba-terminals/max.png";
+import pro from "jpegs/nomba-terminals/pro.png";
+import lite from "jpegs/nomba-terminals/lite.png";
+
 export const terminalData = [
   {
     isHighlight: true,
@@ -27,12 +34,7 @@ export const terminalData = [
     features: "Accept all Bank Cards, the new pocket-sized terminal for swift and successful transactions.",
 
     image: (
-      <StaticImage
-        width={233}
-        height={405}
-        src="../../../assets/images/jpegs/nomba-terminals/mini.png"
-        alt="Nomba Mini"
-      />
+      <StaticImage width={233} height={405} src="../../assets/images/jpegs/nomba-terminals/mini.png" alt="Nomba Mini" />
     ),
     icons: [
       <VisaLight key="visacard" />,
@@ -59,12 +61,7 @@ export const terminalData = [
     features: "Accept all Bank Cards, Connects to WiFi",
 
     image: (
-      <StaticImage
-        width={207}
-        height={413}
-        src="../../../assets/images/jpegs/nomba-terminals/lite.png"
-        alt="Nomba Lite"
-      />
+      <StaticImage width={207} height={413} src="../../assets/images/jpegs/nomba-terminals/lite.png" alt="Nomba Lite" />
     ),
     icons: [<Visa key="visacard" />, <Master key="mastercard" />, <Wifi key="wifi" />],
     link: "https://dashboard.nomba.com/auth/signup",
@@ -87,12 +84,7 @@ export const terminalData = [
       "Accept all Bank Cards, Pocket Friendly Light and Sleeky, Easy to operate Connects to 4G/3G/2G WiFi Bluetooth Connectivity",
 
     image: (
-      <StaticImage
-        width={297}
-        height={410}
-        src="../../../assets/images/jpegs/nomba-terminals/pro.png"
-        alt="Nomba Lite"
-      />
+      <StaticImage width={297} height={410} src="../../assets/images/jpegs/nomba-terminals/pro.png" alt="Nomba Lite" />
     ),
     link: "https://dashboard.nomba.com/auth/signup",
     icons: [
@@ -101,7 +93,7 @@ export const terminalData = [
       <WifiLight key="wifi" />,
       <FourGLight key="4g" />,
       <CisUSbLight key="usb" />,
-      // <StaticImage src="../../../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
+      // <StaticImage src="../../assets/images/verve.png" width={37.5} height={11.4} alt="Verve" key="verve" />,
     ],
     bgColor: "bg-primary",
     textColor: "n-light",
@@ -122,12 +114,7 @@ export const terminalData = [
     index: 0,
 
     image: (
-      <StaticImage
-        width={217}
-        height={414}
-        src="../../../assets/images/jpegs/nomba-terminals/max.png"
-        alt="Nomba Max"
-      />
+      <StaticImage width={217} height={414} src="../../assets/images/jpegs/nomba-terminals/max.png" alt="Nomba Max" />
     ),
     link: "/max",
     icons: [
@@ -140,5 +127,55 @@ export const terminalData = [
     ],
     bgColor: "bg-[#FFFFFF]",
     textColor: "primary",
+  },
+];
+export const nombaTerminals = [
+  { path: mini, title: "Nomba Mini" },
+  { path: lite, title: "Nomba Lite" },
+  { path: pro, title: "Nomba Pro" },
+  { path: max, title: "Nomba Max" },
+];
+export const comparisonData = [
+  {
+    title: "Outright purchase",
+    mini: <Check />,
+    lite: <Close />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Lease purchase",
+    mini: <Close />,
+    lite: <Check />,
+    pro: <Close />,
+    max: <Close />,
+  },
+  {
+    title: "Print out receipts ",
+    mini: <Close />,
+    lite: <Check />,
+    pro: <Close />,
+    max: <Check />,
+  },
+  {
+    title: "WiFi",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Bluetooth",
+    mini: <Check />,
+    lite: <Close />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Standalone card",
+    mini: <Close />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
   },
 ];

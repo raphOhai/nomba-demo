@@ -12,7 +12,7 @@ import { Ntext, GetTerminal } from "components";
 import NextIconDark from "svgs/chevron-right.svg";
 import PreviousIconDark from "svgs/chevron-left.svg";
 // import { AppContext } from "states/context";
-import { terminalData } from "./terminals";
+import { terminalData } from "../terminals";
 
 SwiperCore.use([Navigation, Pagination]);
 
