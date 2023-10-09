@@ -4,7 +4,7 @@ import React from "react";
 export const CartTerminals = [
   {
     name: "Nomba Max",
-    price: "₦ 80,000",
+    price: "₦ 85,000",
     image: <StaticImage height={83} width={43} src="../assets/images/jpegs/cart/max.png" alt="Nomba Max" />,
     info: "Android 11.0, 1GB RAM, 5MP Camera",
   },
