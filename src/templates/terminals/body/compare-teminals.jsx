@@ -12,11 +12,11 @@ const CompareTerminals = ({ title }) => {
           </Ntext>
         </div>
       </div>
-      <div className="w-full  overflow-scroll">
-        <table className="md:w-full w-[700px] overflow-scroll">
+      <div className="w-full  md:overflow-hidden overflow-x-scroll ">
+        <table className="md:w-full w-[700px] ">
           <thead>
             <tr>
-              <th>~</th>
+              <th></th>
               {nombaTerminals.map(r => (
                 <th className="">
                   <div className="h-[100px] flex flex-col justify-end align-baseline items-center">
