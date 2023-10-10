@@ -4,7 +4,7 @@ import { comparisonData, nombaTerminals } from "../terminals";
 import "./styles.css";
 const CompareTerminals = ({ title }) => {
   return (
-    <Container className="md:py-[50px] ">
+    <Container className="pb-[80px] md:pt-[50px]">
       <div className="py-[50px] ">
         <div className="md:max-w-[671px] md:mx-auto section_header4 md:text-center">
           <Ntext variant="h2" className="text-center" color="primary-100" data-animation="h">
@@ -12,7 +12,7 @@ const CompareTerminals = ({ title }) => {
           </Ntext>
         </div>
       </div>
-      <div className="w-full  md:overflow-hidden overflow-x-scroll ">
+      <div className="w-full  md:overflow-hidden overflow-x-scroll scrollbar-hide ">
         <table className="md:w-full w-[700px] ">
           <thead>
             <tr>
