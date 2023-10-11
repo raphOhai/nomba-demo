@@ -115,7 +115,11 @@ const TerminalSlider = ({ addToCart }) => {
                   {posdetails.device.price}
                 </Ntext>
                 <div className="btn" onClick={() => addToCart(posdetails.index)}>
-                  <GetTerminal text="By now" type="animate-button-reverse" />
+                  <GetTerminal
+                    text="Buy now"
+                    type="animate-button-reverse"
+                    className={posdetails.textColor === "primary" ? "!text-black keep-dark" : ""}
+                  />
                 </div>
               </div>
             </div>

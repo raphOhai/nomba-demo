@@ -4,7 +4,7 @@ import Terminals from "svgs/TERMINALS.svg";
 
 const TerminalsHero = () => {
   return (
-    <section className="mt-28">
+    <section className="md:mt-28 mt-10">
       <Container>
         <div className="flex justify-center text-center">
           <Terminals className="max-w-[1000px]" />

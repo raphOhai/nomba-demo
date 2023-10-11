@@ -6,8 +6,8 @@ import { CompareTerminals } from "./compare-teminals";
 const TerminalList = () => {
   const { addToCart } = useContext(AppContext);
   return (
-    <section className="md:py-[50px] feature-section4">
-      <div className="py-[50px] md:pt-[100px]">
+    <section className="md:pb-[50px] feature-section4">
+      <div className="pb-[50px]">
         <TerminalSlider addToCart={addToCart} />
       </div>
       <CompareTerminals title="Comparing Nomba POS" />

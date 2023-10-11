@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const GetTerminal = ({ text, type }) => {
+const GetTerminal = ({ text, type, className }) => {
   return (
-    <button className={`${type}`}>
+    <button className={`${type} ${className}`}>
       {text}
       <svg
         className="btn_svg"
@@ -28,6 +28,7 @@ const GetTerminal = ({ text, type }) => {
 
 GetTerminal.propTypes = {
   text: PropTypes.string,
+  className: PropTypes.string,
   type: PropTypes.oneOf(["animate-button", "animate-button-reverse"]),
 };
 

@@ -73,7 +73,13 @@
     // color: $black;
   }
 }
-
+.keep-dark {
+  svg {
+    path {
+      stroke: $black !important;
+    }
+  }
+}
 .mq {
   // filter: grayscale(100%);
   padding: 5rem 0;
