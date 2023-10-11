@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Ntext, SectionHeader, Button } from "components";
-import constants from "config/constants.json";
+import { Container, Ntext, SectionHeader } from "components";
 import ctl from "@netlify/classnames-template-literals";
+import { Button } from "../button";
+
 const GetStarted = ({ title }) => {
-  const { SIGNUP_URL } = constants;
   return (
     <section className=" py-[100px] bg-primary-200">
       <Container>
@@ -13,12 +13,7 @@ const GetStarted = ({ title }) => {
           </Ntext>
         </SectionHeader>
         <div className={heroButtonsContainer}>
-          <Button
-            className="!font-medium !text-[16px]"
-            text="Get Started"
-            href={{ url: SIGNUP_URL }}
-            withArrow={true}
-          />
+          <Button className="!font-medium !text-[16px]" text="Get Started" withArrow={true} />
         </div>
       </Container>
     </section>

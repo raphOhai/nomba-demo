@@ -1,19 +1,15 @@
-import React, { useLayoutEffect, useContext } from "react";
+import React, { useLayoutEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext, ReadMore } from "components";
-import constants from "config/constants.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { GetTerminal } from "components";
 import Bullet from "jpegs/terminal/max/svgs/bullet.svg";
-import { AppContext } from "states/context";
 import Check from "svgs/yellow-check.svg";
 import { miniFeaturesBreakdown } from "config/mini";
+import { BuyTerminal } from "../buy-terminal/buy-terminal";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 const MiniPricing = ({ price, leasePrice }) => {
-  const { SIGNUP_URL } = constants;
-  const { addToCart } = useContext(AppContext);
   useLayoutEffect(() => {
     const sections = gsap.utils.toArray(".max_feature1");
 
@@ -69,19 +65,20 @@ const MiniPricing = ({ price, leasePrice }) => {
                 </div>
               </div>
               <div className="flex md:flex-row flex-col justify-center gap-8 items-stretch md:items-center">
-                <div onClick={() => addToCart(3)}>
-                  <GetTerminal text="Buy now" type="animate-button-reverse" />
+                <BuyTerminal />
+
+                <div className="min-w-[130px]">
+                  <ReadMore
+                    color="primary-100"
+                    weight={500}
+                    className="text-center "
+                    defaultStyle={false}
+                    extraTrackText="Contact sales"
+                    variant="text3"
+                    href={{ url: "tel:+23401888899" }}
+                    text="Contact sales"
+                  />
                 </div>
-                <ReadMore
-                  color="primary-100"
-                  weight={500}
-                  className="text-center "
-                  defaultStyle={false}
-                  extraTrackText="Contact sales"
-                  variant="text3"
-                  href={{ url: "tel:+23401888899" }}
-                  text="Contact sales"
-                />
               </div>
             </div>
           </div>

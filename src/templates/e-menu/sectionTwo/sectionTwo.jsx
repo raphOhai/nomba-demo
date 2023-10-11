@@ -2,17 +2,15 @@ import React, { useLayoutEffect, useEffect, createRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Ntext, Button } from "components";
-import constants from "config/constants.json";
+import { Ntext } from "components";
 import Lottie from "lottie-web";
 import animation from "./animations/section22.json";
-
 import { StaticImage } from "gatsby-plugin-image";
 import { IO } from "src/animations/observe";
+import { Button } from "../button";
 
 gsap.registerPlugin([ScrollTrigger]);
 const EmenuSection2 = () => {
-  const { SIGNUP_URL } = constants;
   let animationContainer = createRef();
   useEffect(() => {
     const instance = Lottie.loadAnimation({
@@ -152,7 +150,6 @@ const EmenuSection2 = () => {
               <Button
                 className="!font-medium !text-[16px] !min-w-[100px] !w-[200px]"
                 text="Get Started"
-                href={{ url: SIGNUP_URL }}
                 withArrow={true}
               />
             </div>
