@@ -46,6 +46,7 @@ export const terminalData = [
     link: "/mini",
     bgColor: "bg-[#717171]",
     textColor: "n-light",
+    colorScheme: "dark",
   },
   {
     isHighlight: false,
@@ -53,7 +54,7 @@ export const terminalData = [
       name: "Nomba Lite",
       price: "₦30,000",
       type: "lite",
-      priceType: "Lease Price",
+      priceType: "Lease now purchase",
       ctaText: "Lease now",
     },
     index: 2,
@@ -68,6 +69,7 @@ export const terminalData = [
 
     bgColor: "bg-[#EEEEEE]",
     textColor: "primary",
+    colorScheme: "light",
   },
   {
     isHighlight: false,
@@ -97,6 +99,7 @@ export const terminalData = [
     ],
     bgColor: "bg-primary",
     textColor: "n-light",
+    colorScheme: "dark",
   },
   {
     isHighlight: false,
@@ -127,6 +130,7 @@ export const terminalData = [
     ],
     bgColor: "bg-[#FFFFFF]",
     textColor: "primary",
+    colorScheme: "light",
   },
 ];
 export const nombaTerminals = [
@@ -174,6 +178,62 @@ export const comparisonData = [
   {
     title: "Standalone card",
     mini: <Close />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Accepts VISA & Mastercard",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Transaction history",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Free delivery",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Free activation ",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Touchscreen",
+    mini: <Close />,
+    lite: <Close />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Tip functionality ",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Electronic receipts (via SMS and email)",
+    mini: <Check />,
+    lite: <Close />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
+    title: "Record cash payment ",
+    mini: <Check />,
     lite: <Check />,
     pro: <Check />,
     max: <Check />,

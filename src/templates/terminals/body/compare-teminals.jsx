@@ -18,10 +18,10 @@ const CompareTerminals = ({ title }) => {
             <tr>
               <th></th>
               {nombaTerminals.map(r => (
-                <th className="">
+                <th className="py-5">
                   <div className="h-[100px] flex flex-col justify-end align-baseline items-center">
                     <img width="41" height="71" src={r.path} alt="" />
-                    <div class=" block text-white">{r.title}</div>
+                    <div class="mt-3 block text-white">{r.title}</div>
                   </div>
                 </th>
               ))}
