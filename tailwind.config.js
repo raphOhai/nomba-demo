@@ -19,6 +19,7 @@ module.exports = {
     "./src/templates/e-menu/**/*.{html,jsx,js}",
     "./src/templates/mini/**/*.{html,jsx,js}",
     "./src/templates/terminals/**/*.{html,jsx,js}",
+    "./src/templates/api/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
@@ -84,6 +85,7 @@ module.exports = {
           yellow: "#ffcc00",
           yellow1: "#FFFAE6",
           yellow2: "#FFF5CC",
+          yellow3: "#FFEEAA",
           light: "#ffffff",
           grey1: "#eeeeee",
           grey2: "#c6c6c6",
@@ -92,10 +94,12 @@ module.exports = {
           grey5: "#555555",
           grey6: "#383838",
           grey7: "#828282",
+          grey10: "rgba(217, 217, 217, 0.15)",
           dark: "#121212",
           red: "#ff2200",
           green: " #11bb00",
           green2: "#D9F2F2",
+
           pink1: "#EFD9F2",
           grey3light: "#99999980",
         },

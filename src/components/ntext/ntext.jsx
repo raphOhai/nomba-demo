@@ -189,9 +189,10 @@ const variants = {
     `,
   text4lite: `
     font-[400]
-    text-[20px]
-    leading-[30px]
-    tracking-[-0.02em]
+    leading-[24px]
+    md:text-[20px]
+    md:leading-[30px]
+    text-[16px]
     `,
   text4: `
     font-[700]

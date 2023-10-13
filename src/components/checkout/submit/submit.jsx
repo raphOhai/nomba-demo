@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react";
 import "./index.scss";
 import { Button, Br } from "components";
 import { AppContext } from "states/context";
+import { useMixpanel } from "gatsby-plugin-mixpanel";
 
 function Submit({ isTermsAccepted, data }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { onClose, resetInfo } = useContext(AppContext);
+  const mixpanel = useMixpanel();
   const submit = () => {
     setIsLoading(true);
     fetch(
@@ -19,10 +21,18 @@ function Submit({ isTermsAccepted, data }) {
       .then(res => {
         if (res.ok) {
           setShow(!show);
+          mixpanel.track("Mini - checkout - Customer has submited their info", {
+            customerData: JSON.stringify(data),
+          });
         } else {
         }
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        mixpanel.track("Mini - checkout - Error submiting customer info", {
+          customerData: JSON.stringify(data),
+        });
+        console.log(err);
+      })
       .finally(() => {
         setIsLoading(false);
       });

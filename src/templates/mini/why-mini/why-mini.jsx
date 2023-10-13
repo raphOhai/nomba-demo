@@ -66,9 +66,8 @@ const WhyMini = () => {
               </div>
               <div className="max-w-[972px] md:p-0 p-5">
                 <Ntext variant="text6lite" color="primary-100" className="!font-[400]" data-animation="h">
-                  Nomba mini is your pocket-sized payment padi that guarantees a reliable, fast and smooth payment
-                  experience. From instant alert to auto-settlements and lower transaction charges, the Nomba mini
-                  provides you with maximum productivity and therefore, sales
+                  Running a business is not easy but with your payment padi you can enjoy more sales, NO targets and
+                  wahala free payment!
                 </Ntext>
               </div>
               <div className="flex flex-row  mt-[50px] gap-[20px] md:gap-[50px] md:justify-start justify-center ">

@@ -15,13 +15,14 @@ import { split } from "animations/text";
 import { AccordionData, InTheBox } from "config/terminal";
 import { CommonQuestions } from "components/common-questions";
 import { Cart } from "components/checkout";
+import SeoConf from "config/seo/meta";
 
 const MaxPage = () => {
   useEffect(() => {
     split();
   });
   return (
-    <Layout title="Max" index={0}>
+    <Layout index={0} title={SeoConf.max.title} description={SeoConf.max.description}>
       <MaxpageHero
         title={
           <>

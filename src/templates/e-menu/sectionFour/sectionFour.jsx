@@ -1,13 +1,15 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useContext } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { Container, Ntext, SectionHeader, ReadMore } from "components";
-import constants from "config/constants.json";
+import { Container, Ntext, SectionHeader } from "components";
+import Arrow from "svgs/readmore.svg";
+import ctl from "@netlify/classnames-template-literals";
+import { AppContext } from "states/context";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const EmenuSection4 = ({ headingText, tools }) => {
-  const { SIGNUP_URL } = constants;
+  const { onOpen } = useContext(AppContext);
 
   const comp = useRef(); // create a ref for the root level element (for scoping)
 
@@ -117,7 +119,7 @@ const EmenuSection4 = ({ headingText, tools }) => {
           <div className="relative section-four-rect mb-36">
             {tools.map((t, i) => (
               <div
-                class={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
+                className={`w-full ${t.color} overflow-hidden rounded-[20px] section-four-rect-card section-four-rect-card-${i}`}
                 key={t.heading}
               >
                 <div className="flex md:flex-row flex-col justify-between items-center">
@@ -130,12 +132,17 @@ const EmenuSection4 = ({ headingText, tools }) => {
                     </Ntext>
 
                     <div className="md:mt-10 mt-28">
-                      <ReadMore
-                        className="!font-medium !text-[16px] !text-primary"
-                        text="Get Started on menu"
-                        color="primary"
-                        href={{ url: SIGNUP_URL }}
-                      />
+                      <div className={readmoreStylDefault} onClick={onOpen}>
+                        <Ntext
+                          variant={"p16"}
+                          color="primary"
+                          className={`peer !font-medium !text-[16px] !text-primary transition-all duration-300`}
+                          weight="600"
+                        >
+                          Get Started on menu
+                        </Ntext>{" "}
+                        <Arrow className={arrowStyle} />
+                      </div>
                     </div>
                   </div>
                   <div
@@ -152,5 +159,19 @@ const EmenuSection4 = ({ headingText, tools }) => {
     </div>
   );
 };
+const readmoreStylDefault = ctl(`
+inline-flex
+items-center
+group
+cursor-pointer
+`);
+
+const arrowStyle = ctl(`
+ml-2
+transition-all
+duration-300
+peer-hover:ml-4
+hover:ml-4
+`);
 
 export { EmenuSection4 };

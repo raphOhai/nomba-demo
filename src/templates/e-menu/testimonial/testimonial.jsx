@@ -20,11 +20,11 @@ const EmenuTestimonial = ({ testimonials, headingText }) => {
   // <span class="' + className + '">' + "" + "</span>";
 
   return (
-    <section className="md:py-[150px] py-[100px] bg-primary-100">
+    <section className=" pb-[100px] bg-primary-100">
       <Container>
-        <SectionHeader className="text-center">
+        <div className="text-center pb-20">
           <Ntext variant="h2" color="c-0" value={headingText} className={headingTextStyle} />
-        </SectionHeader>
+        </div>
         <SliderNavigation />
         <Swiper
           pagination={{

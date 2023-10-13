@@ -35,7 +35,8 @@ export const AccordionData = [
   {
     id: 2,
     header: "Does the Nomba Mini terminal print receipts?",
-    content: "No, it doesn’t. However, you can send receipts via text message or email on the terminal for free.",
+    content:
+      "No, it doesn’t but you can send receipts to customers’ phones for FREE via WhatsApp, email or SMS and you won’t lose it, unlike paper receipts.",
   },
   {
     id: 3,
@@ -68,6 +69,12 @@ export const miniBenefits = [
   "Handy and convenient",
   "Send paperless receipts",
   "Get instant alerts and auto-settlement",
+];
+export const miniBenefitsV2 = [
+  "No targets",
+  "0.4% transaction charge",
+  "Free digital receipts",
+  "Fast and reliable network",
 ];
 
 export const everyBusinesses = [
@@ -239,8 +246,7 @@ export const miniFeatures = [
     title: "Introducing Nomba Mini",
     icon: <BusinessIcon className="mini-svg-1" />,
     description: "Your Payment Padi for on-the-go transactions!",
-    more_description:
-      "The Nomba Mini is palm size and can fit into your pocket. Handy and convenient, your payment padi is ready to go anywhere and at anytime.",
+    more_description: "The Nomba Mini is small enough to carry with you anywhere, anytime.",
   },
   {
     title: "Endless Reliability",

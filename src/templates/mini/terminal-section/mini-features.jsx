@@ -125,7 +125,7 @@ const MiniFeatures2 = ({ features }) => {
                 </div>
                 <div className="max-w-[454px] mt-5">
                   <Ntext variant="text7" color="n-light">
-                    The new pocket-sized terminal for swift and successful transactions
+                    The new pocket-sized terminal with no targets
                   </Ntext>
                 </div>
                 <div className="max-w-[300px] mt-5">

@@ -26,8 +26,8 @@ const GetMini = ({ title, description }) => {
           </div>
 
           <div className={subTextStyle}>
-            <div className="btn" onClick={() => addToCart(3)}>
-              <GetTerminal text="Get your terminal" type="animate-button-reverse" />
+            <div className="btn">
+              <GetTerminal onClick={() => addToCart(3)} text="Get your POS" type="animate-button-reverse" />
             </div>
             <div className="btn">
               <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" />
