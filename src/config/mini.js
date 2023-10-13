@@ -56,10 +56,10 @@ export const AccordionData = [
   },
 ];
 export const miniFeaturesBreakdown = [
-  "5.0-inch HD 1280x720 capacitive touchscreen",
+  "2.4-inch HD 1280x720 capacitive touchscreen",
   "5 megapixel auto focus rear camera",
-  "1GB RAM, 8GB ROM support 32GB external TF card",
-  "7.4V/2000mAh rechargeable Li-ion battery",
+  "32MB RAM, 8GB ROM support 32GB external TF card",
+  "3.7V/2000mAh rechargeable Li-ion battery",
   "100~240V AC 50/60HzAdapter",
   "1x Micro USB2.0, 1x DC jack",
 ];
