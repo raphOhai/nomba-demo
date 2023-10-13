@@ -75,7 +75,7 @@ const WhyMini = () => {
                   <div className="text-[16px] text-n-light"></div>
                   <div>
                     <Ntext variant="text8" color="primary-100" data-animation="h">
-                      5.0
+                      2.4
                     </Ntext>
                   </div>
                   <div className="text-[14px] font-semibold w-[127px] text-n-light">inch HD</div>
@@ -84,7 +84,7 @@ const WhyMini = () => {
                   <div className="text-[16px] text-n-light"></div>
                   <div>
                     <Ntext variant="text8" color="primary-100" data-animation="h">
-                      1GB
+                      32MB
                     </Ntext>
                   </div>
                   <div className="text-[14px] font-semibold w-[127px] text-n-light">RAM</div>
@@ -93,10 +93,10 @@ const WhyMini = () => {
                   <div className="text-[16px] text-n-light"></div>
                   <div>
                     <Ntext variant="text8" color="primary-100" data-animation="h">
-                      7.4V
+                      3.7V
                     </Ntext>
                   </div>
-                  <div className="text-[14px] font-semibold w-[127px] text-n-light">2000mAh battery</div>
+                  <div className="text-[14px] font-semibold w-[127px] text-n-light">1400mAh battery</div>
                 </div>
               </div>
             </div>
