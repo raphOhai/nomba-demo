@@ -54,7 +54,7 @@ export const terminalData = [
       name: "Nomba Lite",
       price: "₦30,000",
       type: "lite",
-      priceType: "Lease now purchase",
+      priceType: "Lease purchase",
       ctaText: "Lease now",
     },
     index: 2,
@@ -143,7 +143,7 @@ export const comparisonData = [
   {
     title: "Outright purchase",
     mini: <Check />,
-    lite: <Close />,
+    lite: <Check />,
     pro: <Check />,
     max: <Check />,
   },
@@ -151,7 +151,7 @@ export const comparisonData = [
     title: "Lease purchase",
     mini: <Close />,
     lite: <Check />,
-    pro: <Close />,
+    pro: <Check />,
     max: <Close />,
   },
   {
@@ -176,27 +176,6 @@ export const comparisonData = [
     max: <Check />,
   },
   {
-    title: "Standalone card",
-    mini: <Close />,
-    lite: <Check />,
-    pro: <Check />,
-    max: <Check />,
-  },
-  {
-    title: "Accepts VISA & Mastercard",
-    mini: <Check />,
-    lite: <Check />,
-    pro: <Check />,
-    max: <Check />,
-  },
-  {
-    title: "Transaction history",
-    mini: <Check />,
-    lite: <Check />,
-    pro: <Check />,
-    max: <Check />,
-  },
-  {
     title: "Free delivery",
     mini: <Check />,
     lite: <Check />,
@@ -211,6 +190,13 @@ export const comparisonData = [
     max: <Check />,
   },
   {
+    title: "Transaction history",
+    mini: <Check />,
+    lite: <Check />,
+    pro: <Check />,
+    max: <Check />,
+  },
+  {
     title: "Touchscreen",
     mini: <Close />,
     lite: <Close />,
@@ -218,7 +204,7 @@ export const comparisonData = [
     max: <Check />,
   },
   {
-    title: "Tip functionality ",
+    title: "Record cash payment ",
     mini: <Check />,
     lite: <Check />,
     pro: <Check />,
@@ -232,7 +218,7 @@ export const comparisonData = [
     max: <Check />,
   },
   {
-    title: "Record cash payment ",
+    title: "Accepts VISA & Mastercard",
     mini: <Check />,
     lite: <Check />,
     pro: <Check />,

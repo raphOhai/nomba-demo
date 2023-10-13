@@ -119,7 +119,7 @@ const TerminalSlider = ({ addToCart }) => {
                 />
               </div>
               <div
-                className={`max-w-[114px] rounded-full ${
+                className={`max-w-[100px] rounded-full ${
                   posdetails.colorScheme !== "dark" ? "bg-[#1A1A1A]" : "bg-n-light"
                 } text-center px-2 py-1 mb-3`}
               >
@@ -137,7 +137,7 @@ const TerminalSlider = ({ addToCart }) => {
                 </Ntext>
                 <div className="btn" onClick={() => addToCart(posdetails.index)}>
                   <GetTerminal
-                    text="Buy now"
+                    text={posdetails.device.ctaText}
                     type="animate-button-reverse"
                     className={posdetails.textColor === "primary" ? "!text-black keep-dark" : ""}
                   />
