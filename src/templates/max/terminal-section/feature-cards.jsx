@@ -2,11 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components";
 import { maxFeatures } from "config/terminal";
-import fastPayment from "assets/images/jpegs/terminal/max/features/fast-payment2.mp4";
 import battery from "assets/images/jpegs/terminal/max/features/battery5.mp4";
-import signal from "assets/images/jpegs/terminal/max/features/signal1.mp4";
-import speedprinters from "assets/images/jpegs/terminal/max/features/speedprinters1.mp4";
 import { IO } from "animations/observe";
+import { videoLinks } from "utils/videoLinks";
 
 const FeatureCards = () => {
   const [isHoverVid1, setHoverVid1] = useState(false);
@@ -108,7 +106,7 @@ const FeatureCards = () => {
             className={`${isHoverVid1 ? "fadeIn" : null}   max-h-[340px] md:max-h-[400px] mx-auto`}
             muted
             playsInline
-            src={fastPayment}
+            src={videoLinks.fastPayment}
           ></video>
           {/* </div> */}
         </div>
@@ -139,7 +137,7 @@ const FeatureCards = () => {
             className={`${isHoverVid2 ? "fadeIn" : null}  max-h-[340px]  md:max-h-[400px] mx-auto`}
             muted
             playsInline
-            src={speedprinters}
+            src={videoLinks.speedPrinters}
           ></video>
           {/* </div> */}
         </div>
@@ -201,7 +199,7 @@ const FeatureCards = () => {
             className={`${isHoverVid4 ? "fadeIn" : null}   max-h-[340px] mx-auto bg-primary`}
             muted
             playsInline
-            src={signal}
+            src={videoLinks.signal}
           ></video>
           {/* </div> */}
         </div>

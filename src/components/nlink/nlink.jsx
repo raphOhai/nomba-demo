@@ -34,7 +34,7 @@ const NLink = ({ href, to, className, trackingText, children }) => {
       {...nlinkProps}
       onClick={() => {
         if (trackingText) {
-          mixpanel.track(trackingText);
+          mixpanel.track(trackingText.replaceAll(" ", "_").replaceAll("-", "_"));
         }
       }}
     >

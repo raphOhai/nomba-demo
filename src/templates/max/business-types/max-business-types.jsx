@@ -5,10 +5,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ctl from "@netlify/classnames-template-literals";
 import { StaticImage } from "gatsby-plugin-image";
 import PlayMobile from "assets/images/svgs/terminal/play_mobile.svg";
-import BusinessVid from "assets/images/jpegs/terminal/max/ghatview.mp4";
 import { MaxTestimonial } from "./testimonial";
 import { maxTestimonial } from "config/terminal";
 import { func } from "prop-types";
+import { videoLinks } from "utils/videoLinks";
 // register scrolltrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +45,7 @@ const MaxBusinessTypes = ({ title }) => {
   return (
     <section className="pt-[150px] md:pt-[16rem] feature-section2" id="business-types">
       <div className={`hero_video_pl ${playVideo ? "view" : null}`}>
-        {loadVideo && <video onClick={close} ref={hero_vid} controls src={BusinessVid}></video>}
+        {loadVideo && <video onClick={close} ref={hero_vid} controls src={videoLinks.ghatView}></video>}
       </div>
       <Container>
         <div className="md:max-w-[671px] md:mx-auto  md:text-center">
