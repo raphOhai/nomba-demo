@@ -6,21 +6,17 @@ import Arrow from "assets/images/svgs/chevron-down.svg";
 const SubMenuDetails = ({ subMenuItem, ...props }) => (
   <div
     className={`${subMenuDetailsStyle} ${
-      subMenuItem?.subMenu &&
-      props.menuopen === props.menuindex &&
-      "bg-primary-200 lg:bg-primary-100"
+      subMenuItem?.subMenu && props.menuopen === props.menuindex && "bg-primary-200 lg:bg-primary-100"
     }`}
     {...props}
   >
     <div className={subMenuItemWrapStyle}>
       <div className={subMenuInnerWrapStyle}>
-        {subMenuItem?.icon && (
-          <span className={iconWrapStyle}>{subMenuItem.icon}</span>
-        )}
+        {subMenuItem?.icon && <span className={iconWrapStyle}>{subMenuItem.icon}</span>}
 
-        <div className="text-left">
-          <Ntext variant="p16" value={subMenuItem?.title} weight="600" />
-          <Ntext variant="p12" value={subMenuItem?.description} />
+        <div className="text-left  -mt-1">
+          <Ntext variant="p14" color="primary" value={subMenuItem?.title} weight="700" />
+          <Ntext variant="p12" color="primary" value={subMenuItem?.description} />
         </div>
       </div>
 
@@ -28,8 +24,7 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
         className={`lg:hidden ${
           !subMenuItem?.subMenu
             ? "-rotate-90"
-            : props.menuopen === props.menuindex &&
-              "rotate-180 transition-all duration-300"
+            : props.menuopen === props.menuindex && "rotate-180 transition-all duration-300"
         } `}
       />
     </div>
@@ -42,30 +37,33 @@ const subMenuItemWrapStyle = ctl(`
   items-center   
   border-b 
   lg:border-none w-full
+  lg:py-3
 `);
 const subMenuDetailsStyle = ctl(`
   peer
-  px-[25px] lg:px-[33px]
-  lg:hover:bg-primary-200
+  px-[25px] lg:px-[13px]
+  lg:hover:bg-m-light
+  lg:hover:border-n-grey2
+  lg:hover:border
+  lg:hover:rounded-[5px]
   border-primary-400
   w-full
+  transition-all
 `);
 const subMenuInnerWrapStyle = ctl(`
   flex 
-  items-center 
+  items-start 
   gap-[13px]
   peer
   w-full
 `);
 const iconWrapStyle = ctl(`
-  bg-secondary-100
-  w-[54px]
-  h-[54px]
-  rounded-full
+  w-[20px]
+  h-[20px]
   flex
   items-center
   justify-center
-  my-[17px]
+
 `);
 
 export { SubMenuDetails };

@@ -132,7 +132,7 @@ module.exports = {
       },
 
       boxShadow: {
-        subMenu: " 0px 4px 100px rgba(41, 45, 50, 0.09)",
+        subMenu: "0px 8px 20px 0px rgba(196, 196, 196, 0.30)",
       },
 
       keyframes: {

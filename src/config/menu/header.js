@@ -7,74 +7,58 @@ import Bag from "svgs/outline/bag-5.svg";
 import Globe from "svgs/globe.svg";
 import Audience from "svgs/audience-2.svg";
 import Pages from "svgs/pages.svg";
-
+import AcceptPayment from "svgs/accept-payments.svg";
+import MakePayment from "svgs/make-payments.svg";
+import PosTerminals from "svgs/pos-terminals.svg";
+import ServiceStatus from "svgs/service-status.svg";
+import MenuSubmenu from "svgs/menu-submenu.svg";
+import Invoicing from "svgs/invoicing.svg";
+import Savings from "svgs/savings.svg";
 const headerMenu = {
   Products: [
     {
-      title: "Payments",
-      icon: <Payments />,
-      description: "Accept and make payments on Nomba",
-      subMenu: [
-        {
-          title: "Accept Payments",
-          to: "/products/accept-payments",
-        },
-        {
-          title: "Make Payments",
-          to: "/products/make-payments",
-        },
-        {
-          title: "POS Terminals",
-          to: "/products/pos-terminals",
-        },
-        {
-          title: "Invoicing",
-          to: "/invoice",
-        },
-        {
-          title: "Service Status",
-          to: "https://dashboard.nomba.com/guest/card-bank-performance",
-        },
-      ],
+      title: "Accept Payments",
+      to: "/products/accept-payments",
+      icon: <AcceptPayment />,
+      description: "Receive and accept money",
     },
     {
-      title: "Banking",
-      icon: <Bank />,
-      description: "Access the financial tools you need",
-      subMenu: [
-        // {
-        //   title: "Capital",
-        //   to: "/banking/capital",
-        // },
-        {
-          title: "Savings",
-          to: "/banking/savings",
-        },
-        // {
-        //   title: "Cards",
-        //   to: "/banking/cards",
-        // },
-      ],
+      title: "Make Payments",
+      to: "/products/make-payments",
+      icon: <MakePayment />,
+      description: "Transfer to everyone with ease",
     },
-    // {
-    //   title: "Business operations",
-    //   icon: <Business />,
-    //   description: "Manage your businesses with zero stress",
-    //   subMenu: [
-    //     {
-    //       title: "Customer Directory",
-    //       to: "/business_operations/customer_directory",
-    //     },
-    //     {
-    //       title: "Payroll",
-    //       to: "/business_operations/payroll",
-    //     },
-    //     {
-    //       title: "Inventory",
-    //       to: "/business_operations/inventory",
-    //     },
-    //   ],
-    // },
+    {
+      title: "POS Terminals",
+      to: "/products/pos-terminals",
+      icon: <PosTerminals />,
+      description: "Payments via our POS Terminals",
+    },
+
+    {
+      title: "Service Status",
+      to: "https://dashboard.nomba.com/guest/card-bank-performance",
+      icon: <ServiceStatus />,
+      description: "Bank’s network updates",
+    },
+    {
+      title: "Menu",
+      to: "/menu",
+      icon: <MenuSubmenu />,
+      description: "Simplify restaurant operations",
+    },
+    {
+      title: "Invoicing",
+      to: "/invoice",
+      icon: <Invoicing />,
+      description: "Easiest invoicing process today",
+    },
+    {
+      title: "Savings",
+      to: "/banking/savings",
+      icon: <Savings />,
+      description: "Settle payments effortlessly",
+    },
   ],
 
   "Business Types": [
