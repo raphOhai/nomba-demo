@@ -119,7 +119,7 @@ const TerminalSlider = ({ addToCart }) => {
                 />
               </div>
               <div
-                className={`max-w-[100px] rounded-full ${
+                className={`max-w-[110px] rounded-full ${
                   posdetails.colorScheme !== "dark" ? "bg-[#1A1A1A]" : "bg-n-light"
                 } text-center px-2 py-1 mb-3`}
               >
