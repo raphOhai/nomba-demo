@@ -7,7 +7,7 @@ const SubMenu = ({ items, submenuOpen }) => {
   const [currentMenuOpen, setCurrentMenuOpen] = useState(null);
 
   return (
-    <div className={`${subMenuStyle} ${submenuOpen ? "block" : "lg:hidden"} `}>
+    <div className={`${subMenuStyle} ${submenuOpen ? "block" : "lg:hidden"}`}>
       {items.map((item, i) => {
         const subMenuIndex = i + 1;
         const currentMenuSameAsIndex = currentMenuOpen === subMenuIndex;
@@ -67,6 +67,7 @@ const subMenuStyle = ctl(`
   z-10
   lg:shadow-subMenu
   mt-5
+  bg-primary-200
 `);
 const subMenuWrapStyle = ctl(`
   bg-primary-100  
@@ -79,7 +80,8 @@ const subMenuLinkWrapStyle = ctl(`
   lg:top-0
   pt-[30px]
   px-16 lg:px-0
-  lg:h-full
+  lg:h-fit
+  lg:min-h-full
   lg:peer-hover:block
   lg:hover:block
   lg:peer-hover:w-[236px]

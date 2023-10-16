@@ -21,14 +21,14 @@ function Submit({ isTermsAccepted, data }) {
       .then(res => {
         if (res.ok) {
           setShow(!show);
-          mixpanel.track("Mini - checkout - Customer has submited their info", {
+          mixpanel.track("Mini_checkout_Customer_submitted_info", {
             customerData: JSON.stringify(data),
           });
         } else {
         }
       })
       .catch(err => {
-        mixpanel.track("Mini - checkout - Error submiting customer info", {
+        mixpanel.track("Mini_checkout_Error_submiting_customer_info", {
           customerData: JSON.stringify(data),
         });
         console.log(err);
