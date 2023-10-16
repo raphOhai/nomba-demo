@@ -37,7 +37,7 @@ export const businessTool = [
     image: (
       <StaticImage
         alt="Robust Menu"
-        src="../assets/images/jpegs/e-menu/section4/page2.png"
+        src="../assets/images/jpegs/e-menu/section4/page2.webp"
         width={482}
         height={474}
         className="md:my-10"
