@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { TerminalCard } from "./terminal-card";
 import NextIcon from "jpegs/terminal/max/svgs/next.svg";
 import PreviousIcon from "jpegs/terminal/max/svgs/prev.svg";
-import { Ntext, GetTerminal } from "components";
+import { Ntext, GetTerminal, ReadMore } from "components";
 import NextIconDark from "svgs/chevron-right.svg";
 import PreviousIconDark from "svgs/chevron-left.svg";
 // import { AppContext } from "states/context";
@@ -92,14 +92,14 @@ const TerminalSlider = ({ addToCart }) => {
         <div className="h-full flex flex-col justify-between">
           <div className="text-center ">
             {posdetails.image}
-            <div className="mx-5 my-[40px] text-left">
+            <div className="mx-5 mt-[40px] mb-3 text-left">
               <header className={posCardHeaderStyle}>
                 <Ntext variant="text5" color={posdetails.textColor}>
                   {posdetails.device.name}
                 </Ntext>
                 <div className={`${posTitleIconStyle} ${iconsGridColumn}`}>{posdetails.icons}</div>
               </header>
-              <Ntext variant="p14" color={posdetails.textColor} className="mt-5">
+              <Ntext variant="p14" color={posdetails.textColor} className="mt-3">
                 {posdetails.features}
               </Ntext>
             </div>
@@ -107,16 +107,37 @@ const TerminalSlider = ({ addToCart }) => {
 
           <div className="-mt-[5px] mx-5">
             <div>
-              <Ntext variant="p12" color={posdetails.textColor} className=" m-0 p-0">
-                {posdetails.device.priceType}
-              </Ntext>
-              <div className="flex flex-row  justify-between items-baseline">
-                <Ntext variant="text5" color={posdetails.textColor} className="flex">
+              <div className="mb-5">
+                <ReadMore
+                  extraTrackText={posdetails.device.name}
+                  variant="p12bold"
+                  defaultStyle={false}
+                  className={"!text-xs"}
+                  text="Learn more"
+                  color={posdetails.textColor}
+                  href={posdetails.link}
+                />
+              </div>
+              <div
+                className={`max-w-[110px] rounded-full ${
+                  posdetails.colorScheme !== "dark" ? "bg-[#1A1A1A]" : "bg-n-light"
+                } text-center px-2 py-1 mb-3`}
+              >
+                <p
+                  className={`${
+                    posdetails.colorScheme !== "dark" ? "text-n-light" : "text-primary"
+                  } text-[10px] tracking-[-0.2px]`}
+                >
+                  {posdetails.device.priceType}
+                </p>
+              </div>
+              <div className="flex flex-row  justify-between items-center">
+                <Ntext variant="pricingBig" color={posdetails.textColor} className=" ">
                   {posdetails.device.price}
                 </Ntext>
                 <div className="btn" onClick={() => addToCart(posdetails.index)}>
                   <GetTerminal
-                    text="Buy now"
+                    text={posdetails.device.ctaText}
                     type="animate-button-reverse"
                     className={posdetails.textColor === "primary" ? "!text-black keep-dark" : ""}
                   />

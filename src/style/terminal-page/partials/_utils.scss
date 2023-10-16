@@ -1,7 +1,7 @@
 .animate-button {
   width: auto;
   color: $light-txt-1;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 8px;
   @include flex(center, center, 1rem);
   border: 1px solid $yellow;
@@ -39,7 +39,7 @@
 .animate-button-reverse {
   width: auto;
   color: $black;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 8px;
   @include flex(center, center, 1rem);
   border: 1px solid $yellow;
