@@ -3,11 +3,11 @@ import "./index.scss";
 import { Br } from "components/br";
 import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
 import { StaticImage } from "gatsby-plugin-image";
-import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useIsMobile from "hooks/useIsMobile";
 import { IO } from "animations/observe";
+import { videoLinks } from "utils/videoLinks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +104,7 @@ const TerminalSectionInteractions = () => {
           autoPlay
           muted
           playsInline
-          src={spinTerminal}
+          src={videoLinks.spinTerminal}
         ></video>
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">

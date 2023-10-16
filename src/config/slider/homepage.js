@@ -11,6 +11,18 @@ const imageStyle = ctl(`
 const homepageSliderData = [
   {
     image: (
+      <StaticImage src="../../assets/images/jpegs/business-tools/e-menu.png" alt="E menu" className={imageStyle} />
+    ),
+    heading: "Menu",
+    text:
+      "With Nomba's menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants. ",
+    link: {
+      text: "Get Nomba for your growing business",
+      href: "/menu",
+    },
+  },
+  {
+    image: (
       <StaticImage
         src="../../assets/images/jpegs/business-tools/invoicing.png"
         alt="Invoicing Image"
@@ -55,18 +67,6 @@ const homepageSliderData = [
     link: {
       text: "Get Nomba for your growing business",
       href: "https://dashboard.nomba.com/auth/login",
-    },
-  },
-  {
-    image: (
-      <StaticImage src="../../assets/images/jpegs/business-tools/e-menu.png" alt="E menu" className={imageStyle} />
-    ),
-    heading: "Menu",
-    text:
-      "With Nomba's menu, customers can browse your menu, place orders, and pay for their meals all from the convenience of their mobile devices in restaurants. ",
-    link: {
-      text: "Get Nomba for your growing business",
-      href: "/menu",
     },
   },
   {
