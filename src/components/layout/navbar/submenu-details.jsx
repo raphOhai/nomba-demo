@@ -37,12 +37,12 @@ const subMenuItemWrapStyle = ctl(`
   items-center   
   border-b 
   lg:border-none w-full
-  lg:py-3
+  py-3
 `);
 const subMenuDetailsStyle = ctl(`
   peer
   px-[25px] lg:px-[13px]
-  lg:hover:bg-m-light
+  hover:bg-m-light
   lg:hover:border-n-grey2
   lg:hover:border
   lg:hover:rounded-[5px]
