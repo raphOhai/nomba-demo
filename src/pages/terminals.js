@@ -7,9 +7,8 @@ import { TerminalList, TerminalsHero } from "templates/terminals";
 import { Cart } from "components/checkout";
 import { gsap } from "gsap";
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { WhatsInTheBox } from "components/in-the-box";
-import { InTheBox } from "config/mini";
 import { EveryBusiness } from "templates/e-menu";
+import SeoConf from "config/seo/meta";
 
 const TerminalsPage = () => {
   const lenisRef = useRef();
@@ -30,10 +29,14 @@ const TerminalsPage = () => {
   });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
-      <Layout title="Terminals" useStickyNav={false} index={3}>
+      <Layout
+        title={SeoConf.terminals.title}
+        description={SeoConf.terminals.description}
+        useStickyNav={false}
+        index={3}
+      >
         <TerminalsHero />
         <TerminalList />
-        {/* <WhatsInTheBox title="What’s in the box?" InTheBox={InTheBox} /> */}
         <EveryBusiness />
         <HomepageTipsAndUpdate />
         <div data-lenis-prevent>
