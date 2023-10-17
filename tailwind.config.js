@@ -94,6 +94,7 @@ module.exports = {
           grey5: "#555555",
           grey6: "#383838",
           grey7: "#828282",
+          grey8: "#1A1A1A",
           grey10: "rgba(217, 217, 217, 0.15)",
           dark: "#121212",
           red: "#ff2200",
