@@ -72,6 +72,7 @@ const subMenuStyle = ctl(`
   lg:p-[5px]
   mt-5
  lg:grid-flow-col
+  lg:gap-1
   lg:bg-n-light
   lg:border-m-light
   lg:border

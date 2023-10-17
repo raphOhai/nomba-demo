@@ -14,17 +14,26 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
       <div className={subMenuInnerWrapStyle}>
         {subMenuItem?.icon && <span className={iconWrapStyle}>{subMenuItem.icon}</span>}
 
-        <div className="text-left  -mt-1">
-          <Ntext variant="p14" color="primary" value={subMenuItem?.title} weight="700" />
-          <Ntext variant="p12" color="primary" value={subMenuItem?.description} />
+        <div className="text-left -mt-1">
+          <Ntext
+            variant="p14"
+            className="group-hover/item:!text-primary "
+            value={subMenuItem?.title}
+            color="n-grey5"
+            weight="700"
+          />
+          <Ntext
+            variant="p12"
+            color="n-grey5"
+            className="group-hover/item:!text-primary "
+            value={subMenuItem?.description}
+          />
         </div>
       </div>
 
       <Arrow
         className={`lg:hidden ${
-          !subMenuItem?.subMenu
-            ? "-rotate-90"
-            : props.menuopen === props.menuindex && "rotate-180 transition-all duration-300"
+          !subMenuItem?.subMenu ? "-rotate-90" : props.menuopen === props.menuindex && "rotate-180  duration-300"
         } `}
       />
     </div>
@@ -33,6 +42,7 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
 
 const subMenuItemWrapStyle = ctl(`
   flex 
+  group/item
   justify-between 
   items-center   
   border-b 
@@ -48,7 +58,8 @@ const subMenuDetailsStyle = ctl(`
   lg:hover:rounded-[5px]
   border-primary-400
   w-full
-  transition-all
+  
+  submenuStyle
 `);
 const subMenuInnerWrapStyle = ctl(`
   flex 

@@ -47,7 +47,7 @@ const MenuItems = () => {
               <Ntext
                 className={menuHeadingStyle}
                 variant="p16"
-                color={showSubmenu === i ? "primary" : "primary-900"}
+                color={showSubmenu === i ? "primary" : "primary-1200"}
                 value={item}
               />
             </button>
@@ -91,9 +91,9 @@ const itemWrapStyle = ctl(`
 const menuHeadingStyle = ctl(`
   uppercase 
   lg:capitalize 
-  lg:group-hover:text-primary
+  lg:group-hover:!text-primary
   md:font-normal 
-  lg:group-hover:font-bold
+
   font-semibold
   tracking-[0.2em]
   lg:tracking-normal

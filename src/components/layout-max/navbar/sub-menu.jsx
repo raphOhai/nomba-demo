@@ -6,8 +6,10 @@ import { SubMenuDetails } from "./submenu-details";
 const SubMenu = ({ items, submenuOpen }) => {
   const [currentMenuOpen, setCurrentMenuOpen] = useState(null);
 
+  const gridRows = items.length > 3 ? `lg:grid-rows-4` : items.length === 3 ? `lg:grid-rows-3` : `lg:grid-rows-2`;
+
   return (
-    <div className={`${subMenuStyle} ${submenuOpen ? "block" : "lg:hidden"} `}>
+    <div className={`${subMenuStyle} ${gridRows} ${submenuOpen ? "block" : "lg:hidden"} `}>
       {items.map((item, i) => {
         const subMenuIndex = i + 1;
         const currentMenuSameAsIndex = currentMenuOpen === subMenuIndex;
@@ -61,16 +63,25 @@ const SubMenu = ({ items, submenuOpen }) => {
 };
 
 const subMenuStyle = ctl(`
-  group-hover:block
-  hover:block
+ 
+
+  group-hover:grid
+  hover:grid
   lg:absolute
   z-10
-  lg:shadow-subMenu
+  lg:shadow-subMenuDark
+  lg:rounded-[10px]
+  lg:p-[5px]
   mt-5
+ lg:grid-flow-col
+  lg:gap-1
+  lg:bg-black
+  lg:border-primary
+  lg:border
 `);
 const subMenuWrapStyle = ctl(`
-  bg-primary-100  
-  lg:first:pt-4 lg:last:pb-4
+ 
+  lg:bg-black
 `);
 const subMenuLinkWrapStyle = ctl(`
   bg-primary-200
