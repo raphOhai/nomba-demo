@@ -158,3 +158,24 @@
     -o-transform: translateX(20%);
   }
 }
+.submenuStyle {
+  svg.menuIcon {
+    ellipse {
+      fill: #fff5cc;
+    }
+    circle {
+      fill: #fff5cc;
+    }
+  }
+
+  &:hover {
+    svg.menuIcon {
+      ellipse {
+        fill: #ffcc00;
+      }
+      circle {
+        fill: #ffcc00;
+      }
+    }
+  }
+}
