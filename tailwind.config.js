@@ -51,6 +51,7 @@ module.exports = {
           900: "#444444",
           1000: "#1F1F1F",
           1100: "#171616",
+          1200: "#8C8C8C",
         },
         secondary: {
           DEFAULT: "#FFCC00",
@@ -132,7 +133,8 @@ module.exports = {
       },
 
       boxShadow: {
-        subMenu: " 0px 4px 100px rgba(41, 45, 50, 0.09)",
+        subMenu: "0px 8px 20px 0px rgba(196, 196, 196, 0.30)",
+        subMenuDark: "0px 4px 10px 0px rgba(0, 0, 0, 0.10)",
       },
 
       keyframes: {
