@@ -31,4 +31,9 @@ export default {
     description:
       "Reduce your customer’s wait time and provide them with a seamless 5-star payment experience. With a customized QR code for payments, an integrated ordering system and auto-settlement, you also get to reduce the stress of your staff.  Get the Nomba Menu for FREE today",
   },
+  terminals: {
+    title: "Shop Nomba POS Terminals",
+    description:
+      "Get better at business with Nomba POS Terminals. Our cutting-edge point-of-sale solutions empower businesses with fast, secure transactions and robust management tools. You can own it outrightly or even get it on lease. Elevate your retail experience today.",
+  },
 };

@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const GetTerminal = ({ text, type, onClick }) => {
+const GetTerminal = ({ text, type, className,  onClick }) => {
   return (
-    <button className={type} onClick={onClick} trackingText={text} extraTrack={text}>
+    <button className={`${type} ${className}`} onClick={onClick} trackingText={text} extraTrack={text}>
+
       {text}
       <svg
         className="btn_svg"
@@ -28,6 +29,7 @@ const GetTerminal = ({ text, type, onClick }) => {
 
 GetTerminal.propTypes = {
   text: PropTypes.string,
+  className: PropTypes.string,
   type: PropTypes.oneOf(["animate-button", "animate-button-reverse"]),
 };
 
