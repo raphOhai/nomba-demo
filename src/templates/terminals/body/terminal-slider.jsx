@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useContext } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import ReactIdSwiper from "react-id-swiper/lib/ReactIdSwiper.custom";
 import { Swiper, Navigation, Pagination } from "swiper";
@@ -11,14 +11,12 @@ import PreviousIcon from "jpegs/terminal/max/svgs/prev.svg";
 import { Ntext, GetTerminal, ReadMore } from "components";
 import NextIconDark from "svgs/chevron-right.svg";
 import PreviousIconDark from "svgs/chevron-left.svg";
-// import { AppContext } from "states/context";
 import { terminalData } from "../terminals";
 
 const TerminalSlider = ({ addToCart }) => {
   const ref = useRef(null);
   const [swiper, updateSwiper] = useState(null);
   const [currentIndex, updateCurrentIndex] = useState(0);
-  // const { addToCart } = useContext(AppContext);
 
   const goNext = () => {
     if (ref.current !== null && ref.current.swiper !== null) {
@@ -36,7 +34,8 @@ const TerminalSlider = ({ addToCart }) => {
 
   useEffect(() => {
     updateCurrentIndex(ref.current.swiper.activeIndex);
-  }, [ref.current]);
+  }, []);
+
   const breakpoints = {
     280: {
       slidesPerView: 1,
@@ -87,7 +86,6 @@ const TerminalSlider = ({ addToCart }) => {
   const sliderItems = terminalData.map((posdetails, index) => {
     const iconsGridColumn = posdetails.device.type !== "lite" ? "grid-cols-6" : "grid-cols-3";
     return (
-      // <TerminalCard {...posdetails} key={`pos_card_${index}`} />
       <div key={`pos_card_${index}`} className={` relative py-8  md:min-w-[407px] ${posdetails.bgColor}`}>
         <div className="h-full flex flex-col justify-between">
           <div className="text-center ">
@@ -120,7 +118,7 @@ const TerminalSlider = ({ addToCart }) => {
               </div>
               <div
                 className={`max-w-[110px] rounded-full ${
-                  posdetails.colorScheme !== "dark" ? "bg-[#1A1A1A]" : "bg-n-light"
+                  posdetails.colorScheme !== "dark" ? "bg-n-grey8" : "bg-n-light"
                 } text-center px-2 py-1 mb-3`}
               >
                 <p
@@ -237,26 +235,6 @@ hover:!border-0
 hover:bg-n-yellow
 `);
 
-const boxWrapper = ctl(`
-flex
-flex-col
-justify-between 
-shadow-lg 
-hover:shadow-xl
-cursor-pointer
-rounded-[10px] 
-bg-primary 
-md:max-w-[380px] 
-h-[400px] 
-max-w-[388px] 
-md:h-[408px] 
-px-[30px]
-pt-[30px]
-overflow-hidden
-box-wrapper
-md:ml-1
-`);
-
 const posCardHeaderStyle = ctl(`
 flex
 justify-between
@@ -269,9 +247,5 @@ grid
 gap
 place-items-center 
 `);
-
-TerminalSlider.propTypes = {
-  // slides: PropTypes.array,
-};
 
 export { TerminalSlider };
