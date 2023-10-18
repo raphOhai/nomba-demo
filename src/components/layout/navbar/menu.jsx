@@ -29,7 +29,7 @@ const Menu = ({ openMenu, onToggle }) => {
           </li>
 
           <li>
-            <Button className="md:!font-[500] md:!text-[14px]" text="Open an account" href={{ url: SIGNUP_URL }} />
+            <Button className="!font-[500] w-full !text-[14px]" text="Open an account" href={{ url: SIGNUP_URL }} />
           </li>
         </ul>
       </nav>
@@ -62,7 +62,8 @@ const buttonWrapStyle = ctl(`
   md:mb-0 
   gap-[30px]
   mb-10
-  items-center
+  items-stretch
+  lg:items-center
   menu-button-wrap
 `);
 const signInButtonStyle = ctl(`
