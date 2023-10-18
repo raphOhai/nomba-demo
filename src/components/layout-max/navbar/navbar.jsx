@@ -27,7 +27,6 @@ const NavBar = () => {
 
 const mainHeaderStlye = ctl(`
 bg-black
-fixed
 top-0
 left-0
 w-full

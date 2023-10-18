@@ -16,14 +16,14 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
 
         <div className="text-left -mt-1">
           <Ntext
-            variant="p14"
+            variant="p16"
             className="group-hover/item:!text-primary-100 "
             value={subMenuItem?.title}
             color="primary-1200"
             weight="700"
           />
           <Ntext
-            variant="p12"
+            variant="p14"
             color="primary-1200"
             className="group-hover/item:!text-primary-100 "
             value={subMenuItem?.description}
@@ -42,15 +42,8 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
 
 const subMenuDetailsStyle = ctl(`
   peer
-  px-[25px] lg:px-[13px]
-  hover:bg-primary
-  lg:hover:border
-  lg:hover:rounded-[5px]
-  border-n-grey5
-  border-b 
-  hover:border-y
+  px-[25px] lg:px-[4px]
   w-full
-  lg:border-[0px]
   submenuStyle
 `);
 const subMenuItemWrapStyle = ctl(`
@@ -58,8 +51,17 @@ const subMenuItemWrapStyle = ctl(`
   group/item
   justify-between 
   items-center 
-  lg:border-none w-full
+  border-b 
+  w-full
   py-3
+
+  lg:px-3
+  hover:bg-primary
+  lg:hover:border-n-grey5
+  lg:hover:rounded-[5px]
+  lg:border-black
+  lg:border
+  border-n-grey5
 `);
 const subMenuInnerWrapStyle = ctl(`
   flex 
@@ -69,8 +71,8 @@ const subMenuInnerWrapStyle = ctl(`
   w-full
 `);
 const iconWrapStyle = ctl(`
-  w-[20px]
-  h-[20px]
+  w-[30px]
+  h-[30px]
   flex
   items-center
   justify-center

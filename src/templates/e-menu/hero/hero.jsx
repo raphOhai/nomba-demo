@@ -78,7 +78,7 @@ const EmenuHero = () => {
   });
 
   return (
-    <section className="bg-black min-h-[100vh]  flex flex-col justify-center items-center">
+    <section className="bg-black min-h-[100vh] md:mt-[-70px]  flex flex-col justify-center items-center">
       <div className="rootLoader" id="rootLoader">
         <div class="loader-wrapper">
           <div class="loader"></div>
