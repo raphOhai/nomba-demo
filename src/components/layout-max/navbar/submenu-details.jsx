@@ -44,7 +44,7 @@ const subMenuDetailsStyle = ctl(`
   peer
   px-[25px] lg:px-[0px]
   w-full
-  submenuStyle
+  submenuStyleDark
 `);
 const subMenuItemWrapStyle = ctl(`
   flex 

@@ -179,3 +179,25 @@
     }
   }
 }
+
+.submenuStyleDark {
+  svg.menuIcon {
+    ellipse {
+      fill: #554400;
+    }
+    circle {
+      fill: #554400;
+    }
+  }
+
+  &:hover {
+    svg.menuIcon {
+      ellipse {
+        fill: #ffcc00;
+      }
+      circle {
+        fill: #ffcc00;
+      }
+    }
+  }
+}
