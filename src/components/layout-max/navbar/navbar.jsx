@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className={`${mainHeaderStlye} ${openMenu && "h-full"}`}>
+    <header className={`${mainHeaderStlye} ${openMenu && "h-full"}`} data-lenis-prevent>
       <nav className={navStyle}>
         <NLink to="/" className="mr-[55px] px-2 -ml-2">
           <Logo className="w-[94px] " />
@@ -26,9 +26,8 @@ const NavBar = () => {
 };
 
 const mainHeaderStlye = ctl(`
-lg:bg-black
-bg-primary
-
+bg-black
+fixed
 top-0
 left-0
 w-full

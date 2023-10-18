@@ -148,9 +148,9 @@ const InvoicepageHero = ({ title, description }) => {
 
 // pb-[120px]
 const heroStyle = ctl(`
-md:pt-[90px]
+md:pt-[165px]
 bg-black
-pt-[55px]
+pt-[95px]
 overflow-hidden
 md:min-h-[880px] relative
 `);
