@@ -67,7 +67,7 @@ const buttonWrapStyle = ctl(`
   menu-button-wrap
 `);
 const signInButtonStyle = ctl(`
-
+  text-center
   mb-[17px] 
   lg:mb-0
 `);
