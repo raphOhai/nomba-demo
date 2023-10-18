@@ -42,7 +42,7 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
 
 const subMenuDetailsStyle = ctl(`
   peer
-  px-[25px] lg:px-[4px]
+  px-[25px] lg:px-[0px]
   w-full
   submenuStyle
 `);
