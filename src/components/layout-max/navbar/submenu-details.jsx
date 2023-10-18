@@ -40,26 +40,26 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
   </div>
 );
 
-const subMenuItemWrapStyle = ctl(`
-  flex 
-  group/item
-  justify-between 
-  items-center   
-  border-b 
-  lg:border-none w-full
-  py-3
-`);
 const subMenuDetailsStyle = ctl(`
   peer
   px-[25px] lg:px-[13px]
   hover:bg-primary
-  lg:hover:border-n-grey5
   lg:hover:border
   lg:hover:rounded-[5px]
-  border-primary-400
+  border-n-grey5
+  border-b 
+  hover:border-y
   w-full
-  
+  lg:border-[0px]
   submenuStyle
+`);
+const subMenuItemWrapStyle = ctl(`
+  flex 
+  group/item
+  justify-between 
+  items-center 
+  lg:border-none w-full
+  py-3
 `);
 const subMenuInnerWrapStyle = ctl(`
   flex 
