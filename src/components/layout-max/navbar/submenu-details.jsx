@@ -12,55 +12,70 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
   >
     <div className={subMenuItemWrapStyle}>
       <div className={subMenuInnerWrapStyle}>
-        {subMenuItem?.icon && <span className={iconWrapStyle}>{subMenuItem.icon}</span>}
+        {subMenuItem?.iconDark && <span className={iconWrapStyle}>{subMenuItem.iconDark}</span>}
 
-        <div className="text-left">
-          <Ntext variant="p16" value={subMenuItem?.title} weight="600" />
-          <Ntext variant="p12" value={subMenuItem?.description} />
+        <div className="text-left -mt-1">
+          <Ntext
+            variant="p16"
+            className="group-hover/item:!text-primary-100 "
+            value={subMenuItem?.title}
+            color="primary-1200"
+            weight="700"
+          />
+          <Ntext
+            variant="p14"
+            color="primary-1200"
+            className="group-hover/item:!text-primary-100 "
+            value={subMenuItem?.description}
+          />
         </div>
       </div>
 
       <Arrow
         className={`lg:hidden ${
-          !subMenuItem?.subMenu
-            ? "-rotate-90"
-            : props.menuopen === props.menuindex && "rotate-180 transition-all duration-300"
+          !subMenuItem?.subMenu ? "-rotate-90" : props.menuopen === props.menuindex && "rotate-180  duration-300"
         } `}
       />
     </div>
   </div>
 );
 
-const subMenuItemWrapStyle = ctl(`
-  flex 
-  justify-between 
-  items-center   
-  border-b 
-  lg:border-none w-full
-`);
 const subMenuDetailsStyle = ctl(`
   peer
-  px-[25px] lg:px-[33px]
-  lg:hover:bg-primary-200
-  border-primary-400
+  px-[25px] lg:px-[0px]
   w-full
+  submenuStyleDark
+`);
+const subMenuItemWrapStyle = ctl(`
+  flex 
+  group/item
+  justify-between 
+  items-center 
+  border-b 
+  w-full
+  py-3
+
+  lg:px-3
+  hover:bg-primary
+  lg:hover:border-n-grey5
+  lg:hover:rounded-[5px]
+  lg:border-black
+  lg:border
+  border-n-grey5
 `);
 const subMenuInnerWrapStyle = ctl(`
   flex 
-  items-center 
+  items-start 
   gap-[13px]
   peer
   w-full
 `);
 const iconWrapStyle = ctl(`
-  bg-secondary-100
-  w-[54px]
-  h-[54px]
-  rounded-full
+  w-[30px]
+  h-[30px]
   flex
   items-center
   justify-center
-  my-[17px]
 `);
 
 export { SubMenuDetails };

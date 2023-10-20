@@ -158,3 +158,46 @@
     -o-transform: translateX(20%);
   }
 }
+.submenuStyle {
+  svg.menuIcon {
+    ellipse {
+      fill: #fff5cc;
+    }
+    circle {
+      fill: #fff5cc;
+    }
+  }
+
+  &:hover {
+    svg.menuIcon {
+      ellipse {
+        fill: #ffcc00;
+      }
+      circle {
+        fill: #ffcc00;
+      }
+    }
+  }
+}
+
+.submenuStyleDark {
+  svg.menuIcon {
+    ellipse {
+      fill: #383838;
+    }
+    circle {
+      fill: #383838;
+    }
+  }
+
+  &:hover {
+    svg.menuIcon {
+      ellipse {
+        fill: #ffcc00;
+      }
+      circle {
+        fill: #ffcc00;
+      }
+    }
+  }
+}
