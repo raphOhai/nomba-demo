@@ -4,14 +4,14 @@ import ctl from "@netlify/classnames-template-literals";
 import { useToast } from "@chakra-ui/react";
 
 const DocSection = ({ title, description, data }) => {
-  const [languageIndex, setLanguageIndex] = useState(1);
+  const [languageIndex, setLanguageIndex] = useState(0);
 
   const toast = useToast();
 
   return (
-    <section className="bg-[#38383874] md:pt-[950px] py-20 overflow-hidden">
+    <section className="bg-primary md:pt-[950px] py-20 overflow-hidden">
       <Container>
-        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  md:mt-20">
+        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  mt-20">
           <Ntext variant="h2" className="md:text-center" color="primary-100">
             {title}
           </Ntext>
@@ -21,8 +21,8 @@ const DocSection = ({ title, description, data }) => {
         </div>
 
         <div className={codeSection}>
-          <div className="p-5 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
-            <div className="  flex gap-[10px] ">
+          <div className="py-3 px-3 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
+            <div className="  flex gap-1 md:gap-[10px] ">
               {data.map((doc, i) => (
                 <div
                   className={`${langStyle} ${languageIndex == i ? activeLangStyle : ""}`}
@@ -44,7 +44,7 @@ const DocSection = ({ title, description, data }) => {
                   isClosable: true,
                 });
               }}
-              className={`${langStyle} flex gap-[10px] justify-center items-center  border border-[#555] rounded-[10px]`}
+              className={`${langStyle} flex gap-1 md:gap-[10px] justify-center items-center  border border-[#555] rounded-[10px]`}
             >
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -57,7 +57,7 @@ const DocSection = ({ title, description, data }) => {
                   />
                 </svg>
               </span>
-              <span>COPY</span>
+              <span className="hidden md:block">COPY</span>
             </div>
           </div>
           <div className=" md:p-8  p-2  h-[450px] md:h-[650px] overflow-y-scroll">
@@ -83,8 +83,10 @@ mt-[50px]
 `);
 
 const langStyle = ctl(`
-  px-5 
-  py-3 
+  md:px-5 
+  md:py-3 
+  px-4
+  py-2
   text-white 
   text-[20px] 
   leading-[30px] 
