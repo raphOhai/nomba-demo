@@ -20,6 +20,7 @@ module.exports = {
     "./src/templates/mini/**/*.{html,jsx,js}",
     "./src/templates/terminals/**/*.{html,jsx,js}",
     "./src/templates/api/**/*.{html,jsx,js}",
+    "./src/templates/checkout-page/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
