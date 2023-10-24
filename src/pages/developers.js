@@ -7,6 +7,7 @@ import { faqData, apiTestimonial, categories, apiSection } from "config/api";
 import { CommonQuestions } from "components/common-questions";
 import SeoConf from "config/seo/meta";
 import { Features, ApiHero, DocSection, SectionTwo } from "templates/api";
+import { Cart } from "components/product-checkout";
 
 const ApiPage = () => {
   useEffect(() => {
@@ -59,6 +60,9 @@ const ApiPage = () => {
 
       <GetStarted title="Get started with Nomba API today" />
       <HomepageTipsAndUpdate />
+      <div data-lenis-prevent>
+        <Cart title="Get Started With Nomba for Developer" type="Developers" />
+      </div>
     </Layout>
   );
 };

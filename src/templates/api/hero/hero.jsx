@@ -1,10 +1,13 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Br, Container, ReadMore, GetTerminal } from "components";
 import heroVideo from "jpegs/api/hero.mp4";
 import { SponsorList } from "../feature-section";
-
+import { AppContext } from "states/context";
+import { useContext } from "react";
 const ApiHero = ({ title, subtext }) => {
+  const { onOpen } = useContext(AppContext);
+
   return (
     <section className="pb-20">
       <Container>
@@ -32,7 +35,7 @@ const ApiHero = ({ title, subtext }) => {
               </Ntext>
             </div>
             <div className={heroButtonsContainer}>
-              <GetTerminal text="Get Started" type="animate-button-reverse" />
+              <GetTerminal onClick={onOpen} text="Get Started" type="animate-button-reverse" />
 
               <ReadMore
                 color="primary-100"
