@@ -22,9 +22,11 @@ export default {
 
   // WIP
   api: {
-    title: "Developer API",
+    title: "Build Scalable Solutions with Nomba APIs",
     description:
-      "Take your business to the next level with the Nomba invoice. Avoid debt in business, send online invoices and automated reminders to receive payments the easy way. Get Started Here",
+      "Nomba developer APIs offers solutions for transfers, pos terminals, payment checkout, and virtual account, empowering businesses to build customized apps and integrations",
+    keywords:
+      "Nomba developer APIs offers solutions for transfers, pos terminals, payment checkout, and virtual account, empowering businesses to build customized apps and integrations",
   },
   menu: {
     title: "Serve your customers better with Nomba Menu",

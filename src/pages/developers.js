@@ -14,7 +14,12 @@ const ApiPage = () => {
     split();
   }, []);
   return (
-    <Layout title={SeoConf.api.title} description={SeoConf.api.description} useStickyNav={false}>
+    <Layout
+      title={SeoConf.api.title}
+      description={SeoConf.api.description}
+      keywords={SeoConf.api.keywords}
+      useStickyNav={false}
+    >
       <ApiHero
         title={
           <>
