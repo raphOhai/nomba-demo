@@ -7,6 +7,7 @@ import ServiceStatus from "svgs/navbar/light/service-status.svg";
 import MenuSubmenu from "svgs/navbar/light/menu-submenu.svg";
 import Invoicing from "svgs/navbar/light/invoicing.svg";
 import Savings from "svgs/navbar/light/savings.svg";
+import Developers from "svgs/navbar/light/developers.svg";
 
 import AboutUs from "svgs/navbar/light/about-us.svg";
 import BlogIcon from "svgs/navbar/light/blog.svg";
@@ -21,6 +22,7 @@ import ServiceStatusDark from "svgs/navbar/dark/service-status.svg";
 import MenuSubmenuDark from "svgs/navbar/dark/menu-submenu.svg";
 import InvoicingDark from "svgs/navbar/dark/invoicing.svg";
 import SavingsDark from "svgs/navbar/dark/savings.svg";
+import DevelopersDark from "svgs/navbar/dark/developers.svg";
 
 import AboutUsDark from "svgs/navbar/dark/about-us.svg";
 import BlogIconDark from "svgs/navbar/dark/blog.svg";
@@ -79,6 +81,13 @@ const headerMenu = {
       icon: <Savings className="menuIcon" />,
       iconDark: <SavingsDark className="menuIcon" />,
       description: "Settle payments effortlessly",
+    },
+    {
+      title: "Developer API",
+      to: "/developers",
+      icon: <Developers className="menuIcon" />,
+      iconDark: <DevelopersDark className="menuIcon" />,
+      description: "Empower your features",
     },
   ],
 
