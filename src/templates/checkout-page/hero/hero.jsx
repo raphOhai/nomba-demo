@@ -1,37 +1,15 @@
-import React, { useEffect, createRef } from "react";
+import React, { useEffect } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import PropTypes from "prop-types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import { Container, Ntext, Button, GetTerminal } from "components";
+import { Container, Ntext, Button } from "components";
 import { BuyButton } from "../button";
-// import Lottie from "lottie-web";
-import constants from "config/constants.json";
 import { StaticImage } from "gatsby-plugin-image";
-// import mobileAnimation from "./animations/vid_fone.json";
-// import desktopAnimation from "./animations/laptopda.json";
 
 gsap.registerPlugin([ScrollTrigger]);
 const PageHero = ({ title }) => {
-  const { SIGNUP_URL } = constants;
-  // let mobileContainer = createRef();
-  // let desktopContainer = createRef();
-  // useEffect(() => {
-  //   const mobileInstance = Lottie.loadAnimation({
-  //     container: mobileContainer.current,
-  //     animationData: mobileAnimation,
-  //   });
-  //   const desktopInstance = Lottie.loadAnimation({
-  //     container: desktopContainer.current,
-  //     animationData: desktopAnimation,
-  //   });
-  //   // Return clean up function here
-  //   return () => {
-  //     desktopInstance.destroy();
-  //     mobileInstance.destroy();
-  //   };
-  // }, [mobileContainer, desktopContainer]);
   useEffect(() => {
     const titleText = new SplitType(".invoice-hero-title", { type: "chars" });
     if (window.innerWidth > 767) {
