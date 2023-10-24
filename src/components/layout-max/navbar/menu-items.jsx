@@ -44,7 +44,12 @@ const MenuItems = () => {
         {Array.isArray(navItem) ? (
           <>
             <button onKeyDown={handleKeyDown}>
-              <Ntext className={menuHeadingStyle} variant="p16" color="primary-100" value={item} />
+              <Ntext
+                className={menuHeadingStyle}
+                variant="p16"
+                color={showSubmenu === i ? "primary-100" : "primary-500"}
+                value={item}
+              />
             </button>
 
             <SubMenu items={navItem} submenuOpen={showSubmenu === i} />
@@ -85,7 +90,9 @@ const itemWrapStyle = ctl(`
 const menuHeadingStyle = ctl(`
   uppercase 
   lg:capitalize 
+  lg:group-hover:!text-primary-100
   md:font-normal 
+
   font-semibold
   tracking-[0.2em]
   lg:tracking-normal

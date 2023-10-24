@@ -4,9 +4,8 @@ import ctl from "@netlify/classnames-template-literals";
 import { Container, Ntext } from "components";
 import ExperienceTerminal from "svgs/terminal/experience-terminal.svg";
 
-import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
-
 import { IO } from "animations/observe";
+import { videoLinks } from "utils/videoLinks";
 
 const ExperienceMax = ({ title, description }) => {
   const [isHoverVid, setHoverVid] = useState(false);
@@ -73,7 +72,7 @@ const ExperienceMax = ({ title, description }) => {
             autoPlay
             muted
             playsInline
-            src={spinTerminal}
+            src={videoLinks.spinTerminal}
           ></video>
         </div>
       </Container>

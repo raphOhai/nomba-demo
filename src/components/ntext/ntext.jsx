@@ -39,6 +39,7 @@ const Ntext = ({ value, variant: textVariant, weight, color = "primary", classNa
     "readMore",
     "pricing",
     "pricingSub",
+    "pricingBig",
     "pricingMain",
     "p24",
     "p24regular",
@@ -158,6 +159,11 @@ const variants = {
   p12: `
     text-[12px]
     leading-[21.6px]
+    `,
+  p12bold: `
+    text-[12px]
+    leading-[21.6px]
+    font-medium
     `,
   text0: `
     text-[10px]
@@ -304,6 +310,15 @@ const variants = {
     md:leading-[60px]
     md:tracking-[-0.04em]
     `,
+  pricingBig: `
+    text-[30px]
+    leading-[40px]
+    tracking-[-0.03em]
+    font-[700]
+    md:text-[32px]
+    md:leading-[40px]
+    md:tracking-[-0.03em]
+    `,
   pricingMain: `
     text-[48px]
     leading-[60px]
@@ -329,6 +344,7 @@ const validElements = [
   "h6",
   "h7",
   "p12",
+  "p12bold",
   "p14",
   "p16",
   "p18",
@@ -353,6 +369,7 @@ const validElements = [
   "prosubText",
   "readMore",
   "pricing",
+  "pricingBig",
   "pricingSub",
   "pricingMain",
 ];

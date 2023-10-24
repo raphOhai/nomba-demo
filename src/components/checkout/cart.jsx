@@ -69,14 +69,14 @@ const Cart = ({ finalFocusRef }) => {
       .then(res => {
         if (res.ok) {
           moveToPayment();
-          mixpanel.track("mini - checkout - Customer has submited their info without payment", {
+          mixpanel.track("Mini_checkout_Customer_submited_info_without_payment", {
             customerData: JSON.stringify(infoWithoutPayment),
           });
         } else {
         }
       })
       .catch(err => {
-        mixpanel.track("mini - checkout - Error submiting customer info", {
+        mixpanel.track("Mini_checkout_Error_submiting_customer_info_without_payment", {
           customerData: JSON.stringify(infoWithoutPayment),
         });
         console.log(err);
@@ -99,14 +99,14 @@ const Cart = ({ finalFocusRef }) => {
       .then(res => {
         if (res.ok) {
           moveToSuccess();
-          mixpanel.track("mini - checkout - Customer submits order after payment", {
+          mixpanel.track("Mini_checkout_Customer_submits_order_after_payment", {
             customerData: JSON.stringify(customerInfoWithPayment),
           });
         } else {
         }
       })
       .catch(err => {
-        mixpanel.track("mini - checkout - Error submiting customer info after payment", {
+        mixpanel.track("Mini_checkout_Error_submiting_customer_info_after_payment", {
           customerData: JSON.stringify(customerInfoWithPayment),
         });
         console.log(err);
@@ -181,7 +181,7 @@ const Cart = ({ finalFocusRef }) => {
                     className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white"
                     onClick={() => {
                       onClose();
-                      mixpanel.track("Mini - checkout - Customer cancels order for mini", {
+                      mixpanel.track("Mini_checkout_Customer_cancels_order_for_mini", {
                         customerData: JSON.stringify(info),
                         terminals: counter.count,
                       });
@@ -197,13 +197,13 @@ const Cart = ({ finalFocusRef }) => {
                   colorScheme="yellow"
                   onClick={() => {
                     if (tabIndex === 0) {
-                      mixpanel.track("Mini - checkout - Customer goes to place their info", {
+                      mixpanel.track("Mini_checkout_Customer_place_their_info", {
                         customerData: JSON.stringify(info),
                         terminals: counter.count,
                       });
                     }
                     if (tabIndex === 1) {
-                      mixpanel.track("Mini - checkout - Customer has input their info, goes to checkout", {
+                      mixpanel.track("Mini_checkout_Customer_input_their_info_goes_to_checkout", {
                         customerData: JSON.stringify(info),
                         terminals: counter.count,
                       });

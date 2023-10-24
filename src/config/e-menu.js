@@ -8,11 +8,7 @@ export const eMenuTestimonial = [
     name: "Adeuche",
     role: "Co-founder & CEO Randle Inc",
     image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/invoice/testimonials/image1.png"
-        loading="lazy"
-      />
+      <StaticImage alt="Testimonial Image" src="../assets/images/jpegs/e-menu/testimonials/image1.png" loading="lazy" />
     ),
   },
 ];
@@ -41,7 +37,7 @@ export const businessTool = [
     image: (
       <StaticImage
         alt="Robust Menu"
-        src="../assets/images/jpegs/e-menu/section4/page2.png"
+        src="../assets/images/jpegs/e-menu/section4/page2.webp"
         width={482}
         height={474}
         className="md:my-10"

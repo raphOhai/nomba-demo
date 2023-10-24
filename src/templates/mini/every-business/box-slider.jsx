@@ -68,7 +68,7 @@ const BoxSlider = ({ slides }) => {
     <>
       <div className="flex justify-start gap-7 mt-[50px] items-center flex-nowrap flex-row scrollbar-hide overflow-auto box-slider slider-margin-left">
         {slides.map((item, i) => (
-          <Box key={i} className={`box-panel-${i}`} image={item.image} mobileImage={item.mobileImage} />
+          <Box key={i} className={`box-panel box-panel-${i}`} image={item.image} mobileImage={item.mobileImage} />
         ))}
       </div>
     </>

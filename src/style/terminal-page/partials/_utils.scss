@@ -1,7 +1,7 @@
 .animate-button {
   width: auto;
   color: $light-txt-1;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 8px;
   @include flex(center, center, 1rem);
   border: 1px solid $yellow;
@@ -39,7 +39,7 @@
 .animate-button-reverse {
   width: auto;
   color: $black;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 8px;
   @include flex(center, center, 1rem);
   border: 1px solid $yellow;
@@ -73,7 +73,13 @@
     // color: $black;
   }
 }
-
+.keep-dark {
+  svg {
+    path {
+      stroke: $black !important;
+    }
+  }
+}
 .mq {
   // filter: grayscale(100%);
   padding: 5rem 0;
@@ -150,5 +156,48 @@
     -moz-transform: translateX(20%);
     -ms-transform: translateX(20%);
     -o-transform: translateX(20%);
+  }
+}
+.submenuStyle {
+  svg.menuIcon {
+    ellipse {
+      fill: #fff5cc;
+    }
+    circle {
+      fill: #fff5cc;
+    }
+  }
+
+  &:hover {
+    svg.menuIcon {
+      ellipse {
+        fill: #ffcc00;
+      }
+      circle {
+        fill: #ffcc00;
+      }
+    }
+  }
+}
+
+.submenuStyleDark {
+  svg.menuIcon {
+    ellipse {
+      fill: #383838;
+    }
+    circle {
+      fill: #383838;
+    }
+  }
+
+  &:hover {
+    svg.menuIcon {
+      ellipse {
+        fill: #ffcc00;
+      }
+      circle {
+        fill: #ffcc00;
+      }
+    }
   }
 }

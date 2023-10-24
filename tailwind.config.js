@@ -7,6 +7,7 @@ module.exports = {
     "./src/pages/banking/*.{js,jsx}",
     "./src/pages/business/*.{js,jsx}",
     "./src/pages/mini.js",
+    "./src/pages/terminals.js",
     "./src/components/**/*.{html,jsx,js}",
     "./src/templates/about-us/**/*.{html,jsx,js}",
     "./src/templates/banking/**/*.{html,jsx,js}",
@@ -17,7 +18,9 @@ module.exports = {
     "./src/templates/invoice/**/*.{html,jsx,js}",
     "./src/templates/e-menu/**/*.{html,jsx,js}",
     "./src/templates/mini/**/*.{html,jsx,js}",
+    "./src/templates/terminals/**/*.{html,jsx,js}",
     "./src/templates/api/**/*.{html,jsx,js}",
+    "./src/templates/checkout-page/**/*.{html,jsx,js}",
   ],
   mode: "jit",
   theme: {
@@ -49,6 +52,7 @@ module.exports = {
           900: "#444444",
           1000: "#1F1F1F",
           1100: "#171616",
+          1200: "#8C8C8C",
         },
         secondary: {
           DEFAULT: "#FFCC00",
@@ -92,6 +96,7 @@ module.exports = {
           grey5: "#555555",
           grey6: "#383838",
           grey7: "#828282",
+          grey8: "#1A1A1A",
           grey10: "rgba(217, 217, 217, 0.15)",
           dark: "#121212",
           red: "#ff2200",
@@ -130,7 +135,8 @@ module.exports = {
       },
 
       boxShadow: {
-        subMenu: " 0px 4px 100px rgba(41, 45, 50, 0.09)",
+        subMenu: "0px 8px 20px 0px rgba(196, 196, 196, 0.30)",
+        subMenuDark: "0px 4px 10px 0px rgba(0, 0, 0, 0.10)",
       },
 
       keyframes: {

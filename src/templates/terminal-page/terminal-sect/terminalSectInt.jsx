@@ -3,12 +3,11 @@ import "./index.scss";
 import { Br } from "components/br";
 import ExperienceTerminal from "assets/images/svgs/terminal/experience-terminal.svg";
 import { StaticImage } from "gatsby-plugin-image";
-import spinTerminal from "assets/images/svgs/terminal/spin.mp4";
-import TerminalPrint from "assets/images/svgs/terminal/Comp.mp4";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useIsMobile from "hooks/useIsMobile";
 import { IO } from "animations/observe";
+import { videoLinks } from "utils/videoLinks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,7 +104,7 @@ const TerminalSectionInteractions = () => {
           autoPlay
           muted
           playsInline
-          src={spinTerminal}
+          src={videoLinks.spinTerminal}
         ></video>
         <div className="c_terminal_sectInt_experience_txt">
           <h1 data-animation="h">
@@ -137,7 +136,7 @@ const TerminalSectionInteractions = () => {
           Get ahead with the power of <Br on="desktop" /> Nomba MAX!
         </h1>
         <div className="c_terminal_sectInt_print_fl">
-          <video autoPlay playsInline muted src={TerminalPrint}></video>
+          <video autoPlay playsInline muted src={videoLinks.Comp}></video>
           <div className="c_terminal_sectInt_print_fl_features">
             <div className="c_feature">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

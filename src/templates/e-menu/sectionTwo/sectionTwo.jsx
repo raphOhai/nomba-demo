@@ -158,7 +158,7 @@ const EmenuSection2 = () => {
           <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image md:hidden">
             <StaticImage
               alt="Iphone with hand"
-              src="../../../assets/images/jpegs/e-menu/iPhone-with-hand2.png"
+              src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.webp"
               width={336}
               height={464}
             />
@@ -166,7 +166,7 @@ const EmenuSection2 = () => {
           <div class="relative max-w-[728px] with-hand mt-[32px] section-three-image hidden md:block">
             <StaticImage
               alt="iphone in hand"
-              src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.png"
+              src="../../../assets/images/jpegs/e-menu/iPhone-with-hand.webp"
               width={718}
               height={796}
             />
