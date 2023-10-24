@@ -11,7 +11,7 @@ import { Features, ApiHero, DocSection, SectionTwo } from "templates/api";
 const ApiPage = () => {
   useEffect(() => {
     split();
-  });
+  }, []);
   return (
     <Layout title={SeoConf.api.title} description={SeoConf.api.description} useStickyNav={false}>
       <ApiHero

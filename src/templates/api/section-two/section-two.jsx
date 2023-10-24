@@ -4,7 +4,6 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { StaticImage } from "gatsby-plugin-image";
 import CheckoutApi from "jpegs/api/icons/n-icons/checkout.svg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -134,17 +133,17 @@ const SectionTwo = ({ title, description, data }) => {
                 </div>
                 {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
                 <div className={cardInnerWrapper}>
-                  <div className="flex items-center gap-[20px]">
+                  <div className="flex items-center gap-[12px]">
                     {s.icon}
-                    <Ntext variant="text5" color="primary-100">
+                    <Ntext variant="text4" color="primary-100">
                       {s.title}
                     </Ntext>
                   </div>
                   <div className="flex flex-col gap-4">
-                    <Ntext variant="text3" color="m-light">
+                    <Ntext variant="text2" color="m-light">
                       {s.description}
                     </Ntext>
-                    {i !== 2 ? (
+                    {i !== 3 ? (
                       <ReadMore color="secondary" variant="text2" href={{ url: s.link }} text="Learn more" />
                     ) : (
                       <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
@@ -164,14 +163,14 @@ const SectionTwo = ({ title, description, data }) => {
               ></div>
               {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
               <div className={cardInnerWrapper}>
-                <div className="flex items-center gap-[20px]">
+                <div className="flex items-center gap-[12px]">
                   <CheckoutApi />
-                  <Ntext variant="text5" color="primary-100">
+                  <Ntext variant="text4" color="primary-100">
                     Checkout API
                   </Ntext>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Ntext variant="text3" color="m-light">
+                  <Ntext variant="text2" color="m-light">
                     Process and manage your payments easily and securely wherever you are.
                   </Ntext>
                   <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
@@ -256,12 +255,13 @@ const SectionTwo = ({ title, description, data }) => {
 
 const cardWrapStyle = ctl(`
 relative
-md:w-[400px] 
+md:w-[300px] 
 w-full
 h-[200px]
 border-n-grey5 
 bg-primary
 border circle
+cursor-pointer
 rounded-[10px]
 `);
 
@@ -273,7 +273,7 @@ gap-[16px]
 absolute
 md:justify-around
 justify-center
-pl-10
+px-5
 py-5
 md:py-7
 max-w-[340px]

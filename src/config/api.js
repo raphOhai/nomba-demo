@@ -10,19 +10,16 @@ import TransferToActive from "jpegs/api/icons/transfer-active.svg";
 
 import VirtualAccountAPI from "jpegs/api/icons/n-icons/virtual-account.svg";
 import TransferApi from "jpegs/api/icons/n-icons/transfer-api.svg";
+import TerminalApi from "jpegs/api/icons/n-icons/terminal-api.svg";
 import CheckoutApi from "jpegs/api/icons/n-icons/checkout.svg";
 export const apiTestimonial = [
   {
     testimonial:
-      "Nomba's invoicing system has made it possible for me to collect and reconcile payments from my retailers. I can easily share and set reminders which makes it easy for them to remember.",
-    name: "Mrs Unekwu",
-    role: "Co-founder & CEO Randle Inc",
+      "Nomba's Developer API system has made it possible for me to   collect and reconcile payments from my retailers. I can easily share and set reminders which makes it easy for them to remember.",
+    name: "Mr Paul",
+    role: "Co-founder",
     image: (
-      <StaticImage
-        alt="Testimonial Image"
-        src="../assets/images/jpegs/invoice/testimonials/image1.png"
-        loading="lazy"
-      />
+      <StaticImage alt="Testimonial Image" src="../assets/images/jpegs/api/testimonials/image.png" loading="lazy" />
     ),
   },
 ];
@@ -154,6 +151,19 @@ export const apiSection = [
       />
     ),
     link: "https://docs.nomba.com/api#/operations/Fetch%20bank%20codes%20and%20names",
+  },
+  {
+    title: "Terminal API",
+    description: "Empower your features and products with our Developer API.",
+    icon: <TerminalApi />,
+    image: (
+      <StaticImage
+        alt="Temp Doc"
+        className=" rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/terminal-api.png"
+      />
+    ),
+    link: "https://docs.nomba.com/api#/operations/Assign%20terminal%20to%20an%20account",
   },
   // {
   //   title: "Checkout API",
