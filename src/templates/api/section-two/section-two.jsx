@@ -1,15 +1,20 @@
 import ctl from "@netlify/classnames-template-literals";
-import { Container, Ntext, ReadMore } from "components";
+import { Container, Ntext } from "components";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import CheckoutApi from "jpegs/api/icons/n-icons/checkout.svg";
+import { ProductModal } from "components/product-modal/product-modal";
+import { ReadMore } from "../read-more";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const SectionTwo = ({ title, description, data }) => {
   const comp = useRef(); // create a ref for the root level element (for scoping)
   const [currentLabel, setCurrentLabel] = useState(0);
+  const [show, setShow] = useState(false);
+
+  const [currentFeature, setCurrentFeature] = useState(data[0]);
 
   function calculateNormalizedPercentage(value, lowerBound, upperBound, dom) {
     const normalizedPercentage = ((value - lowerBound) / (upperBound - lowerBound)) * 100;
@@ -20,6 +25,11 @@ const SectionTwo = ({ title, description, data }) => {
     }
     return `${normalizedPercentage}%`;
   }
+  const showModal = d => {
+    setCurrentFeature(d);
+
+    setShow(!show);
+  };
   useLayoutEffect(() => {
     function initLayout() {
       /**
@@ -112,79 +122,22 @@ const SectionTwo = ({ title, description, data }) => {
   }, [data]);
 
   return (
-    <section className="bg-[#38383874] pt-20 ">
-      <Container>
-        <div className="md:max-w-[819px] md:mx-auto  text-center md:mt-12 mb-7">
-          <Ntext variant="h2" className="md:text-center" color="primary-100">
-            {title}
-          </Ntext>
-          <Ntext variant="text3" className="md:px-5 mt-[28px]" color="primary-500">
-            {description}
-          </Ntext>
-        </div>
-        <div ref={comp} className="md:min-h-[940px] min-h-[400px] overflow-y-hidden">
-          <div className="flex justify-between section-nav-link ">
-            {data.map((s, i) => (
-              <div key={s.title} className={`${cardWrapStyle} hidden md:block`}>
-                <div
-                  className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all duration-75 `}
-                >
-                  {" "}
-                </div>
-                {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
-                <div className={cardInnerWrapper}>
-                  <div className="flex items-center gap-[12px]">
-                    {s.icon}
-                    <Ntext variant="text4" color="primary-100">
-                      {s.title}
-                    </Ntext>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <Ntext variant="text2" color="m-light">
-                      {s.description}
-                    </Ntext>
-                    {i !== 3 ? (
-                      <ReadMore color="secondary" variant="text2" href={{ url: s.link }} text="Learn more" />
-                    ) : (
-                      <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
-                        Coming soon
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Checkout API - coming soon */}
-
-            <div className={`${cardWrapStyle} hidden md:block`}>
-              <div
-                className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
-              ></div>
-              {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
-              <div className={cardInnerWrapper}>
-                <div className="flex items-center gap-[12px]">
-                  <CheckoutApi />
-                  <Ntext variant="text4" color="primary-100">
-                    Checkout API
-                  </Ntext>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <Ntext variant="text2" color="m-light">
-                    Process and manage your payments easily and securely wherever you are.
-                  </Ntext>
-                  <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
-                    Coming soon
-                  </div>
-                </div>
-              </div>
-            </div>
+    <>
+      <ProductModal show={show} setShow={setShow} data={currentFeature} />
+      <section className="bg-n-grey6/40 pt-20 ">
+        <Container>
+          <div className="md:max-w-[819px] md:mx-auto  text-center md:mt-12 mb-7">
+            <Ntext variant="h2" className="md:text-center" color="primary-100">
+              {title}
+            </Ntext>
+            <Ntext variant="text3" className="md:px-5 mt-[28px]" color="primary-500">
+              {description}
+            </Ntext>
           </div>
-
-          <div className="relative">
-            {data.map((t, i) => (
-              <>
-                <div key={t.title} className={`${cardWrapStyle} md:hidden `}>
+          <div ref={comp} className="md:min-h-[940px] min-h-[400px] overflow-y-hidden">
+            <div className="flex justify-between section-nav-link ">
+              {data.map((s, i) => (
+                <div key={s.description} className={`${cardWrapStyle} hidden md:block`}>
                   <div
                     className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all duration-75 `}
                   >
@@ -192,64 +145,139 @@ const SectionTwo = ({ title, description, data }) => {
                   </div>
                   {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
                   <div className={cardInnerWrapper}>
-                    <div className="flex items-center gap-[20px]">
-                      {t.icon}
-                      <Ntext variant="text5" color="primary-100">
-                        {t.title}
+                    <div className="flex items-center gap-[12px]">
+                      {s.icon}
+                      <Ntext variant="text4" color="primary-100">
+                        {s.title}
                       </Ntext>
                     </div>
-                    <div className="flex flex-col gap-4">
-                      <Ntext variant="text3" color="m-light">
-                        {t.description}
+                    <div className="flex flex-col items-start gap-4">
+                      <Ntext variant="text2" color="m-light">
+                        {s.description}
                       </Ntext>
-                      {i !== 2 ? (
-                        <ReadMore color="secondary" variant="text2" href={{ url: t.link }} text="Learn more" />
+                      {i !== 3 ? (
+                        <div>
+                          <ReadMore
+                            onClick={() => showModal(s)}
+                            color="secondary"
+                            variant="text2"
+                            text="Learn more"
+                            className={"text-left"}
+                            data={s}
+                          />
+                        </div>
                       ) : (
-                        <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                        <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
                           Coming soon
                         </div>
                       )}
                     </div>
                   </div>
                 </div>
-                <div
-                  key={t.title}
-                  className={`mt-5 mb-20 md:mb-0 md:mt-10  md:opacity-0 md:max-h-[680px] overflow-y-hidden transition-opacity duration-1000  section-two-rect-card-no-${i} md:absolute md:top-7`}
-                >
-                  {t.image}
-                </div>
-              </>
-            ))}
+              ))}
 
-            {/* Checkout Api coming soon */}
-            <div className={`${cardWrapStyle} md:hidden mb-5 md:mb-0 `}>
-              <div
-                className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
-              >
-                {" "}
-              </div>
-              {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
-              <div className={cardInnerWrapper}>
-                <div className="flex items-center gap-[20px]">
-                  <CheckoutApi />
-                  <Ntext variant="text5" color="primary-100">
-                    Checkout API
-                  </Ntext>
+              {/* Checkout API - coming soon */}
+
+              <div className={`${cardWrapStyle} hidden md:block`}>
+                <div
+                  className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
+                ></div>
+                {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
+                <div className={cardInnerWrapper}>
+                  <div className="flex items-center gap-[12px]">
+                    <CheckoutApi />
+                    <Ntext variant="text4" color="primary-100">
+                      Checkout API
+                    </Ntext>
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <Ntext variant="text2" color="m-light">
+                      Process and manage your payments easily and securely wherever you are.
+                    </Ntext>
+                    <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
+                      Coming soon
+                    </div>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-4">
-                  <Ntext variant="text3" color="m-light">
-                    Process and manage your payments easily and securely wherever you are.
-                  </Ntext>
-                  <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
-                    Coming soon
+              </div>
+            </div>
+
+            <div className="relative">
+              {data.map((t, i) => (
+                <>
+                  <div key={t.subText} className={`${cardWrapStyle} md:hidden `}>
+                    <div
+                      className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-${i} transition-all duration-75 `}
+                    >
+                      {" "}
+                    </div>
+                    {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
+                    <div className={cardInnerWrapper}>
+                      <div className="flex items-center gap-[20px]">
+                        {t.icon}
+                        <Ntext variant="text5" color="primary-100">
+                          {t.title}
+                        </Ntext>
+                      </div>
+                      <div className="flex flex-col gap-4">
+                        <Ntext variant="text3" color="m-light">
+                          {t.description}
+                        </Ntext>
+                        {i !== 2 ? (
+                          <ReadMore
+                            onClick={() => showModal(t)}
+                            color="secondary"
+                            variant="text2"
+                            text="Learn more"
+                            className={"text-left"}
+                          />
+                        ) : (
+                          <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                            Coming soon
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    key={t.cta}
+                    className={`mt-5 mb-20 md:mb-0 md:mt-10  md:opacity-0 md:max-h-[680px] overflow-y-hidden transition-opacity duration-1000  section-two-rect-card-no-${i} md:absolute md:top-7`}
+                  >
+                    {t.image}
+                  </div>
+                </>
+              ))}
+
+              {/* Checkout Api coming soon */}
+              <div className={`${cardWrapStyle} md:hidden mb-5 md:mb-0 `}>
+                <div
+                  className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
+                >
+                  {" "}
+                </div>
+                {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
+                <div className={cardInnerWrapper}>
+                  <div className="flex items-center gap-[20px]">
+                    <CheckoutApi />
+                    <Ntext variant="text5" color="primary-100">
+                      Checkout API
+                    </Ntext>
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <Ntext variant="text3" color="m-light">
+                      Process and manage your payments easily and securely wherever you are.
+                    </Ntext>
+                    <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                      Coming soon
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </>
   );
 };
 

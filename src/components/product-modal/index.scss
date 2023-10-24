@@ -1,0 +1,50 @@
+.modal_container {
+  height: 100vh;
+  z-index: 50;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: brightness(12%);
+  padding: 2rem 0;
+  display: none;
+  .modal_body {
+    width: 960px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 1rem 2.4rem 4rem 2.4rem;
+    @include flex_col(1rem);
+    align-items: start;
+    transform: scale(0.8);
+    @include media("<=tablet") {
+      width: 90%;
+    }
+    @include media("<=phone-tab") {
+      background-size: cover;
+      @include flex_col(1rem);
+      width: 100%;
+      transform: scale(0.9);
+      padding: 3rem 2rem;
+    }
+    svg {
+      @include media("<=phone-tab") {
+        width: 8rem;
+      }
+    }
+    &_txt {
+      @include flex_col(1rem);
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+        color: #707070;
+      }
+    }
+  }
+}
+.shew {
+  display: block;
+}

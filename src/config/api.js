@@ -7,6 +7,8 @@ import Checkout from "jpegs/api/icons/checkout.svg";
 import WebHookActive from "jpegs/api/icons/asterisk-active.svg";
 import TransferTo from "jpegs/api/icons/transfer.svg";
 import TransferToActive from "jpegs/api/icons/transfer-active.svg";
+import Terminal from "jpegs/api/icons/terminal.svg";
+import TerminalActive from "jpegs/api/icons/terminal-active.svg";
 
 import VirtualAccountAPI from "jpegs/api/icons/n-icons/virtual-account.svg";
 import TransferApi from "jpegs/api/icons/n-icons/transfer-api.svg";
@@ -137,6 +139,28 @@ export const apiSection = [
         src="../assets/images/jpegs/api/virtual-account.png"
       />
     ),
+    modalImage: (
+      <StaticImage
+        alt="Temp Doc"
+        width={890}
+        height={160}
+        className="  rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/modal/virtual-account.png"
+      />
+    ),
+    cta: "Go to Virtual Account Docs",
+    subText: (
+      <>
+        In the world of modern business, efficiency and flexibility in financial management are paramount. The Virtual
+        Account API is your gateway to streamlined finances, empowering founders and business owners to optimize their
+        operations. Virtual accounts, though not physical entities, provide a digital means to segregate, monitor, and
+        manage funds precisely tailored to your business needs.
+        <Br on="all" />
+        <Br on="all" />
+        By integrating the Virtual Account API, you unlock a host of benefits: enhanced funds management, real-time
+        monitoring, customization, top-tier security, simplified transactions, and compliance assurance.
+      </>
+    ),
     link: "https://docs.nomba.com/api#/operations/List%20all%20accounts",
   },
   {
@@ -150,6 +174,30 @@ export const apiSection = [
         src="../assets/images/jpegs/api/transfer.png"
       />
     ),
+    modalImage: (
+      <StaticImage
+        alt="Temp Doc"
+        width={890}
+        height={160}
+        className=" rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/modal/transfer-api.png"
+      />
+    ),
+    cta: "Go to Transfer Docs",
+    subText: (
+      <>
+        Transfer APIs are the digital pathways that facilitate the seamless movement of funds, whether it's for payroll,
+        supplier payments, or international transactions. They empower businesses of all sizes to revolutionize their
+        financial operations, bringing with them a multitude of benefits that can redefine the way you conduct your
+        business.
+        <Br on="all" />
+        <Br on="all" />
+        Our Transfer APIs offer a range of remarkable advantages, from lightning-fast transaction speeds to reduced
+        costs associated with traditional methods. These APIs break down the barriers that previously hindered smooth
+        financial operations. With the power of our Transfer API, you can connect with your customers, improve their
+        experience, and expand your business globally.
+      </>
+    ),
     link: "https://docs.nomba.com/api#/operations/Fetch%20bank%20codes%20and%20names",
   },
   {
@@ -162,6 +210,30 @@ export const apiSection = [
         className=" rounded-lg md:rounded-2xl"
         src="../assets/images/jpegs/api/terminal-api.png"
       />
+    ),
+    cta: "Go to Terminal Docs",
+    modalImage: (
+      <StaticImage
+        alt="Temp Doc"
+        width={890}
+        height={160}
+        className=" rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/modal/terminal-api.png"
+      />
+    ),
+    subText: (
+      <>
+        In today's rapidly evolving business landscape, the efficiency and effectiveness of payment processing are
+        crucial to your success. Enter "Our Terminal API," the solution designed to supercharge your payment
+        capabilities. With this powerful tool, you can seamlessly integrate payment processing into your applications,
+        allowing your business to accept payments in-person, online, or through mobile devices with ease.
+        <Br on="all" />
+        <Br on="all" />
+        Our Terminal API streamlines the payment process, providing a comprehensive solution that enhances the customer
+        experience, reduces transaction times, and ensures the security of every payment. Whether you're a startup
+        founder or a seasoned business owner, this API opens up a world of possibilities, enabling your business to
+        reach new heights in the digital economy.
+      </>
     ),
     link: "https://docs.nomba.com/api#/operations/Assign%20terminal%20to%20an%20account",
   },
@@ -374,7 +446,76 @@ if ($err) {
       },
     ],
   },
+  {
+    name: "Terminal",
+    slug: "terminal",
+    icon: <Terminal />,
+    icon_active: <TerminalActive />,
+    docs: [
+      {
+        language: "js",
+        label: "Node.js",
+        snippet: `const axios = require('axios').default;
+        
+const options = {
+  method: 'POST',
+  url: 'https://api.nomba.com/v1/terminals/assign/2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d',  headers: {
+    accountId: '2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d',
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    Authorization: 'Bearer ...'
+  },
+  data: {serialNumber: '55555555', terminalLabel: 'Testing'}
+};
 
+try {
+  const { data } = await axios.request(options);
+  console.log(data);
+} catch (error) {
+  console.error(error);
+}
+        `,
+      },
+      {
+        language: "js",
+        label: "PHP",
+        snippet: `<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.nomba.com/v1/terminals/assign/2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => json_encode([
+    'serialNumber' => '55555555',
+    'terminalLabel' => 'Testing'
+  ]),
+  CURLOPT_HTTPHEADER => [
+    "Accept: application/json",
+    "Authorization: Bearer ...",
+    "Content-Type: application/json",
+    "accountId: 2242b79d-f2cf-4ccc-ada1-e890bd1a9f0d"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}`,
+      },
+    ],
+  },
   {
     name: "Checkout",
     slug: "checkout",

@@ -121,7 +121,7 @@ disabled:text-primary
   blackCta: `
 bg-primary
 hover:bg-n-gray-7
-text-white
+!text-white
 `,
 };
 
