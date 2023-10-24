@@ -118,6 +118,11 @@ hover:text-primary-100
 disabled:bg-primary-400
 disabled:text-primary
 `,
+  blackCta: `
+bg-primary
+hover:bg-n-gray-7
+!text-white
+`,
 };
 
 Button.defaultProps = {
@@ -128,7 +133,7 @@ Button.defaultProps = {
 Button.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,
-  variant: PropTypes.oneOf(["primary", "alternative"]),
+  variant: PropTypes.oneOf(["primary", "alternative", "blackCta"]),
   size: PropTypes.oneOf(["xsmall", "small", "medium", "large", "xlarge"]),
   href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   to: PropTypes.string,

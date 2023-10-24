@@ -193,6 +193,7 @@ const variants = {
     md:text-[20px]
     md:leading-[30px]
     text-[16px]
+    tracking-[-0.4px]
     `,
   text4: `
     font-[700]

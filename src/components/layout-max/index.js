@@ -16,6 +16,7 @@ const Layout = ({
   children,
   description,
   title,
+  keywords = "",
   ignoreSiteName = false,
   defaultStyle = true,
   useStickyNav = true,
@@ -24,7 +25,7 @@ const Layout = ({
   return (
     <ContextWrapper>
       <div className="main-container bg-black">
-        <Seo title={title} description={description} ignoreSiteName={ignoreSiteName} />
+        <Seo title={title} description={description} ignoreSiteName={ignoreSiteName} keywords={keywords} />
         <NavBar />
         <main>{children}</main>
         {useStickyNav && <FixedBar terminalIndex={index} />}

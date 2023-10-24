@@ -1,15 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;1,300;1,400;1,500&display=swap");
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #657b83; /* base00 */
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-
-  line-height: 1.5;
+  line-height: 2;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;

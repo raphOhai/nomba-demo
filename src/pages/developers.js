@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import Layout from "components/layout-max";
 import { Br, Testimonial, GetStarted } from "components";
 import { HomepageTipsAndUpdate } from "templates";
@@ -8,13 +7,19 @@ import { faqData, apiTestimonial, categories, apiSection } from "config/api";
 import { CommonQuestions } from "components/common-questions";
 import SeoConf from "config/seo/meta";
 import { Features, ApiHero, DocSection, SectionTwo } from "templates/api";
+import { Cart } from "components/product-checkout";
 
 const ApiPage = () => {
   useEffect(() => {
     split();
-  });
+  }, []);
   return (
-    <Layout title={SeoConf.api.title} description={SeoConf.api.description} useStickyNav={false}>
+    <Layout
+      title={SeoConf.api.title}
+      description={SeoConf.api.description}
+      keywords={SeoConf.api.keywords}
+      useStickyNav={false}
+    >
       <ApiHero
         title={
           <>
@@ -60,6 +65,9 @@ const ApiPage = () => {
 
       <GetStarted title="Get started with Nomba API today" />
       <HomepageTipsAndUpdate />
+      <div data-lenis-prevent>
+        <Cart title="Get Started With Nomba for Developer" type="Developers" />
+      </div>
     </Layout>
   );
 };

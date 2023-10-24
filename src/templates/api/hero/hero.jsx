@@ -1,11 +1,12 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Br, Container, ReadMore, GetTerminal } from "components";
-import ApiLogo from "jpegs/api/api-logo.svg";
-import ApiLogoMobile from "jpegs/api/api-logo-mobile.svg";
+import heroVideo from "jpegs/api/hero.mp4";
 import { SponsorList } from "../feature-section";
-
+import { AppContext } from "states/context";
 const ApiHero = ({ title, subtext }) => {
+  const { onOpen } = useContext(AppContext);
+
   return (
     <section className="pb-20">
       <Container>
@@ -33,7 +34,7 @@ const ApiHero = ({ title, subtext }) => {
               </Ntext>
             </div>
             <div className={heroButtonsContainer}>
-              <GetTerminal text="Get Started" type="animate-button-reverse" />
+              <GetTerminal onClick={onOpen} text="Get Started" type="animate-button-reverse" />
 
               <ReadMore
                 color="primary-100"
@@ -42,14 +43,37 @@ const ApiHero = ({ title, subtext }) => {
                 defaultStyle={false}
                 variant="text3"
                 extraTrackText="Documentation"
-                href={{ url: "tel:+23401888899" }}
+                href={{ url: "https://docs.nomba.com" }}
                 text="Documentation"
               />
             </div>
           </div>
           <div>
-            <ApiLogo className="hidden md:block" />
-            <ApiLogoMobile className="md:hidden mt-10" />
+            {/* <ApiLogo className="hidden md:block" />
+            <ApiLogoMobile className="md:hidden mt-10" /> */}
+
+            <video
+              src={heroVideo}
+              controls={false}
+              className="hidden md:block"
+              muted
+              playsInline
+              autoPlay
+              loop
+              width={516}
+              height={516}
+            ></video>
+            <video
+              src={heroVideo}
+              controls={false}
+              className="md:hidden mt-10"
+              muted
+              playsInline
+              autoPlay
+              loop
+              width={300}
+              height={300}
+            ></video>
           </div>
         </div>
         <div className="text-center">
