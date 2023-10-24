@@ -52,7 +52,7 @@ function ProductModal({ show = false, setShow, data, ...props }) {
           <Button
             variant="blackCta"
             href={{ url: data.link }}
-            className="!font-medium !text-[16px] !min-w-[200px] "
+            className="!font-medium !text-[16px] !min-w-[250px] "
             text={data.cta}
             withArrow={false}
           />
