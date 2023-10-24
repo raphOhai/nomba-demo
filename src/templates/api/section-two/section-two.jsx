@@ -223,7 +223,7 @@ const SectionTwo = ({ title, description, data }) => {
                         <Ntext variant="text3" color="m-light">
                           {t.description}
                         </Ntext>
-                        {i !== 2 ? (
+                        {i !== 3 ? (
                           <ReadMore
                             onClick={() => showModal(t)}
                             color="secondary"
