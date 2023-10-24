@@ -151,7 +151,7 @@ const SectionTwo = ({ title, description, data }) => {
                         {s.title}
                       </Ntext>
                     </div>
-                    <div className="flex flex-col items-start gap-4">
+                    <div className="flex flex-col items-start gap-[10px]">
                       <Ntext variant="text2" color="m-light">
                         {s.description}
                       </Ntext>
@@ -167,7 +167,7 @@ const SectionTwo = ({ title, description, data }) => {
                           />
                         </div>
                       ) : (
-                        <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
+                        <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
                           Coming soon
                         </div>
                       )}
@@ -190,11 +190,14 @@ const SectionTwo = ({ title, description, data }) => {
                       Checkout API
                     </Ntext>
                   </div>
-                  <div className="flex flex-col gap-4">
+                  <div
+                    className="flex flex-col gap-[10px]
+"
+                  >
                     <Ntext variant="text2" color="m-light">
                       Process and manage your payments easily and securely wherever you are.
                     </Ntext>
-                    <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
+                    <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
                       Coming soon
                     </div>
                   </div>
@@ -219,7 +222,10 @@ const SectionTwo = ({ title, description, data }) => {
                           {t.title}
                         </Ntext>
                       </div>
-                      <div className="flex flex-col gap-4">
+                      <div
+                        className="flex flex-col gap-[10px]
+"
+                      >
                         <Ntext variant="text3" color="m-light">
                           {t.description}
                         </Ntext>
@@ -232,7 +238,7 @@ const SectionTwo = ({ title, description, data }) => {
                             className={"text-left"}
                           />
                         ) : (
-                          <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                          <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
                             Coming soon
                           </div>
                         )}
@@ -263,11 +269,14 @@ const SectionTwo = ({ title, description, data }) => {
                       Checkout API
                     </Ntext>
                   </div>
-                  <div className="flex flex-col gap-4">
+                  <div
+                    className="flex flex-col gap-[10px]
+"
+                  >
                     <Ntext variant="text3" color="m-light">
                       Process and manage your payments easily and securely wherever you are.
                     </Ntext>
-                    <div className="text-n-yellow px-4 py-[6px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
+                    <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
                       Coming soon
                     </div>
                   </div>
@@ -285,7 +294,7 @@ const cardWrapStyle = ctl(`
 relative
 md:w-[300px] 
 w-full
-h-[200px]
+h-[160px]
 border-n-grey5 
 bg-primary
 border circle
@@ -297,13 +306,13 @@ const cardInnerWrapper = ctl(`
 flex 
 flex-col 
 z-10
-gap-[16px]
+gap-[10px]
 absolute
 md:justify-around
 justify-center
 px-5
 py-5
-md:py-7
+md:py-5
 max-w-[340px]
 
 `);

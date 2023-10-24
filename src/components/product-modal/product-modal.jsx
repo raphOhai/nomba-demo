@@ -45,14 +45,14 @@ function ProductModal({ show = false, setShow, data, ...props }) {
         <div className={heroButtonsContainer}>
           <GetTerminal
             type="animate-button-reverse"
-            className={"!font-medium !text-[16px]"}
+            className={"!rounded-[5px] !font-medium !text-[16px]"}
             text={"Get Started"}
             onClick={onOpen}
           />
           <Button
             variant="blackCta"
             href={{ url: data.link }}
-            className="!font-medium !text-[16px] !min-w-[250px] "
+            className="!font-medium !text-[16px] !min-w-[250px] !h-[48px] "
             text={data.cta}
             withArrow={false}
           />
@@ -68,8 +68,7 @@ flex-col
 md:flex-row
 md:items-center
 gap-[30px]
-mb-5
-mt-10
+mt-[38px]
 w-full items-stretch 
 `);
 
