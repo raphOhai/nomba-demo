@@ -4,7 +4,6 @@ import { Ntext, Br, Container, ReadMore, GetTerminal } from "components";
 import heroVideo from "jpegs/api/hero.mp4";
 import { SponsorList } from "../feature-section";
 import { AppContext } from "states/context";
-import { useContext } from "react";
 const ApiHero = ({ title, subtext }) => {
   const { onOpen } = useContext(AppContext);
 
