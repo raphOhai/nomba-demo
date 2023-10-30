@@ -15,17 +15,24 @@ const Policies = () => {
       <NLink to="/">
         <Logo className={logoStyle} />
       </NLink>
-      <ul className={policyMenuList}>
-        {policiesMenu.map((menuItem, index) => {
-          return (
-            <li key={`policy_menu_${index}`} className={policyMenuListItem}>
-              <Ntext variant="p16" color="primary-200">
-                <NLink {...menuItem?.link}>{menuItem.title}</NLink>
-              </Ntext>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="flex items-center justify-between w-full flex-wrap">
+        <ul className={policyMenuList}>
+          {policiesMenu.map((menuItem, index) => {
+            return (
+              <li key={`policy_menu_${index}`} className={policyMenuListItem}>
+                <Ntext variant="p16" color="primary-200">
+                  <NLink {...menuItem?.link}>{menuItem.title}</NLink>
+                </Ntext>
+              </li>
+            );
+          })}
+        </ul>
+        <div className={policyMenuList}>
+          <Ntext variant="p16" color="primary-200" className={policyMenuListItem}>
+            Nomba Financial Services Limited
+          </Ntext>
+        </div>
+      </div>
     </div>
   );
 };
