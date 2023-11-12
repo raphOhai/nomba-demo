@@ -168,7 +168,7 @@ const headerMenu = {
       iconDark: <CareerDark className="menuIcon" />,
       description: "Available roles at Nomba",
       comingSoon: true,
-      href: { url: "https://nomba.talentlyft.com/#home" },
+      href: { url: "/careers" },
     },
     {
       title: "Blog",

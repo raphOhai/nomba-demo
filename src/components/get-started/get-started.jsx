@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Ntext, SectionHeader, Button } from "components";
 import constants from "config/constants.json";
 import ctl from "@netlify/classnames-template-literals";
-const GetStarted = ({ title }) => {
+const GetStarted = ({ title, buttonText, buttonLink, withArrow }) => {
   const { SIGNUP_URL } = constants;
   return (
     <section className=" py-[100px] bg-primary-200">
@@ -15,15 +15,16 @@ const GetStarted = ({ title }) => {
         <div className={heroButtonsContainer}>
           <Button
             className="!font-medium !text-[16px]"
-            text="Get Started"
-            href={{ url: SIGNUP_URL }}
-            withArrow={true}
+            text={buttonText || 'Get Started'}
+            href={{ url: buttonLink || SIGNUP_URL }}
+            withArrow={withArrow || true}
           />
         </div>
       </Container>
     </section>
   );
 };
+
 const heroButtonsContainer = ctl(`
 flex
 flex-col
@@ -33,4 +34,5 @@ mb-10
 md:items-center
 w-full items-stretch 
 `);
+
 export { GetStarted };
