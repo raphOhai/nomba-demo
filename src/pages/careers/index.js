@@ -24,7 +24,7 @@ const CareersPage = () => {
           </>
         }
       /> */}
-      <GetStarted title="Join us at Nomba today" buttonText="View Available Roles" buttonLink="/careers/roles" withArrow={false} />
+      <GetStarted title="Join us at Nomba today" buttonText="View Available Roles" buttonLink="/careers/roles" buttonSize="small" withArrow={false} />
       <CareersTipsAndStories />
     </Layout>
   );

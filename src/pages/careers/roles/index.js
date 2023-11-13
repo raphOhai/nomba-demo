@@ -9,7 +9,7 @@ const RolesPage = () => {
   });
 
   return (
-    <Layout index={0} title={SeoConf.careers.roles.title} description={SeoConf.careers.roles.description}>
+    <Layout index={0} title={SeoConf.careers.roles.title} description={SeoConf.careers.roles.description} useStickyNav={false}>
     </Layout>
   );
 };
