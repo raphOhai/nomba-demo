@@ -6,12 +6,17 @@ import PosTerminals from "svgs/navbar/light/pos-terminals.svg";
 import ServiceStatus from "svgs/navbar/light/service-status.svg";
 import MenuSubmenu from "svgs/navbar/light/menu-submenu.svg";
 import Invoicing from "svgs/navbar/light/invoicing.svg";
+import Outlets from "svgs/navbar/light/outlets.svg";
+import Inventory from "svgs/navbar/light/inventory.svg";
+import Settlements from "svgs/navbar/light/settlements.svg";
 import Savings from "svgs/navbar/light/savings.svg";
 import Developers from "svgs/navbar/light/developers.svg";
 
 import AboutUs from "svgs/navbar/light/about-us.svg";
 import BlogIcon from "svgs/navbar/light/blog.svg";
 import Career from "svgs/navbar/light/career.svg";
+import Overview from "svgs/navbar/light/overview.svg";
+import Documentation from "svgs/navbar/light/documentation.svg";
 import SmallBusinessIcon from "svgs/navbar/light/small-business.svg";
 import LargeBusinessIcon from "svgs/navbar/light/large-business.svg";
 
@@ -21,12 +26,17 @@ import PosTerminalsDark from "svgs/navbar/dark/pos-terminals.svg";
 import ServiceStatusDark from "svgs/navbar/dark/service-status.svg";
 import MenuSubmenuDark from "svgs/navbar/dark/menu-submenu.svg";
 import InvoicingDark from "svgs/navbar/dark/invoicing.svg";
+import OutletsDark from "svgs/navbar/dark/outlets.svg";
+import InventoryDark from "svgs/navbar/dark/inventory2.svg";
+import SettlementsDark from "svgs/navbar/dark/settlements.svg";
 import SavingsDark from "svgs/navbar/dark/savings.svg";
 import DevelopersDark from "svgs/navbar/dark/developers.svg";
 
 import AboutUsDark from "svgs/navbar/dark/about-us.svg";
 import BlogIconDark from "svgs/navbar/dark/blog.svg";
 import CareerDark from "svgs/navbar/dark/career.svg";
+import OverviewDark from "svgs/navbar/dark/overview.svg";
+import DocumentationDark from "svgs/navbar/dark/documentation.svg";
 import SmallBusinessIconDark from "svgs/navbar/dark/small-business.svg";
 import LargeBusinessIconDark from "svgs/navbar/dark/large-business.svg";
 
@@ -59,7 +69,7 @@ const headerMenu = {
       to: "https://dashboard.nomba.com/guest/card-bank-performance",
       icon: <ServiceStatus className="menuIcon" />,
       iconDark: <ServiceStatusDark className="menuIcon" />,
-      description: "Bank’s network updates",
+      description: "Bank's network updates",
     },
     {
       title: "Menu",
@@ -76,6 +86,27 @@ const headerMenu = {
       description: "Easiest invoicing process today",
     },
     {
+      title: "Outlets",
+      to: "https://dashboard.nomba.com/auth/login",
+      icon: <Outlets className="menuIcon" />,
+      iconDark: <OutletsDark className="menuIcon" />,
+      description: "Branches, one control center",
+    },
+    {
+      title: "Inventory",
+      to: "https://dashboard.nomba.com/auth/login",
+      icon: <Inventory className="menuIcon" />,
+      iconDark: <InventoryDark className="menuIcon" />,
+      description: "Manage your product easily",
+    },
+    {
+      title: "Settlements",
+      to: "https://dashboard.nomba.com/auth/login",
+      icon: <Settlements className="menuIcon" />,
+      iconDark: <SettlementsDark className="menuIcon" />,
+      description: "Settle payments effortlessly",
+    },
+    {
       title: "Savings",
       to: "/banking/savings",
       icon: <Savings className="menuIcon" />,
@@ -90,7 +121,6 @@ const headerMenu = {
       description: "Empower your features",
     },
   ],
-
   "Business Types": [
     {
       title: "Small Business",
@@ -107,6 +137,20 @@ const headerMenu = {
       description: "Manage operations, and track growth",
       comingSoon: true,
       to: "/business/large",
+    },
+  ],
+  Developers: [
+    {
+      title: "Overview",
+      icon: <Overview className="menuIcon" />,
+      iconDark: <OverviewDark className="menuIcon" />,
+      to: "/developers",
+    },
+    {
+      title: "Documentation",
+      icon: <Documentation className="menuIcon" />,
+      iconDark: <DocumentationDark className="menuIcon" />,
+      to: "https://docs.nomba.com/api",
     },
   ],
   Company: [
