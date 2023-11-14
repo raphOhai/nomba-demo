@@ -9,7 +9,29 @@ export const careersTestimonials = [
     textVariant: "text4lite",
     italicizeRole: false,
     image: (
-      <StaticImage alt="Jane Brown" src="../assets/images/jpegs/careers/testimonials/jane-brown.png" loading="lazy" />
+      <StaticImage alt="Jane Brown" src="../assets/images/jpegs/careers/home/testimonials/jane-brown.png" loading="lazy" />
     ),
   },
 ];
+
+export const whatWeAreBuilding = {
+  title: "We are building payment tool for every businesses",
+  description: "A tool for every task. One platform for your business. Join over 100 of us in building these tools to help businesses.",
+  images: [
+    (<StaticImage
+      alt="Two Smiling Ladies"
+      src="../assets/images/jpegs/careers/home/we-are-building/two-smiling-ladies.png"
+      loading="lazy"
+    />),
+    (<StaticImage
+      alt="A Smiling Group Photo"
+      src="../assets/images/jpegs/careers/home/we-are-building/smiling-group-photo.png"
+      loading="lazy"
+    />),
+    (<StaticImage
+      alt="A Smiling Man And Lady"
+      src="../assets/images/jpegs/careers/home/we-are-building/smiling-man-and-lady.png"
+      loading="lazy"
+    />),
+  ],
+};

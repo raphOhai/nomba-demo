@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Ntext, SectionHeader, Button } from "components";
 import constants from "config/constants.json";
 import ctl from "@netlify/classnames-template-literals";
-const GetStarted = ({ title, buttonText, buttonLink, buttonSize, withArrow }) => {
+const GetStarted = ({ title, buttonText, buttonLink, buttonStyle, withArrow }) => {
   const { SIGNUP_URL } = constants;
   return (
     <section className=" py-[100px] bg-primary-200">
@@ -14,8 +14,7 @@ const GetStarted = ({ title, buttonText, buttonLink, buttonSize, withArrow }) =>
         </SectionHeader>
         <div className={heroButtonsContainer}>
           <Button
-            className="!font-medium !text-[16px]"
-            size={buttonSize}
+            className={`!font-medium !text-[16px] ${buttonStyle || ""}`}
             text={buttonText || 'Get Started'}
             href={{ url: buttonLink || SIGNUP_URL }}
             withArrow={withArrow}
