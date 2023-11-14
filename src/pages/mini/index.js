@@ -26,7 +26,7 @@ import SeoConf from "config/seo/meta";
 const MiniPage = () => {
   // const lenisRef = useRef();
 
-  window.location.href = "/mini/7";
+  typeof window !== "undefined" ? (window.location.href = "/mini/7") : null;
 
   return <></>;
 
