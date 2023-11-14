@@ -141,9 +141,9 @@ const Cart = ({ finalFocusRef }) => {
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
                 <TabList borderBottom="1px" borderBottomColor="#383838" borderTop="1px solid #383838">
-                  <Tab _selected={tabStyle} color="#717171">
+                  {/* <Tab _selected={tabStyle} color="#717171">
                     Product Details
-                  </Tab>
+                  </Tab> */}
                   <Tab py="6" _selected={tabStyle} color="#717171">
                     Add Information
                   </Tab>
@@ -153,10 +153,10 @@ const Cart = ({ finalFocusRef }) => {
                 </TabList>
 
                 <TabPanels px={[2, 4, 4, 4]}>
-                  <TabPanel>
-                    {/* Select the active terminal by index set */}
+                  {/* <TabPanel>
+                    Select the active terminal by index set
                     <CartIem counter={counter} dispatcher={dispatch} item={CartTerminals[itemIndex]} />
-                  </TabPanel>
+                  </TabPanel> */}
                   <TabPanel>
                     <CustomerInfo state={info} setState={setInfo} />
                   </TabPanel>

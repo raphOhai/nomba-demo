@@ -51,7 +51,7 @@ const MiniPage = () => {
             </>
           }
         />
-        <MiniPricing price="₦25,000" leasePrice="₦15,000" />
+        {/* <MiniPricing price="₦25,000" leasePrice="₦15,000" /> */}
         <MiniFeatures3
           title={
             <>

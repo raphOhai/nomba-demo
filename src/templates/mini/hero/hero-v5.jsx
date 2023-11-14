@@ -53,11 +53,11 @@ const MiniHeroV5 = ({ benefits }) => {
                 Get the best value for your money and increase sales with wahala-free payment.
               </Ntext>
             </div>
-            <div className="flex flex-row pt-5">
+            {/* <div className="flex flex-row pt-5">
               <Ntext variant="text5" className="!leading-[24px]" color="m-light">
                 <span className="font-[400]">Price:</span> ₦25,000 <del className="text-n-grey3">₦45,000</del>
               </Ntext>
-            </div>
+            </div> */}
             <div className={heroButtonsContainer}>
               <GetTerminal onClick={() => addToCart(3)} text="Buy your POS" type="animate-button-reverse" />
             </div>
