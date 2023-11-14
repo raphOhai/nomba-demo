@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import Layout from "components/layout-max";
 import { CareersTipsAndStories } from "templates";
-import { GetStarted } from "components";
+import { GetStarted, Testimonial } from "components";
+import { careersTestimonials } from "config/careers";
 // import {
 //   CareersPageHero,
 // } from "templates/careers";
@@ -14,7 +15,11 @@ const CareersPage = () => {
   });
 
   return (
-    <Layout title={SeoConf.careers.title} description={SeoConf.careers.description} useStickyNav={false}>
+    <Layout
+      title={SeoConf.careers.title}
+      description={SeoConf.careers.description}
+      useStickyNav={false}
+    >
       {/* <CareersPageHero
         description="Get Nomba MAX, the all-in-one business solution that offers more than just payment processing."
         title={
@@ -24,7 +29,18 @@ const CareersPage = () => {
           </>
         }
       /> */}
-      <GetStarted title="Join us at Nomba today" buttonText="View Available Roles" buttonLink="/careers/roles" buttonSize="small" withArrow={false} />
+      <Testimonial
+        className="!bg-black"
+        testimonials={careersTestimonials}
+        headingText={<>Hear what our employees are saying about us</>}
+      />
+      <GetStarted
+        title="Join us at Nomba today"
+        buttonText="View Available Roles"
+        buttonLink="/careers/roles"
+        buttonSize="small"
+        withArrow={false}
+      />
       <CareersTipsAndStories />
     </Layout>
   );

@@ -3,18 +3,18 @@ import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext } from "components/ntext";
 
-const TestimonialCard = ({ name, role, testimonial, image }) => {
+const TestimonialCard = ({ name, role, testimonial, textVariant = "text4", italicizeRole = true, image }) => {
   return (
     <div className={cardWrapStyle}>
       <div className={textWrapStyle}>
         <div className={testimonialTextStyle}>
-          <Ntext variant="text4" color="primary-100" value={testimonial} />
+          <Ntext variant={textVariant} color="primary-100" value={testimonial} />
         </div>
 
         <div className="md:mt-8 mt-0">
           <Ntext variant="text3" color="n-grey1" value={name} />
 
-          {role && <Ntext className=" italic" variant="text3" color="n-grey4" value={role} />}
+          {role && <Ntext className={italicizeRole ? " italic" : " not-italic"} variant="text3" color="n-grey4" value={role} />}
         </div>
       </div>
 
@@ -77,9 +77,16 @@ const testimonialTextStyle = ctl(`
   lg:min-h-max
 `);
 
+TestimonialCard.defaultProps = {
+  textVariant: "text4",
+  italicizeRole: true,
+}
+
 TestimonialCard.propTypes = {
   name: PropTypes.string,
   testimonial: PropTypes.string,
+  textVariant: PropTypes.string,
+  italicizeRole: PropTypes.bool,
   role: PropTypes.string,
   image: PropTypes.node,
 };
