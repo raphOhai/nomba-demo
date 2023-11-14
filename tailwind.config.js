@@ -6,6 +6,7 @@ module.exports = {
     "./src/pages/products/*.{js,jsx}",
     "./src/pages/banking/*.{js,jsx}",
     "./src/pages/business/*.{js,jsx}",
+    "./src/pages/careers/**/*.{js,jsx}",
     "./src/pages/mini.js",
     "./src/pages/terminals.js",
     "./src/components/**/*.{html,jsx,js}",
@@ -21,6 +22,7 @@ module.exports = {
     "./src/templates/terminals/**/*.{html,jsx,js}",
     "./src/templates/api/**/*.{html,jsx,js}",
     "./src/templates/checkout-page/**/*.{html,jsx,js}",
+    "./src/templates/careers/**/*.{jsx,js}",
   ],
   mode: "jit",
   theme: {

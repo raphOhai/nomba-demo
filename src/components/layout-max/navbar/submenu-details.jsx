@@ -14,7 +14,7 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
       <div className={subMenuInnerWrapStyle}>
         {subMenuItem?.iconDark && <span className={iconWrapStyle}>{subMenuItem.iconDark}</span>}
 
-        <div className="text-left -mt-1">
+        <div className={`text-left ${subMenuItem?.description ? "-mt-1" : ""}`}>
           <Ntext
             variant="p16"
             className="group-hover/item:!text-primary-100 "
