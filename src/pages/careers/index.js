@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 import Layout from "components/layout-max";
-import { CareersTipsAndStories, WhatWeAreBuilding, OurValues } from "templates";
 import { GetStarted, Testimonial } from "components";
 import { careersTestimonials } from "config/careers";
+import {
+  CareersTipsAndStories,
+  WhatWeAreBuilding,
+  WhatWeBelieveIn,
+  OurValues
+} from "templates";
 // import {
 //   CareersPageHero,
 // } from "templates/careers";
@@ -29,6 +34,7 @@ const CareersPage = () => {
           </>
         }
       /> */}
+      <WhatWeBelieveIn />
       <OurValues />
       <Testimonial
         className="!bg-black"

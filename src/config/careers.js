@@ -15,25 +15,31 @@ export const careersTestimonials = [
 ];
 
 export const whatWeAreBuilding = {
-  title: "We are building payment tool for every businesses",
+  title: "We are building payment tools for every business",
   description: "A tool for every task. One platform for your business. Join over 100 of us in building these tools to help businesses.",
   images: [
     (<StaticImage
       alt="Two Smiling Ladies"
-      src="../assets/images/jpegs/careers/home/we-are-building/two-smiling-ladies.png"
+      src="../assets/images/jpegs/careers/home/what-we-are-building/two-smiling-ladies.png"
       loading="lazy"
     />),
     (<StaticImage
       alt="A Smiling Group Photo"
-      src="../assets/images/jpegs/careers/home/we-are-building/smiling-group-photo.png"
+      src="../assets/images/jpegs/careers/home/what-we-are-building/smiling-group-photo.png"
       loading="lazy"
     />),
     (<StaticImage
       alt="A Smiling Man And Lady"
-      src="../assets/images/jpegs/careers/home/we-are-building/smiling-man-and-lady.png"
+      src="../assets/images/jpegs/careers/home/what-we-are-building/smiling-man-and-lady.png"
       loading="lazy"
     />),
   ],
+};
+
+export const whatWeBelieveIn = {
+  title: "We strongly believe in our culture",
+  description: "We are building an ecosystem that simplifies how businesses accept payments, make payments and manage operations. This journey started in 2016 with simplifying access to financial services using \"Kudi.ai\" a chatbot integration that responds to financial requests on social apps.",
+  videoCaption: "“More than a culture, it's an asset”",
 };
 
 export const ourValues = [

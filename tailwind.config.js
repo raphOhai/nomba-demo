@@ -38,6 +38,7 @@ module.exports = {
         "card-bg-1": "url('src/assets/images/card-bg-1.png')",
         "card-bg-2": "url('src/assets/images/card-bg-2.png')",
         "bg-parallax-blank": "url('src/assets/images/jpegs/small-business/blank.png')",
+        "video-thumbnail": "url('src/assets/images/jpegs/hand-with-yellow-pos.png')",
       }),
 
       colors: {

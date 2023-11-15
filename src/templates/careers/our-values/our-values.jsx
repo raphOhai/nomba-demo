@@ -16,7 +16,7 @@ const OurValues = () => {
           {
             ourValues.map((value, i) => (
               <article className={`${articleStyle} bg-[${value.colour}]`} key={i}>
-                <Ntext variant="h1" color={value.titleColour} value={value.title} />
+                <Ntext className="leading-[84px]" variant="h1" color={value.titleColour} value={value.title} />
                 <Ntext className="mt-[120px]" variant="p16" value={value.details} />
               </article>
             ))
@@ -36,6 +36,7 @@ const articleStyle = ctl(`
   lg:max-w-[600px]
   rounded-[5px]
   p-[32px]
+  pr-10
 `);
 
 const galleryStyle = ctl(`

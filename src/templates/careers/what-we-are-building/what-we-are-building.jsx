@@ -9,9 +9,9 @@ const WhatWeAreBuilding = () => {
   return (
     <Container className={containerStyle}>
       <section className={headingStyle}>
-        <Ntext className="max-w-[500px]" variant="h2" value={title} color="primary-100" />
+        <Ntext className="max-w-[540px]" variant="h2" value={title} color="primary-100" />
         <Ntext
-          className="max-w-[593px]"
+          className="max-w-[480px] lg:mr-8"
           variant="text4lite"
           value={description}
           color="primary-100"
