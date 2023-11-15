@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "components/layout-max";
-import { CareersTipsAndStories, WeAreBuilding } from "templates";
+import { CareersTipsAndStories, WhatWeAreBuilding, OurValues } from "templates";
 import { GetStarted, Testimonial } from "components";
 import { careersTestimonials } from "config/careers";
 // import {
@@ -29,12 +29,13 @@ const CareersPage = () => {
           </>
         }
       /> */}
+      <OurValues />
       <Testimonial
         className="!bg-black"
         testimonials={careersTestimonials}
         headingText={<>Hear what our employees are saying about us</>}
       />
-      <WeAreBuilding />
+      <WhatWeAreBuilding />
       <GetStarted
         title="Join us at Nomba today"
         buttonText="View Available Roles"

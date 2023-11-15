@@ -35,3 +35,30 @@ export const whatWeAreBuilding = {
     />),
   ],
 };
+
+export const ourValues = [
+  {
+    title: "Empathy",
+    titleColour: "n-bronze",
+    details: "We treat everyone with kindness and respect; our customers and people are valuable to us.",
+    colour: "#FCDCCF",
+  },
+  {
+    title: "Passion",
+    titleColour: "n-grape",
+    details: "We are committed to everything we do while leveraging our skills and grit to meet our goals.",
+    colour: "#EFD9F2",
+  },
+  {
+    title: "Integrity",
+    titleColour: "n-olive",
+    details: "We are accountable to our customers and our people to do what is right, and we stand by it.",
+    colour: "#F7E189",
+  },
+  {
+    title: "Collaboration",
+    titleColour: "n-opal",
+    details: "We work together as a team; with our customers, partners and our people to achieve our individual and collective growth.",
+    colour: "#D9F2F2",
+  }
+];

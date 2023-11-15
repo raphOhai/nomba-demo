@@ -1,7 +1,6 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { tipsAndStoriesList } from "mocks/tips-and-stories.js";
-
 import { InfoGridSection, Br, Ntext } from "components";
 
 const CareersTipsAndStories = () => {

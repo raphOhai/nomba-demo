@@ -1,26 +1,20 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { whatWeAreBuilding } from "config/careers"
+import { Container, Ntext } from "components";
 
-import { SectionHeader, Container, Ntext } from "components";
-
-const WeAreBuilding = () => {
+const WhatWeAreBuilding = () => {
   const { title, description, images } = whatWeAreBuilding;
 
   return (
     <Container className={containerStyle}>
       <section className={headingStyle}>
+        <Ntext className="max-w-[500px]" variant="h2" value={title} color="primary-100" />
         <Ntext
-          variant="h2"
-          value={title}
-          color="primary-100"
-          className={firstHeadingTextStyle}
-        />
-        <Ntext
-          color="primary-100"
-          value={description}
+          className="max-w-[593px]"
           variant="text4lite"
-          className={secondHeadingTextStyle}
+          value={description}
+          color="primary-100"
         />
       </section>
       <section className={galleryStyle}>
@@ -36,15 +30,6 @@ const WeAreBuilding = () => {
     </Container>
   );
 };
-
-const secondHeadingTextStyle = ctl(`
-  md:max-w-[500px]
-  leading-[35px]
-`);
-
-const firstHeadingTextStyle = ctl(`
-  md:max-w-[593px]
-`);
 
 const containerStyle = ctl(`
   flex
@@ -65,6 +50,7 @@ const headingStyle = ctl(`
 const galleryStyle = ctl(`
   grid
   gap-8
+  lg:gap-y-0
   lg:gap-x-12
   grid-cols-1
   lg:grid-cols-2
@@ -74,4 +60,4 @@ const galleryStyle = ctl(`
   w-full
 `);
 
-export { WeAreBuilding };
+export { WhatWeAreBuilding };
