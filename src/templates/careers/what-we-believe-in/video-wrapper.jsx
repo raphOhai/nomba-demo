@@ -14,10 +14,19 @@ const VideoWrapper = () => {
         value={whatWeBelieveIn.videoCaption}
         color="primary-100"
       />
-      <PlayButton className="absolute bottom-16 right-24" />
+      <PlayButton className={playButtonStyle} />
     </section>
   );
 };
+
+const playButtonStyle = ctl(`
+  absolute
+  right-12
+  bottom-8
+  md:right-24
+  md:bottom-16
+  cursor-pointer
+`);
 
 const sectionStyle = ctl(`
   flex

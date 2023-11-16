@@ -9,8 +9,8 @@ const CareersTipsAndStories = () => {
       <InfoGridSection
         list={tipsAndStoriesList}
         heading={
-          <Ntext variant="h3">
-            Tips, updates and stories <Br on="desktop" /> from our community
+          <Ntext className="!font-bold" variant="h3">
+            Tips, updates and stories from <Br on="desktop" /> our community
           </Ntext>
         }
       />

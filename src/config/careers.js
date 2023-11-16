@@ -36,6 +36,68 @@ export const whatWeAreBuilding = {
   ],
 };
 
+export const heroSectionData = {
+  intro: "Join our team of exceptional people to build business tools for everybody",
+  images: [
+    (<StaticImage
+      alt="Three Smiling Guys"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-1.jpeg"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={488}
+      width={342}
+    />),
+    (<StaticImage
+      alt="Large Group Of Staff"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-2.jpeg"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={240}
+      width={515}
+    />),
+    (<StaticImage
+      alt="Five Smiling Ladies"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-3.jpeg"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={228}
+      width={515}
+    />),
+    (<StaticImage
+      alt="Two Smiling Guys"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-4.jpeg"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={240}
+      width={161}
+    />),
+    (<StaticImage
+      alt="Lady Showing Peace Sign"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-5.jpeg"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={240}
+      width={161}
+    />),
+    (<StaticImage
+      alt="Smiling Guy And Lady"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-6.png"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={228}
+      width={342}
+    />),
+    (<StaticImage
+      alt="Two Smiling Ladies"
+      src="../assets/images/jpegs/careers/home/hero/hero-image-7.png"
+      className="rounded-[5px]"
+      loading="lazy"
+      height={488}
+      width={181}
+    />),
+  ],
+};
+
 export const whatWeBelieveIn = {
   title: "We strongly believe in our culture",
   description: "We are building an ecosystem that simplifies how businesses accept payments, make payments and manage operations. This journey started in 2016 with simplifying access to financial services using \"Kudi.ai\" a chatbot integration that responds to financial requests on social apps.",

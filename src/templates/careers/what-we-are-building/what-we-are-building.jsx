@@ -7,7 +7,7 @@ const WhatWeAreBuilding = () => {
   const { title, description, images } = whatWeAreBuilding;
 
   return (
-    <Container className={containerStyle}>
+    <Container className={wrapperStyle}>
       <section className={headingStyle}>
         <Ntext className="max-w-[540px]" variant="h2" value={title} color="primary-100" />
         <Ntext
@@ -18,20 +18,16 @@ const WhatWeAreBuilding = () => {
         />
       </section>
       <section className={galleryStyle}>
-        <article className="row-span-2">
-          {images[0]}
-        </article>
+        <article className="row-span-2">{images[0]}</article>
         {
-          images.slice(1).map((image, i) => (
-            <article key={i}> {image} </article>
-          ))
+          images.slice(1).map((image, i) => (<article key={i}>{image}</article>))
         }
       </section>
     </Container>
   );
 };
 
-const containerStyle = ctl(`
+const wrapperStyle = ctl(`
   flex
   flex-col
   pb-[108px]

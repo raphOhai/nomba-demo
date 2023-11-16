@@ -1,87 +1,89 @@
-import React, { useContext } from "react";
+import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import PropTypes from "prop-types";
-import { Container, Ntext, ReadMore, GetTerminal } from "components";
-import { AppContext } from "states/context";
+import { heroSectionData } from "config/careers"
+import { Button, Ntext } from "components";
 
-const CareersPageHero = ({ title, description }) => {
-  const { addToCart } = useContext(AppContext);
+const CareersPageHero = () => {
+  const { intro, images } = heroSectionData;
+
   return (
-    <section className={heroStyle}>
-      <Container>
-        <div className={heroTextWrapperStyle}>
-          <div className={heroTextHeaders}>
-            <Ntext variant="text9" color="primary-100" className="mb-[28px] opacity-0" data-animation="h">
-              {title}
-            </Ntext>
-
-            <Ntext variant="text5lite" className={subTextStyle} color="n-grey1" data-animation="v">
-              {description}
-            </Ntext>
-          </div>
-          <div className={heroButtonsContainer}>
-            <GetTerminal onClick={() => addToCart(0)} text="Get your POS" type="animate-button-reverse" />
-
-            {/* <MaxButton text="Contact sales" type="animate-button" link="tel:+23401888899" /> */}
-            <ReadMore
-              color="primary-100"
-              className="text-center"
-              weight={500}
-              defaultStyle={false}
-              variant="text3"
-              href={{ url: "tel:+23401888899" }}
-              text="Contact sales"
-            />
-          </div>
-        </div>
-      </Container>
+    <section className={wrapperStyle}>
+      <section className={captionStyle}>
+        <Ntext
+          color="primary-1200"
+          className="max-w-[640px] mx-auto px-8 lg:px-0"
+          variant="p16"
+          value={intro}
+        />
+        <Ntext
+          color="primary-100"
+          className="max-w-[640px] mx-auto mt-5 mb-6"
+          variant="h1">
+          {"We Have "}
+          <span className="underline">8</span>
+          {" Open Positions"}
+        </Ntext>
+        <Button
+          text="Join Us"
+          href={{ url: "/careers/roles" }}
+          className="!font-medium !text-[14px] !min-w-[86px] mb-[72px] !h-10"
+          withArrow={false}
+        />
+      </section>
+      <section className={galleryStyle}>
+        {images[0]}
+        <article className="flex flex-col space-y-5">
+          {images[1]}
+          {images[2]}
+        </article>
+        <article className="flex flex-col space-y-5">
+          <article className="flex justify-between lg:space-x-5">
+            {images[3]}
+            {images[4]}
+          </article>
+          {images[5]}
+        </article>
+        {images[6]}
+      </section>
     </section>
   );
 };
 
-// pb-[120px]
-const heroStyle = ctl(`
-md:pt-[90px]
-md:pb-[50px]
-bg-black
-pt-[75px]
+const wrapperStyle = ctl(`
+  min-h-[880px]
+  pt-[88px]
+  relative
 `);
 
-const heroTextWrapperStyle = ctl(`
-lg:max-w-[692px]
-lg:mx-auto
-max-w-[100%]
-lg:mb-[80px]
-sm:mb-[120px]
-md:mx-2
-mb-10
+const captionStyle = ctl(`
+  flex
+  flex-col
+  text-center
+  items-center
+  justify-center
+  w-full
 `);
 
-const heroTextHeaders = ctl(`
-md:flex
-md:flex-col
-md:items-start
-mb-[40px]
-lg:mb-[50px]
+const galleryStyle = ctl(`
+  flex
+  mb-8
+  px-8
+  lg:mb-0
+  lg:px-0
+  flex-col
+  relative
+  space-y-5
+  lg:flex-row
+  lg:space-x-5
+  lg:space-y-0
+  lg:max-w-[1440px]
+  justify-between
+  lg:-bottom-8
+  lg:absolute
+  lg:mx-auto
+  lg:right-0
+  lg:left-0
+  w-screen
 `);
-
-const subTextStyle = ctl(`
-
-opacity-0
-`);
-
-const heroButtonsContainer = ctl(`
-flex
-flex-col
-md:flex-row
-gap-[30px]
-md:items-center
-w-full items-stretch 
-`);
-
-CareersPageHero.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.node,
-};
 
 export { CareersPageHero };

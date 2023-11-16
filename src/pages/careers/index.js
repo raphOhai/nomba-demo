@@ -8,9 +8,7 @@ import {
   WhatWeBelieveIn,
   OurValues
 } from "templates";
-// import {
-//   CareersPageHero,
-// } from "templates/careers";
+import { CareersPageHero } from "templates/careers";
 import { split } from "animations/text";
 import SeoConf from "config/seo/meta";
 
@@ -25,15 +23,7 @@ const CareersPage = () => {
       description={SeoConf.careers.description}
       useStickyNav={false}
     >
-      {/* <CareersPageHero
-        description="Get Nomba MAX, the all-in-one business solution that offers more than just payment processing."
-        title={
-          <>
-            {" "}
-            Switch to the MAX, <Br on="all" /> experience more than payments!
-          </>
-        }
-      /> */}
+      <CareersPageHero />
       <WhatWeBelieveIn />
       <OurValues />
       <Testimonial
