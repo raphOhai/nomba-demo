@@ -77,7 +77,6 @@ const variants = {
     leading-[44.4px]
     font-bold 
     `,
-
   h2: `
     font-bold
     md:text-[48px]
@@ -87,7 +86,6 @@ const variants = {
     leading-[40.2px]
     md:tracking-[-0.04em] 
     `,
-
   h3: `
     md:text-[40px]
     text-[32px]
@@ -209,14 +207,14 @@ const variants = {
     leading-[24px]
     `,
   text5: `
-  font-[600]
-  text-[20px]
-  leading-[24px]
-  md:font-[700]
-  md:text-[24px]
-  md:leading-[32px]
-  tracking-[-0.02em]
-    `,
+    font-[600]
+    text-[20px]
+    leading-[24px]
+    md:font-[700]
+    md:text-[24px]
+    md:leading-[32px]
+    tracking-[-0.02em]
+      `,
   text6: `
     font-[700]
     text-[24px]

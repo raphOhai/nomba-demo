@@ -9,7 +9,7 @@ const WhatWeBelieveIn = () => {
 
   return (
     <section className={sectionStyle}>
-      <Container className="flex flex-col">
+      <Container>
         <section className={headingStyle}>
           <Ntext className="max-w-[440px]" variant="h2" value={title} />
           <Ntext className="max-w-[620px]" variant="p16" value={description} />
@@ -28,9 +28,9 @@ const sectionStyle = ctl(`
 const headingStyle = ctl(`
   flex
   flex-col
+  space-y-10
   lg:flex-row
   lg:justify-between
-  space-y-10
   lg:space-y-0
   w-full
 `);

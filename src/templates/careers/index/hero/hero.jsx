@@ -20,7 +20,7 @@ const CareersPageHero = () => {
           className="max-w-[640px] mx-auto mt-5 mb-6"
           variant="h1">
           {"We Have "}
-          <span className="underline">8</span>
+          <span className="underline">9</span>
           {" Open Positions"}
         </Ntext>
         <Button

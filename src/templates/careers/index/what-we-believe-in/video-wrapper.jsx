@@ -1,6 +1,6 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
-import PlayButton from "illustrations/play-button.svg";
+import PlayButton from "svgs/white-play-button.svg";
 
 import { whatWeBelieveIn } from "config/careers"
 import { Ntext } from "components";

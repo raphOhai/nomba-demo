@@ -24,9 +24,8 @@ export default {
     description:
       "Join our team of exceptional people to build business tool for everybody",
     roles: {
-      title: "Available Roles at Nomba",
-      description:
-        "Join our team of exceptional people to build business tool for everybody",
+      title: "View Available Roles",
+      description: "Get your career started with Nomba",
     },
   },
 

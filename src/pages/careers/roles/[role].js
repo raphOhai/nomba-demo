@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import Layout from "components/layout-max";
-import { CareersTipsAndStories, GetYourCareerStarted } from "templates";
+import { CareersTipsAndStories } from "templates";
+import { availableRoles } from "config/careers/roles";
 import { split } from "animations/text";
 import SeoConf from "config/seo/meta";
 
-const CareersRolesPage = () => {
+const RolePage = ({ params }) => {
   useEffect(() => {
     split();
   });
+
+  const role = availableRoles.find(value => value.slug === params.role);
 
   return (
     <Layout
@@ -15,10 +18,9 @@ const CareersRolesPage = () => {
       description={SeoConf.careers.roles.description}
       useStickyNav={false}
     >
-      <GetYourCareerStarted />
       <CareersTipsAndStories />
     </Layout>
   );
 };
 
-export default CareersRolesPage;
+export default RolePage;
