@@ -32,7 +32,7 @@ export const tipsAndStoriesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/careers/home/tips-and-stories/lady-with-pos.jpeg"
+        src="../assets/images/jpegs/careers/tips-and-stories/lady-with-pos.jpeg"
         alt="Smiling lady with POS"
       />
     ),
@@ -65,7 +65,7 @@ export const tipsAndStoriesList = [
       <StaticImage
         height={750}
         width={500}
-        src="../assets/images/jpegs/careers/home/tips-and-stories/white-beards-man.jpeg"
+        src="../assets/images/jpegs/careers/tips-and-stories/white-beards-man.jpeg"
         alt="Standing man with white beards"
       />
     ),
