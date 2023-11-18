@@ -5,16 +5,16 @@ import { availableRoles } from "config/careers/roles";
 import { split } from "animations/text";
 import SeoConf from "config/seo/meta";
 
-const RolePage = ({ params }) => {
+const RolePage = ({ params: { role } }) => {
   useEffect(() => {
     split();
   });
 
-  const role = availableRoles.find(value => value.slug === params.role);
+  const data = availableRoles.find(value => value.slug === role);
 
   return (
     <Layout
-      title={role.title}
+      title={data.title}
       description={SeoConf.careers.roles.description}
       useStickyNav={false}
     >
