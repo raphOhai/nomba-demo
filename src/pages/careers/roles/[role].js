@@ -14,7 +14,7 @@ const RolePage = ({ params: { role } }) => {
 
   return (
     <Layout
-      title={data.title}
+      title={data?.title || ""}
       description={SeoConf.careers.roles.description}
       useStickyNav={false}
     >
