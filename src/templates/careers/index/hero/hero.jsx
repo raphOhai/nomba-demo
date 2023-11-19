@@ -6,9 +6,11 @@ import { AppContext } from "states/context";
 import { Button, Ntext } from "components";
 
 const CareersPageHero = () => {
-  const { isFetchingRoles, availableRoles } = useContext(AppContext);
+  const { availableRoles } = useContext(AppContext);
 
   const { intro, images } = heroSectionData;
+
+  const roleCount = availableRoles.length;
 
   return (
     <section className={wrapperStyle}>
@@ -24,8 +26,8 @@ const CareersPageHero = () => {
           className="max-w-[640px] mx-auto mt-5 mb-6"
           variant="h1">
           <span>{'We Have '}</span>
-          {!isFetchingRoles && <span className="underline">{availableRoles.length}</span>}
-          <span>{` Open ${availableRoles.length === 1 ? ' Position' : 'Positions'}`}</span>
+          {roleCount > 0 && <span className="underline">{roleCount}</span>}
+          <span>{` Open ${roleCount === 1 ? ' Position' : 'Positions'}`}</span>
         </Ntext>
         <Button
           href={{ url: "/careers/roles" }}

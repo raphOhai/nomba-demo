@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ApplyForRole, CareersTipsAndStories, RoleDetails } from "templates";
 import { split } from "animations/text";
@@ -9,11 +9,12 @@ import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 const RolePage = ({ params }) => {
-  let availableRoles = [];
+  const [availableRoles, setAvailableRoles] = useState([]);
 
   useEffect(() => {
-    availableRoles = JSON.parse(localStorage.getItem('nomba-available-roles') || '[]');
-    if (!availableRoles[0]) {
+    const cachedRoles = JSON.parse(localStorage.getItem('nomba-available-roles') || '[]');
+    setAvailableRoles(cachedRoles);
+    if (!cachedRoles[0]) {
       navigate('/careers/roles');
     }
   });

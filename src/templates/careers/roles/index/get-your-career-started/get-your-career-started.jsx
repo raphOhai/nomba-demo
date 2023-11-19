@@ -12,7 +12,7 @@ import WhiteChevronRight from "svgs/white-chevron-right.svg";
 import SearchIcon from "svgs/search-icon.svg";
 
 const GetYourCareerStarted = () => {
-  const { locations, departments, availableRoles, isFetchingRoles } = useContext(AppContext);
+  const { isFetchingRoles, availableRoles, departments, locations } = useContext(AppContext);
 
   const [department, setDepartment] = useState('');
   const [location, setLocation] = useState('');
@@ -61,25 +61,12 @@ const GetYourCareerStarted = () => {
     );
   }, [isFetchingRoles, department, location, needle]);
 
-  if (isFetchingRoles) {
+  if (availableRoles.length === 0) {
     return (
       <section className={noRolesWrapperStyle}>
         <article className="-mt-36">
           <l-jelly color="#FFCC00" size="128" />
         </article>
-      </section>
-    );
-  }
-
-  if (availableRoles.length === 0) {
-    return (
-      <section className={noRolesWrapperStyle}>
-        <Ntext
-          value="There are no available roles at this time."
-          className="-mt-36"
-          color="primary-100"
-          variant="h4"
-        />
       </section>
     );
   }
