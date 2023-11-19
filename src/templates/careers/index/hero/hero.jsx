@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
+
 import { heroSectionData } from "config/careers"
+import { AppContext } from "states/context";
 import { Button, Ntext } from "components";
 
 const CareersPageHero = () => {
+  const { isFetchingRoles, availableRoles } = useContext(AppContext);
+
   const { intro, images } = heroSectionData;
 
   return (
@@ -19,15 +23,15 @@ const CareersPageHero = () => {
           color="primary-100"
           className="max-w-[640px] mx-auto mt-5 mb-6"
           variant="h1">
-          {"We Have "}
-          <span className="underline">9</span>
-          {" Open Positions"}
+          <span>{'We Have '}</span>
+          {!isFetchingRoles && <span className="underline">{availableRoles.length}</span>}
+          <span>{` Open ${availableRoles.length === 1 ? ' Position' : 'Positions'}`}</span>
         </Ntext>
         <Button
-          text="Join Us"
           href={{ url: "/careers/roles" }}
           className="!font-medium !text-[14px] !min-w-[86px] mb-[72px] !h-10"
           withArrow={false}
+          text="Join Us"
         />
       </section>
       <section className={galleryStyle}>

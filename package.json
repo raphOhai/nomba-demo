@@ -36,6 +36,7 @@
     "gatsby-transformer-rehype": "^2.0.1",
     "gatsby-transformer-sharp": "^4.14.0",
     "gsap": "^3.11.5",
+    "ldrs": "^1.0.1",
     "lodash": "^4.17.21",
     "lottie-web": "^5.9.6",
     "postcss": "^8.4.7",

@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from "react";
+import React, { useContext, useState, useMemo } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
-import { availableRoles, roleDepartments, roleLocations } from "config/careers/roles";
 import { Container, NLink, Ntext } from "components";
+import { AppContext } from "states/context";
 import { pluralize } from "utils/helpers";
 import { countBy } from "lodash";
 
@@ -12,6 +12,13 @@ import WhiteChevronRight from "svgs/white-chevron-right.svg";
 import SearchIcon from "svgs/search-icon.svg";
 
 const GetYourCareerStarted = () => {
+  const {
+    roleLocations,
+    availableRoles,
+    roleDepartments,
+    isFetchingRoles,
+  } = useContext(AppContext);
+
   const [department, setDepartment] = useState('');
   const [location, setLocation] = useState('');
   const [needle, setNeedle] = useState('');
@@ -25,15 +32,14 @@ const GetYourCareerStarted = () => {
         label: department,
       })),
     ];
-  }, [roleDepartments]);
+  }, [roleDepartments, isFetchingRoles]);
 
   const departmentLabels = useMemo(() => {
     return departmentOptions.map(option => (
       <article
         key={option.label}
         className="cursor-pointer mt-6"
-        onClick={() => setDepartment(option.value)}
-      >
+        onClick={() => setDepartment(option.value)}>
         <Ntext
           color="primary-100"
           value={`${option.label} - ${option.count}`}
@@ -42,14 +48,14 @@ const GetYourCareerStarted = () => {
         />
       </article>
     ));
-  }, [department]);
+  }, [isFetchingRoles, department]);
 
   const locationOptions = useMemo(() => {
     return [
       { value: '', label: 'All locations' },
       ...roleLocations.map(location => ({ value: location, label: location }))
     ];
-  }, [roleLocations]);
+  }, [isFetchingRoles, roleLocations]);
 
   const matchingRoles = useMemo(() => {
     const hasMatch = (whole, part) => whole.toLowerCase().includes(part.toLowerCase())
@@ -58,7 +64,30 @@ const GetYourCareerStarted = () => {
         && hasMatch(role.location, location)
         && hasMatch(role.title, needle)
     );
-  }, [department, location, needle]);
+  }, [isFetchingRoles, department, location, needle]);
+
+  if (isFetchingRoles) {
+    return (
+      <section className={noRolesWrapperStyle}>
+        <article className="-mt-36">
+          <l-jelly color="#FFCC00" size="128" />
+        </article>
+      </section>
+    );
+  }
+
+  if (availableRoles.length === 0) {
+    return (
+      <section className={noRolesWrapperStyle}>
+        <Ntext
+          value="There are no available roles at this time."
+          className="-mt-36"
+          color="primary-100"
+          variant="h4"
+        />
+      </section>
+    );
+  }
 
   return (
     <Container className={wrapperStyle}>
@@ -69,8 +98,8 @@ const GetYourCareerStarted = () => {
         <WhiteChevronRight />
         <Ntext
           color="secondary"
-          value="View available roles"
           className="cursor-pointer"
+          value="View available roles"
           variant="p14"
         />
       </section>
@@ -177,7 +206,7 @@ const GetYourCareerStarted = () => {
             matchingRoles.map(role => (
               <NLink
                 key={role.slug} className={roleWrapperStyle}
-                href={{url: `/careers/roles/${role.slug}` }}>
+                href={{ url: `/careers/roles/${role.slug}` }}>
                 <Ntext
                   color="primary-100"
                   className="!font-bold -tracking-[0.4px]"
@@ -193,6 +222,15 @@ const GetYourCareerStarted = () => {
     </Container>
   );
 };
+
+const noRolesWrapperStyle = ctl(`
+  flex
+  justify-center
+  items-center
+  min-h-screen
+  text-center
+  px-8
+`);
 
 const locationSelectStyle = ctl(`
   cursor-pointer

@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
-import Layout from "components/layout-max";
+
 import { CareersTipsAndStories, GetYourCareerStarted } from "templates";
 import { split } from "animations/text";
+
+import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 const CareersRolesPage = () => {
@@ -13,8 +15,7 @@ const CareersRolesPage = () => {
     <Layout
       title={SeoConf.careers.roles.title}
       description={SeoConf.careers.roles.description}
-      useStickyNav={false}
-    >
+      useStickyNav={false}>
       <GetYourCareerStarted />
       <CareersTipsAndStories />
     </Layout>

@@ -1,15 +1,19 @@
 import React, { useEffect } from "react";
-import Layout from "components/layout-max";
+
 import { GetStarted, Testimonial } from "components";
 import { careersTestimonials } from "config/careers";
+
 import {
   CareersTipsAndStories,
   WhatWeAreBuilding,
   WhatWeBelieveIn,
   OurValues
 } from "templates";
+
 import { CareersPageHero } from "templates/careers";
 import { split } from "animations/text";
+
+import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 const CareersPage = () => {
@@ -21,8 +25,7 @@ const CareersPage = () => {
     <Layout
       title={SeoConf.careers.title}
       description={SeoConf.careers.description}
-      useStickyNav={false}
-    >
+      useStickyNav={false}>
       <CareersPageHero />
       <WhatWeBelieveIn />
       <OurValues />

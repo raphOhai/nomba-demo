@@ -11338,6 +11338,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ldrs@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "ldrs@npm:1.0.1"
+  checksum: 4fc39a69665e9e27d7db6dc6bf91ad347b28d62dc8288a722f407a4c0bcf085fc59ad873ff2d5abdf023c5cf2f34e72eb70fd69527e699a27748b7312bf246ad
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -12598,6 +12605,7 @@ __metadata:
     gatsby-transformer-sharp: ^4.14.0
     gsap: ^3.11.5
     husky: ">=6"
+    ldrs: ^1.0.1
     lint-staged: ">=10"
     lodash: ^4.17.21
     lottie-web: ^5.9.6

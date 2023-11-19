@@ -11,7 +11,7 @@ export const careersTestimonials = [
     image: (
       <StaticImage
         alt="Jane Brown"
-        src="../../assets/images/jpegs/careers/testimonials/jane-brown.png"
+        src="../assets/images/jpegs/careers/testimonials/jane-brown.png"
         className="rounded-[112px]"
         loading="lazy"
         height={482}
@@ -27,7 +27,7 @@ export const whatWeAreBuilding = {
   images: [
     (<StaticImage
       alt="Two Smiling Ladies"
-      src="../../assets/images/jpegs/careers/what-we-are-building/two-smiling-ladies.jpeg"
+      src="../assets/images/jpegs/careers/what-we-are-building/two-smiling-ladies.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={634}
@@ -35,7 +35,7 @@ export const whatWeAreBuilding = {
     />),
     (<StaticImage
       alt="A Smiling Group Photo"
-      src="../../assets/images/jpegs/careers/what-we-are-building/smiling-group-photo.jpeg"
+      src="../assets/images/jpegs/careers/what-we-are-building/smiling-group-photo.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={304}
@@ -43,7 +43,7 @@ export const whatWeAreBuilding = {
     />),
     (<StaticImage
       alt="A Smiling Man And Lady"
-      src="../../assets/images/jpegs/careers/what-we-are-building/smiling-man-and-lady.jpeg"
+      src="../assets/images/jpegs/careers/what-we-are-building/smiling-man-and-lady.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={320}
@@ -57,7 +57,7 @@ export const heroSectionData = {
   images: [
     (<StaticImage
       alt="Three Smiling Guys"
-      src="../../assets/images/jpegs/careers/hero/hero-image-1.jpeg"
+      src="../assets/images/jpegs/careers/hero/hero-image-1.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={488}
@@ -65,7 +65,7 @@ export const heroSectionData = {
     />),
     (<StaticImage
       alt="Large Group Of Staff"
-      src="../../assets/images/jpegs/careers/hero/hero-image-2.jpeg"
+      src="../assets/images/jpegs/careers/hero/hero-image-2.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={240}
@@ -73,7 +73,7 @@ export const heroSectionData = {
     />),
     (<StaticImage
       alt="Five Smiling Ladies"
-      src="../../assets/images/jpegs/careers/hero/hero-image-3.jpeg"
+      src="../assets/images/jpegs/careers/hero/hero-image-3.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={228}
@@ -81,7 +81,7 @@ export const heroSectionData = {
     />),
     (<StaticImage
       alt="Two Smiling Guys"
-      src="../../assets/images/jpegs/careers/hero/hero-image-4.jpeg"
+      src="../assets/images/jpegs/careers/hero/hero-image-4.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={240}
@@ -89,7 +89,7 @@ export const heroSectionData = {
     />),
     (<StaticImage
       alt="Lady Showing Peace Sign"
-      src="../../assets/images/jpegs/careers/hero/hero-image-5.jpeg"
+      src="../assets/images/jpegs/careers/hero/hero-image-5.jpeg"
       className="rounded-[5px]"
       loading="lazy"
       height={240}
@@ -97,7 +97,7 @@ export const heroSectionData = {
     />),
     (<StaticImage
       alt="Smiling Guy And Lady"
-      src="../../assets/images/jpegs/careers/hero/hero-image-6.png"
+      src="../assets/images/jpegs/careers/hero/hero-image-6.png"
       className="rounded-[5px]"
       loading="lazy"
       height={228}
@@ -105,7 +105,7 @@ export const heroSectionData = {
     />),
     (<StaticImage
       alt="Two Smiling Ladies"
-      src="../../assets/images/jpegs/careers/hero/hero-image-7.png"
+      src="../assets/images/jpegs/careers/hero/hero-image-7.png"
       className="rounded-[5px]"
       loading="lazy"
       height={488}
