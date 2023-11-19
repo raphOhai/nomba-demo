@@ -9,7 +9,7 @@ import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 const RolePage = ({ params }) => {
-  const cachedAvailableRoles = localStorage.getItem('nomba-available-roles')
+  const cachedAvailableRoles = localStorage?.getItem('nomba-available-roles')
 
   useEffect(() => {
     if (!cachedAvailableRoles) {

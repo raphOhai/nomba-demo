@@ -13,9 +13,9 @@ export const AppContext = createContext();
 export const ContextWrapper = ({ children }) => {
   const initialItems = { count: 1 };
 
-  const cachedRoleDepartments = localStorage.getItem('nomba-role-departments') || '[]';
-  const cachedAvailableRoles = localStorage.getItem('nomba-available-roles') || '[]';
-  const cachedRoleLocations = localStorage.getItem('nomba-role-locations') || '[]';
+  const cachedRoleDepartments = localStorage?.getItem('nomba-role-departments') || '[]';
+  const cachedAvailableRoles = localStorage?.getItem('nomba-available-roles') || '[]';
+  const cachedRoleLocations = localStorage?.getItem('nomba-role-locations') || '[]';
 
   const [roleDepartments, setRoleDepartments] = useState(JSON.parse(cachedRoleDepartments));
   const [availableRoles, setAvailableRoles] = useState(JSON.parse(cachedAvailableRoles));
@@ -100,9 +100,9 @@ export const ContextWrapper = ({ children }) => {
         id: role.Id,
       }));
 
-      localStorage.setItem('nomba-role-departments', JSON.stringify(newRoleDepartments));
-      localStorage.setItem('nomba-available-roles', JSON.stringify(newAvailableRoles));
-      localStorage.setItem('nomba-role-locations', JSON.stringify(newRoleLocations));
+      localStorage?.setItem('nomba-role-departments', JSON.stringify(newRoleDepartments));
+      localStorage?.setItem('nomba-available-roles', JSON.stringify(newAvailableRoles));
+      localStorage?.setItem('nomba-role-locations', JSON.stringify(newRoleLocations));
 
       setRoleDepartments(newRoleDepartments);
       setAvailableRoles(newAvailableRoles);
