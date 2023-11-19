@@ -12,12 +12,7 @@ import WhiteChevronRight from "svgs/white-chevron-right.svg";
 import SearchIcon from "svgs/search-icon.svg";
 
 const GetYourCareerStarted = () => {
-  const {
-    roleLocations,
-    availableRoles,
-    roleDepartments,
-    isFetchingRoles,
-  } = useContext(AppContext);
+  const { locations, departments, availableRoles, isFetchingRoles } = useContext(AppContext);
 
   const [department, setDepartment] = useState('');
   const [location, setLocation] = useState('');
@@ -26,13 +21,13 @@ const GetYourCareerStarted = () => {
   const departmentOptions = useMemo(() => {
     return [
       { value: '', label: 'All departments', count: availableRoles.length },
-      ...roleDepartments.map(department => ({
+      ...departments.map(department => ({
         count: countBy(availableRoles, 'department')[department],
         value: department,
         label: department,
       })),
     ];
-  }, [roleDepartments, isFetchingRoles]);
+  }, [isFetchingRoles, departments]);
 
   const departmentLabels = useMemo(() => {
     return departmentOptions.map(option => (
@@ -53,9 +48,9 @@ const GetYourCareerStarted = () => {
   const locationOptions = useMemo(() => {
     return [
       { value: '', label: 'All locations' },
-      ...roleLocations.map(location => ({ value: location, label: location }))
+      ...locations.map(location => ({ value: location, label: location }))
     ];
-  }, [isFetchingRoles, roleLocations]);
+  }, [isFetchingRoles, locations]);
 
   const matchingRoles = useMemo(() => {
     const hasMatch = (whole, part) => whole.toLowerCase().includes(part.toLowerCase())

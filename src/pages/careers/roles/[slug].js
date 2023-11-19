@@ -9,10 +9,11 @@ import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 const RolePage = ({ params }) => {
-  const cachedAvailableRoles = localStorage?.getItem('nomba-available-roles')
+  let availableRoles = [];
 
   useEffect(() => {
-    if (!cachedAvailableRoles) {
+    availableRoles = JSON.parse(localStorage.getItem('nomba-available-roles') || '[]');
+    if (!availableRoles[0]) {
       navigate('/careers/roles');
     }
   });
@@ -21,8 +22,7 @@ const RolePage = ({ params }) => {
     split();
   });
 
-  const role = JSON.parse(cachedAvailableRoles || '[]')
-    .find(value => value.slug === params.slug);
+  const role = availableRoles.find(value => value.slug === params.slug);
 
   return (
     <Layout

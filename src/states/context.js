@@ -13,13 +13,17 @@ export const AppContext = createContext();
 export const ContextWrapper = ({ children }) => {
   const initialItems = { count: 1 };
 
-  const cachedRoleDepartments = localStorage?.getItem('nomba-role-departments') || '[]';
-  const cachedAvailableRoles = localStorage?.getItem('nomba-available-roles') || '[]';
-  const cachedRoleLocations = localStorage?.getItem('nomba-role-locations') || '[]';
+  let cachedAvailableRoles = [], cachedDepartments = [], cachedLocations = [];
 
-  const [roleDepartments, setRoleDepartments] = useState(JSON.parse(cachedRoleDepartments));
-  const [availableRoles, setAvailableRoles] = useState(JSON.parse(cachedAvailableRoles));
-  const [roleLocations, setRoleLocations] = useState(JSON.parse(cachedRoleLocations));
+  if (typeof window !== 'undefined') {
+    cachedAvailableRoles = JSON.parse(localStorage.getItem('nomba-available-roles') || '[]');
+    cachedDepartments = JSON.parse(localStorage.getItem('nomba-departments') || '[]');
+    cachedLocations = JSON.parse(localStorage.getItem('nomba-locations') || '[]');
+  }
+
+  const [availableRoles, setAvailableRoles] = useState(cachedAvailableRoles);
+  const [departments, setDepartments] = useState(cachedDepartments);
+  const [locations, setLocations] = useState(cachedLocations);
 
   const [isFetchingRoles, setIsFetchingRoles] = useState(false);
 
@@ -80,7 +84,7 @@ export const ContextWrapper = ({ children }) => {
   };
 
   useEffect(() => {
-    if (!roleDepartments[0] || !availableRoles[0] || !roleLocations[0]) {
+    if (!departments[0] || !availableRoles[0] || !locations[0]) {
       setIsFetchingRoles(true);
     }
 
@@ -100,13 +104,13 @@ export const ContextWrapper = ({ children }) => {
         id: role.Id,
       }));
 
-      localStorage?.setItem('nomba-role-departments', JSON.stringify(newRoleDepartments));
-      localStorage?.setItem('nomba-available-roles', JSON.stringify(newAvailableRoles));
-      localStorage?.setItem('nomba-role-locations', JSON.stringify(newRoleLocations));
+      localStorage.setItem('nomba-role-departments', JSON.stringify(newRoleDepartments));
+      localStorage.setItem('nomba-available-roles', JSON.stringify(newAvailableRoles));
+      localStorage.setItem('nomba-role-locations', JSON.stringify(newRoleLocations));
 
-      setRoleDepartments(newRoleDepartments);
+      setDepartments(newRoleDepartments);
       setAvailableRoles(newAvailableRoles);
-      setRoleLocations(newRoleLocations);
+      setLocations(newRoleLocations);
 
       setIsFetchingRoles(false);
     });
@@ -152,9 +156,9 @@ export const ContextWrapper = ({ children }) => {
         handleTabsChange,
 
         isFetchingRoles,
-        roleDepartments,
         availableRoles,
-        roleLocations,
+        departments,
+        locations,
       }}>
       {children}
     </AppContext.Provider>
