@@ -1,5 +1,7 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 import ctl from "@netlify/classnames-template-literals";
+
 import { SectionHeader, Container, Ntext, Br } from "components";
 import { ourValues } from "config/careers"
 
@@ -14,9 +16,21 @@ const OurValues = () => {
         </SectionHeader>
         <section className={galleryStyle}>
           {
-            ourValues.map((value, i) => (
-              <article className={`${articleStyle} bg-[${value.colour}]`} key={i}>
-                <Ntext className="!leading-[84px]" variant="h1" color={value.titleColour} value={value.title} />
+            ourValues.map(value => (
+              <article className={`${articleStyle} bg-[${value.colour}]`} key={value}>
+                <Ntext
+                  color={value.titleColour}
+                  className="!leading-[84px]"
+                  variant="h1">
+                  <Typewriter
+                    options={{
+                      delay: 256,
+                      strings: value.title,
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </Ntext>
                 <Ntext className="mt-[120px]" variant="p16" value={value.details} />
               </article>
             ))

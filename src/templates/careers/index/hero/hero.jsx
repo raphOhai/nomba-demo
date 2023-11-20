@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
+import { Button, NLink, Ntext } from "components";
 import { heroSectionData } from "config/careers"
 import { AppContext } from "states/context";
-import { Button, Ntext } from "components";
 
 const CareersPageHero = () => {
   const { availableRoles } = useContext(AppContext);
@@ -26,7 +26,12 @@ const CareersPageHero = () => {
           className="max-w-[640px] mx-auto mt-5 mb-6"
           variant="h1">
           <span>{'We Have '}</span>
-          {roleCount > 0 && <span className="underline">{roleCount}</span>}
+          {
+            roleCount > 0 &&
+            <NLink className="inline underline" href={{ url: "/careers/roles" }}>
+              <span>{roleCount}</span>
+            </NLink>
+          }
           <span>{` Open ${roleCount === 1 ? ' Position' : 'Positions'}`}</span>
         </Ntext>
         <Button
