@@ -17,7 +17,7 @@ const SubMenuDetails = ({ subMenuItem, ...props }) => (
         <div className={`text-left ${subMenuItem?.description ? "-mt-1" : "mt-1 lg:mt-0"}`}>
           <Ntext
             variant="p16"
-            className="group-hover/item:!text-primary "
+            className="group-hover/item:!text-primary lg:min-w-[256px] "
             value={subMenuItem?.title}
             color="n-grey5"
             weight="700"
@@ -46,15 +46,15 @@ const subMenuDetailsStyle = ctl(`
   w-full
   submenuStyle
 `);
+
 const subMenuItemWrapStyle = ctl(`
-  flex 
+  flex
   group/item
-  justify-between 
-  items-center   
-  border-b 
+  justify-between
+  items-center
+  border-b
   w-full
   py-3
-
   lg:px-3
   hover:bg-m-light
   lg:hover:border-n-grey2
@@ -63,20 +63,21 @@ const subMenuItemWrapStyle = ctl(`
   lg:border-n-light
   border-primary-400
 `);
+
 const subMenuInnerWrapStyle = ctl(`
-  flex 
-  items-start 
+  flex
+  items-start
   gap-[13px]
   peer
   w-full
 `);
+
 const iconWrapStyle = ctl(`
   w-[30px]
   h-[30px]
   flex
   items-center
   justify-center
-
 `);
 
 export { SubMenuDetails };
