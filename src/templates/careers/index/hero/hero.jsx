@@ -32,7 +32,6 @@ const CareersPageHero = () => {
         <Button
           href={{ url: "/careers/roles" }}
           className="!font-medium !text-[14px] !min-w-[86px] mb-[72px] !h-10"
-          withArrow={false}
           text="Join Us"
         />
       </section>

@@ -7,9 +7,9 @@ import constants from "config/constants.json";
 
 const { FETCH_ROLES_URL } = constants;
 
-const ApplyForRole = ({ role }) => {
+const ApplyForJob = ({ role }) => {
   return (
-    <section className="bg-white">
+    <section id="apply-for-job" className="bg-white">
       <Container className={wrapperStyle}>
         <Ntext
           className="!leading-[80px] !-tracking-[1.92px] text-center"
@@ -29,4 +29,4 @@ const wrapperStyle = ctl(`
   pt-8
 `);
 
-export { ApplyForRole };
+export { ApplyForJob };

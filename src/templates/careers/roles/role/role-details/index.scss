@@ -1,0 +1,21 @@
+.role-details li {
+    list-style: disc outside;
+}
+
+.role-details p:first-child {
+    margin-top: -14px;
+}
+
+.role-details p:first-child>img {
+    margin-bottom: 40px;
+    margin-top: 14px;
+}
+
+.role-details li p {
+    display: inline;
+}
+
+.role-details ul,
+.role-details ol {
+    padding-inline-start: 40px;
+}

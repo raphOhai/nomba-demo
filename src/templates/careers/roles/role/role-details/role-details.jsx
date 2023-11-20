@@ -1,9 +1,12 @@
 import React from "react";
+import parse from "html-react-parser";
 import ctl from "@netlify/classnames-template-literals";
 
-import { Container, NLink, Ntext } from "components";
+import { Container, Button, NLink, Ntext } from "components";
 
 import WhiteChevronRight from "svgs/white-chevron-right.svg";
+
+import "./index.scss";
 
 const RoleDetails = ({ role }) => {
   return (
@@ -13,57 +16,62 @@ const RoleDetails = ({ role }) => {
           <Ntext variant="p14" color="secondary-100" value="Careers" />
         </NLink>
         <WhiteChevronRight />
+        <NLink href={{ url: "/careers/roles" }}>
+          <Ntext variant="p14" color="secondary-100" value="View available roles" />
+        </NLink>
+        <WhiteChevronRight />
         <Ntext
           color="secondary"
-          value="View available roles"
+          value={role.title}
+          className="cursor-pointer"
           variant="p14"
         />
       </section>
       <Ntext
+        value={role.title}
         color="primary-100"
-        value="Get your Career Started with Nomba"
-        className="max-w-[768px] !leading-[80px] !-tracking-[2.56px] my-5"
-        variant="h1"
+        className="!leading-[80px] !-tracking-[1.92px] mt-5"
+        variant="h2"
       />
-      <Ntext
-        value="Join us in building tools that simplify payments and drive business growth."
-        variant="text4lite"
-        color="n-grey1"
-      />
-      <section className={infoAreaStyle}>
+      <section className={detailsAreaStyle}>
         <aside className={asideStyle}>
+          <Button href="#apply-for-job" text="Apply here" size="small" />
         </aside>
-        <section className={infoBoardStyle}>
-        </section>
+        <section className={detailsBoardStyle}>{parse(role.markup)}</section>
       </section>
     </Container>
   );
 };
-const infoBoardStyle = ctl(`
+
+const detailsBoardStyle = ctl(`
   flex
+  role-details
+  !-tracking-[0.32px]
+  !leading-10
+  !text-white
   flex-col
   w-full
 `);
 
-const infoAreaStyle = ctl(`
+const detailsAreaStyle = ctl(`
   flex
-  mt-[94px]
-  items-start
+  mt-[72px]
   w-full
 `);
 
 const wrapperStyle = ctl(`
   flex
   flex-col
-  py-[108px]
+  pt-[108px]
+  pb-16
 `);
 
 const asideStyle = ctl(`
-  min-w-[280px]
+  mr-[72px]
+  min-w-[356px]
   lg:flex-col
   lg:flex
   hidden
-  mr-6
 `);
 
 const navStyle = ctl(`

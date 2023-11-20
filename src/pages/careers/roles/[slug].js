@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { ApplyForRole, CareersTipsAndStories, RoleDetails } from "templates";
+import { ApplyForJob, CareersTipsAndStories, RoleDetails } from "templates";
 import { split } from "animations/text";
 
 import { navigate } from "gatsby";
@@ -9,12 +9,15 @@ import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 const RolePage = ({ params }) => {
-  const [availableRoles, setAvailableRoles] = useState([]);
+  const [role, setRole] = useState();
 
   useEffect(() => {
-    const cachedRoles = JSON.parse(localStorage.getItem('nomba-available-roles') || '[]');
-    setAvailableRoles(cachedRoles);
-    if (!cachedRoles[0]) {
+    const roleFromCache = JSON.parse(localStorage.getItem('nomba-available-roles') || '[]')
+      .find(value => value.slug === params.slug);
+
+    setRole(roleFromCache);
+
+    if (!roleFromCache) {
       navigate('/careers/roles');
     }
   });
@@ -23,15 +26,13 @@ const RolePage = ({ params }) => {
     split();
   });
 
-  const role = availableRoles.find(value => value.slug === params.slug);
-
   return (
     <Layout
       title={role?.title || SeoConf.careers.roles.title}
       description={role?.description || SeoConf.careers.roles.description}
       useStickyNav={false}>
-      <RoleDetails role={role} />
-      <ApplyForRole role={role} />
+      {role && <RoleDetails role={role} />}
+      {role && <ApplyForJob role={role} />}
       <CareersTipsAndStories />
     </Layout>
   );

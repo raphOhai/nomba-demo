@@ -80,8 +80,8 @@ const GetYourCareerStarted = () => {
         <WhiteChevronRight />
         <Ntext
           color="secondary"
-          className="cursor-pointer"
           value="View available roles"
+          className="cursor-pointer"
           variant="p14"
         />
       </section>
