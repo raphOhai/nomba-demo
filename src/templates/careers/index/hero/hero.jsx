@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Button, NLink, Ntext } from "components";
@@ -7,6 +7,18 @@ import { AppContext } from "states/context";
 
 const CareersPageHero = () => {
   const { availableRoles } = useContext(AppContext);
+
+  const [pictureIndex, setPictureIndex] = useState(0);
+
+  useEffect(() => {
+    const switcher = setInterval(() => {
+      setPictureIndex(1 - pictureIndex);
+    }, 4096);
+
+    return () => {
+      clearInterval(switcher);
+    };
+  });
 
   const { intro, images } = heroSectionData;
 
@@ -41,19 +53,19 @@ const CareersPageHero = () => {
         />
       </section>
       <section className={galleryStyle}>
-        {images[0]}
-        <article className="flex flex-col space-y-5">
-          {images[1]}
-          {images[2]}
+        {[images[0], images[6]][pictureIndex]}
+        <article className="flex flex-col space-y-6">
+          {[images[1], images[2]][pictureIndex]}
+          {[images[2], images[1]][pictureIndex]}
         </article>
-        <article className="flex flex-col space-y-5">
+        <article className="flex flex-col space-y-6">
           <article className="flex justify-between lg:space-x-5">
-            {images[3]}
-            {images[4]}
+            {[images[3], images[4]][pictureIndex]}
+            {[images[4], images[3]][pictureIndex]}
           </article>
           {images[5]}
         </article>
-        {images[6]}
+        {[images[6], images[0]][pictureIndex]}
       </section>
     </section>
   );
@@ -87,7 +99,6 @@ const galleryStyle = ctl(`
   lg:space-x-5
   lg:space-y-0
   lg:max-w-[1440px]
-  justify-between
   lg:-bottom-8
   lg:absolute
   lg:mx-auto
