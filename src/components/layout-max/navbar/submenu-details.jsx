@@ -46,15 +46,15 @@ const subMenuDetailsStyle = ctl(`
   w-full
   submenuStyleDark
 `);
+
 const subMenuItemWrapStyle = ctl(`
-  flex 
+  flex
   group/item
-  justify-between 
-  items-center 
-  border-b 
+  justify-between
+  items-center
+  border-b
   w-full
   py-3
-
   lg:px-3
   hover:bg-primary
   lg:hover:border-n-grey5
@@ -63,13 +63,15 @@ const subMenuItemWrapStyle = ctl(`
   lg:border
   border-n-grey5
 `);
+
 const subMenuInnerWrapStyle = ctl(`
-  flex 
-  items-start 
+  flex
+  items-start
   gap-[13px]
   peer
   w-full
 `);
+
 const iconWrapStyle = ctl(`
   w-[30px]
   h-[30px]

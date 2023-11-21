@@ -4,5 +4,6 @@
   "MENU_DEMO": "https://menu.nomba.com/pyo8we",
   "MENU_FORM_SPREADSHEET": "https://script.google.com/macros/s/AKfycbwPCmZd-huQaEmnpbANVGcVgBgHDiWGE7FxQ4pgZ7mCU9bR727bjwkXgyd7Vl1Mec66/exec",
   "TERMINAL_FORM_SPREADSHEET": "https://script.google.com/macros/s/AKfycbyTGq_7hiZXf1M86ISh_JkOy4LUX4_DL8xLJE-7w5YzoApp2wI5sDgD5nf4d-3-_EYr0A/exec",
+  "SUBMIT_JOB_APPLICATION_URL": "https://api.talentlyft.com/v2/public/nomba/jobs?details=true",
   "FETCH_ROLES_URL": "https://api.talentlyft.com/v2/public/nomba/jobs?details=true"
 }
