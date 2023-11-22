@@ -44,11 +44,11 @@ const CareersPageHero = () => {
               <span>{roleCount}</span>
             </NLink>
           }
-          <span>{` Open ${roleCount === 1 ? ' Position' : 'Positions'}`}</span>
+          <span>{` Open ${roleCount === 1 ? 'Position' : 'Positions'}`}</span>
         </Ntext>
         <Button
+          className="!font-medium !text-sm !min-w-[86px] mb-[72px] !h-10"
           href={{ url: "/careers/roles" }}
-          className="!font-medium !text-[14px] !min-w-[86px] mb-[72px] !h-10"
           text="Join Us"
         />
       </section>
