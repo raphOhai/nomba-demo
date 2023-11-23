@@ -30,7 +30,6 @@ module.exports = {
       fontFamily: {
         primary: ["Inter", "sans-serif"],
       },
-
       backgroundImage: theme => ({
         "nomba-pro-hero-bg": "url('src/assets/images/left-slash.png')",
         "nomba-subtract": "url('src/assets/images/jpegs/Subtract.png')",
@@ -40,7 +39,6 @@ module.exports = {
         "bg-parallax-blank": "url('src/assets/images/jpegs/small-business/blank.png')",
         "video-thumbnail": "url('src/assets/images/jpegs/hand-with-yellow-pos.png')",
       }),
-
       colors: {
         primary: {
           DEFAULT: "#121212",
@@ -139,12 +137,10 @@ module.exports = {
           6: "#FFEEAA",
         },
       },
-
       boxShadow: {
         subMenu: "0px 8px 20px 0px rgba(196, 196, 196, 0.30)",
         subMenuDark: "0px 4px 10px 0px rgba(0, 0, 0, 0.10)",
       },
-
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
@@ -162,6 +158,14 @@ module.exports = {
             borderRadius: "250px",
           },
         },
+        heroFade: {
+          "0%": {
+            opacity: 0.256,
+          },
+          "50%": {
+            opacity: 1,
+          },
+        },
         fadeIn: {
           "0%": {
             opacity: 0,
@@ -171,15 +175,14 @@ module.exports = {
           },
         },
       },
-
       animation: {
         wiggle: "wiggle 1s ease-in-out 2",
+        heroFade: "heroFade 4s ease-in 1",
         pulseCustom: "pulseCustom 1s ease-in-out 2",
         squareToCircle: "squareToCircle .5s ease-in-out 1",
         fadeIn: "fadeIn 1.5s ease-in-out 1",
       },
     },
-
     screens: {
       xs: "250px",
       ...defaultTheme.screens,

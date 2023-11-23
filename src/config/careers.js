@@ -3,7 +3,8 @@ import ctl from "@netlify/classnames-template-literals";
 
 import { StaticImage } from "gatsby-plugin-image";
 
-const heroImageStyle = ctl(`
+const imageWrapperStyle = ctl(`
+  animate-heroFade
   hover:scale-105
   rounded-[5px]
   duration-500
@@ -67,7 +68,7 @@ export const heroSectionData = {
     (<StaticImage
       alt="Three Smiling Guys"
       src="../assets/images/jpegs/careers/hero/hero-image-1.jpeg"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={504}
       width={300}
@@ -75,7 +76,7 @@ export const heroSectionData = {
     (<StaticImage
       alt="Large Group Of Staff"
       src="../assets/images/jpegs/careers/hero/hero-image-2.jpeg"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={240}
       width={400}
@@ -83,7 +84,7 @@ export const heroSectionData = {
     (<StaticImage
       alt="Five Smiling Ladies"
       src="../assets/images/jpegs/careers/hero/hero-image-3.jpeg"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={240}
       width={400}
@@ -91,7 +92,7 @@ export const heroSectionData = {
     (<StaticImage
       alt="Two Smiling Guys"
       src="../assets/images/jpegs/careers/hero/hero-image-4.jpeg"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={240}
       width={180}
@@ -99,7 +100,7 @@ export const heroSectionData = {
     (<StaticImage
       alt="Lady Showing Peace Sign"
       src="../assets/images/jpegs/careers/hero/hero-image-5.jpeg"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={240}
       width={180}
@@ -107,7 +108,7 @@ export const heroSectionData = {
     (<StaticImage
       alt="Smiling Guy And Lady"
       src="../assets/images/jpegs/careers/hero/hero-image-6.png"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={240}
       width={380}
@@ -115,10 +116,34 @@ export const heroSectionData = {
     (<StaticImage
       alt="Two Smiling Ladies"
       src="../assets/images/jpegs/careers/hero/hero-image-7.png"
-      className={heroImageStyle}
+      className={imageWrapperStyle}
       loading="lazy"
       height={504}
       width={300}
+    />),
+    (<StaticImage
+      alt="Two Smiling Ladies"
+      src="../assets/images/jpegs/careers/hero/hero-image-8.jpeg"
+      className={imageWrapperStyle}
+      loading="lazy"
+      height={240}
+      width={400}
+    />),
+    (<StaticImage
+      alt="Smiling Group Photo"
+      src="../assets/images/jpegs/careers/hero/hero-image-9.jpeg"
+      className={imageWrapperStyle}
+      loading="lazy"
+      height={240}
+      width={400}
+    />),
+    (<StaticImage
+      alt="Smiling Man And Lady"
+      src="../assets/images/jpegs/careers/hero/hero-image-9.jpeg"
+      className={imageWrapperStyle}
+      loading="lazy"
+      height={240}
+      width={400}
     />),
   ],
 };

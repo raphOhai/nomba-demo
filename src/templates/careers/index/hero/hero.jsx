@@ -2,36 +2,70 @@ import React, { useContext, useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Button, NLink, Ntext } from "components";
-import { heroSectionData } from "config/careers"
 import { AppContext } from "states/context";
+
+import HeroImage1 from "jpegs/careers/hero/hero-image-1.jpeg";
+import HeroImage2 from "jpegs/careers/hero/hero-image-2.jpeg";
+import HeroImage3 from "jpegs/careers/hero/hero-image-3.jpeg";
+import HeroImage4 from "jpegs/careers/hero/hero-image-4.jpeg";
+import HeroImage5 from "jpegs/careers/hero/hero-image-5.jpeg";
+import HeroImage6 from "jpegs/careers/hero/hero-image-6.png";
+import HeroImage7 from "jpegs/careers/hero/hero-image-7.png";
+import HeroImage8 from "jpegs/careers/hero/hero-image-8.jpeg";
+import HeroImage9 from "jpegs/careers/hero/hero-image-9.jpeg";
+import HeroImage10 from "jpegs/careers/hero/hero-image-10.jpeg";
+
+import { shuffle } from "lodash";
 
 const CareersPageHero = () => {
   const { availableRoles } = useContext(AppContext);
 
-  const [pictureIndex, setPictureIndex] = useState(0);
+  const [pictureIndices, setPictureIndices] = useState([0, 1, 2, 3, 4, 5, 6]);
 
   useEffect(() => {
     const switcher = setInterval(() => {
-      setPictureIndex(1 - pictureIndex);
-    }, 4096);
+      const landscapeImageIndices = shuffle([1, 2, 5, 7, 8, 9]);
+      const portraitImageIndices = shuffle([0, 3, 4, 6]);
+
+      setPictureIndices([
+        portraitImageIndices[0],
+        landscapeImageIndices[0],
+        landscapeImageIndices[1],
+        portraitImageIndices[1],
+        portraitImageIndices[2],
+        landscapeImageIndices[2],
+        portraitImageIndices[3],
+      ]);
+    }, 8192);
 
     return () => {
       clearInterval(switcher);
     };
   });
 
-  const { intro, images } = heroSectionData;
-
   const roleCount = availableRoles.length;
+
+  const images = [
+    HeroImage1,
+    HeroImage2,
+    HeroImage3,
+    HeroImage4,
+    HeroImage5,
+    HeroImage6,
+    HeroImage7,
+    HeroImage8,
+    HeroImage9,
+    HeroImage10,
+  ];
 
   return (
     <section className={wrapperStyle}>
       <section className={captionStyle}>
         <Ntext
           color="primary-1200"
+          value="Join our team of exceptional people to build business tools for everybody"
           className="max-w-[640px] mx-auto px-8 lg:px-0"
           variant="p16"
-          value={intro}
         />
         <Ntext
           color="primary-100"
@@ -53,23 +87,69 @@ const CareersPageHero = () => {
         />
       </section>
       <section className={galleryStyle}>
-        {[images[0], images[6]][pictureIndex]}
+        <img
+          key={pictureIndices[0]}
+          alt="Three Smiling Guys"
+          src={images[pictureIndices[0]]}
+          className={`${imageWrapperStyle} w-[300px] h-[504px]`}
+          loading="lazy"
+        />
         <article className="flex flex-col space-y-6">
-          {[images[1], images[2]][pictureIndex]}
-          {[images[2], images[1]][pictureIndex]}
+          <img
+            key={pictureIndices[1]}
+            alt="Large Group Of Staff"
+            src={images[pictureIndices[1]]}
+            className={`${imageWrapperStyle} w-[400px] h-[240px]`}
+          />
+          <img
+            key={pictureIndices[2]}
+            alt="Five Smiling Ladies"
+            src={images[pictureIndices[2]]}
+            className={`${imageWrapperStyle} w-[400px] h-[240px]`}
+            loading="lazy"
+          />
         </article>
         <article className="flex flex-col space-y-6">
           <article className="flex justify-between lg:space-x-5">
-            {[images[3], images[4]][pictureIndex]}
-            {[images[4], images[3]][pictureIndex]}
+            <img
+              key={pictureIndices[3]}
+              alt="Two Guys Having Fun"
+              src={images[pictureIndices[3]]}
+              className={`${imageWrapperStyle} w-[180px] h-[240px]`}
+            />
+            <img
+              key={pictureIndices[4]}
+              alt="Lady Showing Peace Sign"
+              src={images[pictureIndices[4]]}
+              className={`${imageWrapperStyle} w-[180px] h-[240px]`}
+            />
           </article>
-          {images[5]}
+          <img
+            key={pictureIndices[5]}
+            alt="Smiling Guy And Lady"
+            src={images[pictureIndices[5]]}
+            className={`${imageWrapperStyle} w-[380px] h-[240px]`}
+            loading="lazy"
+          />
         </article>
-        {[images[6], images[0]][pictureIndex]}
+        <img
+          key={pictureIndices[6]}
+          alt="Two Smiling Ladies"
+          src={images[pictureIndices[6]]}
+          className={`${imageWrapperStyle} w-[300px] h-[504px]`}
+        />
       </section>
     </section>
   );
 };
+
+const imageWrapperStyle = ctl(`
+  animate-heroFade
+  hover:scale-105
+  rounded-[5px]
+  duration-500
+  transition
+`);
 
 const wrapperStyle = ctl(`
   min-h-[880px]
