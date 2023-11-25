@@ -41,7 +41,7 @@ const CareersPageHero = () => {
     return () => {
       clearInterval(switcher);
     };
-  });
+  }, []);
 
   const roleCount = availableRoles.length;
 
