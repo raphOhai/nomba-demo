@@ -79,7 +79,7 @@ const shareButtonStyle = ctl(`
   bg-black
   border-solid
   cursor-pointer
-  border-[#333333]
+  border-n-charcoal
   rounded-[5px]
   items-center
   space-x-2.5
