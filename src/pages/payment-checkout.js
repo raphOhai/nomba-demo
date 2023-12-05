@@ -7,6 +7,7 @@ import {
   CheckoutApiDocs,
   CheckoutSponsors,
   PaymentCheckoutHero,
+  IntegrateToYourTerms,
 } from "templates";
 
 import { faqData, docs } from "config/payment-checkout";
@@ -39,6 +40,7 @@ const PaymentCheckoutPage = () => {
         }
         data={docs}
       />
+      <IntegrateToYourTerms />
       <CheckoutFAQs faqData={faqData} />
     </Layout>
   );
