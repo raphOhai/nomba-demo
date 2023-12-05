@@ -17,7 +17,7 @@ const PaymentCheckoutHero = () => {
       <section className="absolute top-0 left-0 w-full">
         <Container className="pt-20">
           <section className={heroStyle}>
-            <section className="w-screen">
+            <section className="lg:w-screen">
               <Ntext
                 color="primary-100"
                 value="Seamless Online Payment, Simplified"
@@ -36,7 +36,7 @@ const PaymentCheckoutHero = () => {
                 text="Get Started"
               />
             </section>
-            <section>
+            <section className="hidden md:block">
               <Placeholder />
             </section>
           </section>

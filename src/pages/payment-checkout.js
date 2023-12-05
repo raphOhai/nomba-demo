@@ -2,10 +2,16 @@ import React, { useEffect } from "react";
 import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
-import { Br } from "components";
-import { CheckoutApiDocs, PaymentCheckoutHero, CheckoutFAQs } from "templates";
+import {
+  CheckoutFAQs,
+  CheckoutApiDocs,
+  CheckoutSponsors,
+  PaymentCheckoutHero,
+} from "templates";
+
 import { faqData, docs } from "config/payment-checkout";
 import { split } from "animations/text";
+import { Br } from "components";
 
 const PaymentCheckoutPage = () => {
   useEffect(() => {
@@ -18,6 +24,7 @@ const PaymentCheckoutPage = () => {
       description={SeoConf.invoice.description}
       useStickyNav={false}>
       <PaymentCheckoutHero />
+      <CheckoutSponsors />
       <CheckoutApiDocs
         title={
           <>
