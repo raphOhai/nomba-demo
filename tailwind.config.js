@@ -1,30 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 module.exports = {
+  mode: "jit",
   content: [
     "./src/config/**/*.{js,jsx,svg}",
-    "./src/pages/products/*.{js,jsx}",
-    "./src/pages/banking/*.{js,jsx}",
-    "./src/pages/business/*.{js,jsx}",
-    "./src/pages/careers/**/*.{js,jsx}",
-    "./src/pages/mini.js",
-    "./src/pages/terminals.js",
     "./src/components/**/*.{html,jsx,js}",
-    "./src/templates/about-us/**/*.{html,jsx,js}",
-    "./src/templates/banking/**/*.{html,jsx,js}",
-    "./src/templates/home/**/*.{html,jsx,js}",
-    "./src/templates/products/**/*.{html,jsx,js}",
-    "./src/templates/business/**/*.{html,jsx,js}",
-    "./src/templates/max/**/*.{html,jsx,js}",
-    "./src/templates/invoice/**/*.{html,jsx,js}",
-    "./src/templates/e-menu/**/*.{html,jsx,js}",
-    "./src/templates/mini/**/*.{html,jsx,js}",
-    "./src/templates/terminals/**/*.{html,jsx,js}",
-    "./src/templates/api/**/*.{html,jsx,js}",
-    "./src/templates/checkout-page/**/*.{html,jsx,js}",
-    "./src/templates/careers/**/*.{jsx,js}",
+    "./src/templates/**/*.{html,jsx,js}",
+    "./src/pages/**/*.{js,jsx}",
   ],
-  mode: "jit",
   theme: {
     extend: {
       fontFamily: {
@@ -38,6 +21,7 @@ module.exports = {
         "card-bg-2": "url('src/assets/images/card-bg-2.png')",
         "bg-parallax-blank": "url('src/assets/images/jpegs/small-business/blank.png')",
         "video-thumbnail": "url('src/assets/images/jpegs/hand-with-yellow-pos.png')",
+        "checkout-hero": "url('src/assets/images/jpegs/checkout-hero.png')",
       }),
       colors: {
         primary: {

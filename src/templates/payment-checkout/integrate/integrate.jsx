@@ -16,7 +16,7 @@ const IntegrateToYourTerms = () => {
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
-        maxWidth: '840px',
+        maxWidth: '800px',
         display: 'flex',
         margin: 'auto',
         gap: '40px',
