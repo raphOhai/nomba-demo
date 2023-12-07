@@ -24,20 +24,18 @@ const CheckoutSponsors = () => {
 const wrapperStyle = ctl(`
   bg-n-grey8
   py-[100px]
-  relative
   w-screen
   px-16
 `);
 
 const galleryStyle = ctl(`
   grid
-  grid-cols-2
+  grid-cols-1
   place-items-center
   md:grid-cols-3
   lg:grid-cols-5
   grid-flow-row
-  lg:gap-16
-  gap-8
+  gap-16
 `);
 
 export { CheckoutSponsors };

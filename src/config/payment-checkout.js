@@ -1,3 +1,8 @@
+export const heroSection = {
+  title: "Seamless Online Payment, Simplified",
+  description: "Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly.",
+};
+
 export const faqData = [
   {
     id: 1,

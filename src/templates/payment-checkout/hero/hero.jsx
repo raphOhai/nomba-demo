@@ -2,8 +2,11 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Container, Button, Ntext } from "components";
+import { heroSection } from "config/payment-checkout";
 
 import Placeholder from "svgs/checkout-hero-placeholder.svg";
+
+const { title, description } = heroSection;
 
 const PaymentCheckoutHero = () => {
   return (
@@ -12,14 +15,14 @@ const PaymentCheckoutHero = () => {
         <section className={heroStyle}>
           <section className="flex flex-col items-center lg:items-start max-w-[740px]">
             <Ntext
+              value={title}
               color="primary-100"
-              value="Seamless Online Payment, Simplified"
               className="md:!text-[72px] md:!leading-[80px] !-tracking-[2px] text-center lg:text-start max-w-[660px] lg:min-h-[168px]"
               variant="h1"
             />
             <Ntext
               color="primary-600"
-              value="Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly."
+              value={description}
               className="md:!leading-[32px] !-tracking-[0.8px] text-center lg:text-start max-w-[628px] mt-8"
               variant="text4lite"
             />
