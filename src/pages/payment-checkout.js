@@ -5,6 +5,7 @@ import SeoConf from "config/seo/meta";
 import {
   CheckoutFAQs,
   CheckoutApiDocs,
+  CheckoutBenefits,
   CheckoutSponsors,
   PaymentCheckoutHero,
   IntegrateToYourTerms,
@@ -25,6 +26,7 @@ const PaymentCheckoutPage = () => {
       description={SeoConf.invoice.description}
       useStickyNav={false}>
       <PaymentCheckoutHero />
+      <CheckoutBenefits />
       <CheckoutSponsors />
       <CheckoutApiDocs
         title={

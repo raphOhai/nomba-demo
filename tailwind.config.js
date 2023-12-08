@@ -13,7 +13,7 @@ module.exports = {
       fontFamily: {
         primary: ["Inter", "sans-serif"],
       },
-      backgroundImage: theme => ({
+      backgroundImage: () => ({
         "nomba-pro-hero-bg": "url('src/assets/images/left-slash.png')",
         "nomba-subtract": "url('src/assets/images/jpegs/Subtract.png')",
         "bg-parallax": "url('src/assets/images/jpegs/small-business/parallax-image.png')",
@@ -21,7 +21,8 @@ module.exports = {
         "card-bg-2": "url('src/assets/images/card-bg-2.png')",
         "bg-parallax-blank": "url('src/assets/images/jpegs/small-business/blank.png')",
         "video-thumbnail": "url('src/assets/images/jpegs/hand-with-yellow-pos.png')",
-        "checkout-hero": "url('src/assets/images/jpegs/checkout-hero.png')",
+        "checkout-hero": "url('src/assets/images/jpegs/payment-checkout/hero-bg.png')",
+        "checkout-benefits": "url('src/assets/images/jpegs/payment-checkout/benefits-bg.png')",
       }),
       colors: {
         primary: {
@@ -90,6 +91,7 @@ module.exports = {
           pink1: "#EFD9F2",
           grey3light: "#99999980",
           charcoal: "#333333",
+          silver: "#B3B3B3",
           bronze: "#A17867",
           smoky: "#0D0D0D",
           grape: "#AF96B2",

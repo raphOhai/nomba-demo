@@ -42,6 +42,14 @@ export const faqData = [
   },
 ];
 
+export const benefits = [
+  "Maximize sales with better payment experience",
+  "Zero delay: fast and swift settlements",
+  "Built for all kinds of businesses",
+  "Optimized for all kinds of devices",
+  "Reduced declines and fraud protection",
+];
+
 export const docs = [
   {
     label: "cURL",
