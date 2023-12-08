@@ -6,7 +6,7 @@ import { integrateSection } from "config/payment-checkout";
 
 const { title, description } = integrateSection;
 
-const IntegrateToYourTerms = () => {
+const IntegratePay = () => {
   return (
     <section className={wrapperStyle}>
       <section className={containerStyle}>
@@ -50,4 +50,4 @@ const wrapperStyle = ctl(`
   w-screen
 `);
 
-export { IntegrateToYourTerms };
+export { IntegratePay };

@@ -3,17 +3,18 @@ import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
 import {
+  IntegratePay,
   CheckoutFAQs,
   CheckoutApiDocs,
   CheckoutBenefits,
   CheckoutSponsors,
+  CheckoutAdvantages,
   PaymentCheckoutHero,
-  IntegrateToYourTerms,
 } from "templates";
 
-import { faqData, docs } from "config/payment-checkout";
 import { split } from "animations/text";
-import { Br } from "components";
+
+import Gradient from "svgs/payment-checkout/gradient.svg";
 
 const PaymentCheckoutPage = () => {
   useEffect(() => {
@@ -26,25 +27,22 @@ const PaymentCheckoutPage = () => {
       description={SeoConf.invoice.description}
       useStickyNav={false}>
       <PaymentCheckoutHero />
+      <CheckoutAdvantages />
+      <MiddleSection />
+      <CheckoutFAQs />
+    </Layout>
+  );
+};
+
+const MiddleSection = () => {
+  return (
+    <section className="relative w-screen">
+      <Gradient className="absolute right-0 top-[658px] w-[40vw] h-[1700px] z-10" />
       <CheckoutBenefits />
       <CheckoutSponsors />
-      <CheckoutApiDocs
-        title={
-          <>
-            Get to Integrate Fast with our <Br on="desktop" /> Checkout API
-          </>
-        }
-        description={
-          <>
-            A simple, elegant interface so you can start integrating in minutes. Leverage our APIs to transform your
-            businesses and products
-          </>
-        }
-        data={docs}
-      />
-      <IntegrateToYourTerms />
-      <CheckoutFAQs faqData={faqData} />
-    </Layout>
+      <CheckoutApiDocs />
+      <IntegratePay />
+    </section>
   );
 };
 

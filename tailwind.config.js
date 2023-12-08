@@ -3,10 +3,11 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   mode: "jit",
   content: [
+    "./src/pages/**/*.{html,js,jsx}",
     "./src/config/**/*.{js,jsx,svg}",
     "./src/components/**/*.{html,jsx,js}",
     "./src/templates/**/*.{html,jsx,js}",
-    "./src/pages/**/*.{js,jsx}",
+    "./src/assets/**/*.{svg}",
   ],
   theme: {
     extend: {
@@ -21,8 +22,8 @@ module.exports = {
         "card-bg-2": "url('src/assets/images/card-bg-2.png')",
         "bg-parallax-blank": "url('src/assets/images/jpegs/small-business/blank.png')",
         "video-thumbnail": "url('src/assets/images/jpegs/hand-with-yellow-pos.png')",
+        "checkout-advantages": "url('src/assets/images/jpegs/payment-checkout/advantages-bg.png')",
         "checkout-hero": "url('src/assets/images/jpegs/payment-checkout/hero-bg.png')",
-        "checkout-benefits": "url('src/assets/images/jpegs/payment-checkout/benefits-bg.png')",
       }),
       colors: {
         primary: {

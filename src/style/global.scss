@@ -269,3 +269,16 @@ dt {
 .line-numbers .line-numbers-rows {
   border-right: 0px !important;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFCC00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0D0D0D;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}

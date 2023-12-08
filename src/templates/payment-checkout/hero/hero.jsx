@@ -40,11 +40,10 @@ const PaymentCheckoutHero = () => {
 };
 
 const wrapperStyle = ctl(`
+  bg-[length:100%_100%]
   bg-checkout-hero
-  lg:bg-center
+  bg-no-repeat
   pb-[200px]
-  bg-cover
-  bg-right
   w-screen
   pt-20
 `);

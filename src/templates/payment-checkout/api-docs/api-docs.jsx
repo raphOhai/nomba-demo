@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Container, Ntext, CodeBlock } from "components";
+import { apiDocsSection } from "config/payment-checkout";
 import { useToast } from "@chakra-ui/react";
 
-const CheckoutApiDocs = ({ title, description, data }) => {
+const { title, description, docs } = apiDocsSection;
+
+const CheckoutApiDocs = () => {
   const [languageIndex, setLanguageIndex] = useState(0);
 
   const toast = useToast();
@@ -30,7 +33,7 @@ const CheckoutApiDocs = ({ title, description, data }) => {
           <div className="py-3 px-3 md:px-9 border-b border-n-grey5 md:py-6 flex flex-row justify-between">
             <div className="flex gap-1 md:gap-[10px]">
               {
-                data.map((doc, i) => (
+                docs.map((doc, i) => (
                   <div
                     className={`${langStyle} ${languageIndex == i ? activeLangStyle : ""}`}
                     onClick={() => setLanguageIndex(i)}>
@@ -42,7 +45,7 @@ const CheckoutApiDocs = ({ title, description, data }) => {
 
             <div
               onClick={() => {
-                navigator.clipboard.writeText(data[languageIndex].snippet);
+                navigator.clipboard.writeText(docs[languageIndex].snippet);
                 toast({
                   position: "top-right",
                   title: "Copied!",
@@ -68,8 +71,8 @@ const CheckoutApiDocs = ({ title, description, data }) => {
           </div>
           <div className="md:p-8 p-2 h-[450px] md:h-[650px] overflow-y-scroll scrollbar-hide">
             <CodeBlock
-              language={data[languageIndex].language}
-              code={data[languageIndex].snippet}
+              language={docs[languageIndex].language}
+              code={docs[languageIndex].snippet}
               className="!bg-transparent"
             />
           </div>

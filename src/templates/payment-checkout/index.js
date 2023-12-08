@@ -1,3 +1,4 @@
+export * from "./advantages";
 export * from "./integrate";
 export * from "./api-docs";
 export * from "./sponsors";

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 
 import { Container, Ntext } from "components";
+import { faqs } from "config/payment-checkout";
 
 import "./index.scss";
 
-const CheckoutFAQs = ({ faqData, className }) => {
+const CheckoutFAQs = () => {
   useEffect(() => {
     const accordionItems = document.querySelectorAll(".c_wrapItem");
     let activeAccordionItem = null;
@@ -42,7 +43,7 @@ const CheckoutFAQs = ({ faqData, className }) => {
   return (
     <section className="bg-n-grey8" id="faq">
       <Container>
-        <div className={`c_cmQuestions ${className}`}>
+        <div className="c_cmQuestions">
           <div className="c_cmQuestions_txt">
             <Ntext
               color="primary-100"
@@ -54,7 +55,7 @@ const CheckoutFAQs = ({ faqData, className }) => {
           </div>
           <div className="c_cmQuestions_acc">
             {
-              faqData.map(item => (
+              faqs.map(item => (
                 <div key={item.id} className="c_wrapItem">
                   <div className="c_wrapItem_head header !font-bold">
                     <h3 data-animation="h">{item.header}</h3>

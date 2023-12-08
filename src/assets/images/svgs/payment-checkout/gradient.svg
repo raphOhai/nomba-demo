@@ -1,0 +1,32 @@
+<svg width="672" height="2260" viewBox="0 0 672 2260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter0_f_973_1529" x="0" y="0" width="2343" height="2260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_973_1529" />
+        </filter>
+        <linearGradient id="paint0_linear_973_1529" x1="1006.88" y1="2542.39" x2="2565.59" y2="1211.42" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9358F7" />
+            <stop offset="0.0666667" stop-color="#9259F7" />
+            <stop offset="0.133333" stop-color="#8E5DF6" />
+            <stop offset="0.2" stop-color="#8862F5" />
+            <stop offset="0.266667" stop-color="#806BF4" />
+            <stop offset="0.333333" stop-color="#7575F2" />
+            <stop offset="0.4" stop-color="#6882F0" />
+            <stop offset="0.466667" stop-color="#5990EE" />
+            <stop offset="0.533333" stop-color="#4A9FEB" />
+            <stop offset="0.6" stop-color="#3BADE9" />
+            <stop offset="0.666667" stop-color="#2EBAE7" />
+            <stop offset="0.733333" stop-color="#23C4E5" />
+            <stop offset="0.8" stop-color="#1BCDE4" />
+            <stop offset="0.866667" stop-color="#15D2E3" />
+            <stop offset="0.933333" stop-color="#11D6E2" />
+            <stop offset="1" stop-color="#10D7E2" />
+        </linearGradient>
+    </defs>
+    <g opacity="0.32" filter="url(#filter0_f_973_1529)">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M1167.58 400.05C1486.8 397.018 1817.51 532.119 1916.37 835.765C2015.39 1139.91 1824.74 1439.78 1568.27 1630.83C1299.86 1830.77 943.463 1957.19 670.013 1764.2C387.609 1564.89 342.842 1174.37 461.304 849.586C567.045 559.68 859.091 402.98 1167.58 400.05Z"
+            fill="url(#paint0_linear_973_1529)" />
+    </g>
+</svg>
