@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 
 import { Container, Ntext } from "components";
 
+import "./index.scss";
+
 const CheckoutFAQs = ({ faqData, className }) => {
   useEffect(() => {
     const accordionItems = document.querySelectorAll(".c_wrapItem");
@@ -44,6 +46,7 @@ const CheckoutFAQs = ({ faqData, className }) => {
           <div className="c_cmQuestions_txt">
             <Ntext
               color="primary-100"
+              className="!font-normal"
               data-animation="h"
               variant="h1">
               FAQs
@@ -53,14 +56,14 @@ const CheckoutFAQs = ({ faqData, className }) => {
             {
               faqData.map(item => (
                 <div key={item.id} className="c_wrapItem">
-                  <div className="c_wrapItem_head header">
+                  <div className="c_wrapItem_head header !font-bold">
                     <h3 data-animation="h">{item.header}</h3>
                     <div className="c_wrapItem_head_toggleView content_btn">
                       <span className="horizontal"></span>
                       <span className="vertical"></span>
                     </div>
                   </div>
-                  <div className={`c_wrapItem_acc`}>
+                  <div className="c_wrapItem_acc !text-primary-600">
                     <p>{item.content}</p>
                   </div>
                   <div className="bottom_line"></div>

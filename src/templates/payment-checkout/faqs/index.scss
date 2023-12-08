@@ -1,0 +1,82 @@
+.c_cmQuestions {
+    padding: 10rem 0;
+    @include flex(space-between, flex-start, 0);
+
+    @include media("<=tablet") {
+        @include flex_col(3rem);
+    }
+
+    &_txt h1 {
+        @include media("<=tablet") {
+            text-align: center;
+        }
+    }
+
+    &_acc {
+        width: 70%;
+
+        .c_wrapItem {
+            @include flex_col(1rem);
+
+            &_acc {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.256s ease-in-out;
+
+                p {
+                    color: #c6c6c6;
+                }
+            }
+
+            .active {
+                max-height: 30rem !important;
+            }
+
+            &_head {
+                cursor: pointer;
+                @extend %noselect;
+                @include flex(space-between, center, 0rem);
+
+                h3 {
+                    font-size: toRem(18);
+                    color: white;
+                }
+
+                &_toggleView {
+                    border: 1px solid #ebecf0;
+                    padding: 0.7rem 0.4rem;
+                    border-radius: 50%;
+
+                    span {
+                        height: 0.04rem;
+                        display: block;
+                        width: 0.7rem;
+                        background: white;
+                        transition: 0.256yyyys ease-in-out;
+
+                        &:nth-child(2) {
+                            transform: rotateZ(90deg);
+                        }
+                    }
+
+                    .open {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        @include media("<=tablet") {
+            width: 100%;
+        }
+
+        @include flex_col(2.5rem);
+        color: $fd-gr;
+    }
+}
+
+.bottom_line {
+    background: #333333;
+    height: 1px;
+    width: 100%;
+}

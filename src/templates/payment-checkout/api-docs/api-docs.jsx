@@ -10,9 +10,9 @@ const CheckoutApiDocs = ({ title, description, data }) => {
   const toast = useToast();
 
   return (
-    <section className="py-20 overflow-hidden" style={{ background: "#0D0D0D" }}>
+    <section className="bg-n-smoky overflow-hidden pt-[200px] pb-[156px]">
       <Container>
-        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center  mt-20">
+        <div className="md:max-w-[819px] md:mx-auto section_header1 text-center">
           <Ntext
             value={title}
             color="primary-100"
