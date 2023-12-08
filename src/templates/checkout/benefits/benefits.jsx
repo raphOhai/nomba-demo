@@ -1,7 +1,7 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
-import { notificationsSection, benefitsSection } from "config/payment-checkout";
+import { notificationsSection, benefitsSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
 import { BenefitPane } from "./benefit-pane";
 

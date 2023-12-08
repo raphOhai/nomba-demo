@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ctl from "@netlify/classnames-template-literals";
 
-import { advantages } from "config/payment-checkout";
+import { advantages } from "config/checkout";
 import { Ntext } from "components";
 
 gsap.registerPlugin(ScrollTrigger);

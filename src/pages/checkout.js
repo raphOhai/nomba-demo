@@ -8,15 +8,15 @@ import {
   CheckoutApiDocs,
   CheckoutBenefits,
   CheckoutSponsors,
+  CheckoutPageHero,
   CheckoutAdvantages,
-  PaymentCheckoutHero,
 } from "templates";
 
 import { split } from "animations/text";
 
-import Gradient from "svgs/payment-checkout/gradient.svg";
+import Gradient from "svgs/checkout/gradient.svg";
 
-const PaymentCheckoutPage = () => {
+const CheckoutPage = () => {
   useEffect(() => {
     split();
   });
@@ -26,7 +26,7 @@ const PaymentCheckoutPage = () => {
       title={SeoConf.invoice.title}
       description={SeoConf.invoice.description}
       useStickyNav={false}>
-      <PaymentCheckoutHero />
+      <CheckoutPageHero />
       <CheckoutAdvantages />
       <MiddleSection />
       <CheckoutFAQs />
@@ -46,4 +46,4 @@ const MiddleSection = () => {
   );
 };
 
-export default PaymentCheckoutPage;
+export default CheckoutPage;

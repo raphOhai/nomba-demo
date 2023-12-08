@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { Container, Ntext } from "components";
-import { faqs } from "config/payment-checkout";
+import { faqs } from "config/checkout";
 
 import "./index.scss";
 

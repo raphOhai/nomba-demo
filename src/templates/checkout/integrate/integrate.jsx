@@ -1,8 +1,8 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
+import { integrateSection } from "config/checkout";
 import { Button, Ntext } from "components";
-import { integrateSection } from "config/payment-checkout";
 
 const { title, description } = integrateSection;
 

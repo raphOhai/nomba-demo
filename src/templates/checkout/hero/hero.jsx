@@ -2,13 +2,13 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Container, Button, Ntext } from "components";
-import { heroSection } from "config/payment-checkout";
+import { heroSection } from "config/checkout";
 
-import Placeholder from "svgs/checkout-hero-placeholder.svg";
+import Placeholder from "svgs/checkout/hero-placeholder.svg";
 
 const { title, description } = heroSection;
 
-const PaymentCheckoutHero = () => {
+const CheckoutPageHero = () => {
   return (
     <section className={wrapperStyle}>
       <Container>
@@ -58,4 +58,4 @@ const heroStyle = ctl(`
   items-center
 `);
 
-export { PaymentCheckoutHero };
+export { CheckoutPageHero };

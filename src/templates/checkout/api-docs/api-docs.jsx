@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Container, Ntext, CodeBlock } from "components";
-import { apiDocsSection } from "config/payment-checkout";
+import { apiDocsSection } from "config/checkout";
 import { useToast } from "@chakra-ui/react";
 
 const { title, description, docs } = apiDocsSection;
