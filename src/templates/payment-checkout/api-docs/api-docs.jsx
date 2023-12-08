@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Container, Ntext, CodeBlock } from "components";
 import ctl from "@netlify/classnames-template-literals";
+
+import { Container, Ntext, CodeBlock } from "components";
 import { useToast } from "@chakra-ui/react";
 
 const CheckoutApiDocs = ({ title, description, data }) => {
@@ -20,9 +21,9 @@ const CheckoutApiDocs = ({ title, description, data }) => {
           />
           <Ntext
             value={description}
-            color="primary-500"
-            className="md:px-5 mt-[28px]"
-            variant="text3"
+            color="primary-600"
+            className="md:!leading-[32px] !-tracking-[0.8px] md:px-5 mt-[32px]"
+            variant="text4lite"
           />
         </div>
         <div className={codeSection}>

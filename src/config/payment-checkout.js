@@ -1,3 +1,14 @@
+import React from "react";
+
+export const integrateSection = {
+  title: "Integrate Payment on your Terms",
+  description: (<>
+    <span>Simplify your payments on our platform - we accept both</span> {` `}
+    <span className="!text-[#E6E6E6] !font-medium">Naira and International(AmericanExpress and Visa)</span> {` `}
+    <span>cards, transfers, and provide various payment options. Transparent pricing, no fees, and timely notifications through web-hook.</span>
+  </>),
+};
+
 export const heroSection = {
   title: "Seamless Online Payment, Simplified",
   description: "Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly.",
