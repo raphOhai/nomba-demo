@@ -167,6 +167,7 @@ module.exports = {
       animation: {
         wiggle: "wiggle 1s ease-in-out 2",
         heroFade: "heroFade 4s ease-in 1",
+        slowBounce: "bounce 4.0s infinite",
         pulseCustom: "pulseCustom 1s ease-in-out 2",
         squareToCircle: "squareToCircle .5s ease-in-out 1",
         fadeIn: "fadeIn 1.5s ease-in-out 1",

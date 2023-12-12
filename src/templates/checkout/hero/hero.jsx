@@ -5,6 +5,7 @@ import { Container, Button, Ntext } from "components";
 import { heroSection } from "config/checkout";
 
 import Placeholder from "svgs/checkout/hero-placeholder.svg";
+import Blur from "svgs/checkout/hero-blur.svg";
 
 const { title, description } = heroSection;
 
@@ -41,6 +42,7 @@ const CheckoutPageHero = () => {
           <Placeholder className="hidden md:block" />
         </section>
       </Container>
+      <Blur className="absolute animate-slowBounce left-0 top-[400px] w-[16vw] h-[776px]" />
     </section>
   );
 };
@@ -48,9 +50,11 @@ const CheckoutPageHero = () => {
 const wrapperStyle = ctl(`
   bg-[length:100%_100%]
   bg-checkout-hero
+  overflow-clip
   bg-no-repeat
   pb-[200px]
   w-screen
+  relative
   pt-20
 `);
 
