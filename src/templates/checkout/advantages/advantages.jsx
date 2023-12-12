@@ -14,9 +14,9 @@ const CheckoutAdvantages = () => {
   useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
-        end: "bottom center",
+        end: 'bottom center',
         trigger: wrapperRef.current,
-        start: "top center",
+        start: 'top center',
         scrub: 1,
       },
     });
@@ -37,8 +37,8 @@ const CheckoutAdvantages = () => {
         {advantages.map((advantage, index) => (
           <Ntext
             key={advantage}
-            color="n-silver"
             value={advantage}
+            color="primary-100"
             className={`advantage-${index} !font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center`}
             variant="h2"
           />
@@ -51,6 +51,7 @@ const CheckoutAdvantages = () => {
 const wrapperStyle = ctl(`
   bg-checkout-advantages
   bg-[length:100%_100%]
+  advantages-wrapper
   overflow-hidden
   pb-[120px]
   w-screen

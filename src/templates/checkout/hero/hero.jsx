@@ -23,14 +23,20 @@ const CheckoutPageHero = () => {
             <Ntext
               color="primary-600"
               value={description}
-              className="md:!leading-[32px] !-tracking-[0.8px] text-center lg:text-start max-w-[628px] mt-8"
+              className="md:!leading-[32px] !tracking-normal text-center lg:text-start max-w-[628px] mt-8"
               variant="text4lite"
             />
-            <Button
-              className="!font-medium !text-base !text-n-smoky !min-w-[184px] mt-10 !h-14"
-              href={{ url: "https://dashboard.nomba.com/auth/login" }}
-              text="Get Started"
-            />
+            <section className="flex items-start space-x-4 mt-10">
+              <Button
+                className="!font-medium !text-base !text-n-smoky !min-w-[184px] !h-14"
+                href={{ url: "https://dashboard.nomba.com/auth/login" }}
+                text="Get Started"
+              />
+              <Button
+                className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !min-w-[184px] !h-14"
+                text="Try live demo"
+              />
+            </section>
           </section>
           <Placeholder className="hidden md:block" />
         </section>
