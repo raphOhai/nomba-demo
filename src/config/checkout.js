@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Br } from "components/br";
-import { StaticImage } from "gatsby-plugin-image";
 
 import PaymentOptionsIcon from "svgs/checkout/payment-options.svg";
 import TransparencyIcon from "svgs/checkout/transparency.svg";
@@ -10,16 +9,6 @@ import AtmCardIcon from "svgs/checkout/atm-card.svg";
 export const notificationsSection = {
   title: "Instant Notifications: Real-Time Webhooks",
   description: "Stay informed in real-time with our webhook feature for instant transaction notifications.",
-  screenshot: (
-    <StaticImage
-      src="../assets/images/jpegs/checkout/payment-notifications.png"
-      alt="Notifications Screenshot"
-      placeholder="blurred"
-      loading="lazy"
-      height={465}
-      width={453}
-    />
-  ),
 };
 
 export const benefitsSection = {

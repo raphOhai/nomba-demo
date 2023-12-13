@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useEffect, createRef } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { notificationsSection, benefitsSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
 import { BenefitPane } from "./benefit-pane";
 
+import animationData from "./animations/moving-cards.json";
+import Lottie from "lottie-web";
+
 const { title: benefitsLabel, benefits } = benefitsSection;
 
 const {
   title: notificationsLabel,
-  screenshot: notificationsScreenshot,
   description: notificationsDescription,
 } = notificationsSection;
 
 const CheckoutBenefits = () => {
+  let notificationsRef = createRef();
+
+  useEffect(() => {
+    const anim = Lottie.loadAnimation({ container: notificationsRef.current, animationData });
+    return () => anim.destroy();
+  }, [notificationsRef]);
+
   return (
     <section className={wrapperStyle}>
       <Container className="flex flex-col">
@@ -48,12 +57,23 @@ const CheckoutBenefits = () => {
               text="Get Started"
             />
           </section>
-          {notificationsScreenshot}
+          <section className={notificationsBoardStyle}>
+            <article className={alertsStyle} ref={notificationsRef} />
+          </section>
         </section>
       </Container>
     </section>
   );
 };
+
+const notificationsBoardStyle = ctl(`
+  flex
+  rounded-[24px]
+  lg:w-[480px]
+  bg-n-grey8
+  w-full
+  h-80
+`);
 
 const notificationsStyle = ctl(`
   flex
@@ -84,6 +104,15 @@ const wrapperStyle = ctl(`
   pt-[200px]
   pb-[164px]
   w-screen
+`);
+
+const alertsStyle = ctl(`
+  flex
+  justify-end
+  lg:w-[472px]
+  h-[500px]
+  mx-auto
+  w-full
 `);
 
 export { CheckoutBenefits };

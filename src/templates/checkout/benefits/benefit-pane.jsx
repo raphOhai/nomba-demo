@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Ntext } from "components";
-
-import "./index.scss";
 
 const BenefitPane = ({ description, title, tint, icon }) => {
   return (
@@ -34,7 +32,6 @@ const paneStyle = ctl(`
   flex
   space-x-8
   h-[304px]
-  pane
   pt-2
 `);
 
