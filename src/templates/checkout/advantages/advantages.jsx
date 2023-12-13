@@ -1,23 +1,86 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
+import gsap from "gsap";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { advantages } from "config/checkout";
 import { Ntext } from "components";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const CheckoutAdvantages = () => {
+  const [firstIndex, setFirstIndex] = useState(0);
+  const [secondIndex, setSecondIndex] = useState(1);
+
+  useEffect(() => {
+    const advantageText = document.querySelectorAll(".advantage-text");
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#advantages",
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        scrub: 1,
+      },
+    })
+      .to(advantageText, {
+        onComplete: () => {
+          setSecondIndex(2);
+          setFirstIndex(1);
+        },
+        opacity: 0,
+      })
+      .to(advantageText, {
+        onReverseComplete: () => {
+          setSecondIndex(1);
+          setFirstIndex(0);
+        },
+        opacity: 1,
+      })
+      .to(advantageText, {
+        onComplete: () => {
+          setSecondIndex(3);
+          setFirstIndex(2);
+        },
+        opacity: 0,
+      })
+      .to(advantageText, {
+        onReverseComplete: () => {
+          setSecondIndex(2);
+          setFirstIndex(1);
+        },
+        opacity: 1,
+      })
+      .to(advantageText, {
+        onComplete: () => {
+          setSecondIndex(4);
+          setFirstIndex(3);
+        },
+        opacity: 0,
+      })
+      .to(advantageText, {
+        onReverseComplete: () => {
+          setSecondIndex(3);
+          setFirstIndex(2);
+        },
+        opacity: 1,
+      });
+  }, []);
+
   return (
-    <section className={wrapperStyle}>
+    <section id="advantages" className={wrapperStyle}>
       <section className={contentStyle}>
         <Ntext
           color="primary-100"
-          value={advantages[0]}
-          className="!font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center"
+          value={advantages[firstIndex]}
+          className="advantage-text !font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center"
           variant="h2"
         />
         <Ntext
           color="n-silver"
-          value={advantages[1]}
-          className="!font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center"
+          value={advantages[secondIndex]}
+          className="advantage-text !font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center"
           variant="h2"
         />
       </section>
