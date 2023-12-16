@@ -15,7 +15,7 @@ const CheckoutAdvantages = () => {
   useEffect(() => {
     gsap.utils.toArray(".advantage-text").forEach(text => {
       ScrollTrigger.create({
-        start: "top center",
+        start: "bottom center",
         toggleClass: "!text-white",
         trigger: text,
       });
@@ -32,15 +32,16 @@ const CheckoutAdvantages = () => {
   }, []);
 
   return (
-    <section id="advantages" className={wrapperStyle}>
+    <section className={wrapperStyle}>
       <RibbonsBackground className="absolute w-screen top-0" />
       <section className={contentStyle}>
         {
           advantages.map(advantage => (
             <Ntext
+              key={advantage}
               color="n-silver"
               value={advantage}
-              className="advantage-text !font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center"
+              className="advantage-text !font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[800px] text-center transition-colors duration-1000"
               variant="h2"
             />
           ))
