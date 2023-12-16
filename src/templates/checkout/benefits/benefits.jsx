@@ -1,12 +1,11 @@
-import React, { useEffect, createRef } from "react";
+import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { notificationsSection, benefitsSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
 import { BenefitPane } from "./benefit-pane";
 
-import animationData from "./animations/moving-cards.json";
-import Lottie from "lottie-web";
+import AlertsGraphic from "svgs/checkout/checkout-alerts.svg";
 
 const { title: benefitsLabel, benefits } = benefitsSection;
 
@@ -16,13 +15,6 @@ const {
 } = notificationsSection;
 
 const CheckoutBenefits = () => {
-  let notificationsRef = createRef();
-
-  useEffect(() => {
-    const anim = Lottie.loadAnimation({ container: notificationsRef.current, animationData });
-    return () => anim.destroy();
-  }, [notificationsRef]);
-
   return (
     <section className={wrapperStyle}>
       <Container className="flex flex-col">
@@ -57,9 +49,7 @@ const CheckoutBenefits = () => {
               text="Get Started"
             />
           </section>
-          <section className={notificationsBoardStyle}>
-            <article className={alertsStyle} ref={notificationsRef} />
-          </section>
+          <AlertsGraphic />
         </section>
       </Container>
     </section>
@@ -104,15 +94,6 @@ const wrapperStyle = ctl(`
   pt-[200px]
   pb-[164px]
   w-screen
-`);
-
-const alertsStyle = ctl(`
-  flex
-  justify-end
-  lg:w-[472px]
-  h-[500px]
-  mx-auto
-  w-full
 `);
 
 export { CheckoutBenefits };
