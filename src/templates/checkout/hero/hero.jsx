@@ -27,7 +27,7 @@ const CheckoutPageHero = () => {
               className="md:!leading-[32px] !tracking-normal text-center lg:text-start max-w-[628px] mt-8"
               variant="text4lite"
             />
-            <section className="flex items-start space-x-4 mt-10">
+            <section className={buttonsStyle}>
               <Button
                 className="!font-medium !text-base !text-n-smoky !min-w-[184px] !h-14"
                 href={{ url: "https://dashboard.nomba.com/auth/login" }}
@@ -42,7 +42,7 @@ const CheckoutPageHero = () => {
           <Placeholder className="hidden md:block" />
         </section>
       </Container>
-      <Blur className="absolute animate-slowBounce left-0 top-[400px] w-[16vw] h-[776px]" />
+      <Blur className="absolute animate-slowBounce left-0 top-[200px] lg:top-[400px] w-[16vw] h-[776px]" />
     </section>
   );
 };
@@ -51,11 +51,23 @@ const wrapperStyle = ctl(`
   bg-[length:100%_100%]
   bg-checkout-hero
   overflow-clip
+  lg:pb-[200px]
   bg-no-repeat
-  pb-[200px]
   w-screen
   relative
-  pt-20
+  py-20
+`);
+
+const buttonsStyle = ctl(`
+  flex
+  flex-col
+  items-start
+  lg:flex-row
+  lg:space-y-0
+  lg:space-x-4
+  space-y-4
+  w-fit
+  mt-10
 `);
 
 const heroStyle = ctl(`

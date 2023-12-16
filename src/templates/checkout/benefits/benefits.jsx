@@ -49,7 +49,7 @@ const CheckoutBenefits = () => {
               text="Get Started"
             />
           </section>
-          <AlertsGraphic />
+          <AlertsGraphic className="max-w-[80vw]" />
         </section>
       </Container>
     </section>
