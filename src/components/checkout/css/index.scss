@@ -1,3 +1,6 @@
+$accsent-color: #333;
+$bg: rgba(77, 77, 77, 0.16);
+
 .custom-select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -14,4 +17,106 @@
     position: absolute;
     pointer-events: none;
   }
+}
+
+.input-box {
+  border: 1px solid $accsent-color;
+  border-radius: 8px;
+  background-color: $bg;
+  padding: 8px 16px;
+  width: 100%;
+  input {
+    background-color: transparent;
+    &::placeholder {
+      color: #4d4d4d;
+    }
+  }
+  .select-class {
+    width: 100%;
+    background-color: transparent;
+  }
+  select {
+    option {
+      background-color: #121212;
+      color: #333;
+    }
+  }
+  label {
+    color: #b3b3b3;
+  }
+}
+
+.basis {
+  width: 48%;
+}
+
+.close-btn {
+  background-color: #333333;
+  border-radius: 50%;
+  // height: 30px;
+  // width: 30px;
+  color: #121212;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .drawer-content {
+    // border-radius: 16px;
+    margin: 0px;
+    padding-top: 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .drawer-content {
+    // border-radius: 16px;
+    margin: 0px;
+    padding-top: 2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .drawer-content {
+    border-radius: 16px;
+    margin: 16px;
+    padding-top: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .drawer-content {
+    border-radius: 16px;
+    margin: 16px;
+    padding-top: 1rem;
+    max-width: 30rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .drawer-content {
+    border-radius: 16px;
+    margin: 16px;
+    padding-top: 1rem;
+    // max-width: 20rem;
+  }
+}
+
+.max-Width {
+  max-width: 35rem;
+}
+
+.btn-outline {
+  padding: 18px 40px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+}
+
+.btn-contained {
+  padding: 18px 40px;
+  // border: 1px solid yellow;
+  border-radius: 10px;
 }

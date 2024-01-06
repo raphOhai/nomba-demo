@@ -1,0 +1,22 @@
+.hero-text {
+  z-index: 3;
+}
+
+#hero-box {
+  padding-bottom: 5rem;
+}
+
+.hero-btn-grid {
+  button {
+    padding: 30px 40px;
+    border-radius: 9px;
+    span {
+      // font-size: clamp(12px, 2vw, 12px);
+      font-family: Inter;
+      // font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}

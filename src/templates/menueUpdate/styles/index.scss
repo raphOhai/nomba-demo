@@ -1,0 +1,37 @@
+// @use 'mediaQueries1';
+$nomba-color: #fc0;
+@import "./mediaQueries1.scss";
+@import "./partials/reusables";
+@import "./partials/reusables";
+@import "./components/heroSection";
+@import "./partials/svg-placement";
+@import "./components/menuSection1";
+@import "./components/pictureCtaSection";
+@import "./components/typeAnimation";
+@import "./partials/animations";
+
+.contact-btn {
+  border: 1px solid #1a1a1a;
+  color: white;
+  background-color: transparent;
+  &:hover {
+    background-color: #1a1a1a;
+    color: white;
+  }
+}
+.text-Btn {
+  border: none;
+  color: $nomba-color;
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
+}
+.nav-height {
+  z-index: 10;
+}
+
+.elevate {
+  z-index: 20;
+}

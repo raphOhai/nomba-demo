@@ -125,14 +125,16 @@ const Cart = ({ finalFocusRef }) => {
       placement="right"
       onClose={onClose}
       finalFocusRef={finalFocusRef}
-      size="lg"
+      size="md"
+      className="drawer-content"
     >
       <DrawerOverlay />
-      <DrawerContent bg="#121212" color="white" px="0" data-lenis-prevent>
-        <DrawerCloseButton color="white" colorScheme="yellow" />
+      <DrawerContent bg="#121212" color="white" px="0" data-lenis-prevent className="drawer-content">
+        <DrawerCloseButton mt="20px" color="white" className="close-btn" />
+
         <DrawerHeader>
-          <Ntext variant="text3" color="n-light">
-            Terminal purchase
+          <Ntext variant="text4" color="n-light">
+            <div style={{ color: "#B3B3B3" }}>Get started with MENU</div>
           </Ntext>
         </DrawerHeader>
 
@@ -141,15 +143,12 @@ const Cart = ({ finalFocusRef }) => {
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
                 <TabList borderBottom="1px" borderBottomColor="#383838" borderTop="1px solid #383838">
-                  {/* <Tab _selected={tabStyle} color="#717171">
-                    Product Details
-                  </Tab> */}
-                  <Tab py="6" _selected={tabStyle} color="#717171">
-                    Add Information
+                  <Tab py="-7px" _selected={tabStyle} color="#FC0">
+                    {/* Add Information */}
                   </Tab>
-                  <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
+                  {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
                     Summary
-                  </Tab>
+                  </Tab> */}
                 </TabList>
 
                 <TabPanels px={[2, 4, 4, 4]}>
@@ -178,7 +177,7 @@ const Cart = ({ finalFocusRef }) => {
               <div className="flex flex-row justify-between py-6 px-6 border-t border-t-n-grey6">
                 <div>
                   <button
-                    className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white"
+                    className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white btn-outline"
                     onClick={() => {
                       onClose();
                       mixpanel.track("Mini_checkout_Customer_cancels_order_for_mini", {
@@ -195,6 +194,8 @@ const Cart = ({ finalFocusRef }) => {
                   fontWeight={500}
                   fontSize={16}
                   colorScheme="yellow"
+                  size="medium"
+                  className="btn-contained"
                   onClick={() => {
                     if (tabIndex === 0) {
                       mixpanel.track("Mini_checkout_Customer_place_their_info", {
@@ -211,7 +212,7 @@ const Cart = ({ finalFocusRef }) => {
                     setTabIndex(tabIndex + 1);
                   }}
                 >
-                  Continue
+                  Request demo
                 </Button>
               </div>
             )}

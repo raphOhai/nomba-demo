@@ -39,6 +39,7 @@ const EmenuPage = () => {
       <Layout title={SeoConf.menu.title} description={SeoConf.menu.description} useStickyNav={false}>
         <EmenuHero />
         <EmenuSection2 />
+
         <EmenuSection4
           tools={businessTool}
           headingText="Fully integrated tool for smoothly running your restaurant business"

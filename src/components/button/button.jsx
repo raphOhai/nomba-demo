@@ -5,6 +5,8 @@ import ctl from "@netlify/classnames-template-literals";
 
 import Loader from "src/assets/images/svgs/loader.svg";
 import ArrowRight from "src/assets/images/svgs/arrow-right.svg";
+import ArrowSmRight from "src/assets/images/svgs/arrow-sm-right.svg";
+import PhoneIcon from "src/assets/images/svgs/phone-icon.svg";
 import { NLink } from "../nlink";
 
 const Button = ({
@@ -13,6 +15,8 @@ const Button = ({
   size: buttonSize = "xsmall",
   isLoading,
   withArrow,
+  WithNomArrow,
+  phone,
   onClick,
   className,
   disabled: buttonDisabled,
@@ -51,9 +55,11 @@ const Button = ({
       disabled={buttonDisabled || isLoading}
       {...linkProps}
     >
+      {phone && <PhoneIcon />}
       <span className={isflex ? "flex flex-row gap-5" : textStyle}>{text || children}</span>
       {isLoading && <Loader />}
       {withArrow && <ArrowRight />}
+      {WithNomArrow && <ArrowSmRight />}
     </ButtonElement>
   );
 };
@@ -141,6 +147,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
   withArrow: PropTypes.bool,
+  WithNomArrow: PropTypes.bool,
   isflex: PropTypes.bool,
 };
 
