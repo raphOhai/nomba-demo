@@ -18,7 +18,7 @@ import { EmenuSection5, MenuSection6, EmenuTestimonial, EveryBusiness } from "te
 const menu2 = () => {
   MultipleAnimator();
   return (
-    <Layout title={SeoConf.max.title} description={SeoConf.max.description} useStickyNav={false}>
+    <Layout title={SeoConf.menu.title} description={SeoConf.menu.description} useStickyNav={false}>
       <HeroUp />
       <Section1 />
       <PictureCta />
