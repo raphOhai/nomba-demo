@@ -13,7 +13,7 @@ import { CommonQuestions } from "components";
 // import { EveryBusiness } from "templates/invoice";
 import { HomepageTipsAndUpdate } from "templates";
 import { Cart } from "components/checkout";
-import { faqData } from "config/api";
+import { faqData } from "config/e-menu";
 import { EmenuSection5, MenuSection6, EmenuTestimonial, EveryBusiness } from "templates/e-menu";
 const menu2 = () => {
   MultipleAnimator();
