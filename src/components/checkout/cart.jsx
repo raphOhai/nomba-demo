@@ -23,12 +23,32 @@ import { AppContext } from "states/context";
 import { CartTerminals } from "config/cart";
 import { useMixpanel } from "gatsby-plugin-mixpanel";
 import { Payment } from "./payment";
+import { useEffect } from "react";
+import { set } from "react-hook-form";
 
 const Cart = ({ finalFocusRef }) => {
+  const {
+    isOpen,
+    onClose,
+    hasError,
+    hasEmailError,
+    hasMobileError,
+    counter,
+    info,
+    setInfo,
+    itemIndex,
+    setHasEmailError,
+    setHasMobileError,
+  } = useContext(AppContext);
+
+  useEffect(() => {
+    console.log("dedd", hasError, hasEmailError, hasMobileError);
+  }, []);
   const [tabIndex, setTabIndex] = useState(0);
   const [showPayment, setShowPayment] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [btnState, setBtnState] = useState(true);
 
   const moveToPayment = () => {
     setShowSuccess(false);
@@ -44,21 +64,21 @@ const Cart = ({ finalFocusRef }) => {
 
   const mixpanel = useMixpanel();
 
-  const {
-    isOpen,
-    onClose,
-    hasError,
-    hasEmailError,
-    hasMobileError,
-    counter,
-    dispatch,
-    info,
-    setInfo,
-    itemIndex,
-  } = useContext(AppContext);
   const handleTabsChange = index => {
     setTabIndex(index);
   };
+
+  useEffect(() => {}, []);
+
+  useEffect(() => {
+    if (hasEmailError || hasMobileError === true) {
+      setBtnState(true);
+    } else {
+      setBtnState(false);
+    }
+
+    console.log("eedededed", info);
+  }, [hasEmailError, hasMobileError]);
 
   const onSubmit = () => {
     const infoWithoutPayment = { ...info, quantity: counter.count, type: "Nomba Mini" };
@@ -178,7 +198,7 @@ const Cart = ({ finalFocusRef }) => {
               </Tabs>
             </DrawerBody>
 
-            {tabIndex < 2 && (
+            {tabIndex < 1 && (
               <div className="flex flex-row justify-between py-6 px-6 border-t border-t-n-grey6">
                 <div>
                   <button
@@ -195,7 +215,7 @@ const Cart = ({ finalFocusRef }) => {
                   </button>
                 </div>
                 <Button
-                  disabled={tabIndex === 0 ? false : hasError || hasEmailError || hasMobileError}
+                  disabled={btnState}
                   fontWeight={500}
                   fontSize={16}
                   colorScheme="yellow"
@@ -214,7 +234,12 @@ const Cart = ({ finalFocusRef }) => {
                         terminals: counter.count,
                       });
                     }
-                    setTabIndex(tabIndex + 1);
+                    if (!info.phone || !info.email) {
+                      return;
+                      // setBtnState(true);
+                    } else {
+                      setTabIndex(tabIndex + 1);
+                    }
                   }}
                 >
                   Request demo

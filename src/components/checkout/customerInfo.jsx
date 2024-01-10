@@ -10,7 +10,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   const [lgasInState, setLgasInState] = useState([]);
   // const [hasemailError, setEmailError] = useState(false);
 
-  const { hasEmailError, setHasEmailError, hasMobileError, setHasMobileError } = useContext(AppContext);
+  const { hasError, hasEmailError, setHasEmailError, hasMobileError, setHasMobileError } = useContext(AppContext);
 
   const setStateValue = e => {
     setState({ ...state, state: e.target.value });
@@ -79,7 +79,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
         </div>
       </div>
       <div className="flex flex-row gap-6">
-        <div className="w-full">
+        <div className="w-full stack gap">
           <div className="stack input-box">
             <div className={labelClass}>
               <label htmlFor="emailAddress">Email address</label>
@@ -100,7 +100,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
         </div>
       </div>
       <div className="flex flex-row gap-6">
-        <div className="w-full">
+        <div className="w-full stack gap">
           <div className="stack input-box">
             <div className={labelClass}>
               <label htmlFor="phoneNumber">Phone number</label>
