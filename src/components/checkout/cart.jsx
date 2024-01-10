@@ -37,6 +37,10 @@ const Cart = ({ finalFocusRef }) => {
   const moveToSuccess = () => {
     setShowSuccess(true);
   };
+  const backToSlideHome = val => {
+    setTabIndex(val);
+    console.log(val);
+  };
 
   const mixpanel = useMixpanel();
 
@@ -159,6 +163,7 @@ const Cart = ({ finalFocusRef }) => {
                   <TabPanel>
                     <CustomerInfo state={info} setState={setInfo} />
                   </TabPanel>
+
                   <TabPanel>
                     <Checkout
                       itemCount={counter.count}
