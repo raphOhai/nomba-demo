@@ -28,6 +28,10 @@ export default {
       description: "Get your career started with Nomba",
     },
   },
+  blog: {
+    title: "Learn more about Nomba",
+    description: "Learn more about Nomba. Get to know our team and our blog.",
+  },
 
   // WIP
   api: {
