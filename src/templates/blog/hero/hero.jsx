@@ -56,7 +56,7 @@ const newsletterSectionStyle = ctl(`
 `);
 
 const inputBoxWrapperStyle = ctl(`
-  shadow-[0_4px_2px_-2_rgba(24,39,75,0.08),0_2px_2px_-2_rgba(24,39,75,0.12)]
+  shadow-[0_4px_4px_-2px_rgba(24,39,75,0.08),0_2px_4px_-2px_rgba(24,39,75,0.12)]
   border-n-platinum
   rounded-[8px]
   border-solid

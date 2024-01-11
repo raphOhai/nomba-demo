@@ -4,6 +4,7 @@ import SeoConf from "config/seo/meta";
 
 import {
   BlogPageHero,
+  BlogArticles,
 } from "templates";
 
 import { split } from "animations/text";
@@ -19,6 +20,7 @@ const BlogPage = () => {
       description={SeoConf.blog.description}
       useStickyNav={false}>
       <BlogPageHero />
+      <BlogArticles />
     </Layout>
   );
 };

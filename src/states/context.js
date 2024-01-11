@@ -25,20 +25,20 @@ export const ContextWrapper = ({ children }) => {
   const [departments, setDepartments] = useState([]);
   const [locations, setLocations] = useState([]);
 
-  const [tabIndex, setTabIndex] = useState(0);
   const [itemIndex, setItemIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(0);
 
   const [counter, dispatch] = useReducer(reducer, initialItems);
 
   const [info, setInfo] = useState({
+    timestamp: new Date().toLocaleString(),
+    deliveryAddress: "",
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    deliveryAddress: "",
-    lga: "",
     state: "",
-    timestamp: new Date().toLocaleString(),
+    lga: "",
   });
 
   const resetInfo = () => {
