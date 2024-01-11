@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./css/index.scss";
 import PropTypes from "prop-types";
 import ctl from "@netlify/classnames-template-literals";
@@ -40,6 +40,21 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
     setState({ ...state, phone: e.target.value.slice(0, 11) });
   };
 
+  useEffect(() => {
+    if (hasEmailError) {
+      const mBox = document.getElementById("mail-box");
+      console.log(mBox);
+      mBox.classList.remove("input-box");
+      mBox.classList.add("red-box");
+    }
+
+    if (hasMobileError) {
+      const fBox = document.getElementById("phone-box");
+      fBox.classList.remove("input-box");
+      fBox.classList.add("red-box");
+    }
+  }, [hasEmailError, hasMobileError]);
+
   return (
     <div className="mt-5 flex-col flex gap-5 ">
       <div className="flex gap1">
@@ -80,7 +95,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
       </div>
       <div className="flex flex-row gap-6">
         <div className="w-full stack gap">
-          <div className="stack input-box">
+          <div id="mail-box" className="stack input-box">
             <div className={labelClass}>
               <label htmlFor="emailAddress">Email address</label>
             </div>
@@ -101,7 +116,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
       </div>
       <div className="flex flex-row gap-6">
         <div className="w-full stack gap">
-          <div className="stack input-box">
+          <div id="phone-box" className="stack input-box">
             <div className={labelClass}>
               <label htmlFor="phoneNumber">Phone number</label>
             </div>

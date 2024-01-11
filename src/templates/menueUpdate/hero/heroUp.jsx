@@ -1,4 +1,4 @@
-import { Br, Button, Container, Ntext } from "components";
+import { Br, Button, Container, Ntext, ReadMore } from "components";
 import React, { useContext } from "react";
 import "../styles/index.scss";
 import { StaticImage } from "gatsby-plugin-image";
@@ -60,11 +60,12 @@ const HeroUp = () => {
                       />
                     </div>
                     <div>
-                      <Button
+                      <ReadMore
                         className="!font-medium !text-center contact-btn responsive-btn btn2"
+                        // color="n-grey6"
+                        variant="text3"
+                        href={{ url: "tel:+23401888899" }}
                         text="Contact sales"
-                        // withArrow={true}
-                        phone={true}
                       />
                     </div>
                   </div>

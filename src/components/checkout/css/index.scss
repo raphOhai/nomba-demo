@@ -1,4 +1,5 @@
 $accsent-color: #333;
+$red-border: #ff7a66;
 $bg: rgba(77, 77, 77, 0.16);
 
 .custom-select {
@@ -19,6 +20,41 @@ $bg: rgba(77, 77, 77, 0.16);
   }
 }
 
+.red-box {
+  border: 1px solid $red-border;
+  border-radius: 8px;
+  background-color: $bg;
+  padding: 8px 16px;
+  width: 100%;
+  &:hover {
+    border: 1px solid #b3b3b3;
+  }
+
+  input {
+    background-color: transparent;
+    &::placeholder {
+      color: #4d4d4d;
+    }
+    &:focus {
+      background-color: none;
+      border: none;
+    }
+  }
+  .select-class {
+    width: 100%;
+    background-color: transparent;
+  }
+  select {
+    option {
+      background-color: #121212;
+      color: #fff;
+    }
+  }
+  label {
+    color: #b3b3b3;
+  }
+}
+
 .input-box {
   border: 1px solid $accsent-color;
   border-radius: 8px;
@@ -28,6 +64,7 @@ $bg: rgba(77, 77, 77, 0.16);
   &:hover {
     border: 1px solid #b3b3b3;
   }
+
   input {
     background-color: transparent;
     &::placeholder {

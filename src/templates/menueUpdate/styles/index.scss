@@ -13,6 +13,8 @@ $nomba-color: #fc0;
 .contact-btn {
   border: 1px solid #1a1a1a;
   color: white;
+  border-radius: 13px;
+  padding: 1.2rem 3rem;
   background-color: transparent;
   &:hover {
     background-color: #1a1a1a;

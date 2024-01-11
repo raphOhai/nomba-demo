@@ -104,7 +104,7 @@ const TerminalFeatures = () => {
             <div className="grey-box flex center grid-item">
               <StaticImage
                 alt="Iphone with hand"
-                src="../../../assets/images/svgs/terminal/pos2.png"
+                src="../../../assets/images/svgs/terminal/pos33.png"
                 className="responsive-im im pos-img-2 SlideUp"
                 width={240}
                 // height={240}
@@ -130,16 +130,6 @@ const TerminalFeatures = () => {
             </div>
           </div>
         </div>
-        {/* <main class="main page__main">
-          <div class="card main__card">
-            <div aria-hidden="true">
-              <span class="card__line card__line_left"></span>
-              <span class="card__line card__line_right"></span>
-              <span class="card__line card__line_top"></span>
-              <span class="card__line card__line_bottom"></span>
-            </div>
-          </div>
-        </main> */}
         <div className="flex center relative rotate360">
           {/* <BallStick /> */}
           <div className="rapper">
