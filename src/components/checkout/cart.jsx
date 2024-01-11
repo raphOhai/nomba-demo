@@ -154,7 +154,7 @@ const Cart = ({ finalFocusRef }) => {
     >
       <DrawerOverlay />
       <DrawerContent bg="#121212" color="white" px="0" data-lenis-prevent className="drawer-content">
-        <DrawerCloseButton mt="20px" color="white" className="close-btn" />
+        <DrawerCloseButton color="white" className="close-btn" />
 
         <DrawerHeader>
           <Ntext variant="text4" color="n-light">
