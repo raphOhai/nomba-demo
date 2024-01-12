@@ -209,7 +209,9 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                 <div className="drop-down-items stack">
                   {nigeriaStates.map(state => (
                     <div
-                      onClick={() => setStateI(state.state) & setOpen(false) & setStateValue(state.state)}
+                      onClick={() =>
+                        setStateI(state.state) & setOpen(false) & setStateValue(state.state) & setOpen2(true)
+                      }
                       value={state.state}
                       className="drop-down-contents"
                     >
@@ -262,7 +264,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                 <div className="drop-down-items stack">
                   {lgasInState.map(lga => (
                     <div
-                      onClick={() => setStatel(state.state) & setOpen2(false) & setState({ ...state, lga: lga })}
+                      onClick={() => setStatel(lga) & setOpen2(false) & setState({ ...state, lga: lga })}
                       value={lga}
                       className="drop-down-contents"
                     >
