@@ -7,6 +7,7 @@ import Caret from "svgs/chevron-down.svg";
 import { AppContext } from "states/context";
 // import Box from "@mui/material/Box";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
+import { Ntext } from "components/ntext";
 
 const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   const [open, setOpen] = React.useState(false);
@@ -90,6 +91,9 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
 
   return (
     <div className="mt-5 flex-col flex gap-4 ">
+      <Ntext variant="text" color="n-light">
+        <div style={{ color: "#FFFFFF" }}>Add your basic information</div>
+      </Ntext>
       <div className="flex gap-4">
         <div className="basis">
           <div className="stack input-box">

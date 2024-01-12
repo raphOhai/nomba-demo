@@ -166,10 +166,7 @@ const Cart = ({ finalFocusRef }) => {
           <>
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
-                <TabList borderBottom="1px" borderBottomColor="#383838" borderTop="1px solid #383838">
-                  <Tab py="-7px" _selected={tabStyle} color="#FFCC00">
-                    {/* Add Information */}
-                  </Tab>
+                <TabList borderBottom="1px" borderBottomColor="#FFCC00">
                   {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
                     Summary
                   </Tab> */}
@@ -199,7 +196,7 @@ const Cart = ({ finalFocusRef }) => {
             </DrawerBody>
 
             {tabIndex < 1 && (
-              <div className="flex  flex-row justify-between py-6 px-6 border-t border-t-n-grey6">
+              <div style={{ borderTop: "1px solid #333333" }} className="flex  flex-row justify-between py-6 px-6 ">
                 <div>
                   <button
                     className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white btn-outline"
