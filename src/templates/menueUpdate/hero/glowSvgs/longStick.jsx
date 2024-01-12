@@ -5,6 +5,7 @@ const LongStick = () => {
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" width="1" height="120" viewBox="0 0 1 120" fill="none">
         <path
+          className="stick1  path"
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M1.59986e-10 -4.37116e-08L-5.24521e-06 120L1 120L1.00001 0L1.59986e-10 -4.37116e-08Z"

@@ -5,8 +5,32 @@ import ctl from "@netlify/classnames-template-literals";
 import { nigeriaStates } from "./states";
 import Caret from "svgs/chevron-down.svg";
 import { AppContext } from "states/context";
+// import Box from "@mui/material/Box";
+import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 
 const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
+  const [open, setOpen] = React.useState(false);
+  const [stateI, setStateI] = React.useState("");
+
+  const handleClick = () => {
+    setOpen(prev => !prev);
+  };
+
+  const handleClickAway = () => {
+    setOpen(false);
+  };
+
+  const styles = {
+    position: "absolute",
+    top: 28,
+    right: 0,
+    left: 0,
+    zIndex: 1,
+    border: "1px solid",
+    p: 1,
+    bgcolor: "background.paper",
+  };
+
   const [lgasInState, setLgasInState] = useState([]);
   // const [hasemailError, setEmailError] = useState(false);
 
@@ -56,8 +80,8 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   }, [hasEmailError, hasMobileError]);
 
   return (
-    <div className="mt-5 flex-col flex gap-5 ">
-      <div className="flex gap1">
+    <div className="mt-5 flex-col flex gap-4 ">
+      <div className="flex gap-4">
         <div className="basis">
           <div className="stack input-box">
             <div className={labelClass}>
@@ -94,7 +118,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
         </div>
       </div>
       <div className="flex flex-row gap-6">
-        <div className="w-full stack gap">
+        <div className="w-full stack gap-1">
           <div id="mail-box" className="stack input-box">
             <div className={labelClass}>
               <label htmlFor="emailAddress">Email address</label>
@@ -137,41 +161,58 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
         </div>
       </div>
 
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-row gap-4">
         <div className="basis-1/2">
-          <div className="stack input-box">
-            <div className={labelClass}>
-              <label htmlFor="state">State</label>
-            </div>
-            <div className="flex gap">
-              <select
-                name="state"
-                className={`${selectClass} select-class`}
-                id="state"
-                onChange={e => setStateValue(e)}
-                role="textbox"
-                required
-              >
-                <option value="" disabled selected placeholder="">
-                  Select a state
-                </option>
-                {nigeriaStates.map(state => (
-                  <option value={state.state}>{state.state}</option>
-                ))}
-              </select>
+          <ClickAwayListener onClickAway={handleClickAway}>
+            <div className="relative elevate">
+              <div className="select-box" onClick={handleClick}>
+                <div className="stack input-box">
+                  <div className={labelClass}>
+                    <label htmlFor="state">Select your state</label>
+                  </div>
+                  <div className="flex gap">
+                    <div>
+                      <input
+                        name="state"
+                        value={stateI}
+                        id="state"
+                        // onBlur={e => validateMobile(e)}
+                        className="select-input"
+                        placeholder="select state"
+                        onChange={e => setStateValue(e)}
+                        role="textbox"
+                        required
+                      />
+                    </div>
 
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.872039 0.205291C1.03476 0.0425723 1.29858 0.0425723 1.46129 0.205291L7 5.744L12.5387 0.205291C12.7014 0.0425723 12.9652 0.0425723 13.128 0.205291C13.2907 0.368009 13.2907 0.631828 13.128 0.794546L7.29463 6.62788C7.13191 6.7906 6.86809 6.7906 6.70537 6.62788L0.872039 0.794546C0.70932 0.631828 0.70932 0.368009 0.872039 0.205291Z"
-                    fill="white"
-                  />
-                </svg>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0.872039 0.205291C1.03476 0.0425723 1.29858 0.0425723 1.46129 0.205291L7 5.744L12.5387 0.205291C12.7014 0.0425723 12.9652 0.0425723 13.128 0.205291C13.2907 0.368009 13.2907 0.631828 13.128 0.794546L7.29463 6.62788C7.13191 6.7906 6.86809 6.7906 6.70537 6.62788L0.872039 0.794546C0.70932 0.631828 0.70932 0.368009 0.872039 0.205291Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
+              {open ? (
+                <div className="drop-down-items stack">
+                  {nigeriaStates.map(state => (
+                    <div
+                      onClick={() => setStateI(state.state) & setOpen(false)}
+                      value={state.state}
+                      className="drop-down-contents"
+                    >
+                      {state.state}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
-          </div>
+          </ClickAwayListener>
         </div>
         <div className="basis-1/2">
           <div className={`stack input-box`}>

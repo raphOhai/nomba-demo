@@ -153,7 +153,7 @@ const Cart = ({ finalFocusRef }) => {
       className="drawer-content"
     >
       <DrawerOverlay />
-      <DrawerContent bg="#121212" color="white" px="0" data-lenis-prevent className="drawer-content">
+      <DrawerContent bg="#1A1A1A" color="white" px="0" data-lenis-prevent className="drawer-content">
         <DrawerCloseButton color="white" className="close-btn" />
 
         <DrawerHeader>
@@ -167,7 +167,7 @@ const Cart = ({ finalFocusRef }) => {
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
                 <TabList borderBottom="1px" borderBottomColor="#383838" borderTop="1px solid #383838">
-                  <Tab py="-7px" _selected={tabStyle} color="#FC0">
+                  <Tab py="-7px" _selected={tabStyle} color="#FFCC00">
                     {/* Add Information */}
                   </Tab>
                   {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
@@ -175,7 +175,7 @@ const Cart = ({ finalFocusRef }) => {
                   </Tab> */}
                 </TabList>
 
-                <TabPanels px={[2, 4, 4, 4]}>
+                <TabPanels px={[2, 4, 4, 4]} className="elevate">
                   {/* <TabPanel>
                     Select the active terminal by index set
                     <CartIem counter={counter} dispatcher={dispatch} item={CartTerminals[itemIndex]} />
@@ -199,7 +199,7 @@ const Cart = ({ finalFocusRef }) => {
             </DrawerBody>
 
             {tabIndex < 1 && (
-              <div className="flex flex-row justify-between py-6 px-6 border-t border-t-n-grey6">
+              <div className="flex  flex-row justify-between py-6 px-6 border-t border-t-n-grey6">
                 <div>
                   <button
                     className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white btn-outline"

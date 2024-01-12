@@ -1,5 +1,8 @@
 $accsent-color: #333;
 $red-border: #ff7a66;
+$drop-down-bg: #333333;
+$drop-text: #808080;
+$general-border-radius: 8px;
 $bg: rgba(77, 77, 77, 0.16);
 
 .custom-select {
@@ -18,6 +21,10 @@ $bg: rgba(77, 77, 77, 0.16);
     position: absolute;
     pointer-events: none;
   }
+}
+
+.de-elevate {
+  z-index: 0;
 }
 
 .red-box {
@@ -78,7 +85,8 @@ $bg: rgba(77, 77, 77, 0.16);
   select {
     option {
       background-color: #121212;
-      color: #fff;
+      color: #b80e0e;
+      top: 20px;
     }
   }
   label {
@@ -88,6 +96,40 @@ $bg: rgba(77, 77, 77, 0.16);
 
 .basis {
   width: 48%;
+}
+.select-box {
+  // width: 200%;
+}
+
+.select-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.drop-down-items {
+  position: absolute;
+  top: 70px;
+  background-color: $drop-down-bg;
+  color: $drop-text;
+  width: 100%;
+  border-radius: $general-border-radius;
+  padding: 8px;
+  // max-height: 240px;
+  overflow: scroll;
+  z-index: 100;
+}
+.drop-down-contents {
+  padding: 8px;
+  border-radius: $general-border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4d4d4d;
+    color: #fff;
+  }
+}
+
+.select-input {
+  width: 50%;
 }
 
 .close-btn {
@@ -108,6 +150,9 @@ $bg: rgba(77, 77, 77, 0.16);
   .close-btn {
     margin-top: 33px;
   }
+  .drop-down-items {
+    max-height: 200px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -120,6 +165,9 @@ $bg: rgba(77, 77, 77, 0.16);
   .close-btn {
     margin-top: 33px;
   }
+  .drop-down-items {
+    max-height: 200px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -131,6 +179,9 @@ $bg: rgba(77, 77, 77, 0.16);
   }
   .close-btn {
     margin-top: 16px;
+  }
+  .drop-down-items {
+    max-height: 250px;
   }
 }
 
@@ -145,6 +196,9 @@ $bg: rgba(77, 77, 77, 0.16);
   .close-btn {
     margin-top: 16px;
   }
+  .drop-down-items {
+    max-height: 240px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -158,6 +212,10 @@ $bg: rgba(77, 77, 77, 0.16);
   .close-btn {
     margin-top: 16px;
   }
+}
+
+.drop-down-items {
+  max-height: 240px;
 }
 
 .max-Width {
