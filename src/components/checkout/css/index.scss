@@ -120,11 +120,14 @@ $bg: rgba(77, 77, 77, 0.16);
 .drop-down-contents {
   padding: 8px;
   border-radius: $general-border-radius;
+  font-weight: 500;
+
   cursor: pointer;
 
   &:hover {
     background-color: #4d4d4d;
     color: #fff;
+    font-weight: 600;
   }
 }
 .pointer {

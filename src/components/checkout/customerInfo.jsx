@@ -89,7 +89,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
 
   return (
     <div className="mt-5 flex-col flex gap-4 ">
-      <Ntext variant="text" color="n-light">
+      <Ntext variant="text0" color="n-light">
         <div style={{ color: "#FFFFFF" }}>Add your basic information</div>
       </Ntext>
       <div className="flex gap-4">
