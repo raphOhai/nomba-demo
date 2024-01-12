@@ -127,10 +127,17 @@ $bg: rgba(77, 77, 77, 0.16);
     color: #fff;
   }
 }
+.pointer {
+  cursor: pointer;
+}
 input {
   width: 100%;
   background-color: transparent;
   border: none;
+  &:focus {
+    background-color: none;
+    border: none;
+  }
 }
 .noselect {
 }

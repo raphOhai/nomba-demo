@@ -184,7 +184,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                       <input
                         name="state"
                         value={stateI}
-                        className=""
+                        className="pointer noselect"
                         placeholder="select state"
                         // onChange={e => setStateValue(e)}
                         role="textbox"
@@ -237,10 +237,10 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                         id="state"
                         // disabled
                         // onBlur={e => validateMobile(e)}
-                        className=""
+                        className="pointer noselect"
                         placeholder="select LGA"
                         // onChange={e => setState({ ...state, lga: e.target.value })}
-                        role="textbox"
+                        // role="textbox"
                         required
                       />
                     </div>
