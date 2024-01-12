@@ -49,7 +49,6 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   const setStateValue = e => {
     setState({ ...state, state: e });
     setLgasInState(nigeriaStates.find(s => s.state === e).lga);
-    console.log("lgaaaaaaaaaa", lgasInState);
   };
 
   const validateEmail = e => {
@@ -77,7 +76,6 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   useEffect(() => {
     if (hasEmailError) {
       const mBox = document.getElementById("mail-box");
-      console.log(mBox);
       mBox.classList.remove("input-box");
       mBox.classList.add("red-box");
     }

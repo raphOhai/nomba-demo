@@ -41,9 +41,6 @@ const Cart = ({ finalFocusRef }) => {
     setHasMobileError,
   } = useContext(AppContext);
 
-  useEffect(() => {
-    console.log("dedd", hasError, hasEmailError, hasMobileError);
-  }, []);
   const [tabIndex, setTabIndex] = useState(0);
   const [showPayment, setShowPayment] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -76,8 +73,6 @@ const Cart = ({ finalFocusRef }) => {
     } else {
       setBtnState(false);
     }
-
-    console.log("eedededed", info);
   }, [hasEmailError, hasMobileError]);
 
   const onSubmit = () => {

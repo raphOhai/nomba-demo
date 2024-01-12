@@ -140,6 +140,7 @@ input {
   }
 }
 .noselect {
+  user-select: none;
 }
 .select-input {
   width: 50%;
