@@ -25,6 +25,7 @@ import { useMixpanel } from "gatsby-plugin-mixpanel";
 import { Payment } from "./payment";
 import { useEffect } from "react";
 import { set } from "react-hook-form";
+import SucessScrean from "./sucessScrean";
 
 const Cart = ({ finalFocusRef }) => {
   const {
@@ -177,14 +178,15 @@ const Cart = ({ finalFocusRef }) => {
                   </TabPanel>
 
                   <TabPanel>
-                    <Checkout
+                    {/* <Checkout
                       itemCount={counter.count}
                       item={CartTerminals[itemIndex]}
                       userInfo={info}
                       setTabIndex={setTabIndex}
                       moveToPayment={onSubmit}
                       isLoading={isLoading}
-                    />
+                    /> */}
+                    <SucessScrean />
                   </TabPanel>
                 </TabPanels>
               </Tabs>

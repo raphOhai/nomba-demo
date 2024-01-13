@@ -8,6 +8,7 @@ import { AppContext } from "states/context";
 // import Box from "@mui/material/Box";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 import { Ntext } from "components/ntext";
+import { Box } from "@mui/material";
 
 const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
   const [open, setOpen] = React.useState(false);
@@ -86,10 +87,24 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
       fBox.classList.add("red-box");
     }
   }, [hasEmailError, hasMobileError]);
-
+  useEffect(() => {
+    document.addEventListener(
+      "click",
+      e => {
+        if (e.target.classList.contains("drop-down-items")) {
+          console.log("yes");
+        } else {
+          console.log("no");
+          setOpen(false);
+          setOpen2(false);
+        }
+      },
+      false
+    );
+  }, []);
   return (
     <div className="mt-5 flex-col flex gap-4 ">
-      <Ntext variant="text0" color="n-light">
+      <Ntext variant="text3" color="n-light">
         <div style={{ color: "#FFFFFF" }}>Add your basic information</div>
       </Ntext>
       <div className="flex gap-4">
@@ -174,40 +189,40 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
 
       <div className="flex flex-row gap-4">
         <div className="basis-1/2">
-          <ClickAwayListener onClickAway={handleClickAway}>
-            <div className="relative elevate">
-              <div className="select-box" onClick={handleClick}>
-                <div className="stack input-box">
-                  <div className={labelClass}>
-                    <label htmlFor="state">Select your state</label>
+          <div className="relative elevate">
+            <div className="select-box" onClick={handleClick}>
+              <div className="stack input-box">
+                <div className={labelClass}>
+                  <label htmlFor="state">Select your state</label>
+                </div>
+                <div className="flex gap">
+                  <div>
+                    <input
+                      name="state"
+                      value={stateI}
+                      className="pointer noselect disable-focus "
+                      placeholder="select state"
+                      // onChange={e => setStateValue(e)}
+                      role="textbox"
+                      required
+                    />
                   </div>
-                  <div className="flex gap">
-                    <div>
-                      <input
-                        name="state"
-                        value={stateI}
-                        className="pointer noselect"
-                        placeholder="select state"
-                        // onChange={e => setStateValue(e)}
-                        role="textbox"
-                        required
-                      />
-                    </div>
 
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M0.872039 0.205291C1.03476 0.0425723 1.29858 0.0425723 1.46129 0.205291L7 5.744L12.5387 0.205291C12.7014 0.0425723 12.9652 0.0425723 13.128 0.205291C13.2907 0.368009 13.2907 0.631828 13.128 0.794546L7.29463 6.62788C7.13191 6.7906 6.86809 6.7906 6.70537 6.62788L0.872039 0.794546C0.70932 0.631828 0.70932 0.368009 0.872039 0.205291Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </div>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.872039 0.205291C1.03476 0.0425723 1.29858 0.0425723 1.46129 0.205291L7 5.744L12.5387 0.205291C12.7014 0.0425723 12.9652 0.0425723 13.128 0.205291C13.2907 0.368009 13.2907 0.631828 13.128 0.794546L7.29463 6.62788C7.13191 6.7906 6.86809 6.7906 6.70537 6.62788L0.872039 0.794546C0.70932 0.631828 0.70932 0.368009 0.872039 0.205291Z"
+                        fill="white"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
-              {open ? (
+            </div>
+            {open ? (
+              <div onClick={() => setOpen(false)} className="drop-down-items-container">
                 <div className="drop-down-items stack">
                   {nigeriaStates.map(state => (
                     <div
@@ -221,48 +236,48 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                     </div>
                   ))}
                 </div>
-              ) : null}
-            </div>
-          </ClickAwayListener>
+              </div>
+            ) : null}
+          </div>
         </div>
         <div className="basis-1/2">
-          <ClickAwayListener onClickAway={handleClickAway2}>
-            <div className="relative elevate">
-              <div className="select-box" onClick={handleClick2}>
-                <div className="stack input-box">
-                  <div className={labelClass}>
-                    <label htmlFor="state">Select your LGA</label>
+          <div className="relative elevate">
+            <div className="select-box" onClick={handleClick2}>
+              <div className="stack input-box">
+                <div className={labelClass}>
+                  <label htmlFor="state">Select your LGA</label>
+                </div>
+                <div className="flex gap">
+                  <div>
+                    <input
+                      name="state"
+                      value={statel}
+                      id="state"
+                      // disabled
+                      // onBlur={e => validateMobile(e)}
+                      className="pointer noselect"
+                      placeholder="select LGA"
+                      // onChange={e => setState({ ...state, lga: e.target.value })}
+                      // role="textbox"
+                      required
+                    />
                   </div>
-                  <div className="flex gap">
-                    <div>
-                      <input
-                        name="state"
-                        value={statel}
-                        id="state"
-                        // disabled
-                        // onBlur={e => validateMobile(e)}
-                        className="pointer noselect"
-                        placeholder="select LGA"
-                        // onChange={e => setState({ ...state, lga: e.target.value })}
-                        // role="textbox"
-                        required
-                      />
-                    </div>
 
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M0.872039 0.205291C1.03476 0.0425723 1.29858 0.0425723 1.46129 0.205291L7 5.744L12.5387 0.205291C12.7014 0.0425723 12.9652 0.0425723 13.128 0.205291C13.2907 0.368009 13.2907 0.631828 13.128 0.794546L7.29463 6.62788C7.13191 6.7906 6.86809 6.7906 6.70537 6.62788L0.872039 0.794546C0.70932 0.631828 0.70932 0.368009 0.872039 0.205291Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </div>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.872039 0.205291C1.03476 0.0425723 1.29858 0.0425723 1.46129 0.205291L7 5.744L12.5387 0.205291C12.7014 0.0425723 12.9652 0.0425723 13.128 0.205291C13.2907 0.368009 13.2907 0.631828 13.128 0.794546L7.29463 6.62788C7.13191 6.7906 6.86809 6.7906 6.70537 6.62788L0.872039 0.794546C0.70932 0.631828 0.70932 0.368009 0.872039 0.205291Z"
+                        fill="white"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
-              {open2 ? (
+            </div>
+            {open2 ? (
+              <div className="d">
                 <div className="drop-down-items stack">
                   {lgasInState.map(lga => (
                     <div
@@ -274,9 +289,9 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                     </div>
                   ))}
                 </div>
-              ) : null}
-            </div>
-          </ClickAwayListener>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>

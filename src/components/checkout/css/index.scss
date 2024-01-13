@@ -105,6 +105,17 @@ $bg: rgba(77, 77, 77, 0.16);
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+.drop-down-items-container {
+  width: 200%;
+  // border: 1px solid red;
+  min-height: 300px;
+}
+.drop-down-items-container2 {
+  width: 200%;
+  // border: 1px solid red;
+  min-height: 300px;
+  padding-left: 100%;
+}
 .drop-down-items {
   position: absolute;
   top: 70px;
@@ -140,6 +151,10 @@ input {
     border: none;
   }
 }
+
+input.disable-focus {
+  pointer-events: none;
+}
 .noselect {
   user-select: none;
 }
@@ -153,6 +168,10 @@ input {
   // height: 30px;
   // width: 30px;
   color: #121212;
+}
+
+.sucess-box {
+  height: 80vh;
 }
 
 /* Extra small devices (phones, 600px and down) */
