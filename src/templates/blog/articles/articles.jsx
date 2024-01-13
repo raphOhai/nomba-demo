@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Container, Ntext } from "components";
-import { AppContext } from "states/context";
 
-import { articleCategories as categories } from "config/blog";
+import { categories } from "config/blog";
 
 const BlogArticles = () => {
   const [categoryIndex, setCategoryIndex] = useState(0);

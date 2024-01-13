@@ -65,6 +65,7 @@ module.exports = {
         src: path.join(__dirname, "src"),
         components: path.join(__dirname, "src/components"),
         svgs: path.join(__dirname, "src/assets/images/svgs"),
+        gifs: path.join(__dirname, "src/assets/images/gifs"),
         config: path.join(__dirname, "src/config"),
         assets: path.join(__dirname, "src/assets"),
         utils: path.join(__dirname, "src/utils"),

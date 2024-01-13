@@ -4,8 +4,9 @@ import ctl from "@netlify/classnames-template-literals";
 import { Container, Button, Ntext } from "components";
 import { heroSection } from "config/checkout";
 
-import Placeholder from "svgs/checkout/hero-placeholder.svg";
 import Blur from "svgs/checkout/hero-blur.svg";
+
+import checkoutGif from "gifs/check-out.gif";
 
 const { title, description } = heroSection;
 
@@ -29,7 +30,7 @@ const CheckoutPageHero = () => {
             />
             <section className={buttonsStyle}>
               <Button
-                className="!font-medium !text-base !text-n-smoky !min-w-[184px] !h-14"
+                className="!font-medium !text-base !text-n-smoky !min-w-[184px] !h-14 z-10"
                 href={{ url: "https://dashboard.nomba.com/auth/login" }}
                 text="Get Started"
               />
@@ -39,7 +40,13 @@ const CheckoutPageHero = () => {
               />
             </section>
           </section>
-          <Placeholder className="hidden md:block" />
+          <img
+            src={checkoutGif}
+            alt="Check out with Nomba"
+            className="hidden md:block rounded-[40px] border-4 border-solid border-n-charcoal"
+            height="560"
+            width="596"
+          />
         </section>
       </Container>
       <Blur className="absolute animate-slowBounce left-0 top-[200px] lg:top-[400px] w-[16vw] h-[776px]" />
