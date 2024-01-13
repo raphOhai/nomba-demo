@@ -113,11 +113,7 @@ $bg: rgba(77, 77, 77, 0.16);
   width: 100%;
   border-radius: $general-border-radius;
   padding: 8px;
-  // max-height: 240px;
   overflow-y: scroll;
-  // scrollbar-width: thin;
-  // background-clip: padding-box;
-  z-index: 100;
 }
 .drop-down-contents {
   padding: 8px;
@@ -268,7 +264,6 @@ input {
   border-radius: 8px; /* Roundness of the thumb */
 }
 
-/* If you want to change the scrollbar on hover, you can do so using the following */
 .drop-down-items:hover::-webkit-scrollbar-thumb {
   background-color: #555; /* Thumb color on hover */
 }
