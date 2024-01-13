@@ -40,6 +40,7 @@ const Cart = ({ finalFocusRef }) => {
     itemIndex,
     setHasEmailError,
     setHasMobileError,
+    closeAndReset,
   } = useContext(AppContext);
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -143,7 +144,7 @@ const Cart = ({ finalFocusRef }) => {
       colorScheme="yellow"
       isOpen={isOpen}
       placement="right"
-      onClose={onClose}
+      onClose={closeAndReset}
       finalFocusRef={finalFocusRef}
       size="md"
       className="drawer-content"

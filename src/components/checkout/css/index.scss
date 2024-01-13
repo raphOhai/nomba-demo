@@ -144,7 +144,7 @@ $bg: rgba(77, 77, 77, 0.16);
 }
 input {
   width: 100%;
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
   &:focus {
     background-color: none;
