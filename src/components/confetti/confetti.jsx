@@ -6,7 +6,14 @@ const Confetti = ({ run }) => {
   const size = useWindowSize();
   return (
     <div>
-      <ReactConfetti run={run} recycle={false} width={size.width} height={size.height} />
+      <ReactConfetti
+        numberOfPieces={500}
+        gravity={0.2}
+        run={run}
+        recycle={false}
+        width={size.width}
+        height={size.height}
+      />
     </div>
   );
 };
