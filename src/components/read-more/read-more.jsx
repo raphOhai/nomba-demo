@@ -15,15 +15,17 @@ const ReadMore = ({ text, color, className, extraTrackText, defaultStyle = true,
           trackingText={extraTrackText ? `${extraTrackText}-${text}` : text}
           className={readmoreStylDefault}
         >
-          <Ntext
-            variant={props.variant || "p16"}
-            color={color}
-            className={`peer ${props.className}transition-all duration-300`}
-            weight={defaultStyle ? "600" : props.weight}
-          >
-            {text}
-          </Ntext>
-          {active ? <Arrow className={arrowStyle} /> : <ArrowGrey className={arrowStyle} />}
+          <div className=" flex gap-2">
+            <Ntext
+              variant={props.variant || "p16"}
+              color={color}
+              className={`peer ${props.className}transition-all duration-300`}
+              weight={defaultStyle ? "600" : props.weight}
+            >
+              {text}
+            </Ntext>
+            {active ? <Arrow className={arrowStyle} /> : <ArrowGrey className={arrowStyle} />}
+          </div>
         </NLink>
       ) : (
         <NLink {...props} trackingText={extraTrackText ? `${extraTrackText}-${text}` : text} className={readmoreStyle}>
