@@ -4,6 +4,8 @@ import { Ntext } from "components/ntext";
 import React, { useContext, useEffect } from "react";
 import { AppContext } from "states/context";
 
+import Check from "../../assets/images/svgs/check-circle.svg";
+
 const SucessScrean = () => {
   const { closeAndReset } = useContext(AppContext);
   const [showConfetti, setShowConfetti] = React.useState(false);
@@ -27,8 +29,13 @@ const SucessScrean = () => {
   return (
     <div className="sucess-box flex center">
       <Confetti run={showConfetti} />
-      <div className="stack gap3">
-        <div className="stack gap-2">
+      <div className="stack gap4">
+        <div className="stack gap-3">
+          <div className="flex center">
+            <div className="circle flex center">
+              <Check />
+            </div>
+          </div>
           <Ntext variant="h4" className="text-center">
             <div style={{ color: "#fff" }}>Request sent!</div>
           </Ntext>
