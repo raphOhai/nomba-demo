@@ -295,3 +295,11 @@ input.disable-focus {
 .drop-down-items:hover::-webkit-scrollbar-thumb {
   background-color: #555; /* Thumb color on hover */
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(34, 34, 34) inset !important; /* This will override the autofill background color */
+  -webkit-text-fill-color: white !important; /* Set the text color to white */
+}
