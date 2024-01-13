@@ -1,18 +1,38 @@
 import { Button } from "components/button";
+import Confetti from "components/confetti/confetti";
 import { Ntext } from "components/ntext";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AppContext } from "states/context";
 
 const SucessScrean = () => {
   const { closeAndReset } = useContext(AppContext);
+  const [showConfetti, setShowConfetti] = React.useState(false);
+  useEffect(() => {
+    const trigger = "yoo";
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(
+        entry => {
+          if (entry.isIntersecting) {
+            setShowConfetti(true);
+          } else {
+          }
+        },
+        { threshold: 0.2 }
+      );
+    });
+    const hiddenElements = document.querySelectorAll("." + trigger);
+
+    hiddenElements.forEach(el => observer.observe(el));
+  }, []);
   return (
     <div className="sucess-box flex center">
+      <Confetti run={showConfetti} />
       <div className="stack gap3">
         <div className="stack gap-2">
           <Ntext variant="h4" className="text-center">
             <div style={{ color: "#fff" }}>Request sent!</div>
           </Ntext>
-          <Ntext variant="text3" className="text-center">
+          <Ntext variant="text3" className="text-center yoo">
             <div style={{ color: "#717171" }}>
               Thank you for your interest! Your demo request has been received We would get back to you as soon as
               possible via your email or phone number.
