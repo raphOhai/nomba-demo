@@ -7,8 +7,8 @@ const Confetti = ({ run }) => {
   return (
     <div>
       <ReactConfetti
-        numberOfPieces={500}
-        gravity={0.2}
+        numberOfPieces={300}
+        gravity={0.3}
         run={run}
         recycle={false}
         width={size.width}
