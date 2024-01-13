@@ -199,7 +199,7 @@ const Cart = ({ finalFocusRef }) => {
                   <button
                     className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white btn-outline"
                     onClick={() => {
-                      onClose();
+                      closeAndReset();
                       mixpanel.track("Mini_checkout_Customer_cancels_order_for_mini", {
                         customerData: JSON.stringify(info),
                         terminals: counter.count,
