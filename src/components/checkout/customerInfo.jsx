@@ -215,7 +215,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                         setStateI(state.state) & setOpen(false) & setStateValue(state.state) & setOpen2(true)
                       }
                       value={state.state}
-                      className="drop-down-contents"
+                      className="drop-down-contents custom-scrollbar"
                     >
                       {state.state}
                     </div>
