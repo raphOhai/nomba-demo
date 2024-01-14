@@ -190,6 +190,9 @@ input.disable-focus {
   // height: 30px;
   // width: 30px;
   color: #121212;
+  &:hover {
+    background-color: #333333;
+  }
 }
 
 .sucess-box {

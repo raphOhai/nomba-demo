@@ -152,7 +152,7 @@ const Cart = ({ finalFocusRef }) => {
     >
       <DrawerOverlay />
       <DrawerContent bg="#1A1A1A" color="white" px="0" data-lenis-prevent className="drawer-content">
-        {tabIndex === 0 ? <DrawerCloseButton color="white" className="close-btn" /> : ""}
+        {tabIndex === 0 ? <DrawerCloseButton color="white" className="close-btn" _hover={false} /> : ""}
 
         <DrawerHeader>
           {tabIndex === 0 ? (
