@@ -13,9 +13,11 @@
 .flex {
   display: flex;
 }
+
 .gap {
   gap: 0.5rem;
 }
+
 .gap1 {
   gap: 1rem;
 }
@@ -95,6 +97,7 @@
 .elevate2 {
   z-index: 5;
 }
+
 .white-text {
   color: #ffffff;
 }
@@ -106,6 +109,12 @@
 .text-Btn {
   padding-left: 0px;
   margin-left: -40px;
+
+  span {
+    &:hover {
+      color: #ffc936;
+    }
+  }
 }
 
 .transition {
@@ -117,13 +126,16 @@
   .padding-buttom {
     padding-bottom: 9rem;
   }
+
   .padding-top {
     padding-top: 5.5rem;
   }
+
   .default-padding {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
   .padding-top2 {
     padding-top: 3rem;
   }
@@ -134,13 +146,16 @@
   .padding-buttom {
     padding-bottom: 1rem;
   }
+
   .padding-top {
     padding-top: 5.5rem;
   }
+
   .default-padding {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
   .padding-top2 {
     padding-top: 3rem;
   }
@@ -151,13 +166,16 @@
   .padding-buttom {
     padding-bottom: 1.5rem;
   }
+
   .padding-top {
     padding-top: 5.5rem;
   }
+
   .default-padding {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
   .padding-top2 {
     padding-top: 3rem;
   }
@@ -168,9 +186,11 @@
   .padding-buttom {
     padding-bottom: 1rem;
   }
+
   .padding-top {
     padding-top: 5.5rem;
   }
+
   .default-padding {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -182,9 +202,11 @@
   .padding-buttom {
     padding-bottom: 10rem;
   }
+
   .padding-top {
     padding-top: 5.5rem;
   }
+
   .default-padding {
     padding-left: 2rem;
     padding-right: 2rem;

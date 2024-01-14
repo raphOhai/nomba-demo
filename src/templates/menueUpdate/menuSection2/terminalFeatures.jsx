@@ -8,10 +8,13 @@ import LongStick from "../hero/glowSvgs/longStick";
 import BallStick from "../hero/glowSvgs/ballStick";
 import BallStick2 from "../hero/glowSvgs/ballStick2";
 import InterSectionChecker from "../hero/hooks/observer";
+import { useContext } from "react";
+import { AppContext } from "states/context";
 // import yoo from "../../../assets/images/svgs/terminal/pos-feature3.png";
 
 const TerminalFeatures = () => {
   InterSectionChecker("trigger", "box", "right-Box");
+  const { onOpen } = useContext(AppContext);
   return (
     <>
       <div className="maxWidth elevate2 stack padding-buttom padding-top ">
@@ -43,7 +46,7 @@ const TerminalFeatures = () => {
                 src="../../../assets/images/svgs/terminal/pos.png"
                 className="responsive-im im u pos-img-1 SlideUp"
                 width={500}
-                // height={200}
+              // height={200}
               />
             </div>
             <div className="text-box ">
@@ -61,6 +64,7 @@ const TerminalFeatures = () => {
                 <Button
                   className="!font-large !text-[16px] !min-w-[100px] !w-[200px] !text-left text-Btn"
                   text="Get Started"
+                  onClick={onOpen}
                   WithNomArrow={true}
                 />
               </div>
@@ -84,6 +88,8 @@ const TerminalFeatures = () => {
                 <Button
                   className="!font-large !text-[16px] !min-w-[100px] !w-[200px] !text-left text-Btn"
                   text="Get Started"
+
+                  onClick={onOpen}
                   WithNomArrow={true}
                 />
               </div>
@@ -93,7 +99,7 @@ const TerminalFeatures = () => {
                 alt="Iphone with hand"
                 src="../../../assets/images/svgs/terminal/pos3.png"
                 className="responsive-im im SlideUp"
-                // width={230}
+              // width={230}
               />
             </div>
           </div>
@@ -107,7 +113,7 @@ const TerminalFeatures = () => {
                 src="../../../assets/images/svgs/terminal/pos33.png"
                 className="responsive-im im pos-img-2 SlideUp"
                 width={240}
-                // height={240}
+              // height={240}
               />
             </div>
             <div className="text-box">
@@ -124,6 +130,7 @@ const TerminalFeatures = () => {
                 <Button
                   className="!font-large !text-[16px] !min-w-[100px] !w-[200px] !text-left text-Btn"
                   text="Get Started"
+                  onClick={onOpen}
                   WithNomArrow={true}
                 />
               </div>

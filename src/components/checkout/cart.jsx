@@ -41,9 +41,10 @@ const Cart = ({ finalFocusRef }) => {
     setHasEmailError,
     setHasMobileError,
     closeAndReset,
+    tabIndex,
+    setTabIndex,
   } = useContext(AppContext);
 
-  const [tabIndex, setTabIndex] = useState(0);
   const [showPayment, setShowPayment] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -151,23 +152,31 @@ const Cart = ({ finalFocusRef }) => {
     >
       <DrawerOverlay />
       <DrawerContent bg="#1A1A1A" color="white" px="0" data-lenis-prevent className="drawer-content">
-        <DrawerCloseButton color="white" className="close-btn" />
+        {tabIndex === 0 ? <DrawerCloseButton color="white" className="close-btn" /> : ""}
 
         <DrawerHeader>
-          <Ntext variant="text4" color="n-light">
-            <div style={{ color: "#B3B3B3" }}>Get started with MENU</div>
-          </Ntext>
+          {tabIndex === 0 ? (
+            <Ntext variant="text4" color="n-light">
+              <div style={{ color: "#B3B3B3" }}>Get started with MENU</div>
+            </Ntext>
+          ) : (
+            ""
+          )}
         </DrawerHeader>
 
         {!showPayment ? (
           <>
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
-                <TabList borderBottom="1px" borderBottomColor="#FFCC00">
-                  {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
+                {tabIndex === 0 ? (
+                  <TabList borderBottom="1px" borderBottomColor="#FFCC00">
+                    {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
                     Summary
                   </Tab> */}
-                </TabList>
+                  </TabList>
+                ) : (
+                  ""
+                )}
 
                 <TabPanels px={[2, 4, 4, 4]} className="elevate">
                   {/* <TabPanel>

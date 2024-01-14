@@ -1,9 +1,11 @@
 import { Br, Button, Container, Ntext } from "components";
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useContext } from "react";
 import yoo from "../../../assets/images/jpegs/chaw.svg";
+import { AppContext } from "states/context";
 
 const PictureCta = () => {
+  const { onOpen } = useContext(AppContext);
   return (
     <div className="cta-box">
       <div className="grid1 ">
@@ -38,6 +40,7 @@ const PictureCta = () => {
                     <div>
                       <Button
                         className="!font-medium !text-[16px] !min-w-[100px] !w-[200px] !text-center"
+                        onClick={onOpen}
                         text="Get Started Now"
                         withArrow={true}
                       />
@@ -56,8 +59,8 @@ const PictureCta = () => {
                 alt="Iphone with hand"
                 src="../../../assets/images/bar.jpg"
                 className=" responsive-img large-img-cta"
-                // height={600}
-                // width={1000}
+              // height={600}
+              // width={1000}
               />
             </div>
             <div className="img-cta-grid gap1 div2 relative ">
@@ -74,7 +77,7 @@ const PictureCta = () => {
                   alt="Iphone with hand"
                   src="../../../assets/images/barGirl.png"
                   className=" responsive-img large-img-c"
-                  // height={500}
+                // height={500}
                 />
               </div>
             </div>
