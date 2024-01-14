@@ -10,6 +10,7 @@ $bg: rgba(77, 77, 77, 0.16);
   -moz-appearance: none;
   appearance: none;
   position: relative;
+
   &:after {
     content: "\0025BC";
     font: normal normal normal 12px/1 FontAwesome;
@@ -33,30 +34,36 @@ $bg: rgba(77, 77, 77, 0.16);
   background-color: $bg;
   padding: 8px 16px;
   width: 100%;
+
   &:hover {
     border: 1px solid #b3b3b3;
   }
 
   input {
     background-color: transparent;
+
     &::placeholder {
       color: #4d4d4d;
     }
+
     &:focus {
       background-color: none;
       border: none;
     }
   }
+
   .select-class {
     width: 100%;
     background-color: transparent;
   }
+
   select {
     option {
       background-color: #121212;
       color: #fff;
     }
   }
+
   label {
     color: #b3b3b3;
   }
@@ -68,20 +75,24 @@ $bg: rgba(77, 77, 77, 0.16);
   background-color: $bg;
   padding: 8px 16px;
   width: 100%;
+
   &:hover {
     border: 1px solid #b3b3b3;
   }
 
   input {
     background-color: transparent;
+
     &::placeholder {
       color: #4d4d4d;
     }
   }
+
   .select-class {
     width: 100%;
     background-color: transparent;
   }
+
   select {
     option {
       background-color: #121212;
@@ -89,6 +100,7 @@ $bg: rgba(77, 77, 77, 0.16);
       top: 20px;
     }
   }
+
   label {
     color: #b3b3b3;
   }
@@ -97,6 +109,7 @@ $bg: rgba(77, 77, 77, 0.16);
 .basis {
   width: 48%;
 }
+
 .select-box {
   // width: 200%;
 }
@@ -105,17 +118,20 @@ $bg: rgba(77, 77, 77, 0.16);
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+
 .drop-down-items-container {
   width: 200%;
   // border: 1px solid red;
   min-height: 300px;
 }
+
 .drop-down-items-container2 {
   width: 200%;
   // border: 1px solid red;
   min-height: 300px;
   padding-left: 100%;
 }
+
 .drop-down-items {
   position: absolute;
   top: 70px;
@@ -126,6 +142,7 @@ $bg: rgba(77, 77, 77, 0.16);
   padding: 8px;
   overflow-y: scroll;
 }
+
 .drop-down-contents {
   padding: 8px;
   border-radius: $general-border-radius;
@@ -139,13 +156,16 @@ $bg: rgba(77, 77, 77, 0.16);
     font-weight: 600;
   }
 }
+
 .pointer {
   cursor: pointer;
 }
+
 input {
   width: 100%;
   background-color: transparent !important;
   border: none;
+
   &:focus {
     background-color: none;
     border: none;
@@ -155,9 +175,11 @@ input {
 input.disable-focus {
   pointer-events: none;
 }
+
 .noselect {
   user-select: none;
 }
+
 .select-input {
   width: 50%;
 }
@@ -172,9 +194,11 @@ input.disable-focus {
 
 .sucess-box {
   height: 80vh;
-  .stack {
+
+  .inner-box {
     margin-top: -10rem;
   }
+
   .circle {
     background-color: #f5fff23d;
     border-radius: 50%;
@@ -190,9 +214,11 @@ input.disable-focus {
     margin: 0px;
     padding-top: 2rem;
   }
+
   .close-btn {
     margin-top: 33px;
   }
+
   .drop-down-items {
     max-height: 200px;
   }
@@ -205,9 +231,11 @@ input.disable-focus {
     margin: 0px;
     padding-top: 2rem;
   }
+
   .close-btn {
     margin-top: 33px;
   }
+
   .drop-down-items {
     max-height: 200px;
   }
@@ -220,9 +248,11 @@ input.disable-focus {
     margin: 16px;
     padding-top: 1rem;
   }
+
   .close-btn {
     margin-top: 16px;
   }
+
   .drop-down-items {
     max-height: 250px;
   }
@@ -236,9 +266,11 @@ input.disable-focus {
     padding-top: 1rem;
     max-width: 30rem;
   }
+
   .close-btn {
     margin-top: 16px;
   }
+
   .drop-down-items {
     max-height: 240px;
   }
@@ -252,6 +284,7 @@ input.disable-focus {
     padding-top: 1rem;
     // max-width: 20rem;
   }
+
   .close-btn {
     margin-top: 16px;
   }
@@ -280,7 +313,8 @@ input.disable-focus {
 /* For WebKit browsers like Chrome and Safari */
 .drop-down-items::-webkit-scrollbar {
   // height: 29px;
-  width: 6px; /* Width of the scrollbar */
+  width: 6px;
+  /* Width of the scrollbar */
 }
 
 .drop-down-items::-webkit-scrollbar-track {
@@ -288,18 +322,23 @@ input.disable-focus {
 }
 
 .drop-down-items::-webkit-scrollbar-thumb {
-  background-color: #808080; /* Thumb color */
-  border-radius: 8px; /* Roundness of the thumb */
+  background-color: #808080;
+  /* Thumb color */
+  border-radius: 8px;
+  /* Roundness of the thumb */
 }
 
 .drop-down-items:hover::-webkit-scrollbar-thumb {
-  background-color: #555; /* Thumb color on hover */
+  background-color: #555;
+  /* Thumb color on hover */
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px rgb(34, 34, 34) inset !important; /* This will override the autofill background color */
-  -webkit-text-fill-color: white !important; /* Set the text color to white */
+  -webkit-box-shadow: 0 0 0 30px rgb(34, 34, 34) inset !important;
+  /* This will override the autofill background color */
+  -webkit-text-fill-color: white !important;
+  /* Set the text color to white */
 }

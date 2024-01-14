@@ -30,7 +30,7 @@ const SucessScrean = () => {
     <div className="sucess-box flex center">
       <Confetti run={showConfetti} />
       <div className="stack gap4">
-        <div className="stack gap-3">
+        <div className="stack gap-3 inner-box">
           <div className="flex center">
             <div className="circle flex center">
               <Check />
