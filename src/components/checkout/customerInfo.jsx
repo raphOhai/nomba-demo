@@ -159,7 +159,11 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
               required
             />
           </div>
-          {hasEmailError && <div className=" text-red-300 text-left text-sm">Email is not valid</div>}
+          {hasEmailError && (
+            <div style={{ color: "#FF7A66" }} className=" text-red-300 text-left text-sm">
+              Email is not valid
+            </div>
+          )}
         </div>
       </div>
       <div className="flex flex-row gap-6">
@@ -181,7 +185,11 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
               required
             />
           </div>
-          {hasMobileError && <div className=" text-red-300 text-left text-sm">Phone is not valid</div>}
+          {hasMobileError && (
+            <div style={{ color: "#FF7A66" }} className=" text-red-300 text-left text-sm">
+              Phone is not valid
+            </div>
+          )}
         </div>
       </div>
 

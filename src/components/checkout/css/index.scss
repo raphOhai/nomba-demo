@@ -54,7 +54,15 @@ $bg: rgba(77, 77, 77, 0.16);
 
   .select-class {
     width: 100%;
+
     background-color: transparent;
+    .got-button {
+      max-width: 388px;
+      height: 56px !important;
+      padding: 18px 40px !important;
+      background-color: transparent !important;
+      border: 1px solid rgba(51, 51, 51, 0.64);
+    }
   }
 
   select {

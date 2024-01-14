@@ -37,7 +37,7 @@ const SucessScrean = () => {
             </div>
           </div>
           <Ntext variant="h4" className="text-center">
-            <div style={{ color: "#fff" }}>Request sent!</div>
+            <div style={{ color: "#fff", fontSize: "20px" }}>Request sent!</div>
           </Ntext>
           <Ntext variant="text3" className="text-center yoo">
             <div style={{ color: "#717171" }}>
