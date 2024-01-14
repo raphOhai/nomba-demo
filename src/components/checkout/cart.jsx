@@ -206,7 +206,7 @@ const Cart = ({ finalFocusRef }) => {
               <div style={{ borderTop: "1px solid #333333" }} className="flex  flex-row justify-between py-6 px-6 ">
                 <div>
                   <button
-                    className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white btn-outline"
+                    className="  btn-outline"
                     onClick={() => {
                       closeAndReset();
                       mixpanel.track("Mini_checkout_Customer_cancels_order_for_mini", {
@@ -215,7 +215,9 @@ const Cart = ({ finalFocusRef }) => {
                       });
                     }}
                   >
-                    Cancel
+                    <div style={{ marginTop: "-13.5px" }} className="flex center">
+                      <p>Cancel</p>
+                    </div>
                   </button>
                 </div>
                 <Button
