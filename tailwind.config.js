@@ -74,6 +74,7 @@ module.exports = {
           yellow1: "#FFFAE6",
           yellow2: "#FFF5CC",
           yellow3: "#FFEEAA",
+          yellow4: "#FFD633",
           light: "#ffffff",
           grey0: "#808080",
           grey1: "#eeeeee",
@@ -98,6 +99,7 @@ module.exports = {
           smoky: "#0D0D0D",
           grape: "#AF96B2",
           olive: "#B5A25A",
+          liver: "#4D4D4D",
           opal: "#A0BCBC",
         },
         c: {
