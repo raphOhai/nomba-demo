@@ -28,6 +28,11 @@ export default {
       description: "Get your career started with Nomba",
     },
   },
+  checkout: {
+    title: "Seamless online payments, simplified",
+    description:
+      "Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly",
+  },
   blog: {
     title: "Learn more about Nomba",
     description: "Learn more about Nomba. Get to know our team and our blog.",

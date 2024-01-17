@@ -53,103 +53,78 @@ export const apiDocsSection = {
   ),
   docs: [
     {
-      label: "cURL",
-      language: "js",
-      snippet: `
-      {
-        "id": 67750,
-        "userId": 1,
-        "vasTransactionRef": "6798201",
-        "transactionDetails": {
-          "your_reference": "xutzy01690881363158",
-          "provider_reference": "6798201",
-          "our_reference": "6798201",
-          "provider_message": "Successful",
-          "value_number": "10430734755",
-          "provider_response": {
-            "status": "Successful",
-            "statusCode": "00",
-            "data": {
-              "TrxRef": "5856102"
-            }
-          }
-        },
-        "status": "CONFIRMED",
-        "amount": 9000,
-        "packageName": "compact",
-        "email": null,
-        "createdAt": "2023-08-01T10:16:07.755+01:00",
-        "updatedAt": "2023-08-01T10:16:07.755+01:00",
-        "customerId": "10430734755",
-        "vasProvider": "null",
-      }
-    `,
-    },
-    {
       label: "Node.js",
       language: "js",
       snippet: `
-      {
-        "id": 7760,
-        "userId": 1,
-        "vasTransactionRef": "6798201",
-        "transactionDetails": {
-          "your_reference": "xutzy01690881363158",
-          "provider_reference": "6798201",
-          "our_reference": "6798201",
-          "provider_message": "Successful",
-          "value_number": "10430734755",
-          "provider_response": {
-            "status": "Successful",
-            "statusCode": "00",
-            "data": {
-              "TrxRef": "5856102"
-            }
+        var axios = require('axios');
+        var data = '{
+          "order": {
+            "orderReference": "testingref090",
+            "callbackUrl": "https://www.nomba.com",
+            "customerEmail": "ttt@gmail.com",
+            "amount": 50,
+            "currency": "NGN",
+            "customerId": "identify123"
           }
-        },
-        "status": "CONFIRMED",
-        "amount": 9000,
-        "packageName": "compact",
-        "email": null,
-        "createdAt": "2023-08-01T10:16:07.755+01:00",
-        "updatedAt": "2023-08-01T10:16:07.755+01:00",
-        "customerId": "10430734755",
-        "vasProvider": "null",
-      }
-    `,
+        }';
+
+        var config = {
+          method: 'post',
+          maxBodyLength: Infinity,
+          url: 'https://api.nomba.com/v1/checkout/order',
+          headers: {
+            'accountId': 'cb6778b6-207c-41ac-a7fd-c2d1969b6aa6'
+          },
+          data: data
+        };
+
+        axios(config)
+          .then(function (response) {
+            console.log(JSON.stringify(response.data));
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      `,
     },
     {
       label: "PHP",
       language: "js",
       snippet: `
-      {
-        "id": 960,
-        "userId": 1,
-        "vasTransactionRef": "6798201",
-        "transactionDetails": {
-          "your_reference": "xutzy01690881363158",
-          "provider_reference": "6798201",
-          "our_reference": "6798201",
-          "provider_message": "Successful",
-          "value_number": "10430734755",
-          "provider_response": {
-            "status": "Successful",
-            "statusCode": "00",
-            "data": {
-              "TrxRef": "5856102"
-            }
-          }
-        },
-        "status": "CONFIRMED",
-        "amount": 9000,
-        "packageName": "compact",
-        "email": null,
-        "createdAt": "2023-08-01T10:16:07.755+01:00",
-        "updatedAt": "2023-08-01T10:16:07.755+01:00",
-        "customerId": "10430734755",
-        "vasProvider": "null",
-      }
-    `,
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => '<https://api.nomba.com/v1/checkout/order>',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => '{
+                "order": {
+                    "orderReference": "testingref090",
+                    "callbackUrl": "<https://www.nomba.com>",
+                    "customerEmail": "ttt@gmail.com",
+                    "amount": 50,
+                    "currency": "NGN",
+                    "customerId": "identify123"
+                }
+            }',
+            CURLOPT_HTTPHEADER => array(
+                'accountId: cb6778b6-207c-41ac-a7fd-c2d1969b6aa6'
+            ),
+        ));
+        
+        $response = curl_exec($curl);
+        
+        curl_close($curl);
+        
+        echo $response;
+      `,
     },
   ],
 };

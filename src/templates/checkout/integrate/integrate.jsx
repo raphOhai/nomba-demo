@@ -21,11 +21,11 @@ const IntegratePay = () => {
           value={description}
           className="md:!leading-[32px] !-tracking-[0.8px] mt-8"
           variant="text4lite">
-            {description}
+          {description}
         </Ntext>
         <Button
+          href={{ url: "https://nombahq.notion.site/nombahq/Nomba-Checkout-API-Documentation-f2dd9979f4d3453886d403f6fee269ae#2bcf6c5d13a84676bf168cdee703cb03" }}
           className="!font-medium !text-base !text-n-smoky !min-w-[324px] mt-10 !h-14"
-          href={{ url: "https://dashboard.nomba.com/auth/login" }}
           text="Go to Checkout Documentation"
         />
       </section>

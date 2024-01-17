@@ -43,7 +43,7 @@ const CheckoutPageHero = () => {
           <img
             src={checkoutGif}
             alt="Check out with Nomba"
-            className="hidden md:block rounded-[40px] border-4 border-solid border-n-charcoal"
+            className="hidden md:block rounded-[40px]"
             height="560"
             width="596"
           />

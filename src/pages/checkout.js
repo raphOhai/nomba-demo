@@ -23,8 +23,8 @@ const CheckoutPage = () => {
 
   return (
     <Layout
-      title={SeoConf.invoice.title}
-      description={SeoConf.invoice.description}
+      title={SeoConf.checkout.title}
+      description={SeoConf.checkout.description}
       useStickyNav={false}>
       <CheckoutPageHero />
       <CheckoutAdvantages />
