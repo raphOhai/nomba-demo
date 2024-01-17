@@ -6,6 +6,7 @@ import { Ntext } from "components";
 
 import { advantages } from "config/checkout";
 
+import RibbonsBackgroundMobile from "svgs/checkout/advantages-ribbons-mobile.svg";
 import RibbonsBackground from "svgs/checkout/advantages-ribbons.svg";
 import gsap from "gsap";
 
@@ -33,7 +34,8 @@ const CheckoutAdvantages = () => {
 
   return (
     <section className={wrapperStyle}>
-      <RibbonsBackground className="absolute w-screen top-0" />
+      <RibbonsBackgroundMobile className="md:hidden absolute w-screen" />
+      <RibbonsBackground className="hidden md:block absolute w-screen" />
       <section className={contentStyle}>
         {
           advantages.map(advantage => (

@@ -63,7 +63,7 @@ const textStyle = ctl(`
 `);
 
 const baseStyle = ctl(`
-rounded
+rounded-lg
 text-primary
 text-center
 gap-2

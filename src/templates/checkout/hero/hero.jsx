@@ -4,7 +4,8 @@ import ctl from "@netlify/classnames-template-literals";
 import { Container, Button, Ntext } from "components";
 import { heroSection } from "config/checkout";
 
-import Blur from "svgs/checkout/hero-blur.svg";
+import RightBlur from "svgs/checkout/hero-right-blur.svg";
+import LeftBlur from "svgs/checkout/hero-left-blur.svg";
 
 import checkoutGif from "gifs/check-out.gif";
 
@@ -30,36 +31,58 @@ const CheckoutPageHero = () => {
             />
             <section className={buttonsStyle}>
               <Button
-                className="!font-medium !text-base !text-n-smoky !min-w-[184px] !h-14 z-10"
+                className="!font-medium !text-base !text-n-smoky !w-[84vw] lg:!w-[184px] !h-14 z-10"
                 href={{ url: "https://dashboard.nomba.com/auth/login" }}
                 text="Get Started"
               />
               <Button
-                className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !min-w-[184px] !h-14"
+                className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[84vw] lg:!w-[184px] !h-14"
                 text="Try live demo"
               />
             </section>
           </section>
-          <img
-            src={checkoutGif}
-            alt="Check out with Nomba"
-            className="hidden md:block rounded-[40px]"
-            height="560"
-            width="596"
-          />
+          <aside className={asideStyle}>
+            <img
+              src={checkoutGif}
+              alt="Check out with Nomba"
+              className="rounded-xl w-full h-full"
+            />
+          </aside>
         </section>
       </Container>
-      <Blur className="absolute animate-slowBounce left-0 top-[200px] lg:top-[400px] w-[16vw] h-[776px]" />
+      <RightBlur className={rightBlurStyle} />
+      <LeftBlur className={leftBlurStyle} />
     </section>
   );
 };
 
+const rightBlurStyle = ctl(`
+  hidden
+  lg:block
+  absolute
+  lg:top-[80px]
+  top-[40px]
+  h-[858px]
+  w-[24vw]
+  right-0
+`);
+
+const leftBlurStyle = ctl(`
+  hidden
+  lg:block
+  absolute
+  animate-slowBounce
+  lg:top-[400px]
+  top-[200px]
+  h-[776px]
+  w-[16vw]
+  left-0
+`);
+
 const wrapperStyle = ctl(`
-  bg-[length:100%_100%]
-  bg-checkout-hero
   overflow-clip
   lg:pb-[200px]
-  bg-no-repeat
+  bg-n-smoky
   w-screen
   relative
   py-20
@@ -75,6 +98,17 @@ const buttonsStyle = ctl(`
   space-y-4
   w-fit
   mt-10
+`);
+
+const asideStyle = ctl(`
+  hidden
+  md:block
+  bg-n-grey8
+  bg-opacity-40
+  rounded-[40px]
+  w-[596px]
+  h-[560px]
+  p-16
 `);
 
 const heroStyle = ctl(`

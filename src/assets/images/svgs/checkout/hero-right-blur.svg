@@ -1,0 +1,18 @@
+<svg width="403" height="1140" viewBox="0 0 403 1140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter0_f_1078_1253" x="0" y="-57" width="1022" height="1197" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1078_1253" />
+        </filter>
+        <linearGradient id="paint0_linear_1078_1253" x1="-84.1189" y1="552.981" x2="666.726" y2="1138.96" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#172368" />
+            <stop offset="1" stop-color="#CD6549" />
+        </linearGradient>
+    </defs>
+    <g filter="url(#filter0_f_1078_1253)">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M520.376 221.703C578.647 200.974 634.415 120.143 688.982 149.252C745.999 179.668 711.186 275.133 733.908 335.613C748.169 373.573 796.565 397.29 797.396 437.831C798.277 480.754 734.338 507.958 738.319 550.705C743.72 608.681 822.904 643.662 821.992 701.881C821.208 751.989 767.59 784.562 734.074 821.83C695.157 865.103 666.05 944.02 607.989 939.84C540.548 934.986 512.466 847.254 462.021 802.246C433.278 776.601 402.1 755.777 373.178 730.334C346.353 706.737 322.284 681.862 296.759 656.865C264.145 624.926 192.299 606.263 200.674 561.397C210.696 507.703 327.704 521.136 332.254 466.705C338.719 389.358 202.883 336.739 225.653 262.535C242.703 206.972 340.302 260.78 397.891 252.801C440.078 246.957 480.251 235.977 520.376 221.703Z"
+            fill="url(#paint0_linear_1078_1253)" />
+    </g>
+</svg>
