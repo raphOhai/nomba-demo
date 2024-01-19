@@ -19,7 +19,7 @@ const IntegratePay = () => {
         <Ntext
           color="primary-600"
           value={description}
-          className="md:!leading-[32px] !-tracking-[0.8px] mt-8"
+          className="md:!leading-[32px] !-tracking-[0.6px] mt-8"
           variant="text4lite">
           {description}
         </Ntext>

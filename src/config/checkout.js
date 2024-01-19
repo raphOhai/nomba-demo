@@ -39,7 +39,7 @@ export const integrateSection = {
   title: "Integrate Payment on your Terms",
   description: (<>
     <span>Simplify your payments on our platform - we accept both</span> {` `}
-    <span className="!text-n-platinum !font-medium">Naira and International(AmericanExpress and Visa)</span> {` `}
+    <span className="!text-n-platinum !font-medium">Naira and International (AmericanExpress and Visa)</span> {` `}
     <span>cards, transfers, and provide various payment options. Transparent pricing, no fees, and timely notifications through web-hook.</span>
   </>),
 };

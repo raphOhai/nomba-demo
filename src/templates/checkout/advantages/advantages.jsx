@@ -34,8 +34,8 @@ const CheckoutAdvantages = () => {
 
   return (
     <section className={wrapperStyle}>
-      <RibbonsBackgroundMobile className="md:hidden absolute w-screen" />
-      <RibbonsBackground className="hidden md:block absolute w-screen" />
+      <RibbonsBackgroundMobile className="lg:hidden absolute w-screen" />
+      <RibbonsBackground className="hidden lg:block absolute w-screen" />
       <section className={contentStyle}>
         {
           advantages.map(advantage => (
@@ -55,7 +55,8 @@ const CheckoutAdvantages = () => {
 
 const wrapperStyle = ctl(`
   bg-n-grey8
-  h-[1656px]
+  md:h-[1656px]
+  h-[1120px]
   w-screen
   relative
 `);
@@ -63,14 +64,15 @@ const wrapperStyle = ctl(`
 const contentStyle = ctl(`
   flex
   flex-col
-  pb-[120px]
+  py-[120px]
   items-center
-  space-y-[200px]
+  md:space-y-[200px]
+  space-y-[120px]
   justify-center
+  md:pt-40
   absolute
   w-screen
   top-0
-  pt-40
   px-8
 `);
 

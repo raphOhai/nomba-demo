@@ -8,6 +8,7 @@ import RightBlur from "svgs/checkout/hero-right-blur.svg";
 import LeftBlur from "svgs/checkout/hero-left-blur.svg";
 
 import checkoutGif from "gifs/check-out.gif";
+import WhiteLogo from "svgs/logo-white.svg";
 
 const { title, description } = heroSection;
 
@@ -26,17 +27,17 @@ const CheckoutPageHero = () => {
             <Ntext
               color="primary-600"
               value={description}
-              className="md:!leading-[32px] !tracking-normal text-center lg:text-start max-w-[628px] mt-8"
+              className="md:!leading-[32px] !tracking-normal text-center lg:text-start max-w-[628px] mt-6 lg:mt-8"
               variant="text4lite"
             />
             <section className={buttonsStyle}>
               <Button
-                className="!font-medium !text-base !text-n-smoky !w-[84vw] lg:!w-[184px] !h-14 z-10"
+                className="!font-medium !text-base !text-n-smoky !w-[76vw] lg:!w-[184px] !h-14 lg:z-10"
                 href={{ url: "https://dashboard.nomba.com/auth/login" }}
                 text="Get Started"
               />
               <Button
-                className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[84vw] lg:!w-[184px] !h-14"
+                className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[184px] !h-14"
                 text="Try live demo"
               />
             </section>
@@ -45,8 +46,17 @@ const CheckoutPageHero = () => {
             <img
               src={checkoutGif}
               alt="Check out with Nomba"
-              className="rounded-xl w-full h-full"
+              className="rounded-2xl"
             />
+            <p className="flex items-center mt-3">
+              <Ntext
+                value="Secured by"
+                color="primary-100"
+                variant="text0"
+              />
+              {' '}
+              <WhiteLogo className="ml-1 w-10" />
+            </p>
           </aside>
         </section>
       </Container>
@@ -57,25 +67,25 @@ const CheckoutPageHero = () => {
 };
 
 const rightBlurStyle = ctl(`
-  hidden
-  lg:block
   absolute
   lg:top-[80px]
-  top-[40px]
-  h-[858px]
-  w-[24vw]
+  lg:w-[24vw]
+  top-[512px]
+  h-[92vh]
+  w-[48vw]
   right-0
 `);
 
 const leftBlurStyle = ctl(`
-  hidden
-  lg:block
   absolute
-  animate-slowBounce
+  opacity-[.56]
+  lg:animate-slowBounce
+  lg:opacity-100
   lg:top-[400px]
-  top-[200px]
+  lg:w-[16vw]
+  top-[80px]
   h-[776px]
-  w-[16vw]
+  w-[56vw]
   left-0
 `);
 
@@ -85,7 +95,9 @@ const wrapperStyle = ctl(`
   bg-n-smoky
   w-screen
   relative
-  py-20
+  lg:py-20
+  pt-10
+  pb-20
 `);
 
 const buttonsStyle = ctl(`
@@ -95,26 +107,30 @@ const buttonsStyle = ctl(`
   lg:flex-row
   lg:space-y-0
   lg:space-x-4
-  space-y-4
-  w-fit
+  space-y-6
   mt-10
+  w-fit
 `);
 
 const asideStyle = ctl(`
-  hidden
-  md:block
-  bg-n-grey8
+  flex
+  flex-col
+  items-center
+  lg:rounded-[40px]
   bg-opacity-40
-  rounded-[40px]
-  w-[596px]
-  h-[560px]
-  p-16
+  lg:scale-90
+  rounded-3xl
+  bg-n-grey8
+  lg:p-16
+  lg:z-0
+  p-10
+  z-10
 `);
 
 const heroStyle = ctl(`
   flex
   flex-col
-  space-y-20
+  space-y-10
   lg:flex-row
   lg:space-y-0
   lg:justify-between
