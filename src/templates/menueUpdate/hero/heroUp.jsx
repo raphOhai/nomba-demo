@@ -84,7 +84,7 @@ const HeroUp = () => {
                 </div>
               </div>
             </div>
-            <div className="rive-container flex center">
+            <div className="rive-container flex center ">
               <RiveComponent />
             </div>
           </div>
