@@ -12,7 +12,7 @@ import { useRive } from "@rive-app/react-canvas";
 // import mockup from "../../../assets/rives/menu.riv";
 const HeroUp = () => {
   const { rive, RiveComponent } = useRive({
-    src: "menux.riv",
+    src: "/ani.riv",
     stateMachines: "Menu Interaction",
     autoplay: true,
     // animations: "",
