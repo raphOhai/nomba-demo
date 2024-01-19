@@ -56,15 +56,6 @@ const CheckoutBenefits = () => {
   );
 };
 
-const notificationsBoardStyle = ctl(`
-  flex
-  rounded-[24px]
-  lg:w-[480px]
-  bg-n-grey8
-  w-full
-  h-80
-`);
-
 const notificationsStyle = ctl(`
   flex
   flex-col
@@ -91,8 +82,9 @@ const benefitsStyle = ctl(`
 
 const wrapperStyle = ctl(`
   bg-n-smoky
-  pt-[200px]
-  pb-[164px]
+  lg:pt-[200px]
+  lg:pb-[164px]
+  py-[120px]
   w-screen
 `);
 

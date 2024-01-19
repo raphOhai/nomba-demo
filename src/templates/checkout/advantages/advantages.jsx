@@ -34,8 +34,8 @@ const CheckoutAdvantages = () => {
 
   return (
     <section className={wrapperStyle}>
-      <RibbonsBackgroundMobile className="lg:hidden absolute w-screen" />
-      <RibbonsBackground className="hidden lg:block absolute w-screen" />
+      <RibbonsBackgroundMobile className="md:hidden absolute w-screen" />
+      <RibbonsBackground className="hidden md:block absolute w-screen" />
       <section className={contentStyle}>
         {
           advantages.map(advantage => (
