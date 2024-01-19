@@ -3980,6 +3980,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rive-app/canvas-lite@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@rive-app/canvas-lite@npm:2.9.2"
+  checksum: 522a80e64237d79313c89c5ad92a57c56070c54ca11f62340c3bc1e5ebdde4b62424b57c9e8304af5ffe78df638fdfa86eb3dc0846656c68b711634e49c7ba66
+  languageName: node
+  linkType: hard
+
+"@rive-app/canvas@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@rive-app/canvas@npm:2.9.2"
+  checksum: 869a69cb9de9eff8ea311c8e399721ffe2b41bcafd6f674bb88bdba12bb2e6c66acc1a626b6530b7c88443d0f38cbe8bcffff3aff794b8cda9cb0ef53f506236
+  languageName: node
+  linkType: hard
+
+"@rive-app/react-canvas@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "@rive-app/react-canvas@npm:4.7.1"
+  dependencies:
+    "@rive-app/canvas": 2.9.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 18cd69a59ba7d63d86d999b0635b0bfca92702bf53d0edf7448d1acceb10007aa325fbe5cb17065fb7484eafb6820249d58e597d6873a673dc0b6ddb9763ba8c
+  languageName: node
+  linkType: hard
+
+"@rive-app/webgl@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@rive-app/webgl@npm:2.9.2"
+  checksum: 7e5808271db5085148ffd6f3c841e922dec93f574aa0a4b94151682ad7599a3a0b9242e8d0f72e50a41a1380f84936c2c3ae896f59268acfe5369443cd473d09
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.3":
   version: 4.1.4
   resolution: "@sideway/address@npm:4.1.4"
@@ -12524,6 +12556,7 @@ __metadata:
     "@emotion/styled": ^11.11.0
     "@hookform/resolvers": ^2.8.8
     "@netlify/classnames-template-literals": ^1.0.3
+    "@rive-app/react-canvas": ^4.7.1
     "@studio-freight/react-lenis": ^0.0.22
     autoprefixer: ^10.4.2
     dotenv: ^8.2.0
@@ -12564,6 +12597,7 @@ __metadata:
     react-id-swiper: ^4.0.0
     react-rotating-text: ^1.4.1
     react-slick: ^0.29.0
+    rive-react: ^4.7.1
     sass: ^1.60.0
     slick-carousel: ^1.8.1
     split-type: ^0.3.3
@@ -14876,6 +14910,19 @@ __metadata:
   bin:
     rimraf: dist/cjs/src/bin.js
   checksum: bafce85391349a2d960847980bf9b5caa2a8887f481af630f1ea27e08288217293cec72d75e9a2ba35495c212789f66a7f3d23366ba6197026ab71c535126857
+  languageName: node
+  linkType: hard
+
+"rive-react@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "rive-react@npm:4.7.1"
+  dependencies:
+    "@rive-app/canvas": 2.9.2
+    "@rive-app/canvas-lite": 2.9.2
+    "@rive-app/webgl": 2.9.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 2738c0d1528e4d7d6b03b7d9c34c42ad9554f35ea4fea93872e63486f0e7a0c13c795a3cc641504752a4ee45529a158d4f7dd3fbd94b35f79f919fe84a44014b
   languageName: node
   linkType: hard
 
