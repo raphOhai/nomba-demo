@@ -19,7 +19,7 @@ const Menu = ({ openMenu, onToggle }) => {
         {openMenu ? <CloseIcon /> : <MenuIcon />}
       </button>
 
-      <nav className={`${navWrapStyle} ${openMenu ? "block" : "hidden"}`}>
+      <nav style={{ backgroundColor: "transparent" }} className={`${navWrapStyle} ${openMenu ? "block" : "hidden"}`}>
         <MenuItems />
 
         <ul className={buttonWrapStyle}>

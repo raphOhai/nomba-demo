@@ -48,8 +48,9 @@ const MenuItems = () => {
                 className={menuHeadingStyle}
                 variant="p16"
                 color={showSubmenu === i ? "primary-100" : "primary-500"}
-                value={item}
-              />
+              >
+                <div>{item}</div>
+              </Ntext>
             </button>
 
             <SubMenu items={navItem} submenuOpen={showSubmenu === i} />
