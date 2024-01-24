@@ -1,0 +1,37 @@
+.Qr-Section {
+  background-color: #1a1a1a;
+  //   height: 100vh;
+  .Qr-section2-box {
+    .Qr-section-text-1 {
+      color: #ffeb99;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px; /* 150% */
+      letter-spacing: 4.8px;
+    }
+    .Qr-section-text-2 {
+      /* Heading/Header-04/Light */
+      font-family: Inter;
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 64px; /* 114.286% */
+      letter-spacing: -2px;
+    }
+    .Qr-section-text-3 {
+    }
+    .Qr-section-btn {
+      max-width: 17rem;
+      padding: 1rem 2rem;
+    }
+    .cool-box {
+      background-color: #242424;
+      width: 80%;
+      height: 560px;
+      max-width: 560px;
+      border-radius: 36px;
+    }
+  }
+}

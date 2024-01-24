@@ -5,8 +5,9 @@ import { NLink } from "components/nlink";
 import { SubMenu } from "./sub-menu";
 import { headerMenu } from "../../../config/menu";
 import Arrow from "assets/images/svgs/chevron-right.svg";
+import { color } from "@chakra-ui/react";
 
-const MenuItems = () => {
+const MenuItems = ({ transparent }) => {
   const [showSubmenu, setShowSubmenu] = useState(null);
   const headerMenuItems = Object.keys(headerMenu);
 
@@ -49,7 +50,7 @@ const MenuItems = () => {
                 variant="p16"
                 color={showSubmenu === i ? "primary-100" : "primary-500"}
               >
-                <div>{item}</div>
+                <div style={{ color: transparent ? "#4D4D4D" : "" }}>{item}</div>
               </Ntext>
             </button>
 

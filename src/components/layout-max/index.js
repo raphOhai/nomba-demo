@@ -21,12 +21,13 @@ const Layout = ({
   defaultStyle = true,
   useStickyNav = true,
   index = 0,
+  transparent = false,
 }) => {
   return (
     <ContextWrapper>
       <div className="main-container bg-black">
         <Seo title={title} description={description} ignoreSiteName={ignoreSiteName} keywords={keywords} />
-        <NavBar />
+        <NavBar transparent={transparent} />
         <main>{children}</main>
         {useStickyNav && <FixedBar terminalIndex={index} />}
         <MainFooter defaultStyle={defaultStyle} />

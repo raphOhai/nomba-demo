@@ -10,6 +10,16 @@
   align-items: center;
 }
 
+.end {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.bas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .flex {
   display: flex;
 }
@@ -101,7 +111,9 @@
 .white-text {
   color: #ffffff;
 }
-
+.black-text {
+  color: #000000;
+}
 .padding-left {
   padding-left: 3rem;
 }
@@ -115,6 +127,11 @@
       color: #ffc936;
     }
   }
+}
+
+.black-btn {
+  background-color: balck;
+  color: white;
 }
 
 .transition {

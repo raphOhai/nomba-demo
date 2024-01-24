@@ -1,0 +1,29 @@
+@import "../partials/variables";
+
+.home-hero-section {
+  background-image: url("/map-base.svg");
+  background-repeat: no-repeat;
+  background-color: $hero-bacground;
+  height: 100vh;
+  max-height: 50rem;
+  overflow: hidden;
+  .girl-pos {
+    width: 120%;
+    height: auto;
+    z-index: 3;
+  }
+  .home-hero-text {
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 80px;
+    letter-spacing: -2px;
+    font-size: 72px;
+  }
+}
+
+.hero-vector {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  z-index: 1;
+}
