@@ -4,7 +4,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { acceptPaymentSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
 
-import PuzzlePieces from "svgs/checkout/puzzle-pieces.svg";
+import plugInShopify from "gifs/plug-in-shopify.gif";
 
 const { title, description } = acceptPaymentSection;
 
@@ -12,8 +12,12 @@ const AcceptPayment = () => {
   return (
     <section className={wrapperStyle}>
       <Container className={sectionStyle}>
-        <PuzzlePieces className="max-w-[80vw]" />
-        <section className="flex flex-col items-center lg:items-start max-w-[680px]">
+        <img
+          src={plugInShopify}
+          alt="Plug in other stores"
+          className="rounded-3xl lg:rounded-[32px] max-h-[480px]"
+        />
+        <section className="flex flex-col items-center lg:items-start max-w-[555px]">
           <Ntext
             value={title}
             color="primary-100"

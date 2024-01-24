@@ -37,7 +37,7 @@ const IntegratePay = () => {
             <img
               src={checkoutCodeSnippet}
               alt="cURL Request Sample"
-              className="rounded-xl"
+              className="rounded-xl max-h-[388px]"
             />
           </aside>
         </Container>
@@ -70,6 +70,7 @@ const wrapperStyle = ctl(`
 const asideStyle = ctl(`
   lg:rounded-[32px]
   bg-opacity-80
+  max-h-[500px]
   lg:px-[75px]
   bg-[#F2F2F2]
   lg:scale-90

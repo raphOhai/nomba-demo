@@ -5,7 +5,8 @@ import { notificationsSection, benefitsSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
 import { BenefitPane } from "./benefit-pane";
 
-import AlertsGraphic from "svgs/checkout/checkout-alerts.svg";
+import paymentNotifications from "gifs/payment-notifications.gif";
+
 import Gradient from "svgs/checkout/gradient.svg";
 
 const { title: benefitsLabel, benefits } = benefitsSection;
@@ -51,7 +52,11 @@ const CheckoutBenefits = () => {
               text="Get started for free"
             />
           </section>
-          <AlertsGraphic className="max-w-[80vw]" />
+          <img
+            src={paymentNotifications}
+            alt="Payment Notifications"
+            className="rounded-3xl lg:rounded-[32px] max-h-[444px]"
+          />
         </section>
       </Container>
     </section>

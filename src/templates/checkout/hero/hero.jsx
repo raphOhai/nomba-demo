@@ -42,22 +42,11 @@ const CheckoutPageHero = () => {
               />
             </section>
           </section>
-          <aside className={asideStyle}>
-            <img
-              src={checkoutGif}
-              alt="Check out with Nomba"
-              className="rounded-2xl"
-            />
-            <p className="flex items-center mt-3">
-              <Ntext
-                value="Secured by"
-                color="primary-100"
-                variant="text0"
-              />
-              {' '}
-              <WhiteLogo className="ml-1 w-10" />
-            </p>
-          </aside>
+          <img
+            src={checkoutGif}
+            alt="Check out with Nomba"
+            className="rounded-3xl lg:rounded-[32px] max-h-[508px]"
+          />
         </section>
       </Container>
       <RightBlur className={rightBlurStyle} />
@@ -110,21 +99,6 @@ const buttonsStyle = ctl(`
   space-y-6
   mt-10
   w-fit
-`);
-
-const asideStyle = ctl(`
-  flex
-  flex-col
-  items-center
-  lg:rounded-[40px]
-  bg-opacity-40
-  lg:scale-90
-  rounded-3xl
-  bg-n-grey8
-  lg:p-16
-  lg:z-0
-  p-10
-  z-10
 `);
 
 const heroStyle = ctl(`
