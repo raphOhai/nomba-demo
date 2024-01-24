@@ -5,6 +5,7 @@ import SeoConf from "config/seo/meta";
 import {
   IntegratePay,
   CheckoutFAQs,
+  CheckoutRate,
   AcceptPayment,
   CheckoutApiDocs,
   CheckoutBenefits,
@@ -30,6 +31,7 @@ const CheckoutPage = () => {
       <CheckoutBenefits />
       <AcceptPayment />
       <CheckoutSponsors />
+      <CheckoutRate />
       <CheckoutApiDocs />
       <IntegratePay />
       <CheckoutFAQs />

@@ -1,4 +1,5 @@
 export * from "./accept-payment";
+export * from "./checkout-rate";
 export * from "./advantages";
 export * from "./integrate";
 export * from "./api-docs";

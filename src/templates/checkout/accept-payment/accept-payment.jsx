@@ -28,6 +28,7 @@ const AcceptPayment = () => {
           />
           <Button
             className="!font-medium !text-base !min-w-[198px] mt-10 !h-14"
+            href={{ url: "https://dashboard.nomba.com/auth/login" }}
             text="Coming Soon"
           />
         </section>

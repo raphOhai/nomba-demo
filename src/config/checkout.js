@@ -16,6 +16,11 @@ export const acceptPaymentSection = {
   title: "Accept payment on Shopify and WooCommerce",
 };
 
+export const checkoutRateSection = {
+  description: "We offer you the best deals on your checkout transactions than any other checkout services in Nigeria",
+  title: "Our Checkout rate",
+};
+
 export const integrateSection = {
   title: "Integrate Payment on your Terms",
   description: (<>

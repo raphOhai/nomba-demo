@@ -8,9 +8,9 @@ const Container = ({ children, className }) => {
 };
 
 const containerStyle = ctl(`
-md:max-w-[1335px]
-px-[25px]
-md:mx-auto
+  md:max-w-[1335px]
+  md:mx-auto
+  px-[25px]
 `);
 
 Container.propTypes = {
