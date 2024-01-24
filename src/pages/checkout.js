@@ -5,6 +5,7 @@ import SeoConf from "config/seo/meta";
 import {
   IntegratePay,
   CheckoutFAQs,
+  AcceptPayment,
   CheckoutApiDocs,
   CheckoutBenefits,
   CheckoutSponsors,
@@ -13,8 +14,6 @@ import {
 } from "templates";
 
 import { split } from "animations/text";
-
-import Gradient from "svgs/checkout/gradient.svg";
 
 const CheckoutPage = () => {
   useEffect(() => {
@@ -28,21 +27,13 @@ const CheckoutPage = () => {
       useStickyNav={false}>
       <CheckoutPageHero />
       <CheckoutAdvantages />
-      <MiddleSection />
-      <CheckoutFAQs />
-    </Layout>
-  );
-};
-
-const MiddleSection = () => {
-  return (
-    <section className="relative w-screen">
-      <Gradient className="absolute right-0 top-[658px] w-[40vw] h-[1700px] z-10" />
       <CheckoutBenefits />
+      <AcceptPayment />
       <CheckoutSponsors />
       <CheckoutApiDocs />
       <IntegratePay />
-    </section>
+      <CheckoutFAQs />
+    </Layout>
   );
 };
 

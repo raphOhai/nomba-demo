@@ -7,8 +7,22 @@ import TransparencyIcon from "svgs/checkout/transparency.svg";
 import AtmCardIcon from "svgs/checkout/atm-card.svg";
 
 export const notificationsSection = {
-  title: "Instant Notifications: Real-Time Webhooks",
   description: "Stay informed in real-time with our webhook feature for instant transaction notifications.",
+  title: "Instant Notifications: Real-Time Webhooks",
+};
+
+export const acceptPaymentSection = {
+  description: "Create your online store and get paid easily via our Checkout plugin on Shopify store and WooCommerce ",
+  title: "Accept payment on Shopify and WooCommerce",
+};
+
+export const integrateSection = {
+  title: "Integrate Payment on your Terms",
+  description: (<>
+    <span>Simplify your payments on our platform - we accept both</span> {` `}
+    <span className="!text-n-platinum !font-medium">Naira and International (AmericanExpress and Visa)</span> {` `}
+    <span>cards, transfers, and provide various payment options. Transparent pricing, no fees, and timely notifications through web-hook.</span>
+  </>),
 };
 
 export const benefitsSection = {
@@ -35,22 +49,9 @@ export const benefitsSection = {
   ],
 };
 
-export const integrateSection = {
-  title: "Integrate Payment on your Terms",
-  description: (<>
-    <span>Simplify your payments on our platform - we accept both</span> {` `}
-    <span className="!text-n-platinum !font-medium">Naira and International (AmericanExpress and Visa)</span> {` `}
-    <span>cards, transfers, and provide various payment options. Transparent pricing, no fees, and timely notifications through web-hook.</span>
-  </>),
-};
-
 export const apiDocsSection = {
   description: "A simple, elegant interface so you can start integrating in minutes. Leverage our APIs to transform your businesses and products.",
-  title: (
-    <>
-      Get to Integrate Fast with our <Br on="desktop" /> Checkout API
-    </>
-  ),
+  title: <> Get to Integrate Fast with our <Br on="desktop" /> Checkout API </>,
   docs: [
     {
       label: "Node.js",

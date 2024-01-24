@@ -22,9 +22,8 @@ const CheckoutSponsors = () => {
 };
 
 const wrapperStyle = ctl(`
-  bg-n-grey8
+  bg-n-smoky
   py-[100px]
-  lg:-z-10
   w-screen
   px-16
   flex

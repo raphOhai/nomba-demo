@@ -6,6 +6,7 @@ import { Container, Button, Ntext } from "components";
 import { BenefitPane } from "./benefit-pane";
 
 import AlertsGraphic from "svgs/checkout/checkout-alerts.svg";
+import Gradient from "svgs/checkout/gradient.svg";
 
 const { title: benefitsLabel, benefits } = benefitsSection;
 
@@ -17,6 +18,7 @@ const {
 const CheckoutBenefits = () => {
   return (
     <section className={wrapperStyle}>
+      <Gradient className="absolute right-0 top-[658px] w-[40vw] h-[1700px]" />
       <Container className="flex flex-col">
         <section className="flex flex-col space-y-20 w-full">
           <Ntext
@@ -82,10 +84,12 @@ const benefitsStyle = ctl(`
 
 const wrapperStyle = ctl(`
   bg-n-smoky
+  overflow-clip
   lg:pt-[200px]
   lg:pb-[164px]
   py-[120px]
   w-screen
+  relative
 `);
 
 export { CheckoutBenefits };
