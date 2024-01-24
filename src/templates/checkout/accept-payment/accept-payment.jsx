@@ -40,7 +40,7 @@ const AcceptPayment = () => {
 const sectionStyle = ctl(`
   flex
   flex-col
-  space-y-20
+  space-y-10
   lg:flex-row
   lg:space-y-0
   lg:justify-between
@@ -50,9 +50,9 @@ const sectionStyle = ctl(`
 const wrapperStyle = ctl(`
   lg:py-[160px]
   bg-n-grey8
-  py-[120px]
   w-screen
   relative
+  py-20
 `);
 
 export { AcceptPayment };

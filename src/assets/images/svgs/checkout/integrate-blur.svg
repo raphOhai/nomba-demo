@@ -1,0 +1,18 @@
+<svg width="1335" height="1352" viewBox="0 0 1335 1352" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter0_f_11596_4956" x="0" y="0" width="1335" height="1599" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_11596_4956" />
+        </filter>
+        <linearGradient id="paint0_linear_11596_4956" x1="200" y1="1279.1" x2="1288.38" y2="954.207" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#DC7866" />
+            <stop offset="1" stop-color="#F4D19A" />
+        </linearGradient>
+    </defs>
+    <g opacity="0.16" filter="url(#filter0_f_11596_4956)">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M681.595 318.4C769.188 287.216 853.019 165.614 935.045 209.405C1020.75 255.163 968.423 398.779 1002.58 489.765C1024.02 546.872 1096.77 582.552 1098.02 643.541C1099.34 708.114 1003.22 749.039 1009.21 813.349C1017.33 900.567 1136.36 953.191 1134.99 1040.78C1133.81 1116.16 1053.21 1165.16 1002.83 1221.23C944.328 1286.33 900.573 1405.05 813.295 1398.76C711.917 1391.46 669.703 1259.47 593.874 1191.76C550.668 1153.18 503.799 1121.86 460.323 1083.58C420 1048.08 383.819 1010.66 345.45 973.054C296.424 925.005 188.424 896.928 201.013 829.433C216.079 748.656 391.967 768.864 398.806 686.979C408.524 570.618 204.334 491.459 238.562 379.827C264.192 296.238 410.904 377.187 497.473 365.184C560.889 356.392 621.278 339.873 681.595 318.4Z"
+            fill="url(#paint0_linear_11596_4956)" />
+    </g>
+</svg>

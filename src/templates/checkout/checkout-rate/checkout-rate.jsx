@@ -9,8 +9,8 @@ const { title, description } = checkoutRateSection;
 const CheckoutRate = () => {
   return (
     <section className={wrapperStyle}>
-      <Container className="flex flex-col">
-        <section className="max-w-[560px] text-center mx-auto">
+      <Container className="flex flex-col !px-0">
+        <section className="max-w-[560px] text-center mx-auto px-6">
           <Ntext
             value={title}
             color="primary-100"

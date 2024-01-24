@@ -13,7 +13,7 @@ const CheckoutApiDocs = () => {
   const toast = useToast();
 
   return (
-    <section className="bg-n-smoky overflow-hidden pt-[200px] pb-[156px]">
+    <section className="bg-n-smoky overflow-hidden pt-[100px] md:pt-[200px] pb-[100px] md:pb-[156px]">
       <Container>
         <div className="md:max-w-[819px] md:mx-auto section_header1 text-center">
           <Ntext

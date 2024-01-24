@@ -61,13 +61,14 @@ const CheckoutBenefits = () => {
 const notificationsStyle = ctl(`
   flex
   flex-col
-  space-y-20
+  space-y-10
   lg:flex-row
   lg:space-y-0
+  lg:mt-[200px]
   lg:items-start
   lg:justify-between
   items-center
-  mt-[200px]
+  mt-[100px]
 `);
 
 const benefitsStyle = ctl(`
@@ -87,7 +88,7 @@ const wrapperStyle = ctl(`
   overflow-clip
   lg:pt-[200px]
   lg:pb-[164px]
-  py-[120px]
+  py-[100px]
   w-screen
   relative
 `);
