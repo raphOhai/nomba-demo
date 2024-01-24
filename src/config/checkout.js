@@ -8,7 +8,7 @@ import AtmCardIcon from "svgs/checkout/atm-card.svg";
 
 export const notificationsSection = {
   description: "Stay informed in real-time with our webhook feature for instant transaction notifications.",
-  title: "Instant Notifications: Real-Time Webhooks",
+  title: "Instant notifications: real-time webhooks",
 };
 
 export const acceptPaymentSection = {

@@ -32,12 +32,12 @@ const CheckoutBenefits = () => {
           </section>
         </section>
         <section className={notificationsStyle}>
-          <section className="flex flex-col items-center lg:items-start max-w-[600px]">
+          <section className="flex flex-col items-center lg:items-start max-w-[450px]">
             <Ntext
               color="primary-100"
               value={notificationsLabel}
-              className="!font-normal md:!leading-[72px] !-tracking-[2px] text-center lg:text-start"
-              variant="h1"
+              className="!font-medium md:!leading-[56px] !-tracking-[2px] text-center lg:text-start"
+              variant="h2"
             />
             <Ntext
               color="primary-600"
@@ -46,9 +46,9 @@ const CheckoutBenefits = () => {
               variant="text4lite"
             />
             <Button
-              className="!font-medium !text-base !min-w-[184px] mt-10 !h-14"
+              className="!font-medium !text-base !min-w-[272px] mt-10 !h-14"
               href={{ url: "https://dashboard.nomba.com/auth/login" }}
-              text="Get Started"
+              text="Get started for free"
             />
           </section>
           <AlertsGraphic className="max-w-[80vw]" />
@@ -65,7 +65,6 @@ const notificationsStyle = ctl(`
   lg:flex-row
   lg:space-y-0
   lg:mt-[200px]
-  lg:items-start
   lg:justify-between
   items-center
   mt-[100px]

@@ -17,7 +17,7 @@ const AcceptPayment = () => {
           <Ntext
             value={title}
             color="primary-100"
-            className="!font-normal md:!text-[56px] md:!leading-[64px] !-tracking-[2px] text-center lg:text-start w-full"
+            className="!font-medium md:!leading-[56px] !-tracking-[2px] text-center lg:text-start w-full"
             variant="h2"
           />
           <Ntext
