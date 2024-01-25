@@ -31,7 +31,7 @@ export const benefitsSection = {
   benefits: [
     {
       icon: <AtmCardIcon className="menuIconOne" />,
-      description: "Conveniently process payments with ease, accepting Mastercard, Visa, Verve in Nigeria; as well as AmEx.",
+      description: "Conveniently process payments with ease, accepting Mastercard, Visa, Verve and AMEX cards.",
       title: "Supports Naira and Int'l cards.",
       tint: "bg-[#FFCC00]",
     },
