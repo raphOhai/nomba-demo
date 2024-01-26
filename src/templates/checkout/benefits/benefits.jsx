@@ -1,11 +1,10 @@
 import React from "react";
+import Rive, { Layout, Fit } from "@rive-app/react-canvas";
 import ctl from "@netlify/classnames-template-literals";
 
 import { notificationsSection, benefitsSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
 import { BenefitPane } from "./benefit-pane";
-
-import paymentNotifications from "gifs/payment-notifications.gif";
 
 import Gradient from "svgs/checkout/gradient.svg";
 
@@ -52,16 +51,28 @@ const CheckoutBenefits = () => {
               text="Get started for free"
             />
           </section>
-          <img
-            src={paymentNotifications}
-            alt="Payment Notifications"
-            className="rounded-3xl lg:rounded-[32px] max-h-[444px]"
+          <Rive
+            src="payment-notifications.riv"
+            layout={new Layout({ fit: Fit.Cover })}
+            className={animationWrapperStyle}
+            animations="Timeline 1"
           />
         </section>
       </Container>
     </section>
   );
 };
+
+const animationWrapperStyle = ctl(`
+  bg-n-grey8
+  bg-opacity-[0.16]
+  lg:rounded-[32px]
+  lg:w-[512px]
+  lg:h-[508px]
+  rounded-3xl
+  h-[348px]
+  w-full
+`);
 
 const notificationsStyle = ctl(`
   flex

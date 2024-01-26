@@ -1,4 +1,5 @@
 import React from "react";
+import Rive, { Layout, Fit } from "@rive-app/react-canvas";
 import ctl from "@netlify/classnames-template-literals";
 
 import { Container, Button, Ntext } from "components";
@@ -6,8 +7,6 @@ import { heroSection } from "config/checkout";
 
 import RightBlur from "svgs/checkout/hero-right-blur.svg";
 import LeftBlur from "svgs/checkout/hero-left-blur.svg";
-
-import checkoutGif from "gifs/check-out.gif";
 
 const { title, description } = heroSection;
 
@@ -27,31 +26,32 @@ const CheckoutPageHero = () => {
           <Ntext
             value={title}
             color="primary-100"
-            className="md:!text-[64px] md:!leading-[72px] !-tracking-[2px] text-center lg:text-start max-w-[660px] lg:min-h-[168px] mt-2.5"
+            className="!font-medium md:!text-[64px] md:!leading-[72px] !-tracking-[2px] text-center lg:text-start max-w-[660px] mt-2.5"
             variant="h1"
           />
           <Ntext
             color="primary-600"
             value={description}
-            className="md:!leading-[32px] !-tracking-[0.8px] text-center lg:text-start max-w-[628px] mt-6 lg:mt-8"
+            className="md:!leading-[32px] !-tracking-[0.8px] text-center lg:text-start max-w-[628px] mt-6"
             variant="text4lite"
           />
           <section className={buttonsStyle}>
             <Button
-              className="!font-medium !text-base !text-n-smoky !w-[76vw] lg:!w-[184px] !h-14 lg:z-10"
-              href={{ url: "https://dashboard.nomba.com/auth/login" }}
-              text="Get Started"
+              className="!font-medium !text-base !text-n-smoky !w-[76vw] lg:!w-[246px] !h-14 lg:z-10"
+              href={{ url: "https://dashboard.nomba.com/auth/sign-up-new" }}
+              text="Get Started for free"
             />
             <Button
-              className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[184px] !h-14"
-              text="Try live demo"
+              className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[204px] !h-14"
+              text="Request demo"
             />
           </section>
         </section>
-        <img
-          src={checkoutGif}
-          alt="Check out with Nomba"
-          className="rounded-3xl lg:rounded-[32px] max-h-[508px]"
+        <Rive
+          src="check-out-with-nomba.riv"
+          layout={new Layout({ fit: Fit.Cover })}
+          className={animationWrapperStyle}
+          animations="Timeline 1"
         />
       </Container>
       <RightBlur className={rightBlurStyle} />
@@ -59,6 +59,17 @@ const CheckoutPageHero = () => {
     </section>
   );
 };
+
+const animationWrapperStyle = ctl(`
+  bg-n-grey8
+  bg-opacity-40
+  lg:rounded-[32px]
+  lg:w-[512px]
+  lg:h-[508px]
+  rounded-3xl
+  h-[348px]
+  w-full
+`);
 
 const titleBadgeStyle = ctl(`
   rounded-[100px]

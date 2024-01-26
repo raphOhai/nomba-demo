@@ -1,10 +1,9 @@
 import React from "react";
+import Rive, { Layout, Fit } from "@rive-app/react-canvas";
 import ctl from "@netlify/classnames-template-literals";
 
 import { acceptPaymentSection } from "config/checkout";
 import { Container, Button, Ntext } from "components";
-
-import plugInShopify from "gifs/plug-in-shopify.gif";
 
 const { title, description } = acceptPaymentSection;
 
@@ -12,10 +11,11 @@ const AcceptPayment = () => {
   return (
     <section className={wrapperStyle}>
       <Container className={sectionStyle}>
-        <img
-          src={plugInShopify}
-          alt="Plug in other stores"
-          className="rounded-3xl lg:rounded-[32px] max-h-[480px]"
+        <Rive
+          src="plug-in-shopify.riv"
+          layout={new Layout({ fit: Fit.Cover })}
+          className={animationWrapperStyle}
+          animations="Timeline 1"
         />
         <section className="flex flex-col items-center lg:items-start max-w-[555px]">
           <Ntext
@@ -40,6 +40,17 @@ const AcceptPayment = () => {
     </section>
   );
 };
+
+const animationWrapperStyle = ctl(`
+  bg-n-charcoal
+  bg-opacity-[0.08]
+  lg:rounded-[32px]
+  lg:w-[512px]
+  lg:h-[508px]
+  rounded-3xl
+  h-[348px]
+  w-full
+`);
 
 const sectionStyle = ctl(`
   flex
