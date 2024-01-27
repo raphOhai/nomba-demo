@@ -14,7 +14,7 @@ const IntegratePay = () => {
     <section className={wrapperStyle}>
       <section className="bg-white py-[90px]">
         <Container className={sectionStyle}>
-          <section className="max-w-[562px]">
+          <section className="max-w-[562px] z-10">
             <Ntext
               value={title}
               color="n-smoky"
@@ -81,8 +81,8 @@ const asideStyle = ctl(`
 
 const blurStyle = ctl(`
   absolute
-  lg:-bottom-[192px]
   -bottom-[512px]
+  lg:-bottom-[192px]
   w-[84vw]
   right-0
   left-0

@@ -12,7 +12,7 @@ const AcceptPayment = () => {
     <section className={wrapperStyle}>
       <Container className={sectionStyle}>
         <Rive
-          src="plug-in-shopify.riv"
+          src="/plug-in-shopify.riv"
           layout={new Layout({ fit: Fit.Cover })}
           className={animationWrapperStyle}
           animations="Timeline 1"

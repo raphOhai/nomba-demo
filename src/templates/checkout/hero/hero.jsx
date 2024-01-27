@@ -48,7 +48,7 @@ const CheckoutPageHero = () => {
           </section>
         </section>
         <Rive
-          src="check-out-with-nomba.riv"
+          src="/check-out-with-nomba.riv"
           layout={new Layout({ fit: Fit.Cover })}
           className={animationWrapperStyle}
           animations="Timeline 1"
