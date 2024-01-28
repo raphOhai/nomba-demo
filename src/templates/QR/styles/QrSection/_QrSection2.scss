@@ -1,37 +1,226 @@
 .Qr-Section {
   background-color: #1a1a1a;
+  margin-top: 6rem;
   //   height: 100vh;
   .Qr-section2-box {
-    .Qr-section-text-1 {
-      color: #ffeb99;
-      font-family: Inter;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 30px; /* 150% */
-      letter-spacing: 4.8px;
-    }
-    .Qr-section-text-2 {
-      /* Heading/Header-04/Light */
-      font-family: Inter;
-      font-size: 56px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 64px; /* 114.286% */
-      letter-spacing: -2px;
-    }
     .Qr-section-text-3 {
     }
     .Qr-section-btn {
       max-width: 17rem;
       padding: 1rem 2rem;
     }
-    .cool-box {
-      background-color: #242424;
-      width: 80%;
-      height: 560px;
-      max-width: 560px;
-      border-radius: 36px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Qr-section-text-1 {
+    color: #ffeb99;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: 4.8px;
+  }
+  .Qr-section-text-2 {
+    /* Heading/Header-04/Light */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+    letter-spacing: -2px;
+  }
+  .cool-box {
+    background-color: #242424;
+    width: 100%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+
+  .cool-box-white {
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Qr-section-text-1 {
+    color: #ffeb99;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: 4.8px;
+  }
+  .Qr-section-text-2 {
+    /* Heading/Header-04/Light */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+    letter-spacing: -2px;
+  }
+  .cool-box {
+    background-color: #242424;
+    width: 100%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+
+  .cool-box-white {
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Qr-section-text-1 {
+    color: #ffeb99;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: 4.8px;
+  }
+  .Qr-section-text-2 {
+    /* Heading/Header-04/Light */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+    letter-spacing: -2px;
+  }
+  .cool-box {
+    background-color: #242424;
+    width: 80%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+
+  .cool-box-white {
+    background-color: #e6e6e6;
+    width: 80%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Qr-section-text-1 {
+    color: #ffeb99;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: 4.8px;
+  }
+  .Qr-section-text-2 {
+    /* Heading/Header-04/Light */
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px; /* 114.286% */
+    letter-spacing: -2px;
+  }
+
+  .cool-box {
+    background-color: #242424;
+    width: 80%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+
+  .cool-box-white {
+    background-color: #e6e6e6;
+    width: 80%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Img-show-container {
+    width: 100vw;
+    overflow-x: scroll;
+    .Img-scroll-content {
+      display: flex;
+      gap: 1rem;
+
+      .Qr-section-gallery {
+        background-image: url("/img1.jpeg");
+        // background-position-x: 2rem;
+        background-repeat: no-repeat;
+        border-radius: 34px;
+        border: 2px solid #666;
+        padding: 3rem;
+        height: 480px;
+        min-width: 300px;
+        transition: all 0.5s;
+        &:hover {
+          min-width: 948px !important;
+        }
+      }
     }
+  }
+
+  .expand {
+    min-width: 948px !important;
+    // padding: 3rem;
+  }
+
+  .Qr-section-text-1 {
+    color: #ffeb99;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: 4.8px;
+  }
+  .Qr-section-text-2 {
+    /* Heading/Header-04/Light */
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px; /* 114.286% */
+    letter-spacing: -2px;
+  }
+
+  .cool-box {
+    background-color: #242424;
+    width: 80%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
+  }
+
+  .cool-box-white {
+    background-color: #e6e6e6;
+    width: 80%;
+    height: 560px;
+    max-width: 560px;
+    border-radius: 36px;
   }
 }

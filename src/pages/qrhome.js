@@ -9,7 +9,7 @@ const QR = () => {
     <>
       <Layout title={SeoConf.menu.title} description={SeoConf.menu.description} useStickyNav={false}>
         <QRHeroSection />
-        <QrSection2 />
+        {/* <QrSection2 /> */}
       </Layout>
     </>
   );

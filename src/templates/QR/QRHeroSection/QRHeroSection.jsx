@@ -12,17 +12,19 @@ const QRHeroSection = () => {
       <Container>
         <div className="grid1 padding-buttom">
           <div>
-            <div className="stack gap2 padding-top">
+            <div className="stack gap1 padding-top">
               <Ntext
                 variant="h1"
                 color="primary-100"
-                className="text-center md:text-left md:leading-[20px]"
+                className="text-center md:text-left "
                 // data-animation="ltr"
               >
-                <div className="Qr-hero-main-text">Pay with QR – Quicker & Easier.</div>
+                <div className="Qr-hero-main-text">
+                  Pay with QR – <Br on="mobile" /> Quicker & Easier.
+                </div>
               </Ntext>
 
-              <Ntext variant="text4lite" color="primary-100" className="text-center md:text-left" data-animation="ltr">
+              <Ntext variant="text4lite" color="primary-100" className="text-center md:text-left">
                 <div className="grey-text">
                   Nomba makes money matters and running businesses easier. With <Br on="desktop" /> our POS terminals to
                   receive payment and business tools to manage better.
@@ -48,8 +50,8 @@ const QRHeroSection = () => {
           </div>
           <div></div>
         </div>
-        <ScrollContent />
       </Container>
+      <ScrollContent />
     </div>
   );
 };
