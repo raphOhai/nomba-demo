@@ -10,6 +10,8 @@ import LeftBlur from "svgs/checkout/hero-left-blur.svg";
 
 import { AppContext } from "states/context";
 
+import "./reusables.scss";
+
 const { title, description } = heroSection;
 
 const CheckoutPageHero = () => {
@@ -30,7 +32,7 @@ const CheckoutPageHero = () => {
           <Ntext
             value={title}
             color="primary-100"
-            className="!font-medium md:!text-[64px] md:!leading-[72px] !-tracking-[2px] text-center lg:text-start max-w-[660px] mt-2.5"
+            className="!font-medium md:!text-[64px] md:!leading-[72px] !-tracking-[2px] text-center lg:text-start min-h-[150px] mt-2.5"
             variant="h1"
           />
           <Ntext

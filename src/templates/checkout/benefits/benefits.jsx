@@ -24,11 +24,11 @@ const CheckoutBenefits = () => {
           <Ntext
             color="primary-100"
             value={benefitsLabel}
-            className="!font-medium md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[650px] text-center lg:text-start"
+            className="!font-medium md:!text-[56px] md:!leading-[64px] !-tracking-[2px] min-h-[132px] text-center lg:text-start"
             variant="h1"
           />
           <section className={benefitsStyle}>
-            {benefits.map(benefit => <BenefitPane key={benefit.title} {...benefit} />)}
+            {benefits.map(benefit => (<BenefitPane key={benefit.title} {...benefit} />))}
           </section>
         </section>
         <section className={notificationsStyle}>

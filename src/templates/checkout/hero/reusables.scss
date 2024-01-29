@@ -1,0 +1,273 @@
+@import "./variables";
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.bas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 0.5rem;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+
+.gap2 {
+  gap: 2rem;
+}
+
+.gap3 {
+  gap: 3rem;
+}
+
+.gap4 {
+  gap: 4rem;
+}
+
+.gap5 {
+  gap: 5rem;
+}
+
+.gap6 {
+  gap: 6rem;
+}
+
+.gap7 {
+  gap: 7rem;
+}
+
+.gap8 {
+  gap: 8rem;
+}
+
+.gap9 {
+  gap: 9rem;
+}
+
+.responsive-img {
+  height: auto;
+  width: 100%;
+}
+
+// .highLighted-text {
+//   color: #ffeb99;
+// }
+
+.grey-text {
+  color: #999;
+}
+
+.grey-text2 {
+  color: #717171;
+}
+
+.grey-box {
+  background-color: #333;
+  position: relative;
+}
+
+.maxWidth {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.maxWidth2 {
+  max-width: 120rem;
+  // margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.drop {
+  z-index: 1;
+}
+
+.elevate2 {
+  z-index: 5;
+}
+
+.white-text {
+  color: #ffffff;
+}
+.black-text {
+  color: #000000;
+}
+.padding-left {
+  padding-left: 3rem;
+}
+
+.text-Btn {
+  padding-left: 0px;
+  margin-left: -40px;
+
+  span {
+    &:hover {
+      color: #ffc936;
+    }
+  }
+}
+
+.black-btn {
+  background-color: balck;
+  color: white;
+}
+
+.transition {
+  transition: all 1s;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .padding-buttom {
+    padding-bottom: 9rem;
+  }
+
+  .padding-top {
+    padding-top: 5.5rem;
+  }
+
+  .default-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .padding-top2 {
+    padding-top: 3rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .padding-buttom {
+    padding-bottom: 1rem;
+  }
+
+  .padding-top {
+    padding-top: 5.5rem;
+  }
+
+  .default-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .padding-top2 {
+    padding-top: 3rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .padding-buttom {
+    padding-bottom: 8rem;
+  }
+
+  .padding-top {
+    padding-top: 5.5rem;
+  }
+
+  .default-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .padding-top2 {
+    padding-top: 3rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .padding-buttom {
+    padding-bottom: 1rem;
+  }
+
+  .padding-top {
+    padding-top: 5.5rem;
+  }
+
+  .default-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .padding-buttom {
+    padding-bottom: 10rem;
+  }
+
+  .padding-top {
+    padding-top: 5.5rem;
+  }
+
+  .default-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.contact-btn {
+  border: 1px solid #1a1a1a;
+  color: white;
+  border-radius: 13px;
+  padding: 1.2rem 3rem;
+  background-color: transparent;
+  &:hover {
+    background-color: #1a1a1a;
+    color: white;
+  }
+}
+
+.contact-btn2 {
+  border: 1px solid rgba(51, 51, 51, 0.64);
+  color: white;
+  border-radius: 8px;
+  padding: 1.2rem 3rem;
+  background-color: transparent;
+  &:hover {
+    background-color: #1a1a1a;
+    color: white;
+  }
+}
+.text-Btn {
+  border: none;
+  color: $nomba-color;
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
+}
+.nav-height {
+  z-index: 10;
+}
+
+.elevate {
+  z-index: 20;
+}

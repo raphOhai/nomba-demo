@@ -27,7 +27,7 @@ export const integrateSection = {
 };
 
 export const benefitsSection = {
-  title: "Smooth, secure, transparent payments",
+  title: <>Smooth, secure, <Br on="desktop" /> transparent payments</>,
   benefits: [
     {
       icon: <AtmCardIcon className="menuIconOne" />,
@@ -130,7 +130,7 @@ echo $response;
 };
 
 export const heroSection = {
-  title: "Seamless Online Payment, Simplified",
+  title: <>Seamless Online <Br on="desktop" /> Payment, Simplified</>,
   description: "Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly.",
 };
 

@@ -118,10 +118,6 @@ $bg: rgba(77, 77, 77, 0.16);
   width: 48%;
 }
 
-.select-box {
-  // width: 200%;
-}
-
 .select-grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -328,10 +324,6 @@ input.disable-focus {
   // height: 29px;
   width: 6px;
   /* Width of the scrollbar */
-}
-
-.drop-down-items::-webkit-scrollbar-track {
-  // background-color: $drop-down-bg; /* Track color */
 }
 
 .drop-down-items::-webkit-scrollbar-thumb {

@@ -55,7 +55,7 @@ const CheckoutRate = () => {
                   />
                   <Ntext
                     color="primary-100"
-                    value="capped at NGN 2,000"
+                    value="capped at NGN 1,800"
                     className="!font-normal !-tracking-[1px]"
                     variant="text6"
                   />
