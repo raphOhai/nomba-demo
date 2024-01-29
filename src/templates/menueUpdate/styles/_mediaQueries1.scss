@@ -1,15 +1,5 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+@import "./partials/variables";
 
-@font-face {
-  font-family: Garant-Bold;
-  src: url(/src/assets/fonts/Garant-Regular.otf);
-  font-weight: bold;
-}
-
-.btn1 .btn2 {
-  // line-height: 24px;
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .grid1 {

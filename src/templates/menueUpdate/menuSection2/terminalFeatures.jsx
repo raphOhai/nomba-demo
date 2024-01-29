@@ -1,12 +1,10 @@
-import { Br, Button, Container, Ntext } from "components";
+import { Button, Ntext } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 
 import React from "react";
-import Circle from "../hero/glowSvgs/circle";
 import Stick from "../hero/glowSvgs/stick";
 import LongStick from "../hero/glowSvgs/longStick";
-import BallStick from "../hero/glowSvgs/ballStick";
-import BallStick2 from "../hero/glowSvgs/ballStick2";
+
 import InterSectionChecker from "../hero/hooks/observer";
 import { useContext } from "react";
 import { AppContext } from "states/context";
@@ -46,7 +44,7 @@ const TerminalFeatures = () => {
                 src="../../../assets/images/svgs/terminal/pos.png"
                 className="responsive-im im u pos-img-1 SlideUp"
                 width={500}
-              // height={200}
+                // height={200}
               />
             </div>
             <div className="text-box ">
@@ -76,10 +74,10 @@ const TerminalFeatures = () => {
           <div className="tf-grid2">
             <div className="text-box grid-item ">
               <div className="stack gap ">
-                <Ntext variant="text6heavy" color="primary-100" className="text-left" data-animation="ltr">
+                <Ntext variant="text6heavy" color="primary-100" className="text-left">
                   <div className="">Order Display System</div>
                 </Ntext>
-                <Ntext variant="text4lite" color="primary-100" className="text-left" data-animation="ltr">
+                <Ntext variant="text4lite" color="primary-100" className="text-left">
                   <div className="grey-text">
                     Made for kitchen or bar teams, to help easily handle orders from different areas, ensuring a smooth
                     workflow and efficient order management for everyone in the various stations in your business.
@@ -88,7 +86,6 @@ const TerminalFeatures = () => {
                 <Button
                   className="!font-large !text-[16px] !min-w-[100px] !w-[200px] !text-left text-Btn"
                   text="Get Started"
-
                   onClick={onOpen}
                   WithNomArrow={true}
                 />
@@ -99,7 +96,7 @@ const TerminalFeatures = () => {
                 alt="Iphone with hand"
                 src="../../../assets/images/svgs/terminal/pos3.png"
                 className="responsive-im im SlideUp"
-              // width={230}
+                // width={230}
               />
             </div>
           </div>
@@ -113,15 +110,15 @@ const TerminalFeatures = () => {
                 src="../../../assets/images/svgs/terminal/pos33.png"
                 className="responsive-im im pos-img-2 SlideUp"
                 width={240}
-              // height={240}
+                // height={240}
               />
             </div>
             <div className="text-box">
               <div className="stack gap">
-                <Ntext variant="text6heavy" color="primary-100" className="text-left" data-animation="ltr">
+                <Ntext variant="text6heavy" color="primary-100" className="text-left">
                   <div className="">Flexible Options for Customers</div>
                 </Ntext>
-                <Ntext variant="text4lite" color="primary-100" className="text-left" data-animation="ltr">
+                <Ntext variant="text4lite" color="primary-100" className="text-left">
                   <div className="grey-text">
                     When customers order, they can choose to dine in at the restaurant, pick up their order inside, or
                     have it delivered to their location – enjoying flexible dining choices and delightful experience!

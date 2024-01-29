@@ -1,4 +1,4 @@
-import { Br, Container, Ntext } from "components";
+import { Br, Ntext } from "components";
 import React from "react";
 import TerminalFeatures from "./terminalFeatures";
 
@@ -12,12 +12,12 @@ const Section1 = () => {
               ALL-IN-ONE TOOL
             </div>
           </Ntext>
-          <Ntext variant="h1" color="primary-100" className="text-center" data-animation="ltr">
+          <Ntext variant="h1" color="primary-100" className="text-center">
             <div className="hero- pos-moc">
               Built for you – and <Br on="desktop" /> your customers
             </div>
           </Ntext>
-          <Ntext variant="text4lite" color="primary-100" className="text-center" data-animation="ltr">
+          <Ntext variant="text4lite" color="primary-100" className="text-center">
             <div className="grey-text  pos-moc">
               Improve your customer experience, increase productivity <Br on="desktop" /> and automate tasks with Nomba
               Menu.

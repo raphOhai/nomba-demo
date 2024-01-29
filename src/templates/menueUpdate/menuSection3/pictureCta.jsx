@@ -1,7 +1,6 @@
 import { Br, Button, Container, Ntext } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useContext } from "react";
-import yoo from "../../../assets/images/jpegs/chaw.svg";
 import { AppContext } from "states/context";
 
 const PictureCta = () => {
@@ -15,12 +14,7 @@ const PictureCta = () => {
               <div className="stack gap2">
                 <div className="stack gap1">
                   <div className="padding-top slideDown group">
-                    <Ntext
-                      variant="h1"
-                      color="primary-100"
-                      className=" md:text-left md:leading-[20px]"
-                      data-animation="ltr"
-                    >
+                    <Ntext variant="h1" color="primary-100" className=" md:text-left md:leading-[20px]">
                       <div className="black-Text">
                         5-star experience <Br on="desktop" /> for your customers
                       </div>
@@ -28,7 +22,7 @@ const PictureCta = () => {
                   </div>
 
                   <div className="slideDown group">
-                    <Ntext variant="text4lite" color="primary-100" className=" md:text-left" data-animation="ltr">
+                    <Ntext variant="text4lite" color="primary-100" className=" md:text-left">
                       <div className="grey-text2">
                         Create the ultimate dining experience for your <Br on="all" /> customers by providing them with
                         an accessible menu where <Br on="desktop" /> orders and payments can be made.
@@ -59,8 +53,8 @@ const PictureCta = () => {
                 alt="Iphone with hand"
                 src="../../../assets/images/bar.jpg"
                 className=" responsive-img large-img-cta"
-              // height={600}
-              // width={1000}
+                // height={600}
+                // width={1000}
               />
             </div>
             <div className="img-cta-grid gap1 div2 relative ">
@@ -77,7 +71,7 @@ const PictureCta = () => {
                   alt="Iphone with hand"
                   src="../../../assets/images/barGirl.png"
                   className=" responsive-img large-img-c"
-                // height={500}
+                  // height={500}
                 />
               </div>
             </div>
