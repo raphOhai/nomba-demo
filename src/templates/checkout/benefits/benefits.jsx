@@ -24,7 +24,7 @@ const CheckoutBenefits = () => {
           <Ntext
             color="primary-100"
             value={benefitsLabel}
-            className="!font-normal md:!leading-[72px] !-tracking-[2px] max-w-[732px] text-center lg:text-start"
+            className="!font-medium md:!text-[56px] md:!leading-[64px] !-tracking-[2px] max-w-[650px] text-center lg:text-start"
             variant="h1"
           />
           <section className={benefitsStyle}>

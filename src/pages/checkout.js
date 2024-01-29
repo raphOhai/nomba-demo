@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
+import { Cart } from "components/checkout";
+
 import {
   IntegratePay,
   CheckoutFAQs,
@@ -35,6 +37,9 @@ const CheckoutPage = () => {
       <CheckoutApiDocs />
       <IntegratePay />
       <CheckoutFAQs />
+      <div data-lenis-prevent>
+        <Cart />
+      </div>
     </Layout>
   );
 };

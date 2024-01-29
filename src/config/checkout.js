@@ -13,7 +13,7 @@ export const notificationsSection = {
 
 export const acceptPaymentSection = {
   description: "Create your online store and get paid easily via our Checkout plugin on Shopify store and WooCommerce ",
-  title: "Accept payment on Shopify and WooCommerce",
+  title: <>Accept payment on <Br on="desktop" /> Shopify and WooCommerce</>,
 };
 
 export const checkoutRateSection = {
@@ -27,7 +27,7 @@ export const integrateSection = {
 };
 
 export const benefitsSection = {
-  title: "Smooth, Secure, Transparent Payments",
+  title: "Smooth, secure, transparent payments",
   benefits: [
     {
       icon: <AtmCardIcon className="menuIconOne" />,
@@ -52,7 +52,7 @@ export const benefitsSection = {
 
 export const apiDocsSection = {
   description: "A simple, elegant interface so you can start integrating in minutes. Leverage our APIs to transform your businesses and products.",
-  title: <> Get to Integrate Fast with our <Br on="desktop" /> Checkout API </>,
+  title: <>Get to Integrate Fast with our <Br on="desktop" /> Checkout API</>,
   docs: [
     {
       label: "Node.js",
@@ -146,26 +146,26 @@ export const faqs = [
   {
     id: 1,
     header: "Can it handle all card types?",
-    content: "Yes, we accept Mastercard, Visa and Verve in Nigeria as well as American Express and Visa in the international borders.",
+    content: "Yes, we conveniently process payments with ease, accepting Mastercard, Visa, Verve and AMEX cards",
   },
   {
     id: 2,
     header: "What is the charge for checkout processing?",
-    content: "We charge a flat fee of 10% of the total amount.",
+    content: "We charge a flat fee of 10% of the total amount",
   },
   {
     id: 3,
     header: "What payment methods do you support?",
-    content: "We support Mastercard, Visa, Verve, and American Express.",
+    content: "We support card and bank transfer",
   },
   {
     id: 4,
     header: "How easy is it to use?",
-    content: "We have an easy-to-use interface that makes it easy for you to integrate with our API.",
+    content: "We have an easy-to-use interface that makes it easy for you to integrate with our API",
   },
   {
     id: 5,
     header: "How does Nomba Checkout work?",
-    content: "We use our API to process payments and integrate with our payment gateway. We also provide you with a simple, intuitive interface to manage your payments.",
+    content: "It works by accepting bank transfer or card payment and sending a transaction notification webhook on payment completion",
   },
 ];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Rive, { Layout, Fit } from "@rive-app/react-canvas";
 import ctl from "@netlify/classnames-template-literals";
 
@@ -8,9 +8,13 @@ import { heroSection } from "config/checkout";
 import RightBlur from "svgs/checkout/hero-right-blur.svg";
 import LeftBlur from "svgs/checkout/hero-left-blur.svg";
 
+import { AppContext } from "states/context";
+
 const { title, description } = heroSection;
 
 const CheckoutPageHero = () => {
+  const { onOpen } = useContext(AppContext);
+
   return (
     <section className={wrapperStyle}>
       <Container className={heroStyle}>
@@ -42,8 +46,9 @@ const CheckoutPageHero = () => {
               text="Get Started for free"
             />
             <Button
-              className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[204px] !h-14"
               text="Request demo"
+              className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[204px] !h-14"
+              onClick={onOpen}
             />
           </section>
         </section>

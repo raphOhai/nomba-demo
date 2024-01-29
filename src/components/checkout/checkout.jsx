@@ -10,7 +10,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item, moveToPayment, isLoa
 
   return (
     <div className="mt-5">
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         <div className="text-sm font-medium text-m-light">PRODUCT DETAILS</div>
         <div
           className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer"
@@ -38,12 +38,13 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item, moveToPayment, isLoa
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-between mt-5 items-center">
-        <div className="text-sm font-medium text-m-light">DELIVERY INFORMATION</div>
+        {/* <div className="text-sm font-medium text-m-light">DELIVERY INFORMATION</div> */}
+        <div className="text-sm font-medium text-m-light">INFORMATION SUMMARY</div>
         <div
           className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer"
-          onClick={() => setTabIndex(1)}
+          onClick={() => setTabIndex(0)}
         >
           Update
         </div>
@@ -83,7 +84,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item, moveToPayment, isLoa
       </div>
 
       <div className="flex flex-col mt-5 py-7 !text-[16px] gap-5">
-        <div className="flex justify-between">
+        {/* <div className="flex justify-between">
           <span>Price</span>
           <span>{item.price}</span>
         </div>
@@ -100,12 +101,13 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item, moveToPayment, isLoa
           <Ntext variant="p24" color="n-light" className="!font-[700]">
             {formatMoney(itemCount * Number(formatMoneyToInput(item.price)))}
           </Ntext>
-        </div>
+        </div> */}
       </div>
 
       <Button
         className="!font-medium !text-[16px] !w-full"
-        text="Make payment"
+        // text="Make payment"
+        text="Buy Your POS"
         isLoading={isLoading}
         disabled={!isTermsAccepted}
         onClick={() => moveToPayment()}

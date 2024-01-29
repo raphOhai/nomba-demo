@@ -1,5 +1,5 @@
 import React from "react";
-import Rive, { Layout, Fit } from "@rive-app/react-canvas";
+import Rive, { useRive, Layout, Fit } from "@rive-app/react-canvas";
 import ctl from "@netlify/classnames-template-literals";
 
 import { acceptPaymentSection } from "config/checkout";
@@ -8,20 +8,33 @@ import { Container, Button, Ntext } from "components";
 const { title, description } = acceptPaymentSection;
 
 const AcceptPayment = () => {
+  const { rive: animator, RiveComponent: ConnectingIcons } = useRive({
+    layout: new Layout({ fit: Fit.Cover }),
+    stateMachines: 'State Machine 1',
+    src: '/plug-in-shopify.riv',
+    animations: 'Timeline 1',
+    autoplay: true,
+  });
+
+  const handleAnimationMouseEnter = () => {
+    if (animator) {
+      animator.reset();
+      animator.play();
+    }
+  }
+
   return (
     <section className={wrapperStyle}>
       <Container className={sectionStyle}>
-        <Rive
-          src="/plug-in-shopify.riv"
-          layout={new Layout({ fit: Fit.Cover })}
+        <ConnectingIcons
+          onMouseEnter={handleAnimationMouseEnter}
           className={animationWrapperStyle}
-          animations="Timeline 1"
         />
-        <section className="flex flex-col items-center lg:items-start max-w-[555px]">
+        <section className="flex flex-col items-center lg:items-start lg:w-fit">
           <Ntext
             value={title}
             color="primary-100"
-            className="!font-medium md:!leading-[56px] !-tracking-[2px] text-center lg:text-start w-full"
+            className="!font-medium md:!leading-[56px] !-tracking-[2px] text-center lg:text-start"
             variant="h2"
           />
           <Ntext
@@ -31,8 +44,8 @@ const AcceptPayment = () => {
             variant="text3"
           />
           <Button
-            className="!font-medium !text-base !min-w-[198px] mt-10 !h-14"
-            href={{ url: "https://dashboard.nomba.com/auth/login" }}
+            className="!font-medium !text-base !min-w-[76vw] lg:!min-w-[198px] mt-10 !h-14"
+            href={{ url: "https://dashboard.nomba.com/auth/sign-up-new" }}
             text="Coming Soon"
           />
         </section>
