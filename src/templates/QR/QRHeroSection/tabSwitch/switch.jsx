@@ -1,7 +1,7 @@
 import React from "react";
+import Consumers from "./icons/consumers";
 import { Container, Ntext } from "components";
-import ConsumersIcon from "./icons/consumers";
-import BusinessesIcon from "./icons/businesses";
+import Businesses from "./icons/businesses";
 
 const SwitchBox = () => {
   return (
@@ -13,7 +13,7 @@ const SwitchBox = () => {
               <div className="bas-grid">
                 <div className="flex gap-2 switch-tabs-active">
                   <div className="flex center hide-mobile-flex">
-                    <ConsumersIcon />
+                    <Consumers />
                   </div>
                   <div>
                     <Ntext variant="h4" color="primary-100" className="text-center">
@@ -24,7 +24,7 @@ const SwitchBox = () => {
                 <div className="end ">
                   <div className="flex gap-2 switch-tabs-inactive">
                     <div className="flex center hide-mobile-flex">
-                      <BusinessesIcon />
+                      <Businesses />
                     </div>
                     <div>
                       <Ntext variant="h4" color="primary-100" className="text-center">

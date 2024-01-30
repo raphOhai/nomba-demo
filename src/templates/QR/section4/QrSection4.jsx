@@ -4,9 +4,9 @@ import { Container } from "components";
 
 const QrSection4 = () => {
   return (
-    <div className="padding-top padding-buttom bg-white">
+    <div style={{ backgroundColor: "#fff" }} className="padding-top padding-buttom">
       <Container>
-        <div className=" Qr-Section bg-white">
+        <div style={{ backgroundColor: "#fff" }} className=" Qr-Section">
           <Cta
             mainText={"Experience faster payment transactions "}
             subText={

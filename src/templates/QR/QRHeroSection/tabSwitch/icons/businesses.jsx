@@ -1,6 +1,6 @@
 import React from "react";
 
-const BusinessesIcon = () => {
+const Businesses = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path
@@ -13,4 +13,4 @@ const BusinessesIcon = () => {
   );
 };
 
-export default BusinessesIcon;
+export default Businesses;

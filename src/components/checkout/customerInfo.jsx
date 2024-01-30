@@ -208,6 +208,7 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                       value={stateI}
                       className="pointer noselect disable-focus "
                       placeholder="none"
+                      // onChange={e => setStateValue(e)}
                       role="textbox"
                       required
                     />
@@ -258,8 +259,12 @@ const CustomerInfo = ({ state, setState, deliveryRequired = true }) => {
                       name="state"
                       value={statel}
                       id="state"
+                      // disabled
+                      // onBlur={e => validateMobile(e)}
                       className="pointer noselect"
                       placeholder="none"
+                      // onChange={e => setState({ ...state, lga: e.target.value })}
+                      // role="textbox"
                       required
                     />
                   </div>

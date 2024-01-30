@@ -1,6 +1,6 @@
 import React from "react";
 
-const ConsumersIcon = () => {
+const Consumers = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
       <circle cx="23.3333" cy="8.66671" r="7.33333" fill="#4D4D4D" />
@@ -14,4 +14,4 @@ const ConsumersIcon = () => {
   );
 };
 
-export default ConsumersIcon;
+export default Consumers;

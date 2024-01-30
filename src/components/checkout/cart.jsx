@@ -24,17 +24,22 @@ import { CartTerminals } from "config/cart";
 import { useMixpanel } from "gatsby-plugin-mixpanel";
 import { Payment } from "./payment";
 import { useEffect } from "react";
+import { set } from "react-hook-form";
 import SucessScrean from "./sucessScrean";
 
 const Cart = ({ finalFocusRef }) => {
   const {
     isOpen,
+    onClose,
+    hasError,
     hasEmailError,
     hasMobileError,
     counter,
     info,
     setInfo,
     itemIndex,
+    setHasEmailError,
+    setHasMobileError,
     closeAndReset,
     tabIndex,
     setTabIndex,
@@ -163,7 +168,15 @@ const Cart = ({ finalFocusRef }) => {
           <>
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
-                {tabIndex === 0 ? <TabList borderBottom="1px" borderBottomColor="#FFCC00"></TabList> : ""}
+                {tabIndex === 0 ? (
+                  <TabList borderBottom="1px" borderBottomColor="#FFCC00">
+                    {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
+                    Summary
+                  </Tab> */}
+                  </TabList>
+                ) : (
+                  ""
+                )}
 
                 <TabPanels px={[2, 4, 4, 4]} className="elevate">
                   {/* <TabPanel>
@@ -175,6 +188,14 @@ const Cart = ({ finalFocusRef }) => {
                   </TabPanel>
 
                   <TabPanel>
+                    {/* <Checkout
+                      itemCount={counter.count}
+                      item={CartTerminals[itemIndex]}
+                      userInfo={info}
+                      setTabIndex={setTabIndex}
+                      moveToPayment={onSubmit}
+                      isLoading={isLoading}
+                    /> */}
                     <SucessScrean />
                   </TabPanel>
                 </TabPanels>
@@ -221,6 +242,7 @@ const Cart = ({ finalFocusRef }) => {
                     }
                     if (!info.phone || !info.email) {
                       return;
+                      // setBtnState(true);
                     } else {
                       setTabIndex(tabIndex + 1);
                     }
