@@ -229,18 +229,6 @@
     border: 1px solid $accent-color;
     border-radius: 35px;
     padding: 2.5rem;
-    // &::before {
-    //   background: conic-gradient(
-    //     from 0deg at 50% 50%,
-    //     #ffbc31 -7.19deg,
-    //     $accent-color 14deg,
-    //     $accent-color 51deg,
-    //     $accent-color 311deg,
-    //     #ffbc31 353deg,
-    //     $accent-color 374deg
-    //   );
-    // }
-    // margin: 10px;
   }
   .tf-grid1 {
     display: grid;
