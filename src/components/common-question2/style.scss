@@ -1,0 +1,20 @@
+.bottom_line2 {
+  border-bottom: 1px solid #333333;
+}
+
+.hideMe {
+  display: none;
+}
+
+.remove-border {
+  border: none !important;
+}
+
+.rotate-180deg {
+  rotate: 0deg !important;
+}
+
+.svgtip {
+  transition: all 1s;
+  rotate: 180deg;
+}

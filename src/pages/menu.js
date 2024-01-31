@@ -1,24 +1,25 @@
-import React, { useEffect, useRef } from "react";
 import Layout from "components/layout-max";
-import { HomepageTipsAndUpdate } from "templates";
+import React, { useEffect } from "react";
 import SeoConf from "config/seo/meta";
-import { split } from "animations/text";
-import { CommonQuestions } from "components/common-questions";
-import {
-  EmenuHero,
-  EmenuSection2,
-  EmenuSection4,
-  EmenuSection5,
-  MenuSection6,
-  EmenuTestimonial,
-  EveryBusiness,
-} from "templates/e-menu";
-import { Cart } from "components/product-checkout";
-import { eMenuTestimonial, businessTool, howItworks, faqData } from "config/e-menu";
-import { gsap } from "gsap";
+// import { Container } from "components";
+import HeroUp from "templates/menueUpdate/hero/heroUp";
+import Section1 from "templates/menueUpdate/menuSection2/section1";
+import PictureCta from "templates/menueUpdate/menuSection3/pictureCta";
+import { businessTool, eMenuTestimonial, howItworks } from "config/e-menu";
+import { EmenuSection4Black } from "templates/menueUpdate/scrollInteraction";
+import MultipleAnimator from "templates/menueUpdate/hero/hooks/animation";
+// import { EmenuSection5, EmenuTestimonial, MenuSection6 } from "templates/e-menu";
+import { CommonQuestions } from "components";
+// import { EveryBusiness } from "templates/invoice";
+import { HomepageTipsAndUpdate } from "templates";
+import { Cart } from "components/checkout";
+import { faqData } from "config/e-menu";
+import { EmenuSection5, MenuSection6, EmenuTestimonial, EveryBusiness } from "templates/e-menu";
 import { ReactLenis } from "@studio-freight/react-lenis";
-
-const EmenuPage = () => {
+import { useRef } from "react";
+import gsap from "gsap";
+const Menu2 = () => {
+  MultipleAnimator();
   const lenisRef = useRef();
   useEffect(() => {
     function update(time) {
@@ -31,15 +32,13 @@ const EmenuPage = () => {
       gsap.ticker.remove(update);
     };
   });
-  useEffect(() => {
-    split();
-  });
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
       <Layout title={SeoConf.menu.title} description={SeoConf.menu.description} useStickyNav={false}>
-        <EmenuHero />
-        <EmenuSection2 />
-        <EmenuSection4
+        <HeroUp />
+        <Section1 />
+        <PictureCta />
+        <EmenuSection4Black
           tools={businessTool}
           headingText="Fully integrated tool for smoothly running your restaurant business"
         />
@@ -58,4 +57,4 @@ const EmenuPage = () => {
   );
 };
 
-export default EmenuPage;
+export default Menu2;

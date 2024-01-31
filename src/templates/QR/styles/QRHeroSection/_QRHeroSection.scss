@@ -1,0 +1,56 @@
+.Qr-hero-section {
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .Qr-hero-main-text {
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 56px; /* 116.667% */
+      letter-spacing: -2px;
+    }
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .Qr-hero-main-text {
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 56px; /* 116.667% */
+      letter-spacing: -2px;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .Qr-hero-main-text {
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 88px; /* 110% */
+      letter-spacing: -2px;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .Qr-hero-main-text {
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 88px; /* 110% */
+      letter-spacing: -2px;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .Qr-hero-main-text {
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 88px; /* 110% */
+      letter-spacing: -2px;
+    }
+  }
+}

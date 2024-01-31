@@ -1,0 +1,198 @@
+@import "./partials/variables";
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .responsive-btn {
+    padding: 0.6rem 1.2rem;
+  }
+  .hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-btn-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      width: 100%;
+
+      button span {
+        font-size: clamp(12px, 2vw, 12px);
+      }
+
+      .btn1 {
+        border-radius: 8px;
+        &::before {
+          content: "Request a demo";
+        }
+      }
+
+      .btn2 {
+        border-radius: 8px;
+      }
+    }
+  }
+  .heroSection {
+    overflow: hidden;
+    // height: 135vh;
+    // max-height: 50rem;
+  }
+  .hero-text {
+    font-size: clamp(50px, 5vw, 30px);
+    line-height: 50px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-btn-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      width: 100%;
+      // button span {
+      //   font-size: clamp(12px, 2vw, 12px);
+      // }
+    }
+  }
+  .responsive-btn {
+    padding: 0.6rem 1.2rem;
+  }
+  .heroSection {
+    overflow: hidden;
+    height: 90vh;
+    // max-height: 50rem;
+  }
+  .hero-text {
+    font-size: clamp(50px, 5vw, 30px);
+    line-height: 50px;
+  }
+  .btn1::before {
+    content: "Request a demo";
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .hero-btn {
+    .hero-btn-grid {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .heroSection {
+    overflow: hidden;
+    height: 200vh;
+    max-height: 100rem;
+  }
+  .hero-text {
+    font-size: clamp(90px, 10vw, 12px);
+    line-height: 80px;
+    // font-family: Garant-Bold;
+    // font-weight: bold;
+  }
+  .btn1::before {
+    content: "Request a demo";
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .shift-Top-desktop {
+    margin-top: 4rem;
+  }
+  .responsive-btn {
+    padding: 0.6rem 1.2rem;
+  }
+  .hero-btn {
+    .hero-btn-grid {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .heroSection {
+    overflow: hidden;
+    height: 100vh;
+    max-height: 60rem;
+  }
+  .hero-text {
+    font-size: clamp(90px, 10vw, 12px);
+    line-height: 80px;
+    // font-family: Garant-Bold;
+    // font-weight: bold;
+  }
+
+  .btn1::before {
+    content: "Request a demo";
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .shift-Top-desktop {
+    margin-top: 4rem;
+  }
+  .responsive-btn {
+    padding: 0.6rem 1.2rem;
+  }
+  .hero-btn {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    .hero-btn-grid {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .heroSection {
+    overflow: hidden;
+    height: 90vh;
+    max-height: 60rem;
+  }
+  .hero-text {
+    font-size: clamp(90px, 10vw, 12px);
+    line-height: 100px;
+    // font-family: Garant-Bold;
+    // font-weight: bold;
+  }
+  .btn1::before {
+    content: "Request a demo";
+  }
+}

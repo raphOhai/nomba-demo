@@ -1,0 +1,14 @@
+.Qr-video-container {
+  position: relative;
+  border-radius: 34px;
+  min-width: 80vw;
+
+  min-height: 500px;
+  border: 1px solid #4d4d4d;
+  .play-btn-container {
+    position: absolute; /* Make the child element absolutely positioned */
+    top: 50%; /* Move the top of the child to the vertical center of the parent */
+    left: 50%; /* Move the left of the child to the horizontal center of the parent */
+    transform: translate(-50%, -50%);
+  }
+}
