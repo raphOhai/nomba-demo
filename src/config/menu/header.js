@@ -11,6 +11,7 @@ import Inventory from "svgs/navbar/light/inventory.svg";
 import Settlements from "svgs/navbar/light/settlements.svg";
 import Savings from "svgs/navbar/light/savings.svg";
 import Developers from "svgs/navbar/light/developers.svg";
+import Checkout from "svgs/navbar/light/checkout.svg";
 
 import AboutUs from "svgs/navbar/light/about-us.svg";
 import BlogIcon from "svgs/navbar/light/blog.svg";
@@ -31,6 +32,7 @@ import InventoryDark from "svgs/navbar/dark/inventory2.svg";
 import SettlementsDark from "svgs/navbar/dark/settlements.svg";
 import SavingsDark from "svgs/navbar/dark/savings.svg";
 import DevelopersDark from "svgs/navbar/dark/developers.svg";
+import CheckoutDark from "svgs/navbar/dark/checkout.svg";
 
 import AboutUsDark from "svgs/navbar/dark/about-us.svg";
 import BlogIconDark from "svgs/navbar/dark/blog.svg";
@@ -119,6 +121,13 @@ const headerMenu = {
       icon: <Developers className="menuIcon" />,
       iconDark: <DevelopersDark className="menuIcon" />,
       description: "Empower your features",
+    },
+    {
+      title: "Checkout",
+      to: "/checkout",
+      icon: <Checkout className="menuIcon" />,
+      iconDark: <CheckoutDark className="menuIcon" />,
+      description: "Accept online payments",
     },
   ],
   "Business Types": [
