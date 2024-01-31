@@ -1,25 +1,39 @@
 import React, { useState } from "react";
 import Logo from "svgs/logo-white.svg";
+import LogoBlack from "svgs/logo.svg";
 
 import ctl from "@netlify/classnames-template-literals";
 import { Menu } from "./menu";
 import { NLink } from "components/nlink";
+import "./style/index.scss";
 
-const NavBar = () => {
+const NavBar = ({ transparent }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const onToggle = () => {
     setOpenMenu(!openMenu);
+    const naVItems = document.getElementById("navvv");
+    naVItems.style.backgroundColor = "black";
   };
 
   return (
-    <header className={`${mainHeaderStlye} ${openMenu && "h-full"}`} data-lenis-prevent>
+    <header
+      style={{ backgroundColor: transparent ? "#FFCC00" : "black" }}
+      className={`${mainHeaderStlye} ${openMenu && "h-full"}`}
+      data-lenis-prevent
+    >
       <nav className={navStyle}>
-        <NLink to="/" className="mr-[55px] px-2 -ml-2">
-          <Logo className="w-[94px] " />
-        </NLink>
+        {transparent ? (
+          <NLink to="/" className="mr-[55px] px-2 -ml-2">
+            <LogoBlack className="w-[94px]" />{" "}
+          </NLink>
+        ) : (
+          <NLink to="/" className="mr-[55px] px-2 -ml-2">
+            <Logo className="w-[94px] " />
+          </NLink>
+        )}
 
-        <Menu openMenu={openMenu} onToggle={onToggle} />
+        <Menu openMenu={openMenu} onToggle={onToggle} transparent={transparent} />
       </nav>
     </header>
   );

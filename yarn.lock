@@ -2567,14 +2567,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.11.1":
-  version: 11.11.1
-  resolution: "@emotion/react@npm:11.11.1"
+"@emotion/react@npm:^11.11.3":
+  version: 11.11.3
+  resolution: "@emotion/react@npm:11.11.3"
   dependencies:
     "@babel/runtime": ^7.18.3
     "@emotion/babel-plugin": ^11.11.0
     "@emotion/cache": ^11.11.0
-    "@emotion/serialize": ^1.1.2
+    "@emotion/serialize": ^1.1.3
     "@emotion/use-insertion-effect-with-fallbacks": ^1.0.1
     "@emotion/utils": ^1.2.1
     "@emotion/weak-memoize": ^0.3.1
@@ -2584,7 +2584,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: aec3c36650f5f0d3d4445ff44d73dd88712b1609645b6af3e6d08049cfbc51f1785fe13dea1a1d4ab1b0800d68f2339ab11e459687180362b1ef98863155aae5
+  checksum: 2e4b223591569f0a41686d5bd72dc8778629b7be33267e4a09582979e6faee4d7218de84e76294ed827058d4384d75557b5d71724756539c1f235e9a69e62b2e
   languageName: node
   linkType: hard
 
@@ -2598,6 +2598,19 @@ __metadata:
     "@emotion/utils": ^1.2.1
     csstype: ^3.0.2
   checksum: 413c352e657f1b5e27ea6437b3ef7dcc3860669b7ae17fd5c18bfbd44e033af1acc56b64d252284a813ca4f3b3e1b0841c42d3fb08e02d2df56fd3cd63d72986
+  languageName: node
+  linkType: hard
+
+"@emotion/serialize@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@emotion/serialize@npm:1.1.3"
+  dependencies:
+    "@emotion/hash": ^0.9.1
+    "@emotion/memoize": ^0.8.1
+    "@emotion/unitless": ^0.8.1
+    "@emotion/utils": ^1.2.1
+    csstype: ^3.0.2
+  checksum: 5a756ce7e2692322683978d8ed2e84eadd60bd6f629618a82c5018c84d98684b117e57fad0174f68ec2ec0ac089bb2e0bcc8ea8c2798eb904b6d3236aa046063
   languageName: node
   linkType: hard
 
@@ -3964,6 +3977,38 @@ __metadata:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
   checksum: b66ce40c0b1368c6c19086891ecdb6ebb47667b01f5b8685af09963653098ce80bbcc2650a893cccc9741e82ce3440f5f1622aa5fcd73141c7c211c2a59f5414
+  languageName: node
+  linkType: hard
+
+"@rive-app/canvas-lite@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@rive-app/canvas-lite@npm:2.9.2"
+  checksum: 522a80e64237d79313c89c5ad92a57c56070c54ca11f62340c3bc1e5ebdde4b62424b57c9e8304af5ffe78df638fdfa86eb3dc0846656c68b711634e49c7ba66
+  languageName: node
+  linkType: hard
+
+"@rive-app/canvas@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@rive-app/canvas@npm:2.9.2"
+  checksum: 869a69cb9de9eff8ea311c8e399721ffe2b41bcafd6f674bb88bdba12bb2e6c66acc1a626b6530b7c88443d0f38cbe8bcffff3aff794b8cda9cb0ef53f506236
+  languageName: node
+  linkType: hard
+
+"@rive-app/react-canvas@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "@rive-app/react-canvas@npm:4.7.1"
+  dependencies:
+    "@rive-app/canvas": 2.9.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 18cd69a59ba7d63d86d999b0635b0bfca92702bf53d0edf7448d1acceb10007aa325fbe5cb17065fb7484eafb6820249d58e597d6873a673dc0b6ddb9763ba8c
+  languageName: node
+  linkType: hard
+
+"@rive-app/webgl@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@rive-app/webgl@npm:2.9.2"
+  checksum: 7e5808271db5085148ffd6f3c841e922dec93f574aa0a4b94151682ad7599a3a0b9242e8d0f72e50a41a1380f84936c2c3ae896f59268acfe5369443cd473d09
   languageName: node
   linkType: hard
 
@@ -12507,10 +12552,11 @@ __metadata:
   dependencies:
     "@chakra-ui/gatsby-plugin": ^3.1.3
     "@chakra-ui/react": 1.8.8
-    "@emotion/react": ^11.11.1
+    "@emotion/react": ^11.11.3
     "@emotion/styled": ^11.11.0
     "@hookform/resolvers": ^2.8.8
     "@netlify/classnames-template-literals": ^1.0.3
+    "@rive-app/react-canvas": ^4.7.1
     "@studio-freight/react-lenis": ^0.0.22
     autoprefixer: ^10.4.2
     dotenv: ^8.2.0
@@ -12544,12 +12590,14 @@ __metadata:
     prismjs: ^1.29.0
     prop-types: ^15.7.2
     react: ^17.0.1
+    react-confetti: ^6.1.0
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
     react-hook-form: ^7.28.1
     react-id-swiper: ^4.0.0
     react-rotating-text: ^1.4.1
     react-slick: ^0.29.0
+    rive-react: ^4.7.1
     sass: ^1.60.0
     slick-carousel: ^1.8.1
     split-type: ^0.3.3
@@ -14095,6 +14143,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-confetti@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "react-confetti@npm:6.1.0"
+  dependencies:
+    tween-functions: ^1.2.0
+  peerDependencies:
+    react: ^16.3.0 || ^17.0.1 || ^18.0.0
+  checksum: 24b6975df144d2bf09d8e1c95ddc49e547775f911efaa8d96b49e522659d931539e9d9e48cc0db3a01f3a671be7e3824e6e728db85096f5527db5d1c69ebb153
+  languageName: node
+  linkType: hard
+
 "react-dev-utils@npm:^12.0.1":
   version: 12.0.1
   resolution: "react-dev-utils@npm:12.0.1"
@@ -14851,6 +14910,19 @@ __metadata:
   bin:
     rimraf: dist/cjs/src/bin.js
   checksum: bafce85391349a2d960847980bf9b5caa2a8887f481af630f1ea27e08288217293cec72d75e9a2ba35495c212789f66a7f3d23366ba6197026ab71c535126857
+  languageName: node
+  linkType: hard
+
+"rive-react@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "rive-react@npm:4.7.1"
+  dependencies:
+    "@rive-app/canvas": 2.9.2
+    "@rive-app/canvas-lite": 2.9.2
+    "@rive-app/webgl": 2.9.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 2738c0d1528e4d7d6b03b7d9c34c42ad9554f35ea4fea93872e63486f0e7a0c13c795a3cc641504752a4ee45529a158d4f7dd3fbd94b35f79f919fe84a44014b
   languageName: node
   linkType: hard
 
@@ -16433,6 +16505,13 @@ __metadata:
   dependencies:
     safe-buffer: ^5.0.1
   checksum: 05f6510358f8afc62a057b8b692f05d70c1782b70db86d6a1e0d5e28a32389e52fa6e7707b6c5ecccacc031462e4bc35af85ecfe4bbc341767917b7cf6965711
+  languageName: node
+  linkType: hard
+
+"tween-functions@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "tween-functions@npm:1.2.0"
+  checksum: 880708d680eff5c347ddcb9f922ad121703a91c78ce308ed309073e73a794b633eb0b80589a839365803f150515ad34c9646809ae8a0e90f09e62686eefb1ab6
   languageName: node
   linkType: hard
 

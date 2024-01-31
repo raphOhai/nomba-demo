@@ -44,7 +44,7 @@ const Checkout = ({ itemCount, userInfo, setTabIndex, item, moveToPayment, isLoa
         <div className="text-sm font-medium text-m-light">INFORMATION SUMMARY</div>
         <div
           className="text-white font-[400] text-[16px] underline leading-8 cursor-pointer"
-          onClick={() => setTabIndex(1)}
+          onClick={() => setTabIndex(0)}
         >
           Update
         </div>

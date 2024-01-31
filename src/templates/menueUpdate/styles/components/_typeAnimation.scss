@@ -1,0 +1,112 @@
+@import "../partials/variables";
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $cursor-color;
+  }
+}
+
+.bounce {
+  position: relative;
+  animation: bounce 4s infinite;
+}
+
+.pulse {
+  // opacity: 0.2;
+  animation: pulsate 4s infinite;
+}
+
+@keyframes pulsate {
+  0%,
+  100% {
+    opacity: 1; /* Start and end position */
+  }
+  50% {
+    opacity: 0.5; /* Midway position, adjust the -20px value for different bounce height */
+  }
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-200px); /* Midway position, adjust the -20px value for different bounce height */
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .text-output {
+    color: $higlighted-text;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding-right: 0.5rem;
+    border-right: 2px solid $cursor-color; /* Add the typewriter cursor */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .text-output {
+    color: $higlighted-text;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding-right: 0.5rem;
+    border-right: 2px solid $cursor-color; /* Add the typewriter cursor */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .text-output {
+    color: $higlighted-text;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding-right: 2rem;
+    border-right: 2px solid $cursor-color; /* Add the typewriter cursor */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .text-output {
+    color: $higlighted-text;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding-right: 2rem;
+    border-right: 2px solid $cursor-color; /* Add the typewriter cursor */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .text-output {
+    color: $higlighted-text;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding-right: 2rem;
+    border-right: 2px solid $cursor-color; /* Add the typewriter cursor */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+}

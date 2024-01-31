@@ -1,0 +1,126 @@
+@import "../variables/variables";
+$switch-border-radius: 48px;
+$switch-box-highlighter: #4d4d4d;
+.switch-box {
+  margin-top: -2px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 10;
+  background-color: black;
+}
+.switch-container {
+  background-color: $gray-box;
+  max-width: 32rem;
+  border-radius: $switch-border-radius;
+
+  .switch-tabs-active {
+    background-color: $switch-box-highlighter;
+    border-radius: $switch-border-radius;
+    padding: 0.8rem 1.3rem;
+    color: #fff;
+  }
+  .switch-tabs-inactive {
+    // background-color: $switch-box-highlighter;
+    border-radius: $switch-border-radius;
+    padding: 0.8rem 1.3rem;
+    color: #808080;
+  }
+}
+
+.scroll-content {
+  min-height: 200vh;
+  position: relative;
+  .scroll-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hide-mobile-flex {
+    display: none;
+  }
+  .switch-text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 160% */
+    letter-spacing: -0.8px;
+  }
+  .switch-container {
+    padding: 0.4rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .hide-mobile-flex {
+    display: none;
+  }
+  .switch-text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 160% */
+    letter-spacing: -0.8px;
+  }
+  .switch-container {
+    padding: 0.4rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hide-mobile-flex {
+    display: flex;
+  }
+  .switch-text {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.8px;
+  }
+  .switch-container {
+    padding: 0.6rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hide-mobile-flex {
+    display: flex;
+  }
+  .switch-text {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.8px;
+  }
+  .switch-container {
+    padding: 0.6rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .hide-mobile-flex {
+    display: flex;
+  }
+  .switch-text {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.8px;
+  }
+  .switch-container {
+    padding: 0.6rem;
+  }
+}

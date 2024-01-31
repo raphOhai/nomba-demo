@@ -23,12 +23,32 @@ import { AppContext } from "states/context";
 import { CartTerminals } from "config/cart";
 import { useMixpanel } from "gatsby-plugin-mixpanel";
 import { Payment } from "./payment";
+import { useEffect } from "react";
+import { set } from "react-hook-form";
+import SucessScrean from "./sucessScrean";
 
 const Cart = ({ finalFocusRef }) => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const {
+    isOpen,
+    onClose,
+    hasError,
+    hasEmailError,
+    hasMobileError,
+    counter,
+    info,
+    setInfo,
+    itemIndex,
+    setHasEmailError,
+    setHasMobileError,
+    closeAndReset,
+    tabIndex,
+    setTabIndex,
+  } = useContext(AppContext);
+
   const [showPayment, setShowPayment] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [btnState, setBtnState] = useState(true);
 
   const moveToPayment = () => {
     setShowSuccess(false);
@@ -37,24 +57,26 @@ const Cart = ({ finalFocusRef }) => {
   const moveToSuccess = () => {
     setShowSuccess(true);
   };
+  const backToSlideHome = val => {
+    setTabIndex(val);
+    console.log(val);
+  };
 
   const mixpanel = useMixpanel();
 
-  const {
-    isOpen,
-    onClose,
-    hasError,
-    hasEmailError,
-    hasMobileError,
-    counter,
-    dispatch,
-    info,
-    setInfo,
-    itemIndex,
-  } = useContext(AppContext);
   const handleTabsChange = index => {
     setTabIndex(index);
   };
+
+  useEffect(() => {}, []);
+
+  useEffect(() => {
+    if (hasEmailError || hasMobileError === true) {
+      setBtnState(true);
+    } else {
+      setBtnState(false);
+    }
+  }, [hasEmailError, hasMobileError]);
 
   const onSubmit = () => {
     const infoWithoutPayment = { ...info, quantity: counter.count, type: "Nomba Mini" };
@@ -123,36 +145,32 @@ const Cart = ({ finalFocusRef }) => {
       colorScheme="yellow"
       isOpen={isOpen}
       placement="right"
-      onClose={onClose}
+      onClose={closeAndReset}
       finalFocusRef={finalFocusRef}
-      size="lg"
+      size="md"
+      className="drawer-content"
     >
       <DrawerOverlay />
-      <DrawerContent bg="#121212" color="white" px="0" data-lenis-prevent>
-        <DrawerCloseButton color="white" colorScheme="yellow" />
+      <DrawerContent bg="#1A1A1A" color="white" px="0" data-lenis-prevent className="drawer-content">
+        {tabIndex === 0 ? <DrawerCloseButton color="white" className="close-btn" _hover={false} /> : ""}
+
         <DrawerHeader>
-          <Ntext variant="text3" color="n-light">
-            Terminal purchase
-          </Ntext>
+          {tabIndex === 0 ? (
+            <Ntext variant="text4" color="n-light">
+              <div style={{ color: "#B3B3B3" }}>Get started with MENU</div>
+            </Ntext>
+          ) : (
+            ""
+          )}
         </DrawerHeader>
 
         {!showPayment ? (
           <>
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
-                <TabList borderBottom="1px" borderBottomColor="#383838" borderTop="1px solid #383838">
-                  {/* <Tab _selected={tabStyle} color="#717171">
-                    Product Details
-                  </Tab> */}
-                  <Tab py="6" _selected={tabStyle} color="#717171">
-                    Add Information
-                  </Tab>
-                  <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
-                    Summary
-                  </Tab>
-                </TabList>
+                {tabIndex === 0 ? <TabList borderBottom="1px" borderBottomColor="#FFCC00"></TabList> : ""}
 
-                <TabPanels px={[2, 4, 4, 4]}>
+                <TabPanels px={[2, 4, 4, 4]} className="elevate">
                   {/* <TabPanel>
                     Select the active terminal by index set
                     <CartIem counter={counter} dispatcher={dispatch} item={CartTerminals[itemIndex]} />
@@ -160,41 +178,39 @@ const Cart = ({ finalFocusRef }) => {
                   <TabPanel>
                     <CustomerInfo state={info} setState={setInfo} />
                   </TabPanel>
+
                   <TabPanel>
-                    <Checkout
-                      itemCount={counter.count}
-                      item={CartTerminals[itemIndex]}
-                      userInfo={info}
-                      setTabIndex={setTabIndex}
-                      moveToPayment={onSubmit}
-                      isLoading={isLoading}
-                    />
+                    <SucessScrean />
                   </TabPanel>
                 </TabPanels>
               </Tabs>
             </DrawerBody>
 
-            {tabIndex < 2 && (
-              <div className="flex flex-row justify-between py-6 px-6 border-t border-t-n-grey6">
+            {tabIndex < 1 && (
+              <div style={{ borderTop: "1px solid #333333" }} className="flex  flex-row justify-between py-6 px-6 ">
                 <div>
                   <button
-                    className="py-4 text-white text-[16px] font-medium !outline-[3px] !outline-white"
+                    className="  btn-outline"
                     onClick={() => {
-                      onClose();
+                      closeAndReset();
                       mixpanel.track("Mini_checkout_Customer_cancels_order_for_mini", {
                         customerData: JSON.stringify(info),
                         terminals: counter.count,
                       });
                     }}
                   >
-                    Cancel
+                    <div style={{ marginTop: "-13.5px" }} className="flex center">
+                      <p>Cancel</p>
+                    </div>
                   </button>
                 </div>
                 <Button
-                  disabled={tabIndex === 0 ? false : hasError || hasEmailError || hasMobileError}
+                  disabled={btnState}
                   fontWeight={500}
                   fontSize={16}
                   colorScheme="yellow"
+                  size="medium"
+                  className="btn-contained"
                   onClick={() => {
                     if (tabIndex === 0) {
                       mixpanel.track("Mini_checkout_Customer_place_their_info", {
@@ -208,10 +224,14 @@ const Cart = ({ finalFocusRef }) => {
                         terminals: counter.count,
                       });
                     }
-                    setTabIndex(tabIndex + 1);
+                    if (!info.phone || !info.email) {
+                      return;
+                    } else {
+                      setTabIndex(tabIndex + 1);
+                    }
                   }}
                 >
-                  Continue
+                  Request demo
                 </Button>
               </div>
             )}
