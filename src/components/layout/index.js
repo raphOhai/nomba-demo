@@ -9,7 +9,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Seo from "./seo";
 import { MainFooter } from "./footer";
-import { NavBar } from "./navbar";
+import NavBar from "./navbar";
 import { Subfooter } from "./subfooter";
 
 const Layout = ({ children, description, title, ignoreSiteName = false, defaultStyle = true }) => {

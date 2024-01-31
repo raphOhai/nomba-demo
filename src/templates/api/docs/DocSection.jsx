@@ -24,11 +24,9 @@ const DocSection = ({ title, description, data }) => {
             {data.map((type, i) => (
               <div
                 key={type.slug}
-                onClick={() => (i !== 3 ? setCategoryIndex(i) : null)}
-                className={`flex flex-col cursor-pointer items-center min-w-[100px] md:min-w-[175px] gap-[10px] ${
-                  i == 3 ? "cursor-not-allowed " : ""
-                }`}
-                title={i == 3 ? "Coming soon" : type.name}
+                onClick={() => setCategoryIndex(i)}
+                className={`flex flex-col cursor-pointer items-center min-w-[100px] md:min-w-[175px] gap-[10px]`}
+                title={type.name}
               >
                 <div className="md:p-3 p-2 border border-n-grey6 rounded-md">
                   {categoryIndex == i ? type.icon_active : type.icon}
@@ -39,12 +37,6 @@ const DocSection = ({ title, description, data }) => {
                   color={`${categoryIndex == i ? "primary-100" : "m-grey1"}`}
                 >
                   {type.name}
-                  <span>&nbsp;</span>
-                  {i === 3 ? (
-                    <span className="absolute md:inline hidden text-n-yellow px-[10px] py-[5px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-xs">
-                      Coming soon
-                    </span>
-                  ) : null}
                 </Ntext>
               </div>
             ))}

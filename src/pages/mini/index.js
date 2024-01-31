@@ -23,12 +23,14 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { Cart } from "components/checkout";
 import SeoConf from "config/seo/meta";
 
+if (typeof window !== "undefined") {
+  window.location.href = "/mini/7";
+}
+
 const MiniPage = () => {
   // const lenisRef = useRef();
 
-  typeof window !== "undefined" ? (window.location.href = "/mini/7") : null;
-
-  return <></>;
+  return <>""</>;
 
   // useEffect(() => {
   //   function update(time) {

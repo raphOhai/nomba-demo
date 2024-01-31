@@ -142,7 +142,7 @@ const Payment = ({
             </div>
           </div>
 
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <div className="flex flex-col gap-2">
               <div className="text-n-grey3 text-[16px]">You are to transfer</div>
               <div className="flex items-center">
@@ -152,7 +152,7 @@ const Payment = ({
                 <CopyButton copyText={itemCount * Number(formatMoneyToInput(item.price))} />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex flex-row gap-6 mt-5">
             <div className="w-full">

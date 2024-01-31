@@ -28,9 +28,14 @@ const Policies = () => {
           })}
         </ul>
         <div className={policyMenuList}>
-          <Ntext variant="p16" color="primary-200" className={policyMenuListItem}>
-            Nomba Financial Services Limited
-          </Ntext>
+          <div className="flex flex-col">
+            <Ntext variant="p16" color="primary-200" className={policyMenuListItem}>
+              Nomba Financial Services Limited
+            </Ntext>
+            <Ntext variant="p16" color="primary-200" className={policyMenuListItem}>
+              (Licensed by the Central Bank of Nigeria)
+            </Ntext>
+          </div>
         </div>
       </div>
     </div>
