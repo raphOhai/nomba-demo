@@ -100,7 +100,10 @@ const SectionTwo = ({ title, description, data }) => {
         function setActiveNav(index) {
           circles.forEach((circle, i) => {
             if (i === index) {
-              circle.scrollIntoView(false, { behavior: "smooth", inline: "start" });
+              circle.scrollIntoView(false, {
+                behavior: "smooth",
+                inline: "start",
+              });
             }
             circle.classList[i === index ? "add" : "remove"]("md:border");
 
@@ -155,54 +158,20 @@ const SectionTwo = ({ title, description, data }) => {
                       <Ntext variant="text2" color="m-light">
                         {s.description}
                       </Ntext>
-                      {i !== 3 ? (
-                        <div>
-                          <ReadMore
-                            onClick={() => showModal(s)}
-                            color="secondary"
-                            variant="text2"
-                            text="Learn more"
-                            className={"text-left"}
-                            data={s}
-                          />
-                        </div>
-                      ) : (
-                        <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
-                          Coming soon
-                        </div>
-                      )}
+                      <div>
+                        <ReadMore
+                          onClick={() => showModal(s)}
+                          color="secondary"
+                          variant="text2"
+                          text="Learn more"
+                          className={"text-left"}
+                          data={s}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
-
-              {/* Checkout API - coming soon */}
-
-              <div className={`${cardWrapStyle} hidden md:block`}>
-                <div
-                  className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
-                ></div>
-                {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
-                <div className={cardInnerWrapper}>
-                  <div className="flex items-center gap-[12px]">
-                    <CheckoutApi />
-                    <Ntext variant="text4" color="primary-100">
-                      Checkout API
-                    </Ntext>
-                  </div>
-                  <div
-                    className="flex flex-col gap-[10px]
-"
-                  >
-                    <Ntext variant="text2" color="m-light">
-                      Process and manage your payments easily and securely wherever you are.
-                    </Ntext>
-                    <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-n-grey6/30 w-min whitespace-pre text-sm">
-                      Coming soon
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="relative">
@@ -229,19 +198,13 @@ const SectionTwo = ({ title, description, data }) => {
                         <Ntext variant="text3" color="m-light">
                           {t.description}
                         </Ntext>
-                        {i !== 3 ? (
-                          <ReadMore
-                            onClick={() => showModal(t)}
-                            color="secondary"
-                            variant="text2"
-                            text="Learn more"
-                            className={"text-left"}
-                          />
-                        ) : (
-                          <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
-                            Coming soon
-                          </div>
-                        )}
+                        <ReadMore
+                          onClick={() => showModal(t)}
+                          color="secondary"
+                          variant="text2"
+                          text="Learn more"
+                          className={"text-left"}
+                        />
                       </div>
                     </div>
                   </div>
@@ -253,35 +216,6 @@ const SectionTwo = ({ title, description, data }) => {
                   </div>
                 </>
               ))}
-
-              {/* Checkout Api coming soon */}
-              <div className={`${cardWrapStyle} md:hidden mb-5 md:mb-0 `}>
-                <div
-                  className={`absolute h-full rounded-[10px]  bg-n-grey6 scroll-progress-2 transition-all duration-75 `}
-                >
-                  {" "}
-                </div>
-                {/* <div className="md:hidden absolute  w-full h-[150%] px-8 py-4">{s.iconMobile}</div> */}
-                <div className={cardInnerWrapper}>
-                  <div className="flex items-center gap-[20px]">
-                    <CheckoutApi />
-                    <Ntext variant="text5" color="primary-100">
-                      Checkout API
-                    </Ntext>
-                  </div>
-                  <div
-                    className="flex flex-col gap-[10px]
-"
-                  >
-                    <Ntext variant="text3" color="m-light">
-                      Process and manage your payments easily and securely wherever you are.
-                    </Ntext>
-                    <div className="text-n-yellow px-3 py-[3px] rounded-2xl bg-[#38383855] w-min whitespace-pre text-sm">
-                      Coming soon
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </Container>

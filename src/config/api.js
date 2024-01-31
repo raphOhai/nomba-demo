@@ -4,6 +4,7 @@ import React from "react";
 import VirtualAccount from "jpegs/api/icons/pages.svg";
 import VirtualAccountActive from "jpegs/api/icons/pages-active.svg";
 import Checkout from "jpegs/api/icons/checkout.svg";
+import CheckoutActive from "jpegs/api/icons/checkout-active.svg";
 import WebHookActive from "jpegs/api/icons/asterisk-active.svg";
 import TransferTo from "jpegs/api/icons/transfer.svg";
 import TransferToActive from "jpegs/api/icons/transfer-active.svg";
@@ -237,22 +238,42 @@ export const apiSection = [
     ),
     link: "https://docs.nomba.com/api#/operations/Assign%20terminal%20to%20an%20account",
   },
-  // {
-  //   title: "Checkout API",
-  //   description: "Process and manage your payments easily and securely wherever you are.",
-  //   icon: <CheckoutApi />,
-  //   iconMobile: (
-  //     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  //       <ellipse cx="29.3327" cy="9.88808" rx="10.6667" ry="9.41176" fill="#FFCC00" />
-  //       <path
-  //         fill-rule="evenodd"
-  //         clip-rule="evenodd"
-  //         d="M22.4103 9.36914L22.41 15.0381L27.3205 12.2041L29.8205 16.5342L24.91 19.3681L29.8205 22.2041L27.3205 26.5342L22.41 23.6991L22.4103 29.3691H17.4103L17.41 23.6991L12.5 26.5342L10 22.2041L14.91 19.3691L10 16.5342L12.5 12.2041L17.41 15.0381L17.4103 9.36914H22.4103Z"
-  //         stroke="#FFFAE6"
-  //       />
-  //     </svg>
-  //   ),
-  // },
+  {
+    title: "Checkout API",
+    description: "Process your payments online easily and securely wherever you are.",
+    icon: <CheckoutApi />,
+    image: (
+      <StaticImage
+        alt="Temp Doc"
+        className=" rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/checkout-api.png"
+      />
+    ),
+    cta: "Go to Checkout Docs",
+    modalImage: (
+      <StaticImage
+        alt="Temp Doc"
+        width={890}
+        height={160}
+        className=" rounded-lg md:rounded-2xl"
+        src="../assets/images/jpegs/api/modal/checkout-api.png"
+      />
+    ),
+    subText: (
+      <>
+        An online checkout API is a set of rules and tools that allow different software applications to communicate and
+        exchange information related to the checkout process in an online store. This API facilitates the seamless
+        integration of payment and order processing systems, enabling businesses to accept online payments securely.
+        <Br on="all" />
+        <Br on="all" />
+        Our Checkout APIs offer a range of remarkable advantages from conveniently processing payments with ease,
+        accepting Mastercard, Visa, Verve in Nigeria; as well as AmEx, you can easily pick from our options of using
+        cards or bank transfers to pay the way you want. Users also is optimized for every devices, and has been built
+        to ensure reduced declines and fraud protection.
+      </>
+    ),
+    link: "https://docs.nomba.com/api#/operations/Create%20an%20online%20checkout%20order",
+  },
 ];
 
 export const categories = [
@@ -520,17 +541,67 @@ if ($err) {
     name: "Checkout",
     slug: "checkout",
     icon: <Checkout />,
-    icon_active: <WebHookActive />,
+    icon_active: <CheckoutActive />,
     docs: [
       {
         language: "js",
         label: "Node.js",
-        snippet: `console.log('Coming soon')`,
+        snippet: `
+        var axios = require('axios');
+        var data = '{
+          "order": {
+            "orderReference": "testingref090", 
+            "callbackUrl": "https://www.nomba.com",
+            "customerEmail": "ttt@gmail.com",
+            "amount": 50,
+            "currency": "NGN",
+            "customerId": "identify123"
+          }
+        }';
+       
+        var config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://api.nomba.com/v1/checkout/order',
+            headers: {
+                'accountId': 'cb6778b6-207c-41ac-a7fd-c2d1969b6aa6'
+            },
+            data: data
+        };
+       
+        axios(config)
+            .then(function(response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        `,
       },
       {
         language: "js",
         label: "PHP",
-        snippet: `<?php echo 'Coming soon' ?>`,
+        snippet: `
+        <? php $curl = curl_init();
+          curl_setopt_array($curl, array(
+              CURLOPT_URL => '<https://api.nomba.com/v1/checkout/order>',
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'POST',
+              CURLOPT_POSTFIELDS => '{  "order": {      "orderReference": "testingref090",      "callbackUrl": "<https://www.nomba.com>",      "customerEmail": "ttt@gmail.com",      "amount": 50,      "currency": "NGN",      "customerId": "identify123"  }}',
+              CURLOPT_HTTPHEADER => array(
+                  'accountId: cb6778b6-207c-41ac-a7fd-c2d1969b6aa6'
+              ) ,
+          ));
+          $response = curl_exec($curl);
+          curl_close($curl);
+          echo $response;
+
+        `,
       },
     ],
   },
