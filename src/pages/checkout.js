@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Layout from "components/layout-max";
 import SeoConf from "config/seo/meta";
 
-import { Cart } from "components/checkout";
+import { Cart } from "components/checkout-page";
 
 import {
   IntegratePay,
