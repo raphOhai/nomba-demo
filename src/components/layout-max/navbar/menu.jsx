@@ -22,7 +22,7 @@ const Menu = ({ openMenu, onToggle, transparent }) => {
   }, [openMenu]);
 
   return (
-    <div className="lg:w-full nav-height">
+    <div className="lg:w-full nav-height !z-20">
       {/* hamburger menu for mobile */}
       {transparent ? (
         <button onClick={onToggle} className="lg:hidden" aria-label={menuIconAriaLabel}>

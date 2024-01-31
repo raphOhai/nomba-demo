@@ -12,7 +12,7 @@ const Menu = ({ openMenu, onToggle }) => {
   const menuIconAriaLabel = openMenu ? "menu icon" : "close menu icon";
 
   return (
-    <div className="lg:w-full  ">
+    <div className="lg:w-full !z-20">
       {/* hamburger menu for mobile */}
       <button onClick={onToggle} className="lg:hidden" aria-label={menuIconAriaLabel}>
         {openMenu ? <CloseIcon /> : <MenuIcon />}

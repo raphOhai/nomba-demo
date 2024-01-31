@@ -20,7 +20,7 @@ const CheckoutPageHero = () => {
   return (
     <section className={wrapperStyle}>
       <Container className={heroStyle}>
-        <section className="flex flex-col items-center lg:items-start max-w-[740px] z-10">
+        <section className="flex flex-col items-center lg:items-start max-w-[740px]">
           <article className={titleBadgeStyle}>
             <Ntext
               color="b-6"
@@ -129,8 +129,10 @@ const buttonsStyle = ctl(`
   lg:space-y-0
   lg:space-x-4
   space-y-6
+  lg:z-0
   mt-10
   w-fit
+  z-10
 `);
 
 const heroStyle = ctl(`
