@@ -3277,6 +3277,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@module-federation/node@npm:0.11.1":
+  version: 0.11.1
+  resolution: "@module-federation/node@npm:0.11.1"
+  dependencies:
+    "@module-federation/utilities": 1.3.0
+    encoding: 0.1.13
+    node-fetch: 2.6.7
+  peerDependencies:
+    next: ^12||^13
+    react: ^16||^17||^18
+    react-dom: ^16||^17||^18
+    webpack: ^5.40.0
+  peerDependenciesMeta:
+    next:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 12b1f11b6812bd3dc6d648eb7a5c73724d809932fafac030d1981ab52580e73f56805f087a05645a7fd95997497dfae4e5537fadd30722f2605ba19692d4d8e6
+  languageName: node
+  linkType: hard
+
+"@module-federation/utilities@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@module-federation/utilities@npm:1.3.0"
+  peerDependencies:
+    next: ^12 || ^13
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+    webpack: ^5.40.0
+  peerDependenciesMeta:
+    next:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 29b283a9f66a26b9839f529186e0e6d7480a4940fb2f75492571535ae429d7f814df7a8c32ae5e0658df89377c302c8babbf3129d3cc6926c119ee1363fa8033
+  languageName: node
+  linkType: hard
+
 "@motionone/animation@npm:^10.12.0":
   version: 10.15.1
   resolution: "@motionone/animation@npm:10.15.1"
@@ -7078,7 +7120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decode-uri-component@npm:^0.2.0":
+"decode-uri-component@npm:^0.2.0, decode-uri-component@npm:^0.2.2":
   version: 0.2.2
   resolution: "decode-uri-component@npm:0.2.2"
   checksum: 95476a7d28f267292ce745eac3524a9079058bbb35767b76e3ee87d42e34cd0275d2eb19d9d08c3e167f97556e8a2872747f5e65cbebcac8b0c98d83e285f139
@@ -7530,7 +7572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"encoding@npm:^0.1.13":
+"encoding@npm:0.1.13, encoding@npm:^0.1.13":
   version: 0.1.13
   resolution: "encoding@npm:0.1.13"
   dependencies:
@@ -9080,6 +9122,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-federation@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "gatsby-plugin-federation@npm:2.5.0"
+  dependencies:
+    "@module-federation/node": 0.11.1
+  peerDependencies:
+    gatsby: ">=4"
+    react: ">=17"
+  checksum: 6c2501f4f8eceb3b1744246cb0a4e044329bf890360e37d13f31e64f6b758affa51aa529e1f3ca3f4efb2c0d74ba92c3db1f9b5747cf1e6f1976155b61ea21e8
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-gatsby-cloud@npm:^4.14.0":
   version: 4.25.0
   resolution: "gatsby-plugin-gatsby-cloud@npm:4.25.0"
@@ -9305,6 +9359,18 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
   checksum: ffa795e226b0bbc302348e0abb82f9d0639d34ec056bc7b49ad63ee74ab517031fc3d3258b5ddae8228dbed853c2ffed1fb4a10ef4af185cf7b27c1dffe1cafa
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-use-query-params@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "gatsby-plugin-use-query-params@npm:1.0.1"
+  peerDependencies:
+    gatsby: ">=2.0"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+    use-query-params: ">=0.4.3"
+  checksum: 62027d909966595196c8546a5bb438961165566f0584d9d6a8fa9ed33072cfeced9a88df1044ba7261322e187e3182fcc610cd3e269b87395a762604eba15c38
   languageName: node
   linkType: hard
 
@@ -12598,6 +12664,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:2.6.7":
+  version: 2.6.7
+  resolution: "node-fetch@npm:2.6.7"
+  dependencies:
+    whatwg-url: ^5.0.0
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: 8d816ffd1ee22cab8301c7756ef04f3437f18dace86a1dae22cf81db8ef29c0bf6655f3215cb0cdb22b420b6fe141e64b26905e7f33f9377a7fa59135ea3e10b
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:^2.6.12, node-fetch@npm:^2.6.6, node-fetch@npm:^2.6.7":
   version: 2.6.12
   resolution: "node-fetch@npm:2.6.12"
@@ -12705,6 +12785,7 @@ __metadata:
     gatsby: ^4.14.0
     gatsby-background-image-es5: ^1.6.0
     gatsby-plugin-facebook-pixel: ^1.0.8
+    gatsby-plugin-federation: ^2.5.0
     gatsby-plugin-gatsby-cloud: ^4.14.0
     gatsby-plugin-google-tagmanager: ^4.14.0
     gatsby-plugin-image: ^2.14.1
@@ -12717,6 +12798,7 @@ __metadata:
     gatsby-plugin-root-import: ^2.0.8
     gatsby-plugin-sass: ^5.1.0
     gatsby-plugin-sharp: ^4.14.1
+    gatsby-plugin-use-query-params: ^1.0.1
     gatsby-rehype-prismjs: ^2.0.0
     gatsby-source-filesystem: ^4.14.0
     gatsby-transformer-rehype: ^2.0.1
@@ -12742,6 +12824,7 @@ __metadata:
     react-rotating-text: ^1.4.1
     react-select: ^5.8.0
     react-slick: ^0.29.0
+    react-use-query-param-string: ^2.0.10
     rive-react: ^4.7.1
     sass: ^1.60.0
     slick-carousel: ^1.8.1
@@ -12749,6 +12832,7 @@ __metadata:
     swiper: ^9.3.2
     tailwindcss: ^3.4.1
     typewriter-effect: ^2.21.0
+    use-query-params: ^2.2.1
     yup: ^0.32.11
   languageName: unknown
   linkType: soft
@@ -14198,6 +14282,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"query-string@npm:^7.1.1":
+  version: 7.1.3
+  resolution: "query-string@npm:7.1.3"
+  dependencies:
+    decode-uri-component: ^0.2.2
+    filter-obj: ^1.1.0
+    split-on-first: ^1.0.0
+    strict-uri-encode: ^2.0.0
+  checksum: 91af02dcd9cc9227a052841d5c2eecb80a0d6489d05625df506a097ef1c59037cfb5e907f39b84643cbfd535c955abec3e553d0130a7b510120c37d06e0f4346
+  languageName: node
+  linkType: hard
+
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -14600,6 +14696,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-sub-unsub@npm:^2.1.6":
+  version: 2.2.7
+  resolution: "react-sub-unsub@npm:2.2.7"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0
+  checksum: ea4c68a23c5fa1e62b0ccc1210c5f9e907df7619c1650d5ddabb4d123d1dca854576182573264c156a4b74630ce8bdd1281c60c53d8da7e612d33d03297f6e23
+  languageName: node
+  linkType: hard
+
 "react-transition-group@npm:^4.3.0":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
@@ -14612,6 +14718,19 @@ __metadata:
     react: ">=16.6.0"
     react-dom: ">=16.6.0"
   checksum: 75602840106aa9c6545149d6d7ae1502fb7b7abadcce70a6954c4b64a438ff1cd16fc77a0a1e5197cdd72da398f39eb929ea06f9005c45b132ed34e056ebdeb1
+  languageName: node
+  linkType: hard
+
+"react-use-query-param-string@npm:^2.0.10":
+  version: 2.1.5
+  resolution: "react-use-query-param-string@npm:2.1.5"
+  dependencies:
+    query-string: ^7.1.1
+    react-sub-unsub: ^2.1.6
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0
+  checksum: 4b1ed011b79738c36e5aa0200f46519e3f14d947e508a7d32b2de8307d96f6b4e5d882c86202d3b8ece53f2e5e0d21438cedcad4d36cfb65c1840b26fee753a3
   languageName: node
   linkType: hard
 
@@ -15398,6 +15517,13 @@ __metadata:
   dependencies:
     randombytes: ^2.1.0
   checksum: 3c4f4cb61d0893b988415bdb67243637333f3f574e9e9cc9a006a2ced0b390b0b3b44aef8d51c951272a9002ec50885eefdc0298891bc27eb2fe7510ea87dc4f
+  languageName: node
+  linkType: hard
+
+"serialize-query-params@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "serialize-query-params@npm:2.0.2"
+  checksum: 6dccdbd68cbec44c99599c4f77968e8685a74cc597f473ed93b15a8d03c3a67f50c958af9af3d186e64aabd7f98b59d674a05aa4e69d997ed86a5478cf133b27
   languageName: node
   linkType: hard
 
@@ -17151,6 +17277,25 @@ __metadata:
     "@types/react":
       optional: true
   checksum: a6532f7fc9ae222c3725ff0308aaf1f1ddbd3c00d685ef9eee6714fd0684de5cb9741b432fbf51e61a784e2955424864f7ea9f99734a02f237b17ad3e18ea5cb
+  languageName: node
+  linkType: hard
+
+"use-query-params@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "use-query-params@npm:2.2.1"
+  dependencies:
+    serialize-query-params: ^2.0.2
+  peerDependencies:
+    "@reach/router": ^1.2.1
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+    react-router-dom: ">=5"
+  peerDependenciesMeta:
+    "@reach/router":
+      optional: true
+    react-router-dom:
+      optional: true
+  checksum: 5bf16511a561cf09902c3526950c6c88999767a1990619a322685448abbd09f5d71a17289d0f727bb3e68d5baced36b3fc0bbf855664b3dd5046d5d553204d28
   languageName: node
   linkType: hard
 
