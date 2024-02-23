@@ -38,7 +38,7 @@ const CheckoutPage = () => {
       <IntegratePay />
       <CheckoutFAQs />
       <div data-lenis-prevent>
-        <Cart />
+        <Cart demo={true} />
       </div>
     </Layout>
   );

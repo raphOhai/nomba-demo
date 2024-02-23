@@ -26,8 +26,9 @@ import { Payment } from "./payment";
 import { useEffect } from "react";
 import { set } from "react-hook-form";
 import SucessScrean from "./sucessScrean";
+import { Seedomo } from "./seedemo";
 
-const Cart = ({ finalFocusRef }) => {
+const Cart = ({ finalFocusRef, demo = false }) => {
   const {
     isOpen,
     onClose,
@@ -153,16 +154,27 @@ const Cart = ({ finalFocusRef }) => {
       <DrawerOverlay />
       <DrawerContent bg="#1A1A1A" color="white" px="0" data-lenis-prevent className="drawer-content">
         {tabIndex === 0 ? <DrawerCloseButton color="white" className="close-btn" _hover={false} /> : ""}
-
-        <DrawerHeader>
-          {tabIndex === 0 ? (
-            <Ntext variant="text4" color="n-light">
-              <div style={{ color: "#B3B3B3" }}>Get started with Nomba Checkout</div>
-            </Ntext>
-          ) : (
-            ""
-          )}
-        </DrawerHeader>
+        {demo ? (
+          <DrawerHeader>
+            {tabIndex === 0 ? (
+              <Ntext variant="text4" color="n-light">
+                <div style={{ color: "#B3B3B3" }}>Nomba checkout demo</div>
+              </Ntext>
+            ) : (
+              ""
+            )}
+          </DrawerHeader>
+        ) : (
+          <DrawerHeader>
+            {tabIndex === 0 ? (
+              <Ntext variant="text4" color="n-light">
+                <div style={{ color: "#B3B3B3" }}>Get started with Nomba Checkout</div>
+              </Ntext>
+            ) : (
+              ""
+            )}
+          </DrawerHeader>
+        )}
 
         {!showPayment ? (
           <>
@@ -184,7 +196,11 @@ const Cart = ({ finalFocusRef }) => {
                     <CartIem counter={counter} dispatcher={dispatch} item={CartTerminals[itemIndex]} />
                   </TabPanel> */}
                   <TabPanel>
-                    <CustomerInfo state={info} setState={setInfo} />
+                    {demo ? (
+                      <Seedomo state={info} setState={setInfo} />
+                    ) : (
+                      <CustomerInfo state={info} setState={setInfo} />
+                    )}
                   </TabPanel>
 
                   <TabPanel>
@@ -209,6 +225,7 @@ const Cart = ({ finalFocusRef }) => {
                     className="  btn-outline"
                     onClick={() => {
                       closeAndReset();
+
                       mixpanel.track("Mini_checkout_Customer_cancels_order_for_mini", {
                         customerData: JSON.stringify(info),
                         terminals: counter.count,
@@ -220,36 +237,71 @@ const Cart = ({ finalFocusRef }) => {
                     </div>
                   </button>
                 </div>
-                <Button
-                  disabled={btnState}
-                  fontWeight={500}
-                  fontSize={16}
-                  colorScheme="yellow"
-                  size="medium"
-                  className="btn-contained"
-                  onClick={() => {
-                    if (tabIndex === 0) {
-                      mixpanel.track("Mini_checkout_Customer_place_their_info", {
-                        customerData: JSON.stringify(info),
-                        terminals: counter.count,
-                      });
-                    }
-                    if (tabIndex === 1) {
-                      mixpanel.track("Mini_checkout_Customer_input_their_info_goes_to_checkout", {
-                        customerData: JSON.stringify(info),
-                        terminals: counter.count,
-                      });
-                    }
-                    if (!info.phone || !info.email) {
-                      return;
-                      // setBtnState(true);
-                    } else {
-                      setTabIndex(tabIndex + 1);
-                    }
-                  }}
-                >
-                  Request demo
-                </Button>
+                {demo ? (
+                  <Button
+                    disabled={btnState}
+                    fontWeight={500}
+                    fontSize={16}
+                    colorScheme="yellow"
+                    size="medium"
+                    className="btn-contained"
+                    onClick={() => {
+                      if (tabIndex === 0) {
+                        mixpanel.track("Mini_checkout_Customer_place_their_info", {
+                          customerData: JSON.stringify(info),
+                          terminals: counter.count,
+                        });
+                      }
+                      if (tabIndex === 1) {
+                        onSubmit();
+                        mixpanel.track("Mini_checkout_Customer_input_their_info_goes_to_checkout", {
+                          customerData: JSON.stringify(info),
+                          terminals: counter.count,
+                        });
+                      }
+                      if (!info.phone || !info.email) {
+                        return;
+                        // setBtnState(true);
+                      } else {
+                        setTabIndex(tabIndex + 1);
+                      }
+                    }}
+                  >
+                   Pay N100
+                  </Button>
+                ) : (
+                  <Button
+                    disabled={btnState}
+                    fontWeight={500}
+                    fontSize={16}
+                    colorScheme="yellow"
+                    size="medium"
+                    className="btn-contained"
+                    onClick={() => {
+                      if (tabIndex === 0) {
+                        mixpanel.track("Mini_checkout_Customer_place_their_info", {
+                          customerData: JSON.stringify(info),
+                          terminals: counter.count,
+                        });
+                      }
+                      if (tabIndex === 1) {
+                        onSubmit();
+                        mixpanel.track("Mini_checkout_Customer_input_their_info_goes_to_checkout", {
+                          customerData: JSON.stringify(info),
+                          terminals: counter.count,
+                        });
+                      }
+                      if (!info.phone || !info.email) {
+                        return;
+                        // setBtnState(true);
+                      } else {
+                        setTabIndex(tabIndex + 1);
+                      }
+                    }}
+                  >
+                    Request demo
+                  </Button>
+                )}
               </div>
             )}
           </>
