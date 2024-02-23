@@ -31,8 +31,7 @@ import { Seedomo } from "./seedemo";
 const Cart = ({ finalFocusRef, demo = false }) => {
   const {
     isOpen,
-    onClose,
-    hasError,
+   
     hasEmailError,
     hasMobileError,
     counter,
