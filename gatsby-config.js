@@ -1,8 +1,19 @@
 require("dotenv").config();
 
 const path = require("path");
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-source-custom`,
+      options: {
+        apiKey: process.env.API_KEY,
+      },
+    },
+  ],
   siteMetadata: {
     title: `Nomba`,
     description: `Nomba Makes Money Easy. Improving access to financial tools for the banked, underbanked and unbanked.

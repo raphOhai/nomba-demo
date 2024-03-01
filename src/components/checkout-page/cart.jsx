@@ -27,11 +27,12 @@ import { useEffect } from "react";
 import { set } from "react-hook-form";
 import SucessScrean from "./sucessScrean";
 import { Seedomo } from "./seedemo";
+const { v4: uuidv4 } = require("uuid");
 
 const Cart = ({ finalFocusRef, demo = false }) => {
   const {
     isOpen,
-   
+
     hasEmailError,
     hasMobileError,
     counter,
@@ -136,6 +137,65 @@ const Cart = ({ finalFocusRef, demo = false }) => {
       .finally(() => {
         setIsLoading(false);
       });
+  };
+  const [savedAccessToken, setSavedAccessToken] = useState("");
+  const [requested, setRequested] = useState(false);
+
+  useEffect(() => {
+    const requestAccess = () => {
+      const options = {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
+          accountId: process.env.GATSBY_API_ACCOUNT_ID,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          grant_type: "client_credentials",
+          client_id: process.env.GATSBY_API_CLIENT_ID,
+          client_secret: process.env.GATSBY_API_CLIENT_SECRET,
+        }),
+      };
+
+      fetch("https://api.nomba.com/v1/auth/token/issue", options)
+        .then(response => response.json())
+        .then(response => setSavedAccessToken(response.data.access_token))
+        .catch(err => console.error(err));
+    };
+    if (!requested) {
+      setRequested(!requested);
+      requestAccess();
+    }
+  });
+
+  const testPay = () => {
+    const uuid = uuidv4();
+    const customerInfoWithPayment = { ...info };
+    const email = customerInfoWithPayment.email;
+    const options = {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${savedAccessToken}`,
+        accountId: process.env.GATSBY_API_ACCOUNT_ID,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        order: {
+          amount: "100.00",
+          callbackUrl: window.location.href,
+          currency: "NGN",
+          customerEmail: email,
+          customerId: process.env.GATSBY_API_CLIENT_ID,
+          orderReference: uuid,
+        },
+        tokenizeCard: "false",
+      }),
+    };
+
+    fetch("https://api.nomba.com/v1/checkout/order", options)
+      .then(response => response.json())
+      .then(response => window.location.href = response.data.checkoutLink)
+      .catch(err => console.error(err));
   };
 
   // set error states for user input
@@ -244,29 +304,9 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                     colorScheme="yellow"
                     size="medium"
                     className="btn-contained"
-                    onClick={() => {
-                      if (tabIndex === 0) {
-                        mixpanel.track("Mini_checkout_Customer_place_their_info", {
-                          customerData: JSON.stringify(info),
-                          terminals: counter.count,
-                        });
-                      }
-                      if (tabIndex === 1) {
-                        onSubmit();
-                        mixpanel.track("Mini_checkout_Customer_input_their_info_goes_to_checkout", {
-                          customerData: JSON.stringify(info),
-                          terminals: counter.count,
-                        });
-                      }
-                      if (!info.phone || !info.email) {
-                        return;
-                        // setBtnState(true);
-                      } else {
-                        setTabIndex(tabIndex + 1);
-                      }
-                    }}
+                    onClick={testPay}
                   >
-                   Pay N100
+                    Pay N100
                   </Button>
                 ) : (
                   <Button
