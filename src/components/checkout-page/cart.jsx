@@ -301,11 +301,6 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                     load
                   >
                     {loadingPayScreen ? (
-                      <p>
-                        {" "}
-                        pay <span className="bold">₦100</span>{" "}
-                      </p>
-                    ) : (
                       <div className="center flex">
                         <div class="lds-ellipsis">
                           <div></div>
@@ -314,6 +309,11 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                           <div></div>
                         </div>
                       </div>
+                    ) : (
+                      <p>
+                        {" "}
+                        pay <span className="bold">₦100</span>{" "}
+                      </p>
                     )}
                   </Button>
                 ) : (
