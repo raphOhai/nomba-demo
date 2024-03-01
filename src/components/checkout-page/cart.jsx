@@ -173,6 +173,9 @@ const Cart = ({ finalFocusRef, demo = false }) => {
     const uuid = uuidv4();
     const customerInfoWithPayment = { ...info };
     const email = customerInfoWithPayment.email;
+    if (!email) {
+      return;
+    }
     setLoadingPayScreen(true);
     const options = {
       method: "POST",
@@ -199,9 +202,17 @@ const Cart = ({ finalFocusRef, demo = false }) => {
       .then(response => (window.location.href = response.data.checkoutLink) & setLoadingPayScreen(false))
       .catch(err => console.error(err));
   };
-
-  // set error states for user input
-
+  const TabListLine = () => {
+    return (
+      <>
+        {demo ? (
+          <TabList borderBottom="1px" borderBottomColor="#333"></TabList>
+        ) : (
+          <TabList borderBottom="1px" borderBottomColor="#FFCC00"></TabList>
+        )}
+      </>
+    );
+  };
   return (
     <Drawer
       colorScheme="yellow"
@@ -219,7 +230,7 @@ const Cart = ({ finalFocusRef, demo = false }) => {
           <DrawerHeader>
             {tabIndex === 0 ? (
               <Ntext variant="text4" color="n-light">
-                <div style={{ color: "#B3B3B3" }}>Nomba checkout demo</div>
+                <div style={{ color: "#B3B3B3" }}>Checkout Live Demo</div>
               </Ntext>
             ) : (
               ""
@@ -241,21 +252,9 @@ const Cart = ({ finalFocusRef, demo = false }) => {
           <>
             <DrawerBody px="0">
               <Tabs index={tabIndex} isFitted colorScheme="yellow" onChange={handleTabsChange}>
-                {tabIndex === 0 ? (
-                  <TabList borderBottom="1px" borderBottomColor="#FFCC00">
-                    {/* <Tab isDisabled={hasError} _selected={tabStyle} color="#717171">
-                    Summary
-                  </Tab> */}
-                  </TabList>
-                ) : (
-                  ""
-                )}
+                {tabIndex === 0 ? <TabListLine /> : ""}
 
                 <TabPanels px={[2, 4, 4, 4]} className="elevate">
-                  {/* <TabPanel>
-                    Select the active terminal by index set
-                    <CartIem counter={counter} dispatcher={dispatch} item={CartTerminals[itemIndex]} />
-                  </TabPanel> */}
                   <TabPanel>
                     {demo ? (
                       <Seedomo state={info} setState={setInfo} />
@@ -265,14 +264,6 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                   </TabPanel>
 
                   <TabPanel>
-                    {/* <Checkout
-                      itemCount={counter.count}
-                      item={CartTerminals[itemIndex]}
-                      userInfo={info}
-                      setTabIndex={setTabIndex}
-                      moveToPayment={onSubmit}
-                      isLoading={isLoading}
-                    /> */}
                     <SucessScrean />
                   </TabPanel>
                 </TabPanels>
@@ -317,7 +308,10 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                         <div></div>
                       </div>
                     ) : (
-                      "Pay N100"
+                      <p>
+                        {" "}
+                        pay <span className="bold">N100</span>{" "}
+                      </p>
                     )}
                   </Button>
                 ) : (

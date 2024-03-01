@@ -12,34 +12,6 @@ const Seedomo = ({ state, setState, deliveryRequired = true }) => {
   const [open, setOpen] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
 
-
-  // const handleClick = () => {
-  //   setOpen(prev => !prev);
-  // };
-
-  // const handleClickAway = () => {
-  //   setOpen(false);
-  // };
-
-  // const handleClick2 = () => {
-  //   setOpen2(prev => !prev);
-  // };
-
-  // const handleClickAway2 = () => {
-  //   setOpen2(false);
-  // };
-
-  const styles = {
-    position: "absolute",
-    top: 28,
-    right: 0,
-    left: 0,
-    zIndex: 1,
-    border: "1px solid",
-    p: 1,
-    bgcolor: "background.paper",
-  };
-
   const [lgasInState, setLgasInState] = useState([]);
   // const [hasemailError, setEmailError] = useState(false);
 
@@ -101,15 +73,17 @@ const Seedomo = ({ state, setState, deliveryRequired = true }) => {
   }, []);
   return (
     <div className="mt-5 flex-col flex gap-4 ">
-      <Ntext variant="text3" color="n-light">
-        <div style={{ color: "#FFFFFF" }}>Add your Email</div>
-      </Ntext>
-
       <div className="flex flex-row gap-6">
-        <div className="w-full stack gap-1">
+        <div className="w-full stack gap-4">
+          <div className="notice-box">
+            <Ntext variant="p14" color="n-light">
+              Use our pre-set amount to test the checkout. Please note that this is a real transaction and that your
+              account will be debited.
+            </Ntext>
+          </div>
           <div id="mail-box" className="stack input-box">
             <div className={labelClass}>
-              <label htmlFor="emailAddress">Email address</label>
+              <label htmlFor="emailAddress">Enter email to get your receipt</label>
             </div>
             <input
               name="emailAddress"
@@ -117,7 +91,7 @@ const Seedomo = ({ state, setState, deliveryRequired = true }) => {
               id="emailAddress"
               className=""
               onBlur={e => validateEmail(e)}
-              placeholder="Enter your email address"
+              placeholder="youremail@mail.com"
               onChange={e => checkEmailValidations(e)}
               role="textbox"
               required

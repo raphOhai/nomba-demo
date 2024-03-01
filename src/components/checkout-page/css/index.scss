@@ -348,7 +348,6 @@ input:-webkit-autofill:active {
   /* Set the text color to white */
 }
 
-
 .lds-ellipsis {
   display: inline-block;
   position: relative;
@@ -403,4 +402,15 @@ input:-webkit-autofill:active {
   100% {
     transform: translate(24px, 0);
   }
+}
+
+.notice-box {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 245, 204, 0.24);
+  background: rgba(255, 245, 204, 0.16);
+  padding: 0.7rem 1.2rem;
+}
+
+.bold {
+  font-weight: bold;
 }
