@@ -47,28 +47,30 @@ const CheckoutRate = () => {
             <article className="flex">
               <article className="border-r border-solid border-n-charcoal w-[64%] px-4 md:px-8 pb-12 pt-10">
                 <p className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-3">
-                  <Ntext
-                    value="1.4%"
-                    color="primary-100"
-                    className="!font-bold !-tracking-[2px]"
-                    variant="h3"
-                  />
-                  <Ntext
-                    color="primary-100"
-                    value="capped at NGN 1,800"
-                    className="!font-normal !-tracking-[1px]"
-                    variant="text6"
-                  />
+                  <div className="stack ">
+                    <div className="flex gap-3">
+                      <Ntext value="1.4%" color="primary-100" className="!font-bold !-tracking-[2px]" variant="h3" />
+                      <Ntext
+                        color="primary-100"
+                        value="capped at NGN 1,800"
+                        className="!font-normal !-tracking-[1px]"
+                        variant="text6"
+                      />
+                    </div>
+                    <div className="end">
+                      <Ntext
+                        color="primary-100"
+                        value="*Only on Naira transactions, not international transactions"
+                        className="!font-normal !-tracking-[1px]"
+                        variant="p14"
+                      />
+                    </div>
+                  </div>
                 </p>
               </article>
               <article className="w-[36%] px-4 md:px-8 pb-12 pt-10">
                 <p className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-3">
-                  <Ntext
-                    value="1.5%"
-                    color="primary-100"
-                    className="!font-bold !-tracking-[2px]"
-                    variant="h3"
-                  />
+                  <Ntext value="1.5%" color="primary-100" className="!font-bold !-tracking-[2px]" variant="h3" />
                   <Ntext
                     value="or more"
                     color="primary-100"

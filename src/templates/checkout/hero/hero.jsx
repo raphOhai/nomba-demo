@@ -22,12 +22,7 @@ const CheckoutPageHero = () => {
       <Container className={heroStyle}>
         <section className="flex flex-col items-center lg:items-start max-w-[740px]">
           <article className={titleBadgeStyle}>
-            <Ntext
-              color="b-6"
-              value="Nomba Checkout"
-              className="!font-medium"
-              variant="text2"
-            />
+            <Ntext color="b-6" value="Nomba Checkout" className="!font-medium" variant="text2" />
           </article>
           <Ntext
             value={title}
@@ -44,13 +39,13 @@ const CheckoutPageHero = () => {
           <section className={buttonsStyle}>
             <Button
               className="!font-medium !text-base !text-n-smoky !w-[76vw] lg:!w-[246px] !h-14 lg:z-10"
-              href={{ url: "https://dashboard.nomba.com/auth/sign-up-new" }}
-              text="Get Started for free"
+              text="Try Live Demo"
+              onClick={onOpen}
             />
             <Button
-              text="Request demo"
-              className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[204px] !h-14"
-              onClick={onOpen}
+              text="Get Started"
+              className="!bg-transparent !border-solid !border-n-charcoal !font-medium !text-base !text-white !w-[76vw] lg:!w-[204px] !h-14 contact-btn responsive-btn btn2"
+              href={{ url: "https://dashboard.nomba.com/auth/sign-up-new" }}
             />
           </section>
         </section>
