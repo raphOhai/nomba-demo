@@ -140,6 +140,7 @@ const Cart = ({ finalFocusRef, demo = false }) => {
   };
   const [savedAccessToken, setSavedAccessToken] = useState("");
   const [requested, setRequested] = useState(false);
+  const [loadingPayScreen, setLoadingPayScreen] = useState(false);
 
   useEffect(() => {
     const requestAccess = () => {
@@ -172,6 +173,7 @@ const Cart = ({ finalFocusRef, demo = false }) => {
     const uuid = uuidv4();
     const customerInfoWithPayment = { ...info };
     const email = customerInfoWithPayment.email;
+    setLoadingPayScreen(true);
     const options = {
       method: "POST",
       headers: {
@@ -194,7 +196,7 @@ const Cart = ({ finalFocusRef, demo = false }) => {
 
     fetch("https://api.nomba.com/v1/checkout/order", options)
       .then(response => response.json())
-      .then(response => window.location.href = response.data.checkoutLink)
+      .then(response => (window.location.href = response.data.checkoutLink) & setLoadingPayScreen(false))
       .catch(err => console.error(err));
   };
 
@@ -305,8 +307,18 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                     size="medium"
                     className="btn-contained"
                     onClick={testPay}
+                    load
                   >
-                    Pay N100
+                    {loadingPayScreen ? (
+                      <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                    ) : (
+                      "Pay N100"
+                    )}
                   </Button>
                 ) : (
                   <Button
