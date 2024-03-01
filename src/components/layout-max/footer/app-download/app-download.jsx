@@ -2,7 +2,7 @@ import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 import { Ntext, Container, Br } from "components";
 import AppStore from "svgs/apple.svg";
-import PlayStore from "svgs/playStore.svg";
+import PlayStore from "svgs/playstore.svg";
 import SubFooterLeft from "svgs/subfooter-left.svg";
 import { DownloadButton } from "./download-button";
 
