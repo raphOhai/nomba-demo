@@ -310,7 +310,7 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                     ) : (
                       <p>
                         {" "}
-                        pay <span className="bold">N100</span>{" "}
+                        pay <span className="bold">₦100</span>{" "}
                       </p>
                     )}
                   </Button>
