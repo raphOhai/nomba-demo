@@ -301,17 +301,19 @@ const Cart = ({ finalFocusRef, demo = false }) => {
                     load
                   >
                     {loadingPayScreen ? (
-                      <div class="lds-ellipsis">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                    ) : (
                       <p>
                         {" "}
                         pay <span className="bold">₦100</span>{" "}
                       </p>
+                    ) : (
+                      <div className="center flex">
+                        <div class="lds-ellipsis">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
                     )}
                   </Button>
                 ) : (
