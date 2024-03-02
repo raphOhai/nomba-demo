@@ -13,7 +13,11 @@ export const notificationsSection = {
 
 export const acceptPaymentSection = {
   description: "Create your online store and get paid easily via our Checkout plugin on Shopify store and WooCommerce ",
-  title: <>Accept payment on <Br on="desktop" /> Shopify and WooCommerce</>,
+  title: (
+    <>
+      Accept payment on <Br on="desktop" /> Shopify and WooCommerce
+    </>
+  ),
 };
 
 export const checkoutRateSection = {
@@ -22,12 +26,17 @@ export const checkoutRateSection = {
 };
 
 export const integrateSection = {
-  description: "Simplify your payments on our platform — we accept both Naira and International cards, transfers, and provide various payment options",
+  description:
+    "Simplify your payments on our platform — we accept both Naira and International cards, transfers, and provide various payment options",
   title: "Integrate online checkout on your terms",
 };
 
 export const benefitsSection = {
-  title: <>Smooth, secure, <Br on="desktop" /> transparent payments</>,
+  title: (
+    <>
+      Smooth, secure, <Br on="desktop" /> transparent payments
+    </>
+  ),
   benefits: [
     {
       icon: <AtmCardIcon className="menuIconOne" />,
@@ -37,7 +46,8 @@ export const benefitsSection = {
     },
     {
       icon: <PaymentOptionsIcon className="menuIconTwo" />,
-      description: "Your payment, your choice! Pick from our options of using cards or bank transfers, to pay the way you want.",
+      description:
+        "Your payment, your choice! Pick from our options of using cards or bank transfers, to pay the way you want.",
       title: "Diverse Payment Options.",
       tint: "bg-[#33FF00]",
     },
@@ -51,8 +61,13 @@ export const benefitsSection = {
 };
 
 export const apiDocsSection = {
-  description: "A simple, elegant interface so you can start integrating in minutes. Leverage our APIs to transform your businesses and products.",
-  title: <>Get to Integrate Fast with our <Br on="desktop" /> Checkout API</>,
+  description:
+    "A simple, elegant interface so you can start integrating in minutes. Leverage our APIs to transform your businesses and products.",
+  title: (
+    <>
+      Get to Integrate Fast with our <Br on="desktop" /> Checkout API
+    </>
+  ),
   docs: [
     {
       label: "Node.js",
@@ -130,8 +145,13 @@ echo $response;
 };
 
 export const heroSection = {
-  title: <>Seamless Online <Br on="desktop" /> Payment, Simplified</>,
-  description: "Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly.",
+  title: (
+    <>
+      Seamless Online <Br on="desktop" /> Payment, Simplified
+    </>
+  ),
+  description:
+    "Accept payments online through local & international cards (Mastercard, visa, verve, Amex) bank transfers, ussd and QR.",
 };
 
 export const advantages = [
@@ -166,6 +186,7 @@ export const faqs = [
   {
     id: 5,
     header: "How does Nomba Checkout work?",
-    content: "It works by accepting bank transfer or card payment and sending a transaction notification webhook on payment completion",
+    content:
+      "It works by accepting bank transfer or card payment and sending a transaction notification webhook on payment completion",
   },
 ];
