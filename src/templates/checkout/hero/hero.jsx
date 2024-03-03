@@ -64,7 +64,7 @@ const CheckoutPageHero = () => {
                   color="primary-600"
                   value="We are ->"
                   className="!-tracking-[0.8px] text-center lg:text-start max-w-[628px] "
-                  variant="text4lite"
+                  variant="p13"
                 />
               </div>
 
