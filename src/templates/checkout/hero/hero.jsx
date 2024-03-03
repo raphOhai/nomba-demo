@@ -7,6 +7,7 @@ import { heroSection } from "config/checkout";
 
 import RightBlur from "svgs/checkout/hero-right-blur.svg";
 import LeftBlur from "svgs/checkout/hero-left-blur.svg";
+import Dss from "svgs/checkout/dssCompliant.svg";
 
 import { AppContext } from "states/context";
 
@@ -49,12 +50,30 @@ const CheckoutPageHero = () => {
             />
           </section>
         </section>
-        <Rive
-          src="/check-out-with-nomba.riv"
-          layout={new Layout({ fit: Fit.Cover })}
-          className={animationWrapperStyle}
-          animations="Timeline 1"
-        />
+        <div className="stack gap5">
+          <Rive
+            src="/check-out-with-nomba.riv"
+            layout={new Layout({ fit: Fit.Cover })}
+            className={animationWrapperStyle}
+            animations="Timeline 1"
+          />
+          <div className="end">
+            <div className="flex gap-3">
+              <div className="center">
+                <Ntext
+                  color="primary-600"
+                  value="We are ->"
+                  className="!-tracking-[0.8px] text-center lg:text-start max-w-[628px] "
+                  variant="text4lite"
+                />
+              </div>
+
+              <div className="center">
+                <Dss />
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
       <RightBlur className={rightBlurStyle} />
       <LeftBlur className={leftBlurStyle} />
