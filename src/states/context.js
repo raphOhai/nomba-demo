@@ -30,6 +30,8 @@ export const ContextWrapper = ({ children }) => {
 
   const [counter, dispatch] = useReducer(reducer, initialItems);
 
+  const [accessToken, setAcesstoken] = useState("");
+
   const [info, setInfo] = useState({
     timestamp: new Date().toLocaleString(),
     deliveryAddress: "",
@@ -61,6 +63,10 @@ export const ContextWrapper = ({ children }) => {
     setHasError(true);
   };
 
+  const saveAccessToken = token => {
+    setAcesstoken(token);
+  };
+
   const closeAndReset = () => {
     onClose();
     resetInfo();
@@ -78,36 +84,41 @@ export const ContextWrapper = ({ children }) => {
   useEffect(() => {
     setIsFetchingRoles(true);
 
-    setAvailableRoles(JSON.parse(localStorage.getItem('nomba-available-roles') || '[]'));
-    setDepartments(JSON.parse(localStorage.getItem('nomba-departments') || '[]'));
-    setLocations(JSON.parse(localStorage.getItem('nomba-locations') || '[]'));
+    setAvailableRoles(JSON.parse(localStorage.getItem("nomba-available-roles") || "[]"));
+    setDepartments(JSON.parse(localStorage.getItem("nomba-departments") || "[]"));
+    setLocations(JSON.parse(localStorage.getItem("nomba-locations") || "[]"));
 
-    fetch(FETCH_ROLES_URL).then(res => res.json()).then(({ Results: roles }) => {
-      const newRoleLocations = uniq(map(roles, role => `${role.City}, ${role.Country}`));
+    fetch(FETCH_ROLES_URL)
+      .then(res => res.json())
+      .then(({ Results: roles }) => {
+        const newRoleLocations = uniq(map(roles, role => `${role.City}, ${role.Country}`));
 
-      const newRoleDepartments = uniq(map(roles, 'Department'));
+        const newRoleDepartments = uniq(map(roles, "Department"));
 
-      const newAvailableRoles = map(roles, role => ({
-        slug: role.Title.replace(/[^a-z0-9 ]/gi, '').split(/ +/g).join('-').toLowerCase(),
-        location: `${role.City}, ${role.Country}`,
-        description: role.MetatagDescription,
-        metaTagTitle: role.MetatagTitle,
-        department: role.Department,
-        markup: role.Description,
-        title: role.Title,
-        id: role.Id,
-      }));
+        const newAvailableRoles = map(roles, role => ({
+          slug: role.Title.replace(/[^a-z0-9 ]/gi, "")
+            .split(/ +/g)
+            .join("-")
+            .toLowerCase(),
+          location: `${role.City}, ${role.Country}`,
+          description: role.MetatagDescription,
+          metaTagTitle: role.MetatagTitle,
+          department: role.Department,
+          markup: role.Description,
+          title: role.Title,
+          id: role.Id,
+        }));
 
-      localStorage.setItem('nomba-available-roles', JSON.stringify(newAvailableRoles));
-      localStorage.setItem('nomba-departments', JSON.stringify(newRoleDepartments));
-      localStorage.setItem('nomba-locations', JSON.stringify(newRoleLocations));
+        localStorage.setItem("nomba-available-roles", JSON.stringify(newAvailableRoles));
+        localStorage.setItem("nomba-departments", JSON.stringify(newRoleDepartments));
+        localStorage.setItem("nomba-locations", JSON.stringify(newRoleLocations));
 
-      setAvailableRoles(newAvailableRoles);
-      setDepartments(newRoleDepartments);
-      setLocations(newRoleLocations);
+        setAvailableRoles(newAvailableRoles);
+        setDepartments(newRoleDepartments);
+        setLocations(newRoleLocations);
 
-      setIsFetchingRoles(false);
-    });
+        setIsFetchingRoles(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -148,12 +159,15 @@ export const ContextWrapper = ({ children }) => {
         tabIndex,
         setTabIndex,
         handleTabsChange,
+        saveAccessToken,
+        accessToken,
 
         isFetchingRoles,
         availableRoles,
         departments,
         locations,
-      }}>
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

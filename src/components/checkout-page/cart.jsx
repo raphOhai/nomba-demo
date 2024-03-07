@@ -29,18 +29,15 @@ import SucessScrean from "./sucessScrean";
 import { Seedomo } from "./seedemo";
 const { v4: uuidv4 } = require("uuid");
 
-const Cart = ({ finalFocusRef, demo = false }) => {
+const Cart = ({ finalFocusRef, demo = false, token }) => {
   const {
     isOpen,
-
     hasEmailError,
     hasMobileError,
     counter,
     info,
     setInfo,
     itemIndex,
-    setHasEmailError,
-    setHasMobileError,
     closeAndReset,
     tabIndex,
     setTabIndex,
@@ -142,33 +139,6 @@ const Cart = ({ finalFocusRef, demo = false }) => {
   const [requested, setRequested] = useState(false);
   const [loadingPayScreen, setLoadingPayScreen] = useState(false);
 
-  useEffect(() => {
-    const requestAccess = () => {
-      const options = {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
-          accountId: process.env.GATSBY_API_ACCOUNT_ID,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          grant_type: "client_credentials",
-          client_id: process.env.GATSBY_API_CLIENT_ID,
-          client_secret: process.env.GATSBY_API_CLIENT_SECRET,
-        }),
-      };
-
-      fetch("https://api.nomba.com/v1/auth/token/issue", options)
-        .then(response => response.json())
-        .then(response => setSavedAccessToken(response.data.access_token))
-        .catch(err => console.error(err));
-    };
-    if (!requested) {
-      setRequested(!requested);
-      requestAccess();
-    }
-  });
-
   const testPay = () => {
     const uuid = uuidv4();
     const customerInfoWithPayment = { ...info };
@@ -180,7 +150,7 @@ const Cart = ({ finalFocusRef, demo = false }) => {
     const options = {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${savedAccessToken}`,
+        Authorization: `Bearer ${token}`,
         accountId: process.env.GATSBY_API_ACCOUNT_ID,
         "Content-Type": "application/json",
       },
