@@ -171,7 +171,9 @@ export const faqs = [
   {
     id: 2,
     header: "What is the charge for checkout processing?",
-    content: "We charge a flat fee of 10% of the total amount",
+    content:
+      "We charge a variable fee of 1.4% for checkout processing on Naira transactions; and 3.6% for international transactions.",
+    subContent: "Only on Naira transactions, not international transactions.",
   },
   {
     id: 3,
@@ -180,13 +182,14 @@ export const faqs = [
   },
   {
     id: 4,
-    header: "How easy is it to use?",
-    content: "We have an easy-to-use interface that makes it easy for you to integrate with our API",
+    header: "How long does it take to get my money?”",
+    content:
+      "We automatically settle into your account T+1; all transactions today, will be settled automatically into your account the next working day i.e. tomorrow.",
   },
   {
     id: 5,
-    header: "How does Nomba Checkout work?",
+    header: "Do you offer tailored pricing based on volumes?",
     content:
-      "It works by accepting bank transfer or card payment and sending a transaction notification webhook on payment completion",
+      "Yes, we are happy to discuss tailored pricing for merchants who aim to process large volumes. Please book a demo and we'll be happy to discuss this.",
   },
 ];
