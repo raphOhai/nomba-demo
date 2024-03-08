@@ -135,9 +135,31 @@ const Cart = ({ finalFocusRef, demo = false, token }) => {
         setIsLoading(false);
       });
   };
+
   const [savedAccessToken, setSavedAccessToken] = useState("");
   const [requested, setRequested] = useState(false);
   const [loadingPayScreen, setLoadingPayScreen] = useState(false);
+
+  useEffect(() => {
+    const options = {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
+        accountId: process.env.GATSBY_API_ACCOUNT_ID,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        grant_type: "client_credentials",
+        client_id: process.env.GATSBY_API_CLIENT_ID,
+        client_secret: process.env.GATSBY_API_CLIENT_SECRET,
+      }),
+    };
+
+    fetch("https://api.nomba.com/v1/auth/token/issue", options)
+      .then(response => response.json())
+      .then(response => setSavedAccessToken(response.data.access_token))
+      .catch(err => console.error(err));
+  });
 
   const testPay = () => {
     const uuid = uuidv4();
@@ -150,7 +172,7 @@ const Cart = ({ finalFocusRef, demo = false, token }) => {
     const options = {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${savedAccessToken}`,
         accountId: process.env.GATSBY_API_ACCOUNT_ID,
         "Content-Type": "application/json",
       },

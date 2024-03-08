@@ -17,9 +17,9 @@ import {
 } from "templates";
 
 import { split } from "animations/text";
-const CheckoutPage = ({ serverData }) => {
+const CheckoutPage = () => {
   useEffect(() => {
-    console.log(serverData.data.access_token);
+    // console.log(serverData.data.access_token);
     split();
   });
 
@@ -35,7 +35,7 @@ const CheckoutPage = ({ serverData }) => {
       <IntegratePay />
       <CheckoutFAQs />
       <div data-lenis-prevent>
-        <Cart demo={true} token={serverData.data.access_token} />
+        <Cart demo={true} />
       </div>
     </Layout>
   );
@@ -43,36 +43,36 @@ const CheckoutPage = ({ serverData }) => {
 
 export default CheckoutPage;
 
-export async function getServerData() {
-  try {
-    const options = {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
-        accountId: process.env.GATSBY_API_ACCOUNT_ID,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        grant_type: "client_credentials",
-        client_id: process.env.GATSBY_API_CLIENT_ID,
-        client_secret: process.env.GATSBY_API_CLIENT_SECRET,
-      }),
-    };
+// export async function getServerData() {
+//   try {
+//     const options = {
+//       method: "POST",
+//       headers: {
+//         Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
+//         accountId: process.env.GATSBY_API_ACCOUNT_ID,
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         grant_type: "client_credentials",
+//         client_id: process.env.GATSBY_API_CLIENT_ID,
+//         client_secret: process.env.GATSBY_API_CLIENT_SECRET,
+//       }),
+//     };
 
-    const res = await fetch(`https://api.nomba.com/v1/auth/token/issue`, options);
+//     const res = await fetch(`https://api.nomba.com/v1/auth/token/issue`, options);
 
-    if (!res.ok) {
-      throw new Error(`Response failed`);
-    }
+//     if (!res.ok) {
+//       throw new Error(`Response failed`);
+//     }
 
-    return {
-      props: await res.json(),
-    };
-  } catch (error) {
-    return {
-      status: 500,
-      headers: {},
-      props: {},
-    };
-  }
-}
+//     return {
+//       props: await res.json(),
+//     };
+//   } catch (error) {
+//     return {
+//       status: 500,
+//       headers: {},
+//       props: {},
+//     };
+//   }
+// }
