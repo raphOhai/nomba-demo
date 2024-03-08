@@ -182,7 +182,7 @@ export const faqs = [
   },
   {
     id: 4,
-    header: "How long does it take to get my money?”",
+    header: "How long does it take to get my money?",
     content:
       "We automatically settle into your account T+1; all transactions today, will be settled automatically into your account the next working day i.e. tomorrow.",
   },
