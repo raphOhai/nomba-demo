@@ -151,7 +151,7 @@ export const heroSection = {
     </>
   ),
   description:
-    "Accept payments online through local & international cards (Mastercard, visa, verve, Amex) bank transfers, ussd and QR.",
+    "Seamlessly integrate our product for a smoother checkout process that delights your customers. Elevate your transactions effortlessly.",
 };
 
 export const advantages = [
