@@ -10,19 +10,20 @@ import Select from "react-select";
 
 import WhiteChevronRight from "svgs/white-chevron-right.svg";
 import SearchIcon from "svgs/search-icon.svg";
+import CareerWidget from "./careerWidjet";
 
 const GetYourCareerStarted = () => {
   const { isFetchingRoles, availableRoles, departments, locations } = useContext(AppContext);
 
-  const [department, setDepartment] = useState('');
-  const [location, setLocation] = useState('');
-  const [needle, setNeedle] = useState('');
+  const [department, setDepartment] = useState("");
+  const [location, setLocation] = useState("");
+  const [needle, setNeedle] = useState("");
 
   const departmentOptions = useMemo(() => {
     return [
-      { value: '', label: 'All departments', count: availableRoles.length },
+      { value: "", label: "All departments", count: availableRoles.length },
       ...departments.map(department => ({
-        count: countBy(availableRoles, 'department')[department],
+        count: countBy(availableRoles, "department")[department],
         value: department,
         label: department,
       })),
@@ -31,10 +32,7 @@ const GetYourCareerStarted = () => {
 
   const departmentLabels = useMemo(() => {
     return departmentOptions.map(option => (
-      <article
-        key={option.label}
-        className="cursor-pointer mt-6"
-        onClick={() => setDepartment(option.value)}>
+      <article key={option.label} className="cursor-pointer mt-6" onClick={() => setDepartment(option.value)}>
         <Ntext
           color="primary-100"
           value={`${option.label} - ${option.count}`}
@@ -47,17 +45,15 @@ const GetYourCareerStarted = () => {
 
   const locationOptions = useMemo(() => {
     return [
-      { value: '', label: 'All locations' },
-      ...locations.map(location => ({ value: location, label: location }))
+      { value: "", label: "All locations" },
+      ...locations.map(location => ({ value: location, label: location })),
     ];
   }, [isFetchingRoles, locations]);
 
   const matchingRoles = useMemo(() => {
-    const hasMatch = (whole, part) => whole.toLowerCase().includes(part.toLowerCase())
+    const hasMatch = (whole, part) => whole.toLowerCase().includes(part.toLowerCase());
     return availableRoles.filter(
-      role => hasMatch(role.department, department)
-        && hasMatch(role.location, location)
-        && hasMatch(role.title, needle)
+      role => hasMatch(role.department, department) && hasMatch(role.location, location) && hasMatch(role.title, needle)
     );
   }, [isFetchingRoles, department, location, needle]);
 
@@ -78,12 +74,7 @@ const GetYourCareerStarted = () => {
           <Ntext variant="p14" color="secondary-100" value="Careers" />
         </NLink>
         <WhiteChevronRight />
-        <Ntext
-          color="secondary"
-          value="View available roles"
-          className="cursor-pointer"
-          variant="p14"
-        />
+        <Ntext color="secondary" value="View available roles" className="cursor-pointer" variant="p14" />
       </section>
       <Ntext
         color="primary-100"
@@ -97,75 +88,70 @@ const GetYourCareerStarted = () => {
         color="n-grey1"
       />
       <section className={infoAreaStyle}>
-        <aside className={asideStyle}>
+        {/* <aside className={asideStyle}>
           <Select
             options={locationOptions}
             onChange={option => setLocation(option.value)}
             defaultValue={locationOptions[0]}
             className={locationSelectStyle}
             styles={{
-              indicatorSeparator: () => ({ display: 'none' }),
+              indicatorSeparator: () => ({ display: "none" }),
               dropdownIndicator: baseStyles => ({
                 ...baseStyles,
-                '&:hover': { color: 'white' },
-                paddingRight: '16px',
-                color: 'white',
+                "&:hover": { color: "white" },
+                paddingRight: "16px",
+                color: "white",
               }),
               singleValue: baseStyles => ({
                 ...baseStyles,
-                paddingLeft: '10px',
-                color: 'white',
+                paddingLeft: "10px",
+                color: "white",
               }),
               menuList: baseStyles => ({
                 ...baseStyles,
-                paddingRight: '10px',
-                paddingLeft: '10px',
+                paddingRight: "10px",
+                paddingLeft: "10px",
               }),
               control: baseStyles => ({
                 ...baseStyles,
-                backgroundColor: '#383838',
-                borderColor: '#383838',
-                '&:hover': {
-                  borderColor: '#383838',
+                backgroundColor: "#383838",
+                borderColor: "#383838",
+                "&:hover": {
+                  borderColor: "#383838",
                 },
-                boxShadow: 'none',
-                cursor: 'pointer',
+                boxShadow: "none",
+                cursor: "pointer",
               }),
               option: baseStyles => ({
                 ...baseStyles,
-                backgroundColor: '#383838',
-                cursor: 'pointer',
-                color: 'white',
-                ':active': {
-                  backgroundColor: '#383838',
+                backgroundColor: "#383838",
+                cursor: "pointer",
+                color: "white",
+                ":active": {
+                  backgroundColor: "#383838",
                 },
-                '&:hover': {
-                  color: '#FFCC00',
+                "&:hover": {
+                  color: "#FFCC00",
                 },
               }),
               input: baseStyles => ({
                 ...baseStyles,
-                caretColor: 'transparent',
-                paddingLeft: '10px',
-                color: 'white',
+                caretColor: "transparent",
+                paddingLeft: "10px",
+                color: "white",
               }),
               menu: baseStyles => ({
                 ...baseStyles,
-                backgroundColor: '#383838',
-                borderRadius: '5px',
+                backgroundColor: "#383838",
+                borderRadius: "5px",
               }),
             }}
           />
-          <Ntext
-            value="Filter by department"
-            className="!font-bold mt-12"
-            variant="text3"
-            color="n-grey1"
-          />
+          <Ntext value="Filter by department" className="!font-bold mt-12" variant="text3" color="n-grey1" />
           {departmentLabels}
-        </aside>
+        </aside> */}
         <section className={infoBoardStyle}>
-          <article className={inputWrapperStyle}>
+          {/* <article className={inputWrapperStyle}>
             <SearchIcon />
             <input
               className={searchInputStyle}
@@ -173,32 +159,32 @@ const GetYourCareerStarted = () => {
               onChange={event => setNeedle(event.target.value)}
               value={needle}
             />
-          </article>
-          <Ntext
+          </article> */}
+          {/* <Ntext
             value={
               matchingRoles.length > 0
-                ? `Showing ${pluralize(matchingRoles.length, 'role')}`
-                : 'No matching roles found'
+                ? `Showing ${pluralize(matchingRoles.length, "role")}`
+                : "No matching roles found"
             }
             className="!font-bold mt-12 mb-6"
             variant="text3"
             color="n-grey1"
-          />
-          {
-            matchingRoles.map(role => (
-              <NLink
-                key={role.slug} className={roleWrapperStyle}
-                href={{ url: `/careers/roles/${role.slug}` }}>
-                <Ntext
-                  color="primary-100"
-                  className="!font-bold -tracking-[0.4px]"
-                  variant="text5lite"
-                  value={role.title}
-                />
-                <Ntext color="primary-100" value={role.location} variant="text3" />
-              </NLink>
-            ))
-          }
+          /> */}
+          {/* {matchingRoles.map(role => (
+            <NLink key={role.slug} className={roleWrapperStyle} href={{ url: `/careers/roles/${role.slug}` }}>
+              <Ntext
+                color="primary-100"
+                className="!font-bold -tracking-[0.4px]"
+                variant="text5lite"
+                value={role.title}
+              />
+              <Ntext color="primary-100" value={role.location} variant="text3" />
+            </NLink>
+          ))} */}
+
+          <div className="maxWidth">
+            <CareerWidget />
+          </div>
         </section>
       </section>
     </Container>

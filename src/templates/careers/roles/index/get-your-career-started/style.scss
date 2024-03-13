@@ -1,0 +1,17 @@
+.career-box {
+  color: white !important;
+  ul {
+    // border: 1px solid red;
+
+    margin-bottom: 1rem;
+    li {
+      &:hover {
+        // background-color: darkblue;
+      }
+    }
+  }
+
+  .rec-group {
+    gap: 3rem !important;
+  }
+}
