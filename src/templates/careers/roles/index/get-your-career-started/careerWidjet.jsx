@@ -45,7 +45,7 @@ const CareerWidget = () => {
           </div>
         </div>
       </div>
-      <div className="center">
+      <div className="center ">
         <Button
           onClick={handleApply}
           className="!font-large !text-[16px] !min-w-[100px] !w-[200px] !text-left text-Btn"
