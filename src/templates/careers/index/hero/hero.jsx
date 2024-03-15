@@ -70,7 +70,7 @@ const CareersPageHero = () => {
         <Ntext color="primary-100" className="max-w-[640px] mx-auto mt-5 mb-6" variant="h1">
           <span>{"We Have "}</span>
           {roleCount > 0 && (
-            <NLink className="inline underline" href={{ url: "https://nomba.zohorecruit.com" }}>
+            <NLink className="inline underline" href={{ url: "/careers/roles" }}>
               <span>{roleCount}</span>
             </NLink>
           )}
@@ -78,7 +78,7 @@ const CareersPageHero = () => {
         </Ntext>
         <Button
           className="!font-medium !text-sm !min-w-[86px] mb-[72px] !h-10"
-          href={{ url: "/careers/roles" }}
+          href={{ url: "https://nomba.zohorecruit.com" }}
           text="Join Us"
         />
       </section>
