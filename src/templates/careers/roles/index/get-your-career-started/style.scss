@@ -14,3 +14,13 @@
     gap: 3rem !important;
   }
 }
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+
+  :nth-child(5) {
+    // background-color: #383838;
+    padding: 3px;
+  }
+}

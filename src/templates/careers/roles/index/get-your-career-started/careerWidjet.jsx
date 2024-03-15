@@ -40,7 +40,7 @@ const CareerWidget = () => {
       <div className="embed_jobs_head embed_jobs_with_style_3 embed_jobs_with_style">
         <div className="embed_jobs_head2">
           <div className="embed_jobs_head3">
-            <div id="rec_job_listing_div" className="career-box"></div>
+            <div id="rec_job_listing_div" className="career-box roles-grid"></div>
           </div>
         </div>
       </div>
