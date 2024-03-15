@@ -68,13 +68,14 @@ const CareersPageHero = () => {
           variant="p16"
         />
         <Ntext color="primary-100" className="max-w-[640px] mx-auto mt-5 mb-6" variant="h1">
-          <span>{"We Have "}</span>
+          {/* <span>{"We Have "}</span>
           {roleCount > 0 && (
             <NLink className="inline underline" href={{ url: "/careers/roles" }}>
               <span>{roleCount}</span>
             </NLink>
           )}
-          <span>{` Open ${roleCount === 1 ? "Position" : "Positions"}`}</span>
+          <span>{` Open ${roleCount === 1 ? "Position" : "Positions"}`}</span> */}
+          open positions
         </Ntext>
         <Button
           className="!font-medium !text-sm !min-w-[86px] mb-[72px] !h-10"
