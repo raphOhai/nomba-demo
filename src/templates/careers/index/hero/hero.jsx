@@ -75,7 +75,7 @@ const CareersPageHero = () => {
             </NLink>
           )}
           <span>{` Open ${roleCount === 1 ? "Position" : "Positions"}`}</span> */}
-          open positions
+          We have open positions
         </Ntext>
         <Button
           className="!font-medium !text-sm !min-w-[86px] mb-[72px] !h-10"
