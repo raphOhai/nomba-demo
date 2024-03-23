@@ -66,7 +66,7 @@ const Cart = ({ finalFocusRef, demo = false, token }) => {
     setTabIndex(index);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   useEffect(() => {
     if (hasEmailError || hasMobileError === true) {
@@ -140,29 +140,28 @@ const Cart = ({ finalFocusRef, demo = false, token }) => {
   const [requested, setRequested] = useState(false);
   const [loadingPayScreen, setLoadingPayScreen] = useState(false);
 
-  useEffect(() => {
-    const options = {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
-        accountId: process.env.GATSBY_API_ACCOUNT_ID,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        grant_type: "client_credentials",
-        client_id: process.env.GATSBY_API_CLIENT_ID,
-        client_secret: process.env.GATSBY_API_CLIENT_SECRET,
-      }),
-    };
+  // useEffect(() => {
+  //   const options = {
+  //     method: "POST",
+  //     headers: {
+  //       Authorization: `Bearer ${process.env.GATSBY_API_CLIENT_SECRET}`,
+  //       accountId: process.env.GATSBY_API_ACCOUNT_ID,
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       grant_type: "client_credentials",
+  //       client_id: process.env.GATSBY_API_CLIENT_ID,
+  //       client_secret: process.env.GATSBY_API_CLIENT_SECRET,
+  //     }),
+  //   };
 
-    fetch("https://api.nomba.com/v1/auth/token/issue", options)
-      .then(response => response.json())
-      .then(response => setSavedAccessToken(response.data.access_token))
-      .catch(err => console.error(err));
-  });
+  //   fetch("https://api.nomba.com/v1/auth/token/issue", options)
+  //     .then(response => response.json())
+  //     .then(response => setSavedAccessToken(response.data.access_token))
+  //     .catch(err => console.error(err));
+  // });
 
   const testPay = () => {
-    const uuid = uuidv4();
     const customerInfoWithPayment = { ...info };
     const email = customerInfoWithPayment.email;
     if (!email) {
@@ -172,26 +171,22 @@ const Cart = ({ finalFocusRef, demo = false, token }) => {
     const options = {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${savedAccessToken}`,
-        accountId: process.env.GATSBY_API_ACCOUNT_ID,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        order: {
-          amount: "100.00",
-          callbackUrl: window.location.href,
-          currency: "NGN",
-          customerEmail: email,
-          customerId: process.env.GATSBY_API_CLIENT_ID,
-          orderReference: uuid,
-        },
-        tokenizeCard: "false",
-      }),
+
+        "customerId": "ola",
+
+        "customerEmail": "test@test.com",
+
+        "tokenizeCard": "false"
+      }
+      ),
     };
 
-    fetch("https://api.nomba.com/v1/checkout/order", options)
+    fetch("https://checkout-service.kudi.ai/checkout/create-order-demo", options)
       .then(response => response.json())
-      .then(response => (window.location.href = response.data.checkoutLink) & setLoadingPayScreen(false))
+      .then(response => (window.location.href = response.checkoutLink) & setLoadingPayScreen(false))
       .catch(err => console.error(err));
   };
   const TabListLine = () => {
